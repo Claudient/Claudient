@@ -1,0 +1,57 @@
+# Private strategy & development docs
+development.md
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Environment
+.env
+.env.*
+!.env.example
+*.pem
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+
+# Editors
+.idea/
+.vscode/settings.json
+.vscode/launch.json
+*.swp
+*.swo
+*~
+
+# Logs & temp
+*.log
+logs/
+tmp/
+.tmp/
+temp/
+
+# Test artifacts
+.coverage
+htmlcov/
+.pytest_cache/
+coverage/
+
+# Build outputs
+*.pyc
+*.pyo
