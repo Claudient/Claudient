@@ -115,40 +115,50 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Features comparison */}
+      {/* Features */}
       <section className="py-16 border-b-2 border-black bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-black mb-8">Why Claudient?</h2>
-          <div className="overflow-x-auto">
-            <table className="w-full border-2 border-black">
-              <thead>
-                <tr className="bg-black text-orange-100">
-                  <th className="px-4 py-3 text-left font-black border-r-2 border-orange-600">Feature</th>
-                  <th className="px-4 py-3 text-center font-black border-r-2 border-orange-600">Claudient</th>
-                  <th className="px-4 py-3 text-center font-black text-gray-400">ECC</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ['Installation', 'npx claudient add all', 'Manual + complex'],
-                  ['C#/.NET coverage', 'Full skill', 'Missing'],
-                  ['Kubernetes', 'Complete skill', 'Partial'],
-                  ['Terraform', 'Complete skill', 'Missing'],
-                  ['Multi-language docs', 'EN / FR / DE / NL / ES', 'English only'],
-                  ['End-to-end workflows', '5 complete flows', 'None'],
-                  ['Skill authoring guide', 'Included', 'Reverse-engineer'],
-                  ['npm distribution', 'npx claudient', 'Not available'],
-                ].map(([feature, us, them], i) => (
-                  <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-orange-50'}>
-                    <td className="px-4 py-3 font-bold border border-black">{feature}</td>
-                    <td className="px-4 py-3 text-center border border-black">
-                      <span className="inline-block px-2 py-0.5 bg-orange-500 border border-black text-xs font-bold">{us}</span>
-                    </td>
-                    <td className="px-4 py-3 text-center border border-black text-gray-500 text-sm">{them}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <h2 className="text-3xl font-black mb-2">Built for how developers actually work</h2>
+          <p className="text-gray-600 mb-10 text-lg">Every piece of Claudient is designed to drop into your workflow with zero friction.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              {
+                title: 'One command to install',
+                body: 'npx claudient add all copies every skill into your Claude Code setup instantly. No cloning, no manual copying.',
+                accent: 'bg-orange-500',
+              },
+              {
+                title: 'Full ecosystem coverage',
+                body: 'Python, TypeScript, Go, C#/.NET, Kubernetes, Terraform, GraphQL, dbt, Stripe — every major stack has a complete skill.',
+                accent: 'bg-blue-400',
+              },
+              {
+                title: '5 languages',
+                body: 'Every skill, guide, workflow, and prompt is available in English, French, German, Dutch, and Spanish.',
+                accent: 'bg-green-400',
+              },
+              {
+                title: 'End-to-end workflows',
+                body: '5 complete multi-step workflows covering feature development, debugging, code review, refactoring, and project bootstrap.',
+                accent: 'bg-purple-400',
+              },
+              {
+                title: 'Agent-ready',
+                body: 'Planner, Architect, Code Reviewer, and Security Reviewer subagents — each with a specific tool subset and model guidance.',
+                accent: 'bg-pink-400',
+              },
+              {
+                title: 'Open source, MIT licensed',
+                body: 'Backed by Uitbreiden. Fork it, extend it, contribute skills. Built with the community in mind from day one.',
+                accent: 'bg-orange-300',
+              },
+            ].map(f => (
+              <div key={f.title} className="neo-card p-6">
+                <div className={`w-10 h-3 ${f.accent} border-2 border-black mb-4`}></div>
+                <h3 className="font-black text-lg mb-2">{f.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{f.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
