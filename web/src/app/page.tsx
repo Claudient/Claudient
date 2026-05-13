@@ -19,7 +19,7 @@ export default async function HomePage() {
       <section className="border-b-2 border-black bg-orange-500 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4">
           <div className="max-w-3xl">
-            <div className="inline-block neo-card px-4 py-1 text-sm font-bold mb-6 bg-black text-orange-100">
+            <div className="inline-block neo-card px-4 py-1 text-sm font-bold mb-6 bg-black text-white">
               v0.1.0 — Open Source
             </div>
             <h1 className="text-5xl md:text-7xl font-black leading-none tracking-tight mb-6">
