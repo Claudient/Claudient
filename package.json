@@ -1,0 +1,45 @@
+{
+  "name": "claudient",
+  "version": "0.1.0",
+  "description": "The definitive Claude Code knowledge system — skills, agents, hooks, rules, and workflows.",
+  "keywords": [
+    "claude-code",
+    "claude",
+    "anthropic",
+    "llm",
+    "ai-tools",
+    "developer-productivity",
+    "skills",
+    "agents",
+    "hooks"
+  ],
+  "homepage": "https://github.com/Claudient/Claudient",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Claudient/Claudient.git"
+  },
+  "license": "MIT",
+  "bin": {
+    "claudient": "./scripts/cli.js"
+  },
+  "files": [
+    "scripts/",
+    "skills/",
+    "agents/",
+    "hooks/",
+    "rules/",
+    "workflows/",
+    "prompts/",
+    "mcp/",
+    "guides/",
+    ".claude-plugin/",
+    "CONTEXT.md",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "list": "node scripts/cli.js list"
+  }
+}

@@ -1,0 +1,187 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  /* Neo-brutalist orange scheme */
+  --background: #fff7f0;
+  --foreground: #0a0a0a;
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+  --popover: #ffffff;
+  --popover-foreground: #0a0a0a;
+  --primary: #0a0a0a;
+  --primary-foreground: #fff7f0;
+  --secondary: #f5f0eb;
+  --secondary-foreground: #0a0a0a;
+  --muted: #f5f0eb;
+  --muted-foreground: #525252;
+  --accent: #f97316;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --border: #0a0a0a;
+  --input: #0a0a0a;
+  --ring: #0a0a0a;
+  --chart-1: #f97316;
+  --chart-2: #60a5fa;
+  --chart-3: #f87171;
+  --chart-4: #4ade80;
+  --chart-5: #a78bfa;
+  --radius: 0px;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+/* Neo-brutalism utility classes */
+.neo-card {
+  border: 2px solid #0a0a0a;
+  box-shadow: 4px 4px 0 #0a0a0a;
+  background: #fff;
+  border-radius: 0;
+}
+
+.neo-card-hover {
+  transition: box-shadow 0.1s ease, transform 0.1s ease;
+}
+
+.neo-card-hover:hover {
+  box-shadow: 6px 6px 0 #0a0a0a;
+  transform: translate(-1px, -1px);
+}
+
+.neo-btn {
+  border: 2px solid #0a0a0a;
+  box-shadow: 3px 3px 0 #0a0a0a;
+  font-weight: 700;
+  border-radius: 0;
+  transition: box-shadow 0.1s ease, transform 0.1s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.neo-btn:hover {
+  box-shadow: 5px 5px 0 #0a0a0a;
+  transform: translate(-1px, -1px);
+}
+
+.neo-btn:active {
+  box-shadow: 1px 1px 0 #0a0a0a;
+  transform: translate(1px, 1px);
+}
+
+/* Prose for rendered markdown */
+.prose-retro {
+  max-width: none;
+  line-height: 1.7;
+}
+
+.prose-retro h1 { font-size: 1.75rem; font-weight: 800; margin-bottom: 1rem; margin-top: 2rem; }
+.prose-retro h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.75rem; margin-top: 1.75rem; border-bottom: 2px solid #0a0a0a; padding-bottom: 0.25rem; }
+.prose-retro h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; margin-top: 1.25rem; }
+.prose-retro p { margin-bottom: 1rem; }
+.prose-retro ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+.prose-retro ol { list-style: decimal; padding-left: 1.5rem; margin-bottom: 1rem; }
+.prose-retro li { margin-bottom: 0.35rem; }
+.prose-retro code { background: #0a0a0a; color: #fefce8; padding: 0.1em 0.4em; font-size: 0.875em; font-family: var(--font-geist-mono), monospace; }
+.prose-retro pre { background: #0a0a0a; color: #fefce8; padding: 1.25rem; margin-bottom: 1rem; overflow-x: auto; border: 2px solid #0a0a0a; }
+.prose-retro pre code { background: transparent; padding: 0; color: inherit; }
+.prose-retro table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+.prose-retro th { background: #0a0a0a; color: #fefce8; padding: 0.5rem 0.75rem; font-weight: 700; text-align: left; border: 2px solid #0a0a0a; }
+.prose-retro td { padding: 0.5rem 0.75rem; border: 1px solid #0a0a0a; }
+.prose-retro tr:nth-child(even) td { background: #f5f5f0; }
+.prose-retro strong { font-weight: 700; }
+.prose-retro a { text-decoration: underline; font-weight: 600; }
+.prose-retro blockquote { border-left: 4px solid #f97316; background: #fff7f0; padding: 0.75rem 1rem; color: #525252; margin-bottom: 1rem; font-style: italic; border: 2px solid #0a0a0a; border-left-width: 4px; }
+.prose-retro hr { border: 2px solid #0a0a0a; margin: 1.5rem 0; }

@@ -1,0 +1,42 @@
+{
+  "name": "claudient",
+  "version": "0.1.0",
+  "description": "The definitive Claude Code knowledge system — skills, agents, hooks, rules, and workflows.",
+  "skills": [
+    { "id": "backend/python/fastapi", "name": "FastAPI", "file": "skills/backend/python/fastapi.md", "status": "active" },
+    { "id": "backend/python/django", "name": "Django", "file": "skills/backend/python/django.md", "status": "active" },
+    { "id": "backend/nodejs/nextjs", "name": "Next.js", "file": "skills/backend/nodejs/nextjs.md", "status": "active" },
+    { "id": "backend/nodejs/nestjs", "name": "NestJS", "file": "skills/backend/nodejs/nestjs.md", "status": "active" },
+    { "id": "backend/go/go", "name": "Go", "file": "skills/backend/go/go.md", "status": "active" },
+    { "id": "backend/dotnet/csharp", "name": "C#/.NET", "file": "skills/backend/dotnet/csharp.md", "status": "active" },
+    { "id": "ai-engineering/claude-api", "name": "Claude API", "file": "skills/ai-engineering/claude-api.md", "status": "active" },
+    { "id": "ai-engineering/agent-construction", "name": "Agent Construction", "file": "skills/ai-engineering/agent-construction.md", "status": "active" },
+    { "id": "devops-infra/kubernetes", "name": "Kubernetes", "file": "skills/devops-infra/kubernetes.md", "status": "active" },
+    { "id": "devops-infra/terraform", "name": "Terraform", "file": "skills/devops-infra/terraform.md", "status": "active" },
+    { "id": "devops-infra/docker", "name": "Docker", "file": "skills/devops-infra/docker.md", "status": "active" },
+    { "id": "devops-infra/github-actions", "name": "GitHub Actions", "file": "skills/devops-infra/github-actions.md", "status": "active" },
+    { "id": "data-ml/pandas-polars", "name": "Pandas & Polars", "file": "skills/data-ml/pandas-polars.md", "status": "active" },
+    { "id": "data-ml/pytorch-tensorflow", "name": "PyTorch & TensorFlow", "file": "skills/data-ml/pytorch-tensorflow.md", "status": "active" },
+    { "id": "data-ml/dbt-data-pipelines", "name": "dbt & Data Pipelines", "file": "skills/data-ml/dbt-data-pipelines.md", "status": "active" },
+    { "id": "database/graphql", "name": "GraphQL", "file": "skills/database/graphql.md", "status": "active" },
+    { "id": "finance-payments/stripe", "name": "Stripe", "file": "skills/finance-payments/stripe.md", "status": "active" }
+  ],
+  "agents": [
+    { "id": "core/planner", "name": "Planner", "file": "agents/core/planner.md", "status": "active" },
+    { "id": "core/architect", "name": "Architect", "file": "agents/core/architect.md", "status": "active" },
+    { "id": "core/code-reviewer", "name": "Code Reviewer", "file": "agents/core/code-reviewer.md", "status": "active" },
+    { "id": "core/security-reviewer", "name": "Security Reviewer", "file": "agents/core/security-reviewer.md", "status": "active" },
+    { "id": "build-resolvers/python-resolver", "name": "Python Build Resolver", "file": "agents/build-resolvers/python-resolver.md", "status": "active" },
+    { "id": "build-resolvers/typescript-resolver", "name": "TypeScript Build Resolver", "file": "agents/build-resolvers/typescript-resolver.md", "status": "active" }
+  ],
+  "rules": [
+    { "id": "common/coding-style", "name": "Coding Style", "file": "rules/common/coding-style.md", "status": "active" },
+    { "id": "common/git", "name": "Git", "file": "rules/common/git.md", "status": "active" },
+    { "id": "common/performance", "name": "Performance", "file": "rules/common/performance.md", "status": "active" },
+    { "id": "common/security", "name": "Security", "file": "rules/common/security.md", "status": "active" },
+    { "id": "common/testing", "name": "Testing", "file": "rules/common/testing.md", "status": "active" },
+    { "id": "language-specific/python", "name": "Python Rules", "file": "rules/language-specific/python.md", "status": "active" },
+    { "id": "language-specific/typescript", "name": "TypeScript Rules", "file": "rules/language-specific/typescript.md", "status": "active" },
+    { "id": "language-specific/go", "name": "Go Rules", "file": "rules/language-specific/go.md", "status": "active" }
+  ]
+}

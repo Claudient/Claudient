@@ -92,20 +92,20 @@ Every file in `hooks/` must include:
 
 ## What Not to Do
 
-- Do not create application code in this repo (no `src/`, no `app/`, no `package.json` at root)
+- Do not create application code in this repo (no `src/`, no `app/`)
 - Do not commit `development.md` — it is gitignored and private
 - Do not add files outside the established directory structure without updating `README.md`
-- Do not translate skills, agents, or hooks — English only for those
 - Do not add emojis to file content unless it is a deliberate stylistic choice in a guide
 
 ---
 
 ## Language & Translation Rules
 
-- All guides (`guides/`) must be translated into: French (`fr/`), German (`de/`), Dutch (`nl/`), Spanish (`es/`)
-- Translation files live inside the same directory: e.g., `guides/fr/getting-started.md`
-- Skills, agents, hooks, rules, workflows, and prompts are English-only
-- When updating an English guide, note which translations need updating in the PR description
+- **All content** must be translated into: French (`fr/`), German (`de/`), Dutch (`nl/`), Spanish (`es/`)
+- This applies to: guides, skills, agents, rules, workflows, and prompts
+- Translation files live in a language subdirectory inside the same parent: e.g., `skills/backend/python/fr/fastapi.md`, `guides/fr/getting-started.md`
+- When updating an English file, note which translations need updating in the PR description
+- Hook scripts (`.sh`/`.py`) are English-only — shell is universal
 
 ---
 
