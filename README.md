@@ -2,6 +2,8 @@
 
 > The definitive knowledge system for Claude Code — skills, agents, hooks, rules, workflows, and prompts that multiply what you can build.
 
+![Claudient](web/public/social-preview.svg)
+
 [![npm](https://img.shields.io/npm/v/claudient)](https://www.npmjs.com/package/claudient)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
 [![Languages](https://img.shields.io/badge/languages-EN%20%7C%20FR%20%7C%20DE%20%7C%20NL%20%7C%20ES-orange)](#translations)
