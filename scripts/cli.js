@@ -30,6 +30,7 @@ claudient — Claude Code knowledge system
 
 Usage:
   npx claudient init                          Interactive first-run setup
+  npx claudient search <query>               Search skills by name or description
   npx claudient add skills [category] [--lang <lang>]
   npx claudient add agents
   npx claudient add rules [--write]
@@ -451,6 +452,84 @@ function listCommand(type) {
   }
 }
 
+// ── Search ────────────────────────────────────────────────────────────────────
+
+function searchCommand(query) {
+  const index = loadIndex()
+  const q = query.toLowerCase()
+  const BOLD = '\x1b[1m'
+  const ORANGE = '\x1b[33m'
+  const DIM = '\x1b[2m'
+  const RESET = '\x1b[0m'
+
+  if (!index) {
+    console.error('index.json not found. Run: npm run build-index')
+    process.exit(1)
+  }
+
+  const enSkills = index.skills.filter(s => !s.lang || s.lang === 'en')
+  const enAgents = index.agents.filter(a => !a.lang || a.lang === 'en')
+
+  const skillMatches = enSkills.filter(s =>
+    s.id.toLowerCase().includes(q) ||
+    s.title.toLowerCase().includes(q) ||
+    (s.description || '').toLowerCase().includes(q) ||
+    s.category.toLowerCase().includes(q)
+  )
+
+  const agentMatches = enAgents.filter(a =>
+    a.id.toLowerCase().includes(q) ||
+    a.title.toLowerCase().includes(q)
+  )
+
+  const hookMatches = index.hooks.filter(h =>
+    h.id.toLowerCase().includes(q) ||
+    h.title.toLowerCase().includes(q)
+  )
+
+  const total = skillMatches.length + agentMatches.length + hookMatches.length
+
+  if (total === 0) {
+    console.log(`No results for "${query}".`)
+    console.log(`Try: npx claudient list`)
+    return
+  }
+
+  console.log(`\n${BOLD}Search results for "${query}" — ${total} found${RESET}\n`)
+
+  if (skillMatches.length) {
+    console.log(`${BOLD}Skills (${skillMatches.length})${RESET}`)
+    for (const s of skillMatches) {
+      // Highlight query in description
+      const desc = s.description
+        ? `  ${DIM}${s.description.slice(0, 80)}${s.description.length > 80 ? '...' : ''}${RESET}`
+        : ''
+      console.log(`  ${ORANGE}${s.id}${RESET}`)
+      if (desc) console.log(desc)
+      console.log(`  Install: npx claudient add skills ${s.category}`)
+      console.log()
+    }
+  }
+
+  if (agentMatches.length) {
+    console.log(`${BOLD}Agents (${agentMatches.length})${RESET}`)
+    for (const a of agentMatches) {
+      console.log(`  ${ORANGE}${a.id}${RESET} — ${a.title}`)
+    }
+    console.log(`  Install: npx claudient add agents`)
+    console.log()
+  }
+
+  if (hookMatches.length) {
+    console.log(`${BOLD}Hooks (${hookMatches.length})${RESET}`)
+    for (const h of hookMatches) {
+      console.log(`  ${ORANGE}${h.id}${RESET} — ${h.title}`)
+    }
+    console.log(`  Install: npx claudient add hooks`)
+    console.log()
+  }
+}
+
 // ── Init (interactive first-run setup) ───────────────────────────────────────
 
 async function initCommand() {
@@ -647,6 +726,12 @@ switch (command) {
   case 'list':
     listCommand(positional[0])
     break
+  case 'search': {
+    const query = positional.join(' ')
+    if (!query) { console.error('Usage: claudient search <query>'); process.exit(1) }
+    searchCommand(query)
+    break
+  }
   case 'init':
     initCommand().catch(err => { console.error(err); process.exit(1) })
     break

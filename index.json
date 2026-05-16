@@ -1,6 +1,6 @@
 {
   "version": "0.5.0",
-  "generated": "2026-05-16T17:45:38.537Z",
+  "generated": "2026-05-16T17:51:55.779Z",
   "skills": [
     {
       "id": "backend/dotnet/csharp",
@@ -523,6 +523,14 @@
       "file": "skills/data-ml/fr/pytorch-tensorflow.md"
     },
     {
+      "id": "data-ml/mlflow",
+      "category": "data-ml",
+      "lang": "en",
+      "title": "Mlflow",
+      "description": "MLflow experiment tracking, model registry, artifact logging, model serving, multi-run comparison, sklearn/PyTorch integration",
+      "file": "skills/data-ml/mlflow.md"
+    },
+    {
       "id": "data-ml/dbt-data-pipelines",
       "category": "data-ml",
       "lang": "nl",
@@ -561,6 +569,14 @@
       "title": "Pytorch Tensorflow",
       "description": "PyTorch and TensorFlow model training, data loaders, GPU setup, checkpointing, inference optimization",
       "file": "skills/data-ml/pytorch-tensorflow.md"
+    },
+    {
+      "id": "data-ml/spark",
+      "category": "data-ml",
+      "lang": "en",
+      "title": "Spark",
+      "description": "Apache Spark DataFrames, Spark SQL, PySpark transformations, partitioning, UDFs, Structured Streaming, Delta Lake",
+      "file": "skills/data-ml/spark.md"
     },
     {
       "id": "database/graphql",
@@ -1878,7 +1894,7 @@
     }
   ],
   "summary": {
-    "skills": 19,
+    "skills": 21,
     "agents": 6,
     "hooks": 7,
     "rules": 8,
