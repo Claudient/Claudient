@@ -195,6 +195,66 @@ export const CATEGORY_COLORS: Record<string, string> = {
 
 export const SKILL_CATEGORIES_LIST = SKILL_CATEGORIES
 
+export type RuleMeta = {
+  id: string
+  category: string
+  slug: string
+  title: string
+  filePath: string
+}
+
+export function getAllRules(): RuleMeta[] {
+  const rulesDir = path.join(REPO_ROOT, 'rules')
+  const results: RuleMeta[] = []
+  if (!fs.existsSync(rulesDir)) return results
+  for (const catEntry of fs.readdirSync(rulesDir, { withFileTypes: true })) {
+    if (!catEntry.isDirectory() || SUPPORTED_LANGS.includes(catEntry.name as Lang)) continue
+    const catDir = path.join(rulesDir, catEntry.name)
+    for (const fileEntry of fs.readdirSync(catDir, { withFileTypes: true })) {
+      if (!fileEntry.isFile() || !fileEntry.name.endsWith('.md')) continue
+      const slug = fileEntry.name.replace(/\.md$/, '')
+      results.push({
+        id: `${catEntry.name}/${slug}`,
+        category: catEntry.name,
+        slug,
+        title: titleFromFilename(fileEntry.name),
+        filePath: path.join(catDir, fileEntry.name),
+      })
+    }
+  }
+  return results
+}
+
+export type PromptMeta = {
+  id: string
+  category: string
+  slug: string
+  title: string
+  filePath: string
+}
+
+export function getAllPrompts(): PromptMeta[] {
+  const promptsDir = path.join(REPO_ROOT, 'prompts')
+  const results: PromptMeta[] = []
+  if (!fs.existsSync(promptsDir)) return results
+  for (const catEntry of fs.readdirSync(promptsDir, { withFileTypes: true })) {
+    if (!catEntry.isDirectory() || SUPPORTED_LANGS.includes(catEntry.name as Lang)) continue
+    const catDir = path.join(promptsDir, catEntry.name)
+    for (const fileEntry of fs.readdirSync(catDir, { withFileTypes: true })) {
+      if (!fileEntry.isFile() || !fileEntry.name.endsWith('.md')) continue
+      const slug = fileEntry.name.replace(/\.md$/, '')
+      results.push({
+        id: `${catEntry.name}/${slug}`,
+        category: catEntry.name,
+        slug,
+        title: titleFromFilename(fileEntry.name),
+        filePath: path.join(catDir, fileEntry.name),
+      })
+    }
+  }
+  return results
+}
+
 export type WorkflowMeta = {
   slug: string
   title: string

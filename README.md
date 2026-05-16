@@ -1,116 +1,181 @@
 # Claudient
 
-> The definitive knowledge base for Claude Code — skills, agents, hooks, workflows, prompts, and patterns that multiply what you can build.
+> The definitive knowledge system for Claude Code — skills, agents, hooks, rules, workflows, and prompts that multiply what you can build.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Languages](https://img.shields.io/badge/languages-EN%20%7C%20FR%20%7C%20DE%20%7C%20NL%20%7C%20ES-blue)](#translations)
-
-**Claudient** is not a tool. It is a *knowledge system* — a community-maintained collection of everything you can drop into your Claude Code environment to immediately work faster, smarter, and with less friction.
+[![npm](https://img.shields.io/npm/v/claudient)](https://www.npmjs.com/package/claudient)
+[![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
+[![Languages](https://img.shields.io/badge/languages-EN%20%7C%20FR%20%7C%20DE%20%7C%20NL%20%7C%20ES-orange)](#translations)
 
 ---
 
-## Why Claudient?
+## Install
 
-Claude Code is powerful out of the box. But the gap between "it works" and "it works at 10x" is filled with patterns most developers never discover on their own: the right skill for a task, a hook that enforces quality automatically, an agent that handles an entire domain, a workflow that turns a vague goal into shipped code.
+```bash
+npx claudient add all
+```
 
-Claudient collects all of that in one place — organized, searchable, and ready to use.
+That's it. All skills are copied to `~/.claude/skills/`. Restart Claude Code and every skill is available as a slash command.
 
-| | Everything-claude-code | **Claudient** |
+---
+
+## What's included
+
+| Type | Count | What it does |
 |---|---|---|
-| C#/.NET coverage | None | Full |
-| Kubernetes / Terraform | Sparse | Dedicated skill sets |
-| GraphQL / Prisma | None | Full |
-| ML / Data Engineering | Limited | dbt, Spark, MLflow, PyTorch |
-| Fintech / Payments | None | Stripe, payment flows |
-| End-to-end workflows | None | 5 complete workflows |
-| Skill authoring guide | None | First-class guide |
-| Prompt templates | None | Full library |
-| Token optimization | Scattered across 3 docs | Single authoritative guide |
-| Languages | 8 (inconsistent) | EN · FR · DE · NL · ES |
+| Skills | 17 | Slash commands for FastAPI, NestJS, Kubernetes, Terraform, Go, C#, Claude API, and more |
+| Agents | 6 | Subagent definitions — Planner, Architect, Code Reviewer, Security Reviewer, Build Resolvers |
+| Hooks | 7 | Pre-tool-use safety, post-tool-use formatting and audit logging, lifecycle tracking |
+| Rules | 8 | Coding standards, git hygiene, security, testing, and language-specific guidelines |
+| Workflows | 5 | End-to-end processes for feature dev, debugging, code review, refactoring, and bootstrapping |
+| Guides | 7 | Deep-dive docs in 5 languages (EN / FR / DE / NL / ES) |
+| Prompts | 8 | System prompts, project starters, and task-specific templates |
 
 ---
 
-## What's Inside
+## CLI Reference
 
+```bash
+# Install skills
+npx claudient add skills                    # all skills (English)
+npx claudient add skills backend            # one category
+npx claudient add skills backend --lang fr  # French translation
+
+# Install other content
+npx claudient add agents                    # copies to ~/.claude/agents/
+npx claudient add hooks                     # copies .sh scripts to ~/.claude/hooks/
+npx claudient add rules                     # shows rules + instructions
+npx claudient add rules --write             # appends all rules to ./CLAUDE.md
+npx claudient add all                       # skills + agents + hooks
+npx claudient add all --lang de             # everything in German
+
+# Manage
+npx claudient remove skills backend         # uninstall a category
+npx claudient remove agents                 # uninstall agents
+npx claudient update                        # check for newer version
+npx claudient list                          # browse all content
+npx claudient list agents                   # browse one type
 ```
-Claudient/
-│
-├── guides/              Deep-dive documentation
-│   ├── getting-started.md
-│   ├── skill-authoring.md
-│   ├── token-optimization.md
-│   ├── memory-management.md
-│   ├── security.md
-│   ├── agent-orchestration.md
-│   └── hooks-cookbook.md
-│
-├── skills/              Slash command skill definitions
-│   ├── ai-engineering/
-│   ├── backend/         python · nodejs · go · rust · java · dotnet · php
-│   ├── frontend/        react · vue · mobile
-│   ├── data-ml/         pandas · pytorch · mlflow · dbt · spark
-│   ├── devops-infra/    kubernetes · terraform · docker · github-actions · cloud
-│   ├── database/        postgresql · mongodb · redis · graphql
-│   ├── security/        appsec · devsecops · compliance
-│   ├── finance-payments/
-│   └── content-docs/
-│
-├── agents/              Specialized subagent definitions
-│   ├── core/            planner · architect · reviewer · security
-│   ├── build-resolvers/ language-specific error resolvers
-│   └── domain/          database · devops · ml specialists
-│
-├── hooks/               Event-triggered automations
-│   ├── pre-tool-use/
-│   ├── post-tool-use/
-│   └── lifecycle/
-│
-├── rules/               Always-follow guidelines
-│   ├── common/
-│   └── language-specific/
-│
-├── workflows/           End-to-end multi-skill workflows
-│   ├── feature-development.md
-│   ├── debugging-session.md
-│   ├── code-review.md
-│   ├── refactor-safely.md
-│   └── new-project-bootstrap.md
-│
-├── prompts/             High-value prompt templates
-│   ├── system-prompts/
-│   ├── project-starters/
-│   └── task-specific/
-│
-├── mcp/                 MCP configs and recommended servers
-└── examples/            Complete working project references
+
+**Supported languages:** `en` (default) · `fr` · `de` · `nl` · `es`
+
+**Skill categories:** `backend` · `devops-infra` · `data-ml` · `database` · `finance-payments` · `ai-engineering`
+
+---
+
+## Skills
+
+Each skill is a slash command that activates domain-specific expertise in Claude Code.
+
+| Category | Skills |
+|---|---|
+| `backend` | FastAPI, Django, Next.js, NestJS, Go, C#/.NET |
+| `devops-infra` | Kubernetes, Terraform, Docker, GitHub Actions |
+| `data-ml` | Pandas/Polars, PyTorch/TensorFlow, dbt |
+| `database` | GraphQL |
+| `finance-payments` | Stripe |
+| `ai-engineering` | Claude API, Agent Construction |
+
+**Example:**
+```bash
+npx claudient add skills backend
+# Then in Claude Code:
+# /fastapi — activate FastAPI patterns
+# /nestjs  — activate NestJS patterns
 ```
 
 ---
 
-## Quick Start
+## Agents
 
-**No installation required.** Clone the repo and copy what you need into your project.
+Agents are subagent definitions — spawn them with the `Agent` tool using `subagent_type`.
+
+- **Planner** — decomposes tasks into steps before coding begins
+- **Architect** — reviews system design and makes structural decisions
+- **Code Reviewer** — thorough PR review with security and performance focus
+- **Security Reviewer** — dedicated security audit with OWASP coverage
+- **Python Build Resolver** — diagnoses and fixes Python dependency and import errors
+- **TypeScript Build Resolver** — resolves TypeScript compilation failures
+
+---
+
+## Hooks
+
+Drop-in shell scripts for `PreToolUse`, `PostToolUse`, and lifecycle events.
+
+| Hook | Event | What it does |
+|---|---|---|
+| `block-dangerous.sh` | PreToolUse | Blocks destructive commands (`rm -rf /`, fork bombs, etc.) |
+| `git-push-confirm.sh` | PreToolUse | Warns before any `git push`, blocks force push to main |
+| `audit-log.sh` | PostToolUse | Logs every tool call to `.claude/logs/audit.log` |
+| `prettier.sh` | PostToolUse | Auto-runs Prettier after every Write/Edit |
+| `cost-tracker.sh` | PostToolUse | Tracks token usage and estimated cost per session |
+| `pre-compact-save.sh` | PreCompact | Saves session state before context compaction |
+| `session-start.sh` | Notification | Prints branch, uncommitted files, and session notes on start |
+
+```bash
+npx claudient add hooks
+# Scripts are copied to ~/.claude/hooks/
+# See each hook's .md file for the settings.json entry
+```
+
+---
+
+## Rules
+
+Add to your project's `CLAUDE.md` to enforce consistent behaviour:
+
+```bash
+npx claudient add rules --write   # appends all rules to ./CLAUDE.md
+```
+
+**Available rules:** Coding Style · Git · Security · Testing · Performance · Python · TypeScript · Go
+
+---
+
+## Workflows
+
+Reference documents for complex multi-step tasks — read before starting, not invoked as slash commands.
+
+- `feature-development` — idea → scoped → coded → reviewed → merged
+- `debugging-session` — reproduce → isolate → fix → verify
+- `code-review` — structured review with security and performance checks
+- `refactor-safely` — incremental refactoring with test coverage at every step
+- `new-project-bootstrap` — scaffold with the right structure from day one
+
+All 5 workflows available in EN / FR / DE / NL / ES.
+
+---
+
+## Manual installation (git clone)
+
+If you prefer to manage files yourself:
 
 ```bash
 git clone https://github.com/Claudient/Claudient.git
+cd Claudient
+
+# Copy a skill manually
+cp skills/backend/python/fastapi.md ~/.claude/skills/
+
+# Symlink for development (auto-updates with git pull)
+bash scripts/link-skills.sh
 ```
 
-**To use a skill** — copy the `.md` file into `.claude/commands/` in your project:
+---
 
-```bash
-cp Claudient/skills/backend/python/fastapi.md your-project/.claude/commands/
-```
+## Translations
 
-Then trigger it in Claude Code with `/fastapi`.
+Every skill, guide, workflow, agent, and prompt is available in:
 
-**To use an agent** — reference it in your Claude session using the `subagent_type` parameter in your Agent tool calls.
+| Language | Code |
+|---|---|
+| English | `en` (default) |
+| Français | `fr` |
+| Deutsch | `de` |
+| Nederlands | `nl` |
+| Español | `es` |
 
-**To use a hook** — add the hook JSON to the `hooks` array in your `.claude/settings.json`.
-
-**To use a rule** — copy the content into your `CLAUDE.md`.
-
-See [guides/getting-started.md](guides/getting-started.md) for a 5-minute setup walkthrough.
+Hook scripts (`.sh`) are English-only — shell is universal.
 
 ---
 
@@ -118,35 +183,19 @@ See [guides/getting-started.md](guides/getting-started.md) for a 5-minute setup 
 
 | Guide | What it covers |
 |---|---|
-| [Getting Started](guides/getting-started.md) | Setup, first skill, first hook — 5 minutes |
+| [Getting Started](guides/getting-started.md) | Setup, first skill, first hook |
 | [Skill Authoring](guides/skill-authoring.md) | How to write a skill that actually works |
 | [Token Optimization](guides/token-optimization.md) | Model selection, context math, cost reduction |
 | [Memory Management](guides/memory-management.md) | Session persistence, compaction strategies |
 | [Security](guides/security.md) | Isolation, approval boundaries, sanitization |
-| [Agent Orchestration](guides/agent-orchestration.md) | Sub-agent patterns, parallelization |
+| [Agent Orchestration](guides/agent-orchestration.md) | Subagent patterns, parallelization |
 | [Hooks Cookbook](guides/hooks-cookbook.md) | Hook patterns with real examples |
-
----
-
-## Translations
-
-All guides and documentation are available in:
-
-- [English](guides/) (primary)
-- [Français](guides/fr/)
-- [Deutsch](guides/de/)
-- [Nederlands](guides/nl/)
-- [Español](guides/es/)
-
-Skills, agents, and hooks remain in English — they are code-adjacent and translation adds noise without value.
 
 ---
 
 ## Contributing
 
-Claudient grows through community contributions. Every skill, agent, hook, and workflow in this repo was written by someone who solved a real problem.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add your own — including the skill template, quality checklist, and review process.
+See [CONTRIBUTING.md](CONTRIBUTING.md) — includes the skill template, quality checklist, and review process.
 
 ---
 
@@ -154,12 +203,10 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add your own — including the
 
 Claudient is backed by [Uitbreiden](https://uitbreiden.com/) — we build AI products with developer communities and deliver B2B AI solutions.
 
-If you're a developer, startup, or enterprise team looking to build with Claude Code at scale, integrate AI into your product, or need a technical partner who lives and breathes this stack — come talk to us.
-
 **[uitbreiden.com](https://uitbreiden.com/)**
 
 ---
 
 ## License
 
-MIT — use freely, attribution appreciated.
+MIT
