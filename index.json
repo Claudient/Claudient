@@ -1,6 +1,6 @@
 {
-  "version": "1.5.0",
-  "generated": "2026-05-18T17:05:51.713Z",
+  "version": "1.6.0",
+  "generated": "2026-05-18T17:07:47.995Z",
   "skills": [
     {
       "id": "backend/dotnet/csharp",
@@ -139,6 +139,14 @@
       "file": "skills/backend/nodejs/de/nextjs.md"
     },
     {
+      "id": "backend/nodejs/typescript-advanced",
+      "category": "backend",
+      "lang": "de",
+      "title": "Typescript Advanced",
+      "description": "Advanced TypeScript: generics, conditional types, mapped types, template literals, utility types, type guards, discriminated unions at scale",
+      "file": "skills/backend/nodejs/de/typescript-advanced.md"
+    },
+    {
       "id": "backend/nodejs/nestjs",
       "category": "backend",
       "lang": "es",
@@ -153,6 +161,14 @@
       "title": "Skill de Next.js",
       "description": "",
       "file": "skills/backend/nodejs/es/nextjs.md"
+    },
+    {
+      "id": "backend/nodejs/typescript-advanced",
+      "category": "backend",
+      "lang": "es",
+      "title": "Typescript Advanced",
+      "description": "Advanced TypeScript: generics, conditional types, mapped types, template literals, utility types, type guards, discriminated unions at scale",
+      "file": "skills/backend/nodejs/es/typescript-advanced.md"
     },
     {
       "id": "backend/nodejs/nestjs",
@@ -211,6 +227,14 @@
       "file": "skills/backend/nodejs/nl/nextjs.md"
     },
     {
+      "id": "backend/nodejs/typescript-advanced",
+      "category": "backend",
+      "lang": "nl",
+      "title": "Typescript Advanced",
+      "description": "Advanced TypeScript: generics, conditional types, mapped types, template literals, utility types, type guards, discriminated unions at scale",
+      "file": "skills/backend/nodejs/nl/typescript-advanced.md"
+    },
+    {
       "id": "backend/nodejs/react",
       "category": "backend",
       "lang": "en",
@@ -225,6 +249,14 @@
       "title": "Typescript Advanced",
       "description": "Advanced TypeScript: generics, conditional types, mapped types, template literals, utility types, type guards, discriminated unions at scale",
       "file": "skills/backend/nodejs/typescript-advanced.md"
+    },
+    {
+      "id": "backend/python/api-design",
+      "category": "backend",
+      "lang": "en",
+      "title": "Api Design",
+      "description": "REST API design: resource naming, versioning, pagination, error responses, rate limiting headers, idempotency, OpenAPI documentation",
+      "file": "skills/backend/python/api-design.md"
     },
     {
       "id": "backend/python/django",
@@ -707,6 +739,14 @@
       "file": "skills/database/de/neon.md"
     },
     {
+      "id": "database/prisma",
+      "category": "database",
+      "lang": "de",
+      "title": "Prisma",
+      "description": "Prisma ORM: schema design, relations, migrations, nested writes, middleware, raw queries, type-safe database access",
+      "file": "skills/database/de/prisma.md"
+    },
+    {
       "id": "database/supabase",
       "category": "database",
       "lang": "de",
@@ -755,6 +795,22 @@
       "file": "skills/database/fr/neon.md"
     },
     {
+      "id": "database/prisma",
+      "category": "database",
+      "lang": "fr",
+      "title": "Prisma",
+      "description": "Prisma ORM: schema design, relations, migrations, nested writes, middleware, raw queries, type-safe database access",
+      "file": "skills/database/fr/prisma.md"
+    },
+    {
+      "id": "database/redis",
+      "category": "database",
+      "lang": "fr",
+      "title": "Redis",
+      "description": "Redis patterns: caching, sessions, rate limiting, pub/sub, queues, distributed locks — with Python and Node.js examples",
+      "file": "skills/database/fr/redis.md"
+    },
+    {
       "id": "database/supabase",
       "category": "database",
       "lang": "fr",
@@ -769,6 +825,14 @@
       "title": "Graphql",
       "description": "GraphQL schema design, resolvers, mutations, subscriptions, DataLoader, Prisma integration, N+1 prevention",
       "file": "skills/database/graphql.md"
+    },
+    {
+      "id": "database/mongodb",
+      "category": "database",
+      "lang": "en",
+      "title": "Mongodb",
+      "description": "MongoDB patterns: schema design, aggregation pipeline, indexes, transactions, Atlas Search, Mongoose vs native driver",
+      "file": "skills/database/mongodb.md"
     },
     {
       "id": "database/neon",
@@ -2508,7 +2572,7 @@
     }
   ],
   "summary": {
-    "skills": 41,
+    "skills": 43,
     "agents": 6,
     "hooks": 7,
     "rules": 8,
