@@ -1,6 +1,6 @@
 {
-  "version": "2.2.0",
-  "generated": "2026-05-18T17:42:39.982Z",
+  "version": "1.4.0",
+  "generated": "2026-05-18T17:49:17.239Z",
   "skills": [
     {
       "id": "backend/dotnet/csharp",
@@ -1579,6 +1579,14 @@
       "file": "skills/ai-engineering/de/claude-api.md"
     },
     {
+      "id": "ai-engineering/mastra",
+      "category": "ai-engineering",
+      "lang": "de",
+      "title": "Mastra",
+      "description": "Mastra AI: TypeScript agent framework — agents, workflows, tools, memory, RAG, evals — for building production-grade AI applications",
+      "file": "skills/ai-engineering/de/mastra.md"
+    },
+    {
       "id": "ai-engineering/mcp-server-builder",
       "category": "ai-engineering",
       "lang": "de",
@@ -1641,6 +1649,14 @@
       "title": "Compétence API Claude",
       "description": "",
       "file": "skills/ai-engineering/fr/claude-api.md"
+    },
+    {
+      "id": "ai-engineering/mastra",
+      "category": "ai-engineering",
+      "lang": "fr",
+      "title": "Mastra",
+      "description": "Mastra AI: TypeScript agent framework — agents, workflows, tools, memory, RAG, evals — for building production-grade AI applications",
+      "file": "skills/ai-engineering/fr/mastra.md"
     },
     {
       "id": "ai-engineering/mcp-server-builder",
