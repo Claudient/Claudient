@@ -1,6 +1,6 @@
 {
-  "version": "0.8.0",
-  "generated": "2026-05-18T16:41:24.690Z",
+  "version": "0.9.0",
+  "generated": "2026-05-18T16:45:32.583Z",
   "skills": [
     {
       "id": "backend/dotnet/csharp",
@@ -755,12 +755,28 @@
       "file": "skills/productivity/caveman.md"
     },
     {
+      "id": "productivity/batch",
+      "category": "productivity",
+      "lang": "de",
+      "title": "Batch",
+      "description": "Parallel agent orchestration: decompose large tasks into independent units, spawn background agents in worktrees, each opens a PR",
+      "file": "skills/productivity/de/batch.md"
+    },
+    {
       "id": "productivity/caveman",
       "category": "productivity",
       "lang": "de",
       "title": "Caveman Mode Skill",
       "description": "",
       "file": "skills/productivity/de/caveman.md"
+    },
+    {
+      "id": "productivity/env-doctor",
+      "category": "productivity",
+      "lang": "de",
+      "title": "Env Doctor",
+      "description": "Diagnose environment health: missing env vars, wrong runtime versions, broken deps, port conflicts, missing tools",
+      "file": "skills/productivity/de/env-doctor.md"
     },
     {
       "id": "productivity/lean-claude",
@@ -771,12 +787,28 @@
       "file": "skills/productivity/de/lean-claude.md"
     },
     {
+      "id": "productivity/no-slop",
+      "category": "productivity",
+      "lang": "de",
+      "title": "No Slop",
+      "description": "Escape AI-generated aesthetics in UI/frontend: specific typography, color palettes, layouts, and design rules that avoid the generic 'AI look'",
+      "file": "skills/productivity/de/no-slop.md"
+    },
+    {
       "id": "productivity/env-doctor",
       "category": "productivity",
       "lang": "en",
       "title": "Env Doctor",
       "description": "Diagnose environment health: missing env vars, wrong runtime versions, broken deps, port conflicts, missing tools",
       "file": "skills/productivity/env-doctor.md"
+    },
+    {
+      "id": "productivity/batch",
+      "category": "productivity",
+      "lang": "es",
+      "title": "Batch",
+      "description": "Parallel agent orchestration: decompose large tasks into independent units, spawn background agents in worktrees, each opens a PR",
+      "file": "skills/productivity/es/batch.md"
     },
     {
       "id": "productivity/caveman",
@@ -787,12 +819,36 @@
       "file": "skills/productivity/es/caveman.md"
     },
     {
+      "id": "productivity/env-doctor",
+      "category": "productivity",
+      "lang": "es",
+      "title": "Env Doctor",
+      "description": "Diagnose environment health: missing env vars, wrong runtime versions, broken deps, port conflicts, missing tools",
+      "file": "skills/productivity/es/env-doctor.md"
+    },
+    {
       "id": "productivity/lean-claude",
       "category": "productivity",
       "lang": "es",
       "title": "Lean Claude",
       "description": "Activate token-efficient mode: caveman output, right model selection, MCP discipline, compaction strategy, cavecrew agents — all in one",
       "file": "skills/productivity/es/lean-claude.md"
+    },
+    {
+      "id": "productivity/no-slop",
+      "category": "productivity",
+      "lang": "es",
+      "title": "No Slop",
+      "description": "Escape AI-generated aesthetics in UI/frontend: specific typography, color palettes, layouts, and design rules that avoid the generic 'AI look'",
+      "file": "skills/productivity/es/no-slop.md"
+    },
+    {
+      "id": "productivity/batch",
+      "category": "productivity",
+      "lang": "fr",
+      "title": "Batch",
+      "description": "Parallel agent orchestration: decompose large tasks into independent units, spawn background agents in worktrees, each opens a PR",
+      "file": "skills/productivity/fr/batch.md"
     },
     {
       "id": "productivity/caveman",
@@ -803,12 +859,28 @@
       "file": "skills/productivity/fr/caveman.md"
     },
     {
+      "id": "productivity/env-doctor",
+      "category": "productivity",
+      "lang": "fr",
+      "title": "Env Doctor",
+      "description": "Diagnose environment health: missing env vars, wrong runtime versions, broken deps, port conflicts, missing tools",
+      "file": "skills/productivity/fr/env-doctor.md"
+    },
+    {
       "id": "productivity/lean-claude",
       "category": "productivity",
       "lang": "fr",
       "title": "Lean Claude",
       "description": "Activate token-efficient mode: caveman output, right model selection, MCP discipline, compaction strategy, cavecrew agents — all in one",
       "file": "skills/productivity/fr/lean-claude.md"
+    },
+    {
+      "id": "productivity/no-slop",
+      "category": "productivity",
+      "lang": "fr",
+      "title": "No Slop",
+      "description": "Escape AI-generated aesthetics in UI/frontend: specific typography, color palettes, layouts, and design rules that avoid the generic 'AI look'",
+      "file": "skills/productivity/fr/no-slop.md"
     },
     {
       "id": "productivity/lean-claude",
@@ -819,12 +891,28 @@
       "file": "skills/productivity/lean-claude.md"
     },
     {
+      "id": "productivity/batch",
+      "category": "productivity",
+      "lang": "nl",
+      "title": "Batch",
+      "description": "Parallel agent orchestration: decompose large tasks into independent units, spawn background agents in worktrees, each opens a PR",
+      "file": "skills/productivity/nl/batch.md"
+    },
+    {
       "id": "productivity/caveman",
       "category": "productivity",
       "lang": "nl",
       "title": "Caveman Mode Skill",
       "description": "",
       "file": "skills/productivity/nl/caveman.md"
+    },
+    {
+      "id": "productivity/env-doctor",
+      "category": "productivity",
+      "lang": "nl",
+      "title": "Env Doctor",
+      "description": "Diagnose environment health: missing env vars, wrong runtime versions, broken deps, port conflicts, missing tools",
+      "file": "skills/productivity/nl/env-doctor.md"
     },
     {
       "id": "productivity/lean-claude",
@@ -837,10 +925,42 @@
     {
       "id": "productivity/no-slop",
       "category": "productivity",
+      "lang": "nl",
+      "title": "No Slop",
+      "description": "Escape AI-generated aesthetics in UI/frontend: specific typography, color palettes, layouts, and design rules that avoid the generic 'AI look'",
+      "file": "skills/productivity/nl/no-slop.md"
+    },
+    {
+      "id": "productivity/no-slop",
+      "category": "productivity",
       "lang": "en",
       "title": "No Slop",
       "description": "Escape AI-generated aesthetics in UI/frontend: specific typography, color palettes, layouts, and design rules that avoid the generic 'AI look'",
       "file": "skills/productivity/no-slop.md"
+    },
+    {
+      "id": "productivity/readme-generator",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Readme Generator",
+      "description": "Generate complete README.md files: badges, install, usage, API reference, contributing guide, from code or description",
+      "file": "skills/productivity/readme-generator.md"
+    },
+    {
+      "id": "productivity/security-audit",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Security Audit",
+      "description": "Security audit for code: OWASP Top 10, injection, auth flaws, secrets, dependency vulnerabilities — with severity and fix for each finding",
+      "file": "skills/productivity/security-audit.md"
+    },
+    {
+      "id": "productivity/test-generator",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Test Generator",
+      "description": "Generate unit and integration tests for existing code: happy path, edge cases, error handling, mocks — for any language or framework",
+      "file": "skills/productivity/test-generator.md"
     }
   ],
   "agents": [
@@ -1964,7 +2084,7 @@
     }
   ],
   "summary": {
-    "skills": 25,
+    "skills": 28,
     "agents": 6,
     "hooks": 7,
     "rules": 8,
