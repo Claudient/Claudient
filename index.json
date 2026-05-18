@@ -1,6 +1,6 @@
 {
-  "version": "1.1.0",
-  "generated": "2026-05-18T16:52:34.496Z",
+  "version": "1.2.0",
+  "generated": "2026-05-18T16:56:34.095Z",
   "skills": [
     {
       "id": "backend/dotnet/csharp",
@@ -483,6 +483,14 @@
       "file": "skills/data-ml/de/pytorch-tensorflow.md"
     },
     {
+      "id": "data-ml/sql",
+      "category": "data-ml",
+      "lang": "de",
+      "title": "Sql",
+      "description": "SQL query writing and optimisation: complex joins, window functions, CTEs, indexes, query plans, migration patterns",
+      "file": "skills/data-ml/de/sql.md"
+    },
+    {
       "id": "data-ml/dbt-data-pipelines",
       "category": "data-ml",
       "lang": "es",
@@ -531,6 +539,14 @@
       "file": "skills/data-ml/fr/pytorch-tensorflow.md"
     },
     {
+      "id": "data-ml/sql",
+      "category": "data-ml",
+      "lang": "fr",
+      "title": "Sql",
+      "description": "SQL query writing and optimisation: complex joins, window functions, CTEs, indexes, query plans, migration patterns",
+      "file": "skills/data-ml/fr/sql.md"
+    },
+    {
       "id": "data-ml/mlflow",
       "category": "data-ml",
       "lang": "en",
@@ -561,6 +577,14 @@
       "title": "PyTorch / TensorFlow Skill",
       "description": "",
       "file": "skills/data-ml/nl/pytorch-tensorflow.md"
+    },
+    {
+      "id": "data-ml/sql",
+      "category": "data-ml",
+      "lang": "nl",
+      "title": "Sql",
+      "description": "SQL query writing and optimisation: complex joins, window functions, CTEs, indexes, query plans, migration patterns",
+      "file": "skills/data-ml/nl/sql.md"
     },
     {
       "id": "data-ml/pandas-polars",
@@ -627,12 +651,28 @@
       "file": "skills/database/graphql.md"
     },
     {
+      "id": "database/neon",
+      "category": "database",
+      "lang": "en",
+      "title": "Neon",
+      "description": "Neon serverless PostgreSQL: connection pooling, database branching, pgvector for AI, autoscaling patterns, Vercel integration",
+      "file": "skills/database/neon.md"
+    },
+    {
       "id": "database/graphql",
       "category": "database",
       "lang": "nl",
       "title": "GraphQL Skill",
       "description": "",
       "file": "skills/database/nl/graphql.md"
+    },
+    {
+      "id": "database/supabase",
+      "category": "database",
+      "lang": "en",
+      "title": "Supabase",
+      "description": "Supabase: Row Level Security policies, auth integration, realtime subscriptions, Storage, Edge Functions, pgvector",
+      "file": "skills/database/supabase.md"
     },
     {
       "id": "finance-payments/stripe",
@@ -795,6 +835,14 @@
       "file": "skills/productivity/de/caveman.md"
     },
     {
+      "id": "productivity/debug",
+      "category": "productivity",
+      "lang": "de",
+      "title": "Debug",
+      "description": "Systematic bug isolation: reproduce, hypothesise, narrow, fix, verify — for any language or error type",
+      "file": "skills/productivity/de/debug.md"
+    },
+    {
       "id": "productivity/env-doctor",
       "category": "productivity",
       "lang": "de",
@@ -883,6 +931,14 @@
       "file": "skills/productivity/es/caveman.md"
     },
     {
+      "id": "productivity/debug",
+      "category": "productivity",
+      "lang": "es",
+      "title": "Debug",
+      "description": "Systematic bug isolation: reproduce, hypothesise, narrow, fix, verify — for any language or error type",
+      "file": "skills/productivity/es/debug.md"
+    },
+    {
       "id": "productivity/env-doctor",
       "category": "productivity",
       "lang": "es",
@@ -915,6 +971,14 @@
       "file": "skills/productivity/es/readme-generator.md"
     },
     {
+      "id": "productivity/refactor",
+      "category": "productivity",
+      "lang": "es",
+      "title": "Refactor",
+      "description": "Safe code refactoring: extract function/class, rename, split files, simplify conditionals, remove duplication — with test coverage at every step",
+      "file": "skills/productivity/es/refactor.md"
+    },
+    {
       "id": "productivity/security-audit",
       "category": "productivity",
       "lang": "es",
@@ -945,6 +1009,14 @@
       "title": "Skill Mode Caveman",
       "description": "",
       "file": "skills/productivity/fr/caveman.md"
+    },
+    {
+      "id": "productivity/debug",
+      "category": "productivity",
+      "lang": "fr",
+      "title": "Debug",
+      "description": "Systematic bug isolation: reproduce, hypothesise, narrow, fix, verify — for any language or error type",
+      "file": "skills/productivity/fr/debug.md"
     },
     {
       "id": "productivity/env-doctor",
@@ -1027,6 +1099,14 @@
       "file": "skills/productivity/nl/caveman.md"
     },
     {
+      "id": "productivity/debug",
+      "category": "productivity",
+      "lang": "nl",
+      "title": "Debug",
+      "description": "Systematic bug isolation: reproduce, hypothesise, narrow, fix, verify — for any language or error type",
+      "file": "skills/productivity/nl/debug.md"
+    },
+    {
       "id": "productivity/env-doctor",
       "category": "productivity",
       "lang": "nl",
@@ -1057,6 +1137,14 @@
       "title": "Readme Generator",
       "description": "Generate complete README.md files: badges, install, usage, API reference, contributing guide, from code or description",
       "file": "skills/productivity/nl/readme-generator.md"
+    },
+    {
+      "id": "productivity/refactor",
+      "category": "productivity",
+      "lang": "nl",
+      "title": "Refactor",
+      "description": "Safe code refactoring: extract function/class, rename, split files, simplify conditionals, remove duplication — with test coverage at every step",
+      "file": "skills/productivity/nl/refactor.md"
     },
     {
       "id": "productivity/security-audit",
@@ -2260,7 +2348,7 @@
     }
   ],
   "summary": {
-    "skills": 33,
+    "skills": 35,
     "agents": 6,
     "hooks": 7,
     "rules": 8,
