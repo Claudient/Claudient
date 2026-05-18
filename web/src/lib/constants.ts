@@ -16,7 +16,9 @@ export const SKILL_CATEGORIES_LIST = [
   'database',
   'finance-payments',
   'ai-engineering',
+  'git',
   'productivity',
+  'automation',
 ]
 
 export const CATEGORY_LABELS: Record<string, string> = {
@@ -26,7 +28,9 @@ export const CATEGORY_LABELS: Record<string, string> = {
   'database': 'Database',
   'finance-payments': 'Finance & Payments',
   'ai-engineering': 'AI Engineering',
+  'git': 'Git Workflows',
   'productivity': 'Productivity',
+  'automation': 'Automation',
 }
 
 export const CATEGORY_COLORS: Record<string, string> = {
@@ -36,7 +40,9 @@ export const CATEGORY_COLORS: Record<string, string> = {
   'database': 'bg-green-400',
   'finance-payments': 'bg-yellow-400',
   'ai-engineering': 'bg-pink-400',
+  'git': 'bg-gray-700',
   'productivity': 'bg-teal-400',
+  'automation': 'bg-indigo-400',
 }
 
 export const SUPPORTED_LANGS = ['en', 'fr', 'de', 'nl', 'es'] as const

@@ -1,6 +1,6 @@
 {
   "version": "0.6.0",
-  "generated": "2026-05-16T17:57:21.855Z",
+  "generated": "2026-05-18T16:36:28.262Z",
   "skills": [
     {
       "id": "backend/dotnet/csharp",
@@ -739,6 +739,14 @@
       "file": "skills/ai-engineering/nl/claude-api.md"
     },
     {
+      "id": "productivity/batch",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Batch",
+      "description": "Parallel agent orchestration: decompose large tasks into independent units, spawn background agents in worktrees, each opens a PR",
+      "file": "skills/productivity/batch.md"
+    },
+    {
       "id": "productivity/caveman",
       "category": "productivity",
       "lang": "en",
@@ -755,6 +763,22 @@
       "file": "skills/productivity/de/caveman.md"
     },
     {
+      "id": "productivity/lean-claude",
+      "category": "productivity",
+      "lang": "de",
+      "title": "Lean Claude",
+      "description": "Activate token-efficient mode: caveman output, right model selection, MCP discipline, compaction strategy, cavecrew agents — all in one",
+      "file": "skills/productivity/de/lean-claude.md"
+    },
+    {
+      "id": "productivity/env-doctor",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Env Doctor",
+      "description": "Diagnose environment health: missing env vars, wrong runtime versions, broken deps, port conflicts, missing tools",
+      "file": "skills/productivity/env-doctor.md"
+    },
+    {
       "id": "productivity/caveman",
       "category": "productivity",
       "lang": "es",
@@ -763,12 +787,28 @@
       "file": "skills/productivity/es/caveman.md"
     },
     {
+      "id": "productivity/lean-claude",
+      "category": "productivity",
+      "lang": "es",
+      "title": "Lean Claude",
+      "description": "Activate token-efficient mode: caveman output, right model selection, MCP discipline, compaction strategy, cavecrew agents — all in one",
+      "file": "skills/productivity/es/lean-claude.md"
+    },
+    {
       "id": "productivity/caveman",
       "category": "productivity",
       "lang": "fr",
       "title": "Skill Mode Caveman",
       "description": "",
       "file": "skills/productivity/fr/caveman.md"
+    },
+    {
+      "id": "productivity/lean-claude",
+      "category": "productivity",
+      "lang": "fr",
+      "title": "Lean Claude",
+      "description": "Activate token-efficient mode: caveman output, right model selection, MCP discipline, compaction strategy, cavecrew agents — all in one",
+      "file": "skills/productivity/fr/lean-claude.md"
     },
     {
       "id": "productivity/lean-claude",
@@ -785,6 +825,14 @@
       "title": "Caveman Mode Skill",
       "description": "",
       "file": "skills/productivity/nl/caveman.md"
+    },
+    {
+      "id": "productivity/lean-claude",
+      "category": "productivity",
+      "lang": "nl",
+      "title": "Lean Claude",
+      "description": "Activate token-efficient mode: caveman output, right model selection, MCP discipline, compaction strategy, cavecrew agents — all in one",
+      "file": "skills/productivity/nl/lean-claude.md"
     }
   ],
   "agents": [
@@ -1902,7 +1950,7 @@
     }
   ],
   "summary": {
-    "skills": 22,
+    "skills": 24,
     "agents": 6,
     "hooks": 7,
     "rules": 8,
