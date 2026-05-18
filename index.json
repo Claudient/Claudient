@@ -1,6 +1,6 @@
 {
-  "version": "2.1.0",
-  "generated": "2026-05-18T17:33:54.411Z",
+  "version": "2.2.0",
+  "generated": "2026-05-18T17:36:58.123Z",
   "skills": [
     {
       "id": "backend/dotnet/csharp",
@@ -163,6 +163,14 @@
       "file": "skills/backend/nodejs/de/react.md"
     },
     {
+      "id": "backend/nodejs/shadcn",
+      "category": "backend",
+      "lang": "de",
+      "title": "Shadcn",
+      "description": "shadcn/ui: install components, customise variants, theming with CSS variables, compose compound components, extend with custom primitives",
+      "file": "skills/backend/nodejs/de/shadcn.md"
+    },
+    {
       "id": "backend/nodejs/typescript-advanced",
       "category": "backend",
       "lang": "de",
@@ -259,6 +267,14 @@
       "file": "skills/backend/nodejs/fr/react.md"
     },
     {
+      "id": "backend/nodejs/shadcn",
+      "category": "backend",
+      "lang": "fr",
+      "title": "Shadcn",
+      "description": "shadcn/ui: install components, customise variants, theming with CSS variables, compose compound components, extend with custom primitives",
+      "file": "skills/backend/nodejs/fr/shadcn.md"
+    },
+    {
       "id": "backend/nodejs/typescript-advanced",
       "category": "backend",
       "lang": "fr",
@@ -323,6 +339,14 @@
       "file": "skills/backend/nodejs/nl/react.md"
     },
     {
+      "id": "backend/nodejs/shadcn",
+      "category": "backend",
+      "lang": "nl",
+      "title": "Shadcn",
+      "description": "shadcn/ui: install components, customise variants, theming with CSS variables, compose compound components, extend with custom primitives",
+      "file": "skills/backend/nodejs/nl/shadcn.md"
+    },
+    {
       "id": "backend/nodejs/typescript-advanced",
       "category": "backend",
       "lang": "nl",
@@ -337,6 +361,14 @@
       "title": "Vue",
       "description": "Vue 3 patterns: Composition API, composables, Pinia state, Vue Router, async components, performance, TypeScript with Vue",
       "file": "skills/backend/nodejs/nl/vue.md"
+    },
+    {
+      "id": "backend/nodejs/rbac",
+      "category": "backend",
+      "lang": "en",
+      "title": "Rbac",
+      "description": "RBAC multi-tenant patterns: role tables, permission checks, row-level scoping, organization isolation, middleware guards for Next.js and Express/FastAPI",
+      "file": "skills/backend/nodejs/rbac.md"
     },
     {
       "id": "backend/nodejs/react",
@@ -577,6 +609,14 @@
       "title": "Cicd",
       "description": "CI/CD patterns: GitHub Actions workflows, secrets management, deployment gates, matrix builds, caching, reusable workflows, rollbacks",
       "file": "skills/devops-infra/cicd.md"
+    },
+    {
+      "id": "devops-infra/coolify",
+      "category": "devops-infra",
+      "lang": "en",
+      "title": "Coolify",
+      "description": "Coolify self-hosted PaaS: deploy apps and databases on your own server, Docker/Git-based deploys, preview environments, wildcard SSL, free alternative to Heroku/Railway",
+      "file": "skills/devops-infra/coolify.md"
     },
     {
       "id": "devops-infra/cicd",
@@ -1883,6 +1923,14 @@
       "file": "skills/productivity/lean-claude.md"
     },
     {
+      "id": "productivity/llms-txt",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Llms Txt",
+      "description": "llms.txt standard: create AI-readable documentation indexes that reduce hallucinations by 60%+ vs context stuffing — for your own projects and libraries",
+      "file": "skills/productivity/llms-txt.md"
+    },
+    {
       "id": "productivity/batch",
       "category": "productivity",
       "lang": "nl",
@@ -3164,7 +3212,7 @@
     }
   ],
   "summary": {
-    "skills": 56,
+    "skills": 59,
     "agents": 6,
     "hooks": 7,
     "rules": 8,
