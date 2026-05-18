@@ -1,6 +1,6 @@
 {
-  "version": "1.6.0",
-  "generated": "2026-05-18T17:07:47.995Z",
+  "version": "1.7.0",
+  "generated": "2026-05-18T17:11:20.386Z",
   "skills": [
     {
       "id": "backend/dotnet/csharp",
@@ -139,6 +139,14 @@
       "file": "skills/backend/nodejs/de/nextjs.md"
     },
     {
+      "id": "backend/nodejs/react",
+      "category": "backend",
+      "lang": "de",
+      "title": "React",
+      "description": "React patterns: hooks, context, performance optimisation, component composition, state management, common anti-patterns",
+      "file": "skills/backend/nodejs/de/react.md"
+    },
+    {
       "id": "backend/nodejs/typescript-advanced",
       "category": "backend",
       "lang": "de",
@@ -163,6 +171,14 @@
       "file": "skills/backend/nodejs/es/nextjs.md"
     },
     {
+      "id": "backend/nodejs/react",
+      "category": "backend",
+      "lang": "es",
+      "title": "React",
+      "description": "React patterns: hooks, context, performance optimisation, component composition, state management, common anti-patterns",
+      "file": "skills/backend/nodejs/es/react.md"
+    },
+    {
       "id": "backend/nodejs/typescript-advanced",
       "category": "backend",
       "lang": "es",
@@ -185,6 +201,14 @@
       "title": "Compétence Next.js",
       "description": "",
       "file": "skills/backend/nodejs/fr/nextjs.md"
+    },
+    {
+      "id": "backend/nodejs/react",
+      "category": "backend",
+      "lang": "fr",
+      "title": "React",
+      "description": "React patterns: hooks, context, performance optimisation, component composition, state management, common anti-patterns",
+      "file": "skills/backend/nodejs/fr/react.md"
     },
     {
       "id": "backend/nodejs/typescript-advanced",
@@ -225,6 +249,14 @@
       "title": "Next.js Skill",
       "description": "",
       "file": "skills/backend/nodejs/nl/nextjs.md"
+    },
+    {
+      "id": "backend/nodejs/react",
+      "category": "backend",
+      "lang": "nl",
+      "title": "React",
+      "description": "React patterns: hooks, context, performance optimisation, component composition, state management, common anti-patterns",
+      "file": "skills/backend/nodejs/nl/react.md"
     },
     {
       "id": "backend/nodejs/typescript-advanced",
@@ -337,6 +369,14 @@
       "title": "FastAPI Skill",
       "description": "",
       "file": "skills/backend/python/nl/fastapi.md"
+    },
+    {
+      "id": "backend/python/python-async",
+      "category": "backend",
+      "lang": "en",
+      "title": "Python Async",
+      "description": "Python asyncio patterns: async/await, concurrent tasks, aiohttp, timeouts, queues, background tasks, common pitfalls",
+      "file": "skills/backend/python/python-async.md"
     },
     {
       "id": "devops-infra/docker-compose",
@@ -489,6 +529,14 @@
       "title": "Kubernetes",
       "description": "Kubernetes manifests, resource limits, health probes, secrets, RBAC, HPA, CrashLoopBackOff diagnosis",
       "file": "skills/devops-infra/kubernetes.md"
+    },
+    {
+      "id": "devops-infra/monorepo",
+      "category": "devops-infra",
+      "lang": "en",
+      "title": "Monorepo",
+      "description": "Monorepo tooling: Turborepo, Nx, pnpm workspaces, shared packages, task pipelines, affected builds, CI optimisation",
+      "file": "skills/devops-infra/monorepo.md"
     },
     {
       "id": "devops-infra/docker-compose",
@@ -739,12 +787,28 @@
       "file": "skills/database/de/neon.md"
     },
     {
+      "id": "database/postgresql",
+      "category": "database",
+      "lang": "de",
+      "title": "Postgresql",
+      "description": "PostgreSQL backend patterns: full-text search, JSONB, arrays, pg_notify, PL/pgSQL functions, connection pooling with asyncpg and node-postgres",
+      "file": "skills/database/de/postgresql.md"
+    },
+    {
       "id": "database/prisma",
       "category": "database",
       "lang": "de",
       "title": "Prisma",
       "description": "Prisma ORM: schema design, relations, migrations, nested writes, middleware, raw queries, type-safe database access",
       "file": "skills/database/de/prisma.md"
+    },
+    {
+      "id": "database/redis",
+      "category": "database",
+      "lang": "de",
+      "title": "Redis",
+      "description": "Redis patterns: caching, sessions, rate limiting, pub/sub, queues, distributed locks — with Python and Node.js examples",
+      "file": "skills/database/de/redis.md"
     },
     {
       "id": "database/supabase",
@@ -771,6 +835,22 @@
       "file": "skills/database/es/neon.md"
     },
     {
+      "id": "database/prisma",
+      "category": "database",
+      "lang": "es",
+      "title": "Prisma",
+      "description": "Prisma ORM: schema design, relations, migrations, nested writes, middleware, raw queries, type-safe database access",
+      "file": "skills/database/es/prisma.md"
+    },
+    {
+      "id": "database/redis",
+      "category": "database",
+      "lang": "es",
+      "title": "Redis",
+      "description": "Redis patterns: caching, sessions, rate limiting, pub/sub, queues, distributed locks — with Python and Node.js examples",
+      "file": "skills/database/es/redis.md"
+    },
+    {
       "id": "database/supabase",
       "category": "database",
       "lang": "es",
@@ -793,6 +873,14 @@
       "title": "Neon",
       "description": "Neon serverless PostgreSQL: connection pooling, database branching, pgvector for AI, autoscaling patterns, Vercel integration",
       "file": "skills/database/fr/neon.md"
+    },
+    {
+      "id": "database/postgresql",
+      "category": "database",
+      "lang": "fr",
+      "title": "Postgresql",
+      "description": "PostgreSQL backend patterns: full-text search, JSONB, arrays, pg_notify, PL/pgSQL functions, connection pooling with asyncpg and node-postgres",
+      "file": "skills/database/fr/postgresql.md"
     },
     {
       "id": "database/prisma",
@@ -857,6 +945,30 @@
       "title": "Neon",
       "description": "Neon serverless PostgreSQL: connection pooling, database branching, pgvector for AI, autoscaling patterns, Vercel integration",
       "file": "skills/database/nl/neon.md"
+    },
+    {
+      "id": "database/postgresql",
+      "category": "database",
+      "lang": "nl",
+      "title": "Postgresql",
+      "description": "PostgreSQL backend patterns: full-text search, JSONB, arrays, pg_notify, PL/pgSQL functions, connection pooling with asyncpg and node-postgres",
+      "file": "skills/database/nl/postgresql.md"
+    },
+    {
+      "id": "database/prisma",
+      "category": "database",
+      "lang": "nl",
+      "title": "Prisma",
+      "description": "Prisma ORM: schema design, relations, migrations, nested writes, middleware, raw queries, type-safe database access",
+      "file": "skills/database/nl/prisma.md"
+    },
+    {
+      "id": "database/redis",
+      "category": "database",
+      "lang": "nl",
+      "title": "Redis",
+      "description": "Redis patterns: caching, sessions, rate limiting, pub/sub, queues, distributed locks — with Python and Node.js examples",
+      "file": "skills/database/nl/redis.md"
     },
     {
       "id": "database/supabase",
@@ -1417,6 +1529,14 @@
       "title": "Security Audit",
       "description": "Security audit for code: OWASP Top 10, injection, auth flaws, secrets, dependency vulnerabilities — with severity and fix for each finding",
       "file": "skills/productivity/security-audit.md"
+    },
+    {
+      "id": "productivity/test-factories",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Test Factories",
+      "description": "Test factories and fixtures: factory_boy (Python), Fishery/faker-js (TypeScript), seeding test databases, avoiding test data duplication",
+      "file": "skills/productivity/test-factories.md"
     },
     {
       "id": "productivity/test-generator",
@@ -2572,7 +2692,7 @@
     }
   ],
   "summary": {
-    "skills": 43,
+    "skills": 46,
     "agents": 6,
     "hooks": 7,
     "rules": 8,
