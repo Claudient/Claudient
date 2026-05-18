@@ -27,48 +27,74 @@
   <rect x="1212" y="560" width="28" height="28" fill="#0a0a0a"/>
 
   <!-- Main title: CLAUDIENT -->
-  <text x="640" y="240" text-anchor="middle" font-size="136" font-weight="900" fill="#0a0a0a" letter-spacing="-4">CLAUDIENT</text>
-
-  <!-- Divider line -->
-  <rect x="160" y="268" width="960" height="5" fill="#0a0a0a"/>
+  <text x="640" y="220" text-anchor="middle" font-size="128" font-weight="900" fill="#0a0a0a" letter-spacing="-4">CLAUDIENT</text>
 
   <!-- Subtitle -->
-  <text x="640" y="330" text-anchor="middle" font-size="36" font-weight="700" fill="#0a0a0a">The Claude Code Knowledge System</text>
+  <text x="640" y="275" text-anchor="middle" font-size="28" font-weight="700" fill="#0a0a0a">63 Skills · Claude Code Knowledge System</text>
 
-  <!-- npm install badge — black pill -->
-  <rect x="390" y="368" width="500" height="64" fill="#0a0a0a" rx="0"/>
-  <rect x="386" y="364" width="500" height="64" fill="#0a0a0a" rx="0"/>
-  <text x="636" y="406" text-anchor="middle" font-size="28" font-weight="700" fill="#f97316" font-family="'Courier New', monospace">npx claudient add all</text>
-
-  <!-- Stats row -->
-  <g font-size="24" font-weight="700" fill="#0a0a0a">
-    <!-- Skills -->
-    <rect x="140" y="468" width="180" height="60" fill="white" stroke="#0a0a0a" stroke-width="3"/>
-    <rect x="143" y="471" width="180" height="60" fill="white" stroke="#0a0a0a" stroke-width="3"/>
-    <text x="233" y="507" text-anchor="middle" font-size="26" font-weight="900" fill="#0a0a0a">19 Skills</text>
-
-    <!-- Agents -->
-    <rect x="348" y="468" width="180" height="60" fill="white" stroke="#0a0a0a" stroke-width="3"/>
-    <rect x="351" y="471" width="180" height="60" fill="white" stroke="#0a0a0a" stroke-width="3"/>
-    <text x="441" y="507" text-anchor="middle" font-size="26" font-weight="900" fill="#0a0a0a">6 Agents</text>
-
-    <!-- Hooks -->
-    <rect x="556" y="468" width="170" height="60" fill="white" stroke="#0a0a0a" stroke-width="3"/>
-    <rect x="559" y="471" width="170" height="60" fill="white" stroke="#0a0a0a" stroke-width="3"/>
-    <text x="644" y="507" text-anchor="middle" font-size="26" font-weight="900" fill="#0a0a0a">7 Hooks</text>
-
-    <!-- Languages -->
-    <rect x="754" y="468" width="196" height="60" fill="white" stroke="#0a0a0a" stroke-width="3"/>
-    <rect x="757" y="471" width="196" height="60" fill="white" stroke="#0a0a0a" stroke-width="3"/>
-    <text x="855" y="507" text-anchor="middle" font-size="26" font-weight="900" fill="#0a0a0a">5 Languages</text>
-
-    <!-- MIT -->
-    <rect x="978" y="468" width="160" height="60" fill="white" stroke="#0a0a0a" stroke-width="3"/>
-    <rect x="981" y="471" width="160" height="60" fill="white" stroke="#0a0a0a" stroke-width="3"/>
-    <text x="1061" y="507" text-anchor="middle" font-size="26" font-weight="900" fill="#0a0a0a">MIT · Free</text>
+  <!-- Category pills row -->
+  <g font-size="17" font-weight="800">
+    <!-- backend -->
+    <rect x="97" y="305" width="140" height="34" fill="#0a0a0a"/>
+    <text x="167" y="327" text-anchor="middle" fill="white">backend</text>
+    <!-- database -->
+    <rect x="249" y="305" width="148" height="34" fill="#0a0a0a"/>
+    <text x="323" y="327" text-anchor="middle" fill="white">database</text>
+    <!-- devops -->
+    <rect x="409" y="305" width="148" height="34" fill="#0a0a0a"/>
+    <text x="483" y="327" text-anchor="middle" fill="white">devops-infra</text>
+    <!-- ai-engineering -->
+    <rect x="569" y="305" width="185" height="34" fill="#0a0a0a"/>
+    <text x="661" y="327" text-anchor="middle" fill="white">ai-engineering</text>
+    <!-- git -->
+    <rect x="766" y="305" width="90" height="34" fill="#0a0a0a"/>
+    <text x="811" y="327" text-anchor="middle" fill="white">git</text>
+    <!-- productivity -->
+    <rect x="868" y="305" width="160" height="34" fill="#0a0a0a"/>
+    <text x="948" y="327" text-anchor="middle" fill="white">productivity</text>
+    <!-- data-ml -->
+    <rect x="1040" y="305" width="143" height="34" fill="#0a0a0a"/>
+    <text x="1111" y="327" text-anchor="middle" fill="white">data-ml</text>
   </g>
 
+  <!-- npm install badge -->
+  <rect x="340" y="360" width="600" height="60" fill="#0a0a0a" rx="0"/>
+  <text x="640" y="398" text-anchor="middle" font-size="26" font-weight="700" fill="#f97316" font-family="'Courier New', monospace">npx claudient add all</text>
+
+  <!-- Stats row -->
+  <g font-size="22" font-weight="900" fill="#0a0a0a">
+    <!-- Skills -->
+    <rect x="108" y="444" width="190" height="62" fill="white" stroke="#0a0a0a" stroke-width="3"/>
+    <rect x="111" y="447" width="190" height="62" fill="white" stroke="#0a0a0a" stroke-width="3"/>
+    <text x="206" y="484" text-anchor="middle" font-size="24">63 Skills</text>
+
+    <!-- Agents -->
+    <rect x="328" y="444" width="180" height="62" fill="white" stroke="#0a0a0a" stroke-width="3"/>
+    <rect x="331" y="447" width="180" height="62" fill="white" stroke="#0a0a0a" stroke-width="3"/>
+    <text x="421" y="484" text-anchor="middle" font-size="24">6 Agents</text>
+
+    <!-- Hooks -->
+    <rect x="538" y="444" width="165" height="62" fill="white" stroke="#0a0a0a" stroke-width="3"/>
+    <rect x="541" y="447" width="165" height="62" fill="white" stroke="#0a0a0a" stroke-width="3"/>
+    <text x="623" y="484" text-anchor="middle" font-size="24">7 Hooks</text>
+
+    <!-- Languages -->
+    <rect x="733" y="444" width="210" height="62" fill="white" stroke="#0a0a0a" stroke-width="3"/>
+    <rect x="736" y="447" width="210" height="62" fill="white" stroke="#0a0a0a" stroke-width="3"/>
+    <text x="841" y="484" text-anchor="middle" font-size="24">5 Languages</text>
+
+    <!-- MIT -->
+    <rect x="973" y="444" width="200" height="62" fill="white" stroke="#0a0a0a" stroke-width="3"/>
+    <rect x="976" y="447" width="200" height="62" fill="white" stroke="#0a0a0a" stroke-width="3"/>
+    <text x="1076" y="484" text-anchor="middle" font-size="24">MIT · Free</text>
+  </g>
+
+  <!-- Stack highlight line -->
+  <text x="640" y="548" text-anchor="middle" font-size="18" font-weight="700" fill="#0a0a0a">
+    Drizzle · Better Auth · Vercel AI SDK · shadcn/ui · Railway · Supabase · Redis · MCP
+  </text>
+
   <!-- Bottom credit -->
-  <text x="640" y="592" text-anchor="middle" font-size="22" font-weight="700" fill="#0a0a0a" opacity="0.7">by uitbreiden.com · github.com/Claudient/Claudient</text>
+  <text x="640" y="590" text-anchor="middle" font-size="18" font-weight="700" fill="#0a0a0a" opacity="0.7">by uitbreiden.com · github.com/Claudients/Claudient</text>
 
 </svg>
