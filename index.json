@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "generated": "2026-05-19T19:05:26.874Z",
+  "generated": "2026-05-19T19:15:23.459Z",
   "skills": [
     {
       "id": "backend/dotnet/csharp",
@@ -1291,6 +1291,14 @@
       "file": "skills/devops-infra/sentry.md"
     },
     {
+      "id": "devops-infra/slo-architect",
+      "category": "devops-infra",
+      "lang": "en",
+      "title": "Slo Architect",
+      "description": "SLO design: define SLIs, set reliability targets, calculate error budgets, design alerting policies, build runbooks — Google SRE methodology",
+      "file": "skills/devops-infra/slo-architect.md"
+    },
+    {
       "id": "devops-infra/terraform",
       "category": "devops-infra",
       "lang": "en",
@@ -2155,6 +2163,14 @@
       "file": "skills/ai-engineering/nl/vercel-ai-sdk.md"
     },
     {
+      "id": "ai-engineering/rag-architect",
+      "category": "ai-engineering",
+      "lang": "en",
+      "title": "Rag Architect",
+      "description": "RAG system design: chunking strategies, embedding model selection, vector store choice, retrieval patterns, reranking, evaluation — production-grade retrieval-augmented generation",
+      "file": "skills/ai-engineering/rag-architect.md"
+    },
+    {
       "id": "ai-engineering/vercel-ai-sdk",
       "category": "ai-engineering",
       "lang": "en",
@@ -2593,6 +2609,14 @@
       "title": "Refactor",
       "description": "Safe code refactoring: extract function/class, rename, split files, simplify conditionals, remove duplication — with test coverage at every step",
       "file": "skills/productivity/refactor.md"
+    },
+    {
+      "id": "productivity/runbook-generator",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Runbook Generator",
+      "description": "Generate runbooks for incidents, deployments, and operational tasks — step-by-step procedures with decision trees, rollback steps, and escalation paths",
+      "file": "skills/productivity/runbook-generator.md"
     },
     {
       "id": "productivity/security-audit",
@@ -3806,7 +3830,7 @@
     }
   ],
   "summary": {
-    "skills": 71,
+    "skills": 74,
     "agents": 13,
     "hooks": 7,
     "rules": 8,
