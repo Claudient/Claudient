@@ -1,6 +1,6 @@
 {
   "version": "1.4.0",
-  "generated": "2026-05-19T18:36:58.076Z",
+  "generated": "2026-05-19T18:43:31.467Z",
   "skills": [
     {
       "id": "backend/dotnet/csharp",
@@ -121,6 +121,14 @@
       "title": "Spring Boot",
       "description": "Spring Boot REST API, JPA repositories, Spring Security JWT, @WebMvcTest, @SpringBootTest, Spring Cloud",
       "file": "skills/backend/java/spring-boot.md"
+    },
+    {
+      "id": "backend/nodejs/astro",
+      "category": "backend",
+      "lang": "en",
+      "title": "Astro",
+      "description": "Astro framework: content-first sites, islands architecture, MDX collections, Cloudflare Workers/Pages deployment, View Transitions, SEO",
+      "file": "skills/backend/nodejs/astro.md"
     },
     {
       "id": "backend/nodejs/better-auth",
@@ -435,6 +443,14 @@
       "file": "skills/backend/nodejs/nl/wasp.md"
     },
     {
+      "id": "backend/nodejs/payload-cms",
+      "category": "backend",
+      "lang": "en",
+      "title": "Payload Cms",
+      "description": "Payload CMS: TypeScript-first headless CMS, collection schemas, access control, hooks, REST+GraphQL APIs, Next.js App Router integration",
+      "file": "skills/backend/nodejs/payload-cms.md"
+    },
+    {
       "id": "backend/nodejs/rbac",
       "category": "backend",
       "lang": "en",
@@ -457,6 +473,14 @@
       "title": "Shadcn",
       "description": "shadcn/ui: install components, customise variants, theming with CSS variables, compose compound components, extend with custom primitives",
       "file": "skills/backend/nodejs/shadcn.md"
+    },
+    {
+      "id": "backend/nodejs/svelte",
+      "category": "backend",
+      "lang": "en",
+      "title": "Svelte",
+      "description": "SvelteKit: file-based routing, server/client load functions, form actions, stores, Cloudflare Workers deployment, component patterns",
+      "file": "skills/backend/nodejs/svelte.md"
     },
     {
       "id": "backend/nodejs/trpc",
@@ -883,6 +907,14 @@
       "file": "skills/devops-infra/es/terraform.md"
     },
     {
+      "id": "devops-infra/feature-flags",
+      "category": "devops-infra",
+      "lang": "en",
+      "title": "Feature Flags",
+      "description": "Feature flags: gradual rollouts, A/B testing, kill switches — LaunchDarkly, Unleash, Statsig, and home-built patterns with database or env vars",
+      "file": "skills/devops-infra/feature-flags.md"
+    },
+    {
       "id": "devops-infra/cicd",
       "category": "devops-infra",
       "lang": "fr",
@@ -1073,6 +1105,14 @@
       "title": "Northflank",
       "description": "Northflank: managed databases, secret injection, preview environments per PR, multi-service deployment — optimal for agent-generated codebases",
       "file": "skills/devops-infra/northflank.md"
+    },
+    {
+      "id": "devops-infra/opentelemetry",
+      "category": "devops-infra",
+      "lang": "en",
+      "title": "Opentelemetry",
+      "description": "OpenTelemetry setup: traces, metrics, logs, GenAI semantic conventions for LLM calls, export to Honeycomb/Datadog/Grafana, sampling strategies",
+      "file": "skills/devops-infra/opentelemetry.md"
     },
     {
       "id": "devops-infra/railway",
@@ -3564,7 +3604,7 @@
     }
   ],
   "summary": {
-    "skills": 66,
+    "skills": 71,
     "agents": 6,
     "hooks": 7,
     "rules": 8,
