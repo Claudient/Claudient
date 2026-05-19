@@ -1,6 +1,6 @@
 {
   "version": "1.4.0",
-  "generated": "2026-05-19T18:03:57.713Z",
+  "generated": "2026-05-19T18:36:58.076Z",
   "skills": [
     {
       "id": "backend/dotnet/csharp",
@@ -171,6 +171,14 @@
       "file": "skills/backend/nodejs/de/shadcn.md"
     },
     {
+      "id": "backend/nodejs/trpc",
+      "category": "backend",
+      "lang": "de",
+      "title": "Trpc",
+      "description": "tRPC end-to-end type-safe APIs: T3 Stack setup, routers, procedures, Zod validation, React Query integration, middleware, subscriptions",
+      "file": "skills/backend/nodejs/de/trpc.md"
+    },
+    {
       "id": "backend/nodejs/typescript-advanced",
       "category": "backend",
       "lang": "de",
@@ -235,6 +243,14 @@
       "file": "skills/backend/nodejs/es/shadcn.md"
     },
     {
+      "id": "backend/nodejs/trpc",
+      "category": "backend",
+      "lang": "es",
+      "title": "Trpc",
+      "description": "tRPC end-to-end type-safe APIs: T3 Stack setup, routers, procedures, Zod validation, React Query integration, middleware, subscriptions",
+      "file": "skills/backend/nodejs/es/trpc.md"
+    },
+    {
       "id": "backend/nodejs/typescript-advanced",
       "category": "backend",
       "lang": "es",
@@ -297,6 +313,14 @@
       "title": "Shadcn",
       "description": "shadcn/ui: install components, customise variants, theming with CSS variables, compose compound components, extend with custom primitives",
       "file": "skills/backend/nodejs/fr/shadcn.md"
+    },
+    {
+      "id": "backend/nodejs/trpc",
+      "category": "backend",
+      "lang": "fr",
+      "title": "Trpc",
+      "description": "tRPC end-to-end type-safe APIs: T3 Stack setup, routers, procedures, Zod validation, React Query integration, middleware, subscriptions",
+      "file": "skills/backend/nodejs/fr/trpc.md"
     },
     {
       "id": "backend/nodejs/typescript-advanced",
@@ -377,6 +401,14 @@
       "title": "Shadcn",
       "description": "shadcn/ui: install components, customise variants, theming with CSS variables, compose compound components, extend with custom primitives",
       "file": "skills/backend/nodejs/nl/shadcn.md"
+    },
+    {
+      "id": "backend/nodejs/trpc",
+      "category": "backend",
+      "lang": "nl",
+      "title": "Trpc",
+      "description": "tRPC end-to-end type-safe APIs: T3 Stack setup, routers, procedures, Zod validation, React Query integration, middleware, subscriptions",
+      "file": "skills/backend/nodejs/nl/trpc.md"
     },
     {
       "id": "backend/nodejs/typescript-advanced",
@@ -739,6 +771,14 @@
       "file": "skills/devops-infra/de/railway.md"
     },
     {
+      "id": "devops-infra/sentry",
+      "category": "devops-infra",
+      "lang": "de",
+      "title": "Sentry",
+      "description": "Sentry error monitoring: SDK setup, source maps, automated error triage with Claude, performance monitoring, MCP integration for agent-driven debugging",
+      "file": "skills/devops-infra/de/sentry.md"
+    },
+    {
       "id": "devops-infra/terraform",
       "category": "devops-infra",
       "lang": "de",
@@ -827,6 +867,14 @@
       "file": "skills/devops-infra/es/railway.md"
     },
     {
+      "id": "devops-infra/sentry",
+      "category": "devops-infra",
+      "lang": "es",
+      "title": "Sentry",
+      "description": "Sentry error monitoring: SDK setup, source maps, automated error triage with Claude, performance monitoring, MCP integration for agent-driven debugging",
+      "file": "skills/devops-infra/es/sentry.md"
+    },
+    {
       "id": "devops-infra/terraform",
       "category": "devops-infra",
       "lang": "es",
@@ -897,6 +945,14 @@
       "title": "Railway",
       "description": "Railway deployment: Dockerfile deploys, managed Postgres/Redis, environment variables, PR preview environments, custom domains, CLI workflow",
       "file": "skills/devops-infra/fr/railway.md"
+    },
+    {
+      "id": "devops-infra/sentry",
+      "category": "devops-infra",
+      "lang": "fr",
+      "title": "Sentry",
+      "description": "Sentry error monitoring: SDK setup, source maps, automated error triage with Claude, performance monitoring, MCP integration for agent-driven debugging",
+      "file": "skills/devops-infra/fr/sentry.md"
     },
     {
       "id": "devops-infra/terraform",
@@ -993,6 +1049,14 @@
       "title": "Railway",
       "description": "Railway deployment: Dockerfile deploys, managed Postgres/Redis, environment variables, PR preview environments, custom domains, CLI workflow",
       "file": "skills/devops-infra/nl/railway.md"
+    },
+    {
+      "id": "devops-infra/sentry",
+      "category": "devops-infra",
+      "lang": "nl",
+      "title": "Sentry",
+      "description": "Sentry error monitoring: SDK setup, source maps, automated error triage with Claude, performance monitoring, MCP integration for agent-driven debugging",
+      "file": "skills/devops-infra/nl/sentry.md"
     },
     {
       "id": "devops-infra/terraform",
@@ -1691,6 +1755,14 @@
       "file": "skills/ai-engineering/de/claude-api.md"
     },
     {
+      "id": "ai-engineering/langgraph",
+      "category": "ai-engineering",
+      "lang": "de",
+      "title": "Langgraph",
+      "description": "LangGraph stateful agent framework: StateGraph, nodes, edges, conditional branching, persistence/checkpointing, human-in-the-loop, multi-agent subgraphs",
+      "file": "skills/ai-engineering/de/langgraph.md"
+    },
+    {
       "id": "ai-engineering/mastra",
       "category": "ai-engineering",
       "lang": "de",
@@ -1731,6 +1803,14 @@
       "file": "skills/ai-engineering/es/claude-api.md"
     },
     {
+      "id": "ai-engineering/langgraph",
+      "category": "ai-engineering",
+      "lang": "es",
+      "title": "Langgraph",
+      "description": "LangGraph stateful agent framework: StateGraph, nodes, edges, conditional branching, persistence/checkpointing, human-in-the-loop, multi-agent subgraphs",
+      "file": "skills/ai-engineering/es/langgraph.md"
+    },
+    {
       "id": "ai-engineering/mastra",
       "category": "ai-engineering",
       "lang": "es",
@@ -1769,6 +1849,14 @@
       "title": "Compétence API Claude",
       "description": "",
       "file": "skills/ai-engineering/fr/claude-api.md"
+    },
+    {
+      "id": "ai-engineering/langgraph",
+      "category": "ai-engineering",
+      "lang": "fr",
+      "title": "Langgraph",
+      "description": "LangGraph stateful agent framework: StateGraph, nodes, edges, conditional branching, persistence/checkpointing, human-in-the-loop, multi-agent subgraphs",
+      "file": "skills/ai-engineering/fr/langgraph.md"
     },
     {
       "id": "ai-engineering/mastra",
@@ -1833,6 +1921,14 @@
       "title": "Claude API Skill",
       "description": "",
       "file": "skills/ai-engineering/nl/claude-api.md"
+    },
+    {
+      "id": "ai-engineering/langgraph",
+      "category": "ai-engineering",
+      "lang": "nl",
+      "title": "Langgraph",
+      "description": "LangGraph stateful agent framework: StateGraph, nodes, edges, conditional branching, persistence/checkpointing, human-in-the-loop, multi-agent subgraphs",
+      "file": "skills/ai-engineering/nl/langgraph.md"
     },
     {
       "id": "ai-engineering/mastra",

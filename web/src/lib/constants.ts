@@ -10,6 +10,7 @@ export type SkillMeta = {
 }
 
 export const SKILL_CATEGORIES_LIST = [
+  'small-business',
   'backend',
   'devops-infra',
   'data-ml',
@@ -25,6 +26,7 @@ export const SKILL_CATEGORIES_LIST = [
 ]
 
 export const CATEGORY_LABELS: Record<string, string> = {
+  'small-business': 'Small Business',
   'backend': 'Backend',
   'devops-infra': 'DevOps & Infra',
   'data-ml': 'Data & ML',
@@ -40,6 +42,7 @@ export const CATEGORY_LABELS: Record<string, string> = {
 }
 
 export const CATEGORY_COLORS: Record<string, string> = {
+  'small-business': 'bg-cyan-400',
   'backend': 'bg-blue-400',
   'devops-infra': 'bg-orange-400',
   'data-ml': 'bg-purple-400',

@@ -1,23 +1,58 @@
-# Claudient — 63 Skills for Claude Code
+# Claudient — Skills, Agents & Plugins for Claude Code
 
-> The community-powered knowledge system for Claude Code. Activate domain expertise with one command — no config, no lock-in, no hallucinations.
+> The community-powered knowledge system for Claude Code — for developers, vibe coders, AI builders, and small business owners. Activate domain expertise with one command.
 
 ![Claudient](web/public/social-preview.svg)
 
 [![npm](https://img.shields.io/npm/v/claudient)](https://www.npmjs.com/package/claudient)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-63-orange)](#skills)
+[![Skills](https://img.shields.io/badge/skills-80+-orange)](#skills)
+[![Small Business](https://img.shields.io/badge/small_business-12_skills-06b6d4)](#-claude-for-small-business)
 [![Languages](https://img.shields.io/badge/languages-EN%20%7C%20FR%20%7C%20DE%20%7C%20NL%20%7C%20ES-blue)](#translations)
 [![Reddit](https://img.shields.io/badge/Reddit-r%2Fuitbreiden-FF4500?logo=reddit&logoColor=white)](https://www.reddit.com/r/uitbreiden/)
 [![YouTube](https://img.shields.io/badge/YouTube-%40UITBREIDEN-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/@UITBREIDEN)
 
 ---
 
+## 🏪 Claude for Small Business
+
+> **Not a developer? Claudient has you covered.** These skills are written for business owners — plain English, no terminal commands, works with the tools you already use.
+
+```bash
+npx claudient add skills small-business
+# Then in Claude Code, just describe what you need in plain English
+```
+
+Anthropic launched Claude for Small Business with 15 workflows. Claudient covers the long tail — the workflows they didn't ship:
+
+| Skill | What it automates | Tools |
+|---|---|---|
+| `/invoice-chaser` | AR reminders, escalation sequences, overdue tracking | QuickBooks, Stripe |
+| `/quickbooks-workflow` | Month-end close, reconciliation, discrepancy detection | QuickBooks |
+| `/cash-flow-forecast` | 30-day cash position, payroll vs runway warnings | QuickBooks, PayPal |
+| `/expense-audit` | Subscription creep, duplicate vendors, unused charges | QuickBooks |
+| `/content-repurposer` | 1 brief → blog + social + email + ad copy | Canva, social |
+| `/campaign-brief` | Marketing brief → multi-channel execution plan | HubSpot |
+| `/review-response` | Draft responses to Google/Yelp reviews, sentiment analysis | Google, Yelp |
+| `/customer-inquiry` | FAQ responder + appointment booking after hours | Website, CRM |
+| `/shopify-operations` | Product descriptions, inventory alerts, demand forecast | Shopify |
+| `/job-description` | Write JD → screen resumes → candidate summaries | Google Workspace |
+| `/sop-writer` | Standard operating procedures from plain description | Any business |
+| `/weekly-pulse` | Pull KPIs from all tools → weekly business report | Multi-tool |
+
+**Works with:** QuickBooks · HubSpot · Shopify · Stripe · PayPal · Canva · DocuSign · Google Workspace · Square
+
+---
+
 ## Who is this for?
 
-Claudient is built for **Claude Code power users, vibe coders, and AI product builders** who want Claude to generate production-grade code — not generic boilerplate. Every skill is written for AI legibility first: deterministic patterns, explicit conventions, and zero ambiguity.
+Claudient is built for **everyone who uses Claude Code** — from vibe coders and AI product builders to small business owners and GTM teams.
 
-Whether you're building with **Next.js + Drizzle + Better Auth**, authenticating users with **Supabase RLS**, deploying to **Railway or Coolify**, or building an AI product with the **Vercel AI SDK** — there's a skill that makes Claude do it right.
+- **Developers & vibe coders** — Next.js + Drizzle + Better Auth, Supabase RLS, Railway, Vercel AI SDK
+- **AI product builders** — LangGraph, Mastra AI, MCP Server Builder, Claude API
+- **GTM & sales teams** — HubSpot automation, SDR agents, lead enrichment, CRM hygiene
+- **Small business owners** — invoicing, cash flow, content, customer service (no code required)
+- **Finance & legal professionals** — contract review, DCF models, NDA triage, DSAR response
 
 ---
 
