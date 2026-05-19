@@ -1,6 +1,6 @@
 {
   "version": "1.4.0",
-  "generated": "2026-05-19T18:48:04.381Z",
+  "generated": "2026-05-19T18:56:27.056Z",
   "skills": [
     {
       "id": "backend/dotnet/csharp",
@@ -139,6 +139,14 @@
       "file": "skills/backend/nodejs/better-auth.md"
     },
     {
+      "id": "backend/nodejs/astro",
+      "category": "backend",
+      "lang": "de",
+      "title": "Astro",
+      "description": "Astro framework: content-first sites, islands architecture, MDX collections, Cloudflare Workers/Pages deployment, View Transitions, SEO",
+      "file": "skills/backend/nodejs/de/astro.md"
+    },
+    {
       "id": "backend/nodejs/better-auth",
       "category": "backend",
       "lang": "de",
@@ -163,6 +171,14 @@
       "file": "skills/backend/nodejs/de/nextjs.md"
     },
     {
+      "id": "backend/nodejs/payload-cms",
+      "category": "backend",
+      "lang": "de",
+      "title": "Payload Cms",
+      "description": "Payload CMS: TypeScript-first headless CMS, collection schemas, access control, hooks, REST+GraphQL APIs, Next.js App Router integration",
+      "file": "skills/backend/nodejs/de/payload-cms.md"
+    },
+    {
       "id": "backend/nodejs/react",
       "category": "backend",
       "lang": "de",
@@ -177,6 +193,14 @@
       "title": "Shadcn",
       "description": "shadcn/ui: install components, customise variants, theming with CSS variables, compose compound components, extend with custom primitives",
       "file": "skills/backend/nodejs/de/shadcn.md"
+    },
+    {
+      "id": "backend/nodejs/svelte",
+      "category": "backend",
+      "lang": "de",
+      "title": "Svelte",
+      "description": "SvelteKit: file-based routing, server/client load functions, form actions, stores, Cloudflare Workers deployment, component patterns",
+      "file": "skills/backend/nodejs/de/svelte.md"
     },
     {
       "id": "backend/nodejs/trpc",
@@ -211,6 +235,14 @@
       "file": "skills/backend/nodejs/de/wasp.md"
     },
     {
+      "id": "backend/nodejs/astro",
+      "category": "backend",
+      "lang": "es",
+      "title": "Astro",
+      "description": "Astro framework: content-first sites, islands architecture, MDX collections, Cloudflare Workers/Pages deployment, View Transitions, SEO",
+      "file": "skills/backend/nodejs/es/astro.md"
+    },
+    {
       "id": "backend/nodejs/better-auth",
       "category": "backend",
       "lang": "es",
@@ -235,6 +267,14 @@
       "file": "skills/backend/nodejs/es/nextjs.md"
     },
     {
+      "id": "backend/nodejs/payload-cms",
+      "category": "backend",
+      "lang": "es",
+      "title": "Payload Cms",
+      "description": "Payload CMS: TypeScript-first headless CMS, collection schemas, access control, hooks, REST+GraphQL APIs, Next.js App Router integration",
+      "file": "skills/backend/nodejs/es/payload-cms.md"
+    },
+    {
       "id": "backend/nodejs/react",
       "category": "backend",
       "lang": "es",
@@ -249,6 +289,14 @@
       "title": "Shadcn",
       "description": "shadcn/ui: install components, customise variants, theming with CSS variables, compose compound components, extend with custom primitives",
       "file": "skills/backend/nodejs/es/shadcn.md"
+    },
+    {
+      "id": "backend/nodejs/svelte",
+      "category": "backend",
+      "lang": "es",
+      "title": "Svelte",
+      "description": "SvelteKit: file-based routing, server/client load functions, form actions, stores, Cloudflare Workers deployment, component patterns",
+      "file": "skills/backend/nodejs/es/svelte.md"
     },
     {
       "id": "backend/nodejs/trpc",
@@ -283,6 +331,14 @@
       "file": "skills/backend/nodejs/es/wasp.md"
     },
     {
+      "id": "backend/nodejs/astro",
+      "category": "backend",
+      "lang": "fr",
+      "title": "Astro",
+      "description": "Astro framework: content-first sites, islands architecture, MDX collections, Cloudflare Workers/Pages deployment, View Transitions, SEO",
+      "file": "skills/backend/nodejs/fr/astro.md"
+    },
+    {
       "id": "backend/nodejs/better-auth",
       "category": "backend",
       "lang": "fr",
@@ -307,6 +363,14 @@
       "file": "skills/backend/nodejs/fr/nextjs.md"
     },
     {
+      "id": "backend/nodejs/payload-cms",
+      "category": "backend",
+      "lang": "fr",
+      "title": "Payload Cms",
+      "description": "Payload CMS: TypeScript-first headless CMS, collection schemas, access control, hooks, REST+GraphQL APIs, Next.js App Router integration",
+      "file": "skills/backend/nodejs/fr/payload-cms.md"
+    },
+    {
       "id": "backend/nodejs/react",
       "category": "backend",
       "lang": "fr",
@@ -321,6 +385,14 @@
       "title": "Shadcn",
       "description": "shadcn/ui: install components, customise variants, theming with CSS variables, compose compound components, extend with custom primitives",
       "file": "skills/backend/nodejs/fr/shadcn.md"
+    },
+    {
+      "id": "backend/nodejs/svelte",
+      "category": "backend",
+      "lang": "fr",
+      "title": "Svelte",
+      "description": "SvelteKit: file-based routing, server/client load functions, form actions, stores, Cloudflare Workers deployment, component patterns",
+      "file": "skills/backend/nodejs/fr/svelte.md"
     },
     {
       "id": "backend/nodejs/trpc",
@@ -371,6 +443,14 @@
       "file": "skills/backend/nodejs/nextjs.md"
     },
     {
+      "id": "backend/nodejs/astro",
+      "category": "backend",
+      "lang": "nl",
+      "title": "Astro",
+      "description": "Astro framework: content-first sites, islands architecture, MDX collections, Cloudflare Workers/Pages deployment, View Transitions, SEO",
+      "file": "skills/backend/nodejs/nl/astro.md"
+    },
+    {
       "id": "backend/nodejs/better-auth",
       "category": "backend",
       "lang": "nl",
@@ -395,6 +475,14 @@
       "file": "skills/backend/nodejs/nl/nextjs.md"
     },
     {
+      "id": "backend/nodejs/payload-cms",
+      "category": "backend",
+      "lang": "nl",
+      "title": "Payload Cms",
+      "description": "Payload CMS: TypeScript-first headless CMS, collection schemas, access control, hooks, REST+GraphQL APIs, Next.js App Router integration",
+      "file": "skills/backend/nodejs/nl/payload-cms.md"
+    },
+    {
       "id": "backend/nodejs/react",
       "category": "backend",
       "lang": "nl",
@@ -409,6 +497,14 @@
       "title": "Shadcn",
       "description": "shadcn/ui: install components, customise variants, theming with CSS variables, compose compound components, extend with custom primitives",
       "file": "skills/backend/nodejs/nl/shadcn.md"
+    },
+    {
+      "id": "backend/nodejs/svelte",
+      "category": "backend",
+      "lang": "nl",
+      "title": "Svelte",
+      "description": "SvelteKit: file-based routing, server/client load functions, form actions, stores, Cloudflare Workers deployment, component patterns",
+      "file": "skills/backend/nodejs/nl/svelte.md"
     },
     {
       "id": "backend/nodejs/trpc",
@@ -755,6 +851,14 @@
       "file": "skills/devops-infra/de/docker.md"
     },
     {
+      "id": "devops-infra/feature-flags",
+      "category": "devops-infra",
+      "lang": "de",
+      "title": "Feature Flags",
+      "description": "Feature flags: gradual rollouts, A/B testing, kill switches — LaunchDarkly, Unleash, Statsig, and home-built patterns with database or env vars",
+      "file": "skills/devops-infra/de/feature-flags.md"
+    },
+    {
       "id": "devops-infra/github-actions",
       "category": "devops-infra",
       "lang": "de",
@@ -785,6 +889,14 @@
       "title": "Northflank Skill",
       "description": "",
       "file": "skills/devops-infra/de/northflank.md"
+    },
+    {
+      "id": "devops-infra/opentelemetry",
+      "category": "devops-infra",
+      "lang": "de",
+      "title": "Opentelemetry",
+      "description": "OpenTelemetry setup: traces, metrics, logs, GenAI semantic conventions for LLM calls, export to Honeycomb/Datadog/Grafana, sampling strategies",
+      "file": "skills/devops-infra/de/opentelemetry.md"
     },
     {
       "id": "devops-infra/railway",
@@ -851,6 +963,14 @@
       "file": "skills/devops-infra/es/docker.md"
     },
     {
+      "id": "devops-infra/feature-flags",
+      "category": "devops-infra",
+      "lang": "es",
+      "title": "Feature Flags",
+      "description": "Feature flags: gradual rollouts, A/B testing, kill switches — LaunchDarkly, Unleash, Statsig, and home-built patterns with database or env vars",
+      "file": "skills/devops-infra/es/feature-flags.md"
+    },
+    {
       "id": "devops-infra/github-actions",
       "category": "devops-infra",
       "lang": "es",
@@ -881,6 +1001,14 @@
       "title": "Northflank Skill",
       "description": "",
       "file": "skills/devops-infra/es/northflank.md"
+    },
+    {
+      "id": "devops-infra/opentelemetry",
+      "category": "devops-infra",
+      "lang": "es",
+      "title": "Opentelemetry",
+      "description": "OpenTelemetry setup: traces, metrics, logs, GenAI semantic conventions for LLM calls, export to Honeycomb/Datadog/Grafana, sampling strategies",
+      "file": "skills/devops-infra/es/opentelemetry.md"
     },
     {
       "id": "devops-infra/railway",
@@ -939,6 +1067,14 @@
       "file": "skills/devops-infra/fr/docker.md"
     },
     {
+      "id": "devops-infra/feature-flags",
+      "category": "devops-infra",
+      "lang": "fr",
+      "title": "Feature Flags",
+      "description": "Feature flags: gradual rollouts, A/B testing, kill switches — LaunchDarkly, Unleash, Statsig, and home-built patterns with database or env vars",
+      "file": "skills/devops-infra/fr/feature-flags.md"
+    },
+    {
       "id": "devops-infra/github-actions",
       "category": "devops-infra",
       "lang": "fr",
@@ -969,6 +1105,14 @@
       "title": "Northflank Skill",
       "description": "",
       "file": "skills/devops-infra/fr/northflank.md"
+    },
+    {
+      "id": "devops-infra/opentelemetry",
+      "category": "devops-infra",
+      "lang": "fr",
+      "title": "Opentelemetry",
+      "description": "OpenTelemetry setup: traces, metrics, logs, GenAI semantic conventions for LLM calls, export to Honeycomb/Datadog/Grafana, sampling strategies",
+      "file": "skills/devops-infra/fr/opentelemetry.md"
     },
     {
       "id": "devops-infra/railway",
@@ -1043,6 +1187,14 @@
       "file": "skills/devops-infra/nl/docker.md"
     },
     {
+      "id": "devops-infra/feature-flags",
+      "category": "devops-infra",
+      "lang": "nl",
+      "title": "Feature Flags",
+      "description": "Feature flags: gradual rollouts, A/B testing, kill switches — LaunchDarkly, Unleash, Statsig, and home-built patterns with database or env vars",
+      "file": "skills/devops-infra/nl/feature-flags.md"
+    },
+    {
       "id": "devops-infra/github-actions",
       "category": "devops-infra",
       "lang": "nl",
@@ -1073,6 +1225,14 @@
       "title": "Northflank Skill",
       "description": "",
       "file": "skills/devops-infra/nl/northflank.md"
+    },
+    {
+      "id": "devops-infra/opentelemetry",
+      "category": "devops-infra",
+      "lang": "nl",
+      "title": "Opentelemetry",
+      "description": "OpenTelemetry setup: traces, metrics, logs, GenAI semantic conventions for LLM calls, export to Honeycomb/Datadog/Grafana, sampling strategies",
+      "file": "skills/devops-infra/nl/opentelemetry.md"
     },
     {
       "id": "devops-infra/railway",
