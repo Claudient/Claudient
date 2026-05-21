@@ -416,6 +416,138 @@ This runs: prettier (async) + TypeScript check (sync, Claude waits) + audit log 
 
 ---
 
+## Advanced Hook Capabilities
+
+### continueOnBlock
+
+By default, when a PostToolUse hook exits with code `2` to block a tool call, Claude's turn ends. With `continueOnBlock: true`, the block reason is fed back to Claude as a message and the turn continues — Claude can read the reason and try a different approach without requiring user intervention.
+
+```json
+{
+  "hooks": {
+    "PostToolUse": [{
+      "matcher": "Bash",
+      "hooks": [{"type": "command", "command": "bash /hooks/validate-command.sh"}],
+      "continueOnBlock": true
+    }]
+  }
+}
+```
+
+Primary use case: lint and format hooks that block on violations and allow Claude to auto-fix the file and retry, rather than stopping and waiting for a human prompt.
+
+---
+
+### terminalSequence output
+
+Hooks can emit OSC escape sequences in their JSON stdout to trigger desktop notifications, set the window title, or ring the terminal bell — without requiring a controlling terminal.
+
+```python
+import json, sys
+
+result = {
+    "terminalSequence": "\033]0;Claude — Task Complete\007",  # sets window title
+}
+print(json.dumps(result))
+```
+
+Useful for surfacing completion status or errors in the window title bar when running long background tasks.
+
+---
+
+### exec form (args array)
+
+Instead of a shell string `command`, pass an `args` array to spawn the hook process directly without invoking a shell. This eliminates quoting and escaping issues when interpolated values like `${tool_name}` or `${tool_input}` contain spaces, quotes, or special characters.
+
+```json
+{
+  "type": "command",
+  "command": {
+    "args": ["/usr/local/bin/my-hook", "--tool", "${tool_name}", "--input", "${tool_input}"]
+  }
+}
+```
+
+Use the args form for any hook that receives structured data from tool inputs. Use the string form only when you genuinely need shell features (pipes, conditionals, globs).
+
+---
+
+### type: "mcp_tool"
+
+Hooks can call a tool on an already-connected MCP server directly, without spawning a subprocess. This is lower overhead than a shell script and keeps the hook inside the MCP connection's auth context.
+
+```json
+{
+  "hooks": {
+    "PostToolUse": [{
+      "matcher": "Write",
+      "hooks": [{
+        "type": "mcp_tool",
+        "server": "my-mcp-server",
+        "tool": "log_file_write",
+        "input": {"path": "${tool_input.file_path}"}
+      }]
+    }]
+  }
+}
+```
+
+The MCP server named in `server` must already be connected in the session. The `tool` field is the exact tool name exposed by that server. Use this pattern for audit logging, notifications, or state synchronization via MCP without adding a subprocess layer.
+
+---
+
+### PreCompact — blocking compaction
+
+PreCompact hooks can actively block compaction by exiting with code `2` or returning `{"decision": "block"}` in stdout. Use this to run a save or backup operation and only allow compaction to proceed once the state is safely persisted.
+
+**.claude/hooks/pre-compact-backup.sh:**
+```bash
+#!/bin/bash
+# Save transcript first, then allow compaction
+cp .claude/session.jsonl .claude/backups/session-$(date +%s).jsonl
+# Exit 0 to allow compaction, exit 2 to block it
+exit 0
+```
+
+If the backup fails and you want to prevent compaction, exit `2`. Claude will surface the block reason and the session continues without compacting.
+
+---
+
+### Agent-scoped hooks
+
+Hooks can be scoped to a specific agent by adding a `hooks:` field to the agent's frontmatter. These hooks only fire when that agent is the active agent — they do not affect the root session or other agents.
+
+```yaml
+---
+name: my-agent
+description: "..."
+hooks:
+  Stop:
+    - type: command
+      command: echo "Agent finished" >> .claude/agent.log
+---
+```
+
+Use agent-scoped hooks for agent-specific observability (logging when an agent completes), resource cleanup (deleting temp files the agent created), or cost tracking scoped to a single agent's activity.
+
+---
+
+### effort.level in hook environment
+
+The active effort level is available as the `$CLAUDE_EFFORT` environment variable inside hook scripts. Values: `low`, `normal`, `high`, `xhigh`.
+
+```bash
+#!/bin/bash
+if [ "$CLAUDE_EFFORT" = "xhigh" ]; then
+  echo "Running extended validation..."
+  run-full-test-suite
+fi
+```
+
+Use this to conditionally run expensive validation only when Claude is operating in extended-effort mode, or to skip optional checks at low effort to reduce latency.
+
+---
+
 ## Work With Us
 
 Claudient is backed by [Uitbreiden](https://uitbreiden.com/) — we build AI products with developer communities and deliver B2B AI solutions. If you need custom hook systems, automated quality gates, or production-grade Claude Code automation for your team — we build this for clients.
