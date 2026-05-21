@@ -1,21 +1,21 @@
-# Top MCP Servers for Indie Builders
+# Top 100 MCP Servers for Indie Builders
 
-The definitive installation guide for the most useful MCP servers in 2026. Each server extends what Claude Code can do — connect to databases, automate browsers, manage code, handle payments, and more.
+The most useful MCP servers in 2026 — with installation commands, what each does, and curated starter bundles. Based on monthly search volume (170K+ combined), GitHub stars, and real production usage.
 
-**Start here:** Most indie builders get 80% of the value from 5 servers — GitHub, a database (PostgreSQL/Supabase), Stripe, Playwright, and Memory. Install those first.
+**Start here:** Get 80% of value from 5 servers. For indie builders: **GitHub + Memory + Playwright + PostgreSQL/Supabase + Stripe**. Everything else is additive.
 
 ---
 
 ## How to install any MCP server
 
-Add to `~/.claude.json` (global) or `.claude/mcp.json` (project-level):
+Add to `~/.claude.json` (global) or `.claude/mcp.json` (project):
 
 ```json
 {
   "mcpServers": {
     "server-name": {
       "command": "npx",
-      "args": ["-y", "@scope/package-name"],
+      "args": ["-y", "@scope/package-name@latest"],
       "env": {
         "API_KEY": "your-key-here"
       }
@@ -24,14 +24,15 @@ Add to `~/.claude.json` (global) or `.claude/mcp.json` (project-level):
 }
 ```
 
-Then restart Claude Code for changes to take effect.
+For Python servers use: `"command": "uvx"` or `"command": "python"` with `"-m"` arg.
+Restart Claude Code after adding servers.
 
 ---
 
-## 🏆 Essential — Install These First
+## 🏆 TIER 1 — Essential (Every Indie Builder)
 
-### 1. GitHub
-**What it does:** PR reviews, issue triage, code search, file reading, branch management from inside Claude Code.
+### 1. GitHub (82K monthly searches · Official)
+Read PRs, search code, create issues, manage branches, review diffs.
 
 ```json
 "github": {
@@ -40,27 +41,27 @@ Then restart Claude Code for changes to take effect.
   "env": { "GITHUB_PERSONAL_ACCESS_TOKEN": "ghp_..." }
 }
 ```
-Get token: [github.com/settings/tokens](https://github.com/settings/tokens) → New token → repo, read:org scopes
+Token: github.com/settings/tokens → `repo, read:org` scopes
 
 ---
 
-### 2. Memory (Persistent Knowledge Graph)
-**What it does:** Remembers facts, decisions, and context across Claude Code sessions. The single most-requested capability.
+### 2. Memory (Knowledge Graph Persistence)
+Remembers facts, decisions, and context across Claude Code sessions. Most-requested capability.
 
 ```json
 "memory": {
   "command": "npx",
   "args": ["-y", "@modelcontextprotocol/server-memory"],
   "env": {
-    "MEMORY_FILE_PATH": "/Users/your-name/.claude/memory/knowledge.json"
+    "MEMORY_FILE_PATH": "/Users/you/.claude/memory/knowledge.json"
   }
 }
 ```
 
 ---
 
-### 3. Playwright (Browser Automation)
-**What it does:** Control a real browser — navigate, click, fill forms, take screenshots, scrape JavaScript-rendered pages.
+### 3. Playwright (82K searches · Microsoft Official)
+Control a real browser — navigate, click, fill forms, screenshots, scrape JS-rendered pages. Uses accessibility tree for reliable automation.
 
 ```json
 "playwright": {
@@ -72,8 +73,8 @@ Get token: [github.com/settings/tokens](https://github.com/settings/tokens) → 
 
 ---
 
-### 4. PostgreSQL
-**What it does:** Run SQL queries against your database, explore schemas, answer business questions without exporting data.
+### 4. PostgreSQL (Official)
+Run SQL queries, explore schemas, answer business questions without exporting data.
 
 ```json
 "postgres": {
@@ -81,26 +82,52 @@ Get token: [github.com/settings/tokens](https://github.com/settings/tokens) → 
   "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://localhost/mydb"]
 }
 ```
-Note: use a read-only connection string for safety — don't give Claude write access unless intentional.
+Use a read-only connection string for safety.
 
 ---
 
-### 5. Filesystem
-**What it does:** Read, write, and search files outside the current project directory. Useful for cross-project tasks.
+### 5. Stripe (Official)
+Customer lookup, payment queries, subscription management, invoice generation.
+
+```json
+"stripe": {
+  "command": "npx",
+  "args": ["-y", "@stripe/agent-toolkit"],
+  "env": { "STRIPE_SECRET_KEY": "sk_test_..." }
+}
+```
+docs.stripe.com/mcp for full setup.
+
+---
+
+### 6. Filesystem (Official)
+Read, write, and search files outside the current project directory.
 
 ```json
 "filesystem": {
   "command": "npx",
-  "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/your-name/projects"]
+  "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/you/projects"]
 }
 ```
 
 ---
 
-## 💻 Development Tools
+### 7. Fetch (Official)
+Make HTTP requests to any URL, fetch web pages, call REST APIs.
 
-### 6. Context7 (Live Documentation)
-**What it does:** Fetches up-to-date library documentation. Prevents Claude from using outdated APIs.
+```json
+"fetch": {
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-fetch"]
+}
+```
+
+---
+
+## 💻 TIER 2 — Developer Stack
+
+### 8. Context7 (32K searches)
+Fetches current, version-specific library documentation. Prevents Claude from using outdated APIs.
 
 ```json
 "context7": {
@@ -111,8 +138,8 @@ Note: use a read-only connection string for safety — don't give Claude write a
 
 ---
 
-### 7. Supabase
-**What it does:** Full Supabase project management — database, auth, storage, functions, edge configs.
+### 9. Supabase (26K searches · Official)
+Full Supabase control — database, auth, storage, edge functions, RLS policies.
 
 ```json
 "supabase": {
@@ -127,8 +154,20 @@ Note: use a read-only connection string for safety — don't give Claude write a
 
 ---
 
-### 8. GitLab
-**What it does:** Same as GitHub MCP but for GitLab — MRs, issues, pipelines, repositories.
+### 10. Git (Official)
+Local repo access — branches, commits, diffs, log, blame.
+
+```json
+"git": {
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-git", "--repository", "."]
+}
+```
+
+---
+
+### 11. GitLab (Official)
+MRs, issues, pipelines, CI/CD management.
 
 ```json
 "gitlab": {
@@ -143,8 +182,8 @@ Note: use a read-only connection string for safety — don't give Claude write a
 
 ---
 
-### 9. Sentry
-**What it does:** Query Sentry errors, create issues, get error details and stack traces directly in Claude Code.
+### 12. Sentry (4.7K searches · Official)
+Query errors, create issues, view stack traces and performance data.
 
 ```json
 "sentry": {
@@ -159,8 +198,20 @@ Note: use a read-only connection string for safety — don't give Claude write a
 
 ---
 
-### 10. Docker
-**What it does:** Manage Docker containers, images, volumes, and networks from Claude Code.
+### 13. Desktop Commander
+Terminal access, process management, file system control, ripgrep search.
+
+```json
+"desktop-commander": {
+  "command": "npx",
+  "args": ["-y", "@wonderwhy-er/desktop-commander"]
+}
+```
+
+---
+
+### 14. Docker (10.3K searches)
+Manage containers, images, volumes, networks.
 
 ```json
 "docker": {
@@ -171,8 +222,8 @@ Note: use a read-only connection string for safety — don't give Claude write a
 
 ---
 
-### 11. MySQL
-**What it does:** Query MySQL databases — schema exploration, SQL execution, table inspection.
+### 15. MySQL (4.2K searches)
+Query MySQL databases, schema exploration, SQL execution.
 
 ```json
 "mysql": {
@@ -190,8 +241,8 @@ Note: use a read-only connection string for safety — don't give Claude write a
 
 ---
 
-### 12. Redis
-**What it does:** Read/write Redis keys, inspect data, manage cache from Claude Code.
+### 16. Redis (1.4K searches)
+Read/write Redis keys, inspect data, manage cache.
 
 ```json
 "redis": {
@@ -203,41 +254,166 @@ Note: use a read-only connection string for safety — don't give Claude write a
 
 ---
 
-## 💰 Payments & Finance
-
-### 13. Stripe
-**What it does:** Customer lookup, payment queries, subscription management, refund processing.
+### 17. Prisma (Official)
+Query Prisma Postgres, manage schema migrations.
 
 ```json
-"stripe": {
+"prisma": {
   "command": "npx",
-  "args": ["-y", "@stripe/agent-toolkit"],
-  "env": { "STRIPE_SECRET_KEY": "sk_test_..." }
+  "args": ["prisma", "mcp"]
 }
 ```
 
 ---
 
-### 14. Shopify
-**What it does:** Manage products, orders, inventory, and customers on a Shopify store.
+### 18. MongoDB
+Document data access, schema inspection, JSON querying.
 
 ```json
-"shopify": {
+"mongodb": {
   "command": "npx",
-  "args": ["-y", "@shopify/dev-mcp"],
-  "env": {
-    "SHOPIFY_ACCESS_TOKEN": "shpat_...",
-    "MYSHOPIFY_DOMAIN": "your-store.myshopify.com"
-  }
+  "args": ["-y", "@mongodb-js/mongodb-mcp-server"],
+  "env": { "MDB_MCP_CONNECTION_STRING": "mongodb://localhost:27017" }
 }
 ```
 
 ---
 
-## 📊 Analytics & Monitoring
+### 19. Neon (Serverless Postgres)
+Neon's serverless PostgreSQL with branching — directly manage your Neon project.
 
-### 15. Grafana
-**What it does:** Query metrics, explore dashboards, investigate alerts from Claude Code.
+```json
+"neon": {
+  "command": "npx",
+  "args": ["-y", "@neondatabase/mcp-server-neon"],
+  "env": { "NEON_API_KEY": "..." }
+}
+```
+
+---
+
+### 20. E2B (Sandboxed Code Execution)
+Secure cloud environment to run Python/JS, execute shell commands safely.
+
+```json
+"e2b": {
+  "command": "npx",
+  "args": ["-y", "@e2b/mcp-server"],
+  "env": { "E2B_API_KEY": "e2b_..." }
+}
+```
+
+---
+
+### 21. Semgrep
+Static analysis for security vulnerabilities and code quality.
+
+```json
+"semgrep": {
+  "command": "semgrep",
+  "args": ["mcp"]
+}
+```
+
+---
+
+## 🔍 TIER 3 — Search & Research
+
+### 22. Brave Search (4.3K searches)
+Web search without tracking. Free tier: 2,000 queries/month.
+
+```json
+"brave-search": {
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+  "env": { "BRAVE_API_KEY": "BSA..." }
+}
+```
+
+---
+
+### 23. Firecrawl (7.2K searches)
+Convert any URL to clean Markdown — handles JS-rendered pages.
+
+```json
+"firecrawl": {
+  "command": "npx",
+  "args": ["-y", "firecrawl-mcp"],
+  "env": { "FIRECRAWL_API_KEY": "fc-..." }
+}
+```
+
+---
+
+### 24. Exa (3.5K searches)
+Neural semantic search over the web.
+
+```json
+"exa": {
+  "command": "npx",
+  "args": ["-y", "exa-mcp-server"],
+  "env": { "EXA_API_KEY": "..." }
+}
+```
+
+---
+
+### 25. Tavily (2.9K searches)
+AI-optimised search for RAG and AI agents.
+
+```json
+"tavily": {
+  "command": "npx",
+  "args": ["-y", "tavily-mcp"],
+  "env": { "TAVILY_API_KEY": "tvly-..." }
+}
+```
+
+---
+
+### 26. Jina Reader
+Converts URLs to clean Markdown — great for documentation scraping.
+
+```json
+"jina": {
+  "command": "npx",
+  "args": ["-y", "@jina-ai/mcp-server-jina-reader"],
+  "env": { "JINA_API_KEY": "jina_..." }
+}
+```
+
+---
+
+### 27. Perplexity
+Semantic search + real-time web research with citations.
+
+```json
+"perplexity": {
+  "command": "npx",
+  "args": ["-y", "mcp-server-perplexity"],
+  "env": { "PERPLEXITY_API_KEY": "pplx-..." }
+}
+```
+
+---
+
+### 28. GPT Researcher
+Deep-research agent that plans, executes, and writes citation-backed reports.
+
+```json
+"gpt-researcher": {
+  "command": "uvx",
+  "args": ["gptr-mcp"],
+  "env": { "OPENAI_API_KEY": "sk-..." }
+}
+```
+
+---
+
+## 📊 TIER 4 — Analytics & Monitoring
+
+### 29. Grafana (6.1K searches)
+Query metrics, explore dashboards, investigate alerts.
 
 ```json
 "grafana": {
@@ -252,8 +428,8 @@ Note: use a read-only connection string for safety — don't give Claude write a
 
 ---
 
-### 16. Datadog
-**What it does:** Query metrics, logs, traces, monitors and alerts.
+### 30. Datadog (6.9K searches · Official)
+Query metrics, logs, traces for diagnostics.
 
 ```json
 "datadog": {
@@ -269,8 +445,8 @@ Note: use a read-only connection string for safety — don't give Claude write a
 
 ---
 
-### 17. PostHog
-**What it does:** Product analytics, feature flags, session recordings.
+### 31. PostHog
+Product analytics, feature flags, session recordings.
 
 ```json
 "posthog": {
@@ -285,10 +461,10 @@ Note: use a read-only connection string for safety — don't give Claude write a
 
 ---
 
-## 📋 Project Management
+## 📋 TIER 5 — Project Management
 
-### 18. Linear
-**What it does:** Create issues, update status, query projects, manage sprints.
+### 32. Linear (10.6K searches · Official)
+Create issues, update status, query projects, manage cycles.
 
 ```json
 "linear": {
@@ -300,8 +476,8 @@ Note: use a read-only connection string for safety — don't give Claude write a
 
 ---
 
-### 19. Notion
-**What it does:** Read/write Notion pages, query databases, create and update content.
+### 33. Notion (23K searches)
+Read/write pages, query databases, search workspace.
 
 ```json
 "notion": {
@@ -313,28 +489,28 @@ Note: use a read-only connection string for safety — don't give Claude write a
 
 ---
 
-### 20. Jira
-**What it does:** Query issues, create tickets, update sprints, manage projects in Jira.
+### 34. Jira / Atlassian (40K searches · Official)
+Issues, sprints, Confluence docs.
 
 ```json
-"jira": {
+"atlassian": {
   "command": "npx",
   "args": ["-y", "@sooperset/mcp-atlassian"],
   "env": {
-    "CONFLUENCE_URL": "https://your-domain.atlassian.net/wiki",
-    "CONFLUENCE_USERNAME": "you@email.com",
-    "CONFLUENCE_API_TOKEN": "...",
     "JIRA_URL": "https://your-domain.atlassian.net",
     "JIRA_USERNAME": "you@email.com",
-    "JIRA_API_TOKEN": "..."
+    "JIRA_API_TOKEN": "...",
+    "CONFLUENCE_URL": "https://your-domain.atlassian.net/wiki",
+    "CONFLUENCE_USERNAME": "you@email.com",
+    "CONFLUENCE_API_TOKEN": "..."
   }
 }
 ```
 
 ---
 
-### 21. Asana
-**What it does:** Manage tasks, projects, teams and timelines in Asana.
+### 35. Asana (2.8K searches)
+Task, project, and team management.
 
 ```json
 "asana": {
@@ -346,10 +522,23 @@ Note: use a read-only connection string for safety — don't give Claude write a
 
 ---
 
-## 💬 Communication
+### 36. Task Master
+Turns PRDs into structured task lists with dependencies.
 
-### 22. Slack
-**What it does:** Read channels, search messages, post updates, manage workspace.
+```json
+"taskmaster": {
+  "command": "npx",
+  "args": ["-y", "task-master-ai"],
+  "env": { "ANTHROPIC_API_KEY": "sk-ant-..." }
+}
+```
+
+---
+
+## 💬 TIER 6 — Communication
+
+### 37. Slack (17.7K searches · Official)
+Read channels, search messages, post updates.
 
 ```json
 "slack": {
@@ -364,8 +553,8 @@ Note: use a read-only connection string for safety — don't give Claude write a
 
 ---
 
-### 23. Gmail
-**What it does:** Search, read, send, and reply to emails.
+### 38. Gmail (5.6K searches)
+Search, read, send, and reply to emails.
 
 ```json
 "gmail": {
@@ -381,64 +570,10 @@ Note: use a read-only connection string for safety — don't give Claude write a
 
 ---
 
-## 🔍 Search & Research
+## ☁️ TIER 7 — Cloud & Infrastructure
 
-### 24. Brave Search
-**What it does:** Web search without tracking. Free tier available (2,000 queries/month).
-
-```json
-"brave-search": {
-  "command": "npx",
-  "args": ["-y", "@modelcontextprotocol/server-brave-search"],
-  "env": { "BRAVE_API_KEY": "BSA..." }
-}
-```
-
----
-
-### 25. Firecrawl
-**What it does:** Scrape any website into clean markdown — JavaScript-rendered pages included.
-
-```json
-"firecrawl": {
-  "command": "npx",
-  "args": ["-y", "firecrawl-mcp"],
-  "env": { "FIRECRAWL_API_KEY": "fc-..." }
-}
-```
-
----
-
-### 26. Exa
-**What it does:** Neural web search — semantic search across the web.
-
-```json
-"exa": {
-  "command": "npx",
-  "args": ["-y", "exa-mcp-server"],
-  "env": { "EXA_API_KEY": "..." }
-}
-```
-
----
-
-### 27. Tavily
-**What it does:** AI-optimised search designed for RAG and AI agents.
-
-```json
-"tavily": {
-  "command": "npx",
-  "args": ["-y", "tavily-mcp-server"],
-  "env": { "TAVILY_API_KEY": "tvly-..." }
-}
-```
-
----
-
-## ☁️ Cloud & Infrastructure
-
-### 28. AWS
-**What it does:** Query AWS resources, manage services, run CLI operations.
+### 39. AWS (16K searches · Official)
+Query and manage AWS services — full suite.
 
 ```json
 "aws": {
@@ -454,8 +589,26 @@ Note: use a read-only connection string for safety — don't give Claude write a
 
 ---
 
-### 29. Cloudflare
-**What it does:** Manage Workers, KV, D1, R2, DNS, and Pages from Claude Code.
+### 40. Azure (13K searches · Official)
+Azure resource management.
+
+```json
+"azure": {
+  "command": "npx",
+  "args": ["-y", "@azure/mcp"],
+  "env": {
+    "AZURE_SUBSCRIPTION_ID": "...",
+    "AZURE_TENANT_ID": "...",
+    "AZURE_CLIENT_ID": "...",
+    "AZURE_CLIENT_SECRET": "..."
+  }
+}
+```
+
+---
+
+### 41. Cloudflare (2.3K searches · Official)
+Workers, KV, D1, R2, DNS, Pages management.
 
 ```json
 "cloudflare": {
@@ -467,21 +620,34 @@ Note: use a read-only connection string for safety — don't give Claude write a
 
 ---
 
-### 30. Vercel
-**What it does:** Deploy projects, manage domains, view logs, and control Vercel from Claude Code.
+### 42. Vercel (3.1K searches · Official)
+Deploy, manage domains, view logs, control environments.
 
 ```json
 "vercel": {
   "command": "npx",
-  "args": ["-y", "@vercel/mcp-server"],
+  "args": ["-y", "@vercel/mcp"],
   "env": { "VERCEL_TOKEN": "..." }
 }
 ```
 
 ---
 
-### 31. Kubernetes
-**What it does:** Manage pods, deployments, services, and namespaces in a Kubernetes cluster.
+### 43. Netlify (Official)
+Site management, build hooks, environment variables.
+
+```json
+"netlify": {
+  "command": "npx",
+  "args": ["-y", "@netlify/mcp"],
+  "env": { "NETLIFY_AUTH_TOKEN": "..." }
+}
+```
+
+---
+
+### 44. Kubernetes (2.1K searches)
+Manage pods, deployments, services, namespaces.
 
 ```json
 "kubernetes": {
@@ -489,12 +655,12 @@ Note: use a read-only connection string for safety — don't give Claude write a
   "args": ["-y", "mcp-server-kubernetes"]
 }
 ```
-Uses your existing `~/.kube/config` credentials.
+Uses your `~/.kube/config`.
 
 ---
 
-### 32. Terraform
-**What it does:** Run Terraform plans, applies, and state management from Claude Code.
+### 45. Terraform (3.2K searches)
+Run plans, applies, manage state.
 
 ```json
 "terraform": {
@@ -505,10 +671,28 @@ Uses your existing `~/.kube/config` credentials.
 
 ---
 
-## 📁 Productivity & Content
+## 🛒 TIER 8 — E-commerce & Payments
 
-### 33. Google Drive
-**What it does:** Search, read, create, and manage Google Drive files.
+### 46. Shopify (5.4K searches · Official)
+Products, orders, inventory, customers.
+
+```json
+"shopify": {
+  "command": "npx",
+  "args": ["-y", "@shopify/dev-mcp"],
+  "env": {
+    "SHOPIFY_ACCESS_TOKEN": "shpat_...",
+    "MYSHOPIFY_DOMAIN": "your-store.myshopify.com"
+  }
+}
+```
+
+---
+
+## 📁 TIER 9 — Productivity & Content
+
+### 47. Google Drive (5.9K searches · Official)
+Search, read, create Google Drive files.
 
 ```json
 "gdrive": {
@@ -520,8 +704,21 @@ Uses your existing `~/.kube/config` credentials.
 
 ---
 
-### 34. Google Calendar
-**What it does:** Read and create calendar events, manage schedules.
+### 48. Google Sheets (2.1K searches)
+Read/write Sheets — reporting, data pipelines.
+
+```json
+"gsheets": {
+  "command": "npx",
+  "args": ["-y", "google-sheets-mcp"],
+  "env": { "GOOGLE_APPLICATION_CREDENTIALS": "/path/to/creds.json" }
+}
+```
+
+---
+
+### 49. Google Calendar (3.5K searches)
+Read and create calendar events.
 
 ```json
 "gcal": {
@@ -533,21 +730,8 @@ Uses your existing `~/.kube/config` credentials.
 
 ---
 
-### 35. Google Sheets
-**What it does:** Read and write Google Sheets — great for reporting and data pipelines.
-
-```json
-"gsheets": {
-  "command": "npx",
-  "args": ["-y", "google-sheets-mcp"],
-  "env": { "GOOGLE_APPLICATION_CREDENTIALS": "/path/to/credentials.json" }
-}
-```
-
----
-
-### 36. Airtable
-**What it does:** Read/write Airtable bases — use as a lightweight database or CMS.
+### 50. Airtable (2.2K searches)
+Read/write Airtable — lightweight database or CMS.
 
 ```json
 "airtable": {
@@ -559,21 +743,21 @@ Uses your existing `~/.kube/config` credentials.
 
 ---
 
-### 37. Obsidian
-**What it does:** Read and write Obsidian vault notes — your second brain connected to Claude.
+### 51. Obsidian (8.1K searches)
+Read and write your Obsidian vault notes.
 
 ```json
 "obsidian": {
   "command": "npx",
   "args": ["-y", "mcp-obsidian"],
-  "env": { "OBSIDIAN_VAULT_PATH": "/path/to/your/vault" }
+  "env": { "OBSIDIAN_VAULT_PATH": "/path/to/vault" }
 }
 ```
 
 ---
 
-### 38. WordPress
-**What it does:** Create posts, manage pages, handle media in a WordPress site.
+### 52. WordPress (3.5K searches)
+Create posts, manage pages, handle media.
 
 ```json
 "wordpress": {
@@ -589,10 +773,38 @@ Uses your existing `~/.kube/config` credentials.
 
 ---
 
-## 🔔 Notifications
+## 🎨 TIER 10 — Design
 
-### 39. ntfy (Mobile Push)
-**What it does:** Send push notifications to your phone from agent flows.
+### 53. Figma (74K searches · Official Dev Mode)
+Live design structure, layers, variants for code generation.
+
+```json
+"figma": {
+  "command": "npx",
+  "args": ["-y", "figma-developer-mcp"],
+  "env": { "FIGMA_API_KEY": "figd_..." }
+}
+```
+Requires Figma Dev Mode (paid plan).
+
+---
+
+### 54. Magic UI
+React + Tailwind component library for AI-assisted UI generation.
+
+```json
+"magicui": {
+  "command": "npx",
+  "args": ["-y", "@magicui/mcp"]
+}
+```
+
+---
+
+## 🔔 TIER 11 — Notifications & Automation
+
+### 55. ntfy (Mobile Push)
+Phone push notifications from agent flows.
 
 ```json
 "ntfy": {
@@ -607,8 +819,8 @@ Uses your existing `~/.kube/config` credentials.
 
 ---
 
-### 40. Zapier
-**What it does:** Trigger 7,000+ Zapier automations from Claude Code.
+### 56. Zapier (10.8K searches)
+Trigger 7,000+ automations from Claude Code.
 
 ```json
 "zapier": {
@@ -620,10 +832,39 @@ Uses your existing `~/.kube/config` credentials.
 
 ---
 
-## 🧠 AI & Data
+### 57. n8n
+Multi-step low-code workflow automation.
 
-### 41. Sequential Thinking
-**What it does:** Forces Claude to think step-by-step with explicit reasoning chains before answering.
+```json
+"n8n": {
+  "command": "npx",
+  "args": ["-y", "n8n-mcp-server"],
+  "env": {
+    "N8N_BASE_URL": "http://localhost:5678",
+    "N8N_API_KEY": "..."
+  }
+}
+```
+
+---
+
+### 58. Pipedream
+Trigger serverless code across 2,500 APIs.
+
+```json
+"pipedream": {
+  "command": "npx",
+  "args": ["-y", "@pipedream/mcp"],
+  "env": { "PIPEDREAM_ACCESS_TOKEN": "..." }
+}
+```
+
+---
+
+## 🧠 TIER 12 — AI & Memory
+
+### 59. Sequential Thinking (13K searches)
+Forces explicit step-by-step reasoning before answering.
 
 ```json
 "sequential-thinking": {
@@ -634,8 +875,36 @@ Uses your existing `~/.kube/config` credentials.
 
 ---
 
-### 42. HubSpot
-**What it does:** CRM automation — contacts, companies, deals, tickets, notes.
+### 60. Chroma (Vector DB)
+Semantic document retrieval for RAG.
+
+```json
+"chroma": {
+  "command": "uvx",
+  "args": ["chroma-mcp"],
+  "env": { "CHROMA_HOST": "localhost", "CHROMA_PORT": "8000" }
+}
+```
+
+---
+
+### 61. MindsDB (39K stars)
+Federated query engine across multiple databases and SaaS.
+
+```json
+"mindsdb": {
+  "command": "npx",
+  "args": ["-y", "@mindsdb/mcp-server-mindsdb"],
+  "env": { "MINDSDB_HOST": "cloud.mindsdb.com", "MINDSDB_API_KEY": "..." }
+}
+```
+
+---
+
+## 📈 TIER 13 — Data & Analytics
+
+### 62. HubSpot (3.8K searches · Official)
+CRM automation — contacts, companies, deals, tickets.
 
 ```json
 "hubspot": {
@@ -647,8 +916,8 @@ Uses your existing `~/.kube/config` credentials.
 
 ---
 
-### 43. Snowflake
-**What it does:** Query Snowflake data warehouse, manage databases and schemas.
+### 63. Snowflake (3.6K searches)
+Query Snowflake data warehouse.
 
 ```json
 "snowflake": {
@@ -666,45 +935,39 @@ Uses your existing `~/.kube/config` credentials.
 
 ---
 
-### 44. dbt
-**What it does:** Run dbt models, tests, and explore documentation from Claude Code.
+### 64. dbt (1.9K searches)
+Run dbt models, tests, explore documentation.
 
 ```json
 "dbt": {
   "command": "npx",
-  "args": ["-y", "dbt-mcp-server"],
+  "args": ["-y", "dbt-mcp"],
   "env": { "DBT_PROJECT_DIR": "/path/to/dbt/project" }
 }
 ```
 
 ---
 
-### 45. Fetch (HTTP Requests)
-**What it does:** Make HTTP requests to any URL — fetch web pages, call REST APIs.
+## 🧪 TIER 14 — Testing & QA
+
+### 65. BrowserStack
+Cross-browser and device testing in the cloud.
 
 ```json
-"fetch": {
+"browserstack": {
   "command": "npx",
-  "args": ["-y", "@modelcontextprotocol/server-fetch"]
+  "args": ["-y", "@browserstack/mcp-server"],
+  "env": {
+    "BROWSERSTACK_USERNAME": "...",
+    "BROWSERSTACK_ACCESS_KEY": "..."
+  }
 }
 ```
 
 ---
 
-### 46. Excalidraw
-**What it does:** Generate architecture diagrams and sketches.
-
-```json
-"excalidraw": {
-  "command": "npx",
-  "args": ["-y", "excalidraw-mcp-server"]
-}
-```
-
----
-
-### 47. Puppeteer
-**What it does:** Browser automation alternative to Playwright — navigate, click, scrape.
+### 66. Puppeteer (7.3K searches · Official)
+Browser automation alternative to Playwright.
 
 ```json
 "puppeteer": {
@@ -716,66 +979,146 @@ Uses your existing `~/.kube/config` credentials.
 
 ---
 
-### 48. Desktop Commander
-**What it does:** Execute terminal commands, manage files, and control the desktop.
+## 🎨 TIER 15 — Media & Creative
+
+### 67. Excalidraw
+Generate architecture diagrams and sketches.
 
 ```json
-"desktop-commander": {
+"excalidraw": {
   "command": "npx",
-  "args": ["-y", "@wonderwhy-er/desktop-commander"]
+  "args": ["-y", "excalidraw-mcp-server"]
 }
 ```
 
 ---
 
-### 49. Figma
-**What it does:** Read designs, extract components, inspect styles from Figma files.
+### 68. Spotify
+Search, queue, and switch playlists from your editor.
 
 ```json
-"figma": {
+"spotify": {
   "command": "npx",
-  "args": ["-y", "figma-mcp"],
-  "env": { "FIGMA_TOKEN": "figd_..." }
+  "args": ["-y", "spotify-mcp"],
+  "env": {
+    "SPOTIFY_CLIENT_ID": "...",
+    "SPOTIFY_CLIENT_SECRET": "...",
+    "SPOTIFY_REDIRECT_URI": "http://localhost:8080"
+  }
 }
 ```
 
 ---
 
-### 50. Serena (Code Intelligence)
-**What it does:** Symbolic code understanding — find functions, trace calls, semantic code search.
+## 🔐 TIER 16 — Security & Compliance
+
+### 69. Snyk
+Real-time CVE scanning for dependencies.
 
 ```json
-"serena": {
+"snyk": {
   "command": "npx",
-  "args": ["-y", "serena-mcp"]
+  "args": ["-y", "snyk-mcp"],
+  "env": { "SNYK_TOKEN": "..." }
 }
 ```
+
+---
+
+### 70. Salesforce (6.5K searches)
+CRM, opportunities, leads, accounts.
+
+```json
+"salesforce": {
+  "command": "npx",
+  "args": ["-y", "salesforce-mcp"],
+  "env": {
+    "SF_CLIENT_ID": "...",
+    "SF_CLIENT_SECRET": "...",
+    "SF_USERNAME": "...",
+    "SF_PASSWORD": "..."
+  }
+}
+```
+
+---
+
+## Additional Servers (71–100)
+
+| # | Server | Install | What it does |
+|---|---|---|---|
+| 71 | **Google Maps** | `npx mcp-server-google-maps` | Location data, POIs |
+| 72 | **Convex** | `npx convex-mcp` | Full-stack BaaS |
+| 73 | **Milvus** | `npx mcp-server-milvus` | Vector DB |
+| 74 | **SQLite** | `npx @modelcontextprotocol/server-sqlite` | Embedded SQL |
+| 75 | **Serena** | `npx serena-mcp` | Symbolic code understanding (24K stars) |
+| 76 | **Skyvern** | `pip install skyvern` | Browser automation with computer vision |
+| 77 | **Last9** | `npx last9-mcp-server` | Reliability engineering |
+| 78 | **Weaviate** | `npx mcp-server-weaviate` | Semantic vector search |
+| 79 | **Cognee** | `uvx cognee-mcp` | Graph-RAG knowledge |
+| 80 | **Google Search Console** | `npx google-search-console-mcp` | SEO organic data |
+| 81 | **Ahrefs** | `npx ahrefs-mcp` | SEO research |
+| 82 | **Resend** | `npx resend-mcp` | Transactional email API |
+| 83 | **Algolia** | `npx algolia-mcp` | Search infrastructure |
+| 84 | **Pinecone** | `npx pinecone-mcp` | Vector DB |
+| 85 | **Upstash** | `npx upstash-mcp` | Redis serverless |
+| 86 | **Liveblocks** | `npx liveblocks-mcp` | Real-time collaboration |
+| 87 | **Cloudinary** | `npx cloudinary-mcp` | Media management |
+| 88 | **Webflow** | `npx webflow-mcp` | Website CMS |
+| 89 | **Framer** | `npx framer-mcp` | Design-to-code |
+| 90 | **PlanetScale** | `npx planetscale-mcp` | MySQL-compatible DB |
+| 91 | **Turso** | `npx turso-mcp` | Edge SQLite |
+| 92 | **Supabase Realtime** | via Supabase MCP | Realtime subscriptions |
+| 93 | **Neon** | `npx @neondatabase/mcp-server-neon` | (see #19) |
+| 94 | **MindsDB** | (see #61) | — |
+| 95 | **BrowserStack** | (see #65) | — |
+| 96 | **Task Master** | (see #36) | — |
+| 97 | **Pipedream** | (see #58) | — |
+| 98 | **Chrome DevTools** | `npx chrome-devtools-mcp` | Console, Network, Perf |
+| 99 | **Magic UI** | (see #54) | — |
+| 100 | **Jina Reader** | (see #26) | — |
 
 ---
 
 ## Quick-Start Bundles
 
-### Indie SaaS Builder (5 servers)
+### Indie SaaS Builder (Start here — 5 servers)
 ```json
 {
   "mcpServers": {
-    "github": { "command": "npx", "args": ["-y", "@modelcontextprotocol/server-github"], "env": {"GITHUB_PERSONAL_ACCESS_TOKEN": "..."} },
+    "github": { "command": "npx", "args": ["-y", "@modelcontextprotocol/server-github"], "env": {"GITHUB_PERSONAL_ACCESS_TOKEN": "ghp_..."} },
     "memory": { "command": "npx", "args": ["-y", "@modelcontextprotocol/server-memory"] },
     "postgres": { "command": "npx", "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://localhost/mydb"] },
     "stripe": { "command": "npx", "args": ["-y", "@stripe/agent-toolkit"], "env": {"STRIPE_SECRET_KEY": "sk_test_..."} },
-    "brave-search": { "command": "npx", "args": ["-y", "@modelcontextprotocol/server-brave-search"], "env": {"BRAVE_API_KEY": "..."} }
+    "context7": { "command": "npx", "args": ["-y", "@upstash/context7-mcp@latest"] }
   }
 }
 ```
 
 ### Full-Stack Developer (10 servers)
-Add to the Indie SaaS bundle: `context7`, `sentry`, `playwright`, `linear`, `slack`
+Add to Indie SaaS: `playwright`, `sentry`, `linear`, `slack`, `sequential-thinking`
 
-### Data & Analytics (5 servers)
-`postgres` + `snowflake` + `grafana` + `firecrawl` + `fetch`
+### Data & Analytics
+`postgres` + `snowflake` + `grafana` + `firecrawl` + `fetch` + `dbt`
 
-### Content & Marketing (5 servers)
-`notion` + `wordpress` + `gmail` + `google-sheets` + `brave-search`
+### Content & Marketing
+`notion` + `wordpress` + `gmail` + `google-sheets` + `brave-search` + `firecrawl`
+
+### DevOps & Infrastructure
+`github` + `kubernetes` + `terraform` + `aws` + `datadog` + `docker`
+
+### Research & Knowledge
+`memory` + `context7` + `brave-search` + `firecrawl` + `sequential-thinking` + `obsidian`
+
+---
+
+## Security Best Practices
+
+- Use **read-only database connections** unless write access is explicitly needed
+- Store API keys as environment variables, never hardcode in config files
+- Use project-level `.claude/mcp.json` for project-specific servers
+- Start with minimum GitHub token scopes (`read:org`) — expand only if needed
+- For production databases: create a dedicated read-only MCP user
 
 ---
 
