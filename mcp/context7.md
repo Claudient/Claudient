@@ -59,3 +59,25 @@ Covers most major npm packages and Python libraries. If a library isn't indexed,
 ## vs. including docs in CLAUDE.md
 
 CLAUDE.md docs go stale and consume context on every session. Context7 fetches only what's needed, when it's needed — zero overhead when you're not using a specific library.
+
+## Why Context7 is Essential
+
+Claude's training data has a hard cutoff — and fast-moving ecosystems (Next.js, Drizzle, shadcn/ui, LangGraph) ship breaking changes faster than any model can absorb. Without Context7, Claude might generate code using a deprecated API from six months ago: an `app/` directory pattern that changed, a hook that was renamed, a config key that was removed. The error only surfaces at runtime.
+
+Context7 closes this gap at the point of use. When you ask Claude to write a Next.js 15 server action, Claude calls `resolve-library-id` → gets the Context7 canonical ID for Next.js → calls `get-library-docs` with the specific topic → receives the current API reference → writes code against it. The entire fetch happens in the same conversation turn, invisible to you.
+
+This matters most for:
+
+- **Frameworks with frequent major versions**: Next.js, React, SvelteKit, Astro
+- **ORMs and query builders**: Drizzle, Prisma, Kysely — schema and migration APIs change between minor versions
+- **AI SDKs**: Anthropic SDK, Vercel AI SDK, LangChain, LangGraph — these evolve weekly
+- **UI component libraries**: shadcn/ui, Radix, Mantine — component prop APIs change without major version bumps
+
+The pattern to make it reliable: mention Context7 and the specific feature explicitly in your prompt. `"Use context7 to look up the Next.js 15 server action + revalidatePath API before writing this."` is more effective than a generic `"use context7"` — the topic specificity determines which docs section gets fetched.
+
+Context7 covers 1000+ libraries. For anything not indexed, it falls back to fetching the official documentation URL. Either way, Claude is working from current source material rather than a training snapshot.
+
+---
+
+> **Work with us:** Claudient is backed by [Uitbreiden](https://uitbreiden.com/) — we build AI products and B2B solutions with developer communities.
+> [uitbreiden.com](https://uitbreiden.com/) · [Reddit](https://www.reddit.com/r/uitbreiden/) · [YouTube](https://www.youtube.com/@UITBREIDEN)

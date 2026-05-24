@@ -548,6 +548,107 @@ Use this to conditionally run expensive validation only when Claude is operating
 
 ---
 
+### Conditional `if:` Hooks
+
+Execute a hook only when a condition is true. The `if:` field takes a shell expression that is evaluated before the hook runs. If it exits non-zero, the hook is skipped entirely.
+
+```json
+{
+  "hooks": {
+    "PostToolUse": [{
+      "matcher": "Write",
+      "if": "echo \"$TOOL_INPUT\" | grep -q '\\.(ts|tsx)$'",
+      "hooks": [{"type": "command", "command": "npx tsc --noEmit"}]
+    }]
+  }
+}
+```
+
+The `if:` expression has access to the same environment variables as the hook itself — `$TOOL_INPUT`, `$TOOL_NAME`, `$CLAUDE_PROJECT_DIR`, `$CLAUDE_EFFORT`, etc.
+
+**Common `if:` patterns:**
+
+Run only on TypeScript files:
+```bash
+"if": "echo \"$TOOL_INPUT\" | grep -q '\\.tsx\\?$'"
+```
+
+Run only when on the main branch:
+```bash
+"if": "[ \"$(git branch --show-current)\" = \"main\" ]"
+```
+
+Run only when a specific config file exists:
+```bash
+"if": "[ -f .env.production ]"
+```
+
+Run only at xhigh effort:
+```bash
+"if": "[ \"$CLAUDE_EFFORT\" = \"xhigh\" ]"
+```
+
+Conditional hooks compose cleanly with the existing matcher system — the matcher filters by tool name, the `if:` filters by runtime conditions. Use both together to create precise, low-overhead hook triggers.
+
+---
+
+### `background_tasks` and `session_crons` in Stop/SubagentStop Hooks
+
+The `Stop` and `SubagentStop` hook payloads now include two additional fields that report what is still running when the session ends:
+
+```json
+{
+  "event": "Stop",
+  "background_tasks": [
+    {"id": "task-123", "status": "running", "started_at": "2026-05-23T10:00:00Z"}
+  ],
+  "session_crons": [
+    {"id": "cron-456", "schedule": "0 * * * *", "last_run": "2026-05-23T09:00:00Z"}
+  ]
+}
+```
+
+**`background_tasks`** — tasks started via `claude --bg` or spawned by the agent during the session that are still running at stop time.
+
+**`session_crons`** — recurring jobs registered with `/loop` or the Cron API that are scheduled and still active.
+
+**Use cases:**
+
+Wait for background tasks before archiving:
+```bash
+#!/bin/bash
+INPUT=$(cat)
+RUNNING=$(echo "$INPUT" | python3 -c "
+import sys, json
+d = json.load(sys.stdin)
+tasks = d.get('background_tasks', [])
+print(len([t for t in tasks if t['status'] == 'running']))
+" 2>/dev/null || echo "0")
+
+if [ "$RUNNING" -gt 0 ]; then
+  echo "Session stopped with $RUNNING background task(s) still running." >&2
+fi
+```
+
+Alert when a cron will be orphaned by session end:
+```bash
+#!/bin/bash
+INPUT=$(cat)
+CRON_COUNT=$(echo "$INPUT" | python3 -c "
+import sys, json
+d = json.load(sys.stdin)
+print(len(d.get('session_crons', [])))
+" 2>/dev/null || echo "0")
+
+if [ "$CRON_COUNT" -gt 0 ]; then
+  echo "Warning: $CRON_COUNT session cron(s) will stop when this session ends." >&2
+fi
+```
+
+Register this script as a `Stop` hook with `matcher: ""` to run it on every session end.
+
+---
+
 ## Work With Us
 
 Claudient is backed by [Uitbreiden](https://uitbreiden.com/) — we build AI products with developer communities and deliver B2B AI solutions. If you need custom hook systems, automated quality gates, or production-grade Claude Code automation for your team — we build this for clients.

@@ -411,5 +411,117 @@ Reviews current diffs for compile errors, logic errors, security vulnerabilities
 
 ---
 
+## May 2026 Updates
+
+### `/autofix-pr` — Automatic PR Fixing
+
+Enables automatic PR fixing from the terminal. When toggled on, Claude Code monitors open PR reviews and automatically applies suggested fixes as they come in — no need to read each comment and apply changes manually.
+
+```bash
+/autofix-pr
+```
+
+Available in both CLI and the Desktop app. Toggle again to disable. When active, a small indicator in the status bar confirms it is watching for incoming review suggestions.
+
+---
+
+### `/resume` with PR URL
+
+Paste a GitHub PR URL directly into `/resume` to find and restore the Claude Code session that created it. No need to track session IDs manually — the PR URL is sufficient to recover full context.
+
+```
+/resume https://github.com/org/repo/pull/123
+```
+
+Claude Code looks up the session that opened the PR, restores the session state, and continues from where the work left off.
+
+---
+
+### Background Sessions in `/resume`
+
+Sessions started with `claude --bg` now appear in the `/resume` session picker with a `bg` tag. This makes it easy to identify background sessions among a list of sessions and resume them directly.
+
+---
+
+### `/model` is Now Session-Only
+
+The `/model` command changes the model for the current session only. The change does not persist to future sessions.
+
+To set a new default for all future sessions: open the model picker with `/model`, select the desired model, then press `d`. The `d` key sets the selection as the permanent default without requiring a separate command.
+
+This separation prevents accidental permanent model changes when you temporarily switch models for a single task.
+
+---
+
+### Fast Mode Defaults to Opus 4.7
+
+As of v2.1.142, Fast mode uses Opus 4.7 by default. Previously it used Opus 4.6.
+
+To pin Fast mode back to Opus 4.6:
+
+```bash
+export CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE=1
+```
+
+Add this to your shell profile to make it permanent.
+
+---
+
+### Root-Level `SKILL.md`
+
+A `SKILL.md` file placed at the repository root (not inside a `skills/` subdirectory) is now automatically surfaced as a skill. This is useful for:
+
+- Single-skill repos where a full directory structure is unnecessary overhead
+- Plugin packages with one primary skill that should be immediately discoverable
+- Quick skill definitions during prototyping before organizing into a full skills directory
+
+The file follows the same format as any skill in `skills/` — `## When to activate`, `## When NOT to use`, `## Instructions`, `## Example`.
+
+---
+
+### Plugin Marketplace Improvements (v2.1.144)
+
+The plugin marketplace now displays two additional data points for each plugin:
+
+- **Last-update timestamp** — when the plugin was last published or updated
+- **Per-plugin context cost** — how many tokens the plugin adds to every session at startup
+
+Use the context cost column to audit your plugin footprint. A plugin that adds 8K tokens at startup and is used rarely is a candidate for removal. Open `/plugin` to browse with these fields visible.
+
+---
+
+### `/usage` Per-Category Breakdown (v2.1.149)
+
+`/usage` now shows token consumption broken down by category:
+
+| Category | What it covers |
+|---|---|
+| Skills | Tokens from active skill definitions |
+| Subagents | Tokens consumed by spawned subagents |
+| Plugins | Startup tokens from loaded plugins |
+| MCP servers | Tokens from MCP server tool schemas |
+
+Use this breakdown to identify expensive components in your setup. A plugin adding 15K tokens at startup while you use only one of its ten skills is worth trimming.
+
+---
+
+### New Environment Variables
+
+**`ANTHROPIC_WORKSPACE_ID`**
+Set this environment variable for workload identity federation in enterprise environments. Required when your enterprise uses federated authentication with the Anthropic API — allows API calls to be attributed to a workspace without embedding a static API key.
+
+```bash
+export ANTHROPIC_WORKSPACE_ID=ws_01abc...
+```
+
+**`CLAUDE_CODE_PLUGIN_PREFER_HTTPS`**
+Clone GitHub-hosted plugins over HTTPS instead of SSH. Set to `1` in environments where outbound SSH (port 22) is blocked — common in corporate networks and locked-down CI environments.
+
+```bash
+export CLAUDE_CODE_PLUGIN_PREFER_HTTPS=1
+```
+
+---
+
 > **Work with us:** Claudient is backed by [Uitbreiden](https://uitbreiden.com/) — we build AI products and B2B solutions with developer communities.
 > [uitbreiden.com](https://uitbreiden.com/) · [Reddit](https://www.reddit.com/r/uitbreiden/) · [YouTube](https://www.youtube.com/@UITBREIDEN)

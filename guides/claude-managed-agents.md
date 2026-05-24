@@ -301,5 +301,113 @@ def trigger_agent():
 
 ---
 
+## New Capabilities (2026)
+
+### Dreaming
+
+Scheduled background process that reviews past agent sessions, extracts behavioral patterns, and writes curated memories to improve future agent performance. Enabled per-agent in settings.
+
+Dreaming is not real-time — it runs on Anthropic's schedule, typically after a session ends and periodically during quiet periods. The result is that agents improve over time without explicit re-prompting: failure modes get added to memory, successful strategies are reinforced, and edge cases encountered in production feed back into the agent's behavior.
+
+Enable in the Managed Agents dashboard under the agent's settings → Dreaming → On.
+
+---
+
+### Outcomes
+
+User-defined success rubrics for measuring whether an agent completed its task correctly. You define what "good" looks like; a separate grader model evaluates the agent's output against your rubric. Reported 10.1% quality improvement in production workloads.
+
+Configure via the Managed Agents dashboard or API:
+
+```json
+{
+  "outcomes": [
+    {
+      "name": "task-completed",
+      "description": "The agent successfully completed the requested task with no errors",
+      "weight": 1.0
+    }
+  ]
+}
+```
+
+Multiple outcomes can be defined with different weights. The grader produces a per-outcome score and a weighted aggregate. Outcome scores are available in the session object after completion:
+
+```python
+session = client.beta.sessions.retrieve(session_id)
+print(session.outcome_scores)  # {"task-completed": 0.92, ...}
+```
+
+---
+
+### Memory System (April 23, 2026)
+
+Persistent learning across sessions — agents remember facts, decisions, and context from previous runs. Stored in Anthropic-managed memory; accessible to the agent on each new session automatically.
+
+Currently in public beta. Enable in your agent config:
+
+```python
+agent = client.beta.agents.create(
+    name="my-agent",
+    model="claude-opus-4-7",
+    tools=[{"type": "agent_toolset_20260401"}],
+    system="...",
+    memory={"enabled": True}
+)
+```
+
+Memory is scoped to the agent — each agent has its own memory store. Memories are written by the agent during sessions and read at session start. You can inspect and delete memories via the Managed Agents dashboard or API.
+
+---
+
+### MCP Tunnels (Research Preview)
+
+Connect private, non-public services to Managed Agents without exposing them to the internet. The tunnel creates a secure channel from Anthropic's cloud to your private service.
+
+Use case: agents that need to read from your internal database, call your internal API, or access services that cannot be publicly routable.
+
+```bash
+# Install the tunnel CLI
+npm install -g @anthropic-ai/mcp-tunnel
+
+# Start a tunnel to a local service
+mcp-tunnel --target http://localhost:8080 --agent agt_01abc
+```
+
+The tunnel URL is injected into the agent's environment automatically. The agent calls your service through the tunnel; no public port needed on your infrastructure.
+
+---
+
+### Self-Hosted Sandboxes (Public Beta)
+
+Run the agent execution environment on your own infrastructure instead of Anthropic's cloud. Full control over networking, filesystem, and runtime.
+
+Requirements:
+- A compatible Docker-based sandbox runtime
+- An endpoint reachable from Anthropic's cloud (or via MCP Tunnel)
+- Registration in the Managed Agents dashboard
+
+```python
+environment = client.beta.environments.create(
+    name="self-hosted-env",
+    config={
+        "type": "self_hosted",
+        "url": "https://your-sandbox.example.com"
+    }
+)
+```
+
+Beta documentation: platform.claude.com → Managed Agents → Self-Hosted Sandboxes.
+
+---
+
+### Billing Update — June 15, 2026
+
+Managed Agent sessions now draw from the **Agent SDK credit pool**, which is separate from your interactive usage limits. Running agents via `client.beta.sessions.create` no longer affects your Claude chat or Claude Code terminal session limits.
+
+See `guides/billing-and-pricing.md` for the full breakdown of pools, credit limits, and rollover behavior.
+
+---
+
 > **Work with us:** Claudient is backed by [Uitbreiden](https://uitbreiden.com/) — we build AI products and B2B solutions with developer communities.
 > [uitbreiden.com](https://uitbreiden.com/) · [Reddit](https://www.reddit.com/r/uitbreiden/) · [YouTube](https://www.youtube.com/@UITBREIDEN)
