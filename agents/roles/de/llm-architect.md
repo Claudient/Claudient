@@ -1,5 +1,5 @@
 ---
-name: name: llm-architect
+name: llm-architect
 description: "LLM application architecture — RAG systems, agent orchestration, prompt design, evaluation frameworks, and production LLM ops"
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: name: dependency-manager
+name: dependency-manager
 description: "Dependency audit, update, and conflict resolution — keeps packages current, resolves version conflicts, manages breaking changes"
 ---
 

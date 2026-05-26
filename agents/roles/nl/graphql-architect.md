@@ -1,5 +1,5 @@
 ---
-name: name: graphql-architect
+name: graphql-architect
 description: "GraphQL schema design, resolver architecture, federation, N+1 performance, and client integration patterns"
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: name: legacy-modernizer
+name: legacy-modernizer
 description: "Legacy code modernization — anti-pattern identification, safe refactoring, framework migration, and technical debt reduction"
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: name: kubernetes-architect
+name: kubernetes-architect
 description: "Kubernetes architecture and operations — workloads, networking, storage, RBAC, HPA, and production hardening patterns"
 ---
 

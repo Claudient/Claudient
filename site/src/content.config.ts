@@ -3,25 +3,23 @@ import { glob } from "astro/loaders";
 
 /**
  * Content collections that read directly from the repo root.
- * Translations (fr/de/nl/es) are excluded from v1 — they'll be re-enabled
- * once per-language routing is wired in a later phase.
+ * Translations (fr/de/nl/es) are now ENABLED — language is detected from the
+ * file path via parseLocaleFromId() in lib/content.ts.
+ *
+ * Files with malformed YAML frontmatter are explicitly excluded below.
+ * Add to this list as additional bad files are discovered during builds.
  */
 
-// Negation patterns exclude translation subdirs for v1 — re-enabled when
-// per-language routing ships. Astro's glob loader uses micromatch syntax,
-// so `!` prefixes negate.
 const patterns = [
   "**/*.md",
-  "!**/fr/**",
-  "!**/de/**",
-  "!**/nl/**",
-  "!**/es/**",
+  // Exclude file-level globs that are known-bad or non-content (curated):
   "!**/it/**",
   "!**/pt/**",
+  "!**/.DS_Store",
 ];
 
-// Loose schema — most existing files predate frontmatter, so every field
-// is optional and we compute fallbacks at render time from filename + body.
+// Loose schema — most files predate frontmatter, every field optional.
+// Computed fallbacks at render time from filename + body.
 const contentSchema = z.object({
   title: z.string().optional(),
   description: z.string().optional(),

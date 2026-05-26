@@ -7,6 +7,53 @@ import type { CollectionEntry, CollectionKey } from "astro:content";
  * before the frontmatter convention existed.
  */
 
+/* ---- Locale handling ---- */
+
+export const SUPPORTED_LOCALES = ["en", "fr", "de", "nl", "es"] as const;
+export type Locale = (typeof SUPPORTED_LOCALES)[number];
+export const DEFAULT_LOCALE: Locale = "en";
+
+const NON_DEFAULT_LOCALES: ReadonlySet<string> = new Set(
+  SUPPORTED_LOCALES.filter((l) => l !== DEFAULT_LOCALE),
+);
+
+export function isLocale(value: string): value is Locale {
+  return (SUPPORTED_LOCALES as readonly string[]).includes(value);
+}
+
+/**
+ * Inspect an entry id like "small-business/fr/invoice-chaser" and split out
+ * the locale segment. Returns the canonical English-style path so all
+ * downstream URL/title helpers don't need to know about translations.
+ *
+ * Examples:
+ *   small-business/invoice-chaser       → { locale: "en", cleanPath: "small-business/invoice-chaser" }
+ *   small-business/fr/invoice-chaser    → { locale: "fr", cleanPath: "small-business/invoice-chaser" }
+ *   backend/nodejs/de/nextjs            → { locale: "de", cleanPath: "backend/nodejs/nextjs" }
+ *   advisors/es/chief-of-staff          → { locale: "es", cleanPath: "advisors/chief-of-staff" }
+ */
+export function parseLocaleFromId(id: string): {
+  locale: Locale;
+  cleanPath: string;
+} {
+  const cleaned = id.replace(/\.md$/, "");
+  const parts = cleaned.split("/").filter(Boolean);
+  for (let i = 0; i < parts.length; i++) {
+    if (NON_DEFAULT_LOCALES.has(parts[i])) {
+      const locale = parts[i] as Locale;
+      const cleanPath = [...parts.slice(0, i), ...parts.slice(i + 1)].join("/");
+      return { locale, cleanPath };
+    }
+  }
+  return { locale: DEFAULT_LOCALE, cleanPath: parts.join("/") };
+}
+
+export function localePrefix(locale: Locale): string {
+  return locale === DEFAULT_LOCALE ? "" : `/${locale}`;
+}
+
+/* ---- Path parts ---- */
+
 export interface PathParts {
   /** filename without extension (e.g. "invoice-chaser") */
   slug: string;
@@ -14,15 +61,17 @@ export interface PathParts {
   category: string;
   /** second-level folder, if present (e.g. "nodejs" for skills/backend/nodejs/...) */
   subcategory: string | null;
-  /** the full path joined for URL building (e.g. "small-business/invoice-chaser") */
+  /** the full path joined for URL building, locale-stripped */
   path: string;
-  /** raw split path parts */
+  /** raw split path parts (locale-stripped) */
   parts: string[];
+  /** detected locale from the file path */
+  locale: Locale;
 }
 
 export function pathToParts(id: string): PathParts {
-  const cleaned = id.replace(/\.md$/, "");
-  const parts = cleaned.split("/").filter(Boolean);
+  const { locale, cleanPath } = parseLocaleFromId(id);
+  const parts = cleanPath.split("/").filter(Boolean);
   const slug = parts[parts.length - 1] ?? "index";
   const category = parts.length > 1 ? parts[0] : "general";
   const subcategory = parts.length > 2 ? parts[1] : null;
@@ -30,8 +79,9 @@ export function pathToParts(id: string): PathParts {
     slug,
     category,
     subcategory,
-    path: parts.join("/"),
+    path: cleanPath,
     parts,
+    locale,
   };
 }
 
@@ -121,8 +171,43 @@ export function urlForEntry(
   collection: string,
   entry: CollectionEntry<CollectionKey>,
 ): string {
-  const { path } = pathToParts(entry.id);
-  return `/${collection}/${path}/`;
+  const { path, locale } = pathToParts(entry.id);
+  return `${localePrefix(locale)}/${collection}/${path}/`;
+}
+
+/**
+ * Group a list of entries by their detected locale.
+ * Returned map keys are locale codes.
+ */
+export function groupByLocale<T extends CollectionEntry<CollectionKey>>(
+  entries: T[],
+): Map<Locale, T[]> {
+  const result = new Map<Locale, T[]>();
+  for (const entry of entries) {
+    const { locale } = pathToParts(entry.id);
+    const list = result.get(locale) ?? [];
+    list.push(entry);
+    result.set(locale, list);
+  }
+  return result;
+}
+
+/**
+ * Get all locales for which a given canonical path exists across the
+ * provided entry list. Used to emit hreflang alternates per page.
+ */
+export function localesForPath(
+  cleanPath: string,
+  allEntries: CollectionEntry<CollectionKey>[],
+): Locale[] {
+  const locales: Locale[] = [];
+  for (const entry of allEntries) {
+    const { cleanPath: ePath, locale } = parseLocaleFromId(entry.id);
+    if (ePath === cleanPath && !locales.includes(locale)) {
+      locales.push(locale);
+    }
+  }
+  return locales;
 }
 
 // ---- Feature helpers ----
