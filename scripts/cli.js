@@ -22,6 +22,7 @@ const SKILL_CATEGORIES = [
   'ai-engineering',
   'productivity',
   'gtm',
+  'sdr',
 ]
 
 const SUPPORTED_LANGS = ['en', 'fr', 'de', 'nl', 'es']
@@ -58,6 +59,11 @@ Structure names (82 available):
   Project templates: saas-web-app, rest-api-service, ai-agent-app, data-pipeline, monorepo ...
   AI/GTM workspaces: autonomous-saas-core, llm-guardrail-proxy, hitl-agentic-workflow, devsecops-workspace ...
   Run: npx claudient list structures
+
+SDR skill category:
+  npx claudient add skills sdr
+  Includes: icp-scoring, buying-signals, cold-email-sequence, messaging-frameworks,
+            qualification-meddpicc, reply-classification, objection-handling, and 11 more
 
 Examples:
   npx claudient add structure saas-web-app

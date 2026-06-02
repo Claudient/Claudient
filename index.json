@@ -1,6 +1,6 @@
 {
   "version": "1.9.1",
-  "generated": "2026-06-02T19:15:19.749Z",
+  "generated": "2026-06-02T20:19:39.355Z",
   "skills": [
     {
       "id": "backend/dotnet/csharp",
@@ -7611,204 +7611,60 @@
       "file": "skills/gtm/customer-success.md"
     },
     {
-      "id": "gtm/champion-builder",
+      "id": "gtm/cold-email",
       "category": "gtm",
       "lang": "de",
-      "title": "Champion Builder",
-      "description": "Interne Champion-Strategie: den internen Fursprecher identifizieren, befahigen und mobilisieren, der den Deal vorantreibt",
-      "file": "skills/gtm/de/champion-builder.md"
+      "title": "Cold-E-Mail",
+      "description": "",
+      "file": "skills/gtm/de/cold-email.md"
     },
     {
-      "id": "gtm/channel-economics",
+      "id": "gtm/gtm-philosophy",
       "category": "gtm",
       "lang": "de",
-      "title": "Channel Economics",
-      "description": "Channel economics: compute fully-loaded cost-to-serve per channel, channel ROI (cash, LTV-adjusted, marginal), optimal direct vs. partner channel mix, and diminishing-returns analysis",
-      "file": "skills/gtm/de/channel-economics.md"
+      "title": "GTM-Philosophie",
+      "description": "",
+      "file": "skills/gtm/de/gtm-philosophy.md"
     },
     {
-      "id": "gtm/commercial-forecaster",
+      "id": "gtm/gtm-plays",
       "category": "gtm",
       "lang": "de",
-      "title": "Commercial Forecaster",
-      "description": "Commercial forecasting: build quarterly bookings forecasts with commit/best-case/pipe-only tiers, cohort ARR projections, per-stage funnel confidence scoring, and NRR/GRR analysis for board reporting",
-      "file": "skills/gtm/de/commercial-forecaster.md"
+      "title": "GTM Plays",
+      "description": "",
+      "file": "skills/gtm/de/gtm-plays.md"
     },
     {
-      "id": "gtm/crm-hygiene",
+      "id": "gtm/linkedin-outreach",
       "category": "gtm",
       "lang": "de",
-      "title": "Crm Hygiene",
-      "description": "CRM data hygiene: detect stale records, merge duplicates, fill missing fields, reassign ownership, run scheduled cleanup — HubSpot and Salesforce patterns",
-      "file": "skills/gtm/de/crm-hygiene.md"
+      "title": "LinkedIn Outreach",
+      "description": "",
+      "file": "skills/gtm/de/linkedin-outreach.md"
     },
     {
-      "id": "gtm/customer-success",
+      "id": "gtm/personalization",
       "category": "gtm",
       "lang": "de",
-      "title": "Customer Success",
-      "description": "Customer success management: health scoring, churn prediction signals, expansion playbooks, QBR structure, onboarding plans, and customer lifecycle management for SaaS",
-      "file": "skills/gtm/de/customer-success.md"
+      "title": "Personalisierung",
+      "description": "",
+      "file": "skills/gtm/de/personalization.md"
     },
     {
-      "id": "gtm/deal-desk",
+      "id": "gtm/sdr-prospecting",
       "category": "gtm",
       "lang": "de",
-      "title": "Deal Desk",
-      "description": "Deal desk: structure enterprise deals, review contract terms, set discount approval thresholds, analyse deal economics, and create commercial policy — for B2B sales operations",
-      "file": "skills/gtm/de/deal-desk.md"
+      "title": "SDR-Prospecting",
+      "description": "",
+      "file": "skills/gtm/de/sdr-prospecting.md"
     },
     {
-      "id": "gtm/deal-review",
+      "id": "gtm/trigger-finder",
       "category": "gtm",
       "lang": "de",
-      "title": "Deal Review",
-      "description": "Deal-Review-Vorbereitung: MEDDPICC-Bewertung, Risikomarkierungen, Wettbewerbspositionierung, nachste Schritte, Prognose-Kategorie",
-      "file": "skills/gtm/de/deal-review.md"
-    },
-    {
-      "id": "gtm/email-automation",
-      "category": "gtm",
-      "lang": "de",
-      "title": "Email Automation",
-      "description": "Multi-step outreach email sequences: personalised touchpoints, reply detection routing, follow-up cadence, meeting booking integration, deliverability patterns",
-      "file": "skills/gtm/de/email-automation.md"
-    },
-    {
-      "id": "gtm/expansion-playbook",
-      "category": "gtm",
-      "lang": "de",
-      "title": "Expansion Playbook",
-      "description": "Expansions- und Upsell-Playbook: Expansionssignale erkennen, Upsell-Narrativ entwickeln, Preis- und Upgrade-Gesprache fur CS-gefuhrtes Umsatzwachstum fuhren",
-      "file": "skills/gtm/de/expansion-playbook.md"
-    },
-    {
-      "id": "gtm/health-score-analyzer",
-      "category": "gtm",
-      "lang": "de",
-      "title": "Health Score Analyzer",
-      "description": "Kundenzustandsanalyse: Nutzungssignale, Beziehungssignale, kommerzielle Signale, Abwanderungsrisiko-Bewertung und empfohlene CS-Intervention fur jeden Account",
-      "file": "skills/gtm/de/health-score-analyzer.md"
-    },
-    {
-      "id": "gtm/hubspot",
-      "category": "gtm",
-      "lang": "de",
-      "title": "Hubspot",
-      "description": "HubSpot CRM automation: MCP server setup, contacts/deals/tickets via API, data enrichment pipelines, CRM workflows — the official Anthropic-HubSpot integration",
-      "file": "skills/gtm/de/hubspot.md"
-    },
-    {
-      "id": "gtm/lead-enrichment",
-      "category": "gtm",
-      "lang": "de",
-      "title": "Lead Enrichment",
-      "description": "Lead enrichment pipelines: web scraping to structured prospect profiles, company intelligence signals, CRM population — Firecrawl, Clearbit, Apollo patterns",
-      "file": "skills/gtm/de/lead-enrichment.md"
-    },
-    {
-      "id": "gtm/mutual-success-plan",
-      "category": "gtm",
-      "lang": "de",
-      "title": "Mutual Success Plan",
-      "description": "Gemeinsamer Erfolgsplan / Abschlussplan: Kaufer und Verkaufer auf Meilensteine, Stakeholder, Zeitplan und Erfolgskriterien abstimmen",
-      "file": "skills/gtm/de/mutual-success-plan.md"
-    },
-    {
-      "id": "gtm/partnerships",
-      "category": "gtm",
-      "lang": "de",
-      "title": "Partnerships",
-      "description": "Partnership strategy: partner tier classification (referral/reseller/OEM/strategic), 90-day joint GTM plans, revenue share modelling, and kill criteria for underperforming partnerships",
-      "file": "skills/gtm/de/partnerships.md"
-    },
-    {
-      "id": "gtm/qbr-builder",
-      "category": "gtm",
-      "lang": "de",
-      "title": "Qbr Builder",
-      "description": "Quarterly Business Review Builder: Zusammenfassung der Kundenzustandheit, erbrachter ROI, Ziele fur das nachste Quartal, Rahmen fur Verlangerungs- und Expansionsdiskussionen",
-      "file": "skills/gtm/de/qbr-builder.md"
-    },
-    {
-      "id": "gtm/revenue-operations",
-      "category": "gtm",
-      "lang": "de",
-      "title": "Revenue Operations",
-      "description": "Revenue Operations: Pipeline-Analyse, Prognosegenauigkeit, GTM-Metriken (CAC, LTV, NRR), Vertriebsprozessdesign, Territoriumsplanung und RevOps-Dashboard-Design",
-      "file": "skills/gtm/de/revenue-operations.md"
-    },
-    {
-      "id": "gtm/rfp-responder",
-      "category": "gtm",
-      "lang": "de",
-      "title": "Rfp Responder",
-      "description": "RFP and security questionnaire response: analyse, score, and respond to enterprise RFPs, security questionnaires (SIG, CAIQ), and vendor assessments — efficiently and accurately",
-      "file": "skills/gtm/de/rfp-responder.md"
-    },
-    {
-      "id": "gtm/sdr-agent",
-      "category": "gtm",
-      "lang": "de",
-      "title": "Sdr Agent",
-      "description": "AI SDR agent patterns: prospect research, personalised outreach, multi-step sequences, reply handling, meeting booking — with safety limits",
-      "file": "skills/gtm/de/sdr-agent.md"
-    },
-    {
-      "id": "gtm/sdr-call-analysis",
-      "category": "gtm",
-      "lang": "de",
-      "title": "Sdr Call Analysis",
-      "description": "Nachgesprächs-Transkriptanalyse für SDRs: Ergebnis, nächste Schritte, geäußerte Einwände, Coaching-Feedback extrahieren und CRM-Notizen + Follow-up-E-Mail aus einer Gesprächsaufzeichnung oder einem Transkript automatisch erstellen",
-      "file": "skills/gtm/de/sdr-call-analysis.md"
-    },
-    {
-      "id": "gtm/sdr-call-prep",
-      "category": "gtm",
-      "lang": "de",
-      "title": "Sdr Call Prep",
-      "description": "Gesprächsvorbereitung für SDRs: Account-Briefing, personalisierte Gesprächsleitfäden, Einwandsantworten, Discovery-Fragen und Gesprächsstruktur — in unter 2 Minuten erstellt",
-      "file": "skills/gtm/de/sdr-call-prep.md"
-    },
-    {
-      "id": "gtm/sdr-lead-scorer",
-      "category": "gtm",
-      "lang": "de",
-      "title": "Sdr Lead Scorer",
-      "description": "ICP-Passung + Absichtssignal-Lead-Scoring für SDRs: Interessenten 0-100 gegenüber Ihrem idealen Kundenprofil bewerten, Listen nach Priorität ordnen und die Begründung hinter jedem Score erklären",
-      "file": "skills/gtm/de/sdr-lead-scorer.md"
-    },
-    {
-      "id": "gtm/sdr-objection-handler",
-      "category": "gtm",
-      "lang": "de",
-      "title": "Sdr Objection Handler",
-      "description": "Dynamischer Einwand-Antwort-Generator für SDRs: kontextbewusste Gegenargumente für Preis-, Wettbewerber-, Timing-, Relevanz- und Gatekeeper-Einwände — Sprach- und E-Mail-Varianten",
-      "file": "skills/gtm/de/sdr-objection-handler.md"
-    },
-    {
-      "id": "gtm/sdr-reply-classifier",
-      "category": "gtm",
-      "lang": "de",
-      "title": "Sdr Reply Classifier",
-      "description": "SDR-Posteingangs-Triage: Antwort-Absicht klassifizieren (interessiert, nicht jetzt, Einwand, Weiterleitung, Abwesenheit), kontextbewusste Antworten generieren, CRM aktualisieren und Slack benachrichtigen — unter 5 Minuten Antwortzeit",
-      "file": "skills/gtm/de/sdr-reply-classifier.md"
-    },
-    {
-      "id": "gtm/sdr-research-brief",
-      "category": "gtm",
-      "lang": "de",
-      "title": "Sdr Research Brief",
-      "description": "30-Sekunden-Account-Dossier für SDRs: Unternehmens-Snapshot, aktuelle Auslöser, Kaufsignale, Stakeholder-Karte und personalisierter Outreach-Winkel — aus einer URL oder einem Unternehmensnamen",
-      "file": "skills/gtm/de/sdr-research-brief.md"
-    },
-    {
-      "id": "gtm/sdr-territory-mapper",
-      "category": "gtm",
-      "lang": "de",
-      "title": "Sdr Territory Mapper",
-      "description": "SDR-Gebietsanalyse: Account-Abdeckung kartieren, Whitespace identifizieren, nach ICP-Dichte und Auslösersignal-Konzentration priorisieren, Gebietspläne und Abdeckungsberichte erstellen",
-      "file": "skills/gtm/de/sdr-territory-mapper.md"
+      "title": "Trigger Finder",
+      "description": "",
+      "file": "skills/gtm/de/trigger-finder.md"
     },
     {
       "id": "gtm/deal-desk",
@@ -7835,204 +7691,60 @@
       "file": "skills/gtm/email-automation.md"
     },
     {
-      "id": "gtm/champion-builder",
+      "id": "gtm/cold-email",
       "category": "gtm",
       "lang": "es",
-      "title": "Champion Builder",
-      "description": "Estrategia de defensor interno: identificar, capacitar y movilizar al promotor interno que impulsará el cierre del trato",
-      "file": "skills/gtm/es/champion-builder.md"
+      "title": "Correo Frío",
+      "description": "",
+      "file": "skills/gtm/es/cold-email.md"
     },
     {
-      "id": "gtm/channel-economics",
+      "id": "gtm/gtm-philosophy",
       "category": "gtm",
       "lang": "es",
-      "title": "Channel Economics",
-      "description": "Economía de canales: calcular costo completamente cargado de servir por canal, ROI de canal (efectivo, ajustado por LTV, marginal), mezcla óptima de canal directo vs. socio, y análisis de rendimientos decrecientes",
-      "file": "skills/gtm/es/channel-economics.md"
+      "title": "Filosofía GTM",
+      "description": "",
+      "file": "skills/gtm/es/gtm-philosophy.md"
     },
     {
-      "id": "gtm/commercial-forecaster",
+      "id": "gtm/gtm-plays",
       "category": "gtm",
       "lang": "es",
-      "title": "Commercial Forecaster",
-      "description": "Pronóstico comercial: construir pronósticos de reservas trimestrales con niveles commit/best-case/pipe-only, proyecciones de ARR por cohorte, puntuación de confianza de funnel por etapa, y análisis de NRR/GRR para reportes a la junta",
-      "file": "skills/gtm/es/commercial-forecaster.md"
+      "title": "GTM Plays",
+      "description": "",
+      "file": "skills/gtm/es/gtm-plays.md"
     },
     {
-      "id": "gtm/crm-hygiene",
+      "id": "gtm/linkedin-outreach",
       "category": "gtm",
       "lang": "es",
-      "title": "Crm Hygiene",
-      "description": "CRM data hygiene: detect stale records, merge duplicates, fill missing fields, reassign ownership, run scheduled cleanup — HubSpot and Salesforce patterns",
-      "file": "skills/gtm/es/crm-hygiene.md"
+      "title": "Alcance en LinkedIn",
+      "description": "",
+      "file": "skills/gtm/es/linkedin-outreach.md"
     },
     {
-      "id": "gtm/customer-success",
+      "id": "gtm/personalization",
       "category": "gtm",
       "lang": "es",
-      "title": "Customer Success",
-      "description": "Customer success management: health scoring, churn prediction signals, expansion playbooks, QBR structure, onboarding plans, and customer lifecycle management for SaaS",
-      "file": "skills/gtm/es/customer-success.md"
+      "title": "Personalización",
+      "description": "",
+      "file": "skills/gtm/es/personalization.md"
     },
     {
-      "id": "gtm/deal-desk",
+      "id": "gtm/sdr-prospecting",
       "category": "gtm",
       "lang": "es",
-      "title": "Deal Desk",
-      "description": "Deal desk: structure enterprise deals, review contract terms, set discount approval thresholds, analyse deal economics, and create commercial policy — for B2B sales operations",
-      "file": "skills/gtm/es/deal-desk.md"
+      "title": "Prospección SDR",
+      "description": "",
+      "file": "skills/gtm/es/sdr-prospecting.md"
     },
     {
-      "id": "gtm/deal-review",
+      "id": "gtm/trigger-finder",
       "category": "gtm",
       "lang": "es",
-      "title": "Deal Review",
-      "description": "Preparación para revisión de tratos: puntuación MEDDPICC, señales de riesgo, posicionamiento competitivo, próximos pasos, categoría de pronóstico",
-      "file": "skills/gtm/es/deal-review.md"
-    },
-    {
-      "id": "gtm/email-automation",
-      "category": "gtm",
-      "lang": "es",
-      "title": "Email Automation",
-      "description": "Multi-step outreach email sequences: personalised touchpoints, reply detection routing, follow-up cadence, meeting booking integration, deliverability patterns",
-      "file": "skills/gtm/es/email-automation.md"
-    },
-    {
-      "id": "gtm/expansion-playbook",
-      "category": "gtm",
-      "lang": "es",
-      "title": "Expansion Playbook",
-      "description": "Manual de expansión y upsell: identificar señales de expansión, construir narrativa de upsell, manejar conversaciones de precios y actualizaciones para el crecimiento de ingresos liderado por CS",
-      "file": "skills/gtm/es/expansion-playbook.md"
-    },
-    {
-      "id": "gtm/health-score-analyzer",
-      "category": "gtm",
-      "lang": "es",
-      "title": "Health Score Analyzer",
-      "description": "Análisis de puntuación de salud del cliente: señales de uso, señales de relación, señales comerciales, calificación de riesgo de cancelación y recomendación de intervención de CS para cada cuenta",
-      "file": "skills/gtm/es/health-score-analyzer.md"
-    },
-    {
-      "id": "gtm/hubspot",
-      "category": "gtm",
-      "lang": "es",
-      "title": "Hubspot",
-      "description": "HubSpot CRM automation: MCP server setup, contacts/deals/tickets via API, data enrichment pipelines, CRM workflows — the official Anthropic-HubSpot integration",
-      "file": "skills/gtm/es/hubspot.md"
-    },
-    {
-      "id": "gtm/lead-enrichment",
-      "category": "gtm",
-      "lang": "es",
-      "title": "Lead Enrichment",
-      "description": "Lead enrichment pipelines: web scraping to structured prospect profiles, company intelligence signals, CRM population — Firecrawl, Clearbit, Apollo patterns",
-      "file": "skills/gtm/es/lead-enrichment.md"
-    },
-    {
-      "id": "gtm/mutual-success-plan",
-      "category": "gtm",
-      "lang": "es",
-      "title": "Mutual Success Plan",
-      "description": "Plan de éxito mutuo / plan de cierre: alinear comprador y vendedor en hitos, partes interesadas, cronograma, criterios de éxito",
-      "file": "skills/gtm/es/mutual-success-plan.md"
-    },
-    {
-      "id": "gtm/partnerships",
-      "category": "gtm",
-      "lang": "es",
-      "title": "Partnerships",
-      "description": "Partnership strategy: partner tier classification (referral/reseller/OEM/strategic), 90-day joint GTM plans, revenue share modelling, and kill criteria for underperforming partnerships",
-      "file": "skills/gtm/es/partnerships.md"
-    },
-    {
-      "id": "gtm/qbr-builder",
-      "category": "gtm",
-      "lang": "es",
-      "title": "Qbr Builder",
-      "description": "Constructor de Revisión Trimestral de Negocio: resumen de salud del cliente, ROI entregado, objetivos para el próximo trimestre, marco de discusión de renovación y expansión",
-      "file": "skills/gtm/es/qbr-builder.md"
-    },
-    {
-      "id": "gtm/revenue-operations",
-      "category": "gtm",
-      "lang": "es",
-      "title": "Revenue Operations",
-      "description": "Operaciones de ingresos: análisis de pipeline, precisión de pronósticos, métricas GTM (CAC, LTV, NRR), diseño de procesos de ventas, planificación territorial y diseño de panel de control RevOps",
-      "file": "skills/gtm/es/revenue-operations.md"
-    },
-    {
-      "id": "gtm/rfp-responder",
-      "category": "gtm",
-      "lang": "es",
-      "title": "Rfp Responder",
-      "description": "RFP and security questionnaire response: analyse, score, and respond to enterprise RFPs, security questionnaires (SIG, CAIQ), and vendor assessments — efficiently and accurately",
-      "file": "skills/gtm/es/rfp-responder.md"
-    },
-    {
-      "id": "gtm/sdr-agent",
-      "category": "gtm",
-      "lang": "es",
-      "title": "Sdr Agent",
-      "description": "AI SDR agent patterns: prospect research, personalised outreach, multi-step sequences, reply handling, meeting booking — with safety limits",
-      "file": "skills/gtm/es/sdr-agent.md"
-    },
-    {
-      "id": "gtm/sdr-call-analysis",
-      "category": "gtm",
-      "lang": "es",
-      "title": "Sdr Call Analysis",
-      "description": "Análisis post-llamada de transcripciones para SDRs: extrae resultado, próximos pasos, objeciones planteadas, retroalimentación de coaching, y genera automáticamente notas de CRM y email de seguimiento a partir de una grabación o transcripción de llamada",
-      "file": "skills/gtm/es/sdr-call-analysis.md"
-    },
-    {
-      "id": "gtm/sdr-call-prep",
-      "category": "gtm",
-      "lang": "es",
-      "title": "Sdr Call Prep",
-      "description": "Preparación previa a la llamada para SDRs: resumen de cuenta, guiones de conversación personalizados, respuestas a objeciones, preguntas de descubrimiento y estructura de llamada — generados en menos de 2 minutos",
-      "file": "skills/gtm/es/sdr-call-prep.md"
-    },
-    {
-      "id": "gtm/sdr-lead-scorer",
-      "category": "gtm",
-      "lang": "es",
-      "title": "Sdr Lead Scorer",
-      "description": "Puntuación de leads por ajuste al ICP y señales de intención para SDRs: puntúa prospectos de 0 a 100 frente a tu perfil de cliente ideal, clasifica listas por prioridad y explica el razonamiento detrás de cada puntuación",
-      "file": "skills/gtm/es/sdr-lead-scorer.md"
-    },
-    {
-      "id": "gtm/sdr-objection-handler",
-      "category": "gtm",
-      "lang": "es",
-      "title": "Sdr Objection Handler",
-      "description": "Generador dinámico de respuestas a objeciones para SDRs: réplicas contextuales para objeciones de precio, competidor, momento, relevancia y guardián — variantes para voz y email",
-      "file": "skills/gtm/es/sdr-objection-handler.md"
-    },
-    {
-      "id": "gtm/sdr-reply-classifier",
-      "category": "gtm",
-      "lang": "es",
-      "title": "Sdr Reply Classifier",
-      "description": "Clasificación del buzón de SDR: clasifica la intención de respuesta (interesado, ahora no, objeción, referido, fuera de oficina), genera respuestas contextuales, actualiza el CRM y notifica a Slack — cadencia de respuesta en menos de 5 minutos",
-      "file": "skills/gtm/es/sdr-reply-classifier.md"
-    },
-    {
-      "id": "gtm/sdr-research-brief",
-      "category": "gtm",
-      "lang": "es",
-      "title": "Sdr Research Brief",
-      "description": "Dosier de cuenta en 30 segundos para SDRs: resumen de empresa, desencadenantes recientes, señales de compra, mapa de partes interesadas y ángulo de contacto personalizado — a partir de una URL o nombre de empresa",
-      "file": "skills/gtm/es/sdr-research-brief.md"
-    },
-    {
-      "id": "gtm/sdr-territory-mapper",
-      "category": "gtm",
-      "lang": "es",
-      "title": "Sdr Territory Mapper",
-      "description": "Análisis de territorio SDR: mapea la cobertura de cuentas, identifica espacios en blanco, prioriza por densidad de ICP y concentración de señales de desencadenantes, construye planes de territorio e informes de cobertura",
-      "file": "skills/gtm/es/sdr-territory-mapper.md"
+      "title": "Buscador de Triggers",
+      "description": "",
+      "file": "skills/gtm/es/trigger-finder.md"
     },
     {
       "id": "gtm/expansion-playbook",
@@ -8043,204 +7755,60 @@
       "file": "skills/gtm/expansion-playbook.md"
     },
     {
-      "id": "gtm/champion-builder",
+      "id": "gtm/cold-email",
       "category": "gtm",
       "lang": "fr",
-      "title": "Champion Builder",
-      "description": "Stratégie de champion interne : identifier, habiliter et mobiliser l'avocat interne qui fera avancer l'affaire",
-      "file": "skills/gtm/fr/champion-builder.md"
+      "title": "Email Prospection",
+      "description": "",
+      "file": "skills/gtm/fr/cold-email.md"
     },
     {
-      "id": "gtm/channel-economics",
+      "id": "gtm/gtm-philosophy",
       "category": "gtm",
       "lang": "fr",
-      "title": "Channel Economics",
-      "description": "Économies de canaux : calculer le coût entièrement chargé de service par canal, le ROI du canal (cash, LTV-ajusté, marginal), le mélange de canal direct vs. partenaire optimal et l'analyse des rendements décroissants",
-      "file": "skills/gtm/fr/channel-economics.md"
+      "title": "Philosophie GTM",
+      "description": "",
+      "file": "skills/gtm/fr/gtm-philosophy.md"
     },
     {
-      "id": "gtm/commercial-forecaster",
+      "id": "gtm/gtm-plays",
       "category": "gtm",
       "lang": "fr",
-      "title": "Commercial Forecaster",
-      "description": "Prévision commerciale : construire les prévisions de réservations trimestrielles avec les niveaux commit/meilleur cas/pipeline seul, les projections d'ARR de cohorte, l'évaluation de la confiance du pipeline par étape et l'analyse NRR/GRR pour les rapports du conseil",
-      "file": "skills/gtm/fr/commercial-forecaster.md"
+      "title": "Tactiques GTM",
+      "description": "",
+      "file": "skills/gtm/fr/gtm-plays.md"
     },
     {
-      "id": "gtm/crm-hygiene",
+      "id": "gtm/linkedin-outreach",
       "category": "gtm",
       "lang": "fr",
-      "title": "Crm Hygiene",
-      "description": "CRM data hygiene: detect stale records, merge duplicates, fill missing fields, reassign ownership, run scheduled cleanup — HubSpot and Salesforce patterns",
-      "file": "skills/gtm/fr/crm-hygiene.md"
+      "title": "Prospection LinkedIn",
+      "description": "",
+      "file": "skills/gtm/fr/linkedin-outreach.md"
     },
     {
-      "id": "gtm/customer-success",
+      "id": "gtm/personalization",
       "category": "gtm",
       "lang": "fr",
-      "title": "Customer Success",
-      "description": "Customer success management: health scoring, churn prediction signals, expansion playbooks, QBR structure, onboarding plans, and customer lifecycle management for SaaS",
-      "file": "skills/gtm/fr/customer-success.md"
+      "title": "Personnalisation",
+      "description": "",
+      "file": "skills/gtm/fr/personalization.md"
     },
     {
-      "id": "gtm/deal-desk",
+      "id": "gtm/sdr-prospecting",
       "category": "gtm",
       "lang": "fr",
-      "title": "Deal Desk",
-      "description": "Deal desk: structure enterprise deals, review contract terms, set discount approval thresholds, analyse deal economics, and create commercial policy — for B2B sales operations",
-      "file": "skills/gtm/fr/deal-desk.md"
+      "title": "Prospection SDR",
+      "description": "",
+      "file": "skills/gtm/fr/sdr-prospecting.md"
     },
     {
-      "id": "gtm/deal-review",
+      "id": "gtm/trigger-finder",
       "category": "gtm",
       "lang": "fr",
-      "title": "Deal Review",
-      "description": "Préparation de la revue de deal : score MEDDPICC, signaux de risque, positionnement concurrentiel, prochaines étapes, catégorie de prévision",
-      "file": "skills/gtm/fr/deal-review.md"
-    },
-    {
-      "id": "gtm/email-automation",
-      "category": "gtm",
-      "lang": "fr",
-      "title": "Email Automation",
-      "description": "Multi-step outreach email sequences: personalised touchpoints, reply detection routing, follow-up cadence, meeting booking integration, deliverability patterns",
-      "file": "skills/gtm/fr/email-automation.md"
-    },
-    {
-      "id": "gtm/expansion-playbook",
-      "category": "gtm",
-      "lang": "fr",
-      "title": "Expansion Playbook",
-      "description": "Playbook d'expansion et d'upsell : identifier les signaux d'expansion, construire le narratif d'upsell, gérer les conversations de tarification et de mise à niveau pour la croissance du chiffre d'affaires pilotée par le CS",
-      "file": "skills/gtm/fr/expansion-playbook.md"
-    },
-    {
-      "id": "gtm/health-score-analyzer",
-      "category": "gtm",
-      "lang": "fr",
-      "title": "Health Score Analyzer",
-      "description": "Analyse du score de santé client : signaux d'utilisation, signaux relationnels, signaux commerciaux, évaluation du risque de résiliation et intervention CS recommandée pour chaque compte",
-      "file": "skills/gtm/fr/health-score-analyzer.md"
-    },
-    {
-      "id": "gtm/hubspot",
-      "category": "gtm",
-      "lang": "fr",
-      "title": "Hubspot",
-      "description": "HubSpot CRM automation: MCP server setup, contacts/deals/tickets via API, data enrichment pipelines, CRM workflows — the official Anthropic-HubSpot integration",
-      "file": "skills/gtm/fr/hubspot.md"
-    },
-    {
-      "id": "gtm/lead-enrichment",
-      "category": "gtm",
-      "lang": "fr",
-      "title": "Lead Enrichment",
-      "description": "Lead enrichment pipelines: web scraping to structured prospect profiles, company intelligence signals, CRM population — Firecrawl, Clearbit, Apollo patterns",
-      "file": "skills/gtm/fr/lead-enrichment.md"
-    },
-    {
-      "id": "gtm/mutual-success-plan",
-      "category": "gtm",
-      "lang": "fr",
-      "title": "Mutual Success Plan",
-      "description": "Plan de succès mutuel / plan de clôture : aligner l'acheteur et le vendeur sur les jalons, les parties prenantes, le calendrier et les critères de succès",
-      "file": "skills/gtm/fr/mutual-success-plan.md"
-    },
-    {
-      "id": "gtm/partnerships",
-      "category": "gtm",
-      "lang": "fr",
-      "title": "Partnerships",
-      "description": "Partnership strategy: partner tier classification (referral/reseller/OEM/strategic), 90-day joint GTM plans, revenue share modelling, and kill criteria for underperforming partnerships",
-      "file": "skills/gtm/fr/partnerships.md"
-    },
-    {
-      "id": "gtm/qbr-builder",
-      "category": "gtm",
-      "lang": "fr",
-      "title": "Qbr Builder",
-      "description": "Constructeur de QBR (Quarterly Business Review) : récapitulatif de la santé client, ROI délivré, objectifs pour le prochain trimestre, cadre de discussion sur le renouvellement et l'expansion",
-      "file": "skills/gtm/fr/qbr-builder.md"
-    },
-    {
-      "id": "gtm/revenue-operations",
-      "category": "gtm",
-      "lang": "fr",
-      "title": "Revenue Operations",
-      "description": "Opérations de revenus : analyse de pipeline, précision des prévisions, métriques GTM (CAC, LTV, NRR), conception de processus de vente, planification de territoire et conception de tableau de bord RevOps",
-      "file": "skills/gtm/fr/revenue-operations.md"
-    },
-    {
-      "id": "gtm/rfp-responder",
-      "category": "gtm",
-      "lang": "fr",
-      "title": "Rfp Responder",
-      "description": "RFP and security questionnaire response: analyse, score, and respond to enterprise RFPs, security questionnaires (SIG, CAIQ), and vendor assessments — efficiently and accurately",
-      "file": "skills/gtm/fr/rfp-responder.md"
-    },
-    {
-      "id": "gtm/sdr-agent",
-      "category": "gtm",
-      "lang": "fr",
-      "title": "Sdr Agent",
-      "description": "AI SDR agent patterns: prospect research, personalised outreach, multi-step sequences, reply handling, meeting booking — with safety limits",
-      "file": "skills/gtm/fr/sdr-agent.md"
-    },
-    {
-      "id": "gtm/sdr-call-analysis",
-      "category": "gtm",
-      "lang": "fr",
-      "title": "Sdr Call Analysis",
-      "description": "Analyse post-appel de transcriptions pour les SDR : extraire le résultat, les prochaines étapes, les objections soulevées, les retours de coaching, et rédiger automatiquement des notes CRM + email de suivi à partir d'un enregistrement ou d'une transcription d'appel",
-      "file": "skills/gtm/fr/sdr-call-analysis.md"
-    },
-    {
-      "id": "gtm/sdr-call-prep",
-      "category": "gtm",
-      "lang": "fr",
-      "title": "Sdr Call Prep",
-      "description": "Préparation pré-appel pour les SDR : briefing de compte, scripts de conversation personnalisés, réponses aux objections, questions de découverte et structure d'appel — générés en moins de 2 minutes",
-      "file": "skills/gtm/fr/sdr-call-prep.md"
-    },
-    {
-      "id": "gtm/sdr-lead-scorer",
-      "category": "gtm",
-      "lang": "fr",
-      "title": "Sdr Lead Scorer",
-      "description": "Notation des leads par adéquation ICP et signaux d'intention pour les SDR : noter les prospects de 0 à 100 par rapport à votre profil client idéal, classer les listes par priorité, et expliquer le raisonnement derrière chaque score",
-      "file": "skills/gtm/fr/sdr-lead-scorer.md"
-    },
-    {
-      "id": "gtm/sdr-objection-handler",
-      "category": "gtm",
-      "lang": "fr",
-      "title": "Sdr Objection Handler",
-      "description": "Générateur dynamique de réponses aux objections pour les SDR : réfutations contextuelles pour les objections de prix, de concurrent, de timing, de pertinence et de gardien — variantes voix et email",
-      "file": "skills/gtm/fr/sdr-objection-handler.md"
-    },
-    {
-      "id": "gtm/sdr-reply-classifier",
-      "category": "gtm",
-      "lang": "fr",
-      "title": "Sdr Reply Classifier",
-      "description": "Triage de boîte de réception SDR : classer l'intention des réponses (intéressé, pas maintenant, objection, référence, absent), générer des réponses contextuelles, mettre à jour le CRM et notifier Slack — cadence de réponse en moins de 5 minutes",
-      "file": "skills/gtm/fr/sdr-reply-classifier.md"
-    },
-    {
-      "id": "gtm/sdr-research-brief",
-      "category": "gtm",
-      "lang": "fr",
-      "title": "Sdr Research Brief",
-      "description": "Dossier de compte en 30 secondes pour les SDR : aperçu de l'entreprise, déclencheurs récents, signaux d'achat, carte des parties prenantes et angle de prospection personnalisé — à partir d'une URL ou d'un nom d'entreprise",
-      "file": "skills/gtm/fr/sdr-research-brief.md"
-    },
-    {
-      "id": "gtm/sdr-territory-mapper",
-      "category": "gtm",
-      "lang": "fr",
-      "title": "Sdr Territory Mapper",
-      "description": "Analyse de territoire SDR : cartographier la couverture des comptes, identifier les espaces blancs, prioriser par densité ICP et concentration de signaux déclencheurs, construire des plans de territoire et des rapports de couverture",
-      "file": "skills/gtm/fr/sdr-territory-mapper.md"
+      "title": "Trigger Finder",
+      "description": "",
+      "file": "skills/gtm/fr/trigger-finder.md"
     },
     {
       "id": "gtm/gtm-philosophy",
@@ -8299,204 +7867,60 @@
       "file": "skills/gtm/mutual-success-plan.md"
     },
     {
-      "id": "gtm/champion-builder",
+      "id": "gtm/cold-email",
       "category": "gtm",
       "lang": "nl",
-      "title": "Champion Builder",
-      "description": "Interne kampioenstrategie: identificeer, ondersteun en mobiliseer de interne pleitbezorger die de deal erdoor zal duwen",
-      "file": "skills/gtm/nl/champion-builder.md"
+      "title": "Cold Email",
+      "description": "",
+      "file": "skills/gtm/nl/cold-email.md"
     },
     {
-      "id": "gtm/channel-economics",
+      "id": "gtm/gtm-philosophy",
       "category": "gtm",
       "lang": "nl",
-      "title": "Channel Economics",
-      "description": "Channel economics: compute fully-loaded cost-to-serve per channel, channel ROI (cash, LTV-adjusted, marginal), optimal direct vs. partner channel mix, and diminishing-returns analysis",
-      "file": "skills/gtm/nl/channel-economics.md"
+      "title": "GTM-filosofie",
+      "description": "",
+      "file": "skills/gtm/nl/gtm-philosophy.md"
     },
     {
-      "id": "gtm/commercial-forecaster",
+      "id": "gtm/gtm-plays",
       "category": "gtm",
       "lang": "nl",
-      "title": "Commercial Forecaster",
-      "description": "Commercial forecasting: build quarterly bookings forecasts with commit/best-case/pipe-only tiers, cohort ARR projections, per-stage funnel confidence scoring, and NRR/GRR analysis for board reporting",
-      "file": "skills/gtm/nl/commercial-forecaster.md"
+      "title": "GTM-taktiekem",
+      "description": "",
+      "file": "skills/gtm/nl/gtm-plays.md"
     },
     {
-      "id": "gtm/crm-hygiene",
+      "id": "gtm/linkedin-outreach",
       "category": "gtm",
       "lang": "nl",
-      "title": "Crm Hygiene",
-      "description": "CRM data hygiene: detect stale records, merge duplicates, fill missing fields, reassign ownership, run scheduled cleanup — HubSpot and Salesforce patterns",
-      "file": "skills/gtm/nl/crm-hygiene.md"
+      "title": "LinkedIn Outreach",
+      "description": "",
+      "file": "skills/gtm/nl/linkedin-outreach.md"
     },
     {
-      "id": "gtm/customer-success",
+      "id": "gtm/personalization",
       "category": "gtm",
       "lang": "nl",
-      "title": "Customer Success",
-      "description": "Customer success management: health scoring, churn prediction signals, expansion playbooks, QBR structure, onboarding plans, and customer lifecycle management for SaaS",
-      "file": "skills/gtm/nl/customer-success.md"
+      "title": "Personalisatie",
+      "description": "",
+      "file": "skills/gtm/nl/personalization.md"
     },
     {
-      "id": "gtm/deal-desk",
+      "id": "gtm/sdr-prospecting",
       "category": "gtm",
       "lang": "nl",
-      "title": "Deal Desk",
-      "description": "Deal desk: structure enterprise deals, review contract terms, set discount approval thresholds, analyse deal economics, and create commercial policy — for B2B sales operations",
-      "file": "skills/gtm/nl/deal-desk.md"
+      "title": "SDR Prospecting",
+      "description": "",
+      "file": "skills/gtm/nl/sdr-prospecting.md"
     },
     {
-      "id": "gtm/deal-review",
+      "id": "gtm/trigger-finder",
       "category": "gtm",
       "lang": "nl",
-      "title": "Deal Review",
-      "description": "Dealreview-voorbereiding: MEDDPICC-scoring, risicosignalen, concurrentiepositie, vervolgstappen, prognose-categorie",
-      "file": "skills/gtm/nl/deal-review.md"
-    },
-    {
-      "id": "gtm/email-automation",
-      "category": "gtm",
-      "lang": "nl",
-      "title": "Email Automation",
-      "description": "Multi-step outreach email sequences: personalised touchpoints, reply detection routing, follow-up cadence, meeting booking integration, deliverability patterns",
-      "file": "skills/gtm/nl/email-automation.md"
-    },
-    {
-      "id": "gtm/expansion-playbook",
-      "category": "gtm",
-      "lang": "nl",
-      "title": "Expansion Playbook",
-      "description": "Uitbreiding- en upsell-playbook: identificeer uitbreidingssignalen, formuleer upsell-verhaal, handel prijs- en upgradegesprekken af voor CS-gedreven omzetgroei",
-      "file": "skills/gtm/nl/expansion-playbook.md"
-    },
-    {
-      "id": "gtm/health-score-analyzer",
-      "category": "gtm",
-      "lang": "nl",
-      "title": "Health Score Analyzer",
-      "description": "Analyse van klantgezondheidsscores: gebruikssignalen, relatiesignalen, commerciële signalen, verlooprisicobeoordeling en aanbevolen CS-interventie per account",
-      "file": "skills/gtm/nl/health-score-analyzer.md"
-    },
-    {
-      "id": "gtm/hubspot",
-      "category": "gtm",
-      "lang": "nl",
-      "title": "Hubspot",
-      "description": "HubSpot CRM automation: MCP server setup, contacts/deals/tickets via API, data enrichment pipelines, CRM workflows — the official Anthropic-HubSpot integration",
-      "file": "skills/gtm/nl/hubspot.md"
-    },
-    {
-      "id": "gtm/lead-enrichment",
-      "category": "gtm",
-      "lang": "nl",
-      "title": "Lead Enrichment",
-      "description": "Lead enrichment pipelines: web scraping to structured prospect profiles, company intelligence signals, CRM population — Firecrawl, Clearbit, Apollo patterns",
-      "file": "skills/gtm/nl/lead-enrichment.md"
-    },
-    {
-      "id": "gtm/mutual-success-plan",
-      "category": "gtm",
-      "lang": "nl",
-      "title": "Mutual Success Plan",
-      "description": "Wederzijds succesplan / sluitplan: koper en verkoper afstemmen op mijlpalen, stakeholders, tijdlijn, succescriteria",
-      "file": "skills/gtm/nl/mutual-success-plan.md"
-    },
-    {
-      "id": "gtm/partnerships",
-      "category": "gtm",
-      "lang": "nl",
-      "title": "Partnerships",
-      "description": "Partnership strategy: partner tier classification (referral/reseller/OEM/strategic), 90-day joint GTM plans, revenue share modelling, and kill criteria for underperforming partnerships",
-      "file": "skills/gtm/nl/partnerships.md"
-    },
-    {
-      "id": "gtm/qbr-builder",
-      "category": "gtm",
-      "lang": "nl",
-      "title": "Qbr Builder",
-      "description": "Kwartaalsbedrijfsreview-bouwer: samenvatting klantgezondheid, geleverde ROI, doelen voor volgend kwartaal, kader voor verlenging- en uitbreidingsgesprek",
-      "file": "skills/gtm/nl/qbr-builder.md"
-    },
-    {
-      "id": "gtm/revenue-operations",
-      "category": "gtm",
-      "lang": "nl",
-      "title": "Revenue Operations",
-      "description": "Revenue operations: pipeline analyse, forecast nauwkeurigheid, GTM metreken (CAC, LTV, NRR), sales process ontwerp, territoire planning en RevOps dashboard design",
-      "file": "skills/gtm/nl/revenue-operations.md"
-    },
-    {
-      "id": "gtm/rfp-responder",
-      "category": "gtm",
-      "lang": "nl",
-      "title": "Rfp Responder",
-      "description": "RFP and security questionnaire response: analyse, score, and respond to enterprise RFPs, security questionnaires (SIG, CAIQ), and vendor assessments — efficiently and accurately",
-      "file": "skills/gtm/nl/rfp-responder.md"
-    },
-    {
-      "id": "gtm/sdr-agent",
-      "category": "gtm",
-      "lang": "nl",
-      "title": "Sdr Agent",
-      "description": "AI SDR agent patterns: prospect research, personalised outreach, multi-step sequences, reply handling, meeting booking — with safety limits",
-      "file": "skills/gtm/nl/sdr-agent.md"
-    },
-    {
-      "id": "gtm/sdr-call-analysis",
-      "category": "gtm",
-      "lang": "nl",
-      "title": "Sdr Call Analysis",
-      "description": "Post-gespreksanalyse van transcripten voor SDR's: resultaat, vervolgstappen, bezwaren, coachingfeedback, en automatisch opgestelde CRM-notities + opvolgingsmail op basis van een gespreksopname of transcript",
-      "file": "skills/gtm/nl/sdr-call-analysis.md"
-    },
-    {
-      "id": "gtm/sdr-call-prep",
-      "category": "gtm",
-      "lang": "nl",
-      "title": "Sdr Call Prep",
-      "description": "Gespreksvoorbereiding voor SDR's: accountbriefing, gepersonaliseerde gespreksscripts, bezwaarresponsen, ontdekkingsvragen en gespreksstructuur — gegenereerd in minder dan 2 minuten",
-      "file": "skills/gtm/nl/sdr-call-prep.md"
-    },
-    {
-      "id": "gtm/sdr-lead-scorer",
-      "category": "gtm",
-      "lang": "nl",
-      "title": "Sdr Lead Scorer",
-      "description": "ICP-fit + intentiesignaal leadscoring voor SDR's: scoor prospects van 0-100 op basis van je ideale klantprofiel, rangschik lijsten op prioriteit, en leg de redenering achter elke score uit",
-      "file": "skills/gtm/nl/sdr-lead-scorer.md"
-    },
-    {
-      "id": "gtm/sdr-objection-handler",
-      "category": "gtm",
-      "lang": "nl",
-      "title": "Sdr Objection Handler",
-      "description": "Dynamische bezwaargenerator voor SDR's: contextbewuste weerleggingen voor prijs-, concurrent-, timing-, relevantie- en gatekeeperbezwaren — stem- en e-mailvarianten",
-      "file": "skills/gtm/nl/sdr-objection-handler.md"
-    },
-    {
-      "id": "gtm/sdr-reply-classifier",
-      "category": "gtm",
-      "lang": "nl",
-      "title": "Sdr Reply Classifier",
-      "description": "SDR inboxtriage: classificeer antwoordintentie (geïnteresseerd, niet nu, bezwaar, verwijzing, OOO), genereer contextbewuste reacties, werk CRM bij, en informeer Slack — antwoordcadans onder 5 minuten",
-      "file": "skills/gtm/nl/sdr-reply-classifier.md"
-    },
-    {
-      "id": "gtm/sdr-research-brief",
-      "category": "gtm",
-      "lang": "nl",
-      "title": "Sdr Research Brief",
-      "description": "30-seconden accountdossier voor SDR's: bedrijfsoverzicht, recente aanleidingen, koopsignalen, stakeholderkaart en gepersonaliseerde outreach-invalshoek — op basis van een URL of bedrijfsnaam",
-      "file": "skills/gtm/nl/sdr-research-brief.md"
-    },
-    {
-      "id": "gtm/sdr-territory-mapper",
-      "category": "gtm",
-      "lang": "nl",
-      "title": "Sdr Territory Mapper",
-      "description": "SDR-territoriumanalyse: breng accountdekking in kaart, identificeer witruimte, prioriteer op ICP-dichtheid en concentratie van aanleidingssignalen, bouw territoriaalplannen en dekkingsrapporten",
-      "file": "skills/gtm/nl/sdr-territory-mapper.md"
+      "title": "Trigger Finder",
+      "description": "",
+      "file": "skills/gtm/nl/trigger-finder.md"
     },
     {
       "id": "gtm/partnerships",
@@ -8617,6 +8041,150 @@
       "title": "Trigger Finder",
       "description": "",
       "file": "skills/gtm/trigger-finder.md"
+    },
+    {
+      "id": "sdr/atl-btl-messaging",
+      "category": "sdr",
+      "lang": "en",
+      "title": "ATL/BTL Messaging",
+      "description": "",
+      "file": "skills/sdr/atl-btl-messaging.md"
+    },
+    {
+      "id": "sdr/buying-signals",
+      "category": "sdr",
+      "lang": "en",
+      "title": "Buying Signals",
+      "description": "",
+      "file": "skills/sdr/buying-signals.md"
+    },
+    {
+      "id": "sdr/cold-call-script",
+      "category": "sdr",
+      "lang": "en",
+      "title": "Cold Call Script",
+      "description": "",
+      "file": "skills/sdr/cold-call-script.md"
+    },
+    {
+      "id": "sdr/cold-email-sequence",
+      "category": "sdr",
+      "lang": "en",
+      "title": "Cold Email Sequence",
+      "description": "",
+      "file": "skills/sdr/cold-email-sequence.md"
+    },
+    {
+      "id": "sdr/company-intelligence",
+      "category": "sdr",
+      "lang": "en",
+      "title": "Company Intelligence",
+      "description": "",
+      "file": "skills/sdr/company-intelligence.md"
+    },
+    {
+      "id": "sdr/crm-hygiene",
+      "category": "sdr",
+      "lang": "en",
+      "title": "CRM Hygiene",
+      "description": "",
+      "file": "skills/sdr/crm-hygiene.md"
+    },
+    {
+      "id": "sdr/email-metrics",
+      "category": "sdr",
+      "lang": "en",
+      "title": "Email Metrics",
+      "description": "",
+      "file": "skills/sdr/email-metrics.md"
+    },
+    {
+      "id": "sdr/follow-up-sequencer",
+      "category": "sdr",
+      "lang": "en",
+      "title": "Follow-Up Sequencer",
+      "description": "",
+      "file": "skills/sdr/follow-up-sequencer.md"
+    },
+    {
+      "id": "sdr/icp-scoring",
+      "category": "sdr",
+      "lang": "en",
+      "title": "ICP Scoring",
+      "description": "",
+      "file": "skills/sdr/icp-scoring.md"
+    },
+    {
+      "id": "sdr/linkedin-sdr",
+      "category": "sdr",
+      "lang": "en",
+      "title": "LinkedIn SDR",
+      "description": "",
+      "file": "skills/sdr/linkedin-sdr.md"
+    },
+    {
+      "id": "sdr/messaging-frameworks",
+      "category": "sdr",
+      "lang": "en",
+      "title": "Messaging Frameworks",
+      "description": "",
+      "file": "skills/sdr/messaging-frameworks.md"
+    },
+    {
+      "id": "sdr/objection-handling",
+      "category": "sdr",
+      "lang": "en",
+      "title": "Objection Handling",
+      "description": "",
+      "file": "skills/sdr/objection-handling.md"
+    },
+    {
+      "id": "sdr/outreach-categories",
+      "category": "sdr",
+      "lang": "en",
+      "title": "Outreach Categories",
+      "description": "",
+      "file": "skills/sdr/outreach-categories.md"
+    },
+    {
+      "id": "sdr/personalization-buckets",
+      "category": "sdr",
+      "lang": "en",
+      "title": "Personalization Buckets",
+      "description": "",
+      "file": "skills/sdr/personalization-buckets.md"
+    },
+    {
+      "id": "sdr/prospect-research",
+      "category": "sdr",
+      "lang": "en",
+      "title": "Prospect Research",
+      "description": "",
+      "file": "skills/sdr/prospect-research.md"
+    },
+    {
+      "id": "sdr/qualification-meddpicc",
+      "category": "sdr",
+      "lang": "en",
+      "title": "MEDDPICC Qualification",
+      "description": "",
+      "file": "skills/sdr/qualification-meddpicc.md"
+    },
+    {
+      "id": "sdr/reply-classification",
+      "category": "sdr",
+      "lang": "en",
+      "title": "Reply Classification",
+      "description": "",
+      "file": "skills/sdr/reply-classification.md"
+    },
+    {
+      "id": "sdr/sdr-master-prompt",
+      "category": "sdr",
+      "lang": "en",
+      "title": "SDR Master Prompt",
+      "description": "",
+      "file": "skills/sdr/sdr-master-prompt.md"
     }
   ],
   "agents": [
@@ -11441,6 +11009,30 @@
       "file": "agents/roles/workflow-orchestrator.md"
     },
     {
+      "id": "sdr/sdr-copywriter",
+      "lang": "en",
+      "title": "SDR Copywriter",
+      "file": "agents/sdr/sdr-copywriter.md"
+    },
+    {
+      "id": "sdr/sdr-prospector",
+      "lang": "en",
+      "title": "SDR Prospector",
+      "file": "agents/sdr/sdr-prospector.md"
+    },
+    {
+      "id": "sdr/sdr-qualifier",
+      "lang": "en",
+      "title": "SDR Qualifier",
+      "file": "agents/sdr/sdr-qualifier.md"
+    },
+    {
+      "id": "sdr/sdr-researcher",
+      "lang": "en",
+      "title": "SDR Researcher",
+      "file": "agents/sdr/sdr-researcher.md"
+    },
+    {
       "id": "specialists/brand-system-builder",
       "lang": "en",
       "title": "Brand System Builder",
@@ -13409,10 +13001,22 @@
       "file": "workflows/rpi-feature.md"
     },
     {
+      "id": "sdr-daily-workflow",
+      "lang": "en",
+      "title": "SDR Daily Workflow",
+      "file": "workflows/sdr-daily-workflow.md"
+    },
+    {
       "id": "sdr-daily",
       "lang": "en",
       "title": "SDR Daily Workflow",
       "file": "workflows/sdr-daily.md"
+    },
+    {
+      "id": "sdr-sequence-builder",
+      "lang": "en",
+      "title": "SDR Sequence Builder",
+      "file": "workflows/sdr-sequence-builder.md"
     },
     {
       "id": "security-review",
@@ -17453,11 +17057,11 @@
     }
   ],
   "summary": {
-    "skills": 221,
-    "agents": 100,
+    "skills": 239,
+    "agents": 104,
     "hooks": 87,
     "rules": 12,
-    "workflows": 43,
+    "workflows": 45,
     "prompts": 31,
     "guides": 89,
     "structures": 82,

@@ -6,7 +6,7 @@ const path = require('path')
 
 const ROOT = path.resolve(__dirname, '..')
 const LANGS = ['fr', 'de', 'nl', 'es']
-const SKILL_CATEGORIES = ['backend', 'devops-infra', 'data-ml', 'database', 'finance-payments', 'ai-engineering', 'productivity', 'gtm']
+const SKILL_CATEGORIES = ['backend', 'devops-infra', 'data-ml', 'database', 'finance-payments', 'ai-engineering', 'productivity', 'gtm', 'sdr']
 
 function getFiles(dir, ext = '.md') {
   const results = []
