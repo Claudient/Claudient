@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "claudient-small-business",
+  "displayName": "Claudient — Small Business",
+  "version": "1.0.0",
+  "description": "47 skills for small business operations: cash flow forecasting, invoicing, campaign briefs, QuickBooks workflows, Shopify operations, SOP writing, job descriptions, and weekly business pulse.",
+  "author": {
+    "name": "tushar2704",
+    "email": "ceo@uitbreiden.com",
+    "url": "https://uitbreiden.com"
+  },
+  "homepage": "https://github.com/Claudient/Claudient",
+  "repository": "https://github.com/Claudient/Claudient",
+  "license": "CC-BY-SA-4.0",
+  "keywords": [
+    "claudient",
+    "claude-code",
+    "small-business",
+    "operations",
+    "cash-flow",
+    "shopify",
+    "quickbooks",
+    "invoicing"
+  ],
+  "skills": [
+    "./skills/"
+  ],
+  "agents": [
+    "./agents/brand-system-builder.md",
+    "./agents/ecommerce-specialist.md",
+    "./agents/local-services-specialist.md",
+    "./agents/performance-auditor.md",
+    "./agents/small-business-advisor.md",
+    "./agents/vision-analyst.md"
+  ]
+}

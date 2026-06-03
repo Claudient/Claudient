@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "model": "claude-haiku-4-5",
+  "permissions": {
+    "defaultMode": "ask",
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(ls *)",
+      "Read(./*)",
+      "Write(./src/*)",
+      "Edit(./src/*)"
+    ],
+    "ask": [],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(~/.ssh/*)",
+      "Read(~/.aws/*)"
+    ]
+  },
+  "sandbox": {
+    "enabled": false
+  }
+}

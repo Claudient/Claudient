@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "claudient-automation",
+  "displayName": "Claudient — Automation",
+  "version": "1.0.0",
+  "description": "Browser automation, Playwright, SaaS scaffolding, spec-to-repo generation, IoT, embedded systems, game dev, and office document automation.",
+  "author": {
+    "name": "tushar2704",
+    "email": "ceo@uitbreiden.com",
+    "url": "https://uitbreiden.com"
+  },
+  "homepage": "https://github.com/Claudient/Claudient",
+  "repository": "https://github.com/Claudient/Claudient",
+  "license": "CC-BY-SA-4.0",
+  "keywords": [
+    "claudient",
+    "claude-code",
+    "playwright",
+    "browser-automation",
+    "saas",
+    "iot",
+    "embedded",
+    "game-dev"
+  ],
+  "skills": [
+    "./skills/"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "name": "claudient",
-  "version": "1.9.1",
-  "description": "The Claude Code knowledge system — 300+ skills, 99+ agents, 63 guides, 50 project structures, 31 MCP configs, and workflows in 5 languages. One-stop shop for every professional role and project type.",
+  "version": "1.10.0",
+  "description": "The Claude Code knowledge system — installable plugin marketplace with 377+ skills, 104 agents, 117 hooks, 89 guides, 82 structures, 157 MCP configs, output styles, themes, statuslines, keybindings, settings templates, routines, and an Agent SDK pack in 5 languages.",
   "keywords": [
     "claude-code",
     "claude",
@@ -46,6 +46,14 @@
     "mcp/",
     "guides/",
     "structures/",
+    "plugins/",
+    "output-styles/",
+    "statuslines/",
+    "themes/",
+    "keybindings/",
+    "settings-templates/",
+    "routines/",
+    "examples/",
     ".claude-plugin/",
     "CONTEXT.md",
     "README.md",
@@ -57,6 +65,7 @@
   "scripts": {
     "list": "node scripts/cli.js list",
     "build-index": "node scripts/build-index.js",
+    "build-plugins": "node scripts/build-plugins.js",
     "add-frontmatter": "node scripts/add-frontmatter.js"
   }
 }

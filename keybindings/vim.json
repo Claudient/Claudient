@@ -1,0 +1,48 @@
+{
+  "$schema": "https://www.schemastore.org/claude-code-keybindings.json",
+  "bindings": [
+    {
+      "context": "Scroll",
+      "bindings": {
+        "j": "scroll:lineDown",
+        "k": "scroll:lineUp",
+        "g": "scroll:top",
+        "G": "scroll:bottom",
+        "ctrl+f": "scroll:pageDown",
+        "ctrl+b": "scroll:pageUp",
+        "ctrl+d": null,
+        "ctrl+u": "scroll:pageUp"
+      }
+    },
+    {
+      "context": "Chat",
+      "bindings": {
+        "ctrl+[": "chat:cancel",
+        "ctrl+l": "chat:clearInput",
+        "ctrl+p": "chat:cycleMode"
+      }
+    },
+    {
+      "context": "Confirmation",
+      "bindings": {
+        "y": "confirmation:confirm",
+        "n": "confirmation:deny"
+      }
+    },
+    {
+      "context": "Global",
+      "bindings": {
+        "ctrl+t": "app:toggleTodos",
+        "ctrl+\\": "app:toggleTranscript"
+      }
+    },
+    {
+      "context": "HistorySearch",
+      "bindings": {
+        "ctrl+p": "historySearch:up",
+        "ctrl+n": "historySearch:down",
+        "ctrl+[": "historySearch:cancel"
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "claudient-legal",
+  "displayName": "Claudient — Legal",
+  "version": "1.0.0",
+  "description": "Contract review, NDA analysis, GDPR compliance, SOC 2, ISO 27001, IP clearance, EU AI Act, legal research (CourtListener, Thomson Reuters), DSAR response, and diligence review.",
+  "author": {
+    "name": "tushar2704",
+    "email": "ceo@uitbreiden.com",
+    "url": "https://uitbreiden.com"
+  },
+  "homepage": "https://github.com/Claudient/Claudient",
+  "repository": "https://github.com/Claudient/Claudient",
+  "license": "CC-BY-SA-4.0",
+  "keywords": [
+    "claudient",
+    "claude-code",
+    "legal",
+    "contract-review",
+    "gdpr",
+    "compliance",
+    "ip",
+    "privacy"
+  ],
+  "skills": [
+    "./skills/"
+  ]
+}

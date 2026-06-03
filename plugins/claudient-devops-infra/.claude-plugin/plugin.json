@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "claudient-devops-infra",
+  "displayName": "Claudient — DevOps & Infrastructure",
+  "version": "1.0.0",
+  "description": "36 skills covering AWS, Azure, GCP, Kubernetes, Helm, Terraform, Pulumi, ArgoCD, Docker, CI/CD, GitHub Actions, secrets management, observability, SLOs, and platform engineering.",
+  "author": {
+    "name": "tushar2704",
+    "email": "ceo@uitbreiden.com",
+    "url": "https://uitbreiden.com"
+  },
+  "homepage": "https://github.com/Claudient/Claudient",
+  "repository": "https://github.com/Claudient/Claudient",
+  "license": "CC-BY-SA-4.0",
+  "keywords": [
+    "claudient",
+    "claude-code",
+    "kubernetes",
+    "terraform",
+    "aws",
+    "docker",
+    "cicd",
+    "github-actions",
+    "observability",
+    "platform-engineering"
+  ],
+  "skills": [
+    "./skills/"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://www.schemastore.org/claude-code-keybindings.json",
+  "bindings": [
+    {
+      "context": "Chat",
+      "bindings": {
+        "ctrl+g": "chat:cancel",
+        "ctrl+x ctrl+e": "chat:externalEditor",
+        "ctrl+/": "chat:undo",
+        "ctrl+k": "chat:clearInput",
+        "alt+m": "chat:cycleMode",
+        "ctrl+x m": "chat:modelPicker",
+        "ctrl+x f": "chat:fastMode",
+        "ctrl+x t": "chat:thinkingToggle"
+      }
+    },
+    {
+      "context": "Scroll",
+      "bindings": {
+        "ctrl+n": "scroll:lineDown",
+        "ctrl+p": "scroll:lineUp",
+        "alt+<": "scroll:top",
+        "alt+>": "scroll:bottom",
+        "ctrl+v": "scroll:pageDown",
+        "alt+v": "scroll:pageUp"
+      }
+    },
+    {
+      "context": "Global",
+      "bindings": {
+        "ctrl+x ctrl+t": "app:toggleTodos",
+        "ctrl+x ctrl+r": "app:toggleTranscript",
+        "ctrl+x ctrl+z": "app:interrupt"
+      }
+    },
+    {
+      "context": "HistorySearch",
+      "bindings": {
+        "ctrl+p": "historySearch:up",
+        "ctrl+n": "historySearch:down",
+        "ctrl+g": "historySearch:cancel"
+      }
+    },
+    {
+      "context": "Autocomplete",
+      "bindings": {
+        "ctrl+n": "autocomplete:down",
+        "ctrl+p": "autocomplete:up",
+        "ctrl+g": "autocomplete:cancel"
+      }
+    },
+    {
+      "context": "ModelPicker",
+      "bindings": {
+        "ctrl+n": "modelPicker:down",
+        "ctrl+p": "modelPicker:up",
+        "ctrl+g": "modelPicker:cancel"
+      }
+    }
+  ]
+}

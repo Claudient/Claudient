@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "model": "claude-sonnet-4-5",
+  "effortLevel": "high",
+  "theme": "dark",
+  "cleanupPeriodDays": 7,
+  "permissions": {
+    "defaultMode": "plan",
+    "allow": [
+      "Bash(npm run lint)",
+      "Bash(npm run test)",
+      "Bash(npm run typecheck)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git branch)",
+      "Bash(ls *)",
+      "Bash(find . -name *)",
+      "Bash(grep -r *)",
+      "Read(./src/*)",
+      "Read(./tests/*)",
+      "Read(./docs/*)",
+      "Read(./package.json)",
+      "Read(./tsconfig.json)",
+      "Read(./.eslintrc*)",
+      "Write(./src/*)",
+      "Write(./tests/*)",
+      "Edit(./src/*)",
+      "Edit(./tests/*)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "WebFetch(domain:developer.mozilla.org)",
+      "WebFetch(domain:docs.npmjs.com)"
+    ],
+    "ask": [
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git checkout *)",
+      "Bash(git merge *)",
+      "Bash(npm install *)",
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "WebFetch(*)"
+    ],
+    "deny": [
+      "Read(~/.ssh/*)",
+      "Read(~/.aws/*)",
+      "Read(~/.gnupg/*)",
+      "Read(~/.config/gcloud/*)",
+      "Read(~/.kube/*)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(~/.npmrc)",
+      "Read(~/.gitconfig)",
+      "Write(~/*)",
+      "Bash(sudo *)",
+      "Bash(su *)",
+      "Bash(chmod 777 *)",
+      "Bash(curl * | bash)",
+      "Bash(wget * | bash)",
+      "Bash(eval *)",
+      "Bash(git push --force *)",
+      "Bash(git push -f *)",
+      "Bash(npm publish *)",
+      "Bash(npx * --yes)",
+      "Bash(rm -rf /*)",
+      "Bash(dd *)",
+      "Bash(kill *)",
+      "Bash(pkill *)"
+    ]
+  },
+  "env": {},
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"[security-audit] BASH | $(date -u +%Y-%m-%dT%H:%M:%SZ) | $TOOL_INPUT\" >> ~/.claude/security-audit.log"
+          }
+        ]
+      },
+      {
+        "matcher": "WebFetch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"[security-audit] WEBFETCH | $(date -u +%Y-%m-%dT%H:%M:%SZ) | $TOOL_INPUT\" >> ~/.claude/security-audit.log"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "enabled": true
+  },
+  "sandbox": {
+    "enabled": true,
+    "filesystem": {
+      "allowRead": [
+        "./src",
+        "./tests",
+        "./docs",
+        "./package.json",
+        "./tsconfig.json"
+      ],
+      "allowWrite": [
+        "./src",
+        "./tests"
+      ],
+      "denyRead": [
+        "~/.ssh",
+        "~/.aws",
+        "~/.gnupg",
+        "~/.kube",
+        "~/.config/gcloud"
+      ]
+    },
+    "network": {
+      "allowedDomains": [
+        "docs.anthropic.com",
+        "developer.mozilla.org",
+        "docs.npmjs.com"
+      ]
+    }
+  }
+}

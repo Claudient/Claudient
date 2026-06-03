@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "claudient-product",
+  "displayName": "Claudient — Product",
+  "version": "1.0.0",
+  "description": "Product discovery, roadmapping, PRD writing, competitive teardowns, UX research, product analytics, experiment design, and landing page generation.",
+  "author": {
+    "name": "tushar2704",
+    "email": "ceo@uitbreiden.com",
+    "url": "https://uitbreiden.com"
+  },
+  "homepage": "https://github.com/Claudient/Claudient",
+  "repository": "https://github.com/Claudient/Claudient",
+  "license": "CC-BY-SA-4.0",
+  "keywords": [
+    "claudient",
+    "claude-code",
+    "product-management",
+    "prd",
+    "roadmap",
+    "ux-research",
+    "product-analytics",
+    "a-b-testing"
+  ],
+  "skills": [
+    "./skills/"
+  ]
+}

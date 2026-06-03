@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "claudient-finance",
+  "displayName": "Claudient — Finance",
+  "version": "1.0.0",
+  "description": "DCF models, 3-statement financial models, comps analysis, deal screening, IC memos, KYC/AML, pitch decks, earnings analysis, GL reconciliation, and financial planning.",
+  "author": {
+    "name": "tushar2704",
+    "email": "ceo@uitbreiden.com",
+    "url": "https://uitbreiden.com"
+  },
+  "homepage": "https://github.com/Claudient/Claudient",
+  "repository": "https://github.com/Claudient/Claudient",
+  "license": "CC-BY-SA-4.0",
+  "keywords": [
+    "claudient",
+    "claude-code",
+    "dcf",
+    "finance",
+    "investment",
+    "kyc",
+    "aml",
+    "pitch-deck",
+    "financial-modeling"
+  ],
+  "skills": [
+    "./skills/"
+  ]
+}

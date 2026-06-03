@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "claudient-backend",
+  "displayName": "Claudient — Backend & Fullstack",
+  "version": "1.0.0",
+  "description": "41 framework-specific skills covering Python (FastAPI, Django), Node.js (Next.js, NestJS, Hono, tRPC), Go, Rust, Ruby on Rails, Java Spring Boot, Elixir, Flutter, Swift, Kotlin, .NET, and PHP Laravel.",
+  "author": {
+    "name": "tushar2704",
+    "email": "ceo@uitbreiden.com",
+    "url": "https://uitbreiden.com"
+  },
+  "homepage": "https://github.com/Claudient/Claudient",
+  "repository": "https://github.com/Claudient/Claudient",
+  "license": "CC-BY-SA-4.0",
+  "keywords": [
+    "claudient",
+    "claude-code",
+    "fastapi",
+    "nextjs",
+    "react",
+    "golang",
+    "rust",
+    "django",
+    "rails",
+    "spring-boot",
+    "flutter",
+    "swift",
+    "kotlin"
+  ],
+  "skills": [
+    "./skills/"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "claudient-ai-engineering",
+  "displayName": "Claudient — AI Engineering",
+  "version": "1.0.0",
+  "description": "Claude API, agent construction, RAG, LangGraph, CrewAI, MCP server building, prompt caching, LLM eval, and AI-native development patterns.",
+  "author": {
+    "name": "tushar2704",
+    "email": "ceo@uitbreiden.com",
+    "url": "https://uitbreiden.com"
+  },
+  "homepage": "https://github.com/Claudient/Claudient",
+  "repository": "https://github.com/Claudient/Claudient",
+  "license": "CC-BY-SA-4.0",
+  "keywords": [
+    "claudient",
+    "claude-code",
+    "claude-api",
+    "agents",
+    "rag",
+    "langgraph",
+    "mcp",
+    "prompt-engineering",
+    "llm"
+  ],
+  "skills": [
+    "./skills/"
+  ]
+}

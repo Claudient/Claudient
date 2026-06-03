@@ -5,8 +5,9 @@
 [![GitHub Stars](https://img.shields.io/github/stars/Claudient/Claudient?color=f97316&label=stars)](https://github.com/Claudient/Claudient)
 [![License: AGPL-3.0](https://img.shields.io/badge/code-AGPL--3.0-3b82f6.svg)](LICENSE-CODE)
 [![Content License: CC-BY-SA-4.0](https://img.shields.io/badge/content-CC--BY--SA--4.0-ec4899.svg)](LICENSE-CONTENT)
-[![Skills](https://img.shields.io/badge/skills-295+-f97316)](#skills-by-category)
-[![Agents](https://img.shields.io/badge/agents-99+-ec4899)](#agents)
+[![Skills](https://img.shields.io/badge/skills-380+-f97316)](#skills-by-category)
+[![Agents](https://img.shields.io/badge/agents-104+-ec4899)](#agents)
+[![Plugins](https://img.shields.io/badge/plugin_marketplace-17_plugins-22c55e)](#install-as-a-claude-code-plugin)
 [![Claude for Small Business](https://img.shields.io/badge/small_business-30+_skills-06b6d4)](#-claude-for-small-business)
 [![MCP](https://img.shields.io/badge/MCP_configs-31+-8b5cf6)](#top-100-mcp-servers)
 [![Languages](https://img.shields.io/badge/languages-EN%20FR%20DE%20NL%20ES-3b82f6)](#translations)
@@ -15,9 +16,14 @@
 
 **Stop explaining your stack to Claude every session.**
 
-Claudient is the largest open-source knowledge base for **Claude Code** — 295+ skills, 99+ specialist agents, 31 MCP server configs, 64 guides, 31 hooks, and 23 workflows, all installable in 30 seconds. Skills activate automatically based on what you're working on. Agents spawn when their expertise is needed. Hooks run on the right events. Works with any Claude Code project, in 5 languages. Including the most complete community knowledge base for **Claude for Small Business** — 30+ vertical and operator skills for solopreneurs, ecommerce, local services, coaches, and creators.
+Claudient is the largest open-source knowledge base for **Claude Code** — 380+ skills, 104+ specialist agents, 157 MCP server configs, 89 guides, 96 hooks, 45 workflows, 82 project structures, plus output styles, themes, statuslines, keybindings, settings templates, routines, and an Agent SDK pack — all installable in 30 seconds. Skills activate automatically based on what you're working on. Agents spawn when their expertise is needed. Hooks run on the right events. Works with any Claude Code project, in 5 languages. Including the most complete community knowledge base for **Claude for Small Business** — 30+ vertical and operator skills for solopreneurs, ecommerce, local services, coaches, and creators.
 
 ```bash
+# Install as a Claude Code plugin marketplace (recommended)
+/plugin marketplace add Claudient/Claudient
+/plugin install claudient-everything@claudient
+
+# Or via npm
 npx claudient add all
 ```
 
@@ -25,6 +31,56 @@ npx claudient add all
 
 
 
+
+---
+
+## Install as a Claude Code plugin
+
+Claudient ships as a native Claude Code **plugin marketplace**. Add it once, then install only the domains you need — skills auto-invoke based on what you're working on, agents and hooks come bundled.
+
+```bash
+# 1. Add the marketplace
+/plugin marketplace add Claudient/Claudient
+
+# 2. Install a domain plugin (or the everything bundle)
+/plugin install claudient-gtm@claudient
+/plugin install claudient-devops-infra@claudient
+/plugin install claudient-everything@claudient
+```
+
+**17 plugins, 380+ auto-invoking skills, 104 agents:**
+
+| Plugin | Skills | Plugin | Skills |
+|---|---|---|---|
+| `claudient-productivity` | 66 | `claudient-finance` | 16 |
+| `claudient-small-business` | 47 | `claudient-data-ml` | 15 |
+| `claudient-backend` | 41 | `claudient-product` | 15 |
+| `claudient-devops-infra` | 36 | `claudient-automation` | 14 |
+| `claudient-gtm` | 32 | `claudient-database` | 12 |
+| `claudient-marketing` | 22 | `claudient-git` | 3 |
+| `claudient-legal` | 21 | `claudient-finance-payments` | 2 |
+| `claudient-sdr` | 18 | `claudient-everything` | meta-bundle |
+| `claudient-ai-engineering` | 17 | | |
+
+Every skill is validated with `claude plugin validate --strict`. Prefer npm? `npx claudient add all` still works.
+
+---
+
+## Beyond skills — the full Claude Code toolkit
+
+Claudient covers every primitive Claude Code supports, not just skills:
+
+| Category | What's inside | Install |
+|---|---|---|
+| **Output styles** | 8 styles — concise, mentor, code-reviewer, architect, plain-operator, security-paranoid, diagram-first, tdd-enforcer | copy to `~/.claude/output-styles/` |
+| **Themes** | 10 themes — Dracula, Nord, Tokyo Night, Catppuccin, Gruvbox, Solarized, Monokai, Rosé Pine, + Claudient brand | copy to `~/.claude/themes/`, then `/theme` |
+| **Statuslines** | 6 scripts — minimal, full, cost-watch, context-budget, git-focused, rate-limit | point `settings.json` `statusLine` at them |
+| **Keybindings** | 4 presets — vim, emacs, ergonomic, power-user | merge into `~/.claude/keybindings.json` |
+| **Settings templates** | 5 starters — solo-dev, team, security-hardened, enterprise, minimal | drop into `.claude/settings.json` |
+| **Hooks** | 96 across all 2026 events — including new `http`, `prompt`, and `agent` hook types | see [`hooks/`](hooks/) |
+| **Routines** | 4 scheduled cloud-agent templates — daily-standup, pr-triage, dependency-audit, incident-watch | see [`routines/`](routines/) |
+| **Computer-use skills** | 4 — ui-testing, visual-qa, legacy-app-automation, screenshot-verify | `/plugin install` or copy |
+| **Agent SDK pack** | Full guide + runnable Python & TypeScript starter agents | see [`examples/agent-sdk/`](examples/agent-sdk/) |
 
 ---
 

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "claudient-data-ml",
+  "displayName": "Claudient — Data & ML",
+  "version": "1.0.0",
+  "description": "Data pipelines, dbt, Apache Spark, Kafka, MLOps, MLflow, PyTorch, TensorFlow, NLP pipelines, pandas/polars, reinforcement learning, and synthetic data generation.",
+  "author": {
+    "name": "tushar2704",
+    "email": "ceo@uitbreiden.com",
+    "url": "https://uitbreiden.com"
+  },
+  "homepage": "https://github.com/Claudient/Claudient",
+  "repository": "https://github.com/Claudient/Claudient",
+  "license": "CC-BY-SA-4.0",
+  "keywords": [
+    "claudient",
+    "claude-code",
+    "dbt",
+    "spark",
+    "kafka",
+    "mlops",
+    "pytorch",
+    "tensorflow",
+    "pandas",
+    "nlp"
+  ],
+  "skills": [
+    "./skills/"
+  ]
+}

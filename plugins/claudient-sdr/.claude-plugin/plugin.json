@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "claudient-sdr",
+  "displayName": "Claudient — SDR",
+  "version": "1.0.0",
+  "description": "SDR-specific skills: cold call scripts, email sequences, ICP scoring, objection handling, LinkedIn SDR, MEDDPICC qualification, personalization, CRM hygiene, and prospect research.",
+  "author": {
+    "name": "tushar2704",
+    "email": "ceo@uitbreiden.com",
+    "url": "https://uitbreiden.com"
+  },
+  "homepage": "https://github.com/Claudient/Claudient",
+  "repository": "https://github.com/Claudient/Claudient",
+  "license": "CC-BY-SA-4.0",
+  "keywords": [
+    "claudient",
+    "claude-code",
+    "sdr",
+    "sales-development",
+    "cold-calling",
+    "prospecting",
+    "qualification",
+    "meddpicc"
+  ],
+  "skills": [
+    "./skills/"
+  ],
+  "agents": [
+    "./agents/sdr-copywriter.md",
+    "./agents/sdr-prospector.md",
+    "./agents/sdr-qualifier.md",
+    "./agents/sdr-researcher.md"
+  ]
+}

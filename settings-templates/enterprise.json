@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "model": "claude-haiku-4-5",
+  "effortLevel": "low",
+  "theme": "system",
+  "cleanupPeriodDays": 7,
+  "enabledPlugins": [
+    "code-review",
+    "security-review"
+  ],
+  "permissions": {
+    "defaultMode": "plan",
+    "allow": [
+      "Bash(npm run lint)",
+      "Bash(npm run test)",
+      "Bash(npm run build)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git branch)",
+      "Bash(git fetch)",
+      "Bash(ls *)",
+      "Bash(find . -name *)",
+      "Bash(grep -r *)",
+      "Read(./src/*)",
+      "Read(./tests/*)",
+      "Read(./docs/*)",
+      "Read(./package.json)",
+      "Read(./tsconfig.json)"
+    ],
+    "ask": [
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git checkout *)",
+      "Bash(git merge *)",
+      "Bash(git rebase *)",
+      "Bash(npm install *)",
+      "Bash(npm uninstall *)",
+      "Bash(docker *)",
+      "Bash(kubectl *)",
+      "Bash(terraform *)",
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Write(./*)",
+      "Edit(./*)",
+      "WebFetch(*)"
+    ],
+    "deny": [
+      "Read(~/.ssh/*)",
+      "Read(~/.aws/*)",
+      "Read(~/.gnupg/*)",
+      "Read(~/.kube/*)",
+      "Read(~/.config/gcloud/*)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(~/.npmrc)",
+      "Read(~/.gitconfig)",
+      "Write(~/*)",
+      "Bash(sudo *)",
+      "Bash(su *)",
+      "Bash(git push --force *)",
+      "Bash(git push -f *)",
+      "Bash(npm publish *)",
+      "Bash(rm -rf /*)",
+      "Bash(chmod 777 *)",
+      "Bash(curl * | bash)",
+      "Bash(wget * | bash)",
+      "Bash(eval *)",
+      "Bash(kill *)",
+      "Bash(pkill *)"
+    ]
+  },
+  "env": {
+    "CLAUDE_SPEND_LIMIT": "10",
+    "NODE_ENV": "production"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"{\\\"timestamp\\\": \\\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\\\", \\\"tool\\\": \\\"Bash\\\", \\\"user\\\": \\\"$USER\\\", \\\"input\\\": \\\"$TOOL_INPUT\\\"}\" >> ~/.claude/enterprise-audit.jsonl"
+          }
+        ]
+      },
+      {
+        "matcher": "WebFetch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"{\\\"timestamp\\\": \\\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\\\", \\\"tool\\\": \\\"WebFetch\\\", \\\"user\\\": \\\"$USER\\\", \\\"input\\\": \\\"$TOOL_INPUT\\\"}\" >> ~/.claude/enterprise-audit.jsonl"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"{\\\"timestamp\\\": \\\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\\\", \\\"event\\\": \\\"PostToolUse\\\", \\\"tool\\\": \\\"Bash\\\", \\\"user\\\": \\\"$USER\\\"}\" >> ~/.claude/enterprise-audit.jsonl"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"{\\\"timestamp\\\": \\\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\\\", \\\"event\\\": \\\"SessionStop\\\", \\\"user\\\": \\\"$USER\\\"}\" >> ~/.claude/enterprise-audit.jsonl"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "enabled": true
+  },
+  "sandbox": {
+    "enabled": true,
+    "filesystem": {
+      "allowRead": [
+        "./src",
+        "./tests",
+        "./docs",
+        "./package.json",
+        "./tsconfig.json",
+        "./Makefile"
+      ],
+      "allowWrite": [
+        "./src",
+        "./tests",
+        "./docs"
+      ],
+      "denyRead": [
+        "~/.ssh",
+        "~/.aws",
+        "~/.gnupg",
+        "~/.kube",
+        "~/.config/gcloud",
+        "~/.npmrc"
+      ]
+    },
+    "network": {
+      "allowedDomains": [
+        "docs.anthropic.com",
+        "api.anthropic.com",
+        "registry.npmjs.org",
+        "github.com"
+      ]
+    }
+  }
+}

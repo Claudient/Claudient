@@ -6,7 +6,7 @@ const path = require('path')
 
 const ROOT = path.resolve(__dirname, '..')
 const LANGS = ['fr', 'de', 'nl', 'es']
-const SKILL_CATEGORIES = ['backend', 'devops-infra', 'data-ml', 'database', 'finance-payments', 'ai-engineering', 'productivity', 'gtm', 'sdr']
+const SKILL_CATEGORIES = ['ai-engineering', 'automation', 'backend', 'computer-use', 'data-ml', 'database', 'devops-infra', 'finance', 'finance-payments', 'git', 'gtm', 'legal', 'marketing', 'product', 'productivity', 'sdr', 'small-business']
 
 function getFiles(dir, ext = '.md') {
   const results = []
@@ -80,6 +80,13 @@ const index = {
   prompts: [],
   guides: [],
   structures: [],
+  outputStyles: [],
+  statuslines: [],
+  themes: [],
+  keybindings: [],
+  settingsTemplates: [],
+  routines: [],
+  plugins: [],
 }
 
 // Skills
@@ -164,6 +171,62 @@ for (const file of getFiles(path.join(ROOT, 'structures'))) {
   index.structures.push({ id: slug, type, title: readTitle(file), tagline, file: rel })
 }
 
+// Output styles
+for (const file of getFiles(path.join(ROOT, 'output-styles'))) {
+  const rel = relPath(file)
+  if (path.basename(file) === 'README.md') continue
+  const fm = readFrontmatter(file)
+  index.outputStyles.push({ id: path.basename(file, '.md'), title: fm.name || readTitle(file), description: fm.description || '', file: rel })
+}
+
+// Statuslines
+for (const file of getFiles(path.join(ROOT, 'statuslines'), '.sh')) {
+  const rel = relPath(file)
+  index.statuslines.push({ id: path.basename(file, '.sh'), file: rel })
+}
+
+// Themes
+for (const file of getFiles(path.join(ROOT, 'themes'), '.json')) {
+  const rel = relPath(file)
+  let name = path.basename(file, '.json')
+  try { name = JSON.parse(fs.readFileSync(file, 'utf-8')).name || name } catch {}
+  index.themes.push({ id: path.basename(file, '.json'), title: name, file: rel })
+}
+
+// Keybindings
+for (const file of getFiles(path.join(ROOT, 'keybindings'), '.json')) {
+  const rel = relPath(file)
+  index.keybindings.push({ id: path.basename(file, '.json'), file: rel })
+}
+
+// Settings templates
+for (const file of getFiles(path.join(ROOT, 'settings-templates'), '.json')) {
+  const rel = relPath(file)
+  index.settingsTemplates.push({ id: path.basename(file, '.json'), file: rel })
+}
+
+// Routines
+for (const file of getFiles(path.join(ROOT, 'routines'))) {
+  const rel = relPath(file)
+  if (path.basename(file) === 'README.md') continue
+  index.routines.push({ id: path.basename(file, '.md'), title: readTitle(file), file: rel })
+}
+
+// Plugins (marketplace bundles)
+const pluginsDir = path.join(ROOT, 'plugins')
+if (fs.existsSync(pluginsDir)) {
+  for (const entry of fs.readdirSync(pluginsDir, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue
+    const manifestPath = path.join(pluginsDir, entry.name, '.claude-plugin', 'plugin.json')
+    if (!fs.existsSync(manifestPath)) continue
+    try {
+      const m = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'))
+      const skillCount = getFiles(path.join(pluginsDir, entry.name, 'skills'), 'SKILL.md').length
+      index.plugins.push({ id: m.name, displayName: m.displayName || m.name, description: m.description || '', version: m.version || '', skills: skillCount, file: relPath(manifestPath) })
+    } catch {}
+  }
+}
+
 // Summary counts (English only)
 const en = (arr) => arr.filter(i => i.lang === 'en' || !i.lang)
 index.summary = {
@@ -175,9 +238,16 @@ index.summary = {
   prompts: en(index.prompts).length,
   guides: en(index.guides).length,
   structures: index.structures.length,
+  outputStyles: index.outputStyles.length,
+  statuslines: index.statuslines.length,
+  themes: index.themes.length,
+  keybindings: index.keybindings.length,
+  settingsTemplates: index.settingsTemplates.length,
+  routines: index.routines.length,
+  plugins: index.plugins.length,
   languages: ['en', ...LANGS],
 }
 
 const outPath = path.join(ROOT, 'index.json')
 fs.writeFileSync(outPath, JSON.stringify(index, null, 2) + '\n')
-console.log(`Generated index.json — ${index.summary.skills} skills, ${index.summary.agents} agents, ${index.summary.hooks} hooks, ${index.summary.structures} structures`)
+console.log(`Generated index.json — ${index.summary.skills} skills, ${index.summary.agents} agents, ${index.summary.hooks} hooks, ${index.summary.structures} structures, ${index.summary.plugins} plugins, ${index.summary.themes} themes, ${index.summary.outputStyles} output-styles`)
