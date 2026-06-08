@@ -1,6 +1,6 @@
 {
   "version": "1.10.0",
-  "generated": "2026-06-08T15:39:35.645Z",
+  "generated": "2026-06-08T16:48:27.942Z",
   "skills": [
     {
       "id": "ai-engineering/advanced-tool-use",
@@ -20508,6 +20508,12 @@
       "file": "guides/agent-orchestration.md"
     },
     {
+      "id": "agent-sdk-deep-dive",
+      "lang": "en",
+      "title": "Claude Agent SDK Deep Dive — Mid-2026",
+      "file": "guides/agent-sdk-deep-dive.md"
+    },
+    {
       "id": "agent-sdk-pack",
       "lang": "en",
       "title": "Agent SDK Pack — Complete Developer Guide",
@@ -20524,6 +20530,12 @@
       "lang": "en",
       "title": "AGENTS.md Guide",
       "file": "guides/agents-md.md"
+    },
+    {
+      "id": "auto-mode-guide",
+      "lang": "en",
+      "title": "Claude Code Auto Mode — Deep Reference (March 2026, Stable)",
+      "file": "guides/auto-mode-guide.md"
     },
     {
       "id": "auto-mode",
@@ -20640,6 +20652,12 @@
       "file": "guides/cli-reference.md"
     },
     {
+      "id": "computer-use-guide",
+      "lang": "en",
+      "title": "Claude Code Computer Use — Comprehensive Guide",
+      "file": "guides/computer-use-guide.md"
+    },
+    {
       "id": "computer-use",
       "lang": "en",
       "title": "Computer Use in Claude Code",
@@ -20662,6 +20680,12 @@
       "lang": "en",
       "title": "Cost Optimisation Guide",
       "file": "guides/cost-optimisation.md"
+    },
+    {
+      "id": "cross-harness-guide",
+      "lang": "en",
+      "title": "Using Claudient Across AI Coding Tools",
+      "file": "guides/cross-harness-guide.md"
     },
     {
       "id": "cursor-codex-compatibility",
@@ -22476,6 +22500,12 @@
       "file": "guides/hooks-cookbook.md"
     },
     {
+      "id": "keybindings-guide",
+      "lang": "en",
+      "title": "Claude Code Keybindings — Comprehensive Customization Guide",
+      "file": "guides/keybindings-guide.md"
+    },
+    {
       "id": "legal-connectors",
       "lang": "en",
       "title": "Legal Data Connectors for Claude",
@@ -23070,6 +23100,12 @@
       "file": "guides/orchestration.md"
     },
     {
+      "id": "plugin-authoring-guide",
+      "lang": "en",
+      "title": "Authoring Claude Code Plugins (Mid-2026)",
+      "file": "guides/plugin-authoring-guide.md"
+    },
+    {
       "id": "plugin-authoring",
       "lang": "en",
       "title": "Authoring Claude Code Plugins",
@@ -23092,6 +23128,12 @@
       "lang": "en",
       "title": "RIPER — Structured Agentic Coding Framework",
       "file": "guides/riper-framework.md"
+    },
+    {
+      "id": "routines-guide",
+      "lang": "en",
+      "title": "Claude Code Routines (2026) — Cloud Agents on Schedule, GitHub Events, and API",
+      "file": "guides/routines-guide.md"
     },
     {
       "id": "routines",
@@ -23130,6 +23172,12 @@
       "file": "guides/skill-authoring.md"
     },
     {
+      "id": "skill-md-format-guide",
+      "lang": "en",
+      "title": "Definitive SKILL.md Format Guide — Mid-2026",
+      "file": "guides/skill-md-format-guide.md"
+    },
+    {
       "id": "skills-frontmatter",
       "lang": "en",
       "title": "Skills Frontmatter Reference",
@@ -23140,6 +23188,12 @@
       "lang": "en",
       "title": "Small Business ROI Guide — Claude for Small Business",
       "file": "guides/small-business-roi.md"
+    },
+    {
+      "id": "statusline-scripting-guide",
+      "lang": "en",
+      "title": "Claude Code Statusline Scripting — Mid-2026",
+      "file": "guides/statusline-scripting-guide.md"
     },
     {
       "id": "subagent-patterns",
@@ -23164,6 +23218,12 @@
       "lang": "en",
       "title": "Ultraplan — Deep Planning Mode",
       "file": "guides/ultraplan.md"
+    },
+    {
+      "id": "ultrareview",
+      "lang": "en",
+      "title": "Ultrareview — Fleet-Based Adversarial Code Review",
+      "file": "guides/ultrareview.md"
     },
     {
       "id": "vision-and-multimodal",
@@ -24875,7 +24935,7 @@
     "rules": 32,
     "workflows": 45,
     "prompts": 31,
-    "guides": 90,
+    "guides": 100,
     "structures": 82,
     "outputStyles": 8,
     "statuslines": 6,
