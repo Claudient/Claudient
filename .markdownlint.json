@@ -1,0 +1,13 @@
+{
+  "comment": "Claudient markdownlint config — tuned for skill/agent/hook markdown files",
+
+  "MD013": { "line_length": 500, "tables": false, "code_blocks": false },
+  "MD033": false,
+  "MD041": false,
+  "MD024": { "siblings_only": true },
+  "MD014": false,
+  "MD036": false,
+  "MD040": false,
+  "MD046": false,
+  "MD052": false
+}
