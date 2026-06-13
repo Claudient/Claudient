@@ -116,7 +116,7 @@ tracer = trace.get_tracer(__name__)
 with tracer.start_as_current_span("process_order") as span:
     span.set_attribute("order.id", order_id)
     span.set_attribute("order.value", order_value)
-    # business logic
+    # lógica de negocio
 ```
 
 **Logging estructurado**
@@ -136,26 +136,26 @@ with tracer.start_as_current_span("process_order") as span:
 ```
 
 - Siempre incluye `trace_id` y `span_id` para correlacionar con trazas
-- Log en campos estructurados, no en strings interpolados — permite filtrado sin regex
-- Niveles de log: ERROR (acción requerida), WARN (degradado, monitorear), INFO (eventos de negocio), DEBUG (solo desarrollo — nunca en prod)
+- Registra en campos estructurados, no en strings interpolados — permite filtrado sin regex
+- Niveles de log: ERROR (acción requerida), WARN (degradado, monitorear), INFO (eventos de negocio), DEBUG (solo dev — nunca en prod)
 
-**Reglas de grabación de Prometheus — preagregar consultas costosas**
+**Reglas de grabación de Prometheus — pre-agregar consultas costosas**
 
 ```promql
-# Regla de grabación: cachea agregación costosa
+# Regla de grabación: cachear agregación costosa
 record: job:http_requests:rate5m
 expr: sum(rate(http_requests_total[5m])) by (job)
 
-# Usa en alerta en lugar de recomputar
+# Usar en alerta en lugar de recomputar
 alert: HighErrorRate
 expr: job:http_requests_errors:rate5m / job:http_requests:rate5m > 0.01
 ```
 
 **Control de cardinalidad**
 
-- Cada combinación única de etiqueta es una serie temporal; alta cardinalidad explota almacenamiento
-- Nunca uses ID de usuario, ID de solicitud o strings no acotados como etiquetas de Prometheus
-- Usa `topk()` + reglas de grabación para rastrear datos de alta cardinalidad en Prometheus de forma eficiente
+- Cada combinación única de etiquetas es una serie temporal; alta cardinalidad explota el almacenamiento
+- Nunca uses ID de usuario, ID de solicitud o strings sin límites como etiquetas de Prometheus
+- Usa `topk()` + reglas de grabación para rastrear datos de alta cardinalidad en Prometheus de manera eficiente
 - Enruta datos de alta cardinalidad a logs, no a métricas
 
 **Enrutamiento de alertas**
@@ -175,17 +175,17 @@ route:
     repeat_interval: 24h
 ```
 
-## Ejemplo de caso de uso
+## Caso de uso de ejemplo
 
 Observabilidad para un microservicio de pagos:
 
-- Auto-instrumentación SDK de OpenTelemetry para HTTP y spans de DB; spans manuales para `process_payment` con atributos `payment.gateway` y `payment.amount`
-- Prometheus rasguña el recolector OTLP; métricas RED para el servicio de pagos con objetivo SLO 99.95% en 28 días
+- Auto-instrumentación del SDK de OpenTelemetry para spans de HTTP y DB; spans manuales para `process_payment` con atributos `payment.gateway` y `payment.amount`
+- Prometheus raspea el recopilador OTLP; métricas RED para el servicio de pagos con objetivo SLO 99,95% durante 28 días
 - Loki agrega logs estructurados; consulta LogQL `{service="payments"} | json | level="ERROR"` usada en alerta de Grafana
-- Trace exemplars en el histograma de latencia vinculan outliers p99 directamente a IDs de traza de Tempo
-- Alerta de tasa de consumo avisa al equipo de guardia cuando 2% del presupuesto de errores se consume en 1 hora; dashboard SLO de Grafana muestra presupuesto restante
+- Exemplars de traza en el histograma de latencia vinculan outliers p99 directamente a IDs de traza de Tempo
+- Alerta de burn-rate pagina on-call cuando se consume 2% del presupuesto de error en 1 hora; dashboard SLO de Grafana muestra presupuesto restante
 
 ---
 
-
-📺 **[Subscribe to our YouTube Channel for more deep dives](https://www.youtube.com/channel/UCcvK8pHyqeR7Q_0lYkuHlUg)**
+🔗 **[Uitbreiden — construyendo productos AI y herramientas B2B con comunidades de desarrolladores.](https://uitbreiden.com/)**
+📺 **[Suscríbete a nuestro Canal de YouTube para más análisis profundos](https://www.youtube.com/channel/UCcvK8pHyqeR7Q_0lYkuHlUg)**

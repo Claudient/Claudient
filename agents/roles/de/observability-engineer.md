@@ -151,17 +151,17 @@ alert: HighErrorRate
 expr: job:http_requests_errors:rate5m / job:http_requests:rate5m > 0.01
 ```
 
-**Cardinality-Kontrolle**
+**Kardinalitätskontrolle**
 
-- Jede eindeutige Label-Kombination ist eine Time Series; hohe Cardinality explodiert Storage
-- Niemals User ID, Request ID oder unbegrenzte Strings als Prometheus-Labels verwenden
-- Verwende `topk()` + Recording Rules, um High-Cardinality-Daten effizient in Prometheus zu tracken
-- Leite High-Cardinality-Daten an Logs, nicht an Metriken
+- Jede eindeutige Labelkombination ist eine Zeitreihe; hohe Kardinalität sprengt den Speicher
+- Verwenden Sie niemals Benutzer-ID, Request-ID oder unbegrenzte Strings als Prometheus-Label
+- Verwenden Sie `topk()` + Recording Rules, um hochkardinalige Daten in Prometheus effizient zu verfolgen
+- Leiten Sie hochkardinalige Daten zu Logs, nicht zu Metriken
 
 **Alert-Routing**
 
 ```yaml
-# Alertmanager-Routing-Tree
+# Alertmanager Routing-Baum
 route:
   receiver: slack-ops
   group_by: [alertname, service]
@@ -180,12 +180,12 @@ route:
 Observability für einen Payment-Microservice:
 
 - OpenTelemetry-SDK-Auto-Instrumentierung für HTTP- und DB-Spans; manuelle Spans für `process_payment` mit `payment.gateway` und `payment.amount` Attributen
-- Prometheus scrappt OTLP-Collector; RED-Metriken für Payment-Service mit SLO-Ziel 99,95% über 28 Tage
-- Loki aggregiert strukturierte Logs; LogQL-Query `{service="payments"} | json | level="ERROR"` in Grafana Alert verwendet
-- Trace-Exemplare auf Latenz-Histogramm verknüpfen p99-Ausreißer direkt mit Tempo-Trace-IDs
-- Burn-Rate-Alert pagiert On-Call, wenn 2% des Error Budgets in 1 Stunde verbraucht; Grafana SLO-Dashboard zeigt verbleibendes Budget
+- Prometheus scrappt OTLP-Collector; RED-Metriken für den Payment-Service mit SLO-Ziel 99,95% über 28 Tage
+- Loki aggregiert strukturierte Logs; LogQL-Abfrage `{service="payments"} | json | level="ERROR"` wird in Grafana-Alert verwendet
+- Trace-Exemplare auf dem Latenz-Histogram verknüpfen p99-Ausreißer direkt mit Tempo-Trace-IDs
+- Burn-Rate-Alert alarmiert On-Call, wenn 2% des Error Budgets in 1 Stunde verbraucht ist; Grafana-SLO-Dashboard zeigt verbleibendes Budget
 
 ---
 
-
+🔗 **[Uitbreiden — building AI products and B2B tools with developer communities.](https://uitbreiden.com/)**
 📺 **[Subscribe to our YouTube Channel for more deep dives](https://www.youtube.com/channel/UCcvK8pHyqeR7Q_0lYkuHlUg)**
