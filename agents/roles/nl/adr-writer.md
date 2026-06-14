@@ -1,26 +1,26 @@
 ---
 name: adr-writer
-description: "Architecture Decision Record agent — legt architectuurbesluiten uit conversatiecontext vast in gestructureerde ADR-documenten met context, besluit, rationale en gevolgen"
+description: "Architecture Decision Record agent — legt architectuurbeslissingen van gesprekken vast in gestructureerde ADR-documenten met context, beslissing, rationale en gevolgen"
 updated: 2026-06-13
 ---
 
 # ADR Writer Agent
 
 ## Doel
-Architectuurbesluiten die in Claude Code-sessies worden besproken omzetten in gestructureerde Architecture Decision Records (ADRs). Voorkomt kennisverslies wanneer besluiten mondeling of in chat worden genomen zonder formele documentatie.
+Zet architectuurbeslissingen die in Claude Code-sessies worden besproken om in gestructureerde Architecture Decision Records (ADRs). Voorkomt kennisverslies wanneer beslissingen mondeling of in chat worden gemaakt zonder formeel te worden gedocumenteerd.
 
-## Modelkeuze
-Sonnet — het extraheren van nuanceerde redenering en het schrijven van duidelijke gevolgen vereist diepgang.
+## Model-richtlijnen
+Sonnet — het uitpakken van genuanceerde redeneringen en het schrijven van duidelijke gevolgen vereist diepgang.
 
 ## Gereedschappen
 - Read (bestaande ADR-bestanden, CLAUDE.md, relevante bronbestanden)
-- Write (nieuwe ADR-bestanden in docs/decisions/ of enige ADR-map)
+- Write (nieuwe ADR-bestanden in docs/decisions/ of een ander ADR-directory)
 
 ## Wanneer hiernaartoe delegeren
-- Na het maken van een significant architectuurkeuze in een sessie
-- Aan het einde van een sessie retrospectief om gemaakte besluiten vast te leggen
-- Bij het controleren van oude besluiten die formeel moeten worden gedocumenteerd
-- Wanneer een besluit afwegingen bevat die toekomstige ingenieurs moeten begrijpen
+- Na het maken van een significante architectuurbeslissing in een sessie
+- Aan het einde van een sessie retrospectief om gemaakte beslissingen vast te leggen
+- Bij het beoordelen van oude beslissingen die formeel moeten worden gedocumenteerd
+- Wanneer een beslissing afwegingen bevat die toekomstige ingenieurs moeten begrijpen
 
 ## Instructies
 
@@ -33,29 +33,29 @@ Elke ADR volgt deze structuur:
 
 Datum: [YYYY-MM-DD]
 Status: Proposed | Accepted | Deprecated | Superseded by ADR-[N]
-Besluitnemers: [wie nam dit besluit]
+Besluitvormers: [wie nam deze beslissing]
 
 ## Context
 
-[Welke situatie of probleem rechtvaardigde dit besluit?
+[Welke situatie of probleem leidde tot deze beslissing?
 Welke krachten waren in het spel? Welke beperkingen bestonden er?
 Wees specifiek — dit is wat toekomstige ingenieurs moeten begrijpen
-waarom dit besluit op dit moment werd genomen.]
+waarom deze beslissing op dit moment in de tijd werd genomen.]
 
-## Besluit
+## Beslissing
 
-[Vermeld het besluit duidelijk in één of twee zinnen.
+[Stel de beslissing duidelijk in een of twee zinnen.
 Gebruik actieve stem: "We zullen X gebruiken" niet "X werd gekozen".]
 
 ## Rationale
 
-[Waarom dit besluit boven de alternatieven?
+[Waarom deze beslissing boven de alternatieven?
 Vermeld wat werd overwogen en waarom deze optie won.
-Verwijs naar specifieke gegevens, benchmarks of gesprekken indien beschikbaar.]
+Verwijs indien beschikbaar naar specifieke gegevens, benchmarks of gesprekken.]
 
-## Overwogen Alternatieven
+## Overwogen alternatieven
 
-| Optie | Voordelen | Nadelen | Waarom Afgewezen |
+| Optie | Voordelen | Nadelen | Waarom afgewezen |
 |---|---|---|---|
 | [Alternatief 1] | ... | ... | ... |
 | [Alternatief 2] | ... | ... | ... |
@@ -73,43 +73,43 @@ Verwijs naar specifieke gegevens, benchmarks of gesprekken indien beschikbaar.]
 **Neutraal:**
 - [Dingen die veranderen maar niet goed of slecht zijn]
 
-## Herzieningsdatum
+## Herziening datum
 
-[Wanneer moet dit besluit opnieuw worden geëvalueerd? bijv. "Na 6 maanden productiegebruik" of "Wanneer team 20 ingenieurs overschrijdt"]
+[Wanneer moet deze beslissing opnieuw worden geëvalueerd? bijv. "Na 6 maanden productiegebruik" of "Wanneer team meer dan 20 ingenieurs overschrijdt"]
 ```
 
-### Vastleggen uit sessiectekst
+### Vastleggen vanuit sessiecontext
 
-Wanneer de agent na een besluit wordt opgeroepen:
-1. Leest de conversatiecontext om het besluit te extraheren
+Wanneer de agent na een beslissing wordt opgeroepen:
+1. Leest de gesprekscontext om de beslissing uit te pakken
 2. Identificeert het op te lossen probleem, overwogen opties en gekozen aanpak
-3. Stelt gevolgen af uit de technische context
+3. Leidt gevolgen af uit de technische context
 4. Nummert de ADR sequentieel (leest bestaande ADRs om het volgende nummer te vinden)
 5. Slaat op in `docs/decisions/ADR-NNN-title.md`
 
 ```
-"Schrijf een ADR voor het besluit dat we zojuist hebben genomen over overschakeling van JWT naar op sessie gebaseerde authenticatie"
+"Schrijf een ADR voor de beslissing die we zojuist hebben genomen over het overschakelen van JWT naar sessie-gebaseerde verificatie"
 
-→ Leest conversatiecontext
-→ Extraheert: probleem (JWT vernieuwingscomplexiteit), besluit (op sessie gebaseerd met Redis), alternatieven (JWTs, Firebase Auth), gevolgen (Redis-afhankelijkheid, gemakkelijker intrekken)
+→ Leest gesprekscontext
+→ Pakt uit: probleem (JWT-vernieuwingscomplexiteit), beslissing (sessie-gebaseerd met Redis), alternatieven (JWTs, Firebase Auth), gevolgen (Redis-afhankelijkheid, eenvoudigere intrekking)
 → Schrijft: docs/decisions/ADR-012-session-based-auth.md
 ```
 
 ### ADR-index
 
-Handhaaft een `docs/decisions/README.md` index:
+Onderhoudt een `docs/decisions/README.md` index:
 
 ```markdown
-# Architecture Decision Records
+# Architectuurbeslissingsrecords
 
 | ADR | Titel | Status | Datum |
 |---|---|---|---|
-| [ADR-001](ADR-001-database-choice.md) | PostgreSQL gebruiken boven MongoDB | Accepted | 2026-01-15 |
-| [ADR-002](ADR-002-auth-approach.md) | JWT voor staatloze authenticatie | Accepted | 2026-02-03 |
-| [ADR-012](ADR-012-session-auth.md) | Overschakeling naar op sessie gebaseerde authenticatie | Accepted | 2026-05-20 |
+| [ADR-001](ADR-001-database-choice.md) | Gebruik PostgreSQL boven MongoDB | Accepted | 2026-01-15 |
+| [ADR-002](ADR-002-auth-approach.md) | JWT voor staatloze verificatie | Accepted | 2026-02-03 |
+| [ADR-012](ADR-012-session-auth.md) | Overschakelen naar sessie-gebaseerde verificatie | Accepted | 2026-05-20 |
 ```
 
-## Voorbeeld gebruiksgeval
+## Voorbeeld gebruiksscenario
 
 **Scenario:** Tijdens een sessie besloot het team Drizzle ORM te gebruiken in plaats van Prisma.
 
@@ -120,41 +120,41 @@ Handhaaft een `docs/decisions/README.md` index:
 
 Datum: 2026-05-20
 Status: Accepted
-Besluitnemers: Engineering team
+Besluitvormers: Engineering team
 
 ## Context
 
-Onze Next.js-app gebruikte Prisma. Terwijl we overgingen op edge-implementaties (Vercel Edge Functions, Cloudflare Workers), stuitten we op Prismas beperking: het kan niet worden uitgevoerd in V8-gebaseerde edge-runtimes omdat het een Node.js binair sidecar-proces vereist. Dit blokkeerde onze edge-implementatieplannen volledig.
+Onze Next.js-app gebruikte Prisma. Toen we naar edge-implementaties verhuisden (Vercel Edge Functions, Cloudflare Workers), stotten we op Prisma's beperking: het kan niet in V8-gebaseerde edge runtimes omdat het een Node.js binaire sidecar nodig heeft. Dit blokkeerde onze edge-implementatieplannen volledig.
 
-## Besluit
+## Beslissing
 
-We zullen Prisma in de hele codebase vervangen door Drizzle ORM.
+We zullen Prisma vervangen door Drizzle ORM in de hele codebase.
 
 ## Rationale
 
-Drizzle is de enige productieklare TypeScript ORM die native in V8 edge-runtimes wordt uitgevoerd zonder een sidecar-proces. Het biedt TypeScript-first schemagenerering, SQL-achtig query-building en directe database-toegang — alles wat we nodig hebben zonder de runtime-beperking.
+Drizzle is de enige production-ready TypeScript ORM die native in V8 edge runtimes zonder sidecar-proces kan draaien. Het biedt TypeScript-first schema-definitie, SQL-achtige querybouw en directe databasetoegang — alles wat we nodig hebben zonder de runtime-beperking.
 
-## Overwogen Alternatieven
+## Overwogen alternatieven
 
-| Optie | Voordelen | Nadelen | Waarom Afgewezen |
+| Optie | Voordelen | Nadelen | Waarom afgewezen |
 |---|---|---|---|
-| Prisma behouden | Al geïntegreerd, goed DX | Kan niet op edge worden uitgevoerd | Blokkeert edge-implementatie |
-| kysely | Loopt op edge | Geen ORM, meer verbose | Meer boilerplate |
-| Raw SQL | Geen beperkingen | Geen type-veiligheid | Onderhoudsbelasting |
+| Prisma behouden | Al geïntegreerd, goede DX | Kan niet op edge draaien | Blokkeert edge-implementatie |
+| kysely | Kan op edge draaien | Geen ORM, meer verbose | Meer boilerplate |
+| Raw SQL | Geen beperkingen | Geen typeveiligheid | Onderhoudsbelasting |
 
 ## Gevolgen
 
 **Positief:**
-- Kan API-routes implementeren naar Vercel Edge Functions
-- ~40% snellere query-uitvoering vs Prisma Client
-- Kleinere bundle-grootte (geen sidecar-binair)
+- Kan API-routes naar Vercel Edge Functions implementeren
+- ~40% sneller queryuitvoering vs Prisma Client
+- Kleinere bundelmaat (geen sidecar binair)
 
 **Negatief:**
-- 2-3 dagen migratiepoging om schema en query's opnieuw te schrijven
+- 2-3 dagen migratiewerk om schema en queries herschrijven
 - Team moet Drizzle API leren
-- Prisma Studio verliezen (gebruik in plaats daarvan Drizzle Studio)
+- Verlies van Prisma Studio (gebruik Drizzle Studio in plaats daarvan)
 
-## Herzieningsdatum
+## Herziening datum
 
-Heroverwegen als Prisma native edge runtime-ondersteuning uitbrengt.
+Heroverweeg als Prisma native edge runtime-ondersteuning uitbrengt.
 ```

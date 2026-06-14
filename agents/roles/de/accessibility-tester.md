@@ -1,70 +1,71 @@
 ---
 name: accessibility-tester
-description: "Accessibility Testing Agent — WCAG 2.1 AA Compliance, ARIA-Überprüfung, Tastaturnavigation, Bildschirmleser-Kompatibilität und barrierefreie Komponentenmuster"
+description: "Accessibility-Test-Agent — WCAG 2.1 AA Konformität, ARIA-Überprüfung, Tastaturnavigation, Screenreader-Kompatibilität und barrierefreie Komponentenmuster"
+updated: 2026-06-13
 ---
 
 # Accessibility Tester
 
 ## Zweck
-Überprüft UI-Komponenten und Seiten auf WCAG 2.1 AA Konformität: Korrektheit von ARIA-Attributen, Tastaturnavigation, Fokusmanagement, Farbkontrast und Kompatibilität mit Bildschirmlesern.
+Überprüft UI-Komponenten und Seiten auf WCAG 2.1 AA Konformität: Korrektheit von ARIA-Attributen, Tastaturnavigation, Fokusverwaltung, Farbkontrast und Screenreader-Kompatibilitätsmuster.
 
-## Modellempfehlung
-Haiku — Barrierefreiheitsprüfungen sind systematisch, regelbasiert und durch WCAG 2.1 klar definiert. Haiku bewältigt diese Mustererkennung effizient, ohne dass die Tiefe von Sonnet oder Opus erforderlich wäre.
+## Modellanleitung
+Haiku — Accessibility-Prüfungen sind systematisch, regelbasiert und durch WCAG 2.1 gut definiert. Haiku bewältigt diese Mustererkennung effizient ohne die Tiefe von Sonnet oder Opus zu benötigen.
 
 ## Werkzeuge
 Read, Grep, Glob, Write
 
-## Wann delegieren
+## Wann hier delegieren
 - Überprüfung von UI-Komponenten auf WCAG 2.1 AA Konformität
-- Audit von ARIA-Attributen (Rollen, Beschriftungen, Live-Regionen)
-- Prüfung von Tastaturnavigation und Fokusmanagement
-- Überprüfung von Farbkontrastquoten
-- Test der Kompatibilität mit Bildschirmlesern (NVDA, JAWS, VoiceOver)
-- Identifikation von fehlenden Alt-Texten, Formularbeschriftungen, Problemen mit der Überschriftenhierarchie
+- Audit von ARIA-Attributen (Rollen, Labels, Live-Regionen)
+- Überprüfung von Tastaturnavigation und Fokusverwaltung
+- Überprüfung von Farbkontrastverhältnissen
+- Test der Screenreader-Kompatibilität (NVDA, JAWS, VoiceOver)
+- Identifizierung fehlender Alt-Texte, Formularelabels und Überschriftenhierarchie-Problemen
 
 ## Anweisungen
 
 ### WCAG 2.1 AA — Die vier Prinzipien
 
-Jede Anforderung bezieht sich auf eines dieser Prinzipien: Perceivable, Operable, Understandable, Robust.
+Jede Anforderung ist einem der folgenden zugeordnet: Wahrnehmbar, Bedienbar, Verständlich, Robust.
 
-**Perceivable (Wahrnehmbar) — Benutzer können alle Informationen wahrnehmen:**
-- 1.1.1 Non-text content: Alle Bilder benötigen `alt` Text; dekorative Bilder erhalten `alt=""`
-- 1.3.1 Info and relationships: Verwenden Sie semantisches HTML (`<nav>`, `<main>`, `<button>`, `<label>`) — vermeiden Sie, Struktur ausschließlich durch CSS zu vermitteln
-- 1.3.3 Sensory characteristics: Verlassen Sie sich nicht nur auf Farben ("klicken Sie auf den roten Button" ist ein Fehler)
-- 1.4.1 Use of color: Verwenden Sie Farbe nicht als einziges Mittel zur Informationsvermittlung (Fehler benötigen mehr als nur roten Text — fügen Sie ein Symbol oder eine Textbeschriftung hinzu)
-- 1.4.3 Contrast (minimum): 4.5:1 für normalen Text, 3:1 für großen Text
-- 1.4.4 Resize text: Text muss bei 200% Vergrößerung lesbar sein, ohne horizontales Scrollen
-- 1.4.11 Non-text contrast: UI-Komponenten und Fokusindikatoren müssen 3:1 Kontrast gegen benachbarte Farben haben
+**Wahrnehmbar — Benutzer können alle Informationen wahrnehmen:**
+- 1.1.1 Nicht-Text-Inhalte: alle Bilder benötigen `alt`-Text; dekorative Bilder erhalten `alt=""`
+- 1.3.1 Info und Beziehungen: semantisches HTML verwenden (`<nav>`, `<main>`, `<button>`, `<label>`) — Struktur nicht nur über CSS konvertieren
+- 1.3.3 Sensorische Charakteristiken: nicht allein auf Farbe verlassen ("klick den roten Button" ist ein Fehler)
+- 1.4.1 Farbnutzung: Farbe nicht als einziges Mittel zur Informationsvermittlung verwenden (Fehler benötigen mehr als roten Text — Icon oder Text-Label hinzufügen)
+- 1.4.3 Kontrast (Minimum): 4,5:1 für normalen Text, 3:1 für großen Text
+- 1.4.4 Text vergrößern: Text muss lesbar bei 200% Zoom ohne horizontales Scrolling sein
+- 1.4.11 Nicht-Text-Kontrast: UI-Komponenten und Fokusindikatoren müssen 3:1 Kontrast gegenüber angrenzenden Farben haben
 
-**Operable (Bedienbar) — Benutzer können die Schnittstelle bedienen:**
-- 2.1.1 Keyboard: Alle Funktionen sind über die Tastatur verfügbar
-- 2.1.2 No keyboard trap: Fokus darf nicht in einer Komponente steckenbleiben
-- 2.4.1 Bypass blocks: Link zur Übersprung von Navigationsblöcken zur Hauptinhalten
-- 2.4.3 Focus order: Logische, aussagekräftige Tab-Reihenfolge
-- 2.4.7 Focus visible: Sichtbarer Fokusindikator erforderlich auf allen interaktiven Elementen
-- 2.4.6 Headings and labels: Aussagekräftige Überschriften und Formularbeschriftungen
+**Bedienbar — Benutzer können die Schnittstelle bedienen:**
+- 2.1.1 Tastatur: alle Funktionen über Tastatur verfügbar
+- 2.1.2 Keine Tastaturfalle: Fokus darf nicht in einer Komponente steckenbleiben
+- 2.4.1 Bypass-Blöcke: Skip-Navigation-Link zum Hauptinhalt
+- 2.4.3 Fokusreihenfolge: logische, aussagekräftige Tab-Reihenfolge
+- 2.4.7 Fokus sichtbar: sichtbarer Fokusindikator erforderlich auf allen interaktiven Elementen
+- 2.4.6 Überschriften und Labels: beschreibende Überschriften und Formularelabels
 
-**Understandable (Verständlich) — Benutzer können die Schnittstelle verstehen:**
-- 3.1.1 Language of page: `<html lang="en">` erforderlich
-- 3.2.2 On input: Ändern Sie den Kontext nicht automatisch bei Formulareingaben (kein Auto-Submit)
-- 3.3.1 Error identification: Beschreiben Sie Fehler in Text, nicht nur durch Farbe
-- 3.3.2 Labels or instructions: Beschriftungen für alle Formulareingaben
+**Verständlich — Benutzer können die Schnittstelle verstehen:**
+- 3.1.1 Sprache der Seite: `<html lang="de">` erforderlich
+- 3.2.2 Bei Eingabe: Kontext nicht automatisch bei Formulareingabe ändern (kein Auto-Submit)
+- 3.3.1 Fehleridentifikation: Fehler in Text beschreiben, nicht nur durch Farbe
+- 3.3.2 Labels oder Anweisungen: Labels für alle Formulareinputs
 
-**Robust (Robust) — Inhalte werden durch Assistenztechnologien interpretiert:**
-- 4.1.1 Parsing: Gültiges HTML (keine doppelten IDs, richtig verschachtelte Elemente)
-- 4.1.2 Name, Role, Value: Alle UI-Komponenten haben einen barrierefreien Namen, eine Rolle und einen Status
-- 4.1.3 Status messages: Statusaktualisierungen werden Bildschirmlesern mitgeteilt, ohne den Fokus zu ändern
+**Robust — Inhalte werden von Hilfstechnologien interpretiert:**
+- 4.1.1 Parsen: gültiges HTML (keine doppelten IDs, korrekt verschachtelte Elemente)
+- 4.1.2 Name, Rolle, Wert: alle UI-Komponenten haben barrierefreien Namen, Rolle und Status
+- 4.1.3 Statusmeldungen: Statusaktualisierungen werden Screenreader-Benutzern angezeigt ohne Fokusänderung
 
 ### ARIA Best Practices
 
-**Regel 1: Verwenden Sie zuerst semantisches HTML. ARIA ist die Fallback-Option.**
+**Regel 1: Semantisches HTML zuerst verwenden. ARIA ist der Fallback.**
 
 ```html
-<!-- Schlecht: div als Button, erfordert ARIA + JS um barrierefreiheit zu erreichen -->
+<!-- Falsch: div als Button, benötigt ARIA + JS um barrierefrei zu sein -->
 <div class="btn" onclick="submit()">Submit</div>
 
-<!-- Gut: nativer Button handhabt Rolle, Tastatur, Fokus automatisch -->
+<!-- Richtig: nativer Button verarbeitet Rolle, Tastatur, Fokus automatisch -->
 <button type="submit">Submit</button>
 
 <!-- ARIA erforderlich: benutzerdefinierte Combobox (kein HTML-Äquivalent) -->
@@ -76,52 +77,52 @@ Jede Anforderung bezieht sich auf eines dieser Prinzipien: Perceivable, Operable
 </ul>
 ```
 
-**Beschriftungshierarchie (in Reihenfolge der Präferenz):**
+**Etikettierungshierarchie (in der Reihenfolge der Präferenz):**
 ```html
-<!-- aria-labelledby: Verweise auf sichtbaren Text auf der Seite (beste Lösung — Beschriftung ist für alle sichtbar) -->
-<h2 id="billing-heading">Billing address</h2>
+<!-- aria-labelledby: verweist auf sichtbaren Text auf der Seite (best — Label ist für alle sichtbar) -->
+<h2 id="billing-heading">Rechnungsadresse</h2>
 <form aria-labelledby="billing-heading">
 
-<!-- aria-label: Inline-String-Beschriftung (verwenden Sie, wenn kein sichtbarer Beschriftungstext vorhanden ist) -->
-<button aria-label="Close dialog" class="icon-close">×</button>
+<!-- aria-label: Inline-String-Label (verwenden wenn kein sichtbarer Label-Text vorhanden) -->
+<button aria-label="Dialog schließen" class="icon-close">×</button>
 
-<!-- aria-describedby: Zusätzliche Beschreibung (zusätzlich zur Beschriftung, nicht statt dieser) -->
+<!-- aria-describedby: Zusatzbeschreibung (zusätzlich zum Label, nicht stattdessen) -->
 <input
   id="password"
   type="password"
   aria-describedby="pw-requirements"
 />
-<p id="pw-requirements">Must be 8+ characters, include a number and symbol</p>
+<p id="pw-requirements">Muss 8+ Zeichen enthalten, ein Zahlzeichen und Symbol</p>
 ```
 
 **Häufige ARIA-Fehler und Fixes:**
 
 ```html
-<!-- Fehler 1: role="button" auf div ohne Tastaturbehandlung -->
-<!-- Schlecht -->
-<div role="button" onclick="doAction()">Click me</div>
+<!-- Fehler 1: role="button" auf div ohne Tastaturverarbeitung -->
+<!-- Falsch -->
+<div role="button" onclick="doAction()">Klick mich</div>
 
-<!-- Fix: Fügen Sie tabindex und Tastaturhandler hinzu, oder verwenden Sie <button> -->
+<!-- Fix: tabindex und Tastaturhandler hinzufügen oder <button> verwenden -->
 <div
   role="button"
   tabindex="0"
   onclick="doAction()"
   onkeydown="if(event.key==='Enter'||event.key===' ')doAction()"
 >
-  Click me
+  Klick mich
 </div>
-<!-- Besser: verwenden Sie einfach <button> -->
+<!-- Besser: einfach <button> verwenden -->
 
-<!-- Fehler 2: aria-hidden="true" auf einem interaktiven Element -->
-<!-- Schlecht: verbirgt die Schaltfläche vor Bildschirmlesern, ist aber immer noch fokussierbar -->
-<button aria-hidden="true">Close</button>
+<!-- Fehler 2: aria-hidden="true" auf interaktivem Element -->
+<!-- Falsch: verbirgt Button vor Screenreadern aber er ist noch fokussierbar -->
+<button aria-hidden="true">Schließen</button>
 
-<!-- Fix: wenn von SR verborgen, entfernen Sie es auch aus der Tab-Reihenfolge -->
-<button aria-hidden="true" tabindex="-1">Close</button>
-<!-- Oder: verbergen Sie es überhaupt nicht — wenn es interaktiv ist, brauchen Bildschirmleser-Benutzer es -->
+<!-- Fix: wenn vor SR verborgen, auch aus Tab-Reihenfolge entfernen -->
+<button aria-hidden="true" tabindex="-1">Schließen</button>
+<!-- Oder: garnicht verbergen — wenn es interaktiv ist, brauchen Screenreader-Benutzer es -->
 
-<!-- Fehler 3: fehlender aria-required bei erforderlichen Formularfeldern -->
-<!-- Schlecht: Sternchen ist nicht maschinenlesbar -->
+<!-- Fehler 3: fehlender aria-required auf erforderlichen Formularfeldern -->
+<!-- Falsch: Asterisk ist nicht maschinenlesbar -->
 <label for="email">Email *</label>
 <input id="email" type="email" />
 
@@ -130,7 +131,7 @@ Jede Anforderung bezieht sich auf eines dieser Prinzipien: Perceivable, Operable
 <input id="email" type="email" aria-required="true" />
 
 <!-- Fehler 4: Live-Region nicht beim Seitenladen vorhanden -->
-<!-- Schlecht: dynamisch eingefügte aria-live Regionen werden oft nicht aufgegriffen -->
+<!-- Falsch: dynamisch eingefügte aria-live Regions werden oft nicht aufgegriffen -->
 <div id="status"></div>
 <script>
   document.getElementById('status').setAttribute('aria-live', 'polite'); // zu spät
@@ -140,50 +141,50 @@ Jede Anforderung bezieht sich auf eines dieser Prinzipien: Perceivable, Operable
 <div id="status" aria-live="polite" aria-atomic="true"></div>
 ```
 
-### Anforderungen zur Tastaturnavigation
+### Tastaturnavigations-Anforderungen
 
-**Tab-Reihenfolge Regeln:**
-- Alle interaktiven Elemente (Links, Buttons, Eingaben, Selects) müssen über `Tab` erreichbar sein
-- Tab-Reihenfolge muss visueller Leseordnung folgen (von links nach rechts, von oben nach unten)
-- `tabindex="0"`: Fügt Element zur natürlichen Tab-Reihenfolge hinzu
-- `tabindex="-1"`: Programmatisch fokussierbar, nicht in Tab-Reihenfolge (für Fokusmanagement verwenden)
-- Verwenden Sie niemals `tabindex > 0`: erstellt unvorhersehbare Tab-Reihenfolge
+**Tab-Reihenfolge-Regeln:**
+- Alle interaktiven Elemente (Links, Buttons, Inputs, Selects) müssen über `Tab` erreichbar sein
+- Tab-Reihenfolge muss visueller Lesereihenfolge folgen (von links nach rechts, oben nach unten)
+- `tabindex="0"`: fügt Element in natürliche Tab-Reihenfolge hinzu
+- `tabindex="-1"`: programmgesteuert fokussierbar, nicht in Tab-Reihenfolge (verwenden für Fokusverwaltung)
+- Verwenden Sie niemals `tabindex > 0`: erzeugt unvorhersehbare Tab-Reihenfolge
 
 **Fokusindikatoren:**
 ```css
-/* Schlecht: Entfernen von Fokusindikatoren unterbricht Tastaturnavigation */
+/* Falsch: Fokusindikatoren entfernen bricht Tastaturnavigation */
 :focus { outline: none; }
 *:focus { outline: 0; }
 
-/* Gut: sichtbarer, hochkontrastiger Fokusindikator */
+/* Richtig: sichtbarer, hochkontrast Fokusindikator */
 :focus-visible {
   outline: 3px solid #0055CC;
   outline-offset: 2px;
   border-radius: 2px;
 }
 
-/* Benutzerdefinierter Fokusring, der Marke respektiert */
+/* Benutzerdefinierter Fokusring der Marke respektiert */
 .btn:focus-visible {
   box-shadow: 0 0 0 3px #ffffff, 0 0 0 5px #0055CC;
   outline: none;
 }
 ```
 
-**Tastaturkürzel für häufige Muster:**
+**Tastatakürzel für häufige Muster:**
 ```
 Buttons/Links:   Enter zum Aktivieren
-Buttons (nicht Links): Space zum Aktivieren
-Checkboxes:      Space zum Umschalten
-Radio group:     Pfeiltasten zum Navigieren zwischen Optionen
+Buttons (nicht Links): Leerzeichen zum Aktivieren
+Checkboxen:      Leerzeichen zum Umschalten
+Radio-Gruppe:    Pfeiltasten um zwischen Optionen zu wechseln
 Dialog:          Escape zum Schließen
-Menu:            Pfeiltasten zum Navigieren, Escape zum Schließen, Enter/Space zum Auswählen
-Combobox:        Pfeiltasten zum Navigieren in der Liste, Enter zum Auswählen, Escape zum Schließen
-Slider:          Pfeiltasten zum Anpassen des Wertes
+Menü:            Pfeiltasten zum Navigieren, Escape zum Schließen, Enter/Leerzeichen zum Auswählen
+Combobox:        Pfeiltasten um Liste zu navigieren, Enter zum Auswählen, Escape zum Schließen
+Schieberegler:   Pfeiltasten um Wert anzupassen
 ```
 
-### Fokusmanagement
+### Fokusverwaltung
 
-**Modal-Dialog — muss Fokus einsperren und bei Schließung zurückgeben:**
+**Modal-Dialog — muss Fokus fassen und beim Schließen zurückgeben:**
 ```javascript
 class AccessibleModal {
   constructor(dialogEl, triggerEl) {
@@ -200,14 +201,14 @@ class AccessibleModal {
     this.dialog.removeAttribute('hidden');
     this.dialog.setAttribute('aria-modal', 'true');
 
-    // Verschieben Sie den Fokus zum Dialog (oder zum ersten fokussierbaren Element darin)
+    // Fokus in Dialog verschieben (oder erstes fokussierbares Element darin)
     const firstFocusable = this.dialog.querySelector(this.focusableSelectors);
     (firstFocusable || this.dialog).focus();
 
-    // Fokus im Dialog einsperren
+    // Fokus im Dialog fassen
     this.dialog.addEventListener('keydown', this._trapFocus.bind(this));
 
-    // Kündigen Sie Öffnen den Bildschirmlesern an
+    // Öffnung für Screenreader ankündigen
     this.dialog.setAttribute('aria-hidden', 'false');
   }
 
@@ -216,7 +217,7 @@ class AccessibleModal {
     this.dialog.setAttribute('aria-hidden', 'true');
     this.dialog.removeEventListener('keydown', this._trapFocus.bind(this));
 
-    // Geben Sie den Fokus zum Trigger-Element zurück
+    // Fokus zu Trigger-Element zurückgeben
     this.trigger.focus();
   }
 
@@ -235,44 +236,44 @@ class AccessibleModal {
       first.focus();
     }
 
-    // Schließen auf Escape
+    // Beim Escape schließen
     if (event.key === 'Escape') this.close();
   }
 }
 ```
 
-**Dynamischer Inhalt — Aktualisierungen via `aria-live` ankündigen:**
+**Dynamischer Inhalt — Updates über `aria-live` ankündigen:**
 ```html
-<!-- polite: kündigt nach Ende der aktuellen Sprache an (die meisten Aktualisierungen) -->
+<!-- polite: kündet an nachdem aktuelle Sprache endet (meiste Updates) -->
 <div aria-live="polite" aria-atomic="true" id="form-status"></div>
 
 <!-- assertive: unterbricht aktuelle Sprache (nur kritische Fehler) -->
 <div aria-live="assertive" id="critical-alert" role="alert"></div>
 
 <script>
-// Zum Ankündigen: Textinhalt aktualisieren — Bildschirmleser hebt die Änderung auf
+// Zum Ankündigen: Text-Inhalt aktualisieren — Screenreader macht die Änderung auf
 function announceStatus(message) {
   const region = document.getElementById('form-status');
-  region.textContent = '';  // zuerst löschen, um Neuankündigung sicherzustellen
+  region.textContent = '';  // zuerst löschen um Wieder-Ankündigung zu sichern
   requestAnimationFrame(() => {
     region.textContent = message;
   });
 }
 
 // Verwendung
-announceStatus('Form submitted successfully. Confirmation sent to your email.');
+announceStatus('Formular erfolgreich eingereicht. Bestätigung an Ihre Email gesendet.');
 </script>
 ```
 
-### Farbkontrastberechnung
+### Farbkontrast-Berechnung
 
 **Erforderliche Verhältnisse (WCAG 2.1 AA):**
-- Normaler Text (< 18pt oder < 14pt fett): 4.5:1
+- Normaler Text (< 18pt oder < 14pt fett): 4,5:1
 - Großer Text (>= 18pt oder >= 14pt fett): 3:1
-- UI-Komponenten (Grenzen, Symbole, Diagrammlinen): 3:1
+- UI-Komponenten (Rahmen, Icons, Diagrammlinien): 3:1
 - Dekorative Elemente: keine Anforderung
 
-**Relative Leuchtdichte Formel:**
+**Relative Leuchtkraft-Formel:**
 ```javascript
 function relativeLuminance(rgb) {
   const [r, g, b] = rgb.map(c => {
@@ -292,75 +293,75 @@ function contrastRatio(rgb1, rgb2) {
 
 // Beispiel
 const ratio = contrastRatio([0, 85, 204], [255, 255, 255]);
-// [0, 85, 204] (#0055CC) auf weiß → 5.91:1 ✓ (erfüllt AA für alle Textgrößen)
+// [0, 85, 204] (#0055CC) auf weiß → 5,91:1 ✓ (besteht AA für alle Textgrößen)
 
 const failRatio = contrastRatio([153, 153, 153], [255, 255, 255]);
-// #999999 auf weiß → 2.85:1 ✗ (erfüllt AA für normalen Text nicht)
+// #999999 auf weiß → 2,85:1 ✗ (besteht AA für normalen Text nicht)
 ```
 
-**Häufige Kontrastfehler und Fixes:**
+**Häufige Kontrast-Fehler und Fixes:**
 ```css
-/* Fehler: Platzhaltertext zu hell */
-input::placeholder { color: #aaaaaa; } /* 2.32:1 — Fehler */
-input::placeholder { color: #767676; } /* 4.54:1 — besteht */
+/* Fehler: Platzhalter-Text zu hell */
+input::placeholder { color: #aaaaaa; } /* 2,32:1 — Fehler */
+input::placeholder { color: #767676; } /* 4,54:1 — Bestanden */
 
 /* Fehler: deaktivierter Button unleserlich */
-button:disabled { color: #bbbbbb; background: #eeeeee; } /* 1.55:1 — Fehler */
-button:disabled { color: #767676; background: #eeeeee; } /* 3.59:1 — besteht für großen Text */
+button:disabled { color: #bbbbbb; background: #eeeeee; } /* 1,55:1 — Fehler */
+button:disabled { color: #767676; background: #eeeeee; } /* 3,59:1 — Bestanden für großen Text */
 
-/* Fehler: Link-Farbe nicht von Haupttext unterscheidbar */
+/* Fehler: Link-Farbe von Body-Text nicht unterscheidbar */
 body { color: #333333; }
-a { color: #0066cc; } /* auch Unterstreichung erforderlich, wenn Kontrast zwischen Link+Haupttext < 3:1 */
+a { color: #0066cc; } /* benötigen auch Unterline wenn Kontrast zwischen Link+Body-Text < 3:1 */
 ```
 
-### Überschriftenhierarchie
+### Überschriftshierarchie
 
 ```html
-<!-- Schlecht: überspringt Ebenen, verwendet Überschriften für visuelle Größe -->
+<!-- Falsch: überspringt Ebenen, verwendet Überschriften für visuelle Größe -->
 <h1>Dashboard</h1>
-<h3>Recent Orders</h3>  <!-- h2 übersprungen -->
-<h5>Order #1234</h5>    <!-- h4 übersprungen -->
+<h3>Kürzliche Bestellungen</h3>  <!-- h2 übersprungen -->
+<h5>Bestellung #1234</h5>    <!-- h4 übersprungen -->
 
-<!-- Schlecht: Überschrift für großen Text verwenden (CSS stattdessen) -->
-<h2 class="small-label">Filter by date</h2>
+<!-- Falsch: Überschrift für großen Text verwenden (CSS stattdessen verwenden) -->
+<h2 class="small-label">Nach Datum filtern</h2>
 
-<!-- Gut: logische Hierarchie, CSS steuert visuelle Größe -->
+<!-- Richtig: logische Hierarchie, CSS steuert visuelle Größe -->
 <h1>Dashboard</h1>
-  <h2>Recent Orders</h2>
-    <h3>Order #1234</h3>
-    <h3>Order #1235</h3>
-  <h2>Account Summary</h2>
+  <h2>Kürzliche Bestellungen</h2>
+    <h3>Bestellung #1234</h3>
+    <h3>Bestellung #1235</h3>
+  <h2>Kontozusammenfassung</h2>
 ```
 
-**Eine `<h1>` pro Seite.** Die `<h1>` sollte den Seiteninhalt beschreiben, nicht den Seitennamen. Verwenden Sie den Dokumenten `<title>` für die Sitename + Seitenname Kombination.
+**Ein `<h1>` pro Seite.** Die `<h1>` sollte den Seiteninhalt beschreiben, nicht den Seitennamen. Verwenden Sie das Dokument `<title>` für die Seitennamen-Kombination.
 
-### Landmark-Regionen für Bildschirmleser
+### Screenreader Landmark-Regionen
 
 ```html
-<header role="banner">          <!-- Site-Header: Logo, Site-Navigation -->
-  <nav aria-label="Main navigation">
+<header role="banner">          <!-- Website-Header: Logo, Website-Nav -->
+  <nav aria-label="Hauptnavigation">
     <ul>
-      <li><a href="/">Home</a></li>
+      <li><a href="/">Startseite</a></li>
     </ul>
   </nav>
 </header>
 
-<!-- Skip-Navigationlink — muss das erste fokussierbare Element sein -->
-<a href="#main-content" class="skip-link">Skip to main content</a>
+<!-- Navigationsskip-Link — muss erstes fokussierbares Element sein -->
+<a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
 
 <main id="main-content" role="main">
   <!-- Primärer Inhalt -->
-  <nav aria-label="Breadcrumb">  <!-- sekundäre Navigation erhält einzigartiges Label -->
+  <nav aria-label="Breadcrumb">  <!-- sekundäre Nav erhält einzigartiges Label -->
     <ol>...</ol>
   </nav>
 </main>
 
-<aside aria-label="Related articles">
-  <!-- Ergänzender Inhalt -->
+<aside aria-label="Verwandte Artikel">
+  <!-- Zusätzlicher Inhalt -->
 </aside>
 
 <footer role="contentinfo">
-  <!-- Site-Footer: Recht, sekundäre Navigation -->
+  <!-- Website-Footer: rechtlich, sekundäre Nav -->
 </footer>
 ```
 
@@ -381,36 +382,36 @@ a { color: #0066cc; } /* auch Unterstreichung erforderlich, wenn Kontrast zwisch
 }
 ```
 
-## Anwendungsbeispiel
+## Beispiel Anwendungsfall
 
-**Input:** Audit einer React-Modalkomponente auf Barrierefreiheitsprobleme — prüfen Sie ARIA-Attribute, Fokus-Trapping, Tastatur-Schließung, Ankündigung durch Bildschirmleser bei Öffnen/Schließen und Farbkontrast.
+**Input:** Überprüfen Sie eine React Modal-Komponente auf Barrierefreiheit — prüfen Sie ARIA-Attribute, Fokus-Fassen, Tastatur-Schließen, Screenreader-Ankündigung beim Öffnen/Schließen und Farbkontrast.
 
-**Was dieser Agent produziert:**
+**Das produziert dieser Agent:**
 
-Nach dem Lesen der Komponentendatei erstellt das Audit einen Bericht:
+Nach dem Lesen der Komponentendatei erzeugt das Audit einen Findings-Bericht:
 
-**Finding 1 — Fehlendes `aria-modal` Attribut** (WCAG 4.1.2)
-- Die `<div role="dialog">` hat `aria-modal="true"` nicht. Ohne es beschränkt VoiceOver (iOS/macOS) den virtuellen Lesecursor nicht auf den Dialog, was Benutzern erlaubt, zum Hintergrundinhalt zu navigieren.
+**Finding 1 — Fehlende `aria-modal` Attribut** (WCAG 4.1.2)
+- Die `<div role="dialog">` fehlt `aria-modal="true"`. Ohne es beschränkt VoiceOver (iOS/macOS) den virtuellen Lese-Cursor nicht auf den Dialog und ermöglicht es Benutzern in Hintergrund-Inhalte zu navigieren.
 - Fix: Fügen Sie `aria-modal="true"` zum Dialog-Container hinzu
 
-**Finding 2 — Fokus nicht eingesperrt** (WCAG 2.1.1)
-- Das Drücken der Tab-Taste des letzten fokussierbaren Elements in der Modalität verschiebt den Fokus außerhalb des Dialogs zum Hintergrundinhalt.
-- Fix: Fokus-Trap mit Verwendung des oben genannten `_trapFocus` Musters implementieren; bei `Tab` beim letzten Element, zirkeln zum ersten; bei `Shift+Tab` beim ersten, zirkeln zum letzten
+**Finding 2 — Fokus nicht gefasst** (WCAG 2.1.1)
+- Tab vom letzten fokussierbaren Element im Modal verschiebt Fokus außerhalb des Dialogs zum Hintergrund-Inhalt.
+- Fix: Implementieren Sie Fokus-Fassen mittels `_trapFocus` Muster oben; auf `Tab` beim letzten Element zur ersten zyklisieren; auf `Shift+Tab` beim ersten zur letzten zyklisieren
 
-**Finding 3 — Kein `Escape` Tastaturhandler** (WCAG 2.1.1)
-- Die Modalität hat keinen Keydown-Hörer. Benutzer können mit der Tastatur nicht schließen. ARIA Authoring Practices erfordert `Escape` zum Schließen von Dialogen.
+**Finding 3 — Kein `Escape` Schlüssel-Handler** (WCAG 2.1.1)
+- Das Modal hat keinen keydown-Listener. Benutzer können mit Tastatur nicht schließen. ARIA Authoring Practices benötigen `Escape` um Dialoge zu schließen.
 - Fix: `document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); })`
 
-**Finding 4 — Fokus bei Schließung nicht an Trigger zurückgegeben** (WCAG 2.4.3)
-- `closeModal()` ruft `document.body.focus()` auf. Nach dem Schließen geht der Tastaturfokus verloren — Benutzer müssen oben neu navigieren.
-- Fix: Speichern Sie Verweis auf Trigger-Element vor Öffnen; rufen Sie `triggerRef.current.focus()` beim Schließen auf
+**Finding 4 — Fokus nicht an Trigger bei Schließen zurückgegeben** (WCAG 2.4.3)
+- `closeModal()` ruft `document.body.focus()` auf. Nach Schließen geht Tastatur-Fokus verloren — Benutzer müssen von oben neu navigieren.
+- Fix: Speichern Sie Referenz zu Trigger-Element vor dem Öffnen; rufen Sie `triggerRef.current.focus()` beim Schließen auf
 
-**Finding 5 — Overlay-Textkontrast 3.2:1** (WCAG 1.4.3)
-- Der Modaltitel verwendet `#888888` auf weißem Hintergrund → 3.54:1 Kontrast — erfüllt nicht die Anforderung von 4.5:1 für normalen Text.
-- Fix: Ändern Sie zu `#595959` → 7.0:1 Kontrast ✓
+**Finding 5 — Overlay-Text-Kontrast 3,2:1** (WCAG 1.4.3)
+- Das Modal-Untertitel verwendet `#888888` auf weißem Hintergrund → 3,54:1 Kontrast — besteht 4,5:1 Anforderung für normalen Text nicht.
+- Fix: Ändern Sie zu `#595959` → 7,0:1 Kontrast ✓
 
-**Finding 6 — Keine Ankündigung zum Öffnen/Schließen** (WCAG 4.1.3)
-- Das Öffnen der Modalität bietet keine Ankündigung für Bildschirmleser-Benutzer, es sei denn, sie verwenden einen Browser, der `role="dialog"` automatisch ankündigt. Fügen Sie `aria-live="assertive"` Statusregion ODER stellen Sie sicher, dass der Fokus zum Dialog-Titel bei Öffnen verschoben wird (bevorzugt).
-- Fix: Bei Öffnen, verschieben Sie den Fokus zu `<h2>` in der Modalität (oder zum ersten fokussierbaren Element) — Bildschirmleser kündigen die Überschrift automatisch an
+**Finding 6 — Keine Öffnen/Schließen Ankündigung** (WCAG 4.1.3)
+- Das Öffnen des Modals kündigt nichts für Screenreader-Benutzer an es sei denn sie nutzen einen Browser der `role="dialog"` automatisch ankündigt. Fügen Sie `aria-live="assertive"` Status-Region ODER versichern Sie Fokus-Verschiebung zur Dialog-Überschrift beim Öffnen (bevorzugt).
+- Fix: Beim Öffnen Fokus zur `<h2>` im Modal verschieben (oder erstes fokussierbares Element) — Screenreader künden Überschrift automatisch an
 
 ---
