@@ -56,139 +56,139 @@ Objetivos:
 
 ### Planificación de cadena de muerte MITRE ATT&CK
 
-Construya el plan de compromiso por fase:
+Construir el plan de operación por fase:
 
-**Fase 1 — Reconocimiento (pre-compromiso):**
-- OSINT en la organización objetivo (LinkedIn, publicaciones de empleos, GitHub, Shodan)
-- Identificar infraestructura visiblemente externa
-- Mapa de la pila tecnológica desde fuentes públicas
+**Fase 1 — Reconocimiento (pre-operación):**
+- OSINT sobre la organización objetivo (LinkedIn, ofertas de empleo, GitHub, Shodan)
+- Identificar infraestructura visible externamente
+- Mapear pila de tecnología desde fuentes públicas
 - Identificar empleados con acceso privilegiado (para alcance de ingeniería social si está permitido)
 
 **Fase 2 — Acceso inicial:**
-Seleccione técnicas basadas en alcance y autorización:
-- Phishing (T1566): si la ingeniería social está en el alcance
-- Cuentas válidas (T1078): si la prueba de credencial está en el alcance
-- Servicios remotos externos (T1133): VPN, RDP, Citrix si está en el alcance
-- Exploit aplicación visible (T1190): prueba de aplicación web si está en el alcance
+Seleccionar técnicas basadas en alcance y autorización:
+- Phishing (T1566): si la ingeniería social está dentro del alcance
+- Cuentas válidas (T1078): si la prueba de credenciales está dentro del alcance
+- Servicios remotos externos (T1133): VPN, RDP, Citrix si está dentro del alcance
+- Exploit de aplicación públicamente expuesta (T1190): prueba de aplicación web si está dentro del alcance
 
 **Fase 3 — Persistencia y escalada de privilegios:**
 - ¿Cómo mantendría un atacante el acceso después del compromiso inicial?
-- ¿Qué rutas de escalada de privilegios existen? (admin local → domain admin)
+- ¿Qué rutas de escalada de privilegios existen? (admin local → admin de dominio)
 - ¿Qué brechas de detección existen en esta fase?
 
 **Fase 4 — Movimiento lateral:**
 - Pass-the-hash / pass-the-ticket (T1550)
 - Servicios remotos (RDP, SMB, WMI) (T1021)
-- Living off the land — usar herramientas legítimas para evitar la detección
+- Vivir del terreno — usar herramientas legítimas para evitar detección
 
 **Fase 5 — Acceso a joyas de la corona:**
-- ¿Qué datos se pueden acceder desde la posición comprometida?
+- ¿Qué datos pueden ser accedidos desde la posición comprometida?
 - ¿Podemos alcanzar las joyas de la corona definidas?
-- ¿Cómo se vería la exfiltración (T1048)?
+- ¿Cómo se vería la exfiltración? (T1048)
 
-**Scoring de técnicas por técnica:**
+**Puntuación de técnica por técnica:**
 - Esfuerzo: horas para implementar (Bajo / Medio / Alto)
-- Detectabilidad: probabilidad de que los controles actuales lo detecten (Bajo / Medio / Alto)
-- Prioridad furtiva: rank técnicas por esfuerzo × compensación de detectabilidad
+- Detectabilidad: qué tan probable es que los controles actuales lo detecten (Bajo / Medio / Alto)
+- Prioridad de sigilo: clasificar técnicas por compensación esfuerzo × detectabilidad
 
-### Análisis de puntos de estrangulamiento
+### Análisis de puntos críticos
 
-Identifique los nodos críticos donde los defensores pueden detectar o bloquear efectivamente un ataque:
+Identificar los nodos críticos donde los defensores pueden detectar o bloquear más efectivamente un ataque:
 
 ```
-Puntos de estrangulamiento para analizar:
-1. Vectores de acceso inicial: ¿por dónde puede entrar un atacante?
-2. Rutas de escalada de privilegios: ¿qué debe comprometer un atacante para llegar a admin?
+Puntos críticos a analizar:
+1. Vectores de acceso inicial: ¿dónde puede entrar un atacante?
+2. Rutas de escalada de privilegios: ¿qué debe comprometer un atacante para alcanzar admin?
 3. Rutas de movimiento lateral: segmentos de red, relaciones de confianza
-4. Acceso a joyas de la corona: saltos finales a datos o sistemas objetivo
+4. Acceso a joyas de la corona: saltos finales a los datos o sistemas objetivo
 
-Para cada punto de estrangulamiento:
-- Capacidad de detección actual: ¿hay registro/alertas en este punto?
-- Capacidad de prevención actual: ¿hay un control que bloquee esta ruta?
-- Alternativas del atacante: si esta ruta está bloqueada, ¿cuál es el bypass?
-- Recomendación: registre, alerte, bloquee o segmente
+Para cada punto crítico:
+- Capacidad de detección actual: ¿hay logging/alertas en este punto?
+- Capacidad de prevención actual: ¿hay un control que bloquea esta ruta?
+- Alternativas de atacante: si esta ruta está bloqueada, ¿cuál es el bypass?
+- Recomendación: logging, alerta, bloqueo o segmentación
 ```
 
-### Estructura de informe de compromiso
+### Estructura del informe de operación
 
 ```
-# Informe de Compromiso de Red Team — CONFIDENCIAL
+# Informe de Operación de Equipo Rojo — CONFIDENCIAL
 
-## Resumen ejecutivo
-[No técnico: qué se probó, qué se encontró, nivel de riesgo comercial]
-Clasificación de riesgo general: [Crítico / Alto / Medio / Bajo]
+## Resumen Ejecutivo
+[No técnico: qué fue probado, qué fue encontrado, nivel de riesgo empresarial]
+Calificación general de riesgo: [Crítico / Alto / Medio / Bajo]
 Joyas de la corona alcanzadas: [Sí/No — cuáles]
 
-## Alcance de compromiso
+## Alcance de Operación
 - Autorizado por: [nombre, título, fecha]
 - Alcance: [sistemas, redes, métodos]
 - Fuera de alcance: [explícitamente excluido]
 - Duración: [fechas]
-- Equipo: [nombres/funciones]
+- Equipo: [nombres/roles]
 
-## Resumen de ruta de ataque
-[Narrativa: cómo el atacante simulado pasó del acceso inicial a las joyas de la corona]
-[Incluya: qué se detectó, qué no, dónde los defensores podrían haber detenido el ataque]
+## Resumen de Ruta de Ataque
+[Narrativa: cómo el atacante simulado se movió desde acceso inicial a joyas de la corona]
+[Incluir: qué fue detectado, qué no, dónde los defensores podrían haber detenido el ataque]
 
 ## Hallazgos
 | ID | Hallazgo | Técnica MITRE | Severidad | Evidencia |
 |---|---|---|---|---|
-| RT-001 | [nombre] | T1566.001 | Crítico | [captura de pantalla/ref de registro] |
+| RT-001 | [nombre] | T1566.001 | Crítico | [referencia de screenshot/log] |
 
 ## Recomendaciones
-Priorizadas por esfuerzo y reducción de riesgos:
-| Prioridad | Recomendación | Esfuerzo | Reducción de riesgos |
+Priorizadas por esfuerzo y reducción de riesgo:
+| Prioridad | Recomendación | Esfuerzo | Reducción de Riesgo |
 |---|---|---|---|
-| P1 | [solución específica] | Bajo | Alto |
+| P1 | [corrección específica] | Bajo | Alto |
 
-## Brechas de detección
+## Brechas de Detección
 [Dónde la actividad del atacante NO fue detectada — estos son los hallazgos más valiosos]
 
-## Lo que funcionó bien (perspectiva del defensor)
-[Controles que detectaron o bloquearon exitosamente técnicas]
+## Lo Que Funcionó Bien (Perspectiva de Defensor)
+[Controles que exitosamente detectaron o bloquearon técnicas]
 
-## Apéndice: Detalle técnico
-[Desglose técnica por técnica completa para el equipo de ingeniería de seguridad]
+## Apéndice: Detalle Técnico
+[Desglose completo técnica por técnica para el equipo de ingeniería de seguridad]
 ```
 
 ## Caso de uso de ejemplo
 
-**Escenario:** Se le pidió que planifique un compromiso de red team para una empresa de tecnología financiera de 200 personas. Alcance: punto de partida externo, joyas de la corona son la API de procesamiento de pagos y la base de datos PII del cliente. La ingeniería social está excluida. Compromiso de 2 semanas.
+**Escenario:** Te han pedido que planifiques una operación de equipo rojo para una empresa fintech de 200 personas. Alcance: punto de partida externo, las joyas de la corona son la API de procesamiento de pagos y la base de datos de PII de clientes. La ingeniería social está excluida. Operación de 2 semanas.
 
 **Salida del agente:**
 
-**Clasificación de compromiso:** Externo, sin ingeniería social, joyas de la corona definidas.
+**Clasificación de operación:** Externa, sin ingeniería social, joyas de la corona definidas.
 
 **Plan de cadena de muerte:**
 
-Fase 1 — Recon (Días 1-2):
+Fase 1 — Reconocimiento (Días 1-2):
 - Escanear superficie de ataque externa: `nmap`, Shodan, registros de transparencia de certificados
 - Enumerar subdominios (amass, subfinder)
-- Revisar publicaciones de empleos para señales de pila tecnológica
+- Revisar ofertas de empleo para señales de pila de tecnología
 - Verificar GitHub para credenciales o claves API comprometidas accidentalmente (truffleHog)
 
 Fase 2 — Acceso inicial (Días 3-5):
 Técnicas prioritarias (sin ingeniería social):
-- Vulnerabilidades de aplicación web en activos visibles (T1190) — probabilidad más alta
-- Servicios de autenticación expuestos (VPN, paneles de administrador) con credenciales débiles (T1078)
-- Exposición de clave API en repositorios públicos (T1552.001)
+- Vulnerabilidades de aplicación web en activos públicamente expuestos (T1190) — probabilidad más alta
+- Servicios de autenticación expuestos (VPN, paneles de administración) con credenciales débiles (T1078)
+- Exposición de clave API en repos públicos (T1552.001)
 
 Fase 3 — Escalada de privilegios / Movimiento lateral (Días 6-9):
 Si se logra acceso inicial:
 - Escalada de privilegios local a admin en host comprometido
 - Dumping de credenciales si está permitido (LSASS, almacenes de credenciales)
-- Mapear red interna desde posición comprometida — identificar segmento de red de API de pago
+- Mapeo de red interna desde posición comprometida — identificar segmento de red de API de pagos
 
 Fase 4 — Acceso a joyas de la corona (Días 10-12):
-- Intentar alcanzar API de procesamiento de pagos con credenciales elevadas
-- Intentar consultar base de datos PII del cliente desde host comprometido
-- Documentar prueba de acceso sin exfiltrar realmente datos de cliente reales
+- Intento de alcanzar API de procesamiento de pagos con credenciales elevadas
+- Intento de consultar base de datos de PII de clientes desde host comprometido
+- Documentar evidencia de acceso sin exfiltrar realmente datos de clientes
 
-Fase 5 — Generación de informes (Días 13-14):
+Fase 5 — Informe (Días 13-14):
 - Reconstrucción de cronología
-- Análisis de brecha de detección (qué fue/no fue capturado por SIEM)
+- Análisis de brechas de detección (qué fue/no fue capturado por SIEM)
 - Lista de remediación priorizada
 
-**Puntos de estrangulamiento de mayor valor para probar:** autenticación de aplicación web externa, segmentación de red interna entre DMZ y sistemas de pago, capacidad de detección para dumping de credenciales.
+**Puntos críticos de mayor valor para probar:** autenticación de aplicación web externa, segmentación de red interna entre DMZ y sistemas de pagos, capacidad de detección para dumping de credenciales.
 
 ---

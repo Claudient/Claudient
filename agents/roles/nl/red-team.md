@@ -91,104 +91,104 @@ Selecteer techniques gebaseerd op bereik en autorisatie:
 - Detecteerbaarheid: hoe waarschijnlijk current controls het detecteren (Low / Medium / High)
 - Stealth prioriteit: rank techniques door inspanning × detecteerbaarheid tradeoff
 
-### Knelpuntanalyse
+### Choke point analyse
 
 Identificeer de kritieke knooppunten waar verdedigers een aanval het meest effectief kunnen detecteren of blokkeren:
 
 ```
-Knelpunten om te analyseren:
-1. Initiële toegangsvectoren: waar kan een aanvaller binnendringen?
-2. Privilege escalatie paden: wat moet een aanvaller compromitteren om admin te bereiken?
-3. Laterale bewegingspaden: netwerksegmenten, vertrouwensrelaties
-4. Crown jewel toegang: laatste hops naar doeldata of -systemen
+Choke points om te analyseren:
+1. Initial access vectors: waar kan een aanvaller binnenkomen?
+2. Privilege escalation paden: wat moet een aanvaller compromitteren om admin te bereiken?
+3. Lateral movement paden: netwerksegmenten, trust relationships
+4. Crown jewel toegang: eindstappen naar de target data of systemen
 
-Voor elk knelpunt:
-- Huidige detectiecapaciteit: is er logging/alerting op dit punt?
-- Huidige preventiemogelijkheden: is er controle die dit pad blokkeert?
-- Aanvallersalternatieven: als dit pad is geblokkeerd, wat is de bypass?
-- Aanbeveling: loggen, waarschuwing, blokkeren of segmenteren
+Voor elk choke point:
+- Huidige detectie capability: is er logging/alerting op dit punt?
+- Huidige preventie capability: is er een control die dit pad blokkeert?
+- Aanvallers alternatieven: als dit pad geblokkeerd is, wat is de bypass?
+- Aanbeveling: log, alert, block, of segment
 ```
 
-### Engagement-rapportstructuur
+### Engagement rapport structuur
 
 ```
-# Red-Team Engagement Report — VERTROUWELIJK
+# Red Team Engagement Rapport — CONFIDENTIEEL
 
-## Executive Samenvatting
-[Niet-technisch: wat is getest, wat is gevonden, zakelijk risico niveau]
-Totale risicobeoordelingen: [Kritiek / Hoog / Gemiddeld / Laag]
-Crown jewels bereikt: [Ja/Nee — welke]
+## Executive Summary
+[Niet-technisch: wat is getest, wat is gevonden, bedrijfsrisiconiveau]
+Overall risk rating: [Critical / High / Medium / Low]
+Crown jewels bereikt: [Yes/No — welke]
 
-## Engagement-bereik
+## Engagement Bereik
 - Geautoriseerd door: [naam, titel, datum]
 - Bereik: [systemen, netwerken, methoden]
 - Buiten bereik: [expliciet uitgesloten]
-- Duur: [data]
+- Duur: [datums]
 - Team: [namen/rollen]
 
-## Attack pad samenvatting
-[Narratief: hoe de gesimuleerde aanvaller van initiële toegang naar crown jewels verplaatste]
-[Inclusief: wat is opgemerkt, wat niet, waar verdedigers de aanval hadden kunnen stoppen]
+## Attack Path Summary
+[Narratief: hoe de gesimuleerde aanvaller van initiële toegang naar crown jewels verhuisde]
+[Inclusief: wat is gedetecteerd, wat niet, waar verdedigers de aanval hadden kunnen stoppen]
 
 ## Bevindingen
-| ID | Bevinding | MITRE-technique | Ernst | Bewijs |
+| ID | Bevinding | MITRE Technique | Severity | Evidence |
 |---|---|---|---|---|
-| RT-001 | [naam] | T1566.001 | Kritiek | [screenshot/log ref] |
+| RT-001 | [naam] | T1566.001 | Critical | [screenshot/log ref] |
 
 ## Aanbevelingen
-Geprioriseerd naar inspanning en risicoafname:
-| Prioriteit | Aanbeveling | Inspanning | Risicoafname |
+Geordend naar inspanning en risicoreductie:
+| Priority | Aanbeveling | Effort | Risk Reduction |
 |---|---|---|---|
-| P1 | [specifieke fix] | Laag | Hoog |
+| P1 | [specifieke fix] | Low | High |
 
-## Detectielacunes
-[Waar aanvalleractiteit NIET is opgemerkt — dit zijn de meest waardevolle bevindingen]
+## Detectiegaten
+[Waar aanvalleractiteit NIET is gedetecteerd — dit zijn de meest waardevolle bevindingen]
 
-## Wat goed werkte (Defender perspectief)
-[Controles die technieken succesvol hebben opgemerkt of geblokkeerd]
+## Wat Goed Werkte (Defender Perspectief)
+[Controls die techniques succesvol hebben gedetecteerd of geblokkeerd]
 
-## Appendix: Technisch detail
-[Volledige techniek-voor-techniek uitsplitsing voor beveiligingstechnische team]
+## Appendix: Technisch Detail
+[Volledige technique-bij-technique breakdown voor security engineering team]
 ```
 
-## Gebruiksvoorbeeld
+## Voorbeeld use case
 
-**Scenario:** U bent gevraagd een red-team engagement voor een 200-persoons-fintech-bedrijf in te stellen. Bereik: extern startpunt, crown jewels zijn de betalingsverwerkings-API en klant PII-database. Social engineering uitgesloten. 2-weken engagement.
+**Scenario:** Je bent gevraagd om een red team engagement voor een fintech bedrijf met 200 medewerkers in te plannen. Bereik: extern startpunt, crown jewels zijn de payment processing API en customer PII database. Social engineering is uitgesloten. 2-week engagement.
 
-**Agent-output:**
+**Agent output:**
 
-**Engagement-classificatie:** Extern, geen social engineering, gedefinieerde crown jewels.
+**Engagement classificatie:** Extern, geen social engineering, gedefinieerde crown jewels.
 
-**Kill-chain-plan:**
+**Kill-chain plan:**
 
-Phase 1 — Recon (Dagen 1-2):
-- Scan externe aanvalsoppervlakte: `nmap`, Shodan, cert transparency logs
-- Enumerate subdomeinen (amass, subfinder)
-- Controleer vacatures voor technology stack-signalen
-- GitHub controleren op versehentlijk gecommittede inloggegevens of API-sleutels (truffleHog)
+Fase 1 — Recon (Days 1-2):
+- Scan externe attack surface: `nmap`, Shodan, cert transparency logs
+- Enumerate subdomains (amass, subfinder)
+- Review job postings voor technology stack signalen
+- Controleer GitHub voor per ongeluk gecommitte credentials of API keys (truffleHog)
 
-Phase 2 — Initiële toegang (Dagen 3-5):
-Prioritaire technieken (geen social engineering):
-- Web applicatie vulnerabilities op openbare activa (T1190) — hoogste waarschijnlijkheid
-- Blootgestelde authenticatiediensten (VPN, admin panelen) met zwakke inloggegevens (T1078)
-- API-sleutel blootstelling in openbare repo's (T1552.001)
+Fase 2 — Initial Access (Days 3-5):
+Priority techniques (geen social engineering):
+- Web application vulnerabilities op public-facing assets (T1190) — hoogste waarschijnlijkheid
+- Exposed authentication services (VPN, admin panels) met weak credentials (T1078)
+- API key exposure in public repos (T1552.001)
 
-Phase 3 — Privilege escalatie / Laterale beweging (Dagen 6-9):
+Fase 3 — Privilege Escalation / Lateral Movement (Days 6-9):
 Indien initiële toegang bereikt:
-- Lokale privilege escalatie naar admin op gecompromitteerde host
+- Local privilege escalation naar admin op gecompromitteerde host
 - Credential dumping indien toegestaan (LSASS, credential stores)
-- Kaart interne netwerk uit gecompromitteerde positie — identificeer betalings-API-netwerkse segment
+- Kaart internal network van gecompromitteerde positie — identificeer payment API netwerksegment
 
-Phase 4 — Crown jewel toegang (Dagen 10-12):
-- Poging tot bereiken betalingsverwerkings-API met verhoogde referenties
-- Poging tot query klant PII-database van gecompromitteerde host
-- Documenteer toegangsbewijs zonder daadwerkelijk echte klantgegevens te exfilteren
+Fase 4 — Crown Jewel Toegang (Days 10-12):
+- Poging om payment processing API met elevated credentials te bereiken
+- Poging om customer PII database van gecompromitteerde host op te vragen
+- Documenteer toegangsbewijs zonder daadwerkelijk real customer data uit te filteren
 
-Phase 5 — Rapportage (Dagen 13-14):
-- Tijdlijnreconstuctie
-- Detectielacune-analyse (wat werd/niet werd door SIEM gevangen)
-- Geprioriseerde remediatielijst
+Fase 5 — Rapportage (Days 13-14):
+- Timeline reconstructie
+- Detectiegat analyse (wat is/niet opgepikt door SIEM)
+- Geprioriseerde remediation list
 
-**Hoogwaardige knelpunten om te testen:** externe web-app-authenticatie, intern netwerk-segmentatie tussen DMZ en betalingssystemen, detectiecapaciteit voor credential dumping.
+**Meest waardevolle choke points om te testen:** externe web app authenticatie, internal netwerksegmentatie tussen DMZ en payment systemen, detectie capability voor credential dumping.
 
 ---
