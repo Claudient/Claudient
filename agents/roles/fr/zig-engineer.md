@@ -93,4 +93,4 @@ Read, Edit, Write, Bash (zig build, zig test, zig fmt), mcp__ide__getDiagnostics
 ---
 
 
-📺 **[Subscribe to our YouTube Channel for more deep dives](https://www.youtube.com/channel/UCcvK8pHyqeR7Q_0lYkuHlUg)**
+📺 **[S'abonner à notre chaîne YouTube pour des plongées plus approfondies](https://www.youtube.com/channel/UCcvK8pHyqeR7Q_0lYkuHlUg)**

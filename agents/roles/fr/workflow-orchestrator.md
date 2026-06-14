@@ -175,22 +175,22 @@ async function codeReviewOrchestration(prNumber: string) {
 ### Gestion des erreurs et compensation
 
 ```typescript
-// Saga pattern with compensation
+// Modèle Saga avec compensation
 async function saga(steps: SagaStep[]) {
   const completed: CompensationFn[] = []
   
   for (const step of steps) {
     try {
       const result = await step.execute()
-      completed.unshift(step.compensate(result))  // push compensation to front
+      completed.unshift(step.compensate(result))  // pousser la compensation au front
     } catch (error) {
-      // Run all compensations in reverse order
+      // Exécuter toutes les compensations dans l'ordre inverse
       for (const compensate of completed) {
         try {
           await compensate()
         } catch (compensationError) {
-          console.error('Compensation failed:', compensationError)
-          // Alert on-call — manual intervention needed
+          console.error('Compensation échouée :', compensationError)
+          // Alerter l'équipe on-call — intervention manuelle nécessaire
         }
       }
       throw new SagaFailedError(step.name, error)
@@ -198,7 +198,7 @@ async function saga(steps: SagaStep[]) {
   }
 }
 
-// Usage
+// Utilisation
 await saga([
   {
     execute: () => chargeCard(amount),
@@ -215,34 +215,34 @@ await saga([
 ])
 ```
 
-## Exemple d'utilisation
+## Exemple de cas d'utilisation
 
-**Scénario :** Créer un flux de travail de publication de contenu : brouillon → examen → approbation → publication → notification.
+**Scénario :** Construire un flux de travail de publication de contenu : brouillon → avis → approbation → publication → notification.
 
-**Sortie de l'agent :**
+**Résultat de l'agent :**
 
 ```
-Workflow: Content Publishing Pipeline
+Flux de travail : Pipeline de publication de contenu
 
-Steps:
-1. [AUTHOR] Submit draft → triggers workflow
-2. [AUTO] AI grammar + SEO check → flag issues → author can fix or override
-3. [EDITOR] Review gate — wait for editor approval (up to 48h, then escalate)
-   - Approved → continue
-   - Rejected with comments → back to author (max 3 revision cycles)
-4. [AUTO] Final formatting + metadata → generate preview URL
-5. [LEGAL] Optional legal review gate — only for topics in legal watchlist
-6. [AUTO] Schedule publish → choose optimal time based on audience timezone
-7. [AUTO] Publish → push to CMS, sitemap, CDN invalidation
-8. [AUTO] Notify → social media queue, email newsletter, Slack #published
+Étapes :
+1. [AUTEUR] Soumettre le brouillon → déclenche le flux de travail
+2. [AUTO] Vérification de la grammaire et du SEO → signaler les problèmes → l'auteur peut corriger ou ignorer
+3. [ÉDITEUR] Portail d'avis — attendre l'approbation de l'éditeur (jusqu'à 48h, puis escalader)
+   - Approuvé → continuer
+   - Rejeté avec commentaires → retour à l'auteur (3 cycles de révision maximum)
+4. [AUTO] Formatage final + métadonnées → générer l'URL d'aperçu
+5. [LÉGAL] Portail d'avis juridique optionnel — seulement pour les sujets dans la liste de surveillance légale
+6. [AUTO] Planifier la publication → choisir le moment optimal en fonction du fuseau horaire du public
+7. [AUTO] Publier → pousser vers le CMS, le plan du site, l'invalidation du CDN
+8. [AUTO] Notifier → file d'attente des réseaux sociaux, lettre d'information par email, Slack #published
 
-Failure handling:
-- CMS publish fails → retry 3x with exponential backoff → if still fails → alert editor + keep in 'publish-pending' state
-- Social media fails → non-critical, log and skip, do not block
-- All failures logged to audit trail for compliance
+Gestion des défaillances :
+- La publication sur le CMS échoue → nouvelle tentative 3x avec backoff exponentiel → si toujours en échec → alerter l'éditeur + rester en état 'publish-pending'
+- Les réseaux sociaux échouent → non-critique, enregistrer et ignorer, ne pas bloquer
+- Tous les échecs enregistrés dans la piste d'audit pour la conformité
 
-Tools needed: Temporal (orchestration), CMS API, Slack, social media APIs
-Timeline: 2-day max from draft to publish (configurable per content type)
+Outils nécessaires : Temporal (orchestration), API CMS, Slack, API des réseaux sociaux
+Chronologie : 2 jours maximum du brouillon à la publication (configurable par type de contenu)
 ```
 
 ---

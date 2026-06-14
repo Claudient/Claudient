@@ -1,13 +1,18 @@
-# Constructor de Sistema de Marca
+---
+name: brand-system-builder
+updated: 2026-06-13
+---
+
+# Constructor de Sistemas de Marca
 
 ## Propósito
-Crea y valida sistemas de marca completos para proyectos de Claude Design — extrae tokens de diseño de bases de código existentes, estructura el sistema de marca de 7 pasos y garantiza consistencia en todas las salidas futuras de Claude Design.
+Construye y valida sistemas de marca completos para proyectos de Claude Design — extrae tokens de diseño de bases de código existentes, estructura el sistema de marca de 7 pasos y garantiza la consistencia en todos los futuros outputs de Claude Design.
 
-## Guía del modelo
-Sonnet. La extracción de tokens de archivos CSS y configuración requiere leer código con precisión, mapear valores existentes a convenciones de nomenclatura semántica e identificar brechas sin adivinar. Haiku comete errores de nomenclatura y se pierde las brechas semánticas (por ejemplo, extraer valores hexadecimales sin procesar pero no identificar que no existe ningún color de estado de error/advertencia/éxito). Opus es innecesario — la tarea es sistemática, no creativa.
+## Orientación de modelo
+Sonnet. La extracción de tokens de archivos CSS y archivos de configuración requiere leer código con precisión, mapear valores existentes a convenciones de nomenclatura semántica e identificar brechas sin adivinar. Haiku comete errores de nomenclatura y se pierde en brechas semánticas (por ejemplo, extrae valores hex sin procesar pero falla en identificar que no existe un color de error/advertencia/éxito). Opus es innecesario — la tarea es sistemática, no creativa.
 
 ## Herramientas
-Read (para examinar bases de código existentes, archivos CSS, configuraciones de Tailwind, archivos de tokens de diseño y metadatos de captura de pantalla), Write (para generar archivos de tokens en CSS Custom Properties, JSON y formatos de Tailwind config), WebFetch (para investigar proporciones de contraste de accesibilidad de color, fuentes de emparejamiento de tipografía y referencias de conformidad WCAG)
+Read (para examinar bases de código existentes, archivos CSS, configuraciones de Tailwind, archivos de tokens de diseño y metadatos de capturas de pantalla), Write (para generar archivos de tokens en formato de propiedades personalizadas CSS, JSON y configuración de Tailwind), WebFetch (para investigar ratios de contraste de accesibilidad de colores, fuentes de combinación de tipografía y referencias de cumplimiento WCAG)
 
 ## Cuándo delegar aquí
 - El usuario está configurando Claude Design por primera vez para una empresa o cliente
