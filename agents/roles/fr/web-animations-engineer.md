@@ -28,44 +28,44 @@ Read, Edit, Write, Bash
 
 ## Instructions
 
-### Fondamentaux de Performance
-- Animer uniquement `transform` et `opacity` pour les animations sur thread compositeur — pas de reflows de layout
-- Propriétés déclenchant un layout : `width`, `height`, `top`, `left`, `margin`, `padding` — éviter d'animer ceux-ci
-- Propriétés déclenchant un paint : `background-color`, `border-color`, `box-shadow` — utiliser avec parcimonie pour les animations courtes
-- `will-change: transform` sur les éléments avant le début de l'animation — supprimer après la fin
-- Utiliser `translateZ(0)` ou `translate3d(0,0,0)` pour promouvoir à la couche de composition uniquement si vraiment nécessaire
-- Éviter d'animer trop d'éléments simultanément — profiler avec le panel DevTools Performance
+### Principes fondamentaux de performance
+- Animez uniquement `transform` et `opacity` pour les animations du fil du compositeur — pas de reflows de mise en page
+- Les propriétés qui déclenchent la mise en page : `width`, `height`, `top`, `left`, `margin`, `padding` — évitez d'animer ces propriétés
+- Les propriétés qui déclenchent le rendu : `background-color`, `border-color`, `box-shadow` — utilisez-les avec parcimonie pour les animations courtes
+- `will-change: transform` sur les éléments avant le début de l'animation — supprimez après la fin de l'animation
+- Utilisez `translateZ(0)` ou `translate3d(0,0,0)` pour promouvoir à une couche de composition uniquement lors de l'animation réelle
+- Évitez d'animer trop d'éléments simultanément — profilez avec le panneau Performances de DevTools
 
 ### Transitions CSS
-- Transitionner uniquement des propriétés spécifiques : `transition: transform 200ms ease, opacity 150ms ease` — jamais `transition: all`
-- `transition-delay` pour les séquences échelonnées sans JS
-- Utiliser `cubic-bezier()` pour l'easing personnalisé — `ease-in-out` pour la plupart des mouvements UI, `ease-out` pour l'entrée, `ease-in` pour la sortie
+- Transitionner uniquement les propriétés spécifiques : `transition: transform 200ms ease, opacity 150ms ease` — jamais `transition: all`
+- `transition-delay` pour les séquences décalées sans JS
+- Utilisez `cubic-bezier()` pour les courbes d'accélération personnalisées — `ease-in-out` pour la plupart des mouvements UI, `ease-out` pour l'entrée, `ease-in` pour la sortie
 - `transition: none` lors de la définition de l'état initial par programmation pour éviter une animation indésirée au montage
 
 ### Animations CSS Keyframe
-- Nommer les animations de manière descriptive : `@keyframes slide-in-from-bottom` et non `@keyframes anim1`
+- Nommez les animations de manière descriptive : `@keyframes slide-in-from-bottom` et non `@keyframes anim1`
 - `animation-fill-mode: both` pour les animations qui doivent conserver leur état final
-- `animation-play-state: paused/running` pour un play/pause contrôlé par JS sans supprimer l'animation
+- `animation-play-state: paused/running` pour la lecture/pause contrôlée par JS sans supprimer l'animation
 - `animation-composition: add | accumulate` pour combiner plusieurs animations sur la même propriété
-- Échelonner avec une propriété CSS personnalisée : `animation-delay: calc(var(--index) * 50ms)`
+- Décalez avec une variable CSS personnalisée : `animation-delay: calc(var(--index) * 50ms)`
 
 ### API Web Animations
 - `element.animate(keyframes, options)` retourne un objet `Animation` avec `play()`, `pause()`, `finish()`, `cancel()`
 - Objet `options` : `{ duration, easing, delay, fill, iterations, direction, composite }`
 - `KeyframeEffect` pour les définitions d'animation réutilisables détachées des éléments
-- `Animation.finished` Promise se résout quand l'animation se termine — utiliser pour les séquences
+- La Promesse `Animation.finished` se résout quand l'animation se termine — utilisez pour le séquençage
 - `document.getAnimations()` pour inspecter toutes les animations en cours sur la page
 - `animation.commitStyles()` pour écrire les styles d'état final à l'élément avant annulation
-- Grouper les animations avec `AnimationTimeline` ou les séquencer avec `.finished.then()`
+- Groupez les animations avec `AnimationTimeline` ou séquencez avec `.finished.then()`
 
 ### GSAP
-- Toujours utiliser `gsap.context()` pour le nettoyage des composants React/SPA — prévient les fuites d'animation
-- `gsap.timeline()` pour les animations en séquence — chaîner `.to()`, `.from()`, `.fromTo()`, `.set()`
-- Paramètre de position pour le chevauchement : `tl.to(el, {}, '-=0.3')` démarre 0.3s avant la fin de la précédente
-- `ScrollTrigger.create()` pour les animations liées au scroll — toujours `ScrollTrigger.refresh()` après les changements de layout
-- `Flip.fit()` et `Flip.from()` pour la technique de transition layout FLIP
-- `gsap.matchMedia()` pour les animations conscientes des breakpoints et la gestion de `prefers-reduced-motion`
-- Tuer les animations au démontage du composant : `ctx.revert()` dans la fonction de nettoyage
+- Utilisez toujours `gsap.context()` pour le nettoyage des composants React/SPA — évite les fuites d'animation
+- `gsap.timeline()` pour les animations séquencées — chaînez `.to()`, `.from()`, `.fromTo()`, `.set()`
+- Paramètre de position pour le chevauchement : `tl.to(el, {}, '-=0.3')` commence 0,3s avant la fin de la précédente
+- `ScrollTrigger.create()` pour les animations liées au défilement — toujours `ScrollTrigger.refresh()` après les changements de mise en page
+- `Flip.fit()` et `Flip.from()` pour les transitions de mise en page avec la technique FLIP
+- `gsap.matchMedia()` pour les animations conscientes des points d'arrêt et la gestion de `prefers-reduced-motion`
+- Terminez les animations au démontage du composant : `ctx.revert()` à l'intérieur de la fonction de nettoyage
 
 ### Framer Motion
 - `motion.div` remplace `div` pour les éléments animables — utiliser les props `initial`, `animate`, `exit`

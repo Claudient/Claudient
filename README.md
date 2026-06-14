@@ -1,6 +1,6 @@
 # Claude Code Skills, Agents & Plugins — Claudient
 
-**Claudient** is the largest open-source knowledge base for **Claude Code** — Anthropic's AI coding CLI. It ships 384+ domain skills, 182+ specialist agents, 42 pre-wired workspace stacks, 40 MCP configs, 100+ slash commands, hooks, and workflows, all installable in 30 seconds. No stack re-explaining. Claude already knows your domain.
+**Claudient** is the largest open-source knowledge base for **Claude Code** — Anthropic's AI coding CLI. It ships 400+ domain skills, 182+ specialist agents, 42 pre-wired workspace stacks, 40 MCP configs, 100+ slash commands, hooks, and workflows, all installable in 30 seconds. No stack re-explaining. Claude already knows your domain.
 
 **New to Claude Code?** Claude Code is Anthropic's official command-line AI assistant for software development — it reads your codebase, runs commands, edits files, and completes tasks autonomously inside your terminal or IDE. Claudient is the open-source community library that extends it with expert-level skills across every stack and domain.
 
@@ -9,7 +9,7 @@
 [![GitHub Stars](https://img.shields.io/github/stars/Claudient/Claudient?color=f97316&label=stars)](https://github.com/Claudient/Claudient)
 [![License: AGPL-3.0](https://img.shields.io/badge/code-AGPL--3.0-3b82f6.svg)](LICENSE-CODE)
 [![Content License: CC-BY-SA-4.0](https://img.shields.io/badge/content-CC--BY--SA--4.0-ec4899.svg)](LICENSE-CONTENT)
-[![Skills](https://img.shields.io/badge/skills-384+-f97316)](#skills-by-category)
+[![Skills](https://img.shields.io/badge/skills-400+-f97316)](#skills-by-category)
 [![Agents](https://img.shields.io/badge/agents-182+-ec4899)](#agents)
 [![Commands](https://img.shields.io/badge/commands-100+-a855f7)](#slash-commands)
 [![Plugins](https://img.shields.io/badge/plugin_marketplace-19_plugins-22c55e)](#install-as-a-claude-code-plugin)
@@ -21,7 +21,7 @@
 
 **Stop explaining your stack to Claude every session.**
 
-Claudient is the largest open-source knowledge base for **Claude Code** — 384+ skills, 182+ specialist agents, 100+ slash commands, 100+ guides, 40 hooks, 45 workflows, 83 project structures, 42 workspace stacks, 10 personas, 32 rules, 40 MCP server configs, 10 automation routines, 20 annotated CLAUDE.md examples, cross-harness adapters (Cursor/Windsurf/Codex/Gemini/Copilot), plus output styles, themes, statuslines, keybindings, settings templates, and an Agent SDK pack — all installable in 30 seconds.
+Claudient is the largest open-source knowledge base for **Claude Code** — 400+ skills, 182+ specialist agents, 100+ slash commands, 100+ guides, 40 hooks, 45 workflows, 83 project structures, 42 workspace stacks, 10 personas, 32 rules, 40 MCP server configs, 10 automation routines, 20 annotated CLAUDE.md examples, cross-harness adapters (Cursor/Windsurf/Codex/Gemini/Copilot), plus output styles, themes, statuslines, keybindings, settings templates, and an Agent SDK pack — all installable in 30 seconds.
 
 ```bash
 # Install as a Claude Code plugin marketplace (recommended)
@@ -53,7 +53,7 @@ Claudient ships as a native Claude Code **plugin marketplace**. Add it once, the
 /plugin install claudient-everything@claudient
 ```
 
-**19 plugins, 380+ auto-invoking skills, 182 agents, 100 slash commands:**
+**19 plugins, 400+ auto-invoking skills, 182 agents, 100 slash commands:**
 
 | Plugin | Skills | Plugin | Skills |
 |---|---|---|---|
@@ -160,7 +160,7 @@ Claude Code is Anthropic's official command-line AI assistant for software devel
 Skills are markdown files in `.claude/commands/` (or loaded via the plugin system) that define reusable expert behaviors. When triggered by a slash command or keywords, Claude Code reads the skill and applies its domain expertise to your current context — no repeated prompting required.
 
 ### How is Claudient different from writing a CLAUDE.md file?
-A `CLAUDE.md` sets project-level context for one repo. Claudient skills are domain-level and reusable across every project — 384+ skills covering FastAPI, Kubernetes, HubSpot, React, Terraform, and hundreds more stacks.
+A `CLAUDE.md` sets project-level context for one repo. Claudient skills are domain-level and reusable across every project — 400+ skills covering FastAPI, Kubernetes, HubSpot, React, Terraform, and hundreds more stacks.
 
 ### Does Claudient work with Cursor, GitHub Copilot, or other AI coding tools?
 Claudient is designed for Claude Code (CLI and IDE extensions). Cross-harness adapters in [`compatibility/`](compatibility/) also support Cursor, Windsurf, Codex CLI, Gemini Code Assist, and GitHub Copilot.
@@ -335,7 +335,7 @@ Claudient/
 │   ├── claudient-personas/         # 10 personas
 │   └── claudient-everything/       # meta-bundle (all domains)
 │
-├── skills/                   # 384+ auto-invoking domain skills
+├── skills/                   # 400+ auto-invoking domain skills
 │   ├── backend/              # Next.js, FastAPI, Go, Rust, .NET, Rails, Laravel, Flutter
 │   ├── devops-infra/         # Kubernetes, Terraform, Docker, CI/CD, AWS/GCP/Azure, Helm
 │   ├── ai-engineering/       # Claude API, RAG, LangGraph, MCP builder, Agent Teams, Ultraplan
@@ -650,9 +650,9 @@ npx claudient add agents
 
 <a name="skills-by-category"></a>
 
-## Skills by Category — 384+ Claude Code Skills
+## Skills by Category — 400+ Claude Code Skills
 
-**384+ skills · 19 categories · EN · FR · DE · NL · ES**
+**400+ skills · 19 categories · EN · FR · DE · NL · ES**
 
 | Category | Count | Top skills |
 |---|---|---|
@@ -716,7 +716,7 @@ Event-driven automation for Claude Code — runs outside Claude's context as rea
 
 | Type | Count |
 |---|---|
-| **Skills** | **384+** |
+| **Skills** | **400+** |
 | **Agents** | **182+** |
 | **Workspace Stacks** | **42** |
 | **Hooks** | **40** |

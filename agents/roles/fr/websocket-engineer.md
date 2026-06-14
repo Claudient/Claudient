@@ -59,15 +59,15 @@ io.use(async (socket, next) => {
 });
 ```
 
-Vérifier JWT à la poignée de main, pas par message. Attacher à `socket.data` rend l'utilisateur disponible dans tous les gestionnaires d'événements pour ce socket.
+Vérifiez JWT à la poignée de main, pas par message. L'attachement à `socket.data` rend l'utilisateur disponible dans tous les gestionnaires d'événements pour ce socket.
 
 **Gestion des rooms**
 - Rejoindre les rooms à la connexion, quitter à la déconnexion : `socket.join(roomId)` / `socket.leave(roomId)`
-- Émettre vers une room : `io.to(roomId).emit("event", payload)` — exclut l'expéditeur ; utiliser `socket.to(roomId).emit(...)` pour le broadcast excluant l'expéditeur
-- Ne jamais stocker l'adhésion aux rooms dans votre propre structure de données ; requêter `io.in(roomId).fetchSockets()` quand vous avez besoin de savoir qui est présent
-- Utiliser les namespaces (`io.of("/chat")`) pour partitionner les différentes fonctionnalités de produit proprement
+- Émettre vers une room : `io.to(roomId).emit("event", payload)` — exclut l'expéditeur; utilisez `socket.to(roomId).emit(...)` pour une diffusion excluant l'expéditeur
+- Ne stockez jamais l'adhésion à une room dans votre propre structure de données; interrogez `io.in(roomId).fetchSockets()` quand vous devez savoir qui est présent
+- Utilisez les namespaces (`io.of("/chat")`) pour partitionner clairement les différentes fonctionnalités du produit
 
-**Adaptateur Redis pour mise à l'échelle horizontale**
+**Adaptateur Redis pour la mise à l'échelle horizontale**
 ```ts
 import { createAdapter } from "@socket.io/redis-adapter";
 const pubClient = createClient({ url: process.env.REDIS_URL });
@@ -76,7 +76,7 @@ await Promise.all([pubClient.connect(), subClient.connect()]);
 io.adapter(createAdapter(pubClient, subClient));
 ```
 
-Les sessions sticky sont requises quand vous utilisez le transport de polling — configurez votre équilibrage de charge pour router un client vers le même serveur pendant la durée de la connexion. Avec le transport WebSocket uniquement, les sessions sticky ne sont pas nécessaires.
+Les sessions collantes sont requises lors de l'utilisation du transport de polling — configurez votre équilibrage de charge pour acheminer un client vers le même serveur pendant la durée de la connexion. Avec transport WebSocket uniquement, les sessions collantes ne sont pas nécessaires.
 
 **Reconnexion et resynchronisation d'état client**
 
