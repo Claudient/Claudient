@@ -53,48 +53,48 @@ Decken Sie alle drei großen Provider mit providerspezifischen Überprüfungen a
 - CloudTrail aktiviert mit Log-Datei-Validierung in allen Regionen
 - GuardDuty aktiviert
 
-### GCP Sicherheitscheckliste
-- Keine Service Account Keys für Produktionsarbeitslasten — Workload Identity verwenden
-- Keine Editor/Owner Bindings auf Service Accounts
+### GCP-Sicherheitsprüfliste
+- Keine Service-Account-Schlüssel für Production-Workloads — verwenden Sie Workload Identity
+- Keine Editor/Owner-Bindings bei Service-Accounts
 - Org-Level VPC Service Controls für sensible APIs
 - Cloud Audit Logs: Admin Activity + Data Access aktiviert
-- GCS Buckets: einheitlicher Bucket-Level Zugriff, keine allUsers oder allAuthenticatedUsers ACLs
-- Binary Authorization auf GKE Clustern aktiviert
+- GCS-Buckets: einheitliches Bucket-Level-Zugriff, keine allUsers oder allAuthenticatedUsers ACLs
+- Binary Authorization auf GKE-Clustern aktiviert
 
-### Azure Sicherheitscheckliste
-- Storage Accounts: öffentlichen Blob-Zugriff deaktivieren, HTTPS-only erzwingen
+### Azure-Sicherheitsprüfliste
+- Speicherkonten: öffentlichen Blob-Zugriff deaktivieren, nur HTTPS erzwingen
 - Key Vault: Firewall aktiviert, Soft Delete + Purge Protection aktiviert
-- NSGs: kein Inbound 0.0.0.0/0 auf Non-Web Ports
-- Microsoft Defender für Cloud Standard Tier aktiviert
-- Azure AD: MFA erzwungen, keine Legacy Auth Protokolle
-- Managed Identities über Service Principal Client Secrets
+- NSGs: Kein eingehender 0.0.0.0/0 auf Nicht-Web-Ports
+- Microsoft Defender for Cloud Standard Tier aktiviert
+- Azure AD: MFA erzwungen, keine Legacy-Authentifizierungsprotokolle
+- Verwaltete Identitäten über Service Principal Client-Geheimnisse
 
-### IaC Review Muster
+### IaC-Überprüfungsmuster
 Beim Lesen von Terraform/CloudFormation:
-1. Nach `0.0.0.0/0` in Ingress Rules suchen — jede Instanz flaggen
-2. Nach `"*"` in IAM Action Feldern suchen — Wildcards in Produktionsrichtlinien flaggen
+1. Nach `0.0.0.0/0` in Eingangsregeln suchen — alle Instanzen flaggen
+2. Nach `"*"` in IAM-Aktionsfeldern suchen — Wildcards in Production-Richtlinien flaggen
 3. Nach `public = true` oder `publicly_accessible = true` auf Datenbanken suchen
-4. Encryption_at_rest und Encryption_in_transit Einstellungen auf Datenspeichern überprüfen
-5. KMS Schlüsselrotation auf benutzerdefinierten Schlüsseln überprüfen ist aktiviert
+4. Überprüfen Sie encryption_at_rest und encryption_in_transit-Einstellungen auf Datenspeichern
+5. Überprüfen Sie, ob KMS-Schlüsselrotation auf kundengesteuerten Schlüsseln aktiviert ist
 
-### Schweregradufstufung
-- **Kritisch**: Öffentliche Exposition sensibler Daten, Root/Admin Anmeldeinformationen zugänglich, MFA auf privilegierten Konten deaktiviert
-- **Hoch**: Übermäßig breite IAM Berechtigungen, unverschlüsselte sensible Datenspeicher, keine Audit-Protokollierung
-- **Mittel**: Fehlende Flow Logs, IMDSv1 noch aktiviert, Standard VPCs in Verwendung
-- **Niedrig**: Fehlende Tags, nicht erzwungene Richtlinien, Protokollierungslücken bei nicht-sensiblen Ressourcen
+### Severity-Klassifizierung
+- **Kritisch**: Öffentliche Exposition von sensiblen Daten, Root/Admin-Anmeldedaten zugänglich, MFA auf privilegierten Accounts deaktiviert
+- **Hoch**: Zu breite IAM-Berechtigungen, unverschlüsselte sensible Datenspeicher, keine Audit-Protokollierung
+- **Mittel**: Fehlende Flow Logs, IMDSv1 noch aktiviert, Standard-VPCs in Gebrauch
+- **Niedrig**: Fehlende Tags, nicht erzwungene Richtlinien, Protokollierungslücken auf Nicht-Sensible-Ressourcen
 
 ### Ausgabeformat
 Pro Ergebnis:
-- **Anbieter**: AWS / GCP / Azure
+- **Provider**: AWS / GCP / Azure
 - **Service**: z.B. S3, IAM, GKE
-- **Schweregrad**: Kritisch / Hoch / Mittel / Niedrig
+- **Severity**: Kritisch / Hoch / Mittel / Niedrig
 - **Ressource**: Ressourcenname oder ARN/Pfad
-- **Problem**: prägnante Beschreibung
-- **Behebung**: genaue Konfigurationsänderung oder IaC Snippet
+- **Issue**: prägnante Beschreibung
+- **Fix**: genaue Konfigurationsänderung oder IaC-Snippet
 
-## Beispiel Anwendungsfall
+## Example use case
 
-**Input**: Überprüfen Sie diesen Terraform Snippet für eine RDS Instanz.
+**Input**: Überprüfen Sie diesen Terraform-Snippet für eine RDS-Instanz.
 
 ```hcl
 resource "aws_db_instance" "app" {
@@ -108,12 +108,12 @@ resource "aws_db_instance" "app" {
 ```
 
 **Output**:
-- **Anbieter**: AWS | **Service**: RDS | **Schweregrad**: Kritisch
-  - `publicly_accessible = true` — RDS Instanz ist vom öffentlichen Internet erreichbar. Setzen Sie auf `false` und verwenden Sie ein privates Subnetz mit einem Bastion oder VPN.
-- **Anbieter**: AWS | **Service**: RDS | **Schweregrad**: Hoch
-  - `storage_encrypted = false` — Verschlüsselung im Ruhezustand ist deaktiviert. Setzen Sie `storage_encrypted = true` und geben Sie einen `kms_key_id` an.
+- **Provider**: AWS | **Service**: RDS | **Severity**: Kritisch
+  - `publicly_accessible = true` — RDS-Instanz ist vom öffentlichen Internet erreichbar. Setzen Sie auf `false` und verwenden Sie ein privates Subnetz mit einem Bastion oder VPN.
+- **Provider**: AWS | **Service**: RDS | **Severity**: Hoch
+  - `storage_encrypted = false` — Verschlüsselung im Ruhezustand ist deaktiviert. Setzen Sie `storage_encrypted = true` und geben Sie ein `kms_key_id` an.
 
 ---
 
 
-📺 **[Subscribe to our YouTube Channel for more deep dives](https://www.youtube.com/channel/UCcvK8pHyqeR7Q_0lYkuHlUg)**
+📺 **[Abonnieren Sie unseren YouTube-Kanal für weitere tiefgreifende Analysen](https://www.youtube.com/channel/UCcvK8pHyqeR7Q_0lYkuHlUg)**

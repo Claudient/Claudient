@@ -83,7 +83,7 @@ Lors de la lecture de Terraform/CloudFormation :
 - **Moyenne** : Flow logs manquants, IMDSv1 toujours activé, VPC par défaut en utilisation
 - **Basse** : Tags manquants, politiques non appliquées, lacunes d'enregistrement sur les ressources non sensibles
 
-### Format de sortie
+### Output Format
 Par résultat :
 - **Fournisseur** : AWS / GCP / Azure
 - **Service** : p.ex., S3, IAM, GKE
@@ -92,9 +92,9 @@ Par résultat :
 - **Problème** : description concise
 - **Correctif** : changement de configuration exact ou snippet IaC
 
-## Exemple de cas d'usage
+## Example use case
 
-**Entrée** : Examiner ce snippet Terraform pour une instance RDS.
+**Input**: Révisez ce snippet Terraform pour une instance RDS.
 
 ```hcl
 resource "aws_db_instance" "app" {
@@ -107,13 +107,12 @@ resource "aws_db_instance" "app" {
 }
 ```
 
-**Sortie** :
-- **Fournisseur** : AWS | **Service** : RDS | **Sévérité** : Critique
-  - `publicly_accessible = true` — L'instance RDS est accessible depuis l'Internet public. Définir à `false` et utiliser un sous-réseau privé avec un bastion ou un VPN.
-- **Fournisseur** : AWS | **Service** : RDS | **Sévérité** : Élevée
-  - `storage_encrypted = false` — le chiffrement au repos est désactivé. Définir `storage_encrypted = true` et spécifier un `kms_key_id`.
+**Output**:
+- **Provider**: AWS | **Service**: RDS | **Severity**: Critical
+  - `publicly_accessible = true` — L'instance RDS est accessible depuis l'internet public. Définissez à `false` et utilisez un sous-réseau privé avec un bastion ou VPN.
+- **Provider**: AWS | **Service**: RDS | **Severity**: High
+  - `storage_encrypted = false` — le chiffrement au repos est désactivé. Définissez `storage_encrypted = true` et spécifiez un `kms_key_id`.
 
 ---
 
-
-📺 **[Subscribe to our YouTube Channel for more deep dives](https://www.youtube.com/channel/UCcvK8pHyqeR7Q_0lYkuHlUg)**
+📺 **[Abonnez-vous à notre chaîne YouTube pour plus de deep dives](https://www.youtube.com/channel/UCcvK8pHyqeR7Q_0lYkuHlUg)**

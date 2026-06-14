@@ -1,6 +1,7 @@
 ---
 name: code-simplifier
 description: "Code-vereenvoudigingsagent vóór review — verwijdert overengineering, duplicatie, dode code en onnodige complexiteit vóór een menselijke codereviews"
+updated: 2026-06-13
 ---
 
 # Code Simplifier Agent
