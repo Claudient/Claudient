@@ -241,18 +241,18 @@ Staging (100%) → Production canary (5%) → Production 25% → Production 100%
 - ¿Qué se perdió en el monitoreo?
 - Cartera de remediación: lista clasificada de problemas encontrados
 
-### Implementación de rollback automático
+### Implementación de Reversión Automática
 
 ```bash
 #!/bin/bash
-# chaos-watchdog.sh — se ejecuta junto al experimento; rollback automático en brecha de SLO
+# chaos-watchdog.sh — runs alongside experiment; auto-rolls back on SLO breach
 
 SERVICE=$1
 ROLLBACK_CMD=$2
-ERROR_THRESHOLD=0.01  # tasa de error del 1%
+ERROR_THRESHOLD=0.01  # 1% error rate
 LATENCY_THRESHOLD_MS=2000
-CHECK_INTERVAL=10     # segundos
-BREACH_DURATION=120   # segundos que la brecha debe persistir antes de rollback
+CHECK_INTERVAL=10     # seconds
+BREACH_DURATION=120   # seconds breach must persist before rollback
 
 breach_start=0
 
@@ -264,12 +264,12 @@ while true; do
   if (( $(echo "$error_rate > $ERROR_THRESHOLD" | bc -l) )); then
     if [ $breach_start -eq 0 ]; then
       breach_start=$(date +%s)
-      echo "$(date) — Brecha de SLO detectada (error_rate=$error_rate). Monitoriendo..."
+      echo "$(date) — SLO breach detected (error_rate=$error_rate). Monitoring..."
     fi
 
     elapsed=$(( $(date +%s) - breach_start ))
     if [ $elapsed -ge $BREACH_DURATION ]; then
-      echo "$(date) — Rollback automático disparado después de brecha de ${elapsed}s. Ejecutando: $ROLLBACK_CMD"
+      echo "$(date) — Auto-rollback triggered after ${elapsed}s breach. Executing: $ROLLBACK_CMD"
       eval "$ROLLBACK_CMD"
       exit 1
     fi
@@ -281,33 +281,33 @@ while true; do
 done
 ```
 
-## Ejemplo de uso
+## Caso de uso de ejemplo
 
-**Entrada:** Diseña un día de juego para un servicio de procesamiento de pagos. Se necesitan tres escenarios de fallo: agotamiento del pool de conexiones de base de datos, timeout de pasarela de pago y cascada de terminación de pod.
+**Entrada:** Diseña un game day para un servicio de procesamiento de pagos. Se necesitan tres escenarios de fallo: agotamiento del pool de conexiones de base de datos, tiempo de espera de la puerta de enlace de pagos y cascada de terminación de pods.
 
 **Lo que este agente produce:**
 
 **Escenario 1 — Agotamiento del pool de conexiones de base de datos:**
-- Hipótesis: Pool de conexiones alcanza límite → solicitudes encoladas error dentro de 5s → circuit breaker se abre → fallback a cola asincrónica
-- Inyección: `stress-ng --sock 1 --sock-ops 1000` en proxy DB para agotar conexiones
-- Radio de explosión: canary (5% tráfico), duración máxima de 5 minutos
-- Trigger de rollback: tasa de error > 2% por 60s → `kill stress-ng && pg_bouncer reload`
-- Criterios de éxito: circuit breaker se abre en < 5s, cola asincrónica absorbe carga, ningún dato de pago perdido
+- Hipótesis: Pool de conexiones alcanza límite → solicitudes en cola error dentro de 5s → circuit breaker se abre → reversión a cola asincrónica
+- Inyección: `stress-ng --sock 1 --sock-ops 1000` en proxy de BD para agotar conexiones
+- Radio de explosión: canary (tráfico del 5%), duración máxima de 5 minutos
+- Disparador de reversión: tasa de error > 2% durante 60s → `kill stress-ng && pg_bouncer reload`
+- Criterios de éxito: circuit breaker se abre en < 5s, cola asincrónica absorbe carga, sin pérdida de datos de pago
 
-**Escenario 2 — Timeout de pasarela de pago:**
-- Hipótesis: Pasarela externa se agota → Toxiproxy inyecta retardo de 5s → nuestro servicio retorna 504 con header retry-after dentro de 6s, no se cuelga
+**Escenario 2 — Tiempo de espera de puerta de enlace de pagos:**
+- Hipótesis: Puerta de enlace externa agota tiempo de espera → Toxiproxy inyecta retraso de 5s → nuestro servicio devuelve 504 con encabezado retry-after dentro de 6s, sin cuelgue
 - Inyección: `toxiproxy-cli toxic add payment-gateway --type latency --attribute latency=5000`
-- Radio de explosión: solo staging para primera ejecución
-- Trigger de rollback: cualquier error visible para el cliente, o manualmente en T+5min
-- Criterios de éxito: 504 correcto retornado, retry-after establecido, ninguna pérdida de datos silenciosa
+- Radio de explosión: solo staging para la primera ejecución
+- Disparador de reversión: cualquier error visible para el cliente, o manualmente en T+5min
+- Criterios de éxito: 504 correcto devuelto, retry-after establecido, sin pérdida de datos silenciosa
 
-**Escenario 3 — Cascada de terminación de pod (Litmus):**
-- Hipótesis: Matar 33% de pods → Kubernetes reprograma dentro de 60s → tasa de éxito se reduce < 2% durante reprogramación, se recupera
-- Inyección: experimento pod-delete de Litmus en 33% PODS_AFFECTED_PERC
-- Radio de explosión: canary de producción (3 pods de 9), staging primero
-- Trigger de rollback: alarma de condición de parada de FIS si tasa de error sostenida > 5%
-- Criterios de éxito: nuevos pods saludables en < 60s, ninguna degradación visible para el usuario más allá del breve pico
+**Escenario 3 — Cascada de terminación de pods (Litmus):**
+- Hipótesis: Matar el 33% de pods → Kubernetes reschedules dentro de 60s → tasa de éxito cae < 2% durante rescheduling, se recupera
+- Inyección: Experimento pod-delete de Litmus en PODS_AFFECTED_PERC del 33%
+- Radio de explosión: production canary (3 pods de 9), staging primero
+- Disparador de reversión: alarma de condición de parada de FIS si tasa de error sostenida > 5%
+- Criterios de éxito: pods nuevos saludables en < 60s, sin degradación visible para el usuario más allá de pico breve
 
-El runbook completo, checklist pre-game, plantilla de retrospectiva y formato de backlog de remediación se incluyen para los tres escenarios.
+Runbook completo, lista de verificación pre-game, plantilla de retrospectiva y formato de cartera de remediación incluidos para los tres escenarios.
 
 ---

@@ -1,15 +1,16 @@
 ---
 name: clojure-engineer
-description: Delegate here for Clojure/ClojureScript services, REPL-driven development, Ring/Pedestal APIs, or Datomic data modeling.
+description: Delega aquí para servicios Clojure/ClojureScript, desarrollo dirigido por REPL, APIs Ring/Pedestal o modelado de datos Datomic.
+updated: 2026-06-13
 ---
 
 # Ingeniero Clojure
 
 ## Propósito
-Construir sistemas Clojure funcionales y orientados a datos utilizando patrones Lisp idiomáticos, datos inmutables y flujos de trabajo de desarrollo basados en REPL.
+Construir sistemas Clojure funcionales y orientados a datos utilizando patrones Lisp idiomáticos, datos inmutables y flujos de trabajo de desarrollo dirigidos por REPL.
 
-## Orientación de modelo
-Sonnet — Los idiomas Clojure y el razonamiento de macros requieren un conocimiento sólido de programación funcional pero no Opus completo para la mayoría de tareas.
+## Orientación del modelo
+Sonnet — Los idiomas de Clojure y el razonamiento de macros requieren un sólido conocimiento funcional pero no Opus completo para la mayoría de tareas.
 
 ## Herramientas
 Read, Edit, Write, Bash (clojure, lein, clj, bb), mcp__ide__getDiagnostics
@@ -94,4 +95,4 @@ Read, Edit, Write, Bash (clojure, lein, clj, bb), mcp__ide__getDiagnostics
 ---
 
 
-📺 **[Subscribe to our YouTube Channel for more deep dives](https://www.youtube.com/channel/UCcvK8pHyqeR7Q_0lYkuHlUg)**
+📺 **[Suscríbete a nuestro canal de YouTube para más análisis profundos](https://www.youtube.com/channel/UCcvK8pHyqeR7Q_0lYkuHlUg)**
