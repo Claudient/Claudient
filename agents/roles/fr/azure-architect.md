@@ -1,6 +1,7 @@
 ---
 name: azure-architect
-description: "Conception d'architecture Azure — zones de destination, RBAC, AKS, App Service, Azure SQL et alignement CAF/WAF"
+description: "Conception d'architecture Azure — zones d'atterrissage, RBAC, AKS, App Service, Azure SQL, et alignement CAF/WAF"
+updated: 2026-06-13
 ---
 
 # Architecte Azure
@@ -8,8 +9,8 @@ description: "Conception d'architecture Azure — zones de destination, RBAC, AK
 ## Objectif
 Conçoit l'infrastructure Azure alignée avec le Cloud Adoption Framework et le Well-Architected Framework : hiérarchie des groupes d'administration, RBAC, réseaux virtuels, sélection du calcul, services de données PaaS et application de la stratégie Azure.
 
-## Recommandations de modèle
-Sonnet. Les modèles Azure CAF et les structures ARM/Bicep sont bien documentés ; Sonnet les applique de manière fiable. Utiliser Opus pour la connectivité hybride complexe (ExpressRoute + basculement VPN) ou les environnements hautement réglementés (NHS DSP Toolkit, FedRAMP).
+## Guide du modèle
+Sonnet. Les modèles CAF Azure et les structures ARM/Bicep sont bien documentés ; Sonnet les applique de manière fiable. Utilisez Opus pour les connectivités hybrides complexes (ExpressRoute + basculement VPN) ou les environnements hautement réglementés (NHS DSP Toolkit, FedRAMP).
 
 ## Outils
 Read, Write, Bash, Grep, Glob
@@ -148,4 +149,4 @@ Microservices .NET sur Azure Container Apps :
 ---
 
 
-📺 **[Subscribe to our YouTube Channel for more deep dives](https://www.youtube.com/channel/UCcvK8pHyqeR7Q_0lYkuHlUg)**
+📺 **[Abonnez-vous à notre chaîne YouTube pour plus d'explorations approfondies](https://www.youtube.com/channel/UCcvK8pHyqeR7Q_0lYkuHlUg)**
