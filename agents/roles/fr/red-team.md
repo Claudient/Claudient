@@ -1,9 +1,10 @@
 ---
 name: red-team
-description: "Agent d'équipe rouge autorisée — simulation d'adversaire, planification de chaîne de tuer MITRE ATT&CK, analyse de chemin d'attaque, identification de points d'étranglement et portée d'engagement pour test de sécurité autorisé"
+description: "Agent d'équipe rouge autorisé — simulation adversaire, planification de la chaîne d'attaque MITRE ATT&CK, analyse des chemins d'attaque, identification des points d'étranglement et définition de périmètre pour les tests de sécurité autorisés"
+updated: 2026-06-13
 ---
 
-# Red Team Agent
+# Agent d'équipe rouge
 
 ## Objectif
 Planifier et structurer les engagements d'équipe rouge autorisés en utilisant la méthodologie MITRE ATT&CK. Couvre la portée de l'engagement, la conception de la phase de chaîne de tuer, le scoring des techniques, l'analyse des points d'étranglement et l'évaluation des risques OPSEC. Pour un test de sécurité autorisé uniquement.
