@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-
-Disallow: /search/
-Disallow: /*?*
-
-Sitemap: https://claudient.tools/sitemap.xml

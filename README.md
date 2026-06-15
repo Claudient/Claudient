@@ -417,7 +417,6 @@ Claudient/
 ├── structures/               # 83 project structure templates
 ├── *_stack/                  # 42 pre-wired workspace stacks (CLAUDE.md + 8 skills each)
 ├── scripts/                  # Build and utility scripts
-├── site/                     # Astro documentation site source
 ├── docs/                     # ADRs and internal documentation
 └── index.json                # Full searchable index (npx claudient search)
 ```
