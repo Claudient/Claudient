@@ -1,13 +1,13 @@
 {
-  "version": "1.10.0",
-  "generated": "2026-06-08T17:04:53.687Z",
+  "version": "1.10.1",
+  "generated": "2026-06-15T08:14:30.937Z",
   "skills": [
     {
       "id": "ai-engineering/advanced-tool-use",
       "category": "ai-engineering",
       "lang": "en",
       "title": "Advanced Tool Use",
-      "description": "",
+      "description": "Master advanced tool use patterns including chaining, parallel calls, and error recovery for complex Claude Code workflows",
       "file": "skills/ai-engineering/advanced-tool-use.md"
     },
     {
@@ -19,12 +19,52 @@
       "file": "skills/ai-engineering/agent-construction.md"
     },
     {
+      "id": "ai-engineering/agent-memory",
+      "category": "ai-engineering",
+      "lang": "en",
+      "title": "Agent Memory",
+      "description": "Agent memory and context management: design persistent memory systems, manage context windows, implement summarization strategies, and build stateful agents that learn across sessions",
+      "file": "skills/ai-engineering/agent-memory.md"
+    },
+    {
       "id": "ai-engineering/agent-sdk",
       "category": "ai-engineering",
       "lang": "en",
-      "title": "Claude Agent SDK",
-      "description": "",
+      "title": "Agent Sdk",
+      "description": "Build AI agents using the Claude Agent SDK with tool use, memory, and multi-step orchestration",
       "file": "skills/ai-engineering/agent-sdk.md"
+    },
+    {
+      "id": "ai-engineering/agent-teams",
+      "category": "ai-engineering",
+      "lang": "en",
+      "title": "Agent Teams",
+      "description": "Orchestrate multi-agent teams in Claude Code — set up coordinated sessions with task delegation, inter-agent communication, and parallel execution",
+      "file": "skills/ai-engineering/agent-teams.md"
+    },
+    {
+      "id": "ai-engineering/autodream-goal-decomposition",
+      "category": "ai-engineering",
+      "lang": "en",
+      "title": "Autodream Goal Decomposition",
+      "description": "Claude Code AutoDream: autonomous goal decomposition from high-level objectives, automatic plan generation, self-directed task execution, iterative refinement, and objective-to-action translation",
+      "file": "skills/ai-engineering/autodream-goal-decomposition.md"
+    },
+    {
+      "id": "ai-engineering/caveman-token-reduction",
+      "category": "ai-engineering",
+      "lang": "en",
+      "title": "Caveman Token Reduction",
+      "description": "Claude Code Caveman mode: token-efficient communication, compressed responses, minimal output for context-heavy sessions, terse acknowledgments, and context budget optimization",
+      "file": "skills/ai-engineering/caveman-token-reduction.md"
+    },
+    {
+      "id": "ai-engineering/channels-event-streaming",
+      "category": "ai-engineering",
+      "lang": "en",
+      "title": "Channels Event Streaming",
+      "description": "Claude Code Channels: real-time event streaming between concurrent sessions, pub/sub patterns, event filtering, cross-session state synchronization, and reactive agent workflows",
+      "file": "skills/ai-engineering/channels-event-streaming.md"
     },
     {
       "id": "ai-engineering/claude-api",
@@ -39,15 +79,23 @@
       "category": "ai-engineering",
       "lang": "en",
       "title": "Claude Batch",
-      "description": "",
+      "description": "Run large-scale batch processing with Claude API for bulk text analysis, classification, and generation",
       "file": "skills/ai-engineering/claude-batch.md"
+    },
+    {
+      "id": "ai-engineering/context-mode-filtering",
+      "category": "ai-engineering",
+      "lang": "en",
+      "title": "Context Mode Filtering",
+      "description": "Claude Code Context Mode: shell noise filtering, output relevance scoring, automatic context pruning for long-running sessions, log filtering, and signal-to-noise optimization",
+      "file": "skills/ai-engineering/context-mode-filtering.md"
     },
     {
       "id": "ai-engineering/crewai",
       "category": "ai-engineering",
       "lang": "en",
-      "title": "CrewAI Multi-Agent Framework",
-      "description": "",
+      "title": "Crewai",
+      "description": "Build multi-agent crews with CrewAI framework for collaborative AI task execution",
       "file": "skills/ai-engineering/crewai.md"
     },
     {
@@ -70,7 +118,7 @@
       "id": "ai-engineering/agent-sdk",
       "category": "ai-engineering",
       "lang": "de",
-      "title": "Claude Agent SDK",
+      "title": "Agent Sdk",
       "description": "",
       "file": "skills/ai-engineering/de/agent-sdk.md"
     },
@@ -78,8 +126,8 @@
       "id": "ai-engineering/claude-api",
       "category": "ai-engineering",
       "lang": "de",
-      "title": "Claude API Skill",
-      "description": "",
+      "title": "Claude Api",
+      "description": "Anthropic Claude API: Prompt-Caching, Streaming, Tool-Nutzung, Batch-Verarbeitung, Modellauswahl, Kostenoptimierung",
       "file": "skills/ai-engineering/de/claude-api.md"
     },
     {
@@ -187,10 +235,26 @@
       "file": "skills/ai-engineering/de/vercel-ai-sdk.md"
     },
     {
+      "id": "ai-engineering/dispatch-background-jobs",
+      "category": "ai-engineering",
+      "lang": "en",
+      "title": "Dispatch Background Jobs",
+      "description": "Claude Code Dispatch: run long-running tasks as background jobs with progress polling, parallel sub-agent fan-out, result aggregation, and automatic retry on failure",
+      "file": "skills/ai-engineering/dispatch-background-jobs.md"
+    },
+    {
+      "id": "ai-engineering/enterprise-search",
+      "category": "ai-engineering",
+      "lang": "en",
+      "title": "Enterprise Search",
+      "description": "Enterprise search and knowledge retrieval: design multi-source search systems, implement hybrid search (semantic + keyword + structured), build knowledge graphs, handle access control, and create unified search across docs, wikis, code, and databases",
+      "file": "skills/ai-engineering/enterprise-search.md"
+    },
+    {
       "id": "ai-engineering/advanced-tool-use",
       "category": "ai-engineering",
       "lang": "es",
-      "title": "Uso Avanzado de Herramientas",
+      "title": "Advanced Tool Use",
       "description": "",
       "file": "skills/ai-engineering/es/advanced-tool-use.md"
     },
@@ -206,7 +270,7 @@
       "id": "ai-engineering/agent-sdk",
       "category": "ai-engineering",
       "lang": "es",
-      "title": "SDK del Agente Claude",
+      "title": "Agent Sdk",
       "description": "",
       "file": "skills/ai-engineering/es/agent-sdk.md"
     },
@@ -214,8 +278,8 @@
       "id": "ai-engineering/claude-api",
       "category": "ai-engineering",
       "lang": "es",
-      "title": "Skill de Claude API",
-      "description": "",
+      "title": "Claude Api",
+      "description": "API de Anthropic Claude: almacenamiento en caché de prompts, streaming, uso de herramientas, procesamiento por lotes, selección de modelo, optimización de costos",
       "file": "skills/ai-engineering/es/claude-api.md"
     },
     {
@@ -334,15 +398,15 @@
       "id": "ai-engineering/agent-construction",
       "category": "ai-engineering",
       "lang": "fr",
-      "title": "Compétence Construction d'Agents",
-      "description": "",
+      "title": "Agent Construction",
+      "description": "Architecture multi-agents, patterns d'orchestration, conception d'outils, boucles d'agents, mémoire, gestion d'erreurs, transferts",
       "file": "skills/ai-engineering/fr/agent-construction.md"
     },
     {
       "id": "ai-engineering/agent-sdk",
       "category": "ai-engineering",
       "lang": "fr",
-      "title": "SDK Agent Claude",
+      "title": "Agent Sdk",
       "description": "",
       "file": "skills/ai-engineering/fr/agent-sdk.md"
     },
@@ -350,7 +414,7 @@
       "id": "ai-engineering/claude-api",
       "category": "ai-engineering",
       "lang": "fr",
-      "title": "Compétence API Claude",
+      "title": "Claude API Skill",
       "description": "",
       "file": "skills/ai-engineering/fr/claude-api.md"
     },
@@ -467,6 +531,14 @@
       "file": "skills/ai-engineering/langgraph.md"
     },
     {
+      "id": "ai-engineering/llm-benchmark",
+      "category": "ai-engineering",
+      "lang": "en",
+      "title": "Llm Benchmark",
+      "description": "LLM benchmarking: design benchmark suites, establish baselines, run A/B model comparisons, detect regressions, track production quality metrics, and create leaderboards for model selection",
+      "file": "skills/ai-engineering/llm-benchmark.md"
+    },
+    {
       "id": "ai-engineering/llm-eval",
       "category": "ai-engineering",
       "lang": "en",
@@ -479,7 +551,7 @@
       "category": "ai-engineering",
       "lang": "en",
       "title": "Managed Agents",
-      "description": "",
+      "description": "Deploy and manage Claude agents with lifecycle management, monitoring, and scaling",
       "file": "skills/ai-engineering/managed-agents.md"
     },
     {
@@ -503,7 +575,7 @@
       "category": "ai-engineering",
       "lang": "en",
       "title": "Modal",
-      "description": "",
+      "description": "Build serverless AI pipelines with Modal for cloud-based compute and inference",
       "file": "skills/ai-engineering/modal.md"
     },
     {
@@ -518,15 +590,15 @@
       "id": "ai-engineering/agent-construction",
       "category": "ai-engineering",
       "lang": "nl",
-      "title": "Agent Construction Skill",
-      "description": "",
+      "title": "Agent Construction",
+      "description": "Multi-agent architectuur, orchestrator patronen, tool design, agent loops, geheugen, foutafhandeling, handoffs",
       "file": "skills/ai-engineering/nl/agent-construction.md"
     },
     {
       "id": "ai-engineering/agent-sdk",
       "category": "ai-engineering",
       "lang": "nl",
-      "title": "Claude Agent SDK",
+      "title": "Agent Sdk",
       "description": "",
       "file": "skills/ai-engineering/nl/agent-sdk.md"
     },
@@ -647,7 +719,7 @@
       "category": "ai-engineering",
       "lang": "en",
       "title": "Prompt Caching",
-      "description": "",
+      "description": "Optimize Claude API costs and latency with prompt caching strategies",
       "file": "skills/ai-engineering/prompt-caching.md"
     },
     {
@@ -662,8 +734,8 @@
       "id": "ai-engineering/ptc",
       "category": "ai-engineering",
       "lang": "en",
-      "title": "Programmatic Tool Calling (PTC)",
-      "description": "",
+      "title": "Ptc",
+      "description": "Implement prompt-to-code workflows for rapid prototyping and code generation",
       "file": "skills/ai-engineering/ptc.md"
     },
     {
@@ -673,6 +745,46 @@
       "title": "Rag Architect",
       "description": "RAG system design: chunking strategies, embedding model selection, vector store choice, retrieval patterns, reranking, evaluation — production-grade retrieval-augmented generation",
       "file": "skills/ai-engineering/rag-architect.md"
+    },
+    {
+      "id": "ai-engineering/remote-control-headless",
+      "category": "ai-engineering",
+      "lang": "en",
+      "title": "Remote Control Headless",
+      "description": "Claude Code Remote Control: manage headless Claude Code sessions from anywhere, CI/CD integration, remote orchestration from mobile/laptop, session attach/detach, and remote execution patterns",
+      "file": "skills/ai-engineering/remote-control-headless.md"
+    },
+    {
+      "id": "ai-engineering/session-handoff",
+      "category": "ai-engineering",
+      "lang": "en",
+      "title": "Session Handoff",
+      "description": "Claude Code Session Handoff: structured context export/import between sessions, state serialization, continuation prompts, cross-session knowledge transfer, and resumable workflows",
+      "file": "skills/ai-engineering/session-handoff.md"
+    },
+    {
+      "id": "ai-engineering/skill-composition",
+      "category": "ai-engineering",
+      "lang": "en",
+      "title": "Skill Composition",
+      "description": "Skill composition and chaining: design multi-skill workflows, chain skill outputs as inputs, build reusable skill pipelines, and orchestrate complex tasks from atomic skill building blocks",
+      "file": "skills/ai-engineering/skill-composition.md"
+    },
+    {
+      "id": "ai-engineering/ultraplan",
+      "category": "ai-engineering",
+      "lang": "en",
+      "title": "Ultraplan",
+      "description": "Leverage Claude Code's ultra-deep planning mode for complex architecture decisions, multi-file refactors, and system design",
+      "file": "skills/ai-engineering/ultraplan.md"
+    },
+    {
+      "id": "ai-engineering/ultrareview",
+      "category": "ai-engineering",
+      "lang": "en",
+      "title": "Ultrareview",
+      "description": "Deep code review using Claude Code's thorough analysis mode — security, performance, correctness, and maintainability",
+      "file": "skills/ai-engineering/ultrareview.md"
     },
     {
       "id": "ai-engineering/vercel-ai-sdk",
@@ -694,32 +806,32 @@
       "id": "automation/claude-design-branding",
       "category": "automation",
       "lang": "en",
-      "title": "Claude Design Brand System Setup",
-      "description": "",
+      "title": "Claude Design Branding",
+      "description": "Create consistent brand systems with Claude Design including logos, colors, and typography",
       "file": "skills/automation/claude-design-branding.md"
     },
     {
       "id": "automation/claude-design-tokens",
       "category": "automation",
       "lang": "en",
-      "title": "Claude Design Token Management",
-      "description": "",
+      "title": "Claude Design Tokens",
+      "description": "Manage design tokens for consistent theming across Claude Design projects",
       "file": "skills/automation/claude-design-tokens.md"
     },
     {
       "id": "automation/claude-design-workflow",
       "category": "automation",
       "lang": "en",
-      "title": "Claude Design — End-to-End Workflows",
-      "description": "",
+      "title": "Claude Design Workflow",
+      "description": "Build end-to-end design workflows with Claude Design for rapid UI/UX iteration",
       "file": "skills/automation/claude-design-workflow.md"
     },
     {
       "id": "automation/claude-design",
       "category": "automation",
       "lang": "en",
-      "title": "Claude Design Integration",
-      "description": "",
+      "title": "Claude Design",
+      "description": "Build production-ready UIs and prototypes with Claude Design",
       "file": "skills/automation/claude-design.md"
     },
     {
@@ -838,8 +950,8 @@
       "id": "automation/embedded",
       "category": "automation",
       "lang": "en",
-      "title": "Embedded Systems",
-      "description": "",
+      "title": "Embedded",
+      "description": "Develop embedded systems firmware and hardware interfaces with Claude Code",
       "file": "skills/automation/embedded.md"
     },
     {
@@ -1070,24 +1182,24 @@
       "id": "automation/frontier-design",
       "category": "automation",
       "lang": "en",
-      "title": "Claude Design — Frontier Capabilities",
-      "description": "",
+      "title": "Frontier Design",
+      "description": "Push creative boundaries with frontier design techniques for AI-generated interfaces",
       "file": "skills/automation/frontier-design.md"
     },
     {
       "id": "automation/game-dev",
       "category": "automation",
       "lang": "en",
-      "title": "Game Development",
-      "description": "",
+      "title": "Game Dev",
+      "description": "Build games with Claude Code — game loops, physics, AI behaviors, and asset management",
       "file": "skills/automation/game-dev.md"
     },
     {
       "id": "automation/iot",
       "category": "automation",
       "lang": "en",
-      "title": "IoT Development",
-      "description": "",
+      "title": "Iot",
+      "description": "Develop IoT applications with device communication, sensor data, and edge computing",
       "file": "skills/automation/iot.md"
     },
     {
@@ -1318,8 +1430,8 @@
       "id": "backend/elixir/phoenix",
       "category": "backend",
       "lang": "en",
-      "title": "Elixir + Phoenix",
-      "description": "",
+      "title": "Phoenix",
+      "description": "Build Elixir Phoenix web applications with LiveView, channels, and Ecto",
       "file": "skills/backend/elixir/phoenix.md"
     },
     {
@@ -1342,8 +1454,8 @@
       "id": "backend/flutter/flutter",
       "category": "backend",
       "lang": "en",
-      "title": "Flutter 3+",
-      "description": "",
+      "title": "Flutter",
+      "description": "Build cross-platform mobile apps with Flutter and Dart",
       "file": "skills/backend/flutter/flutter.md"
     },
     {
@@ -1446,8 +1558,8 @@
       "id": "backend/kotlin/android",
       "category": "backend",
       "lang": "en",
-      "title": "Kotlin + Android",
-      "description": "",
+      "title": "Android",
+      "description": "Build Android applications with Kotlin, Jetpack Compose, and modern Android architecture",
       "file": "skills/backend/kotlin/android.md"
     },
     {
@@ -1486,8 +1598,8 @@
       "id": "backend/nodejs/angular",
       "category": "backend",
       "lang": "en",
-      "title": "Angular 17+",
-      "description": "",
+      "title": "Angular",
+      "description": "Build Angular applications with TypeScript, RxJS, and NgRx state management",
       "file": "skills/backend/nodejs/angular.md"
     },
     {
@@ -2142,8 +2254,8 @@
       "id": "backend/nodejs/graphql-client",
       "category": "backend",
       "lang": "en",
-      "title": "GraphQL Client Integration",
-      "description": "",
+      "title": "Graphql Client",
+      "description": "- Setting up a GraphQL client in a React or Next.js project",
       "file": "skills/backend/nodejs/graphql-client.md"
     },
     {
@@ -2390,8 +2502,8 @@
       "id": "backend/nodejs/react-native",
       "category": "backend",
       "lang": "en",
-      "title": "React Native and Expo",
-      "description": "",
+      "title": "React Native",
+      "description": "- Building React Native apps with Expo managed or bare workflow",
       "file": "skills/backend/nodejs/react-native.md"
     },
     {
@@ -2478,8 +2590,8 @@
       "id": "backend/nodejs/websockets",
       "category": "backend",
       "lang": "en",
-      "title": "WebSockets and Socket.io",
-      "description": "",
+      "title": "Websockets",
+      "description": "- Building real-time bidirectional features (chat, live dashboards, notifications, multiplayer)",
       "file": "skills/backend/nodejs/websockets.md"
     },
     {
@@ -2550,8 +2662,8 @@
       "id": "backend/php/laravel",
       "category": "backend",
       "lang": "en",
-      "title": "Laravel 11",
-      "description": "",
+      "title": "Laravel",
+      "description": "- Building or maintaining a Laravel 11 application",
       "file": "skills/backend/php/laravel.md"
     },
     {
@@ -2798,8 +2910,8 @@
       "id": "backend/ruby/rails",
       "category": "backend",
       "lang": "en",
-      "title": "Ruby on Rails 7+",
-      "description": "",
+      "title": "Rails",
+      "description": "- Building or maintaining a Rails 7+ application",
       "file": "skills/backend/ruby/rails.md"
     },
     {
@@ -2838,8 +2950,8 @@
       "id": "backend/rust/rust",
       "category": "backend",
       "lang": "en",
-      "title": "Rust Development",
-      "description": "",
+      "title": "Rust",
+      "description": "- Writing or reviewing Rust code with ownership, borrow checker, or lifetime errors",
       "file": "skills/backend/rust/rust.md"
     },
     {
@@ -2870,8 +2982,8 @@
       "id": "backend/swift/ios",
       "category": "backend",
       "lang": "en",
-      "title": "Swift + SwiftUI iOS Development",
-      "description": "",
+      "title": "Ios",
+      "description": "- Building iOS, iPadOS, or macOS apps with SwiftUI",
       "file": "skills/backend/swift/ios.md"
     },
     {
@@ -3438,8 +3550,8 @@
       "id": "data-ml/kafka",
       "category": "data-ml",
       "lang": "en",
-      "title": "Kafka and Event Streaming",
-      "description": "",
+      "title": "Kafka",
+      "description": "Designing or implementing event-driven architectures, building real-time data pipelines with Kafka, configuring producers and consumers in Python o...",
       "file": "skills/data-ml/kafka.md"
     },
     {
@@ -3454,8 +3566,8 @@
       "id": "data-ml/mlops",
       "category": "data-ml",
       "lang": "en",
-      "title": "MLOps",
-      "description": "",
+      "title": "Mlops",
+      "description": "Setting up ML pipelines end-to-end, deploying or serving trained models, configuring experiment tracking with MLflow or Weights & Biases, building ...",
       "file": "skills/data-ml/mlops.md"
     },
     {
@@ -3582,8 +3694,8 @@
       "id": "data-ml/nlp-pipelines",
       "category": "data-ml",
       "lang": "en",
-      "title": "NLP Pipelines",
-      "description": "",
+      "title": "Nlp Pipelines",
+      "description": "Building NLP systems end to end — text preprocessing, fine-tuning transformer models, named entity recognition (NER), text classification, sentimen...",
       "file": "skills/data-ml/nlp-pipelines.md"
     },
     {
@@ -3607,7 +3719,7 @@
       "category": "data-ml",
       "lang": "en",
       "title": "Reinforcement Learning",
-      "description": "",
+      "description": "Designing Gymnasium-compatible environments, training policies with Stable Baselines3, engineering or debugging reward functions, implementing curr...",
       "file": "skills/data-ml/reinforcement-learning.md"
     },
     {
@@ -3646,8 +3758,8 @@
       "id": "database/blockchain",
       "category": "database",
       "lang": "en",
-      "title": "Blockchain and Smart Contracts",
-      "description": "",
+      "title": "Blockchain",
+      "description": "Writing or reviewing Solidity smart contracts, implementing ERC-20/721/1155 token standards, building DeFi protocols, optimizing gas costs, perform...",
       "file": "skills/database/blockchain.md"
     },
     {
@@ -3759,7 +3871,7 @@
       "category": "database",
       "lang": "en",
       "title": "Elasticsearch",
-      "description": "",
+      "description": "- Designing an Elasticsearch index mapping from scratch",
       "file": "skills/database/elasticsearch.md"
     },
     {
@@ -4119,7 +4231,7 @@
       "category": "database",
       "lang": "en",
       "title": "Vector Databases",
-      "description": "",
+      "description": "- User is implementing semantic search, RAG pipelines, or recommendation systems",
       "file": "skills/database/vector-databases.md"
     },
     {
@@ -4185,6 +4297,14 @@
       "title": "Codebase Onboarding",
       "description": "Codebase onboarding: generate architecture overviews, create onboarding checklists, document service boundaries, write getting-started guides for new engineers",
       "file": "skills/devops-infra/codebase-onboarding.md"
+    },
+    {
+      "id": "devops-infra/compliance-audit-trail",
+      "category": "devops-infra",
+      "lang": "en",
+      "title": "Compliance Audit Trail",
+      "description": "Compliance audit trail design: implement immutable audit logs, change tracking, evidence collection, regulatory reporting, and continuous compliance monitoring for SOC2, HIPAA, PCI-DSS, GDPR, and FedRAMP",
+      "file": "skills/devops-infra/compliance-audit-trail.md"
     },
     {
       "id": "devops-infra/coolify",
@@ -4510,8 +4630,8 @@
       "id": "devops-infra/enterprise-compliance",
       "category": "devops-infra",
       "lang": "en",
-      "title": "Enterprise Claude Code Deployment — Compliance and Security",
-      "description": "",
+      "title": "Enterprise Compliance",
+      "description": "Deploying Claude Code in a regulated industry (finance, healthcare, government); enterprise security review of AI tooling; data residency or sovere...",
       "file": "skills/devops-infra/enterprise-compliance.md"
     },
     {
@@ -5151,7 +5271,7 @@
       "category": "devops-infra",
       "lang": "en",
       "title": "Network Design",
-      "description": "",
+      "description": "Designing cloud network architecture from scratch, planning VPC CIDR ranges and subnet layouts, implementing zero-trust network principles, selecti...",
       "file": "skills/devops-infra/network-design.md"
     },
     {
@@ -5487,15 +5607,15 @@
       "category": "devops-infra",
       "lang": "en",
       "title": "Platform Engineering",
-      "description": "",
+      "description": "Building internal developer platforms (IDPs), creating golden path service templates that encode organizational standards, setting up Backstage ser...",
       "file": "skills/devops-infra/platform-engineering.md"
     },
     {
       "id": "devops-infra/powershell",
       "category": "devops-infra",
       "lang": "en",
-      "title": "PowerShell Scripting",
-      "description": "",
+      "title": "Powershell",
+      "description": "- Writing or reviewing PowerShell scripts for Windows administration or cross-platform automation",
       "file": "skills/devops-infra/powershell.md"
     },
     {
@@ -5521,6 +5641,14 @@
       "title": "Release Manager",
       "description": "Release management: semantic versioning, changelog generation from conventional commits, release readiness checklists, hotfix procedures, rollback plans, and release branch strategy",
       "file": "skills/devops-infra/release-manager.md"
+    },
+    {
+      "id": "devops-infra/root-cause-tracing",
+      "category": "devops-infra",
+      "lang": "en",
+      "title": "Root Cause Tracing",
+      "description": "Root cause analysis: multi-layer log correlation, timeline reconstruction, blameless RCA methodology, evidence chain building, and systematic incident investigation",
+      "file": "skills/devops-infra/root-cause-tracing.md"
     },
     {
       "id": "devops-infra/secrets-management",
@@ -5559,7 +5687,7 @@
       "category": "devops-infra",
       "lang": "en",
       "title": "Terragrunt",
-      "description": "",
+      "description": "Managing Terraform configurations across multiple environments (dev/staging/prod) that share modules but need different variable values. Reducing b...",
       "file": "skills/devops-infra/terragrunt.md"
     },
     {
@@ -6022,8 +6150,8 @@
       "id": "finance/gl-break-tracer",
       "category": "finance",
       "lang": "en",
-      "title": "GL Break Tracer",
-      "description": "",
+      "title": "Gl Break Tracer",
+      "description": "Investigating a general ledger reconciliation break, unexplained variance in a trial balance, subledger-to-GL mismatch, or a month-end close discre...",
       "file": "skills/finance/gl-break-tracer.md"
     },
     {
@@ -6046,8 +6174,8 @@
       "id": "finance/kyc-rules-evaluator",
       "category": "finance",
       "lang": "en",
-      "title": "KYC Rules Evaluator",
-      "description": "",
+      "title": "Kyc Rules Evaluator",
+      "description": "Evaluating a new customer or counterparty for onboarding, producing a KYC risk rating, making an enhanced due diligence (EDD) decision, or running ...",
       "file": "skills/finance/kyc-rules-evaluator.md"
     },
     {
@@ -6423,7 +6551,7 @@
       "category": "gtm",
       "lang": "en",
       "title": "Cold Email",
-      "description": "",
+      "description": "Writing cold outbound emails to prospects, reviewing email copy for effectiveness, building multi-email sequences, or designing campaigns targeting...",
       "file": "skills/gtm/cold-email.md"
     },
     {
@@ -6654,16 +6782,16 @@
       "id": "gtm/gtm-philosophy",
       "category": "gtm",
       "lang": "en",
-      "title": "GTM Philosophy",
-      "description": "",
+      "title": "Gtm Philosophy",
+      "description": "When planning or refactoring an outbound motion, validating account selection before investing pipeline resources, debugging why a sequence is unde...",
       "file": "skills/gtm/gtm-philosophy.md"
     },
     {
       "id": "gtm/gtm-plays",
       "category": "gtm",
       "lang": "en",
-      "title": "GTM Plays",
-      "description": "",
+      "title": "Gtm Plays",
+      "description": "Account prioritization workflows, building trigger-based sales sequences, daily prospecting cadences, territory planning, and sales kickoff plannin...",
       "file": "skills/gtm/gtm-plays.md"
     },
     {
@@ -6694,8 +6822,8 @@
       "id": "gtm/linkedin-outreach",
       "category": "gtm",
       "lang": "en",
-      "title": "LinkedIn Outreach",
-      "description": "",
+      "title": "Linkedin Outreach",
+      "description": "- Running a LinkedIn connection or prospecting campaign targeting decision-makers",
       "file": "skills/gtm/linkedin-outreach.md"
     },
     {
@@ -6775,7 +6903,7 @@
       "category": "gtm",
       "lang": "en",
       "title": "Personalization",
-      "description": "",
+      "description": "Before writing any cold outreach message; when building account research playbooks; when scoring personalization quality on a message or campaign; ...",
       "file": "skills/gtm/personalization.md"
     },
     {
@@ -6846,8 +6974,8 @@
       "id": "gtm/sdr-prospecting",
       "category": "gtm",
       "lang": "en",
-      "title": "SDR Prospecting",
-      "description": "",
+      "title": "Sdr Prospecting",
+      "description": "- Building a net-new account list from scratch (quarterly prospecting campaigns, market penetration)",
       "file": "skills/gtm/sdr-prospecting.md"
     },
     {
@@ -6879,7 +7007,7 @@
       "category": "gtm",
       "lang": "en",
       "title": "Trigger Finder",
-      "description": "",
+      "description": "Daily prospecting workflow when building event-triggered sequences, prioritizing who to contact in the next 24 hours, or operationalizing buying in...",
       "file": "skills/gtm/trigger-finder.md"
     },
     {
@@ -6902,8 +7030,8 @@
       "id": "legal/cold-start-interview",
       "category": "legal",
       "lang": "en",
-      "title": "Cold-Start Interview — Legal Plugin Setup",
-      "description": "",
+      "title": "Cold Start Interview",
+      "description": "- First time using any legal skill for a new organization",
       "file": "skills/legal/cold-start-interview.md"
     },
     {
@@ -7279,7 +7407,7 @@
       "category": "legal",
       "lang": "en",
       "title": "Escalation Flagger",
-      "description": "",
+      "description": "- After contract review identifies issues that may exceed the reviewer's authority",
       "file": "skills/legal/escalation-flagger.md"
     },
     {
@@ -7462,8 +7590,8 @@
       "id": "legal/free-law",
       "category": "legal",
       "lang": "en",
-      "title": "Free Law Project (CourtListener) — Free US Legal Research",
-      "description": "",
+      "title": "Free Law",
+      "description": "Researching US federal and state court decisions without a paid subscription; looking up PACER filings, docket numbers, or judge records; bulk case...",
       "file": "skills/legal/free-law.md"
     },
     {
@@ -7710,8 +7838,8 @@
       "id": "legal/thomson-reuters",
       "category": "legal",
       "lang": "en",
-      "title": "Thomson Reuters Legal Research via MCP",
-      "description": "",
+      "title": "Thomson Reuters",
+      "description": "Legal research requiring case law, statutes, regulations, or Westlaw/Practical Law content; user is a lawyer or legal researcher using Claude Code ...",
       "file": "skills/legal/thomson-reuters.md"
     },
     {
@@ -9222,8 +9350,8 @@
       "id": "productivity/ai-writing-detection",
       "category": "productivity",
       "lang": "en",
-      "title": "AI Writing Detection",
-      "description": "",
+      "title": "Ai Writing Detection",
+      "description": "Auditing documentation, blog posts, or marketing copy for AI-pattern text; when the user wants content to sound more human; reviewing a README or p...",
       "file": "skills/productivity/ai-writing-detection.md"
     },
     {
@@ -9246,8 +9374,8 @@
       "id": "productivity/autofix-pr",
       "category": "productivity",
       "lang": "en",
-      "title": "/autofix-pr — Automatic PR Fix Application",
-      "description": "",
+      "title": "Autofix Pr",
+      "description": "User wants Claude to automatically apply code review suggestions without manual intervention; user mentions `/autofix-pr`; user wants hands-off PR ...",
       "file": "skills/productivity/autofix-pr.md"
     },
     {
@@ -9270,8 +9398,8 @@
       "id": "productivity/btw-side-question",
       "category": "productivity",
       "lang": "en",
-      "title": "/btw — Side Questions Without Breaking Flow",
-      "description": "",
+      "title": "Btw Side Question",
+      "description": "- User wants to ask a quick question mid-session without it appearing in conversation history",
       "file": "skills/productivity/btw-side-question.md"
     },
     {
@@ -9279,7 +9407,7 @@
       "category": "productivity",
       "lang": "en",
       "title": "Build Optimization",
-      "description": "",
+      "description": "Slow builds, large bundle sizes, CI pipelines taking more than 5 minutes, or when the user mentions Webpack, Vite, Turbo, esbuild, or Rollup perfor...",
       "file": "skills/productivity/build-optimization.md"
     },
     {
@@ -9307,11 +9435,19 @@
       "file": "skills/productivity/changelog-writer.md"
     },
     {
+      "id": "productivity/chrome-relay",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Chrome Relay",
+      "description": "Chrome Relay: browser automation via Chrome DevTools Protocol, web scraping, form filling, screenshot capture, performance auditing, and headless Chrome workflows",
+      "file": "skills/productivity/chrome-relay.md"
+    },
+    {
       "id": "productivity/cli-development",
       "category": "productivity",
       "lang": "en",
-      "title": "CLI Development",
-      "description": "",
+      "title": "Cli Development",
+      "description": "Building command-line tools in any language, or when the user mentions Commander, Click, Cobra, Typer, yargs, or Inquirer.",
       "file": "skills/productivity/cli-development.md"
     },
     {
@@ -9343,15 +9479,15 @@
       "category": "productivity",
       "lang": "en",
       "title": "Context Engineering",
-      "description": "",
+      "description": "User wants to optimize how context is provided to Claude, reduce token usage, improve response quality through better context design, or is hitting...",
       "file": "skills/productivity/context-engineering.md"
     },
     {
       "id": "productivity/cursor-tandem",
       "category": "productivity",
       "lang": "en",
-      "title": "Cursor + Claude Code Tandem Workflow",
-      "description": "",
+      "title": "Cursor Tandem",
+      "description": "User uses both Cursor and Claude Code and asks how to use them together effectively; user mentions switching between IDE and terminal AI; user want...",
       "file": "skills/productivity/cursor-tandem.md"
     },
     {
@@ -9891,12 +10027,28 @@
       "file": "skills/productivity/debug.md"
     },
     {
+      "id": "productivity/deep-research",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Deep Research",
+      "description": "Deep research: multi-step research synthesis, source triangulation, confidence scoring, structured research reports, competitive analysis, and systematic literature review",
+      "file": "skills/productivity/deep-research.md"
+    },
+    {
       "id": "productivity/doc-site-builder",
       "category": "productivity",
       "lang": "en",
       "title": "Doc Site Builder",
       "description": "Documentation site architecture: information hierarchy, nav structure, content templates, search strategy",
       "file": "skills/productivity/doc-site-builder.md"
+    },
+    {
+      "id": "productivity/document-processing",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Document Processing",
+      "description": "Document processing: extract structured data from PDF, DOCX, XLSX, PPTX files, parse tables, convert formats, handle OCR for scanned documents, and build document pipelines",
+      "file": "skills/productivity/document-processing.md"
     },
     {
       "id": "productivity/engineering-strategy",
@@ -11014,8 +11166,8 @@
       "id": "productivity/goal-command",
       "category": "productivity",
       "lang": "en",
-      "title": "/goal — Autonomous Task Completion",
-      "description": "",
+      "title": "Goal Command",
+      "description": "User wants Claude to keep working on a task without stopping to check in; user wants to set a completion condition and walk away; user asks about a...",
       "file": "skills/productivity/goal-command.md"
     },
     {
@@ -11086,8 +11238,8 @@
       "id": "productivity/mcp-client",
       "category": "productivity",
       "lang": "en",
-      "title": "MCP Client",
-      "description": "",
+      "title": "Mcp Client",
+      "description": "Building an application that connects to and consumes MCP servers, or when the user mentions consuming MCP tools programmatically from their own ap...",
       "file": "skills/productivity/mcp-client.md"
     },
     {
@@ -11719,7 +11871,7 @@
       "category": "productivity",
       "lang": "en",
       "title": "Slack App",
-      "description": "",
+      "description": "Building Slack bots or apps, or when the user mentions Bolt SDK, Slack slash commands, Block Kit, or Slack workflows.",
       "file": "skills/productivity/slack-app.md"
     },
     {
@@ -11743,7 +11895,7 @@
       "category": "productivity",
       "lang": "en",
       "title": "Static Analysis",
-      "description": "",
+      "description": "Security reviews, code quality audits, or when the user mentions CodeQL, Semgrep, or finding vulnerability patterns across a codebase.",
       "file": "skills/productivity/static-analysis.md"
     },
     {
@@ -11759,7 +11911,7 @@
       "category": "productivity",
       "lang": "en",
       "title": "Team Onboarding",
-      "description": "",
+      "description": "- User runs `/team-onboarding`",
       "file": "skills/productivity/team-onboarding.md"
     },
     {
@@ -11823,7 +11975,7 @@
       "category": "productivity",
       "lang": "en",
       "title": "Vertical Slice Planner",
-      "description": "",
+      "description": "- Planning a new feature or project before building starts",
       "file": "skills/productivity/vertical-slice-planner.md"
     },
     {
@@ -11839,15 +11991,15 @@
       "category": "productivity",
       "lang": "en",
       "title": "Voice Input",
-      "description": "",
+      "description": "- User says they want to speak their prompt rather than type it",
       "file": "skills/productivity/voice-input.md"
     },
     {
       "id": "sdr/atl-btl-messaging",
       "category": "sdr",
       "lang": "en",
-      "title": "ATL/BTL Messaging",
-      "description": "",
+      "title": "Atl Btl Messaging",
+      "description": "- Drafting cold outreach to a new account and you don't know the champion's seniority level yet",
       "file": "skills/sdr/atl-btl-messaging.md"
     },
     {
@@ -11855,7 +12007,7 @@
       "category": "sdr",
       "lang": "en",
       "title": "Buying Signals",
-      "description": "",
+      "description": "When prospecting B2B SaaS, you are deciding whether and when to reach out to a target account. Activate this skill when you have:",
       "file": "skills/sdr/buying-signals.md"
     },
     {
@@ -11863,7 +12015,7 @@
       "category": "sdr",
       "lang": "en",
       "title": "Cold Call Script",
-      "description": "",
+      "description": "- You are executing B2B outbound cold calls and need a structure that fits 60 seconds without triggering sales-call defensiveness.",
       "file": "skills/sdr/cold-call-script.md"
     },
     {
@@ -11871,7 +12023,7 @@
       "category": "sdr",
       "lang": "en",
       "title": "Cold Email Sequence",
-      "description": "",
+      "description": "- You are building a 4-email outbound campaign with specific timing (Day 0, 3, 7, 12)",
       "file": "skills/sdr/cold-email-sequence.md"
     },
     {
@@ -11879,15 +12031,15 @@
       "category": "sdr",
       "lang": "en",
       "title": "Company Intelligence",
-      "description": "",
+      "description": "- User provides a company name and LinkedIn URL and asks to \"research this account,\" \"build a dossier,\" \"find decision-makers,\" or \"extract pain si...",
       "file": "skills/sdr/company-intelligence.md"
     },
     {
       "id": "sdr/crm-hygiene",
       "category": "sdr",
       "lang": "en",
-      "title": "CRM Hygiene",
-      "description": "",
+      "title": "Crm Hygiene",
+      "description": "Trigger this skill when:",
       "file": "skills/sdr/crm-hygiene.md"
     },
     {
@@ -12039,7 +12191,7 @@
       "category": "sdr",
       "lang": "en",
       "title": "Email Metrics",
-      "description": "",
+      "description": "- Diagnosing underperforming cold email sequences (reply rate < 3%)",
       "file": "skills/sdr/email-metrics.md"
     },
     {
@@ -12190,8 +12342,8 @@
       "id": "sdr/follow-up-sequencer",
       "category": "sdr",
       "lang": "en",
-      "title": "Follow-Up Sequencer",
-      "description": "",
+      "title": "Follow Up Sequencer",
+      "description": "When managing SDR or sales sequences where you need to route prospect interactions through deterministic branches based on reply type, apply standa...",
       "file": "skills/sdr/follow-up-sequencer.md"
     },
     {
@@ -12342,16 +12494,16 @@
       "id": "sdr/icp-scoring",
       "category": "sdr",
       "lang": "en",
-      "title": "ICP Scoring",
-      "description": "",
+      "title": "Icp Scoring",
+      "description": "You are prospecting B2B SaaS companies and need to qualify leads against a defined ideal customer profile (ICP). Trigger this when: scoring a new l...",
       "file": "skills/sdr/icp-scoring.md"
     },
     {
       "id": "sdr/linkedin-sdr",
       "category": "sdr",
       "lang": "en",
-      "title": "LinkedIn SDR",
-      "description": "",
+      "title": "Linkedin Sdr",
+      "description": "- You are running a B2B prospecting campaign and need to scale outreach on LinkedIn without violating platform ToS",
       "file": "skills/sdr/linkedin-sdr.md"
     },
     {
@@ -12359,7 +12511,7 @@
       "category": "sdr",
       "lang": "en",
       "title": "Messaging Frameworks",
-      "description": "",
+      "description": "You are crafting cold outreach (email, LinkedIn, or call script) and need to select which framework maximizes reply rate and conversation quality f...",
       "file": "skills/sdr/messaging-frameworks.md"
     },
     {
@@ -12511,7 +12663,7 @@
       "category": "sdr",
       "lang": "en",
       "title": "Objection Handling",
-      "description": "",
+      "description": "You are in a live discovery call, email thread, or async response where a prospect has voiced resistance. Use this skill to convert objections into...",
       "file": "skills/sdr/objection-handling.md"
     },
     {
@@ -12519,7 +12671,7 @@
       "category": "sdr",
       "lang": "en",
       "title": "Outreach Categories",
-      "description": "",
+      "description": "When you need to determine which messaging strategy to deploy for a given prospect or lead cohort. Use this framework to:",
       "file": "skills/sdr/outreach-categories.md"
     },
     {
@@ -12527,7 +12679,7 @@
       "category": "sdr",
       "lang": "en",
       "title": "Personalization Buckets",
-      "description": "",
+      "description": "When crafting cold outreach (email, LinkedIn, InMail) and you need to:",
       "file": "skills/sdr/personalization-buckets.md"
     },
     {
@@ -12535,15 +12687,15 @@
       "category": "sdr",
       "lang": "en",
       "title": "Prospect Research",
-      "description": "",
+      "description": "When building a cold outreach sequence and you need to personalize the first touch with a specific individual — not when running list scraping, not...",
       "file": "skills/sdr/prospect-research.md"
     },
     {
       "id": "sdr/qualification-meddpicc",
       "category": "sdr",
       "lang": "en",
-      "title": "MEDDPICC Qualification",
-      "description": "",
+      "title": "Qualification Meddpicc",
+      "description": "- SDR has completed initial qualification call and is determining whether to schedule an AE (sales engineer / account executive) discovery meeting",
       "file": "skills/sdr/qualification-meddpicc.md"
     },
     {
@@ -12551,15 +12703,15 @@
       "category": "sdr",
       "lang": "en",
       "title": "Reply Classification",
-      "description": "",
+      "description": "You receive a prospect reply to an outbound email, message, or call attempt. You need to classify the reply, draft an immediate response, and route...",
       "file": "skills/sdr/reply-classification.md"
     },
     {
       "id": "sdr/sdr-master-prompt",
       "category": "sdr",
       "lang": "en",
-      "title": "SDR Master Prompt",
-      "description": "",
+      "title": "Sdr Master Prompt",
+      "description": "- AI SDR assistant is being initialized for a new account, campaign, or sequence",
       "file": "skills/sdr/sdr-master-prompt.md"
     },
     {
@@ -12567,7 +12719,7 @@
       "category": "small-business",
       "lang": "en",
       "title": "Agency Operations",
-      "description": "",
+      "description": "- You run a creative, marketing, design, dev, or content agency with 2-25 people",
       "file": "skills/small-business/agency-operations.md"
     },
     {
@@ -12575,7 +12727,7 @@
       "category": "small-business",
       "lang": "en",
       "title": "Bookkeeper Practice",
-      "description": "",
+      "description": "- You run a solo or small-team bookkeeping or fractional CFO practice",
       "file": "skills/small-business/bookkeeper-practice.md"
     },
     {
@@ -12607,7 +12759,7 @@
       "category": "small-business",
       "lang": "en",
       "title": "Churn Prevention",
-      "description": "",
+      "description": "- You run a subscription business (SaaS, membership, recurring service, content subscription) and want to reduce customer churn",
       "file": "skills/small-business/churn-prevention.md"
     },
     {
@@ -12631,7 +12783,7 @@
       "category": "small-business",
       "lang": "en",
       "title": "Coaching Business",
-      "description": "",
+      "description": "- You're a solo or boutique coach (executive, leadership, life, business, sales, health) and the operational work between sessions is eating your d...",
       "file": "skills/small-business/coaching-business.md"
     },
     {
@@ -12639,7 +12791,7 @@
       "category": "small-business",
       "lang": "en",
       "title": "Cold Outreach",
-      "description": "",
+      "description": "- Launching a new outreach campaign and you need first-touch emails that do not sound like templates",
       "file": "skills/small-business/cold-outreach.md"
     },
     {
@@ -12662,8 +12814,8 @@
       "id": "small-business/contractor-trades",
       "category": "small-business",
       "lang": "en",
-      "title": "Contractor and Trades Operations",
-      "description": "",
+      "title": "Contractor Trades",
+      "description": "- You run a skilled trades business — plumbing, HVAC, electrical, landscaping, painting, roofing, general contracting, handyman services",
       "file": "skills/small-business/contractor-trades.md"
     },
     {
@@ -13063,7 +13215,7 @@
       "category": "small-business",
       "lang": "en",
       "title": "Dental Practice",
-      "description": "",
+      "description": "- You run a solo or small group dental practice and the front desk is drowning in operational follow-up",
       "file": "skills/small-business/dental-practice.md"
     },
     {
@@ -13071,7 +13223,7 @@
       "category": "small-business",
       "lang": "en",
       "title": "Ecommerce Seller",
-      "description": "",
+      "description": "- You sell on multiple ecommerce platforms (Shopify, Amazon, Etsy, eBay, Walmart) and need consistent listing copy across all of them",
       "file": "skills/small-business/ecommerce-seller.md"
     },
     {
@@ -13470,8 +13622,8 @@
       "id": "small-business/fitness-gym-ops",
       "category": "small-business",
       "lang": "en",
-      "title": "Fitness Gym Operations",
-      "description": "",
+      "title": "Fitness Gym Ops",
+      "description": "- You run a fitness studio, gym, CrossFit box, yoga studio, Pilates studio, or boutique fitness business",
       "file": "skills/small-business/fitness-gym-ops.md"
     },
     {
@@ -13855,7 +14007,7 @@
       "category": "small-business",
       "lang": "en",
       "title": "Hiring Pipeline",
-      "description": "",
+      "description": "- You're hiring for a small business or solo practice and have 20+ applications to triage for a single role",
       "file": "skills/small-business/hiring-pipeline.md"
     },
     {
@@ -13879,7 +14031,7 @@
       "category": "small-business",
       "lang": "en",
       "title": "Lead Triager",
-      "description": "",
+      "description": "- New contacts came in from a form submission, event, or campaign and you need to know who to call first",
       "file": "skills/small-business/lead-triager.md"
     },
     {
@@ -13894,8 +14046,8 @@
       "id": "small-business/meeting-to-action",
       "category": "small-business",
       "lang": "en",
-      "title": "Meeting to Action",
-      "description": "",
+      "title": "Meeting To Action",
+      "description": "- Right after any client call, sales call, or team meeting — within the hour while context is fresh",
       "file": "skills/small-business/meeting-to-action.md"
     },
     {
@@ -13903,15 +14055,15 @@
       "category": "small-business",
       "lang": "en",
       "title": "Monday Brief",
-      "description": "",
+      "description": "- Start of every week — you want a clear picture of where the business stands before the week begins",
       "file": "skills/small-business/monday-brief.md"
     },
     {
       "id": "small-business/month-end-close",
       "category": "small-business",
       "lang": "en",
-      "title": "Month-End Close",
-      "description": "",
+      "title": "Month End Close",
+      "description": "- It is the last few days of the month and you need to close the books",
       "file": "skills/small-business/month-end-close.md"
     },
     {
@@ -13919,7 +14071,7 @@
       "category": "small-business",
       "lang": "en",
       "title": "Newsletter Publisher",
-      "description": "",
+      "description": "- You run a paid or free newsletter (Substack, Beehiiv, ConvertKit/Kit, Ghost, Mailchimp) and want to systematize the operational work around each ...",
       "file": "skills/small-business/newsletter-publisher.md"
     },
     {
@@ -14279,7 +14431,7 @@
       "category": "small-business",
       "lang": "en",
       "title": "Online Course Creator",
-      "description": "",
+      "description": "- You're an independent course creator (educator, expert, coach turning expertise into a course) and you're building or relaunching a course",
       "file": "skills/small-business/online-course-creator.md"
     },
     {
@@ -14287,7 +14439,7 @@
       "category": "small-business",
       "lang": "en",
       "title": "Payroll Planner",
-      "description": "",
+      "description": "- You are 1-2 weeks out from payroll and want to confirm the money is there before it hits",
       "file": "skills/small-business/payroll-planner.md"
     },
     {
@@ -14295,7 +14447,7 @@
       "category": "small-business",
       "lang": "en",
       "title": "Photography Studio",
-      "description": "",
+      "description": "- You run a solo or small-team photography studio — wedding, portrait, commercial, real estate, food, brand",
       "file": "skills/small-business/photography-studio.md"
     },
     {
@@ -14303,7 +14455,7 @@
       "category": "small-business",
       "lang": "en",
       "title": "Podcast Monetizer",
-      "description": "",
+      "description": "- You run an independent podcast that you want to monetize via sponsors, products, courses, or a paid tier",
       "file": "skills/small-business/podcast-monetizer.md"
     },
     {
@@ -14311,7 +14463,7 @@
       "category": "small-business",
       "lang": "en",
       "title": "Pricing Optimizer",
-      "description": "",
+      "description": "- You're considering raising prices and want a structured framework instead of guessing",
       "file": "skills/small-business/pricing-optimizer.md"
     },
     {
@@ -14366,8 +14518,8 @@
       "id": "small-business/salon-spa-ops",
       "category": "small-business",
       "lang": "en",
-      "title": "Salon and Spa Operations",
-      "description": "",
+      "title": "Salon Spa Ops",
+      "description": "- You run a salon, spa, barbershop, nail studio, or wellness practice and need to compress the operational work between appointments",
       "file": "skills/small-business/salon-spa-ops.md"
     },
     {
@@ -14399,7 +14551,7 @@
       "category": "small-business",
       "lang": "en",
       "title": "Tax Organizer",
-      "description": "",
+      "description": "- End of a quarter — estimated tax payment is due and you need your numbers together",
       "file": "skills/small-business/tax-organizer.md"
     },
     {
@@ -14433,13 +14585,13 @@
     {
       "id": "advisors/ceo-advisor",
       "lang": "en",
-      "title": "CEO Advisor Agent",
+      "title": "Ceo Advisor",
       "file": "agents/advisors/ceo-advisor.md"
     },
     {
       "id": "advisors/cfo-advisor",
       "lang": "en",
-      "title": "CFO Advisor Agent",
+      "title": "Cfo Advisor",
       "file": "agents/advisors/cfo-advisor.md"
     },
     {
@@ -14463,19 +14615,19 @@
     {
       "id": "advisors/cmo-advisor",
       "lang": "en",
-      "title": "CMO Advisor Agent",
+      "title": "Cmo Advisor",
       "file": "agents/advisors/cmo-advisor.md"
     },
     {
       "id": "advisors/coo-advisor",
       "lang": "en",
-      "title": "COO Advisor Agent",
+      "title": "Coo Advisor",
       "file": "agents/advisors/coo-advisor.md"
     },
     {
       "id": "advisors/cpo-advisor",
       "lang": "en",
-      "title": "CPO Advisor Agent",
+      "title": "Cpo Advisor",
       "file": "agents/advisors/cpo-advisor.md"
     },
     {
@@ -14487,7 +14639,7 @@
     {
       "id": "advisors/cto-advisor",
       "lang": "en",
-      "title": "CTO Advisor Agent",
+      "title": "Cto Advisor",
       "file": "agents/advisors/cto-advisor.md"
     },
     {
@@ -14541,19 +14693,19 @@
     {
       "id": "advisors/cmo-advisor",
       "lang": "de",
-      "title": "CMO Advisor Agent",
+      "title": "Cmo Advisor",
       "file": "agents/advisors/de/cmo-advisor.md"
     },
     {
       "id": "advisors/coo-advisor",
       "lang": "de",
-      "title": "COO Advisor Agent",
+      "title": "Coo Advisor",
       "file": "agents/advisors/de/coo-advisor.md"
     },
     {
       "id": "advisors/cpo-advisor",
       "lang": "de",
-      "title": "CPO Advisor Agent",
+      "title": "Cpo Advisor",
       "file": "agents/advisors/de/cpo-advisor.md"
     },
     {
@@ -14565,13 +14717,13 @@
     {
       "id": "advisors/cto-advisor",
       "lang": "de",
-      "title": "CTO Advisor Agent",
+      "title": "Cto Advisor",
       "file": "agents/advisors/de/cto-advisor.md"
     },
     {
       "id": "advisors/general-counsel",
       "lang": "de",
-      "title": "General Counsel Advisor Agent",
+      "title": "General Counsel",
       "file": "agents/advisors/de/general-counsel.md"
     },
     {
@@ -14607,7 +14759,7 @@
     {
       "id": "advisors/cfo-advisor",
       "lang": "es",
-      "title": "Asesor Asesor",
+      "title": "Cfo Advisor",
       "file": "agents/advisors/es/cfo-advisor.md"
     },
     {
@@ -14625,43 +14777,43 @@
     {
       "id": "advisors/chro-advisor",
       "lang": "es",
-      "title": "Asesor Asesor",
+      "title": "Chro Advisor",
       "file": "agents/advisors/es/chro-advisor.md"
     },
     {
       "id": "advisors/ciso-advisor",
       "lang": "es",
-      "title": "Asesor Asesor",
+      "title": "Ciso Advisor",
       "file": "agents/advisors/es/ciso-advisor.md"
     },
     {
       "id": "advisors/cmo-advisor",
       "lang": "es",
-      "title": "Asesor Asesor",
+      "title": "Cmo Advisor",
       "file": "agents/advisors/es/cmo-advisor.md"
     },
     {
       "id": "advisors/coo-advisor",
       "lang": "es",
-      "title": "Asesor Asesor",
+      "title": "Coo Advisor",
       "file": "agents/advisors/es/coo-advisor.md"
     },
     {
       "id": "advisors/cpo-advisor",
       "lang": "es",
-      "title": "Asesor Asesor",
+      "title": "Cpo Advisor",
       "file": "agents/advisors/es/cpo-advisor.md"
     },
     {
       "id": "advisors/cro-advisor",
       "lang": "es",
-      "title": "Asesor Asesor",
+      "title": "Cro Advisor",
       "file": "agents/advisors/es/cro-advisor.md"
     },
     {
       "id": "advisors/cto-advisor",
       "lang": "es",
-      "title": "Asesor Asesor",
+      "title": "Cto Advisor",
       "file": "agents/advisors/es/cto-advisor.md"
     },
     {
@@ -14673,13 +14825,13 @@
     {
       "id": "advisors/general-counsel",
       "lang": "es",
-      "title": "Asesor de Abogado General",
+      "title": "General Counsel",
       "file": "agents/advisors/es/general-counsel.md"
     },
     {
       "id": "advisors/vpe-advisor",
       "lang": "es",
-      "title": "Asesor Asesor",
+      "title": "Vpe Advisor",
       "file": "agents/advisors/es/vpe-advisor.md"
     },
     {
@@ -14703,13 +14855,13 @@
     {
       "id": "advisors/ceo-advisor",
       "lang": "fr",
-      "title": "Agent Conseiller PDG",
+      "title": "Ceo Advisor",
       "file": "agents/advisors/fr/ceo-advisor.md"
     },
     {
       "id": "advisors/cfo-advisor",
       "lang": "fr",
-      "title": "Agent Conseiller CFO",
+      "title": "Cfo Advisor",
       "file": "agents/advisors/fr/cfo-advisor.md"
     },
     {
@@ -14733,19 +14885,19 @@
     {
       "id": "advisors/cmo-advisor",
       "lang": "fr",
-      "title": "Agent Conseiller CMO",
+      "title": "Cmo Advisor",
       "file": "agents/advisors/fr/cmo-advisor.md"
     },
     {
       "id": "advisors/coo-advisor",
       "lang": "fr",
-      "title": "Agent Conseiller COO",
+      "title": "Coo Advisor",
       "file": "agents/advisors/fr/coo-advisor.md"
     },
     {
       "id": "advisors/cpo-advisor",
       "lang": "fr",
-      "title": "Agent Conseiller CPO",
+      "title": "Cpo Advisor",
       "file": "agents/advisors/fr/cpo-advisor.md"
     },
     {
@@ -14757,13 +14909,13 @@
     {
       "id": "advisors/cto-advisor",
       "lang": "fr",
-      "title": "Agent Conseiller CTO",
+      "title": "Cto Advisor",
       "file": "agents/advisors/fr/cto-advisor.md"
     },
     {
       "id": "advisors/general-counsel",
       "lang": "fr",
-      "title": "Agent Conseiller Juridique en Chef",
+      "title": "General Counsel",
       "file": "agents/advisors/fr/general-counsel.md"
     },
     {
@@ -14775,7 +14927,7 @@
     {
       "id": "advisors/general-counsel",
       "lang": "en",
-      "title": "General Counsel Advisor Agent",
+      "title": "General Counsel",
       "file": "agents/advisors/general-counsel.md"
     },
     {
@@ -14805,7 +14957,7 @@
     {
       "id": "advisors/cfo-advisor",
       "lang": "nl",
-      "title": "Adviseur Adviseur",
+      "title": "Cfo Advisor",
       "file": "agents/advisors/nl/cfo-advisor.md"
     },
     {
@@ -14823,43 +14975,43 @@
     {
       "id": "advisors/chro-advisor",
       "lang": "nl",
-      "title": "Adviseur Adviseur",
+      "title": "Chro Advisor",
       "file": "agents/advisors/nl/chro-advisor.md"
     },
     {
       "id": "advisors/ciso-advisor",
       "lang": "nl",
-      "title": "Adviseur Adviseur",
+      "title": "Ciso Advisor",
       "file": "agents/advisors/nl/ciso-advisor.md"
     },
     {
       "id": "advisors/cmo-advisor",
       "lang": "nl",
-      "title": "Adviseur Adviseur",
+      "title": "Cmo Advisor",
       "file": "agents/advisors/nl/cmo-advisor.md"
     },
     {
       "id": "advisors/coo-advisor",
       "lang": "nl",
-      "title": "Adviseur Adviseur",
+      "title": "Coo Advisor",
       "file": "agents/advisors/nl/coo-advisor.md"
     },
     {
       "id": "advisors/cpo-advisor",
       "lang": "nl",
-      "title": "Adviseur Adviseur",
+      "title": "Cpo Advisor",
       "file": "agents/advisors/nl/cpo-advisor.md"
     },
     {
       "id": "advisors/cro-advisor",
       "lang": "nl",
-      "title": "Adviseur Adviseur",
+      "title": "Cro Advisor",
       "file": "agents/advisors/nl/cro-advisor.md"
     },
     {
       "id": "advisors/cto-advisor",
       "lang": "nl",
-      "title": "Adviseur Adviseur",
+      "title": "Cto Advisor",
       "file": "agents/advisors/nl/cto-advisor.md"
     },
     {
@@ -14871,13 +15023,13 @@
     {
       "id": "advisors/general-counsel",
       "lang": "nl",
-      "title": "Algemeen Raadsman Adviseur Agent",
+      "title": "General Counsel",
       "file": "agents/advisors/nl/general-counsel.md"
     },
     {
       "id": "advisors/vpe-advisor",
       "lang": "nl",
-      "title": "Adviseur Adviseur",
+      "title": "Vpe Advisor",
       "file": "agents/advisors/nl/vpe-advisor.md"
     },
     {
@@ -14937,25 +15089,25 @@
     {
       "id": "build-resolvers/python-resolver",
       "lang": "en",
-      "title": "Python Build Resolver Agent",
+      "title": "Python Resolver",
       "file": "agents/build-resolvers/python-resolver.md"
     },
     {
       "id": "build-resolvers/typescript-resolver",
       "lang": "en",
-      "title": "TypeScript Build Resolver Agent",
+      "title": "Typescript Resolver",
       "file": "agents/build-resolvers/typescript-resolver.md"
     },
     {
       "id": "core/architect",
       "lang": "en",
-      "title": "Architect Agent",
+      "title": "Architect",
       "file": "agents/core/architect.md"
     },
     {
       "id": "core/code-reviewer",
       "lang": "en",
-      "title": "Code Reviewer Agent",
+      "title": "Code Reviewer",
       "file": "agents/core/code-reviewer.md"
     },
     {
@@ -15057,13 +15209,13 @@
     {
       "id": "core/planner",
       "lang": "en",
-      "title": "Planner Agent",
+      "title": "Planner",
       "file": "agents/core/planner.md"
     },
     {
       "id": "core/security-reviewer",
       "lang": "en",
-      "title": "Security Reviewer Agent",
+      "title": "Security Reviewer",
       "file": "agents/core/security-reviewer.md"
     },
     {
@@ -15301,10 +15453,28 @@
       "file": "agents/roles/de/adr-writer.md"
     },
     {
+      "id": "roles/agent-architect",
+      "lang": "de",
+      "title": "Agent Architect",
+      "file": "agents/roles/de/agent-architect.md"
+    },
+    {
+      "id": "roles/ai-safety-engineer",
+      "lang": "de",
+      "title": "Ai Safety Engineer",
+      "file": "agents/roles/de/ai-safety-engineer.md"
+    },
+    {
       "id": "roles/ai-writing-auditor",
       "lang": "de",
       "title": "Ai Writing Auditor",
       "file": "agents/roles/de/ai-writing-auditor.md"
+    },
+    {
+      "id": "roles/analytics-engineer",
+      "lang": "de",
+      "title": "Analytics Engineer",
+      "file": "agents/roles/de/analytics-engineer.md"
     },
     {
       "id": "roles/angular-architect",
@@ -15319,6 +15489,30 @@
       "file": "agents/roles/de/api-designer.md"
     },
     {
+      "id": "roles/api-gateway-specialist",
+      "lang": "de",
+      "title": "Api Gateway Specialist",
+      "file": "agents/roles/de/api-gateway-specialist.md"
+    },
+    {
+      "id": "roles/appsec-engineer",
+      "lang": "de",
+      "title": "Appsec Engineer",
+      "file": "agents/roles/de/appsec-engineer.md"
+    },
+    {
+      "id": "roles/aws-solutions-architect",
+      "lang": "de",
+      "title": "Aws Solutions Architect",
+      "file": "agents/roles/de/aws-solutions-architect.md"
+    },
+    {
+      "id": "roles/azure-architect",
+      "lang": "de",
+      "title": "Azure Architect",
+      "file": "agents/roles/de/azure-architect.md"
+    },
+    {
       "id": "roles/blockchain-developer",
       "lang": "de",
       "title": "Blockchain Developer",
@@ -15329,6 +15523,12 @@
       "lang": "de",
       "title": "Build Engineer",
       "file": "agents/roles/de/build-engineer.md"
+    },
+    {
+      "id": "roles/cdc-specialist",
+      "lang": "de",
+      "title": "Cdc Specialist",
+      "file": "agents/roles/de/cdc-specialist.md"
     },
     {
       "id": "roles/changelog-narrator",
@@ -15349,6 +15549,24 @@
       "file": "agents/roles/de/cli-developer.md"
     },
     {
+      "id": "roles/clojure-engineer",
+      "lang": "de",
+      "title": "Clojure Engineer",
+      "file": "agents/roles/de/clojure-engineer.md"
+    },
+    {
+      "id": "roles/cloud-security-engineer",
+      "lang": "de",
+      "title": "Cloud Security Engineer",
+      "file": "agents/roles/de/cloud-security-engineer.md"
+    },
+    {
+      "id": "roles/code-quality-auditor",
+      "lang": "de",
+      "title": "Code Quality Auditor",
+      "file": "agents/roles/de/code-quality-auditor.md"
+    },
+    {
       "id": "roles/code-simplifier",
       "lang": "de",
       "title": "Code Simplifier",
@@ -15367,6 +15585,24 @@
       "file": "agents/roles/de/competitive-analyst.md"
     },
     {
+      "id": "roles/compliance-auditor",
+      "lang": "de",
+      "title": "Compliance Auditor",
+      "file": "agents/roles/de/compliance-auditor.md"
+    },
+    {
+      "id": "roles/computer-vision-engineer",
+      "lang": "de",
+      "title": "Computer Vision Engineer",
+      "file": "agents/roles/de/computer-vision-engineer.md"
+    },
+    {
+      "id": "roles/content-strategist",
+      "lang": "de",
+      "title": "Content Strategist",
+      "file": "agents/roles/de/content-strategist.md"
+    },
+    {
       "id": "roles/context-auditor",
       "lang": "de",
       "title": "Context Auditor",
@@ -15379,10 +15615,52 @@
       "file": "agents/roles/de/context-manager.md"
     },
     {
+      "id": "roles/cpp-engineer",
+      "lang": "de",
+      "title": "Cpp Engineer",
+      "file": "agents/roles/de/cpp-engineer.md"
+    },
+    {
+      "id": "roles/crypto-engineer",
+      "lang": "de",
+      "title": "Crypto Engineer",
+      "file": "agents/roles/de/crypto-engineer.md"
+    },
+    {
+      "id": "roles/css-architect",
+      "lang": "de",
+      "title": "Css Architect",
+      "file": "agents/roles/de/css-architect.md"
+    },
+    {
+      "id": "roles/customer-success-manager",
+      "lang": "de",
+      "title": "Customer Success Manager",
+      "file": "agents/roles/de/customer-success-manager.md"
+    },
+    {
       "id": "roles/data-pipeline-architect",
       "lang": "de",
       "title": "Data Pipeline Architect",
       "file": "agents/roles/de/data-pipeline-architect.md"
+    },
+    {
+      "id": "roles/data-scientist",
+      "lang": "de",
+      "title": "Data Scientist",
+      "file": "agents/roles/de/data-scientist.md"
+    },
+    {
+      "id": "roles/database-administrator",
+      "lang": "de",
+      "title": "Database Administrator",
+      "file": "agents/roles/de/database-administrator.md"
+    },
+    {
+      "id": "roles/dbt-specialist",
+      "lang": "de",
+      "title": "dbt Specialist",
+      "file": "agents/roles/de/dbt-specialist.md"
     },
     {
       "id": "roles/dependency-manager",
@@ -15397,10 +15675,46 @@
       "file": "agents/roles/de/diagram-generator.md"
     },
     {
+      "id": "roles/documentation-engineer",
+      "lang": "de",
+      "title": "Documentation Engineer",
+      "file": "agents/roles/de/documentation-engineer.md"
+    },
+    {
+      "id": "roles/dotnet-architect",
+      "lang": "de",
+      "title": ".NET Architect",
+      "file": "agents/roles/de/dotnet-architect.md"
+    },
+    {
+      "id": "roles/dr-bcp-specialist",
+      "lang": "de",
+      "title": "Dr Bcp Specialist",
+      "file": "agents/roles/de/dr-bcp-specialist.md"
+    },
+    {
       "id": "roles/dx-optimizer",
       "lang": "de",
       "title": "Dx Optimizer",
       "file": "agents/roles/de/dx-optimizer.md"
+    },
+    {
+      "id": "roles/edge-computing-engineer",
+      "lang": "de",
+      "title": "Edge Computing Engineer",
+      "file": "agents/roles/de/edge-computing-engineer.md"
+    },
+    {
+      "id": "roles/elasticsearch-specialist",
+      "lang": "de",
+      "title": "Elasticsearch Specialist",
+      "file": "agents/roles/de/elasticsearch-specialist.md"
+    },
+    {
+      "id": "roles/electron-developer",
+      "lang": "de",
+      "title": "Electron Developer",
+      "file": "agents/roles/de/electron-developer.md"
     },
     {
       "id": "roles/elixir-expert",
@@ -15421,10 +15735,34 @@
       "file": "agents/roles/de/error-coordinator.md"
     },
     {
+      "id": "roles/eval-engineer",
+      "lang": "de",
+      "title": "Eval Engineer",
+      "file": "agents/roles/de/eval-engineer.md"
+    },
+    {
       "id": "roles/expo-react-native",
       "lang": "de",
       "title": "Expo React Native",
       "file": "agents/roles/de/expo-react-native.md"
+    },
+    {
+      "id": "roles/feature-store-engineer",
+      "lang": "de",
+      "title": "Feature Store Engineer",
+      "file": "agents/roles/de/feature-store-engineer.md"
+    },
+    {
+      "id": "roles/fine-tuning-specialist",
+      "lang": "de",
+      "title": "Fine Tuning Specialist",
+      "file": "agents/roles/de/fine-tuning-specialist.md"
+    },
+    {
+      "id": "roles/finops-engineer",
+      "lang": "de",
+      "title": "Finops Engineer",
+      "file": "agents/roles/de/finops-engineer.md"
     },
     {
       "id": "roles/fintech-engineer",
@@ -15451,10 +15789,28 @@
       "file": "agents/roles/de/game-developer.md"
     },
     {
+      "id": "roles/gcp-architect",
+      "lang": "de",
+      "title": "Gcp Architect",
+      "file": "agents/roles/de/gcp-architect.md"
+    },
+    {
+      "id": "roles/go-engineer",
+      "lang": "de",
+      "title": "Go Engineer",
+      "file": "agents/roles/de/go-engineer.md"
+    },
+    {
       "id": "roles/graphql-architect",
       "lang": "de",
       "title": "Graphql Architect",
       "file": "agents/roles/de/graphql-architect.md"
+    },
+    {
+      "id": "roles/growth-engineer",
+      "lang": "de",
+      "title": "Growth Engineer",
+      "file": "agents/roles/de/growth-engineer.md"
     },
     {
       "id": "roles/healthcare-admin",
@@ -15469,10 +15825,22 @@
       "file": "agents/roles/de/hypothesis-tester.md"
     },
     {
+      "id": "roles/iam-specialist",
+      "lang": "de",
+      "title": "Iam Specialist",
+      "file": "agents/roles/de/iam-specialist.md"
+    },
+    {
       "id": "roles/incident-commander",
       "lang": "de",
       "title": "Incident Commander",
       "file": "agents/roles/de/incident-commander.md"
+    },
+    {
+      "id": "roles/incident-responder",
+      "lang": "de",
+      "title": "Incident Responder",
+      "file": "agents/roles/de/incident-responder.md"
     },
     {
       "id": "roles/iot-engineer",
@@ -15487,10 +15855,28 @@
       "file": "agents/roles/de/it-ops-orchestrator.md"
     },
     {
+      "id": "roles/java-architect",
+      "lang": "de",
+      "title": "Java Architect",
+      "file": "agents/roles/de/java-architect.md"
+    },
+    {
+      "id": "roles/kafka-specialist",
+      "lang": "de",
+      "title": "Kafka Specialist",
+      "file": "agents/roles/de/kafka-specialist.md"
+    },
+    {
       "id": "roles/knowledge-synthesizer",
       "lang": "de",
       "title": "Knowledge Synthesizer",
       "file": "agents/roles/de/knowledge-synthesizer.md"
+    },
+    {
+      "id": "roles/kotlin-engineer",
+      "lang": "de",
+      "title": "Kotlin Engineer",
+      "file": "agents/roles/de/kotlin-engineer.md"
     },
     {
       "id": "roles/kubernetes-architect",
@@ -15541,10 +15927,28 @@
       "file": "agents/roles/de/mcp-developer.md"
     },
     {
+      "id": "roles/message-queue-architect",
+      "lang": "de",
+      "title": "Message Queue Architect",
+      "file": "agents/roles/de/message-queue-architect.md"
+    },
+    {
+      "id": "roles/micro-frontend-architect",
+      "lang": "de",
+      "title": "Micro Frontend Architect",
+      "file": "agents/roles/de/micro-frontend-architect.md"
+    },
+    {
       "id": "roles/microservices-architect",
       "lang": "de",
       "title": "Microservices Architect",
       "file": "agents/roles/de/microservices-architect.md"
+    },
+    {
+      "id": "roles/ml-platform-engineer",
+      "lang": "de",
+      "title": "Ml Platform Engineer",
+      "file": "agents/roles/de/ml-platform-engineer.md"
     },
     {
       "id": "roles/mlops-engineer",
@@ -15565,16 +15969,40 @@
       "file": "agents/roles/de/multi-agent-coordinator.md"
     },
     {
+      "id": "roles/multimodal-engineer",
+      "lang": "de",
+      "title": "Multimodal Engineer",
+      "file": "agents/roles/de/multimodal-engineer.md"
+    },
+    {
       "id": "roles/network-engineer",
       "lang": "de",
       "title": "Network Engineer",
       "file": "agents/roles/de/network-engineer.md"
     },
     {
+      "id": "roles/nextjs-architect",
+      "lang": "de",
+      "title": "Nextjs Architect",
+      "file": "agents/roles/de/nextjs-architect.md"
+    },
+    {
       "id": "roles/nlp-engineer",
       "lang": "de",
       "title": "Nlp Engineer",
       "file": "agents/roles/de/nlp-engineer.md"
+    },
+    {
+      "id": "roles/observability-engineer",
+      "lang": "de",
+      "title": "Observability Engineer",
+      "file": "agents/roles/de/observability-engineer.md"
+    },
+    {
+      "id": "roles/partnerships-manager",
+      "lang": "de",
+      "title": "Partnerships Manager",
+      "file": "agents/roles/de/partnerships-manager.md"
     },
     {
       "id": "roles/penetration-tester",
@@ -15589,10 +16017,22 @@
       "file": "agents/roles/de/performance-optimizer.md"
     },
     {
+      "id": "roles/performance-test-engineer",
+      "lang": "de",
+      "title": "Performance Test Engineer",
+      "file": "agents/roles/de/performance-test-engineer.md"
+    },
+    {
       "id": "roles/platform-engineer",
       "lang": "de",
       "title": "Platform Engineer",
       "file": "agents/roles/de/platform-engineer.md"
+    },
+    {
+      "id": "roles/postgres-specialist",
+      "lang": "de",
+      "title": "Postgres Specialist",
+      "file": "agents/roles/de/postgres-specialist.md"
     },
     {
       "id": "roles/powershell-expert",
@@ -15601,16 +16041,34 @@
       "file": "agents/roles/de/powershell-expert.md"
     },
     {
+      "id": "roles/product-marketer",
+      "lang": "de",
+      "title": "Product Marketer",
+      "file": "agents/roles/de/product-marketer.md"
+    },
+    {
       "id": "roles/prompt-optimizer",
       "lang": "de",
       "title": "Prompt Optimizer",
       "file": "agents/roles/de/prompt-optimizer.md"
     },
     {
+      "id": "roles/qa-automation-engineer",
+      "lang": "de",
+      "title": "Qa Automation Engineer",
+      "file": "agents/roles/de/qa-automation-engineer.md"
+    },
+    {
       "id": "roles/quant-analyst",
       "lang": "de",
       "title": "Quant Analyst",
       "file": "agents/roles/de/quant-analyst.md"
+    },
+    {
+      "id": "roles/rag-engineer",
+      "lang": "de",
+      "title": "Rag Engineer",
+      "file": "agents/roles/de/rag-engineer.md"
     },
     {
       "id": "roles/rails-expert",
@@ -15625,16 +16083,40 @@
       "file": "agents/roles/de/real-estate-specialist.md"
     },
     {
+      "id": "roles/recommendation-engineer",
+      "lang": "de",
+      "title": "Recommendation Engineer",
+      "file": "agents/roles/de/recommendation-engineer.md"
+    },
+    {
       "id": "roles/red-team",
       "lang": "de",
       "title": "Red Team",
       "file": "agents/roles/de/red-team.md"
     },
     {
+      "id": "roles/redis-specialist",
+      "lang": "de",
+      "title": "Redis Specialist",
+      "file": "agents/roles/de/redis-specialist.md"
+    },
+    {
+      "id": "roles/release-manager",
+      "lang": "de",
+      "title": "Release Manager",
+      "file": "agents/roles/de/release-manager.md"
+    },
+    {
       "id": "roles/restaurant-specialist",
       "lang": "de",
-      "title": "Restaurant-Spezialist",
+      "title": "Restaurant Specialist",
       "file": "agents/roles/de/restaurant-specialist.md"
+    },
+    {
+      "id": "roles/revenue-ops-analyst",
+      "lang": "de",
+      "title": "Revenue Ops Analyst",
+      "file": "agents/roles/de/revenue-ops-analyst.md"
     },
     {
       "id": "roles/rl-engineer",
@@ -15649,10 +16131,28 @@
       "file": "agents/roles/de/rust-engineer.md"
     },
     {
+      "id": "roles/sales-engineer",
+      "lang": "de",
+      "title": "Sales Engineer",
+      "file": "agents/roles/de/sales-engineer.md"
+    },
+    {
+      "id": "roles/scala-engineer",
+      "lang": "de",
+      "title": "Scala Engineer",
+      "file": "agents/roles/de/scala-engineer.md"
+    },
+    {
       "id": "roles/scientific-researcher",
       "lang": "de",
       "title": "Scientific Researcher",
       "file": "agents/roles/de/scientific-researcher.md"
+    },
+    {
+      "id": "roles/sdr-agent",
+      "lang": "de",
+      "title": "Sdr Agent",
+      "file": "agents/roles/de/sdr-agent.md"
     },
     {
       "id": "roles/security-auditor",
@@ -15673,10 +16173,46 @@
       "file": "agents/roles/de/senior-frontend.md"
     },
     {
+      "id": "roles/soc-analyst",
+      "lang": "de",
+      "title": "Soc Analyst",
+      "file": "agents/roles/de/soc-analyst.md"
+    },
+    {
+      "id": "roles/solidjs-engineer",
+      "lang": "de",
+      "title": "Solidjs Engineer",
+      "file": "agents/roles/de/solidjs-engineer.md"
+    },
+    {
+      "id": "roles/solutions-architect",
+      "lang": "de",
+      "title": "Solutions Architect",
+      "file": "agents/roles/de/solutions-architect.md"
+    },
+    {
       "id": "roles/sre-engineer",
       "lang": "de",
       "title": "Sre Engineer",
       "file": "agents/roles/de/sre-engineer.md"
+    },
+    {
+      "id": "roles/streaming-data-engineer",
+      "lang": "de",
+      "title": "Streaming Data Engineer",
+      "file": "agents/roles/de/streaming-data-engineer.md"
+    },
+    {
+      "id": "roles/supply-chain-security",
+      "lang": "de",
+      "title": "Supply Chain Security",
+      "file": "agents/roles/de/supply-chain-security.md"
+    },
+    {
+      "id": "roles/svelte-architect",
+      "lang": "de",
+      "title": "Svelte Architect",
+      "file": "agents/roles/de/svelte-architect.md"
     },
     {
       "id": "roles/swift-expert",
@@ -15685,16 +16221,52 @@
       "file": "agents/roles/de/swift-expert.md"
     },
     {
+      "id": "roles/terraform-specialist",
+      "lang": "de",
+      "title": "Terraform Specialist",
+      "file": "agents/roles/de/terraform-specialist.md"
+    },
+    {
+      "id": "roles/test-architect",
+      "lang": "de",
+      "title": "Test Architect",
+      "file": "agents/roles/de/test-architect.md"
+    },
+    {
       "id": "roles/trend-analyst",
       "lang": "de",
       "title": "Trend Analyst",
       "file": "agents/roles/de/trend-analyst.md"
     },
     {
+      "id": "roles/vector-search-engineer",
+      "lang": "de",
+      "title": "Vector Search Engineer",
+      "file": "agents/roles/de/vector-search-engineer.md"
+    },
+    {
+      "id": "roles/voice-ai-engineer",
+      "lang": "de",
+      "title": "Voice Ai Engineer",
+      "file": "agents/roles/de/voice-ai-engineer.md"
+    },
+    {
+      "id": "roles/vue-architect",
+      "lang": "de",
+      "title": "Vue Architect",
+      "file": "agents/roles/de/vue-architect.md"
+    },
+    {
       "id": "roles/watchdog",
       "lang": "de",
       "title": "Watchdog",
       "file": "agents/roles/de/watchdog.md"
+    },
+    {
+      "id": "roles/web-animations-engineer",
+      "lang": "de",
+      "title": "Web Animations Engineer",
+      "file": "agents/roles/de/web-animations-engineer.md"
     },
     {
       "id": "roles/websocket-engineer",
@@ -15719,6 +16291,12 @@
       "lang": "de",
       "title": "Workflow Orchestrator",
       "file": "agents/roles/de/workflow-orchestrator.md"
+    },
+    {
+      "id": "roles/zig-engineer",
+      "lang": "de",
+      "title": "Zig Engineer",
+      "file": "agents/roles/de/zig-engineer.md"
     },
     {
       "id": "roles/dependency-manager",
@@ -15805,10 +16383,28 @@
       "file": "agents/roles/es/adr-writer.md"
     },
     {
+      "id": "roles/agent-architect",
+      "lang": "es",
+      "title": "Agent Architect",
+      "file": "agents/roles/es/agent-architect.md"
+    },
+    {
+      "id": "roles/ai-safety-engineer",
+      "lang": "es",
+      "title": "Ai Safety Engineer",
+      "file": "agents/roles/es/ai-safety-engineer.md"
+    },
+    {
       "id": "roles/ai-writing-auditor",
       "lang": "es",
       "title": "Ai Writing Auditor",
       "file": "agents/roles/es/ai-writing-auditor.md"
+    },
+    {
+      "id": "roles/analytics-engineer",
+      "lang": "es",
+      "title": "Analytics Engineer",
+      "file": "agents/roles/es/analytics-engineer.md"
     },
     {
       "id": "roles/angular-architect",
@@ -15823,6 +16419,30 @@
       "file": "agents/roles/es/api-designer.md"
     },
     {
+      "id": "roles/api-gateway-specialist",
+      "lang": "es",
+      "title": "Api Gateway Specialist",
+      "file": "agents/roles/es/api-gateway-specialist.md"
+    },
+    {
+      "id": "roles/appsec-engineer",
+      "lang": "es",
+      "title": "Appsec Engineer",
+      "file": "agents/roles/es/appsec-engineer.md"
+    },
+    {
+      "id": "roles/aws-solutions-architect",
+      "lang": "es",
+      "title": "Aws Solutions Architect",
+      "file": "agents/roles/es/aws-solutions-architect.md"
+    },
+    {
+      "id": "roles/azure-architect",
+      "lang": "es",
+      "title": "Azure Architect",
+      "file": "agents/roles/es/azure-architect.md"
+    },
+    {
       "id": "roles/blockchain-developer",
       "lang": "es",
       "title": "Blockchain Developer",
@@ -15833,6 +16453,12 @@
       "lang": "es",
       "title": "Build Engineer",
       "file": "agents/roles/es/build-engineer.md"
+    },
+    {
+      "id": "roles/cdc-specialist",
+      "lang": "es",
+      "title": "Cdc Specialist",
+      "file": "agents/roles/es/cdc-specialist.md"
     },
     {
       "id": "roles/changelog-narrator",
@@ -15853,6 +16479,24 @@
       "file": "agents/roles/es/cli-developer.md"
     },
     {
+      "id": "roles/clojure-engineer",
+      "lang": "es",
+      "title": "Clojure Engineer",
+      "file": "agents/roles/es/clojure-engineer.md"
+    },
+    {
+      "id": "roles/cloud-security-engineer",
+      "lang": "es",
+      "title": "Cloud Security Engineer",
+      "file": "agents/roles/es/cloud-security-engineer.md"
+    },
+    {
+      "id": "roles/code-quality-auditor",
+      "lang": "es",
+      "title": "Code Quality Auditor",
+      "file": "agents/roles/es/code-quality-auditor.md"
+    },
+    {
       "id": "roles/code-simplifier",
       "lang": "es",
       "title": "Code Simplifier",
@@ -15871,6 +16515,24 @@
       "file": "agents/roles/es/competitive-analyst.md"
     },
     {
+      "id": "roles/compliance-auditor",
+      "lang": "es",
+      "title": "Compliance Auditor",
+      "file": "agents/roles/es/compliance-auditor.md"
+    },
+    {
+      "id": "roles/computer-vision-engineer",
+      "lang": "es",
+      "title": "Computer Vision Engineer",
+      "file": "agents/roles/es/computer-vision-engineer.md"
+    },
+    {
+      "id": "roles/content-strategist",
+      "lang": "es",
+      "title": "Content Strategist",
+      "file": "agents/roles/es/content-strategist.md"
+    },
+    {
       "id": "roles/context-auditor",
       "lang": "es",
       "title": "Context Auditor",
@@ -15883,10 +16545,52 @@
       "file": "agents/roles/es/context-manager.md"
     },
     {
+      "id": "roles/cpp-engineer",
+      "lang": "es",
+      "title": "Cpp Engineer",
+      "file": "agents/roles/es/cpp-engineer.md"
+    },
+    {
+      "id": "roles/crypto-engineer",
+      "lang": "es",
+      "title": "Crypto Engineer",
+      "file": "agents/roles/es/crypto-engineer.md"
+    },
+    {
+      "id": "roles/css-architect",
+      "lang": "es",
+      "title": "Css Architect",
+      "file": "agents/roles/es/css-architect.md"
+    },
+    {
+      "id": "roles/customer-success-manager",
+      "lang": "es",
+      "title": "Customer Success Manager",
+      "file": "agents/roles/es/customer-success-manager.md"
+    },
+    {
       "id": "roles/data-pipeline-architect",
       "lang": "es",
       "title": "Data Pipeline Architect",
       "file": "agents/roles/es/data-pipeline-architect.md"
+    },
+    {
+      "id": "roles/data-scientist",
+      "lang": "es",
+      "title": "Data Scientist",
+      "file": "agents/roles/es/data-scientist.md"
+    },
+    {
+      "id": "roles/database-administrator",
+      "lang": "es",
+      "title": "Database Administrator",
+      "file": "agents/roles/es/database-administrator.md"
+    },
+    {
+      "id": "roles/dbt-specialist",
+      "lang": "es",
+      "title": "dbt Specialist",
+      "file": "agents/roles/es/dbt-specialist.md"
     },
     {
       "id": "roles/dependency-manager",
@@ -15901,10 +16605,46 @@
       "file": "agents/roles/es/diagram-generator.md"
     },
     {
+      "id": "roles/documentation-engineer",
+      "lang": "es",
+      "title": "Documentation Engineer",
+      "file": "agents/roles/es/documentation-engineer.md"
+    },
+    {
+      "id": "roles/dotnet-architect",
+      "lang": "es",
+      "title": ".NET Architect",
+      "file": "agents/roles/es/dotnet-architect.md"
+    },
+    {
+      "id": "roles/dr-bcp-specialist",
+      "lang": "es",
+      "title": "Dr Bcp Specialist",
+      "file": "agents/roles/es/dr-bcp-specialist.md"
+    },
+    {
       "id": "roles/dx-optimizer",
       "lang": "es",
       "title": "Dx Optimizer",
       "file": "agents/roles/es/dx-optimizer.md"
+    },
+    {
+      "id": "roles/edge-computing-engineer",
+      "lang": "es",
+      "title": "Edge Computing Engineer",
+      "file": "agents/roles/es/edge-computing-engineer.md"
+    },
+    {
+      "id": "roles/elasticsearch-specialist",
+      "lang": "es",
+      "title": "Elasticsearch Specialist",
+      "file": "agents/roles/es/elasticsearch-specialist.md"
+    },
+    {
+      "id": "roles/electron-developer",
+      "lang": "es",
+      "title": "Electron Developer",
+      "file": "agents/roles/es/electron-developer.md"
     },
     {
       "id": "roles/elixir-expert",
@@ -15925,10 +16665,34 @@
       "file": "agents/roles/es/error-coordinator.md"
     },
     {
+      "id": "roles/eval-engineer",
+      "lang": "es",
+      "title": "Eval Engineer",
+      "file": "agents/roles/es/eval-engineer.md"
+    },
+    {
       "id": "roles/expo-react-native",
       "lang": "es",
       "title": "Expo React Native",
       "file": "agents/roles/es/expo-react-native.md"
+    },
+    {
+      "id": "roles/feature-store-engineer",
+      "lang": "es",
+      "title": "Feature Store Engineer",
+      "file": "agents/roles/es/feature-store-engineer.md"
+    },
+    {
+      "id": "roles/fine-tuning-specialist",
+      "lang": "es",
+      "title": "Fine Tuning Specialist",
+      "file": "agents/roles/es/fine-tuning-specialist.md"
+    },
+    {
+      "id": "roles/finops-engineer",
+      "lang": "es",
+      "title": "Finops Engineer",
+      "file": "agents/roles/es/finops-engineer.md"
     },
     {
       "id": "roles/fintech-engineer",
@@ -15955,10 +16719,28 @@
       "file": "agents/roles/es/game-developer.md"
     },
     {
+      "id": "roles/gcp-architect",
+      "lang": "es",
+      "title": "Gcp Architect",
+      "file": "agents/roles/es/gcp-architect.md"
+    },
+    {
+      "id": "roles/go-engineer",
+      "lang": "es",
+      "title": "Go Engineer",
+      "file": "agents/roles/es/go-engineer.md"
+    },
+    {
       "id": "roles/graphql-architect",
       "lang": "es",
       "title": "Graphql Architect",
       "file": "agents/roles/es/graphql-architect.md"
+    },
+    {
+      "id": "roles/growth-engineer",
+      "lang": "es",
+      "title": "Growth Engineer",
+      "file": "agents/roles/es/growth-engineer.md"
     },
     {
       "id": "roles/healthcare-admin",
@@ -15973,10 +16755,22 @@
       "file": "agents/roles/es/hypothesis-tester.md"
     },
     {
+      "id": "roles/iam-specialist",
+      "lang": "es",
+      "title": "Iam Specialist",
+      "file": "agents/roles/es/iam-specialist.md"
+    },
+    {
       "id": "roles/incident-commander",
       "lang": "es",
       "title": "Incident Commander",
       "file": "agents/roles/es/incident-commander.md"
+    },
+    {
+      "id": "roles/incident-responder",
+      "lang": "es",
+      "title": "Incident Responder",
+      "file": "agents/roles/es/incident-responder.md"
     },
     {
       "id": "roles/iot-engineer",
@@ -15991,10 +16785,28 @@
       "file": "agents/roles/es/it-ops-orchestrator.md"
     },
     {
+      "id": "roles/java-architect",
+      "lang": "es",
+      "title": "Java Architect",
+      "file": "agents/roles/es/java-architect.md"
+    },
+    {
+      "id": "roles/kafka-specialist",
+      "lang": "es",
+      "title": "Kafka Specialist",
+      "file": "agents/roles/es/kafka-specialist.md"
+    },
+    {
       "id": "roles/knowledge-synthesizer",
       "lang": "es",
       "title": "Knowledge Synthesizer",
       "file": "agents/roles/es/knowledge-synthesizer.md"
+    },
+    {
+      "id": "roles/kotlin-engineer",
+      "lang": "es",
+      "title": "Kotlin Engineer",
+      "file": "agents/roles/es/kotlin-engineer.md"
     },
     {
       "id": "roles/kubernetes-architect",
@@ -16045,10 +16857,28 @@
       "file": "agents/roles/es/mcp-developer.md"
     },
     {
+      "id": "roles/message-queue-architect",
+      "lang": "es",
+      "title": "Message Queue Architect",
+      "file": "agents/roles/es/message-queue-architect.md"
+    },
+    {
+      "id": "roles/micro-frontend-architect",
+      "lang": "es",
+      "title": "Micro Frontend Architect",
+      "file": "agents/roles/es/micro-frontend-architect.md"
+    },
+    {
       "id": "roles/microservices-architect",
       "lang": "es",
       "title": "Microservices Architect",
       "file": "agents/roles/es/microservices-architect.md"
+    },
+    {
+      "id": "roles/ml-platform-engineer",
+      "lang": "es",
+      "title": "Ml Platform Engineer",
+      "file": "agents/roles/es/ml-platform-engineer.md"
     },
     {
       "id": "roles/mlops-engineer",
@@ -16069,16 +16899,40 @@
       "file": "agents/roles/es/multi-agent-coordinator.md"
     },
     {
+      "id": "roles/multimodal-engineer",
+      "lang": "es",
+      "title": "Multimodal Engineer",
+      "file": "agents/roles/es/multimodal-engineer.md"
+    },
+    {
       "id": "roles/network-engineer",
       "lang": "es",
       "title": "Network Engineer",
       "file": "agents/roles/es/network-engineer.md"
     },
     {
+      "id": "roles/nextjs-architect",
+      "lang": "es",
+      "title": "Nextjs Architect",
+      "file": "agents/roles/es/nextjs-architect.md"
+    },
+    {
       "id": "roles/nlp-engineer",
       "lang": "es",
       "title": "Nlp Engineer",
       "file": "agents/roles/es/nlp-engineer.md"
+    },
+    {
+      "id": "roles/observability-engineer",
+      "lang": "es",
+      "title": "Observability Engineer",
+      "file": "agents/roles/es/observability-engineer.md"
+    },
+    {
+      "id": "roles/partnerships-manager",
+      "lang": "es",
+      "title": "Partnerships Manager",
+      "file": "agents/roles/es/partnerships-manager.md"
     },
     {
       "id": "roles/penetration-tester",
@@ -16093,10 +16947,22 @@
       "file": "agents/roles/es/performance-optimizer.md"
     },
     {
+      "id": "roles/performance-test-engineer",
+      "lang": "es",
+      "title": "Performance Test Engineer",
+      "file": "agents/roles/es/performance-test-engineer.md"
+    },
+    {
       "id": "roles/platform-engineer",
       "lang": "es",
       "title": "Platform Engineer",
       "file": "agents/roles/es/platform-engineer.md"
+    },
+    {
+      "id": "roles/postgres-specialist",
+      "lang": "es",
+      "title": "Postgres Specialist",
+      "file": "agents/roles/es/postgres-specialist.md"
     },
     {
       "id": "roles/powershell-expert",
@@ -16105,16 +16971,34 @@
       "file": "agents/roles/es/powershell-expert.md"
     },
     {
+      "id": "roles/product-marketer",
+      "lang": "es",
+      "title": "Product Marketer",
+      "file": "agents/roles/es/product-marketer.md"
+    },
+    {
       "id": "roles/prompt-optimizer",
       "lang": "es",
       "title": "Prompt Optimizer",
       "file": "agents/roles/es/prompt-optimizer.md"
     },
     {
+      "id": "roles/qa-automation-engineer",
+      "lang": "es",
+      "title": "Qa Automation Engineer",
+      "file": "agents/roles/es/qa-automation-engineer.md"
+    },
+    {
       "id": "roles/quant-analyst",
       "lang": "es",
       "title": "Quant Analyst",
       "file": "agents/roles/es/quant-analyst.md"
+    },
+    {
+      "id": "roles/rag-engineer",
+      "lang": "es",
+      "title": "Rag Engineer",
+      "file": "agents/roles/es/rag-engineer.md"
     },
     {
       "id": "roles/rails-expert",
@@ -16129,16 +17013,40 @@
       "file": "agents/roles/es/real-estate-specialist.md"
     },
     {
+      "id": "roles/recommendation-engineer",
+      "lang": "es",
+      "title": "Recommendation Engineer",
+      "file": "agents/roles/es/recommendation-engineer.md"
+    },
+    {
       "id": "roles/red-team",
       "lang": "es",
       "title": "Red Team",
       "file": "agents/roles/es/red-team.md"
     },
     {
+      "id": "roles/redis-specialist",
+      "lang": "es",
+      "title": "Redis Specialist",
+      "file": "agents/roles/es/redis-specialist.md"
+    },
+    {
+      "id": "roles/release-manager",
+      "lang": "es",
+      "title": "Release Manager",
+      "file": "agents/roles/es/release-manager.md"
+    },
+    {
       "id": "roles/restaurant-specialist",
       "lang": "es",
-      "title": "Especialista en Restaurantes",
+      "title": "Restaurant Specialist",
       "file": "agents/roles/es/restaurant-specialist.md"
+    },
+    {
+      "id": "roles/revenue-ops-analyst",
+      "lang": "es",
+      "title": "Revenue Ops Analyst",
+      "file": "agents/roles/es/revenue-ops-analyst.md"
     },
     {
       "id": "roles/rl-engineer",
@@ -16153,10 +17061,28 @@
       "file": "agents/roles/es/rust-engineer.md"
     },
     {
+      "id": "roles/sales-engineer",
+      "lang": "es",
+      "title": "Sales Engineer",
+      "file": "agents/roles/es/sales-engineer.md"
+    },
+    {
+      "id": "roles/scala-engineer",
+      "lang": "es",
+      "title": "Scala Engineer",
+      "file": "agents/roles/es/scala-engineer.md"
+    },
+    {
       "id": "roles/scientific-researcher",
       "lang": "es",
       "title": "Scientific Researcher",
       "file": "agents/roles/es/scientific-researcher.md"
+    },
+    {
+      "id": "roles/sdr-agent",
+      "lang": "es",
+      "title": "Sdr Agent",
+      "file": "agents/roles/es/sdr-agent.md"
     },
     {
       "id": "roles/security-auditor",
@@ -16177,10 +17103,46 @@
       "file": "agents/roles/es/senior-frontend.md"
     },
     {
+      "id": "roles/soc-analyst",
+      "lang": "es",
+      "title": "Soc Analyst",
+      "file": "agents/roles/es/soc-analyst.md"
+    },
+    {
+      "id": "roles/solidjs-engineer",
+      "lang": "es",
+      "title": "Solidjs Engineer",
+      "file": "agents/roles/es/solidjs-engineer.md"
+    },
+    {
+      "id": "roles/solutions-architect",
+      "lang": "es",
+      "title": "Solutions Architect",
+      "file": "agents/roles/es/solutions-architect.md"
+    },
+    {
       "id": "roles/sre-engineer",
       "lang": "es",
       "title": "Sre Engineer",
       "file": "agents/roles/es/sre-engineer.md"
+    },
+    {
+      "id": "roles/streaming-data-engineer",
+      "lang": "es",
+      "title": "Streaming Data Engineer",
+      "file": "agents/roles/es/streaming-data-engineer.md"
+    },
+    {
+      "id": "roles/supply-chain-security",
+      "lang": "es",
+      "title": "Supply Chain Security",
+      "file": "agents/roles/es/supply-chain-security.md"
+    },
+    {
+      "id": "roles/svelte-architect",
+      "lang": "es",
+      "title": "Svelte Architect",
+      "file": "agents/roles/es/svelte-architect.md"
     },
     {
       "id": "roles/swift-expert",
@@ -16189,16 +17151,52 @@
       "file": "agents/roles/es/swift-expert.md"
     },
     {
+      "id": "roles/terraform-specialist",
+      "lang": "es",
+      "title": "Terraform Specialist",
+      "file": "agents/roles/es/terraform-specialist.md"
+    },
+    {
+      "id": "roles/test-architect",
+      "lang": "es",
+      "title": "Test Architect",
+      "file": "agents/roles/es/test-architect.md"
+    },
+    {
       "id": "roles/trend-analyst",
       "lang": "es",
       "title": "Trend Analyst",
       "file": "agents/roles/es/trend-analyst.md"
     },
     {
+      "id": "roles/vector-search-engineer",
+      "lang": "es",
+      "title": "Vector Search Engineer",
+      "file": "agents/roles/es/vector-search-engineer.md"
+    },
+    {
+      "id": "roles/voice-ai-engineer",
+      "lang": "es",
+      "title": "Voice Ai Engineer",
+      "file": "agents/roles/es/voice-ai-engineer.md"
+    },
+    {
+      "id": "roles/vue-architect",
+      "lang": "es",
+      "title": "Vue Architect",
+      "file": "agents/roles/es/vue-architect.md"
+    },
+    {
       "id": "roles/watchdog",
       "lang": "es",
       "title": "Watchdog",
       "file": "agents/roles/es/watchdog.md"
+    },
+    {
+      "id": "roles/web-animations-engineer",
+      "lang": "es",
+      "title": "Web Animations Engineer",
+      "file": "agents/roles/es/web-animations-engineer.md"
     },
     {
       "id": "roles/websocket-engineer",
@@ -16223,6 +17221,12 @@
       "lang": "es",
       "title": "Workflow Orchestrator",
       "file": "agents/roles/es/workflow-orchestrator.md"
+    },
+    {
+      "id": "roles/zig-engineer",
+      "lang": "es",
+      "title": "Zig Engineer",
+      "file": "agents/roles/es/zig-engineer.md"
     },
     {
       "id": "roles/eval-engineer",
@@ -16279,10 +17283,28 @@
       "file": "agents/roles/fr/adr-writer.md"
     },
     {
+      "id": "roles/agent-architect",
+      "lang": "fr",
+      "title": "Agent Architect",
+      "file": "agents/roles/fr/agent-architect.md"
+    },
+    {
+      "id": "roles/ai-safety-engineer",
+      "lang": "fr",
+      "title": "Ai Safety Engineer",
+      "file": "agents/roles/fr/ai-safety-engineer.md"
+    },
+    {
       "id": "roles/ai-writing-auditor",
       "lang": "fr",
       "title": "Ai Writing Auditor",
       "file": "agents/roles/fr/ai-writing-auditor.md"
+    },
+    {
+      "id": "roles/analytics-engineer",
+      "lang": "fr",
+      "title": "Analytics Engineer",
+      "file": "agents/roles/fr/analytics-engineer.md"
     },
     {
       "id": "roles/angular-architect",
@@ -16297,6 +17319,30 @@
       "file": "agents/roles/fr/api-designer.md"
     },
     {
+      "id": "roles/api-gateway-specialist",
+      "lang": "fr",
+      "title": "Api Gateway Specialist",
+      "file": "agents/roles/fr/api-gateway-specialist.md"
+    },
+    {
+      "id": "roles/appsec-engineer",
+      "lang": "fr",
+      "title": "Appsec Engineer",
+      "file": "agents/roles/fr/appsec-engineer.md"
+    },
+    {
+      "id": "roles/aws-solutions-architect",
+      "lang": "fr",
+      "title": "Aws Solutions Architect",
+      "file": "agents/roles/fr/aws-solutions-architect.md"
+    },
+    {
+      "id": "roles/azure-architect",
+      "lang": "fr",
+      "title": "Azure Architect",
+      "file": "agents/roles/fr/azure-architect.md"
+    },
+    {
       "id": "roles/blockchain-developer",
       "lang": "fr",
       "title": "Blockchain Developer",
@@ -16307,6 +17353,12 @@
       "lang": "fr",
       "title": "Build Engineer",
       "file": "agents/roles/fr/build-engineer.md"
+    },
+    {
+      "id": "roles/cdc-specialist",
+      "lang": "fr",
+      "title": "Cdc Specialist",
+      "file": "agents/roles/fr/cdc-specialist.md"
     },
     {
       "id": "roles/changelog-narrator",
@@ -16327,6 +17379,24 @@
       "file": "agents/roles/fr/cli-developer.md"
     },
     {
+      "id": "roles/clojure-engineer",
+      "lang": "fr",
+      "title": "Clojure Engineer",
+      "file": "agents/roles/fr/clojure-engineer.md"
+    },
+    {
+      "id": "roles/cloud-security-engineer",
+      "lang": "fr",
+      "title": "Cloud Security Engineer",
+      "file": "agents/roles/fr/cloud-security-engineer.md"
+    },
+    {
+      "id": "roles/code-quality-auditor",
+      "lang": "fr",
+      "title": "Code Quality Auditor",
+      "file": "agents/roles/fr/code-quality-auditor.md"
+    },
+    {
       "id": "roles/code-simplifier",
       "lang": "fr",
       "title": "Code Simplifier",
@@ -16345,6 +17415,24 @@
       "file": "agents/roles/fr/competitive-analyst.md"
     },
     {
+      "id": "roles/compliance-auditor",
+      "lang": "fr",
+      "title": "Compliance Auditor",
+      "file": "agents/roles/fr/compliance-auditor.md"
+    },
+    {
+      "id": "roles/computer-vision-engineer",
+      "lang": "fr",
+      "title": "Computer Vision Engineer",
+      "file": "agents/roles/fr/computer-vision-engineer.md"
+    },
+    {
+      "id": "roles/content-strategist",
+      "lang": "fr",
+      "title": "Content Strategist",
+      "file": "agents/roles/fr/content-strategist.md"
+    },
+    {
       "id": "roles/context-auditor",
       "lang": "fr",
       "title": "Context Auditor",
@@ -16357,10 +17445,52 @@
       "file": "agents/roles/fr/context-manager.md"
     },
     {
+      "id": "roles/cpp-engineer",
+      "lang": "fr",
+      "title": "Cpp Engineer",
+      "file": "agents/roles/fr/cpp-engineer.md"
+    },
+    {
+      "id": "roles/crypto-engineer",
+      "lang": "fr",
+      "title": "Crypto Engineer",
+      "file": "agents/roles/fr/crypto-engineer.md"
+    },
+    {
+      "id": "roles/css-architect",
+      "lang": "fr",
+      "title": "Css Architect",
+      "file": "agents/roles/fr/css-architect.md"
+    },
+    {
+      "id": "roles/customer-success-manager",
+      "lang": "fr",
+      "title": "Customer Success Manager",
+      "file": "agents/roles/fr/customer-success-manager.md"
+    },
+    {
       "id": "roles/data-pipeline-architect",
       "lang": "fr",
       "title": "Data Pipeline Architect",
       "file": "agents/roles/fr/data-pipeline-architect.md"
+    },
+    {
+      "id": "roles/data-scientist",
+      "lang": "fr",
+      "title": "Data Scientist",
+      "file": "agents/roles/fr/data-scientist.md"
+    },
+    {
+      "id": "roles/database-administrator",
+      "lang": "fr",
+      "title": "Database Administrator",
+      "file": "agents/roles/fr/database-administrator.md"
+    },
+    {
+      "id": "roles/dbt-specialist",
+      "lang": "fr",
+      "title": "dbt Specialist",
+      "file": "agents/roles/fr/dbt-specialist.md"
     },
     {
       "id": "roles/dependency-manager",
@@ -16375,10 +17505,46 @@
       "file": "agents/roles/fr/diagram-generator.md"
     },
     {
+      "id": "roles/documentation-engineer",
+      "lang": "fr",
+      "title": "Documentation Engineer",
+      "file": "agents/roles/fr/documentation-engineer.md"
+    },
+    {
+      "id": "roles/dotnet-architect",
+      "lang": "fr",
+      "title": ".NET Architect",
+      "file": "agents/roles/fr/dotnet-architect.md"
+    },
+    {
+      "id": "roles/dr-bcp-specialist",
+      "lang": "fr",
+      "title": "Dr Bcp Specialist",
+      "file": "agents/roles/fr/dr-bcp-specialist.md"
+    },
+    {
       "id": "roles/dx-optimizer",
       "lang": "fr",
       "title": "Dx Optimizer",
       "file": "agents/roles/fr/dx-optimizer.md"
+    },
+    {
+      "id": "roles/edge-computing-engineer",
+      "lang": "fr",
+      "title": "Edge Computing Engineer",
+      "file": "agents/roles/fr/edge-computing-engineer.md"
+    },
+    {
+      "id": "roles/elasticsearch-specialist",
+      "lang": "fr",
+      "title": "Elasticsearch Specialist",
+      "file": "agents/roles/fr/elasticsearch-specialist.md"
+    },
+    {
+      "id": "roles/electron-developer",
+      "lang": "fr",
+      "title": "Electron Developer",
+      "file": "agents/roles/fr/electron-developer.md"
     },
     {
       "id": "roles/elixir-expert",
@@ -16399,10 +17565,34 @@
       "file": "agents/roles/fr/error-coordinator.md"
     },
     {
+      "id": "roles/eval-engineer",
+      "lang": "fr",
+      "title": "Eval Engineer",
+      "file": "agents/roles/fr/eval-engineer.md"
+    },
+    {
       "id": "roles/expo-react-native",
       "lang": "fr",
       "title": "Expo React Native",
       "file": "agents/roles/fr/expo-react-native.md"
+    },
+    {
+      "id": "roles/feature-store-engineer",
+      "lang": "fr",
+      "title": "Feature Store Engineer",
+      "file": "agents/roles/fr/feature-store-engineer.md"
+    },
+    {
+      "id": "roles/fine-tuning-specialist",
+      "lang": "fr",
+      "title": "Fine Tuning Specialist",
+      "file": "agents/roles/fr/fine-tuning-specialist.md"
+    },
+    {
+      "id": "roles/finops-engineer",
+      "lang": "fr",
+      "title": "Finops Engineer",
+      "file": "agents/roles/fr/finops-engineer.md"
     },
     {
       "id": "roles/fintech-engineer",
@@ -16429,10 +17619,28 @@
       "file": "agents/roles/fr/game-developer.md"
     },
     {
+      "id": "roles/gcp-architect",
+      "lang": "fr",
+      "title": "Gcp Architect",
+      "file": "agents/roles/fr/gcp-architect.md"
+    },
+    {
+      "id": "roles/go-engineer",
+      "lang": "fr",
+      "title": "Go Engineer",
+      "file": "agents/roles/fr/go-engineer.md"
+    },
+    {
       "id": "roles/graphql-architect",
       "lang": "fr",
       "title": "Graphql Architect",
       "file": "agents/roles/fr/graphql-architect.md"
+    },
+    {
+      "id": "roles/growth-engineer",
+      "lang": "fr",
+      "title": "Growth Engineer",
+      "file": "agents/roles/fr/growth-engineer.md"
     },
     {
       "id": "roles/healthcare-admin",
@@ -16447,10 +17655,22 @@
       "file": "agents/roles/fr/hypothesis-tester.md"
     },
     {
+      "id": "roles/iam-specialist",
+      "lang": "fr",
+      "title": "Iam Specialist",
+      "file": "agents/roles/fr/iam-specialist.md"
+    },
+    {
       "id": "roles/incident-commander",
       "lang": "fr",
       "title": "Incident Commander",
       "file": "agents/roles/fr/incident-commander.md"
+    },
+    {
+      "id": "roles/incident-responder",
+      "lang": "fr",
+      "title": "Incident Responder",
+      "file": "agents/roles/fr/incident-responder.md"
     },
     {
       "id": "roles/iot-engineer",
@@ -16465,10 +17685,28 @@
       "file": "agents/roles/fr/it-ops-orchestrator.md"
     },
     {
+      "id": "roles/java-architect",
+      "lang": "fr",
+      "title": "Java Architect",
+      "file": "agents/roles/fr/java-architect.md"
+    },
+    {
+      "id": "roles/kafka-specialist",
+      "lang": "fr",
+      "title": "Kafka Specialist",
+      "file": "agents/roles/fr/kafka-specialist.md"
+    },
+    {
       "id": "roles/knowledge-synthesizer",
       "lang": "fr",
       "title": "Knowledge Synthesizer",
       "file": "agents/roles/fr/knowledge-synthesizer.md"
+    },
+    {
+      "id": "roles/kotlin-engineer",
+      "lang": "fr",
+      "title": "Kotlin Engineer",
+      "file": "agents/roles/fr/kotlin-engineer.md"
     },
     {
       "id": "roles/kubernetes-architect",
@@ -16519,10 +17757,28 @@
       "file": "agents/roles/fr/mcp-developer.md"
     },
     {
+      "id": "roles/message-queue-architect",
+      "lang": "fr",
+      "title": "Message Queue Architect",
+      "file": "agents/roles/fr/message-queue-architect.md"
+    },
+    {
+      "id": "roles/micro-frontend-architect",
+      "lang": "fr",
+      "title": "Micro Frontend Architect",
+      "file": "agents/roles/fr/micro-frontend-architect.md"
+    },
+    {
       "id": "roles/microservices-architect",
       "lang": "fr",
       "title": "Microservices Architect",
       "file": "agents/roles/fr/microservices-architect.md"
+    },
+    {
+      "id": "roles/ml-platform-engineer",
+      "lang": "fr",
+      "title": "Ml Platform Engineer",
+      "file": "agents/roles/fr/ml-platform-engineer.md"
     },
     {
       "id": "roles/mlops-engineer",
@@ -16543,16 +17799,40 @@
       "file": "agents/roles/fr/multi-agent-coordinator.md"
     },
     {
+      "id": "roles/multimodal-engineer",
+      "lang": "fr",
+      "title": "Multimodal Engineer",
+      "file": "agents/roles/fr/multimodal-engineer.md"
+    },
+    {
       "id": "roles/network-engineer",
       "lang": "fr",
       "title": "Network Engineer",
       "file": "agents/roles/fr/network-engineer.md"
     },
     {
+      "id": "roles/nextjs-architect",
+      "lang": "fr",
+      "title": "Nextjs Architect",
+      "file": "agents/roles/fr/nextjs-architect.md"
+    },
+    {
       "id": "roles/nlp-engineer",
       "lang": "fr",
       "title": "Nlp Engineer",
       "file": "agents/roles/fr/nlp-engineer.md"
+    },
+    {
+      "id": "roles/observability-engineer",
+      "lang": "fr",
+      "title": "Observability Engineer",
+      "file": "agents/roles/fr/observability-engineer.md"
+    },
+    {
+      "id": "roles/partnerships-manager",
+      "lang": "fr",
+      "title": "Partnerships Manager",
+      "file": "agents/roles/fr/partnerships-manager.md"
     },
     {
       "id": "roles/penetration-tester",
@@ -16567,10 +17847,22 @@
       "file": "agents/roles/fr/performance-optimizer.md"
     },
     {
+      "id": "roles/performance-test-engineer",
+      "lang": "fr",
+      "title": "Performance Test Engineer",
+      "file": "agents/roles/fr/performance-test-engineer.md"
+    },
+    {
       "id": "roles/platform-engineer",
       "lang": "fr",
       "title": "Platform Engineer",
       "file": "agents/roles/fr/platform-engineer.md"
+    },
+    {
+      "id": "roles/postgres-specialist",
+      "lang": "fr",
+      "title": "Postgres Specialist",
+      "file": "agents/roles/fr/postgres-specialist.md"
     },
     {
       "id": "roles/powershell-expert",
@@ -16579,16 +17871,34 @@
       "file": "agents/roles/fr/powershell-expert.md"
     },
     {
+      "id": "roles/product-marketer",
+      "lang": "fr",
+      "title": "Product Marketer",
+      "file": "agents/roles/fr/product-marketer.md"
+    },
+    {
       "id": "roles/prompt-optimizer",
       "lang": "fr",
       "title": "Prompt Optimizer",
       "file": "agents/roles/fr/prompt-optimizer.md"
     },
     {
+      "id": "roles/qa-automation-engineer",
+      "lang": "fr",
+      "title": "Qa Automation Engineer",
+      "file": "agents/roles/fr/qa-automation-engineer.md"
+    },
+    {
       "id": "roles/quant-analyst",
       "lang": "fr",
       "title": "Quant Analyst",
       "file": "agents/roles/fr/quant-analyst.md"
+    },
+    {
+      "id": "roles/rag-engineer",
+      "lang": "fr",
+      "title": "Rag Engineer",
+      "file": "agents/roles/fr/rag-engineer.md"
     },
     {
       "id": "roles/rails-expert",
@@ -16603,16 +17913,40 @@
       "file": "agents/roles/fr/real-estate-specialist.md"
     },
     {
+      "id": "roles/recommendation-engineer",
+      "lang": "fr",
+      "title": "Recommendation Engineer",
+      "file": "agents/roles/fr/recommendation-engineer.md"
+    },
+    {
       "id": "roles/red-team",
       "lang": "fr",
       "title": "Red Team",
       "file": "agents/roles/fr/red-team.md"
     },
     {
+      "id": "roles/redis-specialist",
+      "lang": "fr",
+      "title": "Redis Specialist",
+      "file": "agents/roles/fr/redis-specialist.md"
+    },
+    {
+      "id": "roles/release-manager",
+      "lang": "fr",
+      "title": "Release Manager",
+      "file": "agents/roles/fr/release-manager.md"
+    },
+    {
       "id": "roles/restaurant-specialist",
       "lang": "fr",
-      "title": "Spécialiste en Restauration",
+      "title": "Restaurant Specialist",
       "file": "agents/roles/fr/restaurant-specialist.md"
+    },
+    {
+      "id": "roles/revenue-ops-analyst",
+      "lang": "fr",
+      "title": "Revenue Ops Analyst",
+      "file": "agents/roles/fr/revenue-ops-analyst.md"
     },
     {
       "id": "roles/rl-engineer",
@@ -16627,10 +17961,28 @@
       "file": "agents/roles/fr/rust-engineer.md"
     },
     {
+      "id": "roles/sales-engineer",
+      "lang": "fr",
+      "title": "Sales Engineer",
+      "file": "agents/roles/fr/sales-engineer.md"
+    },
+    {
+      "id": "roles/scala-engineer",
+      "lang": "fr",
+      "title": "Scala Engineer",
+      "file": "agents/roles/fr/scala-engineer.md"
+    },
+    {
       "id": "roles/scientific-researcher",
       "lang": "fr",
       "title": "Scientific Researcher",
       "file": "agents/roles/fr/scientific-researcher.md"
+    },
+    {
+      "id": "roles/sdr-agent",
+      "lang": "fr",
+      "title": "Sdr Agent",
+      "file": "agents/roles/fr/sdr-agent.md"
     },
     {
       "id": "roles/security-auditor",
@@ -16651,10 +18003,46 @@
       "file": "agents/roles/fr/senior-frontend.md"
     },
     {
+      "id": "roles/soc-analyst",
+      "lang": "fr",
+      "title": "Soc Analyst",
+      "file": "agents/roles/fr/soc-analyst.md"
+    },
+    {
+      "id": "roles/solidjs-engineer",
+      "lang": "fr",
+      "title": "Solidjs Engineer",
+      "file": "agents/roles/fr/solidjs-engineer.md"
+    },
+    {
+      "id": "roles/solutions-architect",
+      "lang": "fr",
+      "title": "Solutions Architect",
+      "file": "agents/roles/fr/solutions-architect.md"
+    },
+    {
       "id": "roles/sre-engineer",
       "lang": "fr",
       "title": "Sre Engineer",
       "file": "agents/roles/fr/sre-engineer.md"
+    },
+    {
+      "id": "roles/streaming-data-engineer",
+      "lang": "fr",
+      "title": "Streaming Data Engineer",
+      "file": "agents/roles/fr/streaming-data-engineer.md"
+    },
+    {
+      "id": "roles/supply-chain-security",
+      "lang": "fr",
+      "title": "Supply Chain Security",
+      "file": "agents/roles/fr/supply-chain-security.md"
+    },
+    {
+      "id": "roles/svelte-architect",
+      "lang": "fr",
+      "title": "Svelte Architect",
+      "file": "agents/roles/fr/svelte-architect.md"
     },
     {
       "id": "roles/swift-expert",
@@ -16663,16 +18051,52 @@
       "file": "agents/roles/fr/swift-expert.md"
     },
     {
+      "id": "roles/terraform-specialist",
+      "lang": "fr",
+      "title": "Terraform Specialist",
+      "file": "agents/roles/fr/terraform-specialist.md"
+    },
+    {
+      "id": "roles/test-architect",
+      "lang": "fr",
+      "title": "Test Architect",
+      "file": "agents/roles/fr/test-architect.md"
+    },
+    {
       "id": "roles/trend-analyst",
       "lang": "fr",
       "title": "Trend Analyst",
       "file": "agents/roles/fr/trend-analyst.md"
     },
     {
+      "id": "roles/vector-search-engineer",
+      "lang": "fr",
+      "title": "Vector Search Engineer",
+      "file": "agents/roles/fr/vector-search-engineer.md"
+    },
+    {
+      "id": "roles/voice-ai-engineer",
+      "lang": "fr",
+      "title": "Voice Ai Engineer",
+      "file": "agents/roles/fr/voice-ai-engineer.md"
+    },
+    {
+      "id": "roles/vue-architect",
+      "lang": "fr",
+      "title": "Vue Architect",
+      "file": "agents/roles/fr/vue-architect.md"
+    },
+    {
       "id": "roles/watchdog",
       "lang": "fr",
       "title": "Watchdog",
       "file": "agents/roles/fr/watchdog.md"
+    },
+    {
+      "id": "roles/web-animations-engineer",
+      "lang": "fr",
+      "title": "Web Animations Engineer",
+      "file": "agents/roles/fr/web-animations-engineer.md"
     },
     {
       "id": "roles/websocket-engineer",
@@ -16697,6 +18121,12 @@
       "lang": "fr",
       "title": "Workflow Orchestrator",
       "file": "agents/roles/fr/workflow-orchestrator.md"
+    },
+    {
+      "id": "roles/zig-engineer",
+      "lang": "fr",
+      "title": "Zig Engineer",
+      "file": "agents/roles/fr/zig-engineer.md"
     },
     {
       "id": "roles/fullstack-developer",
@@ -16921,10 +18351,28 @@
       "file": "agents/roles/nl/adr-writer.md"
     },
     {
+      "id": "roles/agent-architect",
+      "lang": "nl",
+      "title": "Agent Architect",
+      "file": "agents/roles/nl/agent-architect.md"
+    },
+    {
+      "id": "roles/ai-safety-engineer",
+      "lang": "nl",
+      "title": "Ai Safety Engineer",
+      "file": "agents/roles/nl/ai-safety-engineer.md"
+    },
+    {
       "id": "roles/ai-writing-auditor",
       "lang": "nl",
       "title": "Ai Writing Auditor",
       "file": "agents/roles/nl/ai-writing-auditor.md"
+    },
+    {
+      "id": "roles/analytics-engineer",
+      "lang": "nl",
+      "title": "Analytics Engineer",
+      "file": "agents/roles/nl/analytics-engineer.md"
     },
     {
       "id": "roles/angular-architect",
@@ -16939,6 +18387,30 @@
       "file": "agents/roles/nl/api-designer.md"
     },
     {
+      "id": "roles/api-gateway-specialist",
+      "lang": "nl",
+      "title": "Api Gateway Specialist",
+      "file": "agents/roles/nl/api-gateway-specialist.md"
+    },
+    {
+      "id": "roles/appsec-engineer",
+      "lang": "nl",
+      "title": "Appsec Engineer",
+      "file": "agents/roles/nl/appsec-engineer.md"
+    },
+    {
+      "id": "roles/aws-solutions-architect",
+      "lang": "nl",
+      "title": "Aws Solutions Architect",
+      "file": "agents/roles/nl/aws-solutions-architect.md"
+    },
+    {
+      "id": "roles/azure-architect",
+      "lang": "nl",
+      "title": "Azure Architect",
+      "file": "agents/roles/nl/azure-architect.md"
+    },
+    {
       "id": "roles/blockchain-developer",
       "lang": "nl",
       "title": "Blockchain Developer",
@@ -16949,6 +18421,12 @@
       "lang": "nl",
       "title": "Build Engineer",
       "file": "agents/roles/nl/build-engineer.md"
+    },
+    {
+      "id": "roles/cdc-specialist",
+      "lang": "nl",
+      "title": "Cdc Specialist",
+      "file": "agents/roles/nl/cdc-specialist.md"
     },
     {
       "id": "roles/changelog-narrator",
@@ -16969,6 +18447,24 @@
       "file": "agents/roles/nl/cli-developer.md"
     },
     {
+      "id": "roles/clojure-engineer",
+      "lang": "nl",
+      "title": "Clojure Engineer",
+      "file": "agents/roles/nl/clojure-engineer.md"
+    },
+    {
+      "id": "roles/cloud-security-engineer",
+      "lang": "nl",
+      "title": "Cloud Security Engineer",
+      "file": "agents/roles/nl/cloud-security-engineer.md"
+    },
+    {
+      "id": "roles/code-quality-auditor",
+      "lang": "nl",
+      "title": "Code Quality Auditor",
+      "file": "agents/roles/nl/code-quality-auditor.md"
+    },
+    {
       "id": "roles/code-simplifier",
       "lang": "nl",
       "title": "Code Simplifier",
@@ -16987,6 +18483,24 @@
       "file": "agents/roles/nl/competitive-analyst.md"
     },
     {
+      "id": "roles/compliance-auditor",
+      "lang": "nl",
+      "title": "Compliance Auditor",
+      "file": "agents/roles/nl/compliance-auditor.md"
+    },
+    {
+      "id": "roles/computer-vision-engineer",
+      "lang": "nl",
+      "title": "Computer Vision Engineer",
+      "file": "agents/roles/nl/computer-vision-engineer.md"
+    },
+    {
+      "id": "roles/content-strategist",
+      "lang": "nl",
+      "title": "Content Strategist",
+      "file": "agents/roles/nl/content-strategist.md"
+    },
+    {
       "id": "roles/context-auditor",
       "lang": "nl",
       "title": "Context Auditor",
@@ -16999,10 +18513,52 @@
       "file": "agents/roles/nl/context-manager.md"
     },
     {
+      "id": "roles/cpp-engineer",
+      "lang": "nl",
+      "title": "Cpp Engineer",
+      "file": "agents/roles/nl/cpp-engineer.md"
+    },
+    {
+      "id": "roles/crypto-engineer",
+      "lang": "nl",
+      "title": "Crypto Engineer",
+      "file": "agents/roles/nl/crypto-engineer.md"
+    },
+    {
+      "id": "roles/css-architect",
+      "lang": "nl",
+      "title": "Css Architect",
+      "file": "agents/roles/nl/css-architect.md"
+    },
+    {
+      "id": "roles/customer-success-manager",
+      "lang": "nl",
+      "title": "Customer Success Manager",
+      "file": "agents/roles/nl/customer-success-manager.md"
+    },
+    {
       "id": "roles/data-pipeline-architect",
       "lang": "nl",
       "title": "Data Pipeline Architect",
       "file": "agents/roles/nl/data-pipeline-architect.md"
+    },
+    {
+      "id": "roles/data-scientist",
+      "lang": "nl",
+      "title": "Data Scientist",
+      "file": "agents/roles/nl/data-scientist.md"
+    },
+    {
+      "id": "roles/database-administrator",
+      "lang": "nl",
+      "title": "Database Administrator",
+      "file": "agents/roles/nl/database-administrator.md"
+    },
+    {
+      "id": "roles/dbt-specialist",
+      "lang": "nl",
+      "title": "dbt Specialist",
+      "file": "agents/roles/nl/dbt-specialist.md"
     },
     {
       "id": "roles/dependency-manager",
@@ -17017,10 +18573,46 @@
       "file": "agents/roles/nl/diagram-generator.md"
     },
     {
+      "id": "roles/documentation-engineer",
+      "lang": "nl",
+      "title": "Documentation Engineer",
+      "file": "agents/roles/nl/documentation-engineer.md"
+    },
+    {
+      "id": "roles/dotnet-architect",
+      "lang": "nl",
+      "title": ".NET Architect",
+      "file": "agents/roles/nl/dotnet-architect.md"
+    },
+    {
+      "id": "roles/dr-bcp-specialist",
+      "lang": "nl",
+      "title": "Dr Bcp Specialist",
+      "file": "agents/roles/nl/dr-bcp-specialist.md"
+    },
+    {
       "id": "roles/dx-optimizer",
       "lang": "nl",
       "title": "Dx Optimizer",
       "file": "agents/roles/nl/dx-optimizer.md"
+    },
+    {
+      "id": "roles/edge-computing-engineer",
+      "lang": "nl",
+      "title": "Edge Computing Engineer",
+      "file": "agents/roles/nl/edge-computing-engineer.md"
+    },
+    {
+      "id": "roles/elasticsearch-specialist",
+      "lang": "nl",
+      "title": "Elasticsearch Specialist",
+      "file": "agents/roles/nl/elasticsearch-specialist.md"
+    },
+    {
+      "id": "roles/electron-developer",
+      "lang": "nl",
+      "title": "Electron Developer",
+      "file": "agents/roles/nl/electron-developer.md"
     },
     {
       "id": "roles/elixir-expert",
@@ -17041,10 +18633,34 @@
       "file": "agents/roles/nl/error-coordinator.md"
     },
     {
+      "id": "roles/eval-engineer",
+      "lang": "nl",
+      "title": "Eval Engineer",
+      "file": "agents/roles/nl/eval-engineer.md"
+    },
+    {
       "id": "roles/expo-react-native",
       "lang": "nl",
       "title": "Expo React Native",
       "file": "agents/roles/nl/expo-react-native.md"
+    },
+    {
+      "id": "roles/feature-store-engineer",
+      "lang": "nl",
+      "title": "Feature Store Engineer",
+      "file": "agents/roles/nl/feature-store-engineer.md"
+    },
+    {
+      "id": "roles/fine-tuning-specialist",
+      "lang": "nl",
+      "title": "Fine Tuning Specialist",
+      "file": "agents/roles/nl/fine-tuning-specialist.md"
+    },
+    {
+      "id": "roles/finops-engineer",
+      "lang": "nl",
+      "title": "Finops Engineer",
+      "file": "agents/roles/nl/finops-engineer.md"
     },
     {
       "id": "roles/fintech-engineer",
@@ -17071,10 +18687,28 @@
       "file": "agents/roles/nl/game-developer.md"
     },
     {
+      "id": "roles/gcp-architect",
+      "lang": "nl",
+      "title": "Gcp Architect",
+      "file": "agents/roles/nl/gcp-architect.md"
+    },
+    {
+      "id": "roles/go-engineer",
+      "lang": "nl",
+      "title": "Go Engineer",
+      "file": "agents/roles/nl/go-engineer.md"
+    },
+    {
       "id": "roles/graphql-architect",
       "lang": "nl",
       "title": "Graphql Architect",
       "file": "agents/roles/nl/graphql-architect.md"
+    },
+    {
+      "id": "roles/growth-engineer",
+      "lang": "nl",
+      "title": "Growth Engineer",
+      "file": "agents/roles/nl/growth-engineer.md"
     },
     {
       "id": "roles/healthcare-admin",
@@ -17089,10 +18723,22 @@
       "file": "agents/roles/nl/hypothesis-tester.md"
     },
     {
+      "id": "roles/iam-specialist",
+      "lang": "nl",
+      "title": "Iam Specialist",
+      "file": "agents/roles/nl/iam-specialist.md"
+    },
+    {
       "id": "roles/incident-commander",
       "lang": "nl",
       "title": "Incident Commander",
       "file": "agents/roles/nl/incident-commander.md"
+    },
+    {
+      "id": "roles/incident-responder",
+      "lang": "nl",
+      "title": "Incident Responder",
+      "file": "agents/roles/nl/incident-responder.md"
     },
     {
       "id": "roles/iot-engineer",
@@ -17107,10 +18753,28 @@
       "file": "agents/roles/nl/it-ops-orchestrator.md"
     },
     {
+      "id": "roles/java-architect",
+      "lang": "nl",
+      "title": "Java Architect",
+      "file": "agents/roles/nl/java-architect.md"
+    },
+    {
+      "id": "roles/kafka-specialist",
+      "lang": "nl",
+      "title": "Kafka Specialist",
+      "file": "agents/roles/nl/kafka-specialist.md"
+    },
+    {
       "id": "roles/knowledge-synthesizer",
       "lang": "nl",
       "title": "Knowledge Synthesizer",
       "file": "agents/roles/nl/knowledge-synthesizer.md"
+    },
+    {
+      "id": "roles/kotlin-engineer",
+      "lang": "nl",
+      "title": "Kotlin Engineer",
+      "file": "agents/roles/nl/kotlin-engineer.md"
     },
     {
       "id": "roles/kubernetes-architect",
@@ -17161,10 +18825,28 @@
       "file": "agents/roles/nl/mcp-developer.md"
     },
     {
+      "id": "roles/message-queue-architect",
+      "lang": "nl",
+      "title": "Message Queue Architect",
+      "file": "agents/roles/nl/message-queue-architect.md"
+    },
+    {
+      "id": "roles/micro-frontend-architect",
+      "lang": "nl",
+      "title": "Micro Frontend Architect",
+      "file": "agents/roles/nl/micro-frontend-architect.md"
+    },
+    {
       "id": "roles/microservices-architect",
       "lang": "nl",
       "title": "Microservices Architect",
       "file": "agents/roles/nl/microservices-architect.md"
+    },
+    {
+      "id": "roles/ml-platform-engineer",
+      "lang": "nl",
+      "title": "Ml Platform Engineer",
+      "file": "agents/roles/nl/ml-platform-engineer.md"
     },
     {
       "id": "roles/mlops-engineer",
@@ -17185,16 +18867,40 @@
       "file": "agents/roles/nl/multi-agent-coordinator.md"
     },
     {
+      "id": "roles/multimodal-engineer",
+      "lang": "nl",
+      "title": "Multimodal Engineer",
+      "file": "agents/roles/nl/multimodal-engineer.md"
+    },
+    {
       "id": "roles/network-engineer",
       "lang": "nl",
       "title": "Network Engineer",
       "file": "agents/roles/nl/network-engineer.md"
     },
     {
+      "id": "roles/nextjs-architect",
+      "lang": "nl",
+      "title": "Nextjs Architect",
+      "file": "agents/roles/nl/nextjs-architect.md"
+    },
+    {
       "id": "roles/nlp-engineer",
       "lang": "nl",
       "title": "Nlp Engineer",
       "file": "agents/roles/nl/nlp-engineer.md"
+    },
+    {
+      "id": "roles/observability-engineer",
+      "lang": "nl",
+      "title": "Observability Engineer",
+      "file": "agents/roles/nl/observability-engineer.md"
+    },
+    {
+      "id": "roles/partnerships-manager",
+      "lang": "nl",
+      "title": "Partnerships Manager",
+      "file": "agents/roles/nl/partnerships-manager.md"
     },
     {
       "id": "roles/penetration-tester",
@@ -17209,10 +18915,22 @@
       "file": "agents/roles/nl/performance-optimizer.md"
     },
     {
+      "id": "roles/performance-test-engineer",
+      "lang": "nl",
+      "title": "Performance Test Engineer",
+      "file": "agents/roles/nl/performance-test-engineer.md"
+    },
+    {
       "id": "roles/platform-engineer",
       "lang": "nl",
       "title": "Platform Engineer",
       "file": "agents/roles/nl/platform-engineer.md"
+    },
+    {
+      "id": "roles/postgres-specialist",
+      "lang": "nl",
+      "title": "Postgres Specialist",
+      "file": "agents/roles/nl/postgres-specialist.md"
     },
     {
       "id": "roles/powershell-expert",
@@ -17221,16 +18939,34 @@
       "file": "agents/roles/nl/powershell-expert.md"
     },
     {
+      "id": "roles/product-marketer",
+      "lang": "nl",
+      "title": "Product Marketer",
+      "file": "agents/roles/nl/product-marketer.md"
+    },
+    {
       "id": "roles/prompt-optimizer",
       "lang": "nl",
       "title": "Prompt Optimizer",
       "file": "agents/roles/nl/prompt-optimizer.md"
     },
     {
+      "id": "roles/qa-automation-engineer",
+      "lang": "nl",
+      "title": "Qa Automation Engineer",
+      "file": "agents/roles/nl/qa-automation-engineer.md"
+    },
+    {
       "id": "roles/quant-analyst",
       "lang": "nl",
       "title": "Quant Analyst",
       "file": "agents/roles/nl/quant-analyst.md"
+    },
+    {
+      "id": "roles/rag-engineer",
+      "lang": "nl",
+      "title": "Rag Engineer",
+      "file": "agents/roles/nl/rag-engineer.md"
     },
     {
       "id": "roles/rails-expert",
@@ -17245,16 +18981,40 @@
       "file": "agents/roles/nl/real-estate-specialist.md"
     },
     {
+      "id": "roles/recommendation-engineer",
+      "lang": "nl",
+      "title": "Recommendation Engineer",
+      "file": "agents/roles/nl/recommendation-engineer.md"
+    },
+    {
       "id": "roles/red-team",
       "lang": "nl",
       "title": "Red Team",
       "file": "agents/roles/nl/red-team.md"
     },
     {
+      "id": "roles/redis-specialist",
+      "lang": "nl",
+      "title": "Redis Specialist",
+      "file": "agents/roles/nl/redis-specialist.md"
+    },
+    {
+      "id": "roles/release-manager",
+      "lang": "nl",
+      "title": "Release Manager",
+      "file": "agents/roles/nl/release-manager.md"
+    },
+    {
       "id": "roles/restaurant-specialist",
       "lang": "nl",
-      "title": "Restaurant-specialist",
+      "title": "Restaurant Specialist",
       "file": "agents/roles/nl/restaurant-specialist.md"
+    },
+    {
+      "id": "roles/revenue-ops-analyst",
+      "lang": "nl",
+      "title": "Revenue Ops Analyst",
+      "file": "agents/roles/nl/revenue-ops-analyst.md"
     },
     {
       "id": "roles/rl-engineer",
@@ -17269,10 +19029,28 @@
       "file": "agents/roles/nl/rust-engineer.md"
     },
     {
+      "id": "roles/sales-engineer",
+      "lang": "nl",
+      "title": "Sales Engineer",
+      "file": "agents/roles/nl/sales-engineer.md"
+    },
+    {
+      "id": "roles/scala-engineer",
+      "lang": "nl",
+      "title": "Scala Engineer",
+      "file": "agents/roles/nl/scala-engineer.md"
+    },
+    {
       "id": "roles/scientific-researcher",
       "lang": "nl",
       "title": "Scientific Researcher",
       "file": "agents/roles/nl/scientific-researcher.md"
+    },
+    {
+      "id": "roles/sdr-agent",
+      "lang": "nl",
+      "title": "Sdr Agent",
+      "file": "agents/roles/nl/sdr-agent.md"
     },
     {
       "id": "roles/security-auditor",
@@ -17293,10 +19071,46 @@
       "file": "agents/roles/nl/senior-frontend.md"
     },
     {
+      "id": "roles/soc-analyst",
+      "lang": "nl",
+      "title": "Soc Analyst",
+      "file": "agents/roles/nl/soc-analyst.md"
+    },
+    {
+      "id": "roles/solidjs-engineer",
+      "lang": "nl",
+      "title": "Solidjs Engineer",
+      "file": "agents/roles/nl/solidjs-engineer.md"
+    },
+    {
+      "id": "roles/solutions-architect",
+      "lang": "nl",
+      "title": "Solutions Architect",
+      "file": "agents/roles/nl/solutions-architect.md"
+    },
+    {
       "id": "roles/sre-engineer",
       "lang": "nl",
       "title": "Sre Engineer",
       "file": "agents/roles/nl/sre-engineer.md"
+    },
+    {
+      "id": "roles/streaming-data-engineer",
+      "lang": "nl",
+      "title": "Streaming Data Engineer",
+      "file": "agents/roles/nl/streaming-data-engineer.md"
+    },
+    {
+      "id": "roles/supply-chain-security",
+      "lang": "nl",
+      "title": "Supply Chain Security",
+      "file": "agents/roles/nl/supply-chain-security.md"
+    },
+    {
+      "id": "roles/svelte-architect",
+      "lang": "nl",
+      "title": "Svelte Architect",
+      "file": "agents/roles/nl/svelte-architect.md"
     },
     {
       "id": "roles/swift-expert",
@@ -17305,16 +19119,52 @@
       "file": "agents/roles/nl/swift-expert.md"
     },
     {
+      "id": "roles/terraform-specialist",
+      "lang": "nl",
+      "title": "Terraform Specialist",
+      "file": "agents/roles/nl/terraform-specialist.md"
+    },
+    {
+      "id": "roles/test-architect",
+      "lang": "nl",
+      "title": "Test Architect",
+      "file": "agents/roles/nl/test-architect.md"
+    },
+    {
       "id": "roles/trend-analyst",
       "lang": "nl",
       "title": "Trend Analyst",
       "file": "agents/roles/nl/trend-analyst.md"
     },
     {
+      "id": "roles/vector-search-engineer",
+      "lang": "nl",
+      "title": "Vector Search Engineer",
+      "file": "agents/roles/nl/vector-search-engineer.md"
+    },
+    {
+      "id": "roles/voice-ai-engineer",
+      "lang": "nl",
+      "title": "Voice Ai Engineer",
+      "file": "agents/roles/nl/voice-ai-engineer.md"
+    },
+    {
+      "id": "roles/vue-architect",
+      "lang": "nl",
+      "title": "Vue Architect",
+      "file": "agents/roles/nl/vue-architect.md"
+    },
+    {
       "id": "roles/watchdog",
       "lang": "nl",
       "title": "Watchdog",
       "file": "agents/roles/nl/watchdog.md"
+    },
+    {
+      "id": "roles/web-animations-engineer",
+      "lang": "nl",
+      "title": "Web Animations Engineer",
+      "file": "agents/roles/nl/web-animations-engineer.md"
     },
     {
       "id": "roles/websocket-engineer",
@@ -17339,6 +19189,12 @@
       "lang": "nl",
       "title": "Workflow Orchestrator",
       "file": "agents/roles/nl/workflow-orchestrator.md"
+    },
+    {
+      "id": "roles/zig-engineer",
+      "lang": "nl",
+      "title": "Zig Engineer",
+      "file": "agents/roles/nl/zig-engineer.md"
     },
     {
       "id": "roles/nlp-engineer",
@@ -17751,25 +19607,25 @@
     {
       "id": "sdr/sdr-copywriter",
       "lang": "en",
-      "title": "SDR Copywriter",
+      "title": "Sdr Copywriter",
       "file": "agents/sdr/sdr-copywriter.md"
     },
     {
       "id": "sdr/sdr-prospector",
       "lang": "en",
-      "title": "SDR Prospector",
+      "title": "Sdr Prospector",
       "file": "agents/sdr/sdr-prospector.md"
     },
     {
       "id": "sdr/sdr-qualifier",
       "lang": "en",
-      "title": "SDR Qualifier",
+      "title": "Sdr Qualifier",
       "file": "agents/sdr/sdr-qualifier.md"
     },
     {
       "id": "sdr/sdr-researcher",
       "lang": "en",
-      "title": "SDR Researcher",
+      "title": "Sdr Researcher",
       "file": "agents/sdr/sdr-researcher.md"
     },
     {
@@ -17785,28 +19641,76 @@
       "file": "agents/specialists/brand-system-builder.md"
     },
     {
+      "id": "specialists/b2b-saas-advisor",
+      "lang": "de",
+      "title": "B2b Saas Advisor",
+      "file": "agents/specialists/de/b2b-saas-advisor.md"
+    },
+    {
       "id": "specialists/brand-system-builder",
       "lang": "de",
-      "title": "Markenssystem-Builder",
+      "title": "Brand System Builder",
       "file": "agents/specialists/de/brand-system-builder.md"
+    },
+    {
+      "id": "specialists/devtools-gtm-specialist",
+      "lang": "de",
+      "title": "Devtools Gtm Specialist",
+      "file": "agents/specialists/de/devtools-gtm-specialist.md"
     },
     {
       "id": "specialists/ecommerce-specialist",
       "lang": "de",
-      "title": "Ecommerce-Spezialist",
+      "title": "Ecommerce Specialist",
       "file": "agents/specialists/de/ecommerce-specialist.md"
+    },
+    {
+      "id": "specialists/edtech-specialist",
+      "lang": "de",
+      "title": "Edtech Specialist",
+      "file": "agents/specialists/de/edtech-specialist.md"
+    },
+    {
+      "id": "specialists/insurtech-specialist",
+      "lang": "de",
+      "title": "Insurtech Specialist",
+      "file": "agents/specialists/de/insurtech-specialist.md"
+    },
+    {
+      "id": "specialists/legaltech-specialist",
+      "lang": "de",
+      "title": "Legaltech Specialist",
+      "file": "agents/specialists/de/legaltech-specialist.md"
     },
     {
       "id": "specialists/local-services-specialist",
       "lang": "de",
-      "title": "Local-Services-Spezialist",
+      "title": "Local Services Specialist",
       "file": "agents/specialists/de/local-services-specialist.md"
+    },
+    {
+      "id": "specialists/marketplace-architect",
+      "lang": "de",
+      "title": "Marketplace Architect",
+      "file": "agents/specialists/de/marketplace-architect.md"
     },
     {
       "id": "specialists/performance-auditor",
       "lang": "de",
       "title": "Performance Auditor",
       "file": "agents/specialists/de/performance-auditor.md"
+    },
+    {
+      "id": "specialists/proptech-specialist",
+      "lang": "de",
+      "title": "Proptech Specialist",
+      "file": "agents/specialists/de/proptech-specialist.md"
+    },
+    {
+      "id": "specialists/saas-pricing-strategist",
+      "lang": "de",
+      "title": "Saas Pricing Strategist",
+      "file": "agents/specialists/de/saas-pricing-strategist.md"
     },
     {
       "id": "specialists/small-business-advisor",
@@ -17839,16 +19743,46 @@
       "file": "agents/specialists/edtech-specialist.md"
     },
     {
+      "id": "specialists/b2b-saas-advisor",
+      "lang": "es",
+      "title": "B2b Saas Advisor",
+      "file": "agents/specialists/es/b2b-saas-advisor.md"
+    },
+    {
       "id": "specialists/brand-system-builder",
       "lang": "es",
-      "title": "Constructor de Sistema de Marca",
+      "title": "Brand System Builder",
       "file": "agents/specialists/es/brand-system-builder.md"
+    },
+    {
+      "id": "specialists/devtools-gtm-specialist",
+      "lang": "es",
+      "title": "Devtools Gtm Specialist",
+      "file": "agents/specialists/es/devtools-gtm-specialist.md"
     },
     {
       "id": "specialists/ecommerce-specialist",
       "lang": "es",
-      "title": "Especialista en Ecommerce",
+      "title": "Ecommerce Specialist",
       "file": "agents/specialists/es/ecommerce-specialist.md"
+    },
+    {
+      "id": "specialists/edtech-specialist",
+      "lang": "es",
+      "title": "Edtech Specialist",
+      "file": "agents/specialists/es/edtech-specialist.md"
+    },
+    {
+      "id": "specialists/insurtech-specialist",
+      "lang": "es",
+      "title": "Insurtech Specialist",
+      "file": "agents/specialists/es/insurtech-specialist.md"
+    },
+    {
+      "id": "specialists/legaltech-specialist",
+      "lang": "es",
+      "title": "Legaltech Specialist",
+      "file": "agents/specialists/es/legaltech-specialist.md"
     },
     {
       "id": "specialists/local-services-specialist",
@@ -17857,10 +19791,28 @@
       "file": "agents/specialists/es/local-services-specialist.md"
     },
     {
+      "id": "specialists/marketplace-architect",
+      "lang": "es",
+      "title": "Marketplace Architect",
+      "file": "agents/specialists/es/marketplace-architect.md"
+    },
+    {
       "id": "specialists/performance-auditor",
       "lang": "es",
       "title": "Performance Auditor",
       "file": "agents/specialists/es/performance-auditor.md"
+    },
+    {
+      "id": "specialists/proptech-specialist",
+      "lang": "es",
+      "title": "Proptech Specialist",
+      "file": "agents/specialists/es/proptech-specialist.md"
+    },
+    {
+      "id": "specialists/saas-pricing-strategist",
+      "lang": "es",
+      "title": "Saas Pricing Strategist",
+      "file": "agents/specialists/es/saas-pricing-strategist.md"
     },
     {
       "id": "specialists/small-business-advisor",
@@ -17875,16 +19827,46 @@
       "file": "agents/specialists/es/vision-analyst.md"
     },
     {
+      "id": "specialists/b2b-saas-advisor",
+      "lang": "fr",
+      "title": "B2b Saas Advisor",
+      "file": "agents/specialists/fr/b2b-saas-advisor.md"
+    },
+    {
       "id": "specialists/brand-system-builder",
       "lang": "fr",
-      "title": "Constructeur de Système de Marque",
+      "title": "Brand System Builder",
       "file": "agents/specialists/fr/brand-system-builder.md"
+    },
+    {
+      "id": "specialists/devtools-gtm-specialist",
+      "lang": "fr",
+      "title": "Devtools Gtm Specialist",
+      "file": "agents/specialists/fr/devtools-gtm-specialist.md"
     },
     {
       "id": "specialists/ecommerce-specialist",
       "lang": "fr",
-      "title": "Spécialiste Ecommerce",
+      "title": "Ecommerce Specialist",
       "file": "agents/specialists/fr/ecommerce-specialist.md"
+    },
+    {
+      "id": "specialists/edtech-specialist",
+      "lang": "fr",
+      "title": "Edtech Specialist",
+      "file": "agents/specialists/fr/edtech-specialist.md"
+    },
+    {
+      "id": "specialists/insurtech-specialist",
+      "lang": "fr",
+      "title": "Insurtech Specialist",
+      "file": "agents/specialists/fr/insurtech-specialist.md"
+    },
+    {
+      "id": "specialists/legaltech-specialist",
+      "lang": "fr",
+      "title": "Legaltech Specialist",
+      "file": "agents/specialists/fr/legaltech-specialist.md"
     },
     {
       "id": "specialists/local-services-specialist",
@@ -17893,10 +19875,28 @@
       "file": "agents/specialists/fr/local-services-specialist.md"
     },
     {
+      "id": "specialists/marketplace-architect",
+      "lang": "fr",
+      "title": "Marketplace Architect",
+      "file": "agents/specialists/fr/marketplace-architect.md"
+    },
+    {
       "id": "specialists/performance-auditor",
       "lang": "fr",
       "title": "Performance Auditor",
       "file": "agents/specialists/fr/performance-auditor.md"
+    },
+    {
+      "id": "specialists/proptech-specialist",
+      "lang": "fr",
+      "title": "Proptech Specialist",
+      "file": "agents/specialists/fr/proptech-specialist.md"
+    },
+    {
+      "id": "specialists/saas-pricing-strategist",
+      "lang": "fr",
+      "title": "Saas Pricing Strategist",
+      "file": "agents/specialists/fr/saas-pricing-strategist.md"
     },
     {
       "id": "specialists/small-business-advisor",
@@ -17935,10 +19935,22 @@
       "file": "agents/specialists/marketplace-architect.md"
     },
     {
+      "id": "specialists/b2b-saas-advisor",
+      "lang": "nl",
+      "title": "B2b Saas Advisor",
+      "file": "agents/specialists/nl/b2b-saas-advisor.md"
+    },
+    {
       "id": "specialists/brand-system-builder",
       "lang": "nl",
-      "title": "Merkssysteembouwer",
+      "title": "Brand System Builder",
       "file": "agents/specialists/nl/brand-system-builder.md"
+    },
+    {
+      "id": "specialists/devtools-gtm-specialist",
+      "lang": "nl",
+      "title": "Devtools Gtm Specialist",
+      "file": "agents/specialists/nl/devtools-gtm-specialist.md"
     },
     {
       "id": "specialists/ecommerce-specialist",
@@ -17947,16 +19959,52 @@
       "file": "agents/specialists/nl/ecommerce-specialist.md"
     },
     {
+      "id": "specialists/edtech-specialist",
+      "lang": "nl",
+      "title": "Edtech Specialist",
+      "file": "agents/specialists/nl/edtech-specialist.md"
+    },
+    {
+      "id": "specialists/insurtech-specialist",
+      "lang": "nl",
+      "title": "Insurtech Specialist",
+      "file": "agents/specialists/nl/insurtech-specialist.md"
+    },
+    {
+      "id": "specialists/legaltech-specialist",
+      "lang": "nl",
+      "title": "Legaltech Specialist",
+      "file": "agents/specialists/nl/legaltech-specialist.md"
+    },
+    {
       "id": "specialists/local-services-specialist",
       "lang": "nl",
       "title": "Lokale Diensten Specialist",
       "file": "agents/specialists/nl/local-services-specialist.md"
     },
     {
+      "id": "specialists/marketplace-architect",
+      "lang": "nl",
+      "title": "Marketplace Architect",
+      "file": "agents/specialists/nl/marketplace-architect.md"
+    },
+    {
       "id": "specialists/performance-auditor",
       "lang": "nl",
       "title": "Performance Auditor",
       "file": "agents/specialists/nl/performance-auditor.md"
+    },
+    {
+      "id": "specialists/proptech-specialist",
+      "lang": "nl",
+      "title": "Proptech Specialist",
+      "file": "agents/specialists/nl/proptech-specialist.md"
+    },
+    {
+      "id": "specialists/saas-pricing-strategist",
+      "lang": "nl",
+      "title": "Saas Pricing Strategist",
+      "file": "agents/specialists/nl/saas-pricing-strategist.md"
     },
     {
       "id": "specialists/small-business-advisor",
@@ -18305,10 +20353,70 @@
       "file": "rules/common/database-migrations.md"
     },
     {
+      "id": "common/accessibility",
+      "lang": "de",
+      "title": "Barrierefreiheit-Regeln",
+      "file": "rules/common/de/accessibility.md"
+    },
+    {
+      "id": "common/agent-design",
+      "lang": "de",
+      "title": "Agent Design Rules",
+      "file": "rules/common/de/agent-design.md"
+    },
+    {
+      "id": "common/ci-cd",
+      "lang": "de",
+      "title": "CI/CD-Regeln",
+      "file": "rules/common/de/ci-cd.md"
+    },
+    {
+      "id": "common/code-review",
+      "lang": "de",
+      "title": "Code-Review-Regeln",
+      "file": "rules/common/de/code-review.md"
+    },
+    {
       "id": "common/coding-style",
       "lang": "de",
       "title": "Coding Style Regeln",
       "file": "rules/common/de/coding-style.md"
+    },
+    {
+      "id": "common/commit-conventions",
+      "lang": "de",
+      "title": "Commit-Konventionsregeln",
+      "file": "rules/common/de/commit-conventions.md"
+    },
+    {
+      "id": "common/data-privacy",
+      "lang": "de",
+      "title": "Datenschutzrichtlinien",
+      "file": "rules/common/de/data-privacy.md"
+    },
+    {
+      "id": "common/dependency-management",
+      "lang": "de",
+      "title": "Abhängigkeitsverwaltungsregeln",
+      "file": "rules/common/de/dependency-management.md"
+    },
+    {
+      "id": "common/docker",
+      "lang": "de",
+      "title": "Docker-Regeln",
+      "file": "rules/common/de/docker.md"
+    },
+    {
+      "id": "common/documentation",
+      "lang": "de",
+      "title": "Dokumentationsregeln",
+      "file": "rules/common/de/documentation.md"
+    },
+    {
+      "id": "common/frontend-performance",
+      "lang": "de",
+      "title": "Frontend-Performance-Regeln",
+      "file": "rules/common/de/frontend-performance.md"
     },
     {
       "id": "common/git",
@@ -18317,16 +20425,64 @@
       "file": "rules/common/de/git.md"
     },
     {
+      "id": "common/graphql",
+      "lang": "de",
+      "title": "GraphQL-Regeln",
+      "file": "rules/common/de/graphql.md"
+    },
+    {
+      "id": "common/kubernetes",
+      "lang": "de",
+      "title": "Kubernetes-Regeln",
+      "file": "rules/common/de/kubernetes.md"
+    },
+    {
+      "id": "common/logging",
+      "lang": "de",
+      "title": "Logging-Regeln",
+      "file": "rules/common/de/logging.md"
+    },
+    {
+      "id": "common/observability",
+      "lang": "de",
+      "title": "Observability-Regeln",
+      "file": "rules/common/de/observability.md"
+    },
+    {
       "id": "common/performance",
       "lang": "de",
       "title": "Performance-Regeln",
       "file": "rules/common/de/performance.md"
     },
     {
+      "id": "common/rest-api",
+      "lang": "de",
+      "title": "REST API Regeln",
+      "file": "rules/common/de/rest-api.md"
+    },
+    {
+      "id": "common/secrets-management",
+      "lang": "de",
+      "title": "Regeln zur Secrets-Verwaltung",
+      "file": "rules/common/de/secrets-management.md"
+    },
+    {
       "id": "common/security",
       "lang": "de",
       "title": "Sicherheitsregeln",
       "file": "rules/common/de/security.md"
+    },
+    {
+      "id": "common/sql",
+      "lang": "de",
+      "title": "SQL-Regeln",
+      "file": "rules/common/de/sql.md"
+    },
+    {
+      "id": "common/terraform",
+      "lang": "de",
+      "title": "Terraform-Regeln",
+      "file": "rules/common/de/terraform.md"
     },
     {
       "id": "common/testing",
@@ -18359,10 +20515,70 @@
       "file": "rules/common/error-handling.md"
     },
     {
+      "id": "common/accessibility",
+      "lang": "es",
+      "title": "Reglas de Accesibilidad",
+      "file": "rules/common/es/accessibility.md"
+    },
+    {
+      "id": "common/agent-design",
+      "lang": "es",
+      "title": "Reglas de Diseño de Agentes",
+      "file": "rules/common/es/agent-design.md"
+    },
+    {
+      "id": "common/ci-cd",
+      "lang": "es",
+      "title": "Reglas CI/CD",
+      "file": "rules/common/es/ci-cd.md"
+    },
+    {
+      "id": "common/code-review",
+      "lang": "es",
+      "title": "Reglas de Revisión de Código",
+      "file": "rules/common/es/code-review.md"
+    },
+    {
       "id": "common/coding-style",
       "lang": "es",
       "title": "Reglas de Estilo de Código",
       "file": "rules/common/es/coding-style.md"
+    },
+    {
+      "id": "common/commit-conventions",
+      "lang": "es",
+      "title": "Reglas de Convenciones de Commits",
+      "file": "rules/common/es/commit-conventions.md"
+    },
+    {
+      "id": "common/data-privacy",
+      "lang": "es",
+      "title": "Reglas de Privacidad de Datos",
+      "file": "rules/common/es/data-privacy.md"
+    },
+    {
+      "id": "common/dependency-management",
+      "lang": "es",
+      "title": "Reglas de Gestión de Dependencias",
+      "file": "rules/common/es/dependency-management.md"
+    },
+    {
+      "id": "common/docker",
+      "lang": "es",
+      "title": "Reglas de Docker",
+      "file": "rules/common/es/docker.md"
+    },
+    {
+      "id": "common/documentation",
+      "lang": "es",
+      "title": "Reglas de Documentación",
+      "file": "rules/common/es/documentation.md"
+    },
+    {
+      "id": "common/frontend-performance",
+      "lang": "es",
+      "title": "Reglas de Rendimiento Frontend",
+      "file": "rules/common/es/frontend-performance.md"
     },
     {
       "id": "common/git",
@@ -18371,10 +20587,46 @@
       "file": "rules/common/es/git.md"
     },
     {
+      "id": "common/graphql",
+      "lang": "es",
+      "title": "Reglas de GraphQL",
+      "file": "rules/common/es/graphql.md"
+    },
+    {
+      "id": "common/kubernetes",
+      "lang": "es",
+      "title": "Reglas de Kubernetes",
+      "file": "rules/common/es/kubernetes.md"
+    },
+    {
+      "id": "common/logging",
+      "lang": "es",
+      "title": "Reglas de Logging",
+      "file": "rules/common/es/logging.md"
+    },
+    {
+      "id": "common/observability",
+      "lang": "es",
+      "title": "Reglas de Observabilidad",
+      "file": "rules/common/es/observability.md"
+    },
+    {
       "id": "common/performance",
       "lang": "es",
       "title": "Reglas de Rendimiento",
       "file": "rules/common/es/performance.md"
+    },
+    {
+      "id": "common/rest-api",
+      "lang": "es",
+      "title": "Reglas de API REST",
+      "file": "rules/common/es/rest-api.md"
+    },
+    {
+      "id": "common/secrets-management",
+      "lang": "es",
+      "title": "Reglas de Gestión de Secretos",
+      "file": "rules/common/es/secrets-management.md"
     },
     {
       "id": "common/security",
@@ -18383,10 +20635,46 @@
       "file": "rules/common/es/security.md"
     },
     {
+      "id": "common/sql",
+      "lang": "es",
+      "title": "Reglas SQL",
+      "file": "rules/common/es/sql.md"
+    },
+    {
+      "id": "common/terraform",
+      "lang": "es",
+      "title": "Reglas de Terraform",
+      "file": "rules/common/es/terraform.md"
+    },
+    {
       "id": "common/testing",
       "lang": "es",
       "title": "Reglas de Testing",
       "file": "rules/common/es/testing.md"
+    },
+    {
+      "id": "common/accessibility",
+      "lang": "fr",
+      "title": "Règles d'Accessibilité",
+      "file": "rules/common/fr/accessibility.md"
+    },
+    {
+      "id": "common/agent-design",
+      "lang": "fr",
+      "title": "Règles de Conception d'Agents",
+      "file": "rules/common/fr/agent-design.md"
+    },
+    {
+      "id": "common/ci-cd",
+      "lang": "fr",
+      "title": "Règles CI/CD",
+      "file": "rules/common/fr/ci-cd.md"
+    },
+    {
+      "id": "common/code-review",
+      "lang": "fr",
+      "title": "Règles de Code Review",
+      "file": "rules/common/fr/code-review.md"
     },
     {
       "id": "common/coding-style",
@@ -18395,10 +20683,70 @@
       "file": "rules/common/fr/coding-style.md"
     },
     {
+      "id": "common/commit-conventions",
+      "lang": "fr",
+      "title": "Règles de Conventions de Commit",
+      "file": "rules/common/fr/commit-conventions.md"
+    },
+    {
+      "id": "common/data-privacy",
+      "lang": "fr",
+      "title": "Règles de Confidentialité des Données",
+      "file": "rules/common/fr/data-privacy.md"
+    },
+    {
+      "id": "common/dependency-management",
+      "lang": "fr",
+      "title": "Règles de Gestion des Dépendances",
+      "file": "rules/common/fr/dependency-management.md"
+    },
+    {
+      "id": "common/docker",
+      "lang": "fr",
+      "title": "Règles Docker",
+      "file": "rules/common/fr/docker.md"
+    },
+    {
+      "id": "common/documentation",
+      "lang": "fr",
+      "title": "Règles de Documentation",
+      "file": "rules/common/fr/documentation.md"
+    },
+    {
+      "id": "common/frontend-performance",
+      "lang": "fr",
+      "title": "Règles de Performance Frontend",
+      "file": "rules/common/fr/frontend-performance.md"
+    },
+    {
       "id": "common/git",
       "lang": "fr",
       "title": "Règles Git",
       "file": "rules/common/fr/git.md"
+    },
+    {
+      "id": "common/graphql",
+      "lang": "fr",
+      "title": "Règles GraphQL",
+      "file": "rules/common/fr/graphql.md"
+    },
+    {
+      "id": "common/kubernetes",
+      "lang": "fr",
+      "title": "Règles Kubernetes",
+      "file": "rules/common/fr/kubernetes.md"
+    },
+    {
+      "id": "common/logging",
+      "lang": "fr",
+      "title": "Règles de Journalisation",
+      "file": "rules/common/fr/logging.md"
+    },
+    {
+      "id": "common/observability",
+      "lang": "fr",
+      "title": "Règles d'Observabilité",
+      "file": "rules/common/fr/observability.md"
     },
     {
       "id": "common/performance",
@@ -18407,10 +20755,34 @@
       "file": "rules/common/fr/performance.md"
     },
     {
+      "id": "common/rest-api",
+      "lang": "fr",
+      "title": "Règles pour les APIs REST",
+      "file": "rules/common/fr/rest-api.md"
+    },
+    {
+      "id": "common/secrets-management",
+      "lang": "fr",
+      "title": "Règles de Gestion des Secrets",
+      "file": "rules/common/fr/secrets-management.md"
+    },
+    {
       "id": "common/security",
       "lang": "fr",
       "title": "Règles de Sécurité",
       "file": "rules/common/fr/security.md"
+    },
+    {
+      "id": "common/sql",
+      "lang": "fr",
+      "title": "Règles SQL",
+      "file": "rules/common/fr/sql.md"
+    },
+    {
+      "id": "common/terraform",
+      "lang": "fr",
+      "title": "Règles Terraform",
+      "file": "rules/common/fr/terraform.md"
     },
     {
       "id": "common/testing",
@@ -18449,10 +20821,70 @@
       "file": "rules/common/logging.md"
     },
     {
+      "id": "common/accessibility",
+      "lang": "nl",
+      "title": "Toegankelijkheidsregels",
+      "file": "rules/common/nl/accessibility.md"
+    },
+    {
+      "id": "common/agent-design",
+      "lang": "nl",
+      "title": "Richtlijnen voor agentontwerp",
+      "file": "rules/common/nl/agent-design.md"
+    },
+    {
+      "id": "common/ci-cd",
+      "lang": "nl",
+      "title": "CI/CD-regels",
+      "file": "rules/common/nl/ci-cd.md"
+    },
+    {
+      "id": "common/code-review",
+      "lang": "nl",
+      "title": "Regels voor Code Review",
+      "file": "rules/common/nl/code-review.md"
+    },
+    {
       "id": "common/coding-style",
       "lang": "nl",
       "title": "Codeerstijlregels",
       "file": "rules/common/nl/coding-style.md"
+    },
+    {
+      "id": "common/commit-conventions",
+      "lang": "nl",
+      "title": "Commit Conventions Regels",
+      "file": "rules/common/nl/commit-conventions.md"
+    },
+    {
+      "id": "common/data-privacy",
+      "lang": "nl",
+      "title": "Regels voor gegevensprivacy",
+      "file": "rules/common/nl/data-privacy.md"
+    },
+    {
+      "id": "common/dependency-management",
+      "lang": "nl",
+      "title": "Afhankelijkheidsbeheerregels",
+      "file": "rules/common/nl/dependency-management.md"
+    },
+    {
+      "id": "common/docker",
+      "lang": "nl",
+      "title": "Docker-regels",
+      "file": "rules/common/nl/docker.md"
+    },
+    {
+      "id": "common/documentation",
+      "lang": "nl",
+      "title": "Documentatieregels",
+      "file": "rules/common/nl/documentation.md"
+    },
+    {
+      "id": "common/frontend-performance",
+      "lang": "nl",
+      "title": "Frontend-prestatieregels",
+      "file": "rules/common/nl/frontend-performance.md"
     },
     {
       "id": "common/git",
@@ -18461,16 +20893,64 @@
       "file": "rules/common/nl/git.md"
     },
     {
+      "id": "common/graphql",
+      "lang": "nl",
+      "title": "GraphQL-regels",
+      "file": "rules/common/nl/graphql.md"
+    },
+    {
+      "id": "common/kubernetes",
+      "lang": "nl",
+      "title": "Kubernetes-regels",
+      "file": "rules/common/nl/kubernetes.md"
+    },
+    {
+      "id": "common/logging",
+      "lang": "nl",
+      "title": "Logging-regels",
+      "file": "rules/common/nl/logging.md"
+    },
+    {
+      "id": "common/observability",
+      "lang": "nl",
+      "title": "Observabiliteitsregels",
+      "file": "rules/common/nl/observability.md"
+    },
+    {
       "id": "common/performance",
       "lang": "nl",
       "title": "Prestatieregels",
       "file": "rules/common/nl/performance.md"
     },
     {
+      "id": "common/rest-api",
+      "lang": "nl",
+      "title": "REST API-regels",
+      "file": "rules/common/nl/rest-api.md"
+    },
+    {
+      "id": "common/secrets-management",
+      "lang": "nl",
+      "title": "Regels voor Geheimenbeheer",
+      "file": "rules/common/nl/secrets-management.md"
+    },
+    {
       "id": "common/security",
       "lang": "nl",
       "title": "Beveiligingsregels",
       "file": "rules/common/nl/security.md"
+    },
+    {
+      "id": "common/sql",
+      "lang": "nl",
+      "title": "SQL-regels",
+      "file": "rules/common/nl/sql.md"
+    },
+    {
+      "id": "common/terraform",
+      "lang": "nl",
+      "title": "Terraform-regels",
+      "file": "rules/common/nl/terraform.md"
     },
     {
       "id": "common/testing",
@@ -18539,6 +21019,18 @@
       "file": "rules/language-specific/de/python.md"
     },
     {
+      "id": "language-specific/react",
+      "lang": "de",
+      "title": "React-Regeln",
+      "file": "rules/language-specific/de/react.md"
+    },
+    {
+      "id": "language-specific/rust",
+      "lang": "de",
+      "title": "Rust-Regeln",
+      "file": "rules/language-specific/de/rust.md"
+    },
+    {
       "id": "language-specific/typescript",
       "lang": "de",
       "title": "TypeScript Regeln",
@@ -18557,6 +21049,18 @@
       "file": "rules/language-specific/es/python.md"
     },
     {
+      "id": "language-specific/react",
+      "lang": "es",
+      "title": "Reglas de React",
+      "file": "rules/language-specific/es/react.md"
+    },
+    {
+      "id": "language-specific/rust",
+      "lang": "es",
+      "title": "Reglas de Rust",
+      "file": "rules/language-specific/es/rust.md"
+    },
+    {
       "id": "language-specific/typescript",
       "lang": "es",
       "title": "Reglas de TypeScript",
@@ -18573,6 +21077,18 @@
       "lang": "fr",
       "title": "Règles Python",
       "file": "rules/language-specific/fr/python.md"
+    },
+    {
+      "id": "language-specific/react",
+      "lang": "fr",
+      "title": "Règles React",
+      "file": "rules/language-specific/fr/react.md"
+    },
+    {
+      "id": "language-specific/rust",
+      "lang": "fr",
+      "title": "Règles Rust",
+      "file": "rules/language-specific/fr/rust.md"
     },
     {
       "id": "language-specific/typescript",
@@ -18597,6 +21113,18 @@
       "lang": "nl",
       "title": "Python-regels",
       "file": "rules/language-specific/nl/python.md"
+    },
+    {
+      "id": "language-specific/react",
+      "lang": "nl",
+      "title": "React-regels",
+      "file": "rules/language-specific/nl/react.md"
+    },
+    {
+      "id": "language-specific/rust",
+      "lang": "nl",
+      "title": "Rust-regels",
+      "file": "rules/language-specific/nl/rust.md"
     },
     {
       "id": "language-specific/typescript",
@@ -20544,6 +23072,12 @@
       "file": "guides/auto-mode.md"
     },
     {
+      "id": "autodream-guide",
+      "lang": "en",
+      "title": "AutoDream — Autonomous Goal Decomposition",
+      "file": "guides/autodream-guide.md"
+    },
+    {
       "id": "billing-and-pricing",
       "lang": "en",
       "title": "Billing and Pricing — Claude Plans, Agent SDK Credits, and Cost Management",
@@ -20734,6 +23268,12 @@
       "lang": "de",
       "title": "AGENTS.md-Leitfaden",
       "file": "guides/de/agents-md.md"
+    },
+    {
+      "id": "auto-mode-guide",
+      "lang": "de",
+      "title": "Claude Code Auto Mode — Tiefgehendes Referenzhandbuch (März 2026, Stabil)",
+      "file": "guides/de/auto-mode-guide.md"
     },
     {
       "id": "auto-mode",
@@ -21216,6 +23756,12 @@
       "file": "guides/de/ultraplan.md"
     },
     {
+      "id": "ultrareview",
+      "lang": "de",
+      "title": "Ultrareview — Flottengestützte adversarische Code-Überprüfung",
+      "file": "guides/de/ultrareview.md"
+    },
+    {
       "id": "vision-and-multimodal",
       "lang": "de",
       "title": "Vision und Multimodale Workflows in Claude Code",
@@ -21250,6 +23796,12 @@
       "lang": "en",
       "title": "Claude Code Desktop App",
       "file": "guides/desktop-app.md"
+    },
+    {
+      "id": "dispatch-and-channels",
+      "lang": "en",
+      "title": "Dispatch & Channels — Background Jobs and Real-Time Event Streaming",
+      "file": "guides/dispatch-and-channels.md"
     },
     {
       "id": "advanced-tool-use",
@@ -21292,6 +23844,12 @@
       "lang": "es",
       "title": "Guía AGENTS.md",
       "file": "guides/es/agents-md.md"
+    },
+    {
+      "id": "auto-mode-guide",
+      "lang": "es",
+      "title": "Claude Code Auto Mode — Referencia Profunda (Marzo 2026, Estable)",
+      "file": "guides/es/auto-mode-guide.md"
     },
     {
       "id": "auto-mode",
@@ -21774,6 +24332,12 @@
       "file": "guides/es/ultraplan.md"
     },
     {
+      "id": "ultrareview",
+      "lang": "es",
+      "title": "Ultrareview — Revisión de Código Adversarial Basada en Flota",
+      "file": "guides/es/ultrareview.md"
+    },
+    {
       "id": "vision-and-multimodal",
       "lang": "es",
       "title": "Flujos de Trabajo de Visión y Multimodal en Claude Code",
@@ -21988,6 +24552,12 @@
       "lang": "fr",
       "title": "Guide AGENTS.md",
       "file": "guides/fr/agents-md.md"
+    },
+    {
+      "id": "auto-mode-guide",
+      "lang": "fr",
+      "title": "Claude Code Auto Mode — Référence approfondie (Mars 2026, Stable)",
+      "file": "guides/fr/auto-mode-guide.md"
     },
     {
       "id": "auto-mode",
@@ -22470,6 +25040,12 @@
       "file": "guides/fr/ultraplan.md"
     },
     {
+      "id": "ultrareview",
+      "lang": "fr",
+      "title": "Ultrareview — Revue de Code Adversariale Basée sur Flotte",
+      "file": "guides/fr/ultrareview.md"
+    },
+    {
       "id": "vision-and-multimodal",
       "lang": "fr",
       "title": "Workflows Vision et Multimodaux dans Claude Code",
@@ -22582,6 +25158,12 @@
       "lang": "nl",
       "title": "AGENTS.md Gids",
       "file": "guides/nl/agents-md.md"
+    },
+    {
+      "id": "auto-mode-guide",
+      "lang": "nl",
+      "title": "Claude Code Auto Mode — Diepgaande Referentie (maart 2026, Stabiel)",
+      "file": "guides/nl/auto-mode-guide.md"
     },
     {
       "id": "auto-mode",
@@ -23064,6 +25646,12 @@
       "file": "guides/nl/ultraplan.md"
     },
     {
+      "id": "ultrareview",
+      "lang": "nl",
+      "title": "Ultrareview — Op vloot gebaseerde adversariale codebeoordeling",
+      "file": "guides/nl/ultrareview.md"
+    },
+    {
       "id": "vision-and-multimodal",
       "lang": "nl",
       "title": "Vision en Multimodal Workflows in Claude Code",
@@ -23116,6 +25704,12 @@
       "lang": "en",
       "title": "Prompt Injection Defense Guide",
       "file": "guides/prompt-injection-defense.md"
+    },
+    {
+      "id": "remote-control",
+      "lang": "en",
+      "title": "Remote Control — Headless Session Management",
+      "file": "guides/remote-control.md"
     },
     {
       "id": "remote-mcp-guide",
@@ -23990,6 +26584,21 @@
   ],
   "routines": [
     {
+      "id": "changelog-generator",
+      "title": "Changelog Generator Routine",
+      "file": "routines/changelog-generator.md"
+    },
+    {
+      "id": "code-review-rotation",
+      "title": "Code Review Rotation Routine",
+      "file": "routines/code-review-rotation.md"
+    },
+    {
+      "id": "cost-audit",
+      "title": "Cloud Cost Audit Routine",
+      "file": "routines/cost-audit.md"
+    },
+    {
       "id": "daily-standup",
       "title": "Daily Standup Summarizer",
       "file": "routines/daily-standup.md"
@@ -24008,6 +26617,21 @@
       "id": "pr-triage",
       "title": "PR Triage Agent",
       "file": "routines/pr-triage.md"
+    },
+    {
+      "id": "security-scan",
+      "title": "Security Scan Routine",
+      "file": "routines/security-scan.md"
+    },
+    {
+      "id": "sprint-planning",
+      "title": "Sprint Planning Routine",
+      "file": "routines/sprint-planning.md"
+    },
+    {
+      "id": "weekly-retro",
+      "title": "Weekly Retrospective Routine",
+      "file": "routines/weekly-retro.md"
     }
   ],
   "plugins": [
@@ -24929,20 +27553,20 @@
     }
   ],
   "summary": {
-    "skills": 381,
+    "skills": 400,
     "agents": 182,
     "hooks": 40,
     "rules": 32,
     "workflows": 45,
     "prompts": 31,
-    "guides": 100,
+    "guides": 103,
     "structures": 82,
     "outputStyles": 8,
     "statuslines": 6,
     "themes": 10,
     "keybindings": 4,
     "settingsTemplates": 5,
-    "routines": 4,
+    "routines": 10,
     "plugins": 19,
     "commands": 100,
     "personas": 10,
