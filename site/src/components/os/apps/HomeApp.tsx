@@ -1,0 +1,82 @@
+import type { WindowManager } from "../useWindows";
+import { Eyebrow, YellowButton, GhostButton, Tag } from "./ui";
+
+const features = [
+  { icon: "⚡", name: "400+ Skills", desc: "Domain knowledge that activates automatically.", color: "#1d4aff" },
+  { icon: "🤖", name: "182+ Agents", desc: "Specialist agents with scoped tools.", color: "#b62ad9" },
+  { icon: "📦", name: "42 Stacks", desc: "Pre-wired workspaces for every role.", color: "#3fb950" },
+  { icon: "🔌", name: "41 MCP Configs", desc: "Ready-to-install server configs.", color: "#1078a3" },
+  { icon: "📚", name: "100+ Guides", desc: "In-depth docs for every feature.", color: "#f54e00" },
+  { icon: "🌍", name: "5 Languages", desc: "EN, FR, DE, NL, ES localization.", color: "#f97316" },
+];
+
+export function HomeApp({ wm }: { wm: WindowManager }) {
+  return (
+    <div className="px-7 py-7 max-w-3xl mx-auto">
+      <Eyebrow>The Claude Code knowledge system</Eyebrow>
+      <h1 className="mt-3 text-4xl font-extrabold leading-[1.05] text-ink">
+        Stop explaining your stack to Claude <span className="text-brand-red">every session.</span>
+      </h1>
+      <p className="mt-4 text-[15px] text-body leading-relaxed">
+        Claudient is the largest open-source knowledge base for Claude Code.
+        400+ skills, 182+ agents, 42 workspace stacks — all installable in 30 seconds.
+        Open any window below to explore. 🧠
+      </p>
+
+      <div className="mt-6 flex flex-wrap gap-3">
+        <YellowButton onClick={() => wm.open("install")}>Get Started →</YellowButton>
+        <GhostButton onClick={() => wm.open("skills")}>Browse Skills</GhostButton>
+        <GhostButton onClick={() => wm.open("agents")}>See Agents 🤖</GhostButton>
+      </div>
+
+      <div className="mt-5 flex flex-wrap items-center gap-2 text-[12px] text-mute">
+        <Tag color="#3fb950">Open source</Tag>
+        <Tag color="#1d4aff">AGPL-3.0 + CC-BY-SA-4.0</Tag>
+        <Tag color="#f54e00">v1.10.1</Tag>
+      </div>
+
+      <h2 className="mt-9 text-lg font-bold text-ink">Everything Claude Code needs</h2>
+      <div className="mt-4 grid sm:grid-cols-2 gap-3">
+        {features.map((f) => (
+          <button
+            key={f.name}
+            onClick={() => wm.open(f.name.includes("Skills") ? "skills" : f.name.includes("Agent") ? "agents" : f.name.includes("Stack") ? "stacks" : f.name.includes("MCP") ? "mcp" : f.name.includes("Guide") ? "guides" : "about")}
+            className="text-left rounded-xl border border-hairline bg-white p-4 hover:border-olive/70 hover:-translate-y-0.5 transition"
+          >
+            <div className="flex items-start gap-3">
+              <div className="grid place-items-center size-9 rounded-lg text-lg shrink-0" style={{ backgroundColor: f.color + "1a" }}>
+                {f.icon}
+              </div>
+              <div>
+                <div className="text-[14px] font-bold text-ink">{f.name}</div>
+                <div className="text-[12.5px] text-mute mt-0.5">{f.desc}</div>
+              </div>
+            </div>
+          </button>
+        ))}
+      </div>
+
+      <div className="mt-9 rounded-xl border border-olive/50 bg-cream p-5 flex items-start gap-4">
+        <span className="text-5xl shrink-0">🧠</span>
+        <div>
+          <div className="text-[15px] font-bold text-ink">Built by the community, for the community</div>
+          <p className="text-[12.5px] text-body mt-1 leading-relaxed">
+            100% open source. Install via Plugin Marketplace, npm, or git clone.
+            Multi-language support across 5 languages. The only multilingual Claude Code resource.
+          </p>
+          <div className="mt-3 flex flex-wrap gap-2.5">
+            <a
+              href="https://github.com/Claudient/Claudient"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-md bg-ink px-3 py-1.5 text-[12px] font-bold text-white hover:bg-body transition"
+            >
+              <svg className="size-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Star on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

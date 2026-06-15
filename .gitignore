@@ -4,6 +4,8 @@ development.md
 /claude-skills-main
 website-development.md
 /website-development.md
+/posthog-style-os-ui
+posthog-style-os-ui
 # OS
 .DS_Store
 .DS_Store?
@@ -61,3 +63,4 @@ coverage/
 
 # Root-level lockfile (web/ has its own)
 package-lock.json
+.vercel

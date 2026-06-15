@@ -1,0 +1,79 @@
+import type { AppId, AppMeta } from "./types";
+
+export const APPS: Record<AppId, AppMeta> = {
+  home: {
+    id: "home",
+    title: "Welcome to Claudient",
+    icon: "🧠",
+    accent: "#f97316",
+    defaultSize: { width: 780, height: 580 },
+  },
+  skills: {
+    id: "skills",
+    title: "Skills Catalog",
+    icon: "⚡",
+    accent: "#1d4aff",
+    defaultSize: { width: 840, height: 600 },
+  },
+  agents: {
+    id: "agents",
+    title: "Specialist Agents",
+    icon: "🤖",
+    accent: "#b62ad9",
+    defaultSize: { width: 820, height: 580 },
+  },
+  mcp: {
+    id: "mcp",
+    title: "MCP Configs",
+    icon: "🔌",
+    accent: "#1078a3",
+    defaultSize: { width: 800, height: 560 },
+  },
+  guides: {
+    id: "guides",
+    title: "Guides & Docs",
+    icon: "📚",
+    accent: "#f54e00",
+    defaultSize: { width: 800, height: 580 },
+  },
+  stacks: {
+    id: "stacks",
+    title: "Workspace Stacks",
+    icon: "📦",
+    accent: "#3fb950",
+    defaultSize: { width: 820, height: 580 },
+  },
+  install: {
+    id: "install",
+    title: "Installation",
+    icon: "🚀",
+    accent: "#f97316",
+    defaultSize: { width: 700, height: 540 },
+  },
+  about: {
+    id: "about",
+    title: "About Claudient",
+    icon: "🏛️",
+    accent: "#76786c",
+    defaultSize: { width: 680, height: 520 },
+  },
+  trash: {
+    id: "trash",
+    title: "Trash",
+    icon: "🗑️",
+    accent: "#76786c",
+    defaultSize: { width: 520, height: 420 },
+  },
+};
+
+export const DESKTOP_ICONS: AppId[] = [
+  "home",
+  "skills",
+  "agents",
+  "mcp",
+  "guides",
+  "stacks",
+  "install",
+  "about",
+  "trash",
+];

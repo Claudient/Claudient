@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-canvas: #eeefe9;
+  --color-cream: #f7f7f3;
+  --color-surface: #ffffff;
+  --color-soft: #e5e7df;
+  --color-hairline: #d0d1c9;
+  --color-olive: #a3a489;
+  --color-ink: #151515;
+  --color-body: #2d2d2d;
+  --color-mute: #76786c;
+
+  --color-brand-yellow: #f5b800;
+  --color-brand-orange: #f1a82c;
+  --color-brand-red: #f54e00;
+  --color-brand-blue: #1d4aff;
+  --color-brand-teal: #1078a3;
+  --color-brand-purple: #b62ad9;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-canvas);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Cream dotted desktop pattern */
+.desktop-bg {
+  background-color: #eeefe9;
+  background-image: radial-gradient(rgba(120, 124, 105, 0.22) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+}
+
+.win-shadow {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04), 0 12px 30px -10px rgba(20, 20, 20, 0.28);
+}
+
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9cabf;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.cursor-blink { animation: blink 1s step-end infinite; }
