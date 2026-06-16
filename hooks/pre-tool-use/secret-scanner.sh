@@ -1,44 +1,43 @@
-#!/usr/bin/env bash
-# Pre-tool-use hook: scan file writes for hardcoded secrets
-set -euo pipefail
+#!/bin/bash
 
-INPUT=$(cat)
-TOOL_NAME=$(echo "$INPUT" | jq -r '.tool_name // empty')
-FILE_PATH=$(echo "$INPUT" | jq -r '.tool_input.file_path // empty')
-CONTENT=$(echo "$INPUT" | jq -r '.tool_input.content // .tool_input.new_string // empty')
+# secret-scanner.sh
+# Scans tool arguments for hardcoded secrets before execution.
 
-if [[ "$TOOL_NAME" != "Write" && "$TOOL_NAME" != "Edit" ]]; then
+TOOL_NAME="$1"
+TOOL_ARGS="$2"
+
+# Only scan tools that write data or execute commands
+if [[ "$TOOL_NAME" != "Replace" && "$TOOL_NAME" != "WriteFile" && "$TOOL_NAME" != "Bash" ]]; then
   exit 0
 fi
 
-if [[ -z "$CONTENT" ]]; then
-  exit 0
+# Define regex patterns for common secrets
+# AWS Access Key ID
+AWS_REGEX="AKIA[0-9A-Z]{16}"
+# Stripe Secret Key
+STRIPE_REGEX="sk_live_[0-9a-zA-Z]{24}"
+# Generic generic private key header
+RSA_REGEX="-----BEGIN (RSA|OPENSSH) PRIVATE KEY-----"
+
+# Check for matches
+DETECTED=""
+
+if echo "$TOOL_ARGS" | grep -qE "$AWS_REGEX"; then
+  DETECTED="AWS Access Key"
+elif echo "$TOOL_ARGS" | grep -qE "$STRIPE_REGEX"; then
+  DETECTED="Stripe Live Key"
+elif echo "$TOOL_ARGS" | grep -qE "$RSA_REGEX"; then
+  DETECTED="Private RSA/SSH Key"
 fi
 
-# Skip .env.example files (intentional placeholders)
-if [[ "$FILE_PATH" == *".env.example"* ]]; then
-  exit 0
-fi
-
-PATTERNS=(
-  'sk-[a-zA-Z0-9]{20,}'
-  'sk-ant-[a-zA-Z0-9\-]{20,}'
-  'ghp_[a-zA-Z0-9]{36}'
-  'npm_[a-zA-Z0-9]{36}'
-  'AKIA[A-Z0-9]{16}'
-  'xoxb-[0-9\-a-zA-Z]{50,}'
-)
-
-FOUND=false
-for PATTERN in "${PATTERNS[@]}"; do
-  if echo "$CONTENT" | grep -qE "$PATTERN" 2>/dev/null; then
-    FOUND=true
-    echo "⚠️  POTENTIAL SECRET DETECTED in $FILE_PATH — pattern: $PATTERN" >&2
-  fi
-done
-
-if [[ "$FOUND" == "true" ]]; then
+if [[ -n "$DETECTED" ]]; then
+  echo "🚨 SECURITY ALERT: Execution Blocked!"
+  echo "The secret scanner detected a hardcoded $DETECTED in the tool arguments."
+  echo "Claude: You MUST NOT hardcode secrets. Rewrite your response to use environment variables (e.g., process.env, os.environ) instead."
+  
+  # Exit with a non-zero status to abort the tool execution
   exit 1
 fi
 
+# If clean, allow execution
 exit 0

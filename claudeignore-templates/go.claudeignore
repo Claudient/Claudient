@@ -1,0 +1,39 @@
+# Go .claudeignore Template
+# Copy this to .claudeignore in your project root to save tokens
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (using Go modules)
+vendor/
+Godeps/
+
+# Lock files
+go.sum
+
+# Go workspace file
+go.work
+go.work.sum
+
+# IDE / Editor specific
+.idea/
+.vscode/
+*.swp
+*~
+
+# Logs
+*.log
+
+# Environment and Secrets
+.env
+.env.*
