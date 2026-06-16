@@ -1,6 +1,6 @@
 ---
-name: "Angular 17+"
-description: "- Building or maintaining Angular 17+ applications - Migrating from NgModule-based components to standalone components - Implementing reactive state with Signals or NgRx - Optimi"
+name: "angular"
+description: "Build Angular applications with TypeScript, RxJS, and NgRx state management"
 ---
 
 # Angular 17+

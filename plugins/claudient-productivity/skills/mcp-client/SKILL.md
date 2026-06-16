@@ -1,6 +1,6 @@
 ---
-name: "MCP Client"
-description: "Building an application that connects to and consumes MCP servers, or when the user mentions consuming MCP tools programmatically from their own application."
+name: "mcp-client"
+description: "Building an application that connects to and consumes MCP servers, or when the user mentions consuming MCP tools programmatically from their own ap..."
 ---
 
 # MCP Client

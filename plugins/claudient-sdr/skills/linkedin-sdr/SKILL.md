@@ -1,6 +1,6 @@
 ---
-name: "LinkedIn SDR"
-description: "- You are running a B2B prospecting campaign and need to scale outreach on LinkedIn without violating platform ToS - You are optimi"
+name: "linkedin-sdr"
+description: "- You are running a B2B prospecting campaign and need to scale outreach on LinkedIn without violating platform ToS"
 ---
 
 # LinkedIn SDR

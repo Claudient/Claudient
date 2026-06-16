@@ -1,6 +1,6 @@
 ---
-name: "Enterprise Claude Code Deployment — Compliance and Security"
-description: "Deploying Claude Code in a regulated industry (finance, healthcare, government); enterprise security review of AI tooling; data residency or sovereignty requirements; questions about on-premises or pr"
+name: "enterprise-compliance"
+description: "Deploying Claude Code in a regulated industry (finance, healthcare, government); enterprise security review of AI tooling; data residency or sovere..."
 ---
 
 # Enterprise Claude Code Deployment — Compliance and Security

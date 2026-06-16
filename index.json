@@ -1,6 +1,6 @@
 {
   "version": "1.10.1",
-  "generated": "2026-06-15T08:14:30.937Z",
+  "generated": "2026-06-16T21:28:10.116Z",
   "skills": [
     {
       "id": "ai-engineering/advanced-tool-use",
@@ -19,6 +19,14 @@
       "file": "skills/ai-engineering/agent-construction.md"
     },
     {
+      "id": "ai-engineering/agent-handoff",
+      "category": "ai-engineering",
+      "lang": "en",
+      "title": "Agent Handoff",
+      "description": "Implement structured handoffs between agents with JSON-based state transfer, conflict detection, and acknowledgment protocols",
+      "file": "skills/ai-engineering/agent-handoff.md"
+    },
+    {
       "id": "ai-engineering/agent-memory",
       "category": "ai-engineering",
       "lang": "en",
@@ -35,12 +43,28 @@
       "file": "skills/ai-engineering/agent-sdk.md"
     },
     {
+      "id": "ai-engineering/agent-supervisor",
+      "category": "ai-engineering",
+      "lang": "en",
+      "title": "Agent Supervisor",
+      "description": "Build orchestrator agents that manage multi-agent workflows, enforce SLAs, handle escalations, and maintain overall task completion",
+      "file": "skills/ai-engineering/agent-supervisor.md"
+    },
+    {
       "id": "ai-engineering/agent-teams",
       "category": "ai-engineering",
       "lang": "en",
       "title": "Agent Teams",
       "description": "Orchestrate multi-agent teams in Claude Code — set up coordinated sessions with task delegation, inter-agent communication, and parallel execution",
       "file": "skills/ai-engineering/agent-teams.md"
+    },
+    {
+      "id": "ai-engineering/agent-tracing",
+      "category": "ai-engineering",
+      "lang": "en",
+      "title": "Agent Tracing",
+      "description": "Build observability into multi-agent systems with distributed traces, trace correlation, breakpoints, and execution replay",
+      "file": "skills/ai-engineering/agent-tracing.md"
     },
     {
       "id": "ai-engineering/autodream-goal-decomposition",
@@ -99,6 +123,14 @@
       "file": "skills/ai-engineering/crewai.md"
     },
     {
+      "id": "ai-engineering/dag-scheduler",
+      "category": "ai-engineering",
+      "lang": "en",
+      "title": "Dag Scheduler",
+      "description": "Build, validate, and execute directed acyclic graph (DAG) topologies for multi-agent workflows with automatic parallelization and cycle detection",
+      "file": "skills/ai-engineering/dag-scheduler.md"
+    },
+    {
       "id": "ai-engineering/advanced-tool-use",
       "category": "ai-engineering",
       "lang": "de",
@@ -115,12 +147,36 @@
       "file": "skills/ai-engineering/de/agent-construction.md"
     },
     {
+      "id": "ai-engineering/agent-handoff",
+      "category": "ai-engineering",
+      "lang": "de",
+      "title": "Agent Handoff",
+      "description": "Implementieren Sie strukturierte Übergaben zwischen Agenten mit JSON-basierter Statusübertragung, Konflikterkennung und Bestätigungsprotokollen",
+      "file": "skills/ai-engineering/de/agent-handoff.md"
+    },
+    {
       "id": "ai-engineering/agent-sdk",
       "category": "ai-engineering",
       "lang": "de",
       "title": "Agent Sdk",
       "description": "",
       "file": "skills/ai-engineering/de/agent-sdk.md"
+    },
+    {
+      "id": "ai-engineering/agent-supervisor",
+      "category": "ai-engineering",
+      "lang": "de",
+      "title": "Agent Supervisor",
+      "description": "Erstellen Sie Orchestrator-Agenten, die Multi-Agent-Workflows verwalten, SLAs durchsetzen, Eskalationen handhaben und die gesamte Aufgabenerledigung aufrechterhalten",
+      "file": "skills/ai-engineering/de/agent-supervisor.md"
+    },
+    {
+      "id": "ai-engineering/agent-tracing",
+      "category": "ai-engineering",
+      "lang": "de",
+      "title": "Agent Tracing",
+      "description": "Erstellen Sie Observability in Multi-Agent-Systemen mit verteilten Traces, Trace-Korrelation, Breakpoints und Execution-Replay",
+      "file": "skills/ai-engineering/de/agent-tracing.md"
     },
     {
       "id": "ai-engineering/claude-api",
@@ -145,6 +201,14 @@
       "title": "CrewAI Multi-Agent Framework",
       "description": "",
       "file": "skills/ai-engineering/de/crewai.md"
+    },
+    {
+      "id": "ai-engineering/dag-scheduler",
+      "category": "ai-engineering",
+      "lang": "de",
+      "title": "Dag Scheduler",
+      "description": "Erstellen, validieren und führen Sie gerichtete azyklische Graphen (DAG)-Topologien für Multi-Agent-Workflows mit automatischer Parallelisierung und Zyklenerkennung aus",
+      "file": "skills/ai-engineering/de/dag-scheduler.md"
     },
     {
       "id": "ai-engineering/langgraph",
@@ -195,6 +259,14 @@
       "file": "skills/ai-engineering/de/modal.md"
     },
     {
+      "id": "ai-engineering/multi-agent-memory",
+      "category": "ai-engineering",
+      "lang": "de",
+      "title": "Multi Agent Memory",
+      "description": "Erstellen Sie gemeinsame, versionierte Speichersysteme für Multi-Agent-Teams mit Blackboard-Muster, Konfliktlösung und eventueller Konsistenz",
+      "file": "skills/ai-engineering/de/multi-agent-memory.md"
+    },
+    {
       "id": "ai-engineering/prompt-caching",
       "category": "ai-engineering",
       "lang": "de",
@@ -225,6 +297,14 @@
       "title": "Rag Architect",
       "description": "RAG-Systementwurf: Chunking-Strategien, Embedding-Modellauswahl, Vector-Store-Wahl, Abrufmuster, Reranking, Bewertung — produktionsreife Retrieval-Augmented Generation",
       "file": "skills/ai-engineering/de/rag-architect.md"
+    },
+    {
+      "id": "ai-engineering/skill-discovery",
+      "category": "ai-engineering",
+      "lang": "de",
+      "title": "Skill Discovery",
+      "description": "Verwandte Fähigkeiten über Abhängigkeitsgraphanalyse entdecken, Lernpfade finden und Kompetenzclusters identifizieren",
+      "file": "skills/ai-engineering/de/skill-discovery.md"
     },
     {
       "id": "ai-engineering/vercel-ai-sdk",
@@ -267,12 +347,36 @@
       "file": "skills/ai-engineering/es/agent-construction.md"
     },
     {
+      "id": "ai-engineering/agent-handoff",
+      "category": "ai-engineering",
+      "lang": "es",
+      "title": "Agent Handoff",
+      "description": "Implementar transferencias estructuradas entre agentes con transferencia de estado basada en JSON, detección de conflictos y protocolos de confirmación",
+      "file": "skills/ai-engineering/es/agent-handoff.md"
+    },
+    {
       "id": "ai-engineering/agent-sdk",
       "category": "ai-engineering",
       "lang": "es",
       "title": "Agent Sdk",
       "description": "",
       "file": "skills/ai-engineering/es/agent-sdk.md"
+    },
+    {
+      "id": "ai-engineering/agent-supervisor",
+      "category": "ai-engineering",
+      "lang": "es",
+      "title": "Agent Supervisor",
+      "description": "Construir agentes orquestadores que gestionen flujos de trabajo multiagente, apliquen SLA, manejen escaladas y mantengan la finalización general de tareas",
+      "file": "skills/ai-engineering/es/agent-supervisor.md"
+    },
+    {
+      "id": "ai-engineering/agent-tracing",
+      "category": "ai-engineering",
+      "lang": "es",
+      "title": "Agent Tracing",
+      "description": "Construir observabilidad en sistemas multiagente con trazas distribuidas, correlación de trazas, puntos de interrupción y reproducciones de ejecución",
+      "file": "skills/ai-engineering/es/agent-tracing.md"
     },
     {
       "id": "ai-engineering/claude-api",
@@ -297,6 +401,14 @@
       "title": "Framework Multi-Agente CrewAI",
       "description": "",
       "file": "skills/ai-engineering/es/crewai.md"
+    },
+    {
+      "id": "ai-engineering/dag-scheduler",
+      "category": "ai-engineering",
+      "lang": "es",
+      "title": "Dag Scheduler",
+      "description": "Construir, validar y ejecutar topologías de gráficos acíclicos dirigidos (DAG) para flujos de trabajo multiagente con paralelización automática y detección de ciclos",
+      "file": "skills/ai-engineering/es/dag-scheduler.md"
     },
     {
       "id": "ai-engineering/langgraph",
@@ -347,6 +459,14 @@
       "file": "skills/ai-engineering/es/modal.md"
     },
     {
+      "id": "ai-engineering/multi-agent-memory",
+      "category": "ai-engineering",
+      "lang": "es",
+      "title": "Multi Agent Memory",
+      "description": "Construir sistemas de memoria compartida y versionada para equipos multiagente usando patrón de pizarra, resolución de conflictos y consistencia eventual",
+      "file": "skills/ai-engineering/es/multi-agent-memory.md"
+    },
+    {
       "id": "ai-engineering/prompt-caching",
       "category": "ai-engineering",
       "lang": "es",
@@ -379,6 +499,14 @@
       "file": "skills/ai-engineering/es/rag-architect.md"
     },
     {
+      "id": "ai-engineering/skill-discovery",
+      "category": "ai-engineering",
+      "lang": "es",
+      "title": "Skill Discovery",
+      "description": "Descubrir habilidades relacionadas mediante análisis de gráficos de dependencia, encontrar caminos de aprendizaje e identificar clústeres de habilidades",
+      "file": "skills/ai-engineering/es/skill-discovery.md"
+    },
+    {
       "id": "ai-engineering/vercel-ai-sdk",
       "category": "ai-engineering",
       "lang": "es",
@@ -403,12 +531,36 @@
       "file": "skills/ai-engineering/fr/agent-construction.md"
     },
     {
+      "id": "ai-engineering/agent-handoff",
+      "category": "ai-engineering",
+      "lang": "fr",
+      "title": "Agent Handoff",
+      "description": "Implémenter des transferts structurés entre agents avec transfert d'état basé sur JSON, détection de conflits et protocoles d'accusé de réception",
+      "file": "skills/ai-engineering/fr/agent-handoff.md"
+    },
+    {
       "id": "ai-engineering/agent-sdk",
       "category": "ai-engineering",
       "lang": "fr",
       "title": "Agent Sdk",
       "description": "",
       "file": "skills/ai-engineering/fr/agent-sdk.md"
+    },
+    {
+      "id": "ai-engineering/agent-supervisor",
+      "category": "ai-engineering",
+      "lang": "fr",
+      "title": "Agent Supervisor",
+      "description": "Construire des agents orchestrateurs qui gèrent les workflows multi-agents, appliquent les SLA, gèrent les escalades et maintiennent la complétion globale des tâches",
+      "file": "skills/ai-engineering/fr/agent-supervisor.md"
+    },
+    {
+      "id": "ai-engineering/agent-tracing",
+      "category": "ai-engineering",
+      "lang": "fr",
+      "title": "Agent Tracing",
+      "description": "Construire l'observabilité dans les systèmes multi-agents avec traces distribuées, corrélation de traces, points d'arrêt et relecture d'exécution",
+      "file": "skills/ai-engineering/fr/agent-tracing.md"
     },
     {
       "id": "ai-engineering/claude-api",
@@ -433,6 +585,14 @@
       "title": "Framework Multi-Agent CrewAI",
       "description": "",
       "file": "skills/ai-engineering/fr/crewai.md"
+    },
+    {
+      "id": "ai-engineering/dag-scheduler",
+      "category": "ai-engineering",
+      "lang": "fr",
+      "title": "Dag Scheduler",
+      "description": "Construire, valider et exécuter des topologies de graphes acycliques orientés (DAG) pour les workflows multi-agents avec parallélisation automatique et détection de cycles",
+      "file": "skills/ai-engineering/fr/dag-scheduler.md"
     },
     {
       "id": "ai-engineering/langgraph",
@@ -483,6 +643,14 @@
       "file": "skills/ai-engineering/fr/modal.md"
     },
     {
+      "id": "ai-engineering/multi-agent-memory",
+      "category": "ai-engineering",
+      "lang": "fr",
+      "title": "Multi Agent Memory",
+      "description": "Construire des systèmes de mémoire partagée et versionnés pour les équipes multi-agents en utilisant le pattern blackboard, la résolution de conflits et la cohérence éventuelle",
+      "file": "skills/ai-engineering/fr/multi-agent-memory.md"
+    },
+    {
       "id": "ai-engineering/prompt-caching",
       "category": "ai-engineering",
       "lang": "fr",
@@ -513,6 +681,14 @@
       "title": "Rag Architect",
       "description": "Conception de système RAG : stratégies de chunking, sélection du modèle d'embedding, choix du vector store, modèles de récupération, reranking, évaluation — récupération augmentée par génération de qualité production",
       "file": "skills/ai-engineering/fr/rag-architect.md"
+    },
+    {
+      "id": "ai-engineering/skill-discovery",
+      "category": "ai-engineering",
+      "lang": "fr",
+      "title": "Skill Discovery",
+      "description": "Découvrir des compétences connexes via analyse de graphe de dépendances, trouver des parcours d'apprentissage et identifier des clusters de compétences",
+      "file": "skills/ai-engineering/fr/skill-discovery.md"
     },
     {
       "id": "ai-engineering/vercel-ai-sdk",
@@ -579,6 +755,14 @@
       "file": "skills/ai-engineering/modal.md"
     },
     {
+      "id": "ai-engineering/multi-agent-memory",
+      "category": "ai-engineering",
+      "lang": "en",
+      "title": "Multi Agent Memory",
+      "description": "Build shared, versioned memory systems for multi-agent teams using blackboard pattern, conflict resolution, and eventual consistency",
+      "file": "skills/ai-engineering/multi-agent-memory.md"
+    },
+    {
       "id": "ai-engineering/advanced-tool-use",
       "category": "ai-engineering",
       "lang": "nl",
@@ -595,12 +779,36 @@
       "file": "skills/ai-engineering/nl/agent-construction.md"
     },
     {
+      "id": "ai-engineering/agent-handoff",
+      "category": "ai-engineering",
+      "lang": "nl",
+      "title": "Agent Handoff",
+      "description": "Implementeer gestructureerde overdrachten tussen agenten met JSON-gebaseerde state transfer, conflictdetectie en acknowledgment protocollen",
+      "file": "skills/ai-engineering/nl/agent-handoff.md"
+    },
+    {
       "id": "ai-engineering/agent-sdk",
       "category": "ai-engineering",
       "lang": "nl",
       "title": "Agent Sdk",
       "description": "",
       "file": "skills/ai-engineering/nl/agent-sdk.md"
+    },
+    {
+      "id": "ai-engineering/agent-supervisor",
+      "category": "ai-engineering",
+      "lang": "nl",
+      "title": "Agent Supervisor",
+      "description": "Bouw orchestrator agenten die multi-agent workflows beheren, SLA's afdwingen, escalaties verwerken en algehele taakafronding behouden",
+      "file": "skills/ai-engineering/nl/agent-supervisor.md"
+    },
+    {
+      "id": "ai-engineering/agent-tracing",
+      "category": "ai-engineering",
+      "lang": "nl",
+      "title": "Agent Tracing",
+      "description": "Bouw observabiliteit in multi-agent systemen met gedistribueerde traces, trace correlatie, breakpoints en execution replay",
+      "file": "skills/ai-engineering/nl/agent-tracing.md"
     },
     {
       "id": "ai-engineering/claude-api",
@@ -625,6 +833,14 @@
       "title": "CrewAI Multi-Agent Framework",
       "description": "",
       "file": "skills/ai-engineering/nl/crewai.md"
+    },
+    {
+      "id": "ai-engineering/dag-scheduler",
+      "category": "ai-engineering",
+      "lang": "nl",
+      "title": "Dag Scheduler",
+      "description": "Bouw, valideer en voer gerichtde acyclische grafiek (DAG) topologieën uit voor multi-agent workflows met automatische parallellisering en cyclus detectie",
+      "file": "skills/ai-engineering/nl/dag-scheduler.md"
     },
     {
       "id": "ai-engineering/langgraph",
@@ -675,6 +891,14 @@
       "file": "skills/ai-engineering/nl/modal.md"
     },
     {
+      "id": "ai-engineering/multi-agent-memory",
+      "category": "ai-engineering",
+      "lang": "nl",
+      "title": "Multi Agent Memory",
+      "description": "Bouw gedeelde, geversieerde geheugensystemen voor multi-agent teams met blackboard patroon, conflictresolutie en eventuele consistentie",
+      "file": "skills/ai-engineering/nl/multi-agent-memory.md"
+    },
+    {
       "id": "ai-engineering/prompt-caching",
       "category": "ai-engineering",
       "lang": "nl",
@@ -705,6 +929,14 @@
       "title": "Rag Architect",
       "description": "RAG-systeemontwerp: chunking-strategieën, embedding-modelselectie, vector store-keuze, retrieval-patronen, reranking, evaluatie — productieklaar retrieval-augmented generation",
       "file": "skills/ai-engineering/nl/rag-architect.md"
+    },
+    {
+      "id": "ai-engineering/skill-discovery",
+      "category": "ai-engineering",
+      "lang": "nl",
+      "title": "Skill Discovery",
+      "description": "Gerelateerde vaardigheden ontdekken via afhankelijkheidsgrafiekanalyse, leerpaden vinden en vaardigheidscluster identificeren",
+      "file": "skills/ai-engineering/nl/skill-discovery.md"
     },
     {
       "id": "ai-engineering/vercel-ai-sdk",
@@ -769,6 +1001,14 @@
       "title": "Skill Composition",
       "description": "Skill composition and chaining: design multi-skill workflows, chain skill outputs as inputs, build reusable skill pipelines, and orchestrate complex tasks from atomic skill building blocks",
       "file": "skills/ai-engineering/skill-composition.md"
+    },
+    {
+      "id": "ai-engineering/skill-discovery",
+      "category": "ai-engineering",
+      "lang": "en",
+      "title": "Skill Discovery",
+      "description": "Find related skills via dependency graph analysis, discover learning paths, and identify skill clusters",
+      "file": "skills/ai-engineering/skill-discovery.md"
     },
     {
       "id": "ai-engineering/ultraplan",
@@ -4235,6 +4475,14 @@
       "file": "skills/database/vector-databases.md"
     },
     {
+      "id": "devops-infra/air-gap-deployment",
+      "category": "devops-infra",
+      "lang": "en",
+      "title": "Air Gap Deployment",
+      "description": "Deploy Claudient stacks and infrastructure in air-gapped environments: audit MCP dependencies, replace with local equivalents, configure DISABLE_EXTERNAL_MCP",
+      "file": "skills/devops-infra/air-gap-deployment.md"
+    },
+    {
       "id": "devops-infra/argocd",
       "category": "devops-infra",
       "lang": "en",
@@ -4609,6 +4857,14 @@
       "title": "Dependency Auditor",
       "description": "Dependency auditing: identify outdated packages, CVE vulnerabilities, licence conflicts, and unused dependencies — npm, pip, cargo, and Go modules",
       "file": "skills/devops-infra/dependency-auditor.md"
+    },
+    {
+      "id": "devops-infra/dev-doctor",
+      "category": "devops-infra",
+      "lang": "en",
+      "title": "Dev Doctor",
+      "description": "",
+      "file": "skills/devops-infra/dev-doctor.md"
     },
     {
       "id": "devops-infra/docker-compose",
@@ -6529,6 +6785,14 @@
       "title": "Pr Description",
       "description": "Write pull request descriptions: summary, motivation, changes, testing steps, screenshots placeholder",
       "file": "skills/git/pr-description.md"
+    },
+    {
+      "id": "git/safe-commit",
+      "category": "git",
+      "lang": "en",
+      "title": "Safe Commit (Lint-On-Commit Enforcer)",
+      "description": "",
+      "file": "skills/git/safe-commit.md"
     },
     {
       "id": "gtm/champion-builder",
@@ -9387,6 +9651,14 @@
       "file": "skills/productivity/batch.md"
     },
     {
+      "id": "productivity/bisect-bug",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Time-Travel Debugger (Git Bisect Integration)",
+      "description": "",
+      "file": "skills/productivity/bisect-bug.md"
+    },
+    {
       "id": "productivity/board-deck-builder",
       "category": "productivity",
       "lang": "en",
@@ -9411,12 +9683,28 @@
       "file": "skills/productivity/build-optimization.md"
     },
     {
+      "id": "productivity/build-skill",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Skill Builder Wizard",
+      "description": "",
+      "file": "skills/productivity/build-skill.md"
+    },
+    {
       "id": "productivity/candidate-sourcer",
       "category": "productivity",
       "lang": "en",
       "title": "Candidate Sourcer",
       "description": "Passive candidate sourcing: LinkedIn search strings, Boolean search, outreach message sequences, and pipeline tracking for recruiters",
       "file": "skills/productivity/candidate-sourcer.md"
+    },
+    {
+      "id": "productivity/caveman-mode",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Caveman Mode (Token Optimizer)",
+      "description": "",
+      "file": "skills/productivity/caveman-mode.md"
     },
     {
       "id": "productivity/caveman",
@@ -9705,6 +9993,14 @@
       "title": "Founder Weekly Review",
       "description": "Wöchentliche Gründer-Review: Unternehmensgesundheit, OKR-Check, Team-Puls, Prioritäten für die nächste Woche",
       "file": "skills/productivity/de/founder-weekly-review.md"
+    },
+    {
+      "id": "productivity/freshness-auditor",
+      "category": "productivity",
+      "lang": "de",
+      "title": "Freshness Auditor",
+      "description": "Führen Sie Frischeaudits durch und generieren Sie priorisierte Aktualisierungslisten für die Inhaltswartung",
+      "file": "skills/productivity/de/freshness-auditor.md"
     },
     {
       "id": "productivity/git-worktree",
@@ -10049,6 +10345,14 @@
       "title": "Document Processing",
       "description": "Document processing: extract structured data from PDF, DOCX, XLSX, PPTX files, parse tables, convert formats, handle OCR for scanned documents, and build document pipelines",
       "file": "skills/productivity/document-processing.md"
+    },
+    {
+      "id": "productivity/dx-metrics",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Dx Metrics",
+      "description": "Define and track developer experience metrics across Claude Code skills — success rate, invocations, time saved, adoption tier",
+      "file": "skills/productivity/dx-metrics.md"
     },
     {
       "id": "productivity/engineering-strategy",
@@ -10843,6 +11147,14 @@
       "file": "skills/productivity/fr/founder-weekly-review.md"
     },
     {
+      "id": "productivity/freshness-auditor",
+      "category": "productivity",
+      "lang": "fr",
+      "title": "Freshness Auditor",
+      "description": "Exécutez des audits de fraîcheur et générez des listes de rafraîchissement prioritaires pour la maintenance des contenus",
+      "file": "skills/productivity/fr/freshness-auditor.md"
+    },
+    {
       "id": "productivity/git-worktree",
       "category": "productivity",
       "lang": "fr",
@@ -11155,6 +11467,14 @@
       "file": "skills/productivity/fr/voice-input.md"
     },
     {
+      "id": "productivity/freshness-auditor",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Freshness Auditor",
+      "description": "Run freshness audits and generate prioritized refresh lists for content maintenance",
+      "file": "skills/productivity/freshness-auditor.md"
+    },
+    {
       "id": "productivity/git-worktree",
       "category": "productivity",
       "lang": "en",
@@ -11235,12 +11555,28 @@
       "file": "skills/productivity/llms-txt.md"
     },
     {
+      "id": "productivity/mason",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Mason Role (Boilerplate Builder)",
+      "description": "",
+      "file": "skills/productivity/mason.md"
+    },
+    {
       "id": "productivity/mcp-client",
       "category": "productivity",
       "lang": "en",
       "title": "Mcp Client",
       "description": "Building an application that connects to and consumes MCP servers, or when the user mentions consuming MCP tools programmatically from their own ap...",
       "file": "skills/productivity/mcp-client.md"
+    },
+    {
+      "id": "productivity/memorize",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Project Memory Bank",
+      "description": "",
+      "file": "skills/productivity/memorize.md"
     },
     {
       "id": "productivity/mermaid",
@@ -11787,6 +12123,14 @@
       "file": "skills/productivity/no-slop.md"
     },
     {
+      "id": "productivity/plan-epic",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Epic Planner (Action Graph)",
+      "description": "",
+      "file": "skills/productivity/plan-epic.md"
+    },
+    {
       "id": "productivity/pr-review",
       "category": "productivity",
       "lang": "en",
@@ -11835,6 +12179,14 @@
       "file": "skills/productivity/runbook-generator.md"
     },
     {
+      "id": "productivity/save-state",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Save State",
+      "description": "",
+      "file": "skills/productivity/save-state.md"
+    },
+    {
       "id": "productivity/scrum-master",
       "category": "productivity",
       "lang": "en",
@@ -11859,6 +12211,14 @@
       "file": "skills/productivity/self-eval.md"
     },
     {
+      "id": "productivity/setup-ignore",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Setup Ignore",
+      "description": "",
+      "file": "skills/productivity/setup-ignore.md"
+    },
+    {
       "id": "productivity/ship-gate",
       "category": "productivity",
       "lang": "en",
@@ -11873,6 +12233,14 @@
       "title": "Slack App",
       "description": "Building Slack bots or apps, or when the user mentions Bolt SDK, Slack slash commands, Block Kit, or Slack workflows.",
       "file": "skills/productivity/slack-app.md"
+    },
+    {
+      "id": "productivity/sonar",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Sonar Codebase Cartographer",
+      "description": "",
+      "file": "skills/productivity/sonar.md"
     },
     {
       "id": "productivity/spec-driven-workflow",
@@ -11953,6 +12321,14 @@
       "title": "Trend Monitor",
       "description": "Trend monitoring and pulse research: track emerging topics, technology signals, competitive moves, and market shifts — structured research across Reddit, HN, news, and community sources",
       "file": "skills/productivity/trend-monitor.md"
+    },
+    {
+      "id": "productivity/tribunal-review",
+      "category": "productivity",
+      "lang": "en",
+      "title": "Tribunal PR Review System",
+      "description": "",
+      "file": "skills/productivity/tribunal-review.md"
     },
     {
       "id": "productivity/valyu",
@@ -15183,6 +15559,18 @@
       "file": "agents/core/fr/security-reviewer.md"
     },
     {
+      "id": "core/hive-orchestrator",
+      "lang": "en",
+      "title": "Hive Orchestrator",
+      "file": "agents/core/hive-orchestrator.md"
+    },
+    {
+      "id": "core/night-shift",
+      "lang": "en",
+      "title": "Night Shift (Autonomous Batch Processor)",
+      "file": "agents/core/night-shift.md"
+    },
+    {
       "id": "core/architect",
       "lang": "nl",
       "title": "Architect Agent",
@@ -15235,6 +15623,36 @@
       "lang": "en",
       "title": "Agent Architect",
       "file": "agents/roles/agent-architect.md"
+    },
+    {
+      "id": "roles/agent-supervisor",
+      "lang": "en",
+      "title": "Agent Supervisor",
+      "file": "agents/roles/agent-supervisor.md"
+    },
+    {
+      "id": "roles/agentic-ai-engineer",
+      "lang": "en",
+      "title": "Agentic Ai Engineer",
+      "file": "agents/roles/agentic-ai-engineer.md"
+    },
+    {
+      "id": "roles/ai-compliance-risk",
+      "lang": "en",
+      "title": "Ai Compliance Risk",
+      "file": "agents/roles/ai-compliance-risk.md"
+    },
+    {
+      "id": "roles/ai-ethics-governance",
+      "lang": "en",
+      "title": "Ai Ethics Governance",
+      "file": "agents/roles/ai-ethics-governance.md"
+    },
+    {
+      "id": "roles/ai-product-manager",
+      "lang": "en",
+      "title": "Ai Product Manager",
+      "file": "agents/roles/ai-product-manager.md"
     },
     {
       "id": "roles/ai-safety-engineer",
@@ -15333,6 +15751,12 @@
       "file": "agents/roles/clojure-engineer.md"
     },
     {
+      "id": "roles/cloud-architect",
+      "lang": "en",
+      "title": "Cloud Architect",
+      "file": "agents/roles/cloud-architect.md"
+    },
+    {
       "id": "roles/cloud-security-engineer",
       "lang": "en",
       "title": "Cloud Security Engineer",
@@ -15393,6 +15817,12 @@
       "file": "agents/roles/context-manager.md"
     },
     {
+      "id": "roles/cost-controller",
+      "lang": "en",
+      "title": "Agent: Cost Controller",
+      "file": "agents/roles/cost-controller.md"
+    },
+    {
       "id": "roles/cpp-engineer",
       "lang": "en",
       "title": "Cpp Engineer",
@@ -15415,6 +15845,12 @@
       "lang": "en",
       "title": "Customer Success Manager",
       "file": "agents/roles/customer-success-manager.md"
+    },
+    {
+      "id": "roles/dag-orchestrator",
+      "lang": "en",
+      "title": "Dag Orchestrator",
+      "file": "agents/roles/dag-orchestrator.md"
     },
     {
       "id": "roles/data-pipeline-architect",
@@ -15457,6 +15893,12 @@
       "lang": "de",
       "title": "Agent Architect",
       "file": "agents/roles/de/agent-architect.md"
+    },
+    {
+      "id": "roles/agent-supervisor",
+      "lang": "de",
+      "title": "Agent Supervisor",
+      "file": "agents/roles/de/agent-supervisor.md"
     },
     {
       "id": "roles/ai-safety-engineer",
@@ -15637,6 +16079,12 @@
       "lang": "de",
       "title": "Customer Success Manager",
       "file": "agents/roles/de/customer-success-manager.md"
+    },
+    {
+      "id": "roles/dag-orchestrator",
+      "lang": "de",
+      "title": "Dag Orchestrator",
+      "file": "agents/roles/de/dag-orchestrator.md"
     },
     {
       "id": "roles/data-pipeline-architect",
@@ -15927,6 +16375,12 @@
       "file": "agents/roles/de/mcp-developer.md"
     },
     {
+      "id": "roles/memory-manager",
+      "lang": "de",
+      "title": "Memory Manager",
+      "file": "agents/roles/de/memory-manager.md"
+    },
+    {
       "id": "roles/message-queue-architect",
       "lang": "de",
       "title": "Message Queue Architect",
@@ -15997,6 +16451,12 @@
       "lang": "de",
       "title": "Observability Engineer",
       "file": "agents/roles/de/observability-engineer.md"
+    },
+    {
+      "id": "roles/offline-validator",
+      "lang": "de",
+      "title": "Offline Validator",
+      "file": "agents/roles/de/offline-validator.md"
     },
     {
       "id": "roles/partnerships-manager",
@@ -16311,6 +16771,12 @@
       "file": "agents/roles/diagram-generator.md"
     },
     {
+      "id": "roles/distributed-systems-engineer",
+      "lang": "en",
+      "title": "Distributed Systems Engineer",
+      "file": "agents/roles/distributed-systems-engineer.md"
+    },
+    {
       "id": "roles/documentation-engineer",
       "lang": "en",
       "title": "Documentation Engineer",
@@ -16327,6 +16793,12 @@
       "lang": "en",
       "title": "Dr Bcp Specialist",
       "file": "agents/roles/dr-bcp-specialist.md"
+    },
+    {
+      "id": "roles/dx-analyst",
+      "lang": "en",
+      "title": "Dx Analyst",
+      "file": "agents/roles/dx-analyst.md"
     },
     {
       "id": "roles/dx-optimizer",
@@ -16365,6 +16837,12 @@
       "file": "agents/roles/embedded-systems.md"
     },
     {
+      "id": "roles/enterprise-security-officer",
+      "lang": "en",
+      "title": "Agent: Enterprise Security Officer",
+      "file": "agents/roles/enterprise-security-officer.md"
+    },
+    {
       "id": "roles/error-coordinator",
       "lang": "en",
       "title": "Error Coordinator",
@@ -16387,6 +16865,12 @@
       "lang": "es",
       "title": "Agent Architect",
       "file": "agents/roles/es/agent-architect.md"
+    },
+    {
+      "id": "roles/agent-supervisor",
+      "lang": "es",
+      "title": "Agent Supervisor",
+      "file": "agents/roles/es/agent-supervisor.md"
     },
     {
       "id": "roles/ai-safety-engineer",
@@ -16567,6 +17051,12 @@
       "lang": "es",
       "title": "Customer Success Manager",
       "file": "agents/roles/es/customer-success-manager.md"
+    },
+    {
+      "id": "roles/dag-orchestrator",
+      "lang": "es",
+      "title": "Dag Orchestrator",
+      "file": "agents/roles/es/dag-orchestrator.md"
     },
     {
       "id": "roles/data-pipeline-architect",
@@ -16857,6 +17347,12 @@
       "file": "agents/roles/es/mcp-developer.md"
     },
     {
+      "id": "roles/memory-manager",
+      "lang": "es",
+      "title": "Memory Manager",
+      "file": "agents/roles/es/memory-manager.md"
+    },
+    {
       "id": "roles/message-queue-architect",
       "lang": "es",
       "title": "Message Queue Architect",
@@ -16927,6 +17423,12 @@
       "lang": "es",
       "title": "Observability Engineer",
       "file": "agents/roles/es/observability-engineer.md"
+    },
+    {
+      "id": "roles/offline-validator",
+      "lang": "es",
+      "title": "Offline Validator",
+      "file": "agents/roles/es/offline-validator.md"
     },
     {
       "id": "roles/partnerships-manager",
@@ -17289,6 +17791,12 @@
       "file": "agents/roles/fr/agent-architect.md"
     },
     {
+      "id": "roles/agent-supervisor",
+      "lang": "fr",
+      "title": "Agent Supervisor",
+      "file": "agents/roles/fr/agent-supervisor.md"
+    },
+    {
       "id": "roles/ai-safety-engineer",
       "lang": "fr",
       "title": "Ai Safety Engineer",
@@ -17467,6 +17975,12 @@
       "lang": "fr",
       "title": "Customer Success Manager",
       "file": "agents/roles/fr/customer-success-manager.md"
+    },
+    {
+      "id": "roles/dag-orchestrator",
+      "lang": "fr",
+      "title": "Dag Orchestrator",
+      "file": "agents/roles/fr/dag-orchestrator.md"
     },
     {
       "id": "roles/data-pipeline-architect",
@@ -17757,6 +18271,12 @@
       "file": "agents/roles/fr/mcp-developer.md"
     },
     {
+      "id": "roles/memory-manager",
+      "lang": "fr",
+      "title": "Memory Manager",
+      "file": "agents/roles/fr/memory-manager.md"
+    },
+    {
       "id": "roles/message-queue-architect",
       "lang": "fr",
       "title": "Message Queue Architect",
@@ -17827,6 +18347,12 @@
       "lang": "fr",
       "title": "Observability Engineer",
       "file": "agents/roles/fr/observability-engineer.md"
+    },
+    {
+      "id": "roles/offline-validator",
+      "lang": "fr",
+      "title": "Offline Validator",
+      "file": "agents/roles/fr/offline-validator.md"
     },
     {
       "id": "roles/partnerships-manager",
@@ -18195,6 +18721,12 @@
       "file": "agents/roles/incident-responder.md"
     },
     {
+      "id": "roles/infrastructure-as-code",
+      "lang": "en",
+      "title": "Infrastructure As Code",
+      "file": "agents/roles/infrastructure-as-code.md"
+    },
+    {
       "id": "roles/iot-engineer",
       "lang": "en",
       "title": "Iot Engineer",
@@ -18279,6 +18811,12 @@
       "file": "agents/roles/mcp-developer.md"
     },
     {
+      "id": "roles/memory-manager",
+      "lang": "en",
+      "title": "Memory Manager",
+      "file": "agents/roles/memory-manager.md"
+    },
+    {
       "id": "roles/message-queue-architect",
       "lang": "en",
       "title": "Message Queue Architect",
@@ -18355,6 +18893,12 @@
       "lang": "nl",
       "title": "Agent Architect",
       "file": "agents/roles/nl/agent-architect.md"
+    },
+    {
+      "id": "roles/agent-supervisor",
+      "lang": "nl",
+      "title": "Agent Supervisor",
+      "file": "agents/roles/nl/agent-supervisor.md"
     },
     {
       "id": "roles/ai-safety-engineer",
@@ -18535,6 +19079,12 @@
       "lang": "nl",
       "title": "Customer Success Manager",
       "file": "agents/roles/nl/customer-success-manager.md"
+    },
+    {
+      "id": "roles/dag-orchestrator",
+      "lang": "nl",
+      "title": "Dag Orchestrator",
+      "file": "agents/roles/nl/dag-orchestrator.md"
     },
     {
       "id": "roles/data-pipeline-architect",
@@ -18825,6 +19375,12 @@
       "file": "agents/roles/nl/mcp-developer.md"
     },
     {
+      "id": "roles/memory-manager",
+      "lang": "nl",
+      "title": "Memory Manager",
+      "file": "agents/roles/nl/memory-manager.md"
+    },
+    {
       "id": "roles/message-queue-architect",
       "lang": "nl",
       "title": "Message Queue Architect",
@@ -18895,6 +19451,12 @@
       "lang": "nl",
       "title": "Observability Engineer",
       "file": "agents/roles/nl/observability-engineer.md"
+    },
+    {
+      "id": "roles/offline-validator",
+      "lang": "nl",
+      "title": "Offline Validator",
+      "file": "agents/roles/nl/offline-validator.md"
     },
     {
       "id": "roles/partnerships-manager",
@@ -19209,6 +19771,12 @@
       "file": "agents/roles/observability-engineer.md"
     },
     {
+      "id": "roles/offline-validator",
+      "lang": "en",
+      "title": "Offline Validator",
+      "file": "agents/roles/offline-validator.md"
+    },
+    {
       "id": "roles/partnerships-manager",
       "lang": "en",
       "title": "Partnerships Manager",
@@ -19219,6 +19787,12 @@
       "lang": "en",
       "title": "Penetration Tester",
       "file": "agents/roles/penetration-tester.md"
+    },
+    {
+      "id": "roles/performance-junkie",
+      "lang": "en",
+      "title": "Performance Junkie (Adversarial Reviewer)",
+      "file": "agents/roles/performance-junkie.md"
     },
     {
       "id": "roles/performance-optimizer",
@@ -19371,6 +19945,12 @@
       "file": "agents/roles/security-auditor.md"
     },
     {
+      "id": "roles/security-hacker",
+      "lang": "en",
+      "title": "Security Hacker (Adversarial Reviewer)",
+      "file": "agents/roles/security-hacker.md"
+    },
+    {
       "id": "roles/senior-backend",
       "lang": "en",
       "title": "Senior Backend",
@@ -19381,6 +19961,12 @@
       "lang": "en",
       "title": "Senior Frontend",
       "file": "agents/roles/senior-frontend.md"
+    },
+    {
+      "id": "roles/senior-pedant",
+      "lang": "en",
+      "title": "Senior Pedant (Adversarial Reviewer)",
+      "file": "agents/roles/senior-pedant.md"
     },
     {
       "id": "roles/soc-analyst",
@@ -20069,6 +20655,12 @@
       "file": "hooks/advanced/prompt-hook-guard.md"
     },
     {
+      "id": "audit-logger.md/audit-logger",
+      "category": "audit-logger.md",
+      "title": "Hook: Enterprise Audit Logger",
+      "file": "hooks/audit-logger.md"
+    },
+    {
       "id": "context/file-changed-reload",
       "category": "context",
       "title": "Hook: File Changed Reload",
@@ -20079,6 +20671,12 @@
       "category": "context",
       "title": "Hook: Pre-Compact Snapshot",
       "file": "hooks/context/pre-compact-snapshot.md"
+    },
+    {
+      "id": "cost-cap-enforcer.md/cost-cap-enforcer",
+      "category": "cost-cap-enforcer.md",
+      "title": "Hook: Cost Cap Enforcer",
+      "file": "hooks/cost-cap-enforcer.md"
     },
     {
       "id": "lifecycle/bug-logger",
@@ -20159,6 +20757,12 @@
       "file": "hooks/notification/ntfy-push.md"
     },
     {
+      "id": "notification/rate-limit-handler",
+      "category": "notification",
+      "title": "Rate Limit Evasion Hook (Night Shift Support)",
+      "file": "hooks/notification/rate-limit-handler.md"
+    },
+    {
       "id": "notification/slack-notify",
       "category": "notification",
       "title": "Hook: Slack Notification",
@@ -20189,6 +20793,12 @@
       "file": "hooks/permission/permission-request-audit.md"
     },
     {
+      "id": "pii-scanner.md/pii-scanner",
+      "category": "pii-scanner.md",
+      "title": "Hook: PII Scanner",
+      "file": "hooks/pii-scanner.md"
+    },
+    {
       "id": "post-tool-use/agent-comms",
       "category": "post-tool-use",
       "title": "Hook: Multi-Agent Communication Bus",
@@ -20207,6 +20817,12 @@
       "file": "hooks/post-tool-use/auto-git-stage.md"
     },
     {
+      "id": "post-tool-use/auto-tdd",
+      "category": "post-tool-use",
+      "title": "Auto-TDD Hook",
+      "file": "hooks/post-tool-use/auto-tdd.md"
+    },
+    {
       "id": "post-tool-use/output-size-warn",
       "category": "post-tool-use",
       "title": "Hook: Large Output Detector",
@@ -20217,6 +20833,12 @@
       "category": "post-tool-use",
       "title": "Hook: Auto-Prettier",
       "file": "hooks/post-tool-use/prettier.md"
+    },
+    {
+      "id": "post-tool-use/shadow-compiler",
+      "category": "post-tool-use",
+      "title": "Shadow Compiler Hook",
+      "file": "hooks/post-tool-use/shadow-compiler.md"
     },
     {
       "id": "post-tool-use/tdd-guard",
@@ -20261,15 +20883,27 @@
       "file": "hooks/pre-tool-use/injection-scanner.md"
     },
     {
+      "id": "pre-tool-use/jit-context",
+      "category": "pre-tool-use",
+      "title": "JIT Context Injector Hook",
+      "file": "hooks/pre-tool-use/jit-context.md"
+    },
+    {
       "id": "pre-tool-use/lint-check",
       "category": "pre-tool-use",
       "title": "Hook: Lint Check Before Write",
       "file": "hooks/pre-tool-use/lint-check.md"
     },
     {
+      "id": "pre-tool-use/memory-injector",
+      "category": "pre-tool-use",
+      "title": "Memory Injector Hook",
+      "file": "hooks/pre-tool-use/memory-injector.md"
+    },
+    {
       "id": "pre-tool-use/secret-scanner",
       "category": "pre-tool-use",
-      "title": "Hook: Secret Scanner",
+      "title": "Secret Scanner Hook",
       "file": "hooks/pre-tool-use/secret-scanner.md"
     },
     {
@@ -20289,6 +20923,12 @@
       "category": "subagent",
       "title": "Hook: Subagent Stop Summary",
       "file": "hooks/subagent/subagent-stop-summary.md"
+    },
+    {
+      "id": "usage-tracker.md/usage-tracker",
+      "category": "usage-tracker.md",
+      "title": "Hook: Usage Tracker",
+      "file": "hooks/usage-tracker.md"
     }
   ],
   "rules": [
@@ -21165,6 +21805,24 @@
       "file": "workflows/ae-deal-cycle.md"
     },
     {
+      "id": "agent-memory-sharing",
+      "lang": "en",
+      "title": "Agent Memory Sharing Workflow",
+      "file": "workflows/agent-memory-sharing.md"
+    },
+    {
+      "id": "agent-team-kickoff",
+      "lang": "en",
+      "title": "Agent Team Kickoff Workflow",
+      "file": "workflows/agent-team-kickoff.md"
+    },
+    {
+      "id": "agentic-production-runbook",
+      "lang": "en",
+      "title": "Agentic Production Runbook",
+      "file": "workflows/agentic-production-runbook.md"
+    },
+    {
       "id": "api-design",
       "lang": "en",
       "title": "API Design Workflow",
@@ -21231,6 +21889,12 @@
       "file": "workflows/cto-weekly.md"
     },
     {
+      "id": "dag-orchestration",
+      "lang": "en",
+      "title": "DAG Orchestration Workflow",
+      "file": "workflows/dag-orchestration.md"
+    },
+    {
       "id": "data-reporting",
       "lang": "en",
       "title": "Data Reporting Workflow",
@@ -21247,6 +21911,24 @@
       "lang": "de",
       "title": "AE-Deal-Zyklus-Workflow",
       "file": "workflows/de/ae-deal-cycle.md"
+    },
+    {
+      "id": "agent-memory-sharing",
+      "lang": "de",
+      "title": "Workflow für Agent-Speicherfreigabe",
+      "file": "workflows/de/agent-memory-sharing.md"
+    },
+    {
+      "id": "agent-team-kickoff",
+      "lang": "de",
+      "title": "Agent-Team-Kickoff-Workflow",
+      "file": "workflows/de/agent-team-kickoff.md"
+    },
+    {
+      "id": "agentic-production-runbook",
+      "lang": "de",
+      "title": "Agentisches Produktions-Runbook",
+      "file": "workflows/de/agentic-production-runbook.md"
     },
     {
       "id": "api-design",
@@ -21313,6 +21995,12 @@
       "lang": "de",
       "title": "CTO / Tech Lead-Wochen-Workflow",
       "file": "workflows/de/cto-weekly.md"
+    },
+    {
+      "id": "dag-orchestration",
+      "lang": "de",
+      "title": "DAG-Orchestrierungs-Workflow",
+      "file": "workflows/de/dag-orchestration.md"
     },
     {
       "id": "data-reporting",
@@ -21385,6 +22073,12 @@
       "lang": "de",
       "title": "Inkrementelle Konstruktion mit Bestätigungstoren",
       "file": "workflows/de/incremental-build.md"
+    },
+    {
+      "id": "multi-agent-debug",
+      "lang": "de",
+      "title": "Multi-Agent-Debug-Workflow",
+      "file": "workflows/de/multi-agent-debug.md"
     },
     {
       "id": "multi-agent-saga",
@@ -21477,6 +22171,12 @@
       "file": "workflows/docs-sprint.md"
     },
     {
+      "id": "dx-review",
+      "lang": "en",
+      "title": "DX Review Workflow — Monthly Cycle",
+      "file": "workflows/dx-review.md"
+    },
+    {
       "id": "ecommerce-weekly",
       "lang": "en",
       "title": "E-commerce Operator Weekly Workflow",
@@ -21493,6 +22193,24 @@
       "lang": "en",
       "title": "Error Budget Enforcement",
       "file": "workflows/error-budget.md"
+    },
+    {
+      "id": "agent-memory-sharing",
+      "lang": "es",
+      "title": "Flujo de trabajo de compartición de memoria de agente",
+      "file": "workflows/es/agent-memory-sharing.md"
+    },
+    {
+      "id": "agent-team-kickoff",
+      "lang": "es",
+      "title": "Flujo de trabajo de inicio de equipo agente",
+      "file": "workflows/es/agent-team-kickoff.md"
+    },
+    {
+      "id": "agentic-production-runbook",
+      "lang": "es",
+      "title": "Runbook de producción agentic",
+      "file": "workflows/es/agentic-production-runbook.md"
     },
     {
       "id": "api-design",
@@ -21535,6 +22253,12 @@
       "lang": "es",
       "title": "Flujo de decisión para la gestión del contexto",
       "file": "workflows/es/context-management-flow.md"
+    },
+    {
+      "id": "dag-orchestration",
+      "lang": "es",
+      "title": "Flujo de trabajo de orquestación DAG",
+      "file": "workflows/es/dag-orchestration.md"
     },
     {
       "id": "data-reporting",
@@ -21607,6 +22331,12 @@
       "lang": "es",
       "title": "Construcción incremental con compuertas de confirmación",
       "file": "workflows/es/incremental-build.md"
+    },
+    {
+      "id": "multi-agent-debug",
+      "lang": "es",
+      "title": "Flujo de trabajo de depuración multi-agente",
+      "file": "workflows/es/multi-agent-debug.md"
     },
     {
       "id": "multi-agent-saga",
@@ -21705,6 +22435,24 @@
       "file": "workflows/fr/ae-deal-cycle.md"
     },
     {
+      "id": "agent-memory-sharing",
+      "lang": "fr",
+      "title": "Flux de travail de partage de mémoire agent",
+      "file": "workflows/fr/agent-memory-sharing.md"
+    },
+    {
+      "id": "agent-team-kickoff",
+      "lang": "fr",
+      "title": "Flux de travail de démarrage d'équipe agent",
+      "file": "workflows/fr/agent-team-kickoff.md"
+    },
+    {
+      "id": "agentic-production-runbook",
+      "lang": "fr",
+      "title": "Carnet d'exploitation de production agentic",
+      "file": "workflows/fr/agentic-production-runbook.md"
+    },
+    {
       "id": "api-design",
       "lang": "fr",
       "title": "Flux de travail de conception d'API",
@@ -21769,6 +22517,12 @@
       "lang": "fr",
       "title": "Flux de travail hebdomadaire CTO / Tech Lead",
       "file": "workflows/fr/cto-weekly.md"
+    },
+    {
+      "id": "dag-orchestration",
+      "lang": "fr",
+      "title": "Flux de travail d'orchestration DAG",
+      "file": "workflows/fr/dag-orchestration.md"
     },
     {
       "id": "data-reporting",
@@ -21855,6 +22609,12 @@
       "file": "workflows/fr/incremental-build.md"
     },
     {
+      "id": "multi-agent-debug",
+      "lang": "fr",
+      "title": "Flux de travail de débogage multi-agent",
+      "file": "workflows/fr/multi-agent-debug.md"
+    },
+    {
       "id": "multi-agent-saga",
       "lang": "fr",
       "title": "Modèle de saga multi-agent",
@@ -21927,6 +22687,12 @@
       "file": "workflows/freelancer-weekly.md"
     },
     {
+      "id": "freshness-refresh",
+      "lang": "en",
+      "title": "Freshness Refresh",
+      "file": "workflows/freshness-refresh.md"
+    },
+    {
       "id": "growth-experiment",
       "lang": "en",
       "title": "Growth Experiment Workflow",
@@ -21945,6 +22711,12 @@
       "file": "workflows/incremental-build.md"
     },
     {
+      "id": "multi-agent-debug",
+      "lang": "en",
+      "title": "Multi-Agent Debug Workflow",
+      "file": "workflows/multi-agent-debug.md"
+    },
+    {
       "id": "multi-agent-saga",
       "lang": "en",
       "title": "Multi-Agent Saga Pattern",
@@ -21961,6 +22733,24 @@
       "lang": "nl",
       "title": "AE Deal Cycle Workflow",
       "file": "workflows/nl/ae-deal-cycle.md"
+    },
+    {
+      "id": "agent-memory-sharing",
+      "lang": "nl",
+      "title": "Agent geheugen delen workflow",
+      "file": "workflows/nl/agent-memory-sharing.md"
+    },
+    {
+      "id": "agent-team-kickoff",
+      "lang": "nl",
+      "title": "Agent team kickoff workflow",
+      "file": "workflows/nl/agent-team-kickoff.md"
+    },
+    {
+      "id": "agentic-production-runbook",
+      "lang": "nl",
+      "title": "Agentic productie runbook",
+      "file": "workflows/nl/agentic-production-runbook.md"
     },
     {
       "id": "api-design",
@@ -22029,6 +22819,12 @@
       "file": "workflows/nl/cto-weekly.md"
     },
     {
+      "id": "dag-orchestration",
+      "lang": "nl",
+      "title": "DAG-orkestratie workflow",
+      "file": "workflows/nl/dag-orchestration.md"
+    },
+    {
       "id": "data-reporting",
       "lang": "nl",
       "title": "Gegevensrapportage Workflow",
@@ -22095,6 +22891,12 @@
       "file": "workflows/nl/incremental-build.md"
     },
     {
+      "id": "multi-agent-debug",
+      "lang": "nl",
+      "title": "Multi-agent debug workflow",
+      "file": "workflows/nl/multi-agent-debug.md"
+    },
+    {
       "id": "multi-agent-saga",
       "lang": "nl",
       "title": "Multi-Agent Saga Patroon",
@@ -22159,6 +22961,12 @@
       "lang": "nl",
       "title": "Worktree-levenscyclus",
       "file": "workflows/nl/worktree-lifecycle.md"
+    },
+    {
+      "id": "offline-validation",
+      "lang": "en",
+      "title": "Offline Validation",
+      "file": "workflows/offline-validation.md"
     },
     {
       "id": "ops-weekly",
@@ -22231,6 +23039,18 @@
       "lang": "en",
       "title": "Session Learning Capture",
       "file": "workflows/session-learning.md"
+    },
+    {
+      "id": "skill-audit",
+      "lang": "en",
+      "title": "Skill Audit Workflow",
+      "file": "workflows/skill-audit.md"
+    },
+    {
+      "id": "strangle-legacy",
+      "lang": "en",
+      "title": "Legacy Strangler Workflow",
+      "file": "workflows/strangle-legacy.md"
     },
     {
       "id": "ux-research-sprint",
@@ -23198,6 +24018,12 @@
       "file": "guides/computer-use.md"
     },
     {
+      "id": "content-freshness",
+      "lang": "en",
+      "title": "Content Freshness",
+      "file": "guides/content-freshness.md"
+    },
+    {
       "id": "context-budget",
       "lang": "en",
       "title": "Context Budget Management",
@@ -23396,6 +24222,12 @@
       "file": "guides/de/computer-use.md"
     },
     {
+      "id": "content-freshness",
+      "lang": "de",
+      "title": "Content Freshness",
+      "file": "guides/de/content-freshness.md"
+    },
+    {
       "id": "context-budget",
       "lang": "de",
       "title": "Context-Budget-Management",
@@ -23436,6 +24268,12 @@
       "lang": "de",
       "title": "Claude Code Desktop-App",
       "file": "guides/de/desktop-app.md"
+    },
+    {
+      "id": "dx-measurement",
+      "lang": "de",
+      "title": "Anleitung zur Messung der Entwickler-Erfahrung",
+      "file": "guides/de/dx-measurement.md"
     },
     {
       "id": "extended-thinking",
@@ -23648,6 +24486,12 @@
       "file": "guides/de/notifications-setup.md"
     },
     {
+      "id": "offline-local-first",
+      "lang": "de",
+      "title": "Offline Local First",
+      "file": "guides/de/offline-local-first.md"
+    },
+    {
       "id": "opus-47-migration",
       "lang": "de",
       "title": "Migration zu Claude Opus 4.7",
@@ -23718,6 +24562,12 @@
       "lang": "de",
       "title": "Leitfaden zur Skill-Erstellung",
       "file": "guides/de/skill-authoring.md"
+    },
+    {
+      "id": "skill-dependency-graph",
+      "lang": "de",
+      "title": "Anleitung zum Fähigkeits-Abhängigkeitsgraph",
+      "file": "guides/de/skill-dependency-graph.md"
     },
     {
       "id": "skills-frontmatter",
@@ -23802,6 +24652,24 @@
       "lang": "en",
       "title": "Dispatch & Channels — Background Jobs and Real-Time Event Streaming",
       "file": "guides/dispatch-and-channels.md"
+    },
+    {
+      "id": "dx-measurement",
+      "lang": "en",
+      "title": "Developer Experience Measurement Guide",
+      "file": "guides/dx-measurement.md"
+    },
+    {
+      "id": "deployment-guide",
+      "lang": "en",
+      "title": "Enterprise Deployment Guide",
+      "file": "guides/enterprise/deployment-guide.md"
+    },
+    {
+      "id": "security-hardening",
+      "lang": "en",
+      "title": "Enterprise Security Hardening Checklist",
+      "file": "guides/enterprise/security-hardening.md"
     },
     {
       "id": "advanced-tool-use",
@@ -23972,6 +24840,12 @@
       "file": "guides/es/computer-use.md"
     },
     {
+      "id": "content-freshness",
+      "lang": "es",
+      "title": "Content Freshness",
+      "file": "guides/es/content-freshness.md"
+    },
+    {
       "id": "context-budget",
       "lang": "es",
       "title": "Gestión del Presupuesto de Contexto",
@@ -24012,6 +24886,12 @@
       "lang": "es",
       "title": "Aplicación de escritorio Claude Code",
       "file": "guides/es/desktop-app.md"
+    },
+    {
+      "id": "dx-measurement",
+      "lang": "es",
+      "title": "Guía de medición de experiencia del desarrollador",
+      "file": "guides/es/dx-measurement.md"
     },
     {
       "id": "extended-thinking",
@@ -24224,6 +25104,12 @@
       "file": "guides/es/notifications-setup.md"
     },
     {
+      "id": "offline-local-first",
+      "lang": "es",
+      "title": "Offline Local First",
+      "file": "guides/es/offline-local-first.md"
+    },
+    {
       "id": "opus-47-migration",
       "lang": "es",
       "title": "Migración a Claude Opus 4.7",
@@ -24294,6 +25180,12 @@
       "lang": "es",
       "title": "Guía de creación de skills",
       "file": "guides/es/skill-authoring.md"
+    },
+    {
+      "id": "skill-dependency-graph",
+      "lang": "es",
+      "title": "Guía del gráfico de dependencias de habilidades",
+      "file": "guides/es/skill-dependency-graph.md"
     },
     {
       "id": "skills-frontmatter",
@@ -24680,6 +25572,12 @@
       "file": "guides/fr/computer-use.md"
     },
     {
+      "id": "content-freshness",
+      "lang": "fr",
+      "title": "Content Freshness",
+      "file": "guides/fr/content-freshness.md"
+    },
+    {
       "id": "context-budget",
       "lang": "fr",
       "title": "Gestion du Budget de Contexte",
@@ -24720,6 +25618,12 @@
       "lang": "fr",
       "title": "Application de bureau Claude Code",
       "file": "guides/fr/desktop-app.md"
+    },
+    {
+      "id": "dx-measurement",
+      "lang": "fr",
+      "title": "Guide de Mesure de l'Expérience Développeur",
+      "file": "guides/fr/dx-measurement.md"
     },
     {
       "id": "extended-thinking",
@@ -24932,6 +25836,12 @@
       "file": "guides/fr/notifications-setup.md"
     },
     {
+      "id": "offline-local-first",
+      "lang": "fr",
+      "title": "Offline Local First",
+      "file": "guides/fr/offline-local-first.md"
+    },
+    {
       "id": "opus-47-migration",
       "lang": "fr",
       "title": "Migration vers Claude Opus 4.7",
@@ -25002,6 +25912,12 @@
       "lang": "fr",
       "title": "Guide de création de compétences",
       "file": "guides/fr/skill-authoring.md"
+    },
+    {
+      "id": "skill-dependency-graph",
+      "lang": "fr",
+      "title": "Guide du Graphe de Dépendances des Skills",
+      "file": "guides/fr/skill-dependency-graph.md"
     },
     {
       "id": "skills-frontmatter",
@@ -25100,6 +26016,108 @@
       "file": "guides/long-context-optimization.md"
     },
     {
+      "id": "becoming-certified",
+      "lang": "en",
+      "title": "Getting Your Stack Certified",
+      "file": "guides/marketplace/becoming-certified.md"
+    },
+    {
+      "id": "certification-criteria",
+      "lang": "en",
+      "title": "Marketplace Stack Certification Criteria",
+      "file": "guides/marketplace/certification-criteria.md"
+    },
+    {
+      "id": "certification-path",
+      "lang": "en",
+      "title": "Certification Path for Marketplace Stacks",
+      "file": "guides/marketplace/certification-path.md"
+    },
+    {
+      "id": "becoming-certified",
+      "lang": "de",
+      "title": "Ihre Stack Zertifizieren",
+      "file": "guides/marketplace/de/becoming-certified.md"
+    },
+    {
+      "id": "certification-criteria",
+      "lang": "de",
+      "title": "Kriterien für die Zertifizierung von Marketplace Stacks",
+      "file": "guides/marketplace/de/certification-criteria.md"
+    },
+    {
+      "id": "becoming-certified",
+      "lang": "es",
+      "title": "Obtener la Certificación de su Stack",
+      "file": "guides/marketplace/es/becoming-certified.md"
+    },
+    {
+      "id": "certification-criteria",
+      "lang": "es",
+      "title": "Criterios de Certificación de Stack Marketplace",
+      "file": "guides/marketplace/es/certification-criteria.md"
+    },
+    {
+      "id": "becoming-certified",
+      "lang": "fr",
+      "title": "Obtenir la Certification de Votre Stack",
+      "file": "guides/marketplace/fr/becoming-certified.md"
+    },
+    {
+      "id": "certification-criteria",
+      "lang": "fr",
+      "title": "Critères de Certification de Stack Marketplace",
+      "file": "guides/marketplace/fr/certification-criteria.md"
+    },
+    {
+      "id": "getting-started",
+      "lang": "fr",
+      "title": "Débuter avec la Marketplace Claude Code",
+      "file": "guides/marketplace/fr/getting-started.md"
+    },
+    {
+      "id": "stack-quality-standards",
+      "lang": "fr",
+      "title": "Normes de qualité des stacks",
+      "file": "guides/marketplace/fr/stack-quality-standards.md"
+    },
+    {
+      "id": "submission-process",
+      "lang": "fr",
+      "title": "Processus de soumission à la marketplace",
+      "file": "guides/marketplace/fr/submission-process.md"
+    },
+    {
+      "id": "getting-started",
+      "lang": "en",
+      "title": "Getting Started with Claude Code Marketplace",
+      "file": "guides/marketplace/getting-started.md"
+    },
+    {
+      "id": "becoming-certified",
+      "lang": "nl",
+      "title": "Uw Stack Certificeren",
+      "file": "guides/marketplace/nl/becoming-certified.md"
+    },
+    {
+      "id": "certification-criteria",
+      "lang": "nl",
+      "title": "Certificeringsmiddelen voor Marketplace Stack",
+      "file": "guides/marketplace/nl/certification-criteria.md"
+    },
+    {
+      "id": "stack-quality-standards",
+      "lang": "en",
+      "title": "Stack Quality Standards",
+      "file": "guides/marketplace/stack-quality-standards.md"
+    },
+    {
+      "id": "submission-process",
+      "lang": "en",
+      "title": "Marketplace Submission Process",
+      "file": "guides/marketplace/submission-process.md"
+    },
+    {
       "id": "mcp-integration",
       "lang": "en",
       "title": "MCP Integration Guide",
@@ -25116,6 +26134,66 @@
       "lang": "en",
       "title": "Multi-Agent Patterns Guide",
       "file": "guides/multi-agent-patterns.md"
+    },
+    {
+      "id": "architecture-patterns",
+      "lang": "en",
+      "title": "Multi-Agent Systems: Architecture Patterns",
+      "file": "guides/multi-agent-systems/architecture-patterns.md"
+    },
+    {
+      "id": "architecture-patterns",
+      "lang": "de",
+      "title": "Multi-Agent-Systeme: Architekturmuster",
+      "file": "guides/multi-agent-systems/de/architecture-patterns.md"
+    },
+    {
+      "id": "production-readiness",
+      "lang": "de",
+      "title": "Multi-Agent-Systeme: Produktionsbereitschafts-Checkliste",
+      "file": "guides/multi-agent-systems/de/production-readiness.md"
+    },
+    {
+      "id": "architecture-patterns",
+      "lang": "es",
+      "title": "Sistemas Multi-Agentes: Patrones de Arquitectura",
+      "file": "guides/multi-agent-systems/es/architecture-patterns.md"
+    },
+    {
+      "id": "production-readiness",
+      "lang": "es",
+      "title": "Sistemas Multi-Agentes: Lista de Verificación de Preparación para Producción",
+      "file": "guides/multi-agent-systems/es/production-readiness.md"
+    },
+    {
+      "id": "architecture-patterns",
+      "lang": "fr",
+      "title": "Systèmes Multi-Agents : Modèles d'Architecture",
+      "file": "guides/multi-agent-systems/fr/architecture-patterns.md"
+    },
+    {
+      "id": "production-readiness",
+      "lang": "fr",
+      "title": "Systèmes Multi-Agents : Liste de Contrôle de Préparation à la Production",
+      "file": "guides/multi-agent-systems/fr/production-readiness.md"
+    },
+    {
+      "id": "architecture-patterns",
+      "lang": "nl",
+      "title": "Multi-Agent-systemen: Architectuurpatronen",
+      "file": "guides/multi-agent-systems/nl/architecture-patterns.md"
+    },
+    {
+      "id": "production-readiness",
+      "lang": "nl",
+      "title": "Multi-Agent-systemen: Productieberaadheid Checklist",
+      "file": "guides/multi-agent-systems/nl/production-readiness.md"
+    },
+    {
+      "id": "production-readiness",
+      "lang": "en",
+      "title": "Multi-Agent Systems: Production Readiness Checklist",
+      "file": "guides/multi-agent-systems/production-readiness.md"
     },
     {
       "id": "advanced-tool-use",
@@ -25286,6 +26364,12 @@
       "file": "guides/nl/computer-use.md"
     },
     {
+      "id": "content-freshness",
+      "lang": "nl",
+      "title": "Content Freshness",
+      "file": "guides/nl/content-freshness.md"
+    },
+    {
       "id": "context-budget",
       "lang": "nl",
       "title": "Context Budget Management",
@@ -25326,6 +26410,12 @@
       "lang": "nl",
       "title": "Claude Code bureaubladapp",
       "file": "guides/nl/desktop-app.md"
+    },
+    {
+      "id": "dx-measurement",
+      "lang": "nl",
+      "title": "Gids voor meting van developerervaring",
+      "file": "guides/nl/dx-measurement.md"
     },
     {
       "id": "extended-thinking",
@@ -25538,6 +26628,12 @@
       "file": "guides/nl/notifications-setup.md"
     },
     {
+      "id": "offline-local-first",
+      "lang": "nl",
+      "title": "Offline Local First",
+      "file": "guides/nl/offline-local-first.md"
+    },
+    {
       "id": "opus-47-migration",
       "lang": "nl",
       "title": "Migreren naar Claude Opus 4.7",
@@ -25610,6 +26706,12 @@
       "file": "guides/nl/skill-authoring.md"
     },
     {
+      "id": "skill-dependency-graph",
+      "lang": "nl",
+      "title": "Gids voor afhankelijkheidsgrafiek van vaardigheden",
+      "file": "guides/nl/skill-dependency-graph.md"
+    },
+    {
       "id": "skills-frontmatter",
       "lang": "nl",
       "title": "Vaardigheidsfrontmatter-referentie",
@@ -25674,6 +26776,12 @@
       "lang": "en",
       "title": "Notifications and Alerts for Long Claude Code Sessions",
       "file": "guides/notifications-setup.md"
+    },
+    {
+      "id": "offline-local-first",
+      "lang": "en",
+      "title": "Offline Local First",
+      "file": "guides/offline-local-first.md"
     },
     {
       "id": "opus-47-migration",
@@ -25764,6 +26872,12 @@
       "lang": "en",
       "title": "Skill Authoring Guide",
       "file": "guides/skill-authoring.md"
+    },
+    {
+      "id": "skill-dependency-graph",
+      "lang": "en",
+      "title": "Skill Dependency Graph Guide",
+      "file": "guides/skill-dependency-graph.md"
     },
     {
       "id": "skill-md-format-guide",
@@ -27553,13 +28667,13 @@
     }
   ],
   "summary": {
-    "skills": 400,
-    "agents": 182,
-    "hooks": 40,
+    "skills": 421,
+    "agents": 201,
+    "hooks": 49,
     "rules": 32,
-    "workflows": 45,
+    "workflows": 55,
     "prompts": 31,
-    "guides": 103,
+    "guides": 117,
     "structures": 82,
     "outputStyles": 8,
     "statuslines": 6,

@@ -1,6 +1,6 @@
 ---
-name: "Rust Development"
-description: "- Writing or reviewing Rust code with ownership, borrow checker, or lifetime errors - Designing error handling strategy using `Result`, `thiserror`, or `anyhow` - Building async services with Tokio - "
+name: "rust"
+description: "- Writing or reviewing Rust code with ownership, borrow checker, or lifetime errors"
 ---
 
 # Rust Development

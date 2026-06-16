@@ -1,6 +1,6 @@
 ---
-name: "Escalation Flagger"
-description: "- After contract review identifies issues that may exceed the reviewer's authority - Any contract clause triggers an automatic escalation condition (see Step 1 below) - Uncertainty about whether a ter"
+name: "escalation-flagger"
+description: "- After contract review identifies issues that may exceed the reviewer's authority"
 ---
 
 # Escalation Flagger

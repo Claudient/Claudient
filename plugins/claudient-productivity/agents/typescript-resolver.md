@@ -1,6 +1,6 @@
 ---
-name: "TypeScript Build Resolver Agent"
-description: "Diagnoses and fixes TypeScript compilation errors, type mismatches, and `tsc` failures — returning corrected code with an explanation of what was wrong."
+name: typescript-resolver
+updated: 2026-06-13
 ---
 
 # TypeScript Build Resolver Agent

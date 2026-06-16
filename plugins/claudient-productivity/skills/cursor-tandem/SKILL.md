@@ -1,6 +1,6 @@
 ---
-name: "Cursor + Claude Code Tandem Workflow"
-description: "User uses both Cursor and Claude Code and asks how to use them together effectively; user mentions switching between IDE and terminal AI; user wants to know which tool to use for a given task when bot"
+name: "cursor-tandem"
+description: "User uses both Cursor and Claude Code and asks how to use them together effectively; user mentions switching between IDE and terminal AI; user want..."
 ---
 
 # Cursor + Claude Code Tandem Workflow

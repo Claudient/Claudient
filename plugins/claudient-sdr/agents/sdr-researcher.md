@@ -1,6 +1,6 @@
 ---
-name: "SDR Researcher"
-description: "Generates pre-call research briefs and account intelligence dossiers for individual prospects, enabling rapid discovery call preparation with contextual hooks and targeted questions."
+name: sdr-researcher
+updated: 2026-06-13
 ---
 
 # SDR Researcher

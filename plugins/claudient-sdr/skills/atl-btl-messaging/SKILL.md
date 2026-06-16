@@ -1,6 +1,6 @@
 ---
-name: "ATL/BTL Messaging"
-description: "- Drafting cold outreach to a new account and you don't know the champion's seniority level yet - You have an executive response and need to move to their direct reports for implementation buy-in - Co"
+name: "atl-btl-messaging"
+description: "- Drafting cold outreach to a new account and you don't know the champion's seniority level yet"
 ---
 
 # ATL/BTL Messaging

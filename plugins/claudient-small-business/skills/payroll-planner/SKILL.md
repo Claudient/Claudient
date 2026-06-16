@@ -1,6 +1,6 @@
 ---
-name: "Payroll Planner"
-description: "- You are 1-2 weeks out from payroll and want to confirm the money is there before it hits - Cash feels tight and you are not sure if you can cover both bills and payroll this cycle - A new hire is jo"
+name: "payroll-planner"
+description: "- You are 1-2 weeks out from payroll and want to confirm the money is there before it hits"
 ---
 
 # Payroll Planner

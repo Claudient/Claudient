@@ -1,6 +1,6 @@
 ---
-name: "Salon and Spa Operations"
-description: "- You run a salon, spa, barbershop, nail studio, or wellness practice and need to compress the operational work between appointments - You're seeing no-show rates above 8% and want a structured recove"
+name: "salon-spa-ops"
+description: "- You run a salon, spa, barbershop, nail studio, or wellness practice and need to compress the operational work between appointments"
 ---
 
 # Salon and Spa Operations

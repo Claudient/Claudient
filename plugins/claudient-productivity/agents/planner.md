@@ -1,6 +1,6 @@
 ---
-name: "Planner Agent"
-description: "Breaks down a vague or complex goal into a concrete, sequenced implementation plan before any code is written."
+name: planner
+updated: 2026-06-13
 ---
 
 # Planner Agent

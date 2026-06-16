@@ -1,6 +1,6 @@
 ---
-name: "Cold Outreach"
-description: "- Launching a new outreach campaign and you need first-touch emails that do not sound like templates - Following up after a discovery call and you need a summary and next-step email within the hour - "
+name: "cold-outreach"
+description: "- Launching a new outreach campaign and you need first-touch emails that do not sound like templates"
 ---
 
 # Cold Outreach

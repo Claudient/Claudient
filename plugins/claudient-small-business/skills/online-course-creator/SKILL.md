@@ -1,6 +1,6 @@
 ---
-name: "Online Course Creator"
-description: "- You're an independent course creator (educator, expert, coach turning expertise into a course) and you're building or relaunching a course - The curriculum is in your head and you need it structured"
+name: "online-course-creator"
+description: "- You're an independent course creator (educator, expert, coach turning expertise into a course) and you're building or relaunching a course"
 ---
 
 # Online Course Creator

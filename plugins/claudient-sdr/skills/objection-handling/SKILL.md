@@ -1,6 +1,6 @@
 ---
-name: "Objection Handling"
-description: "You are in a live discovery call, email thread, or async response where a prospect has voiced resistance. Use this skill to convert objections into qualification opportunities rather than conversation"
+name: "objection-handling"
+description: "You are in a live discovery call, email thread, or async response where a prospect has voiced resistance. Use this skill to convert objections into..."
 ---
 
 # Objection Handling

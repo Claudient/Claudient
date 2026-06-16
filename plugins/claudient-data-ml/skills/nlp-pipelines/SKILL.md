@@ -1,6 +1,6 @@
 ---
-name: "NLP Pipelines"
-description: "Building NLP systems end to end — text preprocessing, fine-tuning transformer models, named entity recognition (NER), text classification, sentiment analysis, multilingual models, or serving NLP infer"
+name: "nlp-pipelines"
+description: "Building NLP systems end to end — text preprocessing, fine-tuning transformer models, named entity recognition (NER), text classification, sentimen..."
 ---
 
 # NLP Pipelines

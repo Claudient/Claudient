@@ -1,6 +1,6 @@
 ---
-name: "Meeting to Action"
-description: "- Right after any client call, sales call, or team meeting — within the hour while context is fresh - You have a transcript from Google Meet, Otter.ai,"
+name: "meeting-to-action"
+description: "- Right after any client call, sales call, or team meeting — within the hour while context is fresh"
 ---
 
 # Meeting to Action

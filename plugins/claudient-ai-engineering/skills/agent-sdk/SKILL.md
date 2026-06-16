@@ -1,6 +1,6 @@
 ---
-name: "Claude Agent SDK"
-description: "Building a Python or TypeScript application that uses Claude Code capabilities programmatically; deploying Claude as an autonomous agent inside a product; writing code that drives the `claude` CLI in "
+name: "agent-sdk"
+description: "Build AI agents using the Claude Agent SDK with tool use, memory, and multi-step orchestration"
 ---
 
 # Claude Agent SDK

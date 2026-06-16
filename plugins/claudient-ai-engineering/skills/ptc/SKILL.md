@@ -1,6 +1,6 @@
 ---
-name: "Programmatic Tool Calling (PTC)"
-description: "User wants to reduce API token usage for tool-heavy workflows, mentions programmatic tool calling, or has a pattern where the same tool is called more than 3 times in a single inference pass."
+name: "ptc"
+description: "Implement prompt-to-code workflows for rapid prototyping and code generation"
 ---
 
 # Programmatic Tool Calling (PTC)

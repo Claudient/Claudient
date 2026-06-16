@@ -1,6 +1,6 @@
 ---
-name: "Photography Studio"
-description: "- You run a solo or small-team photography studio — wedding, portrait, commercial, real estate, food, brand - Inquiry-to-booking conversion is dropping because your reply time is days, not hours - You"
+name: "photography-studio"
+description: "- You run a solo or small-team photography studio — wedding, portrait, commercial, real estate, food, brand"
 ---
 
 # Photography Studio

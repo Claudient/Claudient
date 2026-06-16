@@ -1,6 +1,6 @@
 ---
-name: "Claude Design Token Management"
-description: "- You're about to start a Claude Design session on Claude Pro or Max and want to plan token usage before opening the tool - You've hit token limits mid-session and need recovery strategies to continue"
+name: "claude-design-tokens"
+description: "Manage design tokens for consistent theming across Claude Design projects"
 ---
 
 # Claude Design Token Management

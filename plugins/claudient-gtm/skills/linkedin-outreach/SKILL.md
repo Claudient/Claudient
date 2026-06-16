@@ -1,6 +1,6 @@
 ---
-name: "LinkedIn Outreach"
-description: "- Running a LinkedIn connection or prospecting campaign targeting decision-makers - Scaling outreach to warm audiences without email addresses - Building a B2B sales or partnerships pipeline using soc"
+name: "linkedin-outreach"
+description: "- Running a LinkedIn connection or prospecting campaign targeting decision-makers"
 ---
 
 # LinkedIn Outreach

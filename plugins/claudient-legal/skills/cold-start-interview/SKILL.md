@@ -1,6 +1,6 @@
 ---
-name: "Cold-Start Interview — Legal Plugin Setup"
-description: "- First time using any legal skill for a new organi"
+name: "cold-start-interview"
+description: "- First time using any legal skill for a new organization"
 ---
 
 # Cold-Start Interview — Legal Plugin Setup

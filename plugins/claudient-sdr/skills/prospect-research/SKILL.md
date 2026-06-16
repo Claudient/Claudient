@@ -1,6 +1,6 @@
 ---
-name: "Prospect Research"
-description: "When building a cold outreach sequence and you need to personali"
+name: "prospect-research"
+description: "When building a cold outreach sequence and you need to personalize the first touch with a specific individual — not when running list scraping, not..."
 ---
 
 # Prospect Research

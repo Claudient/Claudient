@@ -1,6 +1,6 @@
 ---
-name: "/btw — Side Questions Without Breaking Flow"
-description: "- User wants to ask a quick question mid-session without it appearing in conversation history - User wants to look something up while Claude is actively working, without interrupting the main task - U"
+name: "btw-side-question"
+description: "- User wants to ask a quick question mid-session without it appearing in conversation history"
 ---
 
 # /btw — Side Questions Without Breaking Flow

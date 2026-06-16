@@ -1,6 +1,6 @@
 ---
-name: "Elixir + Phoenix"
-description: "- Building Phoenix web applications or APIs - Designing OTP supervision trees with GenServer and Supervisor - Implementing Phoenix LiveView for server-rendered reactive UIs - Writing Ecto changesets a"
+name: "phoenix"
+description: "Build Elixir Phoenix web applications with LiveView, channels, and Ecto"
 ---
 
 # Elixir + Phoenix

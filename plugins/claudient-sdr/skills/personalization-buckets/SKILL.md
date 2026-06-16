@@ -1,6 +1,6 @@
 ---
-name: "Personalization Buckets"
-description: "When crafting cold outreach (email, LinkedIn, InMail) and you need to: - Decide which signal to lead with (self-authored content vs. company news vs. mutual connection) - Allocate research time based "
+name: "personalization-buckets"
+description: "When crafting cold outreach (email, LinkedIn, InMail) and you need to:"
 ---
 
 # Personalization Buckets

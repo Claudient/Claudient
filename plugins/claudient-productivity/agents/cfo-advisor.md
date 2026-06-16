@@ -1,6 +1,6 @@
 ---
-name: "CFO Advisor Agent"
-description: "Financial strategy, fundraising preparation, unit economics analysis, financial modelling, board reporting, and cash management — for founders and operators without a CFO."
+name: cfo-advisor
+updated: 2026-06-13
 ---
 
 # CFO Advisor Agent

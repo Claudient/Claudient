@@ -1,6 +1,6 @@
 ---
-name: "Tax Organizer"
-description: "- End of a quarter — estimated tax payment is due and you need your numbers together - Your accountant is asking for documents and you are not sure what to gather - You are preparing for a tax review "
+name: "tax-organizer"
+description: "- End of a quarter — estimated tax payment is due and you need your numbers together"
 ---
 
 # Tax Organizer

@@ -1,6 +1,6 @@
 ---
-name: "Cold Call Script"
-description: "- You are executing B2B outbound cold calls and need a structure that fits 60 seconds without triggering sales-call defensiveness. - You have a specific trigger or pain observation about a prospect (n"
+name: "cold-call-script"
+description: "- You are executing B2B outbound cold calls and need a structure that fits 60 seconds without triggering sales-call defensiveness."
 ---
 
 # Cold Call Script

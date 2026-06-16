@@ -1,6 +1,6 @@
 ---
-name: "GTM Plays"
-description: "Account prioriti"
+name: "gtm-plays"
+description: "Account prioritization workflows, building trigger-based sales sequences, daily prospecting cadences, territory planning, and sales kickoff plannin..."
 ---
 
 # GTM Plays

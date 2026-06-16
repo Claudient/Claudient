@@ -1,6 +1,6 @@
 ---
-name: "SDR Prospector"
-description: "Owns account research, buying signal detection, and lead scoring to return a prioritised prospect list with dossiers and sequencing recommendations."
+name: sdr-prospector
+updated: 2026-06-13
 ---
 
 # SDR Prospector

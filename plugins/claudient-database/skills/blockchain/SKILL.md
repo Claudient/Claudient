@@ -1,6 +1,6 @@
 ---
-name: "Blockchain and Smart Contracts"
-description: "Writing or reviewing Solidity smart contracts, implementing ERC-20/721/1155 token standards, building DeFi protocols, optimi"
+name: "blockchain"
+description: "Writing or reviewing Solidity smart contracts, implementing ERC-20/721/1155 token standards, building DeFi protocols, optimizing gas costs, perform..."
 ---
 
 # Blockchain and Smart Contracts

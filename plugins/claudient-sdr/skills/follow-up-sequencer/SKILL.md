@@ -1,6 +1,6 @@
 ---
-name: "Follow-Up Sequencer"
-description: "When managing SDR or sales sequences where you need to route prospect interactions through deterministic branches based on reply type, apply standardi"
+name: "follow-up-sequencer"
+description: "When managing SDR or sales sequences where you need to route prospect interactions through deterministic branches based on reply type, apply standa..."
 ---
 
 # Follow-Up Sequencer

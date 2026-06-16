@@ -1,6 +1,6 @@
 ---
-name: "Pricing Optimizer"
-description: "- You're considering raising prices and want a structured framework instead of guessing - You haven't reviewed pricing in 18+ months and inflation alone has eroded your real prices - You're launching "
+name: "pricing-optimizer"
+description: "- You're considering raising prices and want a structured framework instead of guessing"
 ---
 
 # Pricing Optimizer

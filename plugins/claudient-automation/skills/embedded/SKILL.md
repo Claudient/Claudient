@@ -1,6 +1,6 @@
 ---
-name: "Embedded Systems"
-description: "Writing firmware for microcontrollers (STM32, ESP32, nRF52, RP2040), designing FreeRTOS task architectures, implementing HAL peripheral drivers, writing interrupt service routines, configuring DMA tra"
+name: "embedded"
+description: "Develop embedded systems firmware and hardware interfaces with Claude Code"
 ---
 
 # Embedded Systems

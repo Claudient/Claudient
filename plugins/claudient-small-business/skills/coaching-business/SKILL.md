@@ -1,6 +1,6 @@
 ---
-name: "Coaching Business"
-description: "- You're a solo or boutique coach (executive, leadership, life, business, sales, health) and the operational work between sessions is eating your delivery time - You want session follow-up emails and "
+name: "coaching-business"
+description: "- You're a solo or boutique coach (executive, leadership, life, business, sales, health) and the operational work between sessions is eating your d..."
 ---
 
 # Coaching Business

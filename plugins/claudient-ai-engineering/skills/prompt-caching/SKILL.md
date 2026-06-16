@@ -1,6 +1,6 @@
 ---
-name: "Prompt Caching"
-description: "Claude API usage with repeated large context blocks — system prompts, prepended documents, large tool definitions — or when the user wants to reduce API costs or latency for workloads that reuse the s"
+name: "prompt-caching"
+description: "Optimize Claude API costs and latency with prompt caching strategies"
 ---
 
 # Prompt Caching

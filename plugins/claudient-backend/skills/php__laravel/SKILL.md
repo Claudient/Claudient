@@ -1,6 +1,6 @@
 ---
-name: "Laravel 11"
-description: "- Building or maintaining a Laravel 11 application - Designing Eloquent models, relationships, and query scopes - Implementing queued jobs with Laravel Hori"
+name: "laravel"
+description: "- Building or maintaining a Laravel 11 application"
 ---
 
 # Laravel 11

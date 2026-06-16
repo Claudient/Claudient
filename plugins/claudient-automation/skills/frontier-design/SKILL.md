@@ -1,6 +1,6 @@
 ---
-name: "Claude Design — Frontier Capabilities"
-description: "- Building interactive experiences that go beyond standard UI — 3D, audio, particle effects, or immersive animation - Pitch deck or product demo needs live interactive elements rather than static scre"
+name: "frontier-design"
+description: "Push creative boundaries with frontier design techniques for AI-generated interfaces"
 ---
 
 # Claude Design — Frontier Capabilities

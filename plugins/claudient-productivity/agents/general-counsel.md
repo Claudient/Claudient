@@ -1,6 +1,6 @@
 ---
-name: "General Counsel Advisor Agent"
-description: "Legal strategy and risk identification — contract review, employment law considerations, IP protection, regulatory landscape, and when to involve outside counsel."
+name: general-counsel
+updated: 2026-06-13
 ---
 
 # General Counsel Advisor Agent

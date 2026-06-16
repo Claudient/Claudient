@@ -1,6 +1,6 @@
 ---
-name: "Churn Prevention"
-description: "- You run a subscription business (SaaS, membership, recurring service, content subscription) and want to reduce customer churn - Your churn rate is creeping up and you can't tell which segment is dri"
+name: "churn-prevention"
+description: "- You run a subscription business (SaaS, membership, recurring service, content subscription) and want to reduce customer churn"
 ---
 
 # Churn Prevention

@@ -1,6 +1,6 @@
 ---
-name: "Fitness Gym Operations"
-description: "- You run a fitness studio, gym, CrossFit box, yoga studio, Pilates studio, or boutique fitness business - Class fill rate has dropped — you want to identify under-attended classes and structure the r"
+name: "fitness-gym-ops"
+description: "- You run a fitness studio, gym, CrossFit box, yoga studio, Pilates studio, or boutique fitness business"
 ---
 
 # Fitness Gym Operations

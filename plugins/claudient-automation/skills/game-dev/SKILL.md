@@ -1,6 +1,6 @@
 ---
-name: "Game Development"
-description: "Unity or Unreal game development tasks — implementing Unity DOTS/ECS for high entity counts, designing game loops, architecting multiplayer with client-side prediction and server reconciliation, optim"
+name: "game-dev"
+description: "Build games with Claude Code — game loops, physics, AI behaviors, and asset management"
 ---
 
 # Game Development

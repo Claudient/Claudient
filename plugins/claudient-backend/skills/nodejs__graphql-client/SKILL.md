@@ -1,6 +1,6 @@
 ---
-name: "GraphQL Client Integration"
-description: "- Setting up a GraphQL client in a React or Next.js project - Consuming a GraphQL API with typed queries - Configuring Apollo Client, urql, or Tanstack Query with GraphQL - Adding GraphQL Code Generat"
+name: "graphql-client"
+description: "- Setting up a GraphQL client in a React or Next.js project"
 ---
 
 # GraphQL Client Integration

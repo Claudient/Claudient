@@ -1,6 +1,6 @@
 ---
-name: "Managed Agents"
-description: "Building applications where agents need to run autonomously in the cloud, or when the user mentions Claude Managed Agents, long-running agent tasks, or building agent-powered products via the Anthropi"
+name: "managed-agents"
+description: "Deploy and manage Claude agents with lifecycle management, monitoring, and scaling"
 ---
 
 # Managed Agents

@@ -1,6 +1,6 @@
 ---
-name: "Contractor and Trades Operations"
-description: "- You run a skilled trades business — plumbing, HVAC, electrical, landscaping, painting, roofing, general contracting, handyman services - Quote turnaround is taking too long and you're losing leads t"
+name: "contractor-trades"
+description: "- You run a skilled trades business — plumbing, HVAC, electrical, landscaping, painting, roofing, general contracting, handyman services"
 ---
 
 # Contractor and Trades Operations

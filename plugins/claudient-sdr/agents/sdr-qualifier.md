@@ -1,6 +1,6 @@
 ---
-name: "SDR Qualifier"
-description: "Classifies prospect replies, scores discovery call notes against MEDDPICC framework, and generates structured AE handoff briefs."
+name: sdr-qualifier
+updated: 2026-06-13
 ---
 
 # SDR Qualifier

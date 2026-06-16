@@ -1,5 +1,5 @@
 ---
-name: "Slack App"
+name: "slack-app"
 description: "Building Slack bots or apps, or when the user mentions Bolt SDK, Slack slash commands, Block Kit, or Slack workflows."
 ---
 

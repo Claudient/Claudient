@@ -1,6 +1,6 @@
 ---
-name: "CrewAI Multi-Agent Framework"
-description: "Building role-based multi-agent workflows in Python; user mentions CrewAI; need a working multi-agent prototype fast; the problem maps naturally to job roles (researcher, writer, reviewer, analyst); s"
+name: "crewai"
+description: "Build multi-agent crews with CrewAI framework for collaborative AI task execution"
 ---
 
 # CrewAI Multi-Agent Framework

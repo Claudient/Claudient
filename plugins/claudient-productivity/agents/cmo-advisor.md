@@ -1,6 +1,6 @@
 ---
-name: "CMO Advisor Agent"
-description: "Marketing strategy, go-to-market planning, brand positioning, demand generation, content strategy, and marketing team structure — from early-stage to scaling."
+name: cmo-advisor
+updated: 2026-06-13
 ---
 
 # CMO Advisor Agent

@@ -1,6 +1,6 @@
 ---
-name: "Agency Operations"
-description: "- You run a creative, marketing, design, dev, or content agency with 2-25 people - Proposals are eating your senior team's time — each one takes 4-8 hours and you're losing deals to faster competitors"
+name: "agency-operations"
+description: "- You run a creative, marketing, design, dev, or content agency with 2-25 people"
 ---
 
 # Agency Operations

@@ -1,6 +1,6 @@
 ---
-name: "Architect Agent"
-description: "Evaluates architectural options for a system design problem, considers trade-offs, and recommends a specific approach with justification."
+name: architect
+updated: 2026-06-13
 ---
 
 # Architect Agent

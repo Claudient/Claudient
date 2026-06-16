@@ -1,6 +1,6 @@
 ---
-name: "Ruby on Rails 7+"
-description: "- Building or maintaining a Rails 7+ application - Implementing ActiveRecord models, associations, or query optimi"
+name: "rails"
+description: "- Building or maintaining a Rails 7+ application"
 ---
 
 # Ruby on Rails 7+

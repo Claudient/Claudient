@@ -1,6 +1,6 @@
 ---
-name: "Cold Email Sequence"
-description: "- You are building a 4-email outbound campaign with specific timing (Day 0, 3, 7, 12) - You need subject line formulas that avoid spam filters while driving opens - You are designing branching logic: "
+name: "cold-email-sequence"
+description: "- You are building a 4-email outbound campaign with specific timing (Day 0, 3, 7, 12)"
 ---
 
 # Cold Email Sequence

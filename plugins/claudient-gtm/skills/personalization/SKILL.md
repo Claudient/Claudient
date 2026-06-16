@@ -1,6 +1,6 @@
 ---
-name: "Personalization"
-description: "Before writing any cold outreach message; when building account research playbooks; when scoring personali"
+name: "personalization"
+description: "Before writing any cold outreach message; when building account research playbooks; when scoring personalization quality on a message or campaign; ..."
 ---
 
 # Personalization

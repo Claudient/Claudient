@@ -1,6 +1,6 @@
 ---
-name: "Vertical Slice Planner"
-description: "- Planning a new feature or project before building starts - User wants to break down a feature into work units before writing code - Claude defaulted to a sequential \"database → API → frontend\" phase"
+name: "vertical-slice-planner"
+description: "- Planning a new feature or project before building starts"
 ---
 
 # Vertical Slice Planner

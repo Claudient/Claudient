@@ -1,6 +1,6 @@
 ---
-name: "Elasticsearch"
-description: "- Designing an Elasticsearch index mapping from scratch - Writing Query DSL for full-text search, filtering, or faceted navigation - Building aggregations for analytics dashboards or search facets - T"
+name: "elasticsearch"
+description: "- Designing an Elasticsearch index mapping from scratch"
 ---
 
 # Elasticsearch

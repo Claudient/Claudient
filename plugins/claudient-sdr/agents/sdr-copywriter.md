@@ -1,6 +1,6 @@
 ---
-name: "SDR Copywriter"
-description: "Owns all outreach copy creation across channels — cold emails, LinkedIn messages, call scripts, voicemails, and sequence generation — always for human review before sending."
+name: sdr-copywriter
+updated: 2026-06-13
 ---
 
 # SDR Copywriter

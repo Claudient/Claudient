@@ -1,6 +1,6 @@
 ---
-name: "Team Onboarding"
-description: "- User runs `/team-onboarding` - User asks to generate an onboarding document for a new team member or contractor - User wants to capture project context for a developer who is joining the project - U"
+name: "team-onboarding"
+description: "- User runs `/team-onboarding`"
 ---
 
 # Team Onboarding

@@ -1,6 +1,6 @@
 ---
-name: "SDR Master Prompt"
-description: "- AI SDR assistant is being initiali"
+name: "sdr-master-prompt"
+description: "- AI SDR assistant is being initialized for a new account, campaign, or sequence"
 ---
 
 # SDR Master Prompt

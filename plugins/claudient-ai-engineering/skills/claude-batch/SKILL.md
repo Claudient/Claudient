@@ -1,6 +1,6 @@
 ---
-name: "Claude Batch"
-description: "Processing large volumes of prompts (10 or more), non-time-sensitive workloads, or when the user wants to reduce API costs for bulk operations like document processing, evaluations, or dataset annotat"
+name: "claude-batch"
+description: "Run large-scale batch processing with Claude API for bulk text analysis, classification, and generation"
 ---
 
 # Claude Batch

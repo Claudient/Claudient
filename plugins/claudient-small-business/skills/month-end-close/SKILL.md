@@ -1,6 +1,6 @@
 ---
-name: "Month-End Close"
-description: "- It is the last few days of the month and you need to close the books - You have a meeting with your accountant and want to walk in with the numbers already organi"
+name: "month-end-close"
+description: "- It is the last few days of the month and you need to close the books"
 ---
 
 # Month-End Close

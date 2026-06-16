@@ -1,6 +1,6 @@
 ---
-name: "Reply Classification"
-description: "You receive a prospect reply to an outbound email, message, or call attempt. You need to classify the reply, draft an immediate response, and route it to the correct action within your sales workflow."
+name: "reply-classification"
+description: "You receive a prospect reply to an outbound email, message, or call attempt. You need to classify the reply, draft an immediate response, and route..."
 ---
 
 # Reply Classification

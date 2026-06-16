@@ -1,6 +1,6 @@
 ---
-name: "Real Estate Specialist"
-description: "Generates Fair Housing-compliant MLS listing descriptions, comparative market analysis narratives, buyer and seller communication templates, and lead nurturing sequences."
+name: real-estate-specialist
+updated: 2026-06-13
 ---
 
 # Real Estate Specialist

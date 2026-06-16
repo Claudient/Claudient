@@ -1,6 +1,6 @@
 ---
-name: "Restaurant Specialist"
-description: "Handles restaurant-specific operations tasks: menu engineering, food cost analysis, inventory forecasting, review responses, staffing copy, and compliance documentation."
+name: restaurant-specialist
+updated: 2026-06-13
 ---
 
 # Restaurant Specialist

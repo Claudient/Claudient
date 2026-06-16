@@ -1,6 +1,6 @@
 ---
-name: "Claude Design Brand System Setup"
-description: "- First time configuring Claude Design for a project or company — no prior design system exists in the tool - Starting a new client project in Claude Design where the client has an existing brand - De"
+name: "claude-design-branding"
+description: "Create consistent brand systems with Claude Design including logos, colors, and typography"
 ---
 
 # Claude Design Brand System Setup

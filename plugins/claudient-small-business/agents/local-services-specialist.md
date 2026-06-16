@@ -1,6 +1,6 @@
 ---
-name: "Local Services Specialist"
-description: "Helps local services operators (trades, salons, dental, fitness, photography, restaurants, real estate, auto repair, and similar) diagnose operational bottlenecks, pick the highest-ROI Claudient skill"
+name: local-services-specialist
+updated: 2026-06-13
 ---
 
 # Local Services Specialist

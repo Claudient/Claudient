@@ -1,6 +1,6 @@
 ---
-name: "Claude Design Integration"
-description: "- User has exported a handoff bundle from Claude Design and wants to implement it as code - User wants to set up a design→code workflow using Claude Design output - User asks how to convert a Claude D"
+name: "claude-design"
+description: "Build production-ready UIs and prototypes with Claude Design"
 ---
 
 # Claude Design Integration

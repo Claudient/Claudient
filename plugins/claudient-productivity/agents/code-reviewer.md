@@ -1,6 +1,6 @@
 ---
-name: "Code Reviewer Agent"
-description: "Reviews a diff or set of changed files for correctness, maintainability, security issues, and adherence to project conventions — and returns structured, actionable feedback."
+name: code-reviewer
+updated: 2026-06-13
 ---
 
 # Code Reviewer Agent

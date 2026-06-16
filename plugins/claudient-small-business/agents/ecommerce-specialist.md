@@ -1,6 +1,6 @@
 ---
-name: "Ecommerce Specialist"
-description: "Helps ecommerce owners (Shopify, Ama"
+name: ecommerce-specialist
+updated: 2026-06-13
 ---
 
 # Ecommerce Specialist

@@ -1,6 +1,6 @@
 ---
-name: "Claude Design — End-to-End Workflows"
-description: "- Starting a new project and need a repeatable design-to-production process rather than ad hoc prompting - A team member is new to Claude Design and needs a structured approach to avoid wasted session"
+name: "claude-design-workflow"
+description: "Build end-to-end design workflows with Claude Design for rapid UI/UX iteration"
 ---
 
 # Claude Design — End-to-End Workflows

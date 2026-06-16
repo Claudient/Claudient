@@ -1,6 +1,6 @@
 ---
-name: "ICP Scoring"
-description: "You are prospecting B2B SaaS companies and need to qualify leads against a defined ideal customer profile (ICP). Trigger this when: scoring a new lead for outreach tier, prioriti"
+name: "icp-scoring"
+description: "You are prospecting B2B SaaS companies and need to qualify leads against a defined ideal customer profile (ICP). Trigger this when: scoring a new l..."
 ---
 
 # ICP Scoring

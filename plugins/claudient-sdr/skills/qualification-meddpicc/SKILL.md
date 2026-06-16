@@ -1,6 +1,6 @@
 ---
-name: "MEDDPICC Qualification"
-description: "- SDR has completed initial qualification call and is determining whether to schedule an AE (sales engineer / account executive) discovery meeting - You need to assess deal quality across all eight ME"
+name: "qualification-meddpicc"
+description: "- SDR has completed initial qualification call and is determining whether to schedule an AE (sales engineer / account executive) discovery meeting"
 ---
 
 # MEDDPICC Qualification

@@ -1,6 +1,6 @@
 ---
-name: "IoT Development"
-description: "Connecting IoT devices to cloud infrastructure, designing MQTT topic hierarchies, setting up AWS IoT Core or A"
+name: "iot"
+description: "Develop IoT applications with device communication, sensor data, and edge computing"
 ---
 
 # IoT Development

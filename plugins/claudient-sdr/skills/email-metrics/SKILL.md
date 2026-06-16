@@ -1,6 +1,6 @@
 ---
-name: "Email Metrics"
-description: "- Diagnosing underperforming cold email sequences (reply rate < 3%) - Optimi"
+name: "email-metrics"
+description: "- Diagnosing underperforming cold email sequences (reply rate < 3%)"
 ---
 
 # Email Metrics

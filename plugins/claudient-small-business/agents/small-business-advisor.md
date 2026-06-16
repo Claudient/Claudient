@@ -1,6 +1,6 @@
 ---
-name: "Small Business Advisor"
-description: "Routes SMB operational tasks to the correct workflow, diagnoses business inefficiencies, and prioriti"
+name: small-business-advisor
+updated: 2026-06-13
 ---
 
 # Small Business Advisor

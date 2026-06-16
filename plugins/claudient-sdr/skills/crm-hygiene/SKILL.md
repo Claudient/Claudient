@@ -1,6 +1,6 @@
 ---
-name: "CRM Hygiene"
-description: "Trigger this skill when: - An SDR completes any outbound/inbound touch (call, email, LinkedIn message, voicemail) - Before an AE joins a meeting with a prospect - During pipeline review to ensure data"
+name: "crm-hygiene"
+description: "Trigger this skill when:"
 ---
 
 # CRM Hygiene

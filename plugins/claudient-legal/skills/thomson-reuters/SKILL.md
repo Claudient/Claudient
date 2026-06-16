@@ -1,6 +1,6 @@
 ---
-name: "Thomson Reuters Legal Research via MCP"
-description: "Legal research requiring case law, statutes, regulations, or Westlaw/Practical Law content; user is a lawyer or legal researcher using Claude Code with an active Thomson Reuters API subscription; task"
+name: "thomson-reuters"
+description: "Legal research requiring case law, statutes, regulations, or Westlaw/Practical Law content; user is a lawyer or legal researcher using Claude Code ..."
 ---
 
 # Thomson Reuters Legal Research via MCP

@@ -1,6 +1,6 @@
 ---
-name: "Python Build Resolver Agent"
-description: "Diagnoses and fixes Python import errors, runtime exceptions, type annotation mismatches (mypy), and dependency conflicts — returning corrected code with an explanation."
+name: python-resolver
+updated: 2026-06-13
 ---
 
 # Python Build Resolver Agent

@@ -1,6 +1,6 @@
 ---
-name: "Modal"
-description: "- User is deploying ML/AI workloads to Modal (modal.com) - Code imports `modal` or references `@app.function`, `@app.cls`, `Stub`, `App` - User needs serverless GPU compute for inference, fine-tuning,"
+name: "modal"
+description: "Build serverless AI pipelines with Modal for cloud-based compute and inference"
 ---
 
 # Modal

@@ -1,6 +1,6 @@
 ---
-name: "Advanced Tool Use"
-description: "User wants to optimi"
+name: "advanced-tool-use"
+description: "Master advanced tool use patterns including chaining, parallel calls, and error recovery for complex Claude Code workflows"
 ---
 
 # Advanced Tool Use

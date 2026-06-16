@@ -1,6 +1,6 @@
 ---
-name: "Security Reviewer Agent"
-description: "Performs a targeted security audit of code changes or a specific module — focusing on OWASP Top 10, secrets exposure, authentication/authori"
+name: security-reviewer
+updated: 2026-06-13
 ---
 
 # Security Reviewer Agent

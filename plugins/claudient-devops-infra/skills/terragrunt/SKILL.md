@@ -1,6 +1,6 @@
 ---
-name: "Terragrunt"
-description: "Managing Terraform configurations across multiple environments (dev/staging/prod) that share modules but need different variable values. Reducing boilerplate in multi-account AWS or multi-region setup"
+name: "terragrunt"
+description: "Managing Terraform configurations across multiple environments (dev/staging/prod) that share modules but need different variable values. Reducing b..."
 ---
 
 # Terragrunt

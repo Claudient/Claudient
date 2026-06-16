@@ -1,6 +1,6 @@
 ---
-name: "CEO Advisor Agent"
-description: "Serves as a senior executive thinking partner — strategic decisions, board preparation, organisational challenges, investor relations, and high-stakes communication."
+name: ceo-advisor
+updated: 2026-06-13
 ---
 
 # CEO Advisor Agent

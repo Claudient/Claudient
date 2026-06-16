@@ -1,6 +1,6 @@
 ---
-name: "SDR Prospecting"
-description: "- Building a net-new account list from scratch (quarterly prospecting campaigns, market penetration) - Pre-call research before a scheduled discovery call - Planning a prospecting sprint (weekly caden"
+name: "sdr-prospecting"
+description: "- Building a net-new account list from scratch (quarterly prospecting campaigns, market penetration)"
 ---
 
 # SDR Prospecting

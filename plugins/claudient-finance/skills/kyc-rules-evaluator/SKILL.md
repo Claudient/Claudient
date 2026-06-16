@@ -1,6 +1,6 @@
 ---
-name: "KYC Rules Evaluator"
-description: "Evaluating a new customer or counterparty for onboarding, producing a KYC risk rating, making an enhanced due diligence (EDD) decision, or running an AML screening assessment. Use when you need a stru"
+name: "kyc-rules-evaluator"
+description: "Evaluating a new customer or counterparty for onboarding, producing a KYC risk rating, making an enhanced due diligence (EDD) decision, or running ..."
 ---
 
 # KYC Rules Evaluator

@@ -1,6 +1,6 @@
 ---
-name: "Flutter 3+"
-description: "- Building Flutter applications for iOS, Android, web, or desktop - Architecting state management with Riverpod 2 - Configuring navigation with go_router - Implementing platform channels for native co"
+name: "flutter"
+description: "Build cross-platform mobile apps with Flutter and Dart"
 ---
 
 # Flutter 3+

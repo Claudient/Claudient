@@ -1,6 +1,6 @@
 ---
-name: "Buying Signals"
-description: "When prospecting B2B SaaS, you are deciding whether and when to reach out to a target account. Activate this skill when you have: - An account identified as a fit (company si"
+name: "buying-signals"
+description: "When prospecting B2B SaaS, you are deciding whether and when to reach out to a target account. Activate this skill when you have:"
 ---
 
 # Buying Signals

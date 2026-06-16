@@ -1,6 +1,6 @@
 ---
-name: "Bookkeeper Practice"
-description: "- You run a solo or small-team bookkeeping or fractional CFO practice - Client onboarding takes too long because intake forms, engagement letters, and access-request emails are written from scratch ev"
+name: "bookkeeper-practice"
+description: "- You run a solo or small-team bookkeeping or fractional CFO practice"
 ---
 
 # Bookkeeper Practice

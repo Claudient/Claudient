@@ -1,6 +1,6 @@
 ---
-name: "CTO Advisor Agent"
-description: "Technical strategy, architecture decisions, engineering team building, build vs. buy analysis, technical debt management, and translating technical complexity to non-technical stakeholders."
+name: cto-advisor
+updated: 2026-06-13
 ---
 
 # CTO Advisor Agent

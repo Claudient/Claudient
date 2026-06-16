@@ -1,6 +1,6 @@
 ---
-name: "Free Law Project (CourtListener) — Free US Legal Research"
-description: "Researching US federal and state court decisions without a paid subscription; looking up PACER filings, docket numbers, or judge records; bulk case law lookups where a paid service would be cost-prohi"
+name: "free-law"
+description: "Researching US federal and state court decisions without a paid subscription; looking up PACER filings, docket numbers, or judge records; bulk case..."
 ---
 
 # Free Law Project (CourtListener) — Free US Legal Research

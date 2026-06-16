@@ -1,6 +1,6 @@
 ---
-name: "Swift + SwiftUI iOS Development"
-description: "- Building iOS, iPadOS, or macOS apps with SwiftUI - Implementing async/await networking with URLSession - Setting up Core Data for local persistence - Wiring Combine publishers and subscribers - Prep"
+name: "ios"
+description: "- Building iOS, iPadOS, or macOS apps with SwiftUI"
 ---
 
 # Swift + SwiftUI iOS Development

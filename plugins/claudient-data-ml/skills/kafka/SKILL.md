@@ -1,6 +1,6 @@
 ---
-name: "Kafka and Event Streaming"
-description: "Designing or implementing event-driven architectures, building real-time data pipelines with Kafka, configuring producers and consumers in Python or Java, setting up Schema Registry with Avro schemas,"
+name: "kafka"
+description: "Designing or implementing event-driven architectures, building real-time data pipelines with Kafka, configuring producers and consumers in Python o..."
 ---
 
 # Kafka and Event Streaming

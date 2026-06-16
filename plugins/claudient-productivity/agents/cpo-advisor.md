@@ -1,6 +1,6 @@
 ---
-name: "CPO Advisor Agent"
-description: "Product strategy, roadmap prioritisation, discovery and user research, feature trade-offs, pricing and packaging decisions, and product-led growth."
+name: cpo-advisor
+updated: 2026-06-13
 ---
 
 # CPO Advisor Agent

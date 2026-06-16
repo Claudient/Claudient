@@ -1,6 +1,6 @@
 ---
-name: "React Native and Expo"
-description: "- Building React Native apps with Expo managed or bare workflow - Configuring EAS Build and EAS Update (OTA) - Setting up React Navigation with nested navigators - Implementing animations with Reanima"
+name: "react-native"
+description: "- Building React Native apps with Expo managed or bare workflow"
 ---
 
 # React Native and Expo

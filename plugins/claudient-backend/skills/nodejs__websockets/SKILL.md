@@ -1,6 +1,6 @@
 ---
-name: "WebSockets and Socket.io"
-description: "- Building real-time bidirectional features (chat, live dashboards, notifications, multiplayer) - Setting up Socket.io server with authentication middleware - Managing rooms and namespaces for channel"
+name: "websockets"
+description: "- Building real-time bidirectional features (chat, live dashboards, notifications, multiplayer)"
 ---
 
 # WebSockets and Socket.io

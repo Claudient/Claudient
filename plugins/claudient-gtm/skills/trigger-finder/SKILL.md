@@ -1,6 +1,6 @@
 ---
-name: "Trigger Finder"
-description: "Daily prospecting workflow when building event-triggered sequences, prioriti"
+name: "trigger-finder"
+description: "Daily prospecting workflow when building event-triggered sequences, prioritizing who to contact in the next 24 hours, or operationalizing buying in..."
 ---
 
 # Trigger Finder

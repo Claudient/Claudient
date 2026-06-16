@@ -1,6 +1,6 @@
 ---
-name: "Cold Email"
-description: "Writing cold outbound emails to prospects, reviewing email copy for effectiveness, building multi-email sequences, or designing campaigns targeting specific buyer personas (executives, operators, deci"
+name: "cold-email"
+description: "Writing cold outbound emails to prospects, reviewing email copy for effectiveness, building multi-email sequences, or designing campaigns targeting..."
 ---
 
 # Cold Email

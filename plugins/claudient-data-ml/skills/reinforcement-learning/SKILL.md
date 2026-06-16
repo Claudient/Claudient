@@ -1,6 +1,6 @@
 ---
-name: "Reinforcement Learning"
-description: "Designing Gymnasium-compatible environments, training policies with Stable Baselines3, engineering or debugging reward functions, implementing curriculum learning schedules, deploying trained agents t"
+name: "reinforcement-learning"
+description: "Designing Gymnasium-compatible environments, training policies with Stable Baselines3, engineering or debugging reward functions, implementing curr..."
 ---
 
 # Reinforcement Learning

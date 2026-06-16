@@ -1,6 +1,6 @@
 ---
-name: "Messaging Frameworks"
-description: "You are crafting cold outreach (email, LinkedIn, or call script) and need to select which framework maximi"
+name: "messaging-frameworks"
+description: "You are crafting cold outreach (email, LinkedIn, or call script) and need to select which framework maximizes reply rate and conversation quality f..."
 ---
 
 # Messaging Frameworks

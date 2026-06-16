@@ -1,6 +1,6 @@
 ---
-name: "Kotlin + Android"
-description: "- Building Android apps with Jetpack Compose - Setting up ViewModel with StateFlow or SharedFlow - Configuring Room database (entity, DAO, database class) - Integrating Retrofit for HTTP and Moshi/Gso"
+name: "android"
+description: "Build Android applications with Kotlin, Jetpack Compose, and modern Android architecture"
 ---
 
 # Kotlin + Android

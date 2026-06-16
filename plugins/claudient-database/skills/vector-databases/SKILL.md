@@ -1,6 +1,6 @@
 ---
-name: "Vector Databases"
-description: "- User is implementing semantic search, RAG pipelines, or recommendation systems - Code imports `qdrant_client`, `pinecone`, `weaviate`, `psycopg2` with `pgvector`, or `chromadb` - User asks about emb"
+name: "vector-databases"
+description: "- User is implementing semantic search, RAG pipelines, or recommendation systems"
 ---
 
 # Vector Databases

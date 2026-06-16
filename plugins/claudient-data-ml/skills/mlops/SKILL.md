@@ -1,6 +1,6 @@
 ---
-name: "MLOps"
-description: "Setting up ML pipelines end-to-end, deploying or serving trained models, configuring experiment tracking with MLflow or Weights & Biases, building model registries with staging-to-production promotion"
+name: "mlops"
+description: "Setting up ML pipelines end-to-end, deploying or serving trained models, configuring experiment tracking with MLflow or Weights & Biases, building ..."
 ---
 
 # MLOps

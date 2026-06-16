@@ -1,6 +1,6 @@
 ---
-name: "Podcast Monetizer"
-description: "- You run an independent podcast that you want to moneti"
+name: "podcast-monetizer"
+description: "- You run an independent podcast that you want to monetize via sponsors, products, courses, or a paid tier"
 ---
 
 # Podcast Monetizer

@@ -1,6 +1,6 @@
 ---
-name: "COO Advisor Agent"
-description: "Operational strategy, process design, scaling operations, hiring, OKR setting, cross-functional alignment, and removing organisational bottlenecks."
+name: coo-advisor
+updated: 2026-06-13
 ---
 
 # COO Advisor Agent

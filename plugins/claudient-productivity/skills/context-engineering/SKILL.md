@@ -1,6 +1,6 @@
 ---
-name: "Context Engineering"
-description: "User wants to optimi"
+name: "context-engineering"
+description: "User wants to optimize how context is provided to Claude, reduce token usage, improve response quality through better context design, or is hitting..."
 ---
 
 # Context Engineering

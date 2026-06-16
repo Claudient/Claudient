@@ -1,6 +1,6 @@
 ---
-name: "Voice Input"
-description: "- User says they want to speak their prompt rather than type it - User asks how to use voice or dictation in Claude Code - User asks about `/voice`, push-to-talk, or voice mode - User wants to go hand"
+name: "voice-input"
+description: "- User says they want to speak their prompt rather than type it"
 ---
 
 # Voice Input

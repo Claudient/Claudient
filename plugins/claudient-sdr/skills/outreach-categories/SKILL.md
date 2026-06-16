@@ -1,6 +1,6 @@
 ---
-name: "Outreach Categories"
-description: "When you need to determine which messaging strategy to deploy for a given prospect or lead cohort. Use this framework to: - Classify inbound, postbound, bridgebound, or outbound lead sources - Set rep"
+name: "outreach-categories"
+description: "When you need to determine which messaging strategy to deploy for a given prospect or lead cohort. Use this framework to:"
 ---
 
 # Outreach Categories

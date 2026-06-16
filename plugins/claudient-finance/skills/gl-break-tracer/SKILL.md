@@ -1,6 +1,6 @@
 ---
-name: "GL Break Tracer"
-description: "Investigating a general ledger reconciliation break, unexplained variance in a trial balance, subledger-to-GL mismatch, or a month-end close discrepancy. Use when a numeric difference exists between t"
+name: "gl-break-tracer"
+description: "Investigating a general ledger reconciliation break, unexplained variance in a trial balance, subledger-to-GL mismatch, or a month-end close discre..."
 ---
 
 # GL Break Tracer

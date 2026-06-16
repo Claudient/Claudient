@@ -1,6 +1,6 @@
 ---
-name: "AI Writing Detection"
-description: "Auditing documentation, blog posts, or marketing copy for AI-pattern text; when the user wants content to sound more human; reviewing a README or public-facing document before publishing."
+name: "ai-writing-detection"
+description: "Auditing documentation, blog posts, or marketing copy for AI-pattern text; when the user wants content to sound more human; reviewing a README or p..."
 ---
 
 # AI Writing Detection

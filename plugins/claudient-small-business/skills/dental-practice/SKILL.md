@@ -1,6 +1,6 @@
 ---
-name: "Dental Practice"
-description: "- You run a solo or small group dental practice and the front desk is drowning in operational follow-up - Recall scheduling has fallen behind — patients who should be on a 6-month cadence are at 9+ mo"
+name: "dental-practice"
+description: "- You run a solo or small group dental practice and the front desk is drowning in operational follow-up"
 ---
 
 # Dental Practice

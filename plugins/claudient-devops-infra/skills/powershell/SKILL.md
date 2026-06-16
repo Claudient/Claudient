@@ -1,6 +1,6 @@
 ---
-name: "PowerShell Scripting"
-description: "- Writing or reviewing PowerShell scripts for Windows administration or cross-platform automation - Using cmdlets, pipelines, and object manipulation - Implementing robust error handling with try/catc"
+name: "powershell"
+description: "- Writing or reviewing PowerShell scripts for Windows administration or cross-platform automation"
 ---
 
 # PowerShell Scripting

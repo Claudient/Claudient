@@ -1,6 +1,6 @@
 ---
-name: "Brand System Builder"
-description: "Builds and validates complete brand systems for Claude Design projects — extracts design tokens from existing codebases, structures the 7-step brand system, and ensures consistency across all future C"
+name: brand-system-builder
+updated: 2026-06-13
 ---
 
 # Brand System Builder

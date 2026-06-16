@@ -1,6 +1,6 @@
 ---
-name: "Monday Brief"
-description: "- Start of every week — you want a clear picture of where the business stands before the week begins - You feel scattered about what matters most and need to cut to the top 3 priorities - Preparing fo"
+name: "monday-brief"
+description: "- Start of every week — you want a clear picture of where the business stands before the week begins"
 ---
 
 # Monday Brief

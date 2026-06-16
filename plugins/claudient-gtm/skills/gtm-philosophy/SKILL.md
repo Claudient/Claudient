@@ -1,6 +1,6 @@
 ---
-name: "GTM Philosophy"
-description: "When planning or refactoring an outbound motion, validating account selection before investing pipeline resources, debugging why a sequence is underperforming, or deciding whether to pursue a prospect"
+name: "gtm-philosophy"
+description: "When planning or refactoring an outbound motion, validating account selection before investing pipeline resources, debugging why a sequence is unde..."
 ---
 
 # GTM Philosophy
