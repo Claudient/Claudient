@@ -1,15 +1,18 @@
 # Claudient Session State — 2026-06-17
 
 ## Current Status
-- **Phase 15 Complete:** 2 new CLI commands (`learn`, `checkpoint`/`restore`), 2 matching skill documents (`learn-codebase.md`, `session-memory.md`), 38 format validation fixes, 1 manifest version fix. All validate tests pass 100%.
-- **Repository Author:** tushar2704 <ceo@uitbreiden.com>
+- **Phase 16 Complete:**
+  - Standardized all 12 core/role agent files with YAML frontmatter `updated` dates.
+  - Enforced strict freshness checks in CI (`validate.yml`) by removing the `--warn-only` flag.
+  - Resolved catalog path mapping inconsistencies for professional stacks in `scripts/build-catalog.js`.
+  - Rebuilt plugins, catalog, and index to propagate all updates.
+  - Successfully verified all tests and Astro site compilation.
+- **Repository Author:** tushar2704 <tushar.inseec@gmail.com>
 
-## Pending Roadmap (Tomorrow - Phase 16)
-1. **Night Shift Agent:** Unsupervised batch execution runner with rate-limiting backoff.
-2. **Tribunal PR Review System:** Swarm reviewer prompts.
-3. **Caveman Mode:** Stringent token-reduction DSL config.
-4. **Safe Commit Hook:** Auto-validation git hooks before commit.
-5. **Sonar Codebase Cartographer:** AST signature map extraction.
+## Pending Roadmap (Tomorrow - Phase 17)
+1. **Executable UI Integrations:** Turn statusline presets into active script executions (live token/session cost, usage tracking, and active MCP status alerts).
+2. **Haiku Translation Engine:** Set up the fan-out translation pipeline to translate the remaining ~880 deferred markdown content assets (slash commands, role-specific agents, rules, and personas) into French, German, Spanish, and Dutch.
+3. **Cross-Harness Export:** Add automated export structures for Cursor `.cursorrules` and Windsurf configurations to leverage the full Claudient catalog outside of native Claude Code.
 
 ## Resume Instructions
-To resume, tell the agent: "Resume from SESSION_STATE.md and begin Phase 16."
+To resume, tell the agent: "Resume from SESSION_STATE.md and begin Phase 17."
