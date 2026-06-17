@@ -289,7 +289,7 @@ export function McpApp() {
         {/* Install */}
         <div className="mt-5">
           <div className="text-[11px] font-bold text-mute uppercase tracking-wider mb-2">Quick Install</div>
-          <pre className="rounded-xl bg-[#1d1f27] text-[#e6e6e6] p-4 text-[12px] font-mono leading-relaxed overflow-auto">
+          <pre className="rounded-xl bg-code-bg text-code-text p-4 text-[12px] font-mono leading-relaxed overflow-auto">
             <code>{`{
   "mcpServers": {
     "${cfg.id}": {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Eyebrow } from "./ui";
 
 type Tab = "Themes" | "Statuslines" | "Keybindings" | "Output Styles" | "Routines" | "Settings";
@@ -69,7 +69,19 @@ const TAB_ICONS: Record<Tab, string> = {
 
 export function ToolkitApp() {
   const [tab, setTab] = useState<Tab>("Themes");
+  const [currentTheme, setCurrentTheme] = useState("claudient-brand");
   const tabs: Tab[] = ["Themes", "Statuslines", "Keybindings", "Output Styles", "Routines", "Settings"];
+
+  useEffect(() => {
+    const saved = localStorage.getItem("claudient-theme") || "claudient-brand";
+    setCurrentTheme(saved);
+  }, []);
+
+  const handleThemeSelect = (themeId: string) => {
+    setCurrentTheme(themeId);
+    localStorage.setItem("claudient-theme", themeId);
+    document.documentElement.setAttribute("data-theme", themeId);
+  };
 
   return (
     <div className="flex h-full">
@@ -90,19 +102,37 @@ export function ToolkitApp() {
 
         {tab === "Themes" && (
           <div className="grid sm:grid-cols-2 gap-3">
-            {THEMES.map((t) => (
-              <div key={t.id} className="rounded-lg border border-hairline bg-white p-3 hover:border-olive/70 transition">
-                <div className="flex items-center justify-between">
-                  <span className="text-[13px] font-bold text-ink">{t.name}</span>
-                  <code className="text-[10px] text-mute font-mono">{t.id}</code>
+            {THEMES.map((t) => {
+              const isSelected = currentTheme === t.id;
+              return (
+                <div
+                  key={t.id}
+                  onClick={() => handleThemeSelect(t.id)}
+                  className={`rounded-lg border p-3 cursor-pointer transition ${
+                    isSelected
+                      ? "border-brand-yellow ring-2 ring-brand-yellow/30 bg-cream/30"
+                      : "border-hairline bg-white hover:border-olive/70"
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-[13px] font-bold text-ink flex items-center gap-1.5">
+                      {t.name}
+                      {isSelected && (
+                        <span className="text-[10px] bg-brand-yellow/20 text-brand-orange px-1.5 py-0.5 rounded-full font-bold">
+                          Active
+                        </span>
+                      )}
+                    </span>
+                    <code className="text-[10px] text-mute font-mono">{t.id}</code>
+                  </div>
+                  <div className="mt-2 flex gap-1">
+                    {t.colors.map((c, i) => (
+                      <div key={i} className="size-5 rounded-md" style={{ backgroundColor: c }} />
+                    ))}
+                  </div>
                 </div>
-                <div className="mt-2 flex gap-1">
-                  {t.colors.map((c, i) => (
-                    <div key={i} className="size-5 rounded-md" style={{ backgroundColor: c }} />
-                  ))}
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
 

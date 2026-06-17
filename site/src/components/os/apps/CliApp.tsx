@@ -350,7 +350,7 @@ export function CliApp() {
         <div className="mt-4">
           <div className="text-[11px] font-bold text-mute uppercase tracking-wider mb-1.5">Usage</div>
           <div className="flex items-center gap-2">
-            <pre className="flex-1 rounded-lg bg-[#1d1f27] text-[#e6e6e6] px-3 py-2 text-[11px] font-mono overflow-auto">
+            <pre className="flex-1 rounded-lg bg-code-bg text-code-text px-3 py-2 text-[11px] font-mono overflow-auto">
               <code>{cmd.usage}</code>
             </pre>
             <button
@@ -365,7 +365,7 @@ export function CliApp() {
         {/* Output */}
         <div className="mt-4">
           <div className="text-[11px] font-bold text-mute uppercase tracking-wider mb-1.5">Sample Output</div>
-          <pre className="rounded-xl bg-[#1d1f27] text-[#c8d6e5] p-4 text-[11px] font-mono leading-relaxed overflow-auto max-h-72 whitespace-pre-wrap">
+          <pre className="rounded-xl bg-code-bg text-code-text p-4 text-[11px] font-mono leading-relaxed overflow-auto max-h-72 whitespace-pre-wrap">
             <code>{cmd.output}</code>
           </pre>
         </div>

@@ -346,7 +346,7 @@ export function ShowcaseApp() {
 
         <div className="mb-5">
           <div className="text-[12px] font-bold text-mute uppercase tracking-wider mb-2">Example</div>
-          <pre className="rounded-lg bg-[#1d1f27] text-[#e6e6e6] p-4 text-[11px] font-mono leading-relaxed whitespace-pre-wrap overflow-x-auto">
+          <pre className="rounded-lg bg-code-bg text-code-text p-4 text-[11px] font-mono leading-relaxed whitespace-pre-wrap overflow-x-auto">
             {selected.example}
           </pre>
         </div>

@@ -1,18 +1,37 @@
 @import "tailwindcss";
 
+:root {
+  --canvas: #eeefe9;
+  --cream: #f7f7f3;
+  --surface: #ffffff;
+  --soft: #e5e7df;
+  --hairline: #d0d1c9;
+  --olive: #a3a489;
+  --ink: #151515;
+  --body: #2d2d2d;
+  --mute: #76786c;
+
+  /* Code blocks */
+  --code-bg: #1d1f27;
+  --code-text: #e6e6e6;
+}
+
 @theme {
   --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 
-  --color-canvas: #eeefe9;
-  --color-cream: #f7f7f3;
-  --color-surface: #ffffff;
-  --color-soft: #e5e7df;
-  --color-hairline: #d0d1c9;
-  --color-olive: #a3a489;
-  --color-ink: #151515;
-  --color-body: #2d2d2d;
-  --color-mute: #76786c;
+  --color-canvas: var(--canvas);
+  --color-cream: var(--cream);
+  --color-surface: var(--surface);
+  --color-soft: var(--soft);
+  --color-hairline: var(--hairline);
+  --color-olive: var(--olive);
+  --color-ink: var(--ink);
+  --color-body: var(--body);
+  --color-mute: var(--mute);
+
+  --color-code-bg: var(--code-bg);
+  --color-code-text: var(--code-text);
 
   --color-brand-yellow: #f5b800;
   --color-brand-orange: #f1a82c;
@@ -20,6 +39,132 @@
   --color-brand-blue: #1d4aff;
   --color-brand-teal: #1078a3;
   --color-brand-purple: #b62ad9;
+}
+
+[data-theme="catppuccin"] {
+  --canvas: #1e1e2e;
+  --cream: #181825;
+  --surface: #313244;
+  --soft: #45475a;
+  --hairline: #cba6f7;
+  --olive: #bac2de;
+  --ink: #cdd6f4;
+  --body: #a6adc8;
+  --mute: #585b70;
+  --code-bg: #11111b;
+  --code-text: #cba6f7;
+}
+
+[data-theme="dracula"] {
+  --canvas: #282a36;
+  --cream: #1e1f29;
+  --surface: #44475a;
+  --soft: #6272a4;
+  --hairline: #bd93f9;
+  --olive: #f8f8f2;
+  --ink: #f8f8f2;
+  --body: #f8f8f2;
+  --mute: #6272a4;
+  --code-bg: #1e1f29;
+  --code-text: #50fa7b;
+}
+
+[data-theme="gruvbox"] {
+  --canvas: #282828;
+  --cream: #1d2021;
+  --surface: #3c3836;
+  --soft: #504945;
+  --hairline: #fabd2f;
+  --olive: #a89984;
+  --ink: #fbf1c7;
+  --body: #ebdbb2;
+  --mute: #928374;
+  --code-bg: #1d2021;
+  --code-text: #b8bb26;
+}
+
+[data-theme="monokai"] {
+  --canvas: #272822;
+  --cream: #1e1f1c;
+  --surface: #3e3d32;
+  --soft: #49483e;
+  --hairline: #f92672;
+  --olive: #f8f8f2;
+  --ink: #f8f8f2;
+  --body: #f8f8f2;
+  --mute: #75715e;
+  --code-bg: #1e1f1c;
+  --code-text: #a6e22e;
+}
+
+[data-theme="nord"] {
+  --canvas: #2e3440;
+  --cream: #232831;
+  --surface: #3b4252;
+  --soft: #434c5e;
+  --hairline: #88c0d0;
+  --olive: #d8dee9;
+  --ink: #eceff4;
+  --body: #e5e9f0;
+  --mute: #4c566a;
+  --code-bg: #232831;
+  --code-text: #8fbcbb;
+}
+
+[data-theme="rose-pine"] {
+  --canvas: #191724;
+  --cream: #121019;
+  --surface: #26233a;
+  --soft: #1f1d2e;
+  --hairline: #c4a7e7;
+  --olive: #e0def4;
+  --ink: #e0def4;
+  --body: #908caa;
+  --mute: #575279;
+  --code-bg: #121019;
+  --code-text: #eb6f92;
+}
+
+[data-theme="solarized-dark"] {
+  --canvas: #002b36;
+  --cream: #073642;
+  --surface: #002b36;
+  --soft: #073642;
+  --hairline: #268bd2;
+  --olive: #93a1a1;
+  --ink: #fdf6e3;
+  --body: #eee8d5;
+  --mute: #586e75;
+  --code-bg: #073642;
+  --code-text: #2aa198;
+}
+
+[data-theme="solarized-light"] {
+  --canvas: #fdf6e3;
+  --cream: #eee8d5;
+  --surface: #ffffff;
+  --soft: #eee8d5;
+  --hairline: #268bd2;
+  --olive: #586e75;
+  --ink: #073642;
+  --body: #586e75;
+  --mute: #93a1a1;
+  --code-bg: #fdf6e3;
+  --code-text: #073642;
+}
+
+[data-theme="tokyo-night"] {
+  --canvas: #1a1b26;
+  --cream: #16161e;
+  --surface: #24283c;
+  --soft: #1f2335;
+  --hairline: #7aa2f7;
+  --olive: #a9b1d6;
+  --ink: #c0caf5;
+  --body: #9ece6a;
+  --mute: #565f89;
+  --code-bg: #16161e;
+  --code-text: #7aa2f7;
 }
 
 html,

@@ -100,7 +100,7 @@ export function InstallApp() {
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <pre className="flex-1 rounded-lg bg-[#1d1f27] text-[#e6e6e6] px-3 py-2 text-[11px] font-mono overflow-auto">
+              <pre className="flex-1 rounded-lg bg-code-bg text-code-text px-3 py-2 text-[11px] font-mono overflow-auto">
                 <code>{m.cmd}</code>
               </pre>
               <button
@@ -208,7 +208,7 @@ export function InstallApp() {
                 </div>
               </div>
               <div className="mt-3 flex items-center gap-2">
-                <pre className="flex-1 rounded-lg bg-[#1d1f27] text-[#e6e6e6] px-3 py-2 text-[10px] font-mono overflow-auto">
+                <pre className="flex-1 rounded-lg bg-code-bg text-code-text px-3 py-2 text-[10px] font-mono overflow-auto">
                   <code>{s.install}</code>
                 </pre>
                 <button

@@ -646,7 +646,7 @@ export function StacksApp() {
                 <div className="space-y-1.5">
                   {stack.cmds.map((c) => (
                     <div key={c} className="flex items-center gap-2">
-                      <pre className="flex-1 rounded-lg bg-[#1d1f27] text-[#e6e6e6] px-3 py-2 text-[11.5px] font-mono overflow-auto">
+                      <pre className="flex-1 rounded-lg bg-code-bg text-code-text px-3 py-2 text-[11.5px] font-mono overflow-auto">
                         <code>{`/${c}`}</code>
                       </pre>
                       <button
@@ -665,7 +665,7 @@ export function StacksApp() {
             <div>
               <div className="text-[11px] font-bold text-mute uppercase tracking-wider mb-2">Install Full Stack</div>
               <div className="flex items-center gap-2">
-                <pre className="flex-1 rounded-xl bg-[#1d1f27] text-[#e6e6e6] px-4 py-3 text-[12px] font-mono overflow-auto">
+                <pre className="flex-1 rounded-xl bg-code-bg text-code-text px-4 py-3 text-[12px] font-mono overflow-auto">
                   <code>{`npx claudient install ${stack.name.toLowerCase().replace(/[\s/]/g, "_")}_stack`}</code>
                 </pre>
                 <button
