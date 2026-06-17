@@ -46,6 +46,7 @@ Usage:
   npx claudient init                          Interactive first-run setup
   npx claudient init --enterprise             Set up enterprise-scale governance & compliance
   npx claudient doctor                        Check Claude Code setup health
+  npx claudient dashboard                    Launch local dashboard app in browser
   npx claudient consult "<need>"             Recommend skills and stacks by keyword
   npx claudient benchmark [skill-id]          Show eval scores for skills
   npx claudient audit                         Deep compliance audit of your Claude Code setup
@@ -53,6 +54,7 @@ Usage:
   npx claudient share                         Export your installed skills as a shareable bundle
   npx claudient import <gist-url>            Import a shared skill bundle from GitHub Gist
   npx claudient export <harness>              Export rules/guidelines to Cursor or Windsurf
+  npx claudient council <domain>             Trigger domain-wide subagent swarm session
   npx claudient learn                         Scan project and generate custom rules
   npx claudient checkpoint "<task>"          Create workspace state checkpoint
   npx claudient restore                       Restore from latest checkpoint
@@ -453,6 +455,60 @@ Example:
   fs.writeFileSync(outputPath, compiledContent, 'utf-8')
   console.log(`\n✓ Success! Exported ${rulesAdded} rules to ${outputPath}`)
   console.log(`AI assistants in ${harness === 'cursor' ? 'Cursor' : 'Windsurf'} will now automatically follow these guidelines.`)
+}
+
+function dashboardCommand() {
+  const { spawn } = require('child_process')
+  console.log('Launching Claudient Workspace Dashboard locally...')
+  
+  const siteDir = path.join(REPO_ROOT, 'site')
+  if (!fs.existsSync(siteDir)) {
+    console.error('Error: site/ directory not found in repository.')
+    process.exit(1)
+  }
+
+  console.log('Starting local Astro dev server...')
+  
+  // Choose npm command according to platform
+  const npmCmd = process.platform === 'win32' ? 'npm.cmd' : 'npm'
+  const server = spawn(npmCmd, ['run', 'dev'], { cwd: siteDir, stdio: 'pipe' })
+  
+  server.stdout.on('data', (data) => {
+    // Keep it quiet unless needed
+  })
+
+  server.stderr.on('data', (data) => {
+    // Log server errors quietly
+  })
+
+  setTimeout(() => {
+    const url = 'http://localhost:4321'
+    console.log(`Opening dashboard at ${url} in your browser...`)
+    try {
+      const opener = process.platform === 'darwin' 
+        ? spawn('open', [url]) 
+        : process.platform === 'win32' 
+          ? spawn('cmd', ['/c', 'start', '', url]) 
+          : spawn('xdg-open', [url])
+      
+      opener.on('error', () => {
+        console.log(`Failed to auto-open browser. Please open ${url} manually.`)
+      })
+    } catch {
+      console.log(`Failed to auto-open browser. Please open ${url} manually.`)
+    }
+    console.log('\nPress Ctrl+C to terminate dashboard server.')
+  }, 1800)
+
+  process.on('SIGINT', () => {
+    console.log('\nTerminating local dashboard server...')
+    server.kill()
+    process.exit(0)
+  })
+  process.on('SIGTERM', () => {
+    server.kill()
+    process.exit(0)
+  })
 }
 
 function listStructures() {
@@ -973,17 +1029,17 @@ ${BOLD}╔═══════════════════════�
   }
   console.log(`${GREEN}✓ Claude Code detected at ${CLAUDE_DIR}${RESET}\n`)
 
-  const summary = { skills: [], agents: false, hooks: false, rules: false, lang: 'en' }
+  const summary = { skills: [], agents: false, hooks: false, rules: false, lang: 'en', telemetry: true }
 
   // 1. Language
-  console.log(`${BOLD}Step 1/5 — Language${RESET}`)
+  console.log(`${BOLD}Step 1/6 — Language${RESET}`)
   console.log('  Available: en, fr, de, nl, es')
   const langInput = (await ask('  Which language? [en] ')).trim().toLowerCase() || 'en'
   summary.lang = SUPPORTED_LANGS.includes(langInput) ? langInput : 'en'
   console.log(`  → ${summary.lang}\n`)
 
   // 2. Skill categories
-  console.log(`${BOLD}Step 2/5 — Skills${RESET}`)
+  console.log(`${BOLD}Step 2/6 — Skills${RESET}`)
   SKILL_CATEGORIES.forEach((cat, i) => console.log(`  ${i + 1}. ${cat}`))
   console.log('  a. All categories')
   console.log('  0. Skip skills')
@@ -1001,35 +1057,43 @@ ${BOLD}╔═══════════════════════�
   }
 
   // 3. Agents
-  console.log(`${BOLD}Step 3/5 — Agents${RESET}`)
+  console.log(`${BOLD}Step 3/6 — Agents${RESET}`)
   console.log('  6 subagent definitions: Planner, Architect, Code Reviewer, Security, Build Resolvers')
   const agentsInput = (await ask('  Install agents? [Y/n] ')).trim().toLowerCase()
   summary.agents = agentsInput !== 'n'
   console.log(`  → ${summary.agents ? 'Yes' : 'No'}\n`)
 
   // 4. Hooks
-  console.log(`${BOLD}Step 4/5 — Hooks${RESET}`)
+  console.log(`${BOLD}Step 4/6 — Hooks${RESET}`)
   console.log('  7 shell scripts: safety guards, auto-formatter, audit log, cost tracker, session helpers')
   const hooksInput = (await ask('  Install hooks? [Y/n] ')).trim().toLowerCase()
   summary.hooks = hooksInput !== 'n'
   console.log(`  → ${summary.hooks ? 'Yes' : 'No'}\n`)
 
   // 5. Rules
-  console.log(`${BOLD}Step 5/5 — Rules${RESET}`)
+  console.log(`${BOLD}Step 5/6 — Rules${RESET}`)
   console.log('  8 rule sets: coding style, git, security, testing, performance, Python, TypeScript, Go')
   const rulesInput = (await ask('  Add rules to ./CLAUDE.md? [Y/n] ')).trim().toLowerCase()
   summary.rules = rulesInput !== 'n'
   console.log(`  → ${summary.rules ? 'Yes' : 'No'}\n`)
 
+  // 6. Telemetry
+  console.log(`${BOLD}Step 6/6 — Telemetry${RESET}`)
+  console.log('  Enable anonymous setup metrics to help improve Claudient?')
+  const telemetryInput = (await ask('  Share anonymous metrics? [Y/n] ')).trim().toLowerCase()
+  summary.telemetry = telemetryInput !== 'n'
+  console.log(`  → ${summary.telemetry ? 'Yes' : 'No'}\n`)
+
   rl.close()
 
   // Confirm
   console.log(`${BOLD}Summary${RESET}`)
-  console.log(`  Language : ${summary.lang}`)
-  console.log(`  Skills   : ${summary.skills.length ? summary.skills.join(', ') : 'none'}`)
-  console.log(`  Agents   : ${summary.agents ? 'yes' : 'no'}`)
-  console.log(`  Hooks    : ${summary.hooks ? 'yes' : 'no'}`)
-  console.log(`  Rules    : ${summary.rules ? 'append to ./CLAUDE.md' : 'no'}`)
+  console.log(`  Language  : ${summary.lang}`)
+  console.log(`  Skills    : ${summary.skills.length ? summary.skills.join(', ') : 'none'}`)
+  console.log(`  Agents    : ${summary.agents ? 'yes' : 'no'}`)
+  console.log(`  Hooks     : ${summary.hooks ? 'yes' : 'no'}`)
+  console.log(`  Rules     : ${summary.rules ? 'append to ./CLAUDE.md' : 'no'}`)
+  console.log(`  Telemetry : ${summary.telemetry ? 'opt-in' : 'disabled'}`)
   console.log()
 
   // Execute
@@ -1058,6 +1122,18 @@ ${BOLD}╔═══════════════════════�
     addRulesWrite()
     console.log()
   }
+
+  // Save telemetry preference to global settings.json
+  const settingsPath = path.join(CLAUDE_DIR, 'settings.json')
+  let settings = {}
+  if (fs.existsSync(settingsPath)) {
+    try {
+      settings = JSON.parse(fs.readFileSync(settingsPath, 'utf-8'))
+    } catch (e) {}
+  }
+  if (!settings.claudient) settings.claudient = {}
+  settings.claudient.telemetry = summary.telemetry
+  fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 2), 'utf-8')
 
   console.log(`${GREEN}${BOLD}✓ Claudient setup complete!${RESET}`)
   console.log()
@@ -1441,6 +1517,238 @@ function writeReport(filename, content) {
   console.log(`📄 Report saved to ./${filename}`)
 }
 
+function writeHtmlReport(filename, title, date, score, percentage, results) {
+  const filepath = path.join(process.cwd(), filename)
+  
+  let rowsHtml = ''
+  for (const r of results) {
+    const statusColor = r.status.includes('PASS') ? '#10b981' : r.status.includes('WARN') ? '#f59e0b' : '#ef4444';
+    const statusBg = r.status.includes('PASS') ? '#ecfdf5' : r.status.includes('WARN') ? '#fffbeb' : '#fef2f2';
+    
+    rowsHtml += `
+      <tr style="border-bottom: 1px solid #e5e7eb;">
+        <td style="padding: 12px 16px; font-weight: 600; color: #1f2937;">${r.dim}</td>
+        <td style="padding: 12px 16px;">
+          <span style="display: inline-block; padding: 4px 10px; font-size: 11px; font-weight: 700; border-radius: 9999px; background: ${statusBg}; color: ${statusColor};">
+            ${r.status}
+          </span>
+        </td>
+        <td style="padding: 12px 16px; font-weight: 500; color: #4b5563;">${r.score}/20</td>
+        <td style="padding: 12px 16px; color: #4b5563; font-size: 13px;">${r.finding}</td>
+      </tr>
+    `
+  }
+
+  let recsHtml = ''
+  for (const r of results) {
+    if (r.status.includes('FAIL') || r.status.includes('WARN')) {
+      let rec = ''
+      switch (r.dim) {
+        case 'Skills Coverage': rec = 'Install more skill categories: <code>npx claudient add skills all</code>'; break;
+        case 'Agent Configuration': rec = 'Deploy agents: <code>npx claudient add agents</code>'; break;
+        case 'Hook Security': rec = 'Review and install hooks: <code>npx claudient add hooks</code>'; break;
+        case 'CLAUDE.md Governance': rec = 'Create CLAUDE.md: <code>npx claudient init</code> or <code>add rules --write</code>'; break;
+        case 'Rules Compliance': rec = 'Add rules to CLAUDE.md: <code>npx claudient add rules --write</code>'; break;
+        case 'Freshness': rec = 'Update stale skills: <code>npx claudient update</code>'; break;
+        case 'Permission Scope': rec = 'Review ~/.claude/settings.json for overly broad permissions'; break;
+        case 'Benchmark Coverage': rec = 'Run benchmarks: <code>npm run benchmark</code>'; break;
+      }
+      if (rec) {
+        recsHtml += `
+          <div style="display: flex; gap: 8px; align-items: start; margin-bottom: 10px; padding: 10px 14px; border-left: 4px solid #f59e0b; background: #fffbeb; border-radius: 4px; font-size: 13px; color: #78350f;">
+            <span style="font-weight: bold; margin-right: 4px;">→</span>
+            <span>${rec}</span>
+          </div>
+        `
+      }
+    }
+  }
+
+  const htmlContent = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${title}</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #eeefe9;
+      color: #2d2d2d;
+      margin: 0;
+      padding: 40px 20px;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+      border: 1px solid #d0d1c9;
+      overflow: hidden;
+    }
+    .header {
+      padding: 32px 40px;
+      background: #151515;
+      color: #ffffff;
+      border-bottom: 4px solid #f5b800;
+    }
+    .header h1 {
+      margin: 0 0 8px 0;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    .header .meta {
+      font-size: 13px;
+      color: #a3a489;
+      margin: 0;
+    }
+    .content {
+      padding: 32px 40px;
+    }
+    .score-banner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      background: #f7f7f3;
+      border: 1px solid #e5e7df;
+      border-radius: 8px;
+      margin-bottom: 32px;
+    }
+    .score-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #76786c;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .score-value {
+      font-size: 28px;
+      font-weight: 800;
+      color: #151515;
+    }
+    .score-pct {
+      font-size: 14px;
+      color: #a3a489;
+      font-weight: 500;
+    }
+    .table-wrapper {
+      overflow-x: auto;
+      margin-bottom: 32px;
+      border: 1px solid #e5e7df;
+      border-radius: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14px;
+    }
+    th {
+      background: #f7f7f3;
+      padding: 12px 16px;
+      font-weight: 700;
+      color: #76786c;
+      border-bottom: 1px solid #e5e7df;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+    }
+    .section-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #151515;
+      margin: 0 0 16px 0;
+      border-bottom: 2px solid #eeefe9;
+      padding-bottom: 8px;
+    }
+    .recs-list {
+      margin-bottom: 32px;
+    }
+    .enterprise-box {
+      padding: 24px;
+      border: 1px dashed #b62ad9;
+      background: rgba(182, 42, 217, 0.04);
+      border-radius: 8px;
+      color: #2d2d2d;
+    }
+    .enterprise-title {
+      font-weight: bold;
+      color: #b62ad9;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    code {
+      font-family: monospace;
+      background: #f3f4f6;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>${title}</h1>
+      <p class="meta">Target Project: <code>${process.cwd()}</code> &bull; Audited on ${date}</p>
+    </div>
+    <div class="content">
+      <div class="score-banner">
+        <div>
+          <div class="score-title">Audit Score</div>
+          <div class="score-value">${score} <span style="font-size:18px; font-weight:normal; color:#999;">/ 160</span></div>
+        </div>
+        <div style="text-align: right;">
+          <div style="font-size: 28px; font-weight: 800; color: #f5b800;">${percentage}%</div>
+          <div class="score-pct">Status: Compliance Rating</div>
+        </div>
+      </div>
+
+      <h2 class="section-title">Audit Dimensions</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Dimension</th>
+              <th>Status</th>
+              <th>Score</th>
+              <th>Findings</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${rowsHtml}
+          </tbody>
+        </table>
+      </div>
+
+      ${recsHtml ? `
+      <h2 class="section-title">Compliance Recommendations</h2>
+      <div class="recs-list">
+        ${recsHtml}
+      </div>
+      ` : ''}
+
+      <div class="enterprise-box">
+        <div class="enterprise-title">🏢 Need a formal SOC2 / GDPR Governance Audit?</div>
+        <div style="font-size: 13px; line-height: 1.6;">
+          Claudient Enterprise provides regulatory-compliant workspace stack validation hooks, centralized permission controls, SSO, and audit-trail logging.<br>
+          <a href="https://claudient.ai/enterprise" style="color: #b62ad9; font-weight: bold; text-decoration: underline;">Book a governance demo</a> &bull; Contact: <strong>enterprise@claudient.ai</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+  `
+  
+  fs.writeFileSync(filepath, htmlContent, 'utf-8')
+  console.log(`📄 Compliance Report saved to ./${filename}`)
+}
+
 function auditCommand() {
   if (!fs.existsSync(CLAUDE_DIR)) {
     console.error(`Error: ~/.claude directory not found. Claude Code must be installed.`)
@@ -1743,8 +2051,8 @@ function auditCommand() {
   output += `   → Email: enterprise@claudient.ai\n`
   output += `${'─'.repeat(65)}\n`
 
-  console.log(output)
   writeReport('claudient-audit-report.md', output)
+  writeHtmlReport('claudient-audit-report.html', 'Claude Code Compliance Audit', date, totalScore, percentage, results)
 }
 
 function scoreCommand() {
@@ -2233,6 +2541,19 @@ switch (command) {
     exportCommand(harness)
     break
   }
+  case 'council': {
+    const domain = positional[0]
+    try {
+      execSync(`node "${path.join(__dirname, 'council.js')}" "${domain || ''}"`, { stdio: 'inherit' })
+    } catch {
+      process.exit(1)
+    }
+    break
+  }
+  case 'gui':
+  case 'dashboard':
+    dashboardCommand()
+    break
   case 'score':
     scoreCommand()
     break

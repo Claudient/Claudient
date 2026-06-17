@@ -221,6 +221,34 @@ Welcome to Claudient! Let's set up your Claude Code environment.
 For enterprise governance: claudient init --enterprise`,
   },
   {
+    id: "benchmark",
+    name: "claudient benchmark",
+    icon: "📊",
+    desc: "Display eval scores for benchmarked skills. No args: top 10 by score. With skill-id: detailed result card with grade, tests, and notes.",
+    usage: "claudient benchmark [skill-id]",
+    tier: "free",
+    output: `claudient benchmark — Skill Eval Scores
+────────────────────────────────────────────
+Benchmarked: 20 skills | Avg score: 88.8%
+
+Top 10 by score:
+  ✅ fastapi-crud           96%  (A)  10/10 tests  [2026-06-14]
+  ✅ react-components       94%  (A)  10/10 tests  [2026-06-14]
+  ✅ auth-patterns          92%  (A)   9/10 tests  [2026-06-14]
+  ✅ terraform-modules      91%  (A)  10/10 tests  [2026-06-13]
+  ✅ pr-reviewer            90%  (A)   9/10 tests  [2026-06-13]
+  🟦 ci-cd-pipeline        88%  (B)   9/10 tests  [2026-06-13]
+  🟦 sql-optimization      86%  (B)   8/10 tests  [2026-06-12]
+  🟦 adr-writer            85%  (B)   9/10 tests  [2026-06-12]
+  🟨 cold-email-v1         72%  (C)   7/10 tests  [2026-06-11]
+  🟨 lead-scoring          68%  (C)   6/10 tests  [2026-06-11]
+
+Grade scale: A (90%+) | B (75-89%) | C (60-74%) | F (<60%)
+Methodology: each skill tested on 10 real-world prompts.
+
+→ Run claudient benchmark <skill-id> for details`,
+  },
+  {
     id: "init-enterprise",
     name: "claudient init --enterprise",
     icon: "🏢",
@@ -279,6 +307,54 @@ full governance, compliance, and security for your organization.
 Next: Run claudient audit for your first compliance report.
 Support: ceo@uitbreiden.com`,
   },
+  {
+    id: "dashboard",
+    name: "claudient dashboard",
+    icon: "🖥️",
+    desc: "Launch the local dashboard app. Spawns the Astro dev server and auto-opens the web GUI in the default browser.",
+    usage: "claudient dashboard",
+    tier: "free",
+    output: `Launching Claudient Workspace Dashboard locally...
+Starting local Astro dev server...
+Opening dashboard at http://localhost:4321 in your browser...
+
+Press Ctrl+C to terminate dashboard server.`,
+  },
+  {
+    id: "council",
+    name: "claudient council",
+    icon: "🤝",
+    desc: "Trigger domain-wide subagent swarm orchestration. Compiles stack-specific agent roles, tools, and rules into a dynamic markdown instruction file (COUNCIL_INSTRUCTIONS.md) to run collaborative multi-agent swarms.",
+    usage: "claudient council <domain>",
+    tier: "free",
+    output: `
+══════════════════════════════════════════════════════════════════════════════════
+  ASSEMBLING CLAUDE COUNCIL: SDR STACK
+  Specialized B2B outreach & automated pipeline qualification
+══════════════════════════════════════════════════════════════════════════════════
+
+✔ Resolved stack folder: sdr
+✔ Loading primary persona...
+  "You are a senior SDR agent focused on crafting high-converting cold email outreach..."
+✔ Deploying specialized skills (3):
+  • lead-qualification — Scoring inbound leads and categorizing fit
+  • email-copywriter — Writing targeted personalized cold emails
+  • sequence-builder — Creating 4-step nurturing email flows
+✔ Initializing command mapping (2):
+  • /score-lead — Run automatic lead scoring matrix
+  • /draft-email — Generate outreach draft for contact
+✔ Activating runtime security hooks (1):
+  • pii-check — Scan outgoing mail content for personal info
+
+Define the Swarm Objective/Task:
+> Draft a personalized cold email sequence for VP of Engineering at Vercel targeting Next.js cost optimizations.
+
+✔ Claude Council Swarm instructions formulated successfully!
+Saved instructions file to: /Users/tushar/Desktop/Claudient/COUNCIL_INSTRUCTIONS.md
+
+To run the swarm, start your Claude Code session and instruct it:
+  "Read COUNCIL_INSTRUCTIONS.md and execute the swarm workflow steps to achieve the objective."`,
+  },
 ];
 
 export function CliApp() {
@@ -304,7 +380,7 @@ export function CliApp() {
       <aside className="sm:w-56 shrink-0 border-r border-hairline bg-cream flex flex-col overflow-hidden">
         <div className="p-3">
           <Eyebrow color="#f54e00">CLI Commands</Eyebrow>
-          <div className="mt-1 text-[11px] text-mute">8 commands — 5 free, 3 enterprise</div>
+          <div className="mt-1 text-[11px] text-mute">11 commands — 8 free, 3 enterprise</div>
         </div>
         <div className="flex-1 overflow-auto px-2 pb-2 space-y-0.5">
           {commands.map((c) => (
@@ -324,7 +400,7 @@ export function CliApp() {
           ))}
         </div>
         <div className="px-3 py-2 border-t border-hairline text-[10px] text-mute">
-          Free tier: doctor, consult, share, import, score, init
+          Free tier: doctor, consult, share, import, benchmark, score, init, dashboard, council
         </div>
       </aside>
 
