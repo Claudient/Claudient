@@ -1,18 +1,18 @@
 # Claudient Session State — 2026-06-17
 
 ## Current Status
-- **Phase 16 Complete:**
-  - Standardized all 12 core/role agent files with YAML frontmatter `updated` dates.
-  - Enforced strict freshness checks in CI (`validate.yml`) by removing the `--warn-only` flag.
-  - Resolved catalog path mapping inconsistencies for professional stacks in `scripts/build-catalog.js`.
-  - Rebuilt plugins, catalog, and index to propagate all updates.
-  - Successfully verified all tests and Astro site compilation.
+- **Phase 17 Complete:**
+  - Implemented the Statuslines Simulation Playground inside the website's UI (ToolkitApp).
+  - Added the `claudient add statusline <name>` command to the CLI to copy and configure statuslines automatically in user's `.claude/settings.json`.
+  - Built a dependency-free translation engine (`scripts/translate-assets.js`) using Google's lightweight `gemini-1.5-flash` model.
+  - Implemented cross-harness export command (`claudient export <cursor|windsurf>`) compiling workspace guidelines into `.cursorrules` or `.windsurfrules`.
+  - Successfully ran tests, compiled Astro site assets, and verified validations.
 - **Repository Author:** tushar2704 <tushar.inseec@gmail.com>
 
-## Pending Roadmap (Tomorrow - Phase 17)
-1. **Executable UI Integrations:** Turn statusline presets into active script executions (live token/session cost, usage tracking, and active MCP status alerts).
-2. **Haiku Translation Engine:** Set up the fan-out translation pipeline to translate the remaining ~880 deferred markdown content assets (slash commands, role-specific agents, rules, and personas) into French, German, Spanish, and Dutch.
-3. **Cross-Harness Export:** Add automated export structures for Cursor `.cursorrules` and Windsurf configurations to leverage the full Claudient catalog outside of native Claude Code.
+## Pending Roadmap (Next Steps - Phase 18)
+1. **Desktop GUI App entrypoint**: Hook up the Astro site / workspace manager app with a desktop launcher shell script or local server wrapper for offline usage.
+2. **Dynamic telemetry opt-in**: Implement optional developer-oriented telemetry prompts inside `init` to gather signals on which stacks are most popular.
+3. **Enterprise Audit Enhancements**: Expand the `audit` report findings card to export HTML logs for security compliance audits.
 
 ## Resume Instructions
-To resume, tell the agent: "Resume from SESSION_STATE.md and begin Phase 17."
+To resume, tell the agent: "Resume from SESSION_STATE.md and begin Phase 18."
