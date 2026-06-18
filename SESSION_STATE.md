@@ -26,7 +26,11 @@
   - Implemented Architect / Mason Handoff Loop (`npx claudient handoff`) coordinating design-to-code iteration.
   - Implemented Stunt Double TDD Runner (`npx claudient tdd`) automating Red-Green-Refactor verification cycles.
   - Implemented Spec-First Enforcer Hook (`npx claudient enforce`) checking active diff additions against spec constraints.
+- **Phase 23 Complete:**
+  - Implemented Codebase Sweeper (`npx claudient sweep`) to audit files for dead code and unused imports.
+  - Implemented The Historian Docs Hook (`npx claudient documentation` / `docs`) to dynamically update reference sheets.
+  - Implemented Chaos Monkey Tester (`npx claudient chaos`) simulating boundaries and latency in testing loops.
 - **Repository Author:** tushar2704 <tushar.inseec@gmail.com>
 
 ## Next Steps
-1. Align with the user on the requirements and architecture for Phase 23.
+1. Align with the user on the requirements and architecture for Phase 24.
