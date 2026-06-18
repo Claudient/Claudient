@@ -57,6 +57,46 @@ const highlights = [
     features: ["Auto-TDD Hook", "Dev Doctor", "JIT Context Injector"],
     audience: "Onboarding & Daily Contributors",
   },
+  {
+    icon: "🔴",
+    title: "Zero-Trust & Compliance",
+    color: "#ff5722",
+    pitch: "Turn soft guidelines into hard architectural enforcements. Constitution guardrails, automated audits, and shadow PRs.",
+    features: ["Constitution Guardrail", "The Auditor", "Ghost in the Machine", "The Interrogator", "The Archaeologist", "Specify Wizard"],
+    audience: "Security & Compliance Teams",
+  },
+  {
+    icon: "🩵",
+    title: "Enterprise Intelligence",
+    color: "#00bcd4",
+    pitch: "AST-powered codebase mapping, predictive tech debt analysis, and self-writing documentation. Know your repo better than anyone.",
+    features: ["The Historian", "Sonar Cartographer", "The Prophet", "Invariant Discovery", "The Oracle", "Graph Context"],
+    audience: "Platform & Architecture Leads",
+  },
+  {
+    icon: "🟧",
+    title: "Multi-Agent & Federation",
+    color: "#ff9800",
+    pitch: "Dual-model orchestration at scale. Expensive models design, cheap models build — with full dependency tracking.",
+    features: ["Architect/Mason Federation", "Cross-Talk", "DBA-in-a-Box", "Incident Commander", "Self-Healing CI", "MCP Discovery"],
+    audience: "DevOps & Infrastructure Teams",
+  },
+  {
+    icon: "💗",
+    title: "Creative & Vibe Coding",
+    color: "#e91e63",
+    pitch: "Adversarial UI loops, Figma-to-Code bridges, and self-documenting spec flows. Pixels polished, specs enforced.",
+    features: ["Vibe & Verify", "Figma Bridge", "The Artifact", "Atomic Commit", "Design Extraction"],
+    audience: "Frontend & Product Engineers",
+  },
+  {
+    icon: "💜",
+    title: "UX & Developer Experience",
+    color: "#7c4dff",
+    pitch: "Live statuslines, premium themes, power keybindings, and shell aliases. The DX layer for power users.",
+    features: ["Pulse Statusline", "Matrix Theme Pack", "Power Keybindings", "Shell Aliases"],
+    audience: "Power Users & DX Teams",
+  },
 ];
 
 export function HomeApp({ wm }: { wm: WindowManager }) {
@@ -107,7 +147,7 @@ export function HomeApp({ wm }: { wm: WindowManager }) {
 
       {/* 5 Feature Highlight Categories */}
       <h2 className="mt-9 text-lg font-bold text-ink">Tier-1 Enterprise AI Orchestrator</h2>
-      <p className="mt-1 text-[12.5px] text-mute">22 advanced features that transform Claudient from a prompt library into a full orchestration platform.</p>
+      <p className="mt-1 text-[12.5px] text-mute">49 advanced features across 10 categories — from cost optimization to multi-agent federation.</p>
       <div className="mt-4 space-y-3">
         {highlights.map((h) => (
           <button
@@ -136,6 +176,86 @@ export function HomeApp({ wm }: { wm: WindowManager }) {
             </div>
           </button>
         ))}
+      </div>
+
+      {/* CLI Tools */}
+      <h2 className="mt-9 text-lg font-bold text-ink">9 Powerful CLI Tools</h2>
+      <p className="mt-1 text-[12.5px] text-mute">Run these today — no configuration needed.</p>
+      <div className="mt-4 grid sm:grid-cols-3 gap-3">
+        {[
+          { cmd: "claudient doctor", desc: "Health check: 5 diagnostics in seconds", icon: "🩺" },
+          { cmd: "claudient consult \"need\"", desc: "AI-powered skill & stack recommendations", icon: "💡" },
+          { cmd: "claudient share <id>", desc: "Export stack as shareable GitHub Gist", icon: "📤" },
+          { cmd: "claudient benchmark", desc: "Eval scores for benchmarked skills", icon: "📊" },
+          { cmd: "claudient audit", desc: "Deep compliance audit across 8 dimensions", icon: "🔍" },
+          { cmd: "claudient score", desc: "AI-Readiness Score: 0-100, 8 dimensions", icon: "🎯" },
+        ].map((t) => (
+          <button
+            key={t.cmd}
+            onClick={() => wm.open("cli")}
+            className="text-left rounded-xl border border-hairline bg-white p-3 hover:border-olive/70 hover:-translate-y-0.5 transition"
+          >
+            <div className="text-lg mb-1">{t.icon}</div>
+            <code className="text-[11px] font-mono font-bold text-brand-purple">{t.cmd}</code>
+            <p className="mt-1 text-[11.5px] text-mute">{t.desc}</p>
+          </button>
+        ))}
+      </div>
+
+      {/* Why Claudient Wins */}
+      <h2 className="mt-9 text-lg font-bold text-ink">Why Claudient Wins</h2>
+      <div className="mt-4 rounded-xl border border-hairline bg-white p-5">
+        <div className="grid sm:grid-cols-2 gap-3">
+          {[
+            { moat: "Only 5-language localized collection", detail: "EN, FR, DE, NL, ES — the only multilingual Claude Code resource." },
+            { moat: "42 business-domain stacks", detail: "From SaaS to fintech, healthcare to e-commerce. Copy-ready workspaces." },
+            { moat: "Widest artifact-type span", detail: "15+ artifact types: skills, agents, hooks, rules, commands, workflows, plugins, personas, stacks, MCPs..." },
+            { moat: "Dual distribution: marketplace + npm", detail: "Install via Plugin Marketplace, npm, or git clone. No other project offers both." },
+          ].map((m) => (
+            <div key={m.moat} className="flex items-start gap-2.5">
+              <span className="text-emerald-500 text-[14px] mt-0.5 shrink-0">🏆</span>
+              <div>
+                <div className="text-[13px] font-bold text-ink">{m.moat}</div>
+                <p className="text-[11.5px] text-mute mt-0.5">{m.detail}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <button
+          onClick={() => wm.open("compare")}
+          className="mt-4 inline-flex items-center gap-1.5 rounded-md border border-olive/60 bg-white px-3 py-1.5 text-[12px] font-semibold text-ink hover:bg-cream transition"
+        >
+          See full comparison →
+        </button>
+      </div>
+
+      {/* Enterprise Ready */}
+      <div className="mt-9 rounded-xl border border-brand-orange/40 bg-gradient-to-r from-orange-50 to-white p-5">
+        <div className="flex items-start gap-4">
+          <span className="text-4xl shrink-0">🏢</span>
+          <div>
+            <div className="text-[15px] font-bold text-ink">Enterprise Ready</div>
+            <p className="text-[12.5px] text-body mt-1 leading-relaxed">
+              SOC2/GDPR/HIPAA compliance stacks. Governance hooks with audit trails.
+              Dedicated stack engineer. Self-hosted or VPC deployment.
+              4 pricing tiers from free to annual enterprise contracts.
+            </p>
+            <div className="mt-3 flex flex-wrap gap-2.5">
+              <button
+                onClick={() => wm.open("pricing")}
+                className="inline-flex items-center gap-1.5 rounded-md bg-brand-orange px-3 py-1.5 text-[12px] font-bold text-white border-b-2 border-brand-orange/70 hover:brightness-105 transition"
+              >
+                View Pricing →
+              </button>
+              <a
+                href="mailto:ceo@uitbreiden.com?subject=Enterprise%20Demo"
+                className="inline-flex items-center gap-1.5 rounded-md border border-olive/60 bg-white px-3 py-1.5 text-[12px] font-semibold text-ink hover:bg-cream transition"
+              >
+                Book a Demo
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="mt-9 rounded-xl border border-olive/50 bg-cream p-5 flex items-start gap-4">

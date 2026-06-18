@@ -18,7 +18,10 @@ export type AppId =
   | "plugins"
   | "personas"
   | "toolkit"
-  | "showcase";
+  | "showcase"
+  | "pricing"
+  | "compare"
+  | "swarm";
 
 export interface AppMeta {
   id: AppId;

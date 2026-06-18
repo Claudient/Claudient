@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Eyebrow } from "./ui";
 
-type Tab = "Themes" | "Statuslines" | "Keybindings" | "Output Styles" | "Routines" | "Settings";
+type Tab = "Themes" | "Statuslines" | "Keybindings" | "Output Styles" | "Routines" | "Settings" | "Playground" | "Harness" | "Codebase Map";
 
 const THEMES = [
   { name: "Claudient Brand", id: "claudient-brand", colors: ["#f5b800", "#f54e00", "#1d4aff"] },
@@ -23,6 +23,7 @@ const STATUSLINES = [
   { name: "Git Focused", id: "git-focused", desc: "Branch, status, last commit, and diff stats." },
   { name: "Full", id: "full", desc: "Everything: cost, git, context, model, tokens." },
   { name: "Rate Limit", id: "rate-limit", desc: "Rate limit countdown and usage warnings." },
+  { name: "Pulse", id: "pulse", desc: "Real-time swarm status, context budget, and map density." },
 ];
 
 const KEYBINDINGS = [
@@ -63,14 +64,40 @@ const SETTINGS = [
   { name: "Agency", id: "agency", desc: "Multi-client settings with project isolation." },
 ];
 
+const CODEBASE_MAP = {
+  nodes: [
+    { id: "scripts/cli.js", label: "cli.js", group: "CLI", x: 60, y: 50, color: "#f54e00", functions: ["initCommand", "doctorCommand", "auditCommand", "scoreCommand"], imports: ["fs", "path", "os", "child_process"] },
+    { id: "scripts/council.js", label: "council.js", group: "CLI", x: 60, y: 150, color: "#f54e00", functions: ["main", "parseClaudeMd", "promptObjective"], imports: ["fs", "path", "readline"] },
+    { id: "scripts/chart.js", label: "chart.js", group: "CLI", x: 60, y: 250, color: "#f54e00", functions: ["main", "walk", "parseFile"], imports: ["fs", "path"] },
+    { id: "scripts/translate-assets.js", label: "translate.js", group: "CLI", x: 60, y: 350, color: "#f54e00", functions: ["translateFile", "main"], imports: ["fs", "path"] },
+    
+    { id: "index.json", label: "index.json", group: "Core Data", x: 200, y: 100, color: "#1078a3", functions: [], imports: [] },
+    { id: "professional-stacks", label: "stacks/", group: "Core Data", x: 200, y: 280, color: "#1078a3", functions: [], imports: [] },
+    
+    { id: "site/src/components/os/ClaudientOS.tsx", label: "ClaudientOS.tsx", group: "Website", x: 350, y: 50, color: "#b62ad9", functions: ["ClaudientOS"], imports: ["React", "useWindows"] },
+    { id: "site/src/components/os/apps/CliApp.tsx", label: "CliApp.tsx", group: "Website", x: 350, y: 150, color: "#b62ad9", functions: ["CliApp"], imports: ["React", "ui"] },
+    { id: "site/src/components/os/apps/SwarmApp.tsx", label: "SwarmApp.tsx", group: "Website", x: 350, y: 250, color: "#b62ad9", functions: ["SwarmApp"], imports: ["React", "ui"] },
+    { id: "site/src/components/os/apps/ToolkitApp.tsx", label: "ToolkitApp.tsx", group: "Website", x: 350, y: 350, color: "#b62ad9", functions: ["ToolkitApp"], imports: ["React"] },
+  ],
+  links: [
+    { source: "scripts/cli.js", target: "scripts/council.js" },
+    { source: "scripts/cli.js", target: "scripts/chart.js" },
+    { source: "scripts/cli.js", target: "scripts/translate-assets.js" },
+    { source: "scripts/council.js", target: "professional-stacks" },
+    { source: "site/src/components/os/ClaudientOS.tsx", target: "site/src/components/os/apps/CliApp.tsx" },
+    { source: "site/src/components/os/ClaudientOS.tsx", target: "site/src/components/os/apps/SwarmApp.tsx" },
+    { source: "site/src/components/os/ClaudientOS.tsx", target: "site/src/components/os/apps/ToolkitApp.tsx" },
+  ]
+};
+
 const TAB_ICONS: Record<Tab, string> = {
-  Themes: "🎨", Statuslines: "📊", Keybindings: "⌨️", "Output Styles": "💬", Routines: "🔄", Settings: "⚙️",
+  Themes: "🎨", Statuslines: "📊", Keybindings: "⌨️", "Output Styles": "💬", Routines: "🔄", Settings: "⚙️", Playground: "🎮", Harness: "🔗", "Codebase Map": "🗺️",
 };
 
 export function ToolkitApp() {
   const [tab, setTab] = useState<Tab>("Themes");
   const [currentTheme, setCurrentTheme] = useState("claudient-brand");
-  const tabs: Tab[] = ["Themes", "Statuslines", "Keybindings", "Output Styles", "Routines", "Settings"];
+  const tabs: Tab[] = ["Themes", "Statuslines", "Keybindings", "Output Styles", "Routines", "Settings", "Playground", "Harness", "Codebase Map"];
 
   useEffect(() => {
     const saved = localStorage.getItem("claudient-theme") || "claudient-brand";
@@ -92,6 +119,27 @@ export function ToolkitApp() {
   const [simRateLimit, setSimRateLimit] = useState(15);
   const [simBranch, setSimBranch] = useState("main");
   const [simFile, setSimFile] = useState("index.ts");
+
+  const [pgCost, setPgCost] = useState(0.42);
+  const [pgAdded, setPgAdded] = useState(120);
+  const [pgRemoved, setPgRemoved] = useState(40);
+  const [pgCtx, setPgCtx] = useState(28);
+  const [pgMcp, setPgMcp] = useState(2);
+  const [pgPreset, setPgPreset] = useState("cost-watch");
+  const [selectedNodeId, setSelectedNodeId] = useState<string>("scripts/cli.js");
+
+  const renderPlaygroundLine = () => {
+    const ctxColor = pgCtx >= 80 ? "text-red-400 font-bold" : pgCtx >= 50 ? "text-yellow-400" : "text-emerald-400";
+    const makeBar = (pct: number, w = 10) => "▓".repeat(Math.max(0, Math.round((pct/100)*w))) + "░".repeat(Math.max(0, w - Math.round((pct/100)*w)));
+    switch (pgPreset) {
+      case "minimal": return <span>[<span className="text-sky-400">main</span>] index.ts</span>;
+      case "cost-watch": return <span><span className="text-emerald-400 font-semibold">${pgCost.toFixed(2)}</span> | <span className="text-cyan-400">+{pgAdded}/-{pgRemoved} lines</span> | <span className={ctxColor}>CTX {pgCtx}%</span> | MCP: <span className="text-purple-400">{pgMcp}</span></span>;
+      case "context-budget": return <span>CTX [<span className={ctxColor}>{makeBar(pgCtx)}</span>] <span className={ctxColor}>{pgCtx}%</span> | <span className="text-purple-400">{(pgCtx * 2000).toLocaleString()}</span>/200K tokens</span>;
+      case "full": return <span><span className="text-indigo-400">[sonnet]</span> claudient:<span className="text-sky-400">main</span> | <span className="text-emerald-400 font-semibold">${pgCost.toFixed(2)}</span> | <span className="text-cyan-400">+{pgAdded}/-{pgRemoved}</span> | [<span className={ctxColor}>{makeBar(pgCtx)}</span>] {pgCtx}% | MCP:<span className="text-purple-400">{pgMcp}</span></span>;
+      case "pulse": return <span>Swarm: <span className="text-emerald-400 font-semibold">{pgMcp} active</span> | Density: <span className="text-purple-400">{Math.min(99, pgCtx + 20)}%</span> | Budget: <span className="text-emerald-400">${pgCost.toFixed(2)}</span> | CTX: [<span className={ctxColor}>{makeBar(pgCtx)}</span>]</span>;
+      default: return <span><span className="text-emerald-400">${pgCost.toFixed(2)}</span> | CTX {pgCtx}%</span>;
+    }
+  };
 
   const renderStatuslinePreview = () => {
     const ctxColor = simCtx >= 80 ? "text-red-500 font-bold" : simCtx >= 50 ? "text-yellow-500" : "text-emerald-500";
@@ -164,6 +212,7 @@ export function ToolkitApp() {
     }
   };
 
+  const selectedNode = CODEBASE_MAP.nodes.find(n => n.id === selectedNodeId) || CODEBASE_MAP.nodes[0];
 
   return (
     <div className="flex h-full">
@@ -178,7 +227,7 @@ export function ToolkitApp() {
           ))}
         </div>
       </div>
-      <div className="flex-1 p-4 overflow-y-auto">
+      <div className="flex-1 p-4 overflow-y-auto min-w-0">
         <Eyebrow color="#f54e00">UI Toolkit</Eyebrow>
         <h2 className="text-lg font-bold text-ink mt-1 mb-4">{tab}</h2>
 
@@ -282,6 +331,186 @@ export function ToolkitApp() {
                 <p className="mt-1 text-[12px] text-mute">{s.desc}</p>
               </div>
             ))}
+          </div>
+        )}
+
+        {tab === "Playground" && (
+          <div>
+            <p className="text-[12px] text-mute mb-4">Adjust the sliders to see a live statusline preview.</p>
+            <div className="rounded-lg bg-[#1a1b26] p-4 font-mono text-[12px] text-slate-300 mb-5">
+              <div className="text-slate-500 text-[10px] mb-2"># statusline preview ({pgPreset})</div>
+              <div>{renderPlaygroundLine()}</div>
+            </div>
+            <div className="mb-4">
+              <label className="text-[11px] font-bold text-mute uppercase tracking-wider">Preset</label>
+              <div className="mt-1.5 flex flex-wrap gap-1.5">
+                {["minimal","cost-watch","context-budget","full","pulse"].map((p) => (
+                  <button key={p} onClick={() => setPgPreset(p)}
+                    className={`rounded-md px-2.5 py-1 text-[11px] font-semibold transition ${pgPreset === p ? "bg-brand-orange text-white" : "bg-cream text-body hover:bg-white"}`}>
+                    {p}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div className="space-y-4">
+              {[
+                { label: "Session Cost", value: pgCost, set: setPgCost, min: 0, max: 10, step: 0.01, fmt: `$${pgCost.toFixed(2)}` },
+                { label: "Lines Added", value: pgAdded, set: setPgAdded, min: 0, max: 1000, step: 10, fmt: `+${pgAdded}` },
+                { label: "Lines Removed", value: pgRemoved, set: setPgRemoved, min: 0, max: 500, step: 5, fmt: `-${pgRemoved}` },
+                { label: "Context Utilization", value: pgCtx, set: setPgCtx, min: 0, max: 100, step: 1, fmt: `${pgCtx}%` },
+                { label: "Active MCP Servers", value: pgMcp, set: setPgMcp, min: 0, max: 8, step: 1, fmt: `${pgMcp}` },
+              ].map((s) => (
+                <div key={s.label}>
+                  <div className="flex justify-between items-center mb-1">
+                    <span className="text-[12px] font-semibold text-ink">{s.label}</span>
+                    <span className="text-[11px] font-mono text-brand-purple">{s.fmt}</span>
+                  </div>
+                  <input type="range" min={s.min} max={s.max} step={s.step} value={s.value}
+                    onChange={(e) => s.set(Number(e.target.value))}
+                    className="w-full h-1.5 rounded-full appearance-none bg-cream accent-brand-orange cursor-pointer" />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {tab === "Harness" && (
+          <div>
+            <p className="text-[12.5px] text-body leading-relaxed mb-5">
+              Claudient works with Claude Code, Cursor, Windsurf, Codex, and GitHub Copilot.
+              Download the config for your harness below.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {[
+                { name: "Claude Code", file: "CLAUDE.md", desc: "Native format — works out of the box.", color: "#f54e00" },
+                { name: "Cursor", file: ".cursorrules", desc: "Drop into your repo root for instant context.", color: "#1d4aff" },
+                { name: "Windsurf", file: ".windsurfrules", desc: "Compatible with Windsurf's Cascade engine.", color: "#3fb950" },
+                { name: "GitHub Copilot", file: ".github/copilot-instructions.md", desc: "Project-level instructions for Copilot.", color: "#b62ad9" },
+                { name: "Codex", file: "AGENTS.md", desc: "OpenAI Codex agent configuration.", color: "#1078a3" },
+                { name: "Cline", file: ".clinerules", desc: "Cline-specific rules and context.", color: "#f5b800" },
+              ].map((h) => (
+                <div key={h.name} className="rounded-xl border border-hairline bg-white p-4 hover:border-olive/70 transition">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="size-2.5 rounded-full" style={{ backgroundColor: h.color }} />
+                    <span className="text-[13px] font-bold text-ink">{h.name}</span>
+                  </div>
+                  <code className="text-[10px] font-mono text-mute">{h.file}</code>
+                  <p className="mt-1.5 text-[11.5px] text-mute">{h.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-5 rounded-lg border border-hairline bg-cream p-4">
+              <div className="text-[12px] font-bold text-ink mb-1">Cross-harness export</div>
+              <p className="text-[11.5px] text-body leading-relaxed">
+                Run <code className="rounded bg-white px-1.5 py-0.5 text-[11px] font-mono text-brand-purple">claudient export --harness cursor</code> to
+                convert any Claudient skill or stack into the target harness format.
+              </p>
+            </div>
+          </div>
+        )}
+
+        {tab === "Codebase Map" && (
+          <div className="flex flex-col xl:flex-row gap-4 h-[450px] overflow-hidden">
+            <div className="flex-1 rounded-xl border border-hairline bg-[#1a1b26] relative overflow-hidden flex flex-col min-h-0">
+              <div className="absolute top-3 left-3 text-[10px] font-mono text-slate-500 z-10">
+                # Dependency Graph Map (Click Node to Inspect)
+              </div>
+              <div className="flex-1 min-h-0 relative">
+                <svg className="w-full h-full min-h-[350px]">
+                  {CODEBASE_MAP.links.map((link, i) => {
+                    const sourceNode = CODEBASE_MAP.nodes.find(n => n.id === link.source);
+                    const targetNode = CODEBASE_MAP.nodes.find(n => n.id === link.target);
+                    if (!sourceNode || !targetNode) return null;
+                    const isHighlighted = selectedNodeId === link.source || selectedNodeId === link.target;
+                    return (
+                      <line
+                        key={i}
+                        x1={sourceNode.x}
+                        y1={sourceNode.y}
+                        x2={targetNode.x}
+                        y2={targetNode.y}
+                        stroke={isHighlighted ? "#fabd2f" : "#444b6a"}
+                        strokeWidth={isHighlighted ? 2 : 1}
+                        strokeDasharray={isHighlighted ? "none" : "3,3"}
+                        className="transition-all duration-300"
+                      />
+                    );
+                  })}
+                  {CODEBASE_MAP.nodes.map((node) => {
+                    const isSelected = selectedNodeId === node.id;
+                    return (
+                      <g
+                        key={node.id}
+                        transform={`translate(${node.x},${node.y})`}
+                        onClick={() => setSelectedNodeId(node.id)}
+                        className="cursor-pointer group"
+                      >
+                        <circle
+                          r={isSelected ? 10 : 8}
+                          fill={node.color}
+                          stroke={isSelected ? "#ffffff" : "transparent"}
+                          strokeWidth={2}
+                          className="transition-all duration-300 group-hover:scale-125"
+                        />
+                        <text
+                          y={20}
+                          textAnchor="middle"
+                          fill={isSelected ? "#ffffff" : "#a9b1d6"}
+                          className="text-[10px] font-mono select-none transition-all duration-300 font-semibold"
+                        >
+                          {node.label}
+                        </text>
+                      </g>
+                    );
+                  })}
+                </svg>
+              </div>
+            </div>
+            <div className="w-full xl:w-72 rounded-xl border border-hairline bg-white p-4 flex flex-col overflow-y-auto shrink-0">
+              <span className="text-[10px] font-bold text-mute uppercase tracking-wider block mb-1">
+                Node Inspector
+              </span>
+              <h3 className="text-[14px] font-mono font-bold text-ink truncate mb-2">
+                {selectedNode.id}
+              </h3>
+              <div className="flex gap-1.5 flex-wrap mb-4">
+                <span className="text-[9px] font-bold uppercase rounded px-1.5 py-0.5 bg-brand-yellow/20 text-brand-orange">
+                  {selectedNode.group}
+                </span>
+              </div>
+              <div className="mb-4">
+                <span className="text-[11px] font-bold text-mute uppercase tracking-wider block mb-1.5">
+                  Functions / Exports ({selectedNode.functions.length})
+                </span>
+                {selectedNode.functions.length > 0 ? (
+                  <div className="space-y-1">
+                    {selectedNode.functions.map((f, i) => (
+                      <code key={i} className="block text-[10px] font-mono bg-slate-50 text-indigo-500 px-2 py-0.5 rounded border border-slate-100">
+                        {f}()
+                      </code>
+                    ))}
+                  </div>
+                ) : (
+                  <span className="text-[11px] text-mute italic">No exported functions</span>
+                )}
+              </div>
+              <div>
+                <span className="text-[11px] font-bold text-mute uppercase tracking-wider block mb-1.5">
+                  Import Dependencies ({selectedNode.imports.length})
+                </span>
+                {selectedNode.imports.length > 0 ? (
+                  <div className="space-y-1">
+                    {selectedNode.imports.map((imp, i) => (
+                      <code key={i} className="block text-[10px] font-mono bg-slate-50 text-slate-600 px-2 py-0.5 rounded truncate">
+                        "{imp}"
+                      </code>
+                    ))}
+                  </div>
+                ) : (
+                  <span className="text-[11px] text-mute italic">No imports declared</span>
+                )}
+              </div>
+            </div>
           </div>
         )}
       </div>

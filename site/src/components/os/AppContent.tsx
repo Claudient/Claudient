@@ -20,6 +20,9 @@ import { PluginsApp } from "./apps/PluginsApp";
 import { PersonasApp } from "./apps/PersonasApp";
 import { ToolkitApp } from "./apps/ToolkitApp";
 import { ShowcaseApp } from "./apps/ShowcaseApp";
+import { PricingApp } from "./apps/PricingApp";
+import { CompareApp } from "./apps/CompareApp";
+import { SwarmApp } from "./apps/SwarmApp";
 
 export function AppContent({ appId, wm }: { appId: AppId; wm: WindowManager }) {
   switch (appId) {
@@ -63,6 +66,12 @@ export function AppContent({ appId, wm }: { appId: AppId; wm: WindowManager }) {
       return <ToolkitApp />;
     case "showcase":
       return <ShowcaseApp />;
+    case "pricing":
+      return <PricingApp />;
+    case "compare":
+      return <CompareApp />;
+    case "swarm":
+      return <SwarmApp />;
     default:
       return null;
   }
