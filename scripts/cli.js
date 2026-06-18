@@ -55,6 +55,9 @@ Usage:
   npx claudient import <gist-url>            Import a shared skill bundle from GitHub Gist
   npx claudient export <harness>              Export rules/guidelines to Cursor or Windsurf
   npx claudient council <domain>             Trigger domain-wide subagent swarm session
+  npx claudient map                           Generate interactive codebase dependency graph
+  npx claudient spec                          Run interactive Specify Wizard for Spec Kit
+  npx claudient repair                        Run tests and capture errors for self-healing
   npx claudient learn                         Scan project and generate custom rules
   npx claudient checkpoint "<task>"          Create workspace state checkpoint
   npx claudient restore                       Restore from latest checkpoint
@@ -2545,6 +2548,31 @@ switch (command) {
     const domain = positional[0]
     try {
       execSync(`node "${path.join(__dirname, 'council.js')}" "${domain || ''}"`, { stdio: 'inherit' })
+    } catch {
+      process.exit(1)
+    }
+    break
+  }
+  case 'chart':
+  case 'map': {
+    try {
+      execSync(`node "${path.join(__dirname, 'chart.js')}"`, { stdio: 'inherit' })
+    } catch {
+      process.exit(1)
+    }
+    break
+  }
+  case 'spec': {
+    try {
+      execSync(`node "${path.join(__dirname, 'spec.js')}"`, { stdio: 'inherit' })
+    } catch {
+      process.exit(1)
+    }
+    break
+  }
+  case 'repair': {
+    try {
+      execSync(`node "${path.join(__dirname, 'repair.js')}"`, { stdio: 'inherit' })
     } catch {
       process.exit(1)
     }
