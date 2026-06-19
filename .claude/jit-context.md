@@ -1,6 +1,6 @@
 # JIT Context Payload for `scripts/cli.js`
 
-Generated: 2026-06-18T13:22:07.431Z | Reference Workspace: `/Users/tushar/Desktop/Claudient`
+Generated: 2026-06-19T08:21:43.000Z | Reference Workspace: `/Users/tushar/Desktop/Claudient`
 
 ## 📄 Target File Structure
 - **Path**: `scripts/cli.js`

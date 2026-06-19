@@ -676,7 +676,346 @@ Analyzing git history: v1.9.0 → v1.10.1
   • Fixed duplicate code in ShowcaseApp
   • Resolved Vercel deployment rootDirectory issue
 ────────────────────────────────────────────
-Output: CHANGELOG.md (v1.10.1)`,
+Output: CHANGELOG.md (v1.10.1)`
+  },
+  {
+    id: "caveman",
+    name: "claudient caveman",
+    icon: "🦴",
+    desc: "Token-efficient mode — enforces a strict DSL that forbids conversational output, saving ~40% API tokens per session.",
+    usage: "node scripts/caveman.js",
+    tier: "free",
+    output: `claudient caveman — Token Optimizer
+────────────────────────────────────────────
+Mode: ACTIVATED
+DSL: strict (JSON-only output)
+
+Before: ~2,400 tokens/response
+After:  ~640 tokens/response
+Savings: 73%
+
+Hook installed: PreToolUse → strips filler
+Claude output: {"action":"write","file":"auth.ts","lines":42}
+
+→ Deactivate: /caveman off`,
+  },
+  {
+    id: "commit",
+    name: "claudient commit",
+    icon: "🛡️",
+    desc: "Safe commit — runs validation audits and unit tests before executing git commits under the strict author profile.",
+    usage: 'node scripts/commit.js -m "feat: add auth module"',
+    tier: "free",
+    output: `claudient commit — Safe Commit
+────────────────────────────────────────────
+Message: feat: add auth module
+
+Running pre-commit checks...
+  ✓ ESLint           0 errors
+  ✓ TypeScript       0 errors
+  ✓ vitest           47/47 passing
+  ✓ Security scan    0 vulnerabilities
+  ✓ Author check     tushar2704 <uitbreidenai@gmail.com>
+
+Committing: abc1234 feat: add auth module
+✓ Committed successfully`,
+  },
+  {
+    id: "tdd",
+    name: "claudient tdd",
+    icon: "🧪",
+    desc: "Stunt Double TDD — automates recursive Red-Green-Refactor: TestEngineer writes failing tests, ImplementationEngineer makes them pass.",
+    usage: "node scripts/tdd.js Add rate limiter",
+    tier: "free",
+    output: `claudient tdd — Test-Driven Development
+────────────────────────────────────────────
+Task: Add rate limiter
+
+Phase 1: RED (TestEngineer)
+  ✓ test_rate_limit_basic      FAIL (expected)
+  ✓ test_rate_limit_burst      FAIL (expected)
+  ✓ test_rate_limit_reset      FAIL (expected)
+  ✓ test_rate_limit_headers    FAIL (expected)
+  → 4 failing tests written
+
+Phase 2: GREEN (ImplementationEngineer)
+  ✓ test_rate_limit_basic      PASS
+  ✓ test_rate_limit_burst      PASS
+  ✓ test_rate_limit_reset      PASS
+  ✓ test_rate_limit_headers    PASS
+  → All 4 tests passing
+
+Phase 3: REFACTOR
+  ✓ Extracted RateLimiter class
+  ✓ Added JSDoc comments
+  → Clean implementation ready`,
+  },
+  {
+    id: "sweep",
+    name: "claudient sweep",
+    icon: "🧹",
+    desc: "Codebase sweeper — background agent that hunts dead code, unused imports, duplicate utilities, and stale comments.",
+    usage: "node scripts/sweep.js",
+    tier: "free",
+    output: `claudient sweep — Dead Code Hunter
+────────────────────────────────────────────
+Scanning 340 files...
+
+Dead imports found:     23
+Unused exports:          8
+Resolved TODOs:          4
+Duplicate utilities:     3
+Stale comments:         12
+────────────────────────────────────────────
+Total debt items: 50
+Auto-removed: 35 (safe deletions)
+Flagged for review: 15
+
+Lines removed: ~200
+→ Run again: claudient sweep --deep`,
+  },
+  {
+    id: "documentation",
+    name: "claudient documentation",
+    icon: "📖",
+    desc: "The Historian — automated docs updater that watches code changes and rewrites ARCHITECTURE.md to eliminate documentation drift.",
+    usage: "node scripts/documentation.js",
+    tier: "free",
+    output: `claudient documentation — The Historian
+────────────────────────────────────────────
+Scanning recent changes: 12 files
+
+Docs drift detected:
+  ✗ ARCHITECTURE.md: missing §4.3 (new refund endpoint)
+  ✗ ARCHITECTURE.md: §2.1 outdated (auth flow changed)
+  ✗ API.md: missing POST /refunds documentation
+
+Auto-updating:
+  ✓ Added §4.3 Refund Flow (12 lines)
+  ✓ Updated §2.1 Auth Flow (8 lines changed)
+  ✓ Added POST /refunds to API.md
+
+Docs synchronized: 3 sections updated
+→ Zero drift guaranteed`,
+  },
+  {
+    id: "chaos",
+    name: "claudient chaos",
+    icon: "🐒",
+    desc: "Chaos Monkey — adversarial agent that injects edge cases, network delays, null returns, and exceptions to test unit test resilience.",
+    usage: "node scripts/chaos.js src/api/payments.ts",
+    tier: "free",
+    output: `claudient chaos — Adversarial Resilience Test
+────────────────────────────────────────────
+Target: src/api/payments.ts
+Spawning 5 chaos agents...
+
+🐒 Agent 1: Network timeout after 200ms
+  ✗ FAIL: No timeout handler → unhandled rejection
+
+🐒 Agent 2: Null response from Stripe
+  ✗ FAIL: Cannot read property 'id' of null
+
+🐒 Agent 3: Concurrent writes (100 req/s)
+  ✓ PASS: Idempotency key handles duplicates
+
+🐒 Agent 4: Permission denied on DB
+  ✓ PASS: Graceful fallback with retry
+
+🐒 Agent 5: Negative payment amount
+  ✗ FAIL: No validation on amount field
+────────────────────────────────────────────
+Result: 3/5 scenarios broke your code
+→ Fix 3 issues and re-run`,
+  },
+  {
+    id: "jit",
+    name: "claudient jit",
+    icon: "💉",
+    desc: "JIT Context Injector — fetches public dependency signatures before file modifications to safeguard codebase stability.",
+    usage: "node scripts/jit.js src/api/users.ts",
+    tier: "free",
+    output: `claudient jit — Just-In-Time Context
+────────────────────────────────────────────
+Target: src/api/users.ts
+
+Tracing imports...
+  → db.query<T>()          (src/db/repository.ts)
+  → auth.verifyToken()     (src/auth/jwt.ts)
+  → cache.get()            (src/cache/redis.ts)
+  → logger.info()          (src/utils/logger.ts)
+
+Injecting signatures:
+  ✓ db.query<T>(sql: string, params: any[]): Promise<T[]>
+  ✓ auth.verifyToken(token: string): { userId: string; role: string }
+  ✓ cache.get<T>(key: string): Promise<T | null>
+  ✓ logger.info(msg: string, ctx?: object): void
+
+→ 4 signatures injected as context
+→ Claude now has full downstream awareness`,
+  },
+  {
+    id: "enforce",
+    name: "claudient enforce",
+    icon: "📋",
+    desc: "Spec-first enforcer — audits active git diff against SPEC.md rules and blocks any non-compliant changes.",
+    usage: "node scripts/enforce.js",
+    tier: "free",
+    output: `claudient enforce — Spec Audit
+────────────────────────────────────────────
+Loading: SPEC.md (127 lines, 8 sections)
+Active git diff: 14 files changed
+
+Auditing changes against spec...
+  ✓ src/api/users.ts       — compliant
+  ✓ src/api/orders.ts      — compliant
+  ✗ src/db/migrations/003  — BLOCKED
+    → SPEC.md §4.2: email field is immutable
+    → Cannot DROP COLUMN email
+
+  ✓ src/utils/auth.ts      — compliant
+  ✗ src/api/public.ts      — BLOCKED
+    → SPEC.md §3.1: PII must not appear in public responses
+────────────────────────────────────────────
+Result: 14 checked | 12 compliant | 2 blocked`,
+  },
+  {
+    id: "handoff",
+    name: "claudient handoff",
+    icon: "🏗️",
+    desc: "Architect/Mason handoff — coordinates design specification generation (Opus) and code scaffolding (Haiku) loops.",
+    usage: "node scripts/handoff.js Build notification system",
+    tier: "free",
+    output: `claudient handoff — Dual-Model Orchestration
+────────────────────────────────────────────
+Task: Build notification system
+
+Phase 1: ARCHITECT (Opus)
+  ✓ Analyzed requirements
+  ✓ Generated ARCHITECTURE.md (200 lines)
+  ✓ Planned 5 files with dependency graph
+  → Cost: $0.08
+
+Phase 2: MASON (Haiku)
+  ✓ src/notifications/service.ts      (42 lines)
+  ✓ src/notifications/templates.ts    (28 lines)
+  ✓ src/notifications/queue.ts        (35 lines)
+  ✓ src/notifications/config.ts       (12 lines)
+  ✓ tests/notifications.test.ts       (64 lines)
+  → Cost: $0.03
+────────────────────────────────────────────
+Total: $0.11 | 5 files | Enterprise architecture`,
+  },
+  {
+    id: "permissions",
+    name: "claudient permissions",
+    icon: "🔐",
+    desc: "Permission editor — lists, allows, denies, and revokes Claude model tool permissions in .claude/settings.local.json.",
+    usage: "node scripts/permissions.js",
+    tier: "free",
+    output: `claudient permissions — Tool Permission Manager
+────────────────────────────────────────────
+Reading: .claude/settings.local.json
+
+Current permissions (12 rules):
+  ✓ ALLOW  Read            *.ts, *.js, *.md
+  ✓ ALLOW  Write           src/**, tests/**
+  ✗ DENY   Write           *.env, .claude/settings.json
+  ✓ ALLOW  Bash            npm run *, npx vitest *
+  ✗ DENY   Bash            rm -rf *, sudo *
+  ✓ ALLOW  WebFetch        github.com, npmjs.com
+  ✗ DENY   WebFetch        * (all other domains)
+
+Interactive:
+  ? Add new rule? (y/N)
+  → Type: Write
+  → Pattern: scripts/**
+  → Action: ALLOW
+  ✓ Rule added: ALLOW Write scripts/**`,
+  },
+  {
+    id: "prophet",
+    name: "claudient prophet",
+    icon: "🔮",
+    desc: "Predictive tech debt analyzer — correlates git hotspots, change frequency, and test coverage to predict fragile files.",
+    usage: "node scripts/prophet.js",
+    tier: "free",
+    output: `claudient prophet — Predictive Debt Analysis
+────────────────────────────────────────────
+Analyzing 6 months of git history...
+432 commits | 287 files | 18 contributors
+
+🔴 HIGH RISK (3 files):
+  src/api/payments.ts    47 changes, 30% coverage
+  src/utils/auth.ts      22 changes, 45% coverage
+  src/db/migrations.ts   15 changes, 20% coverage
+
+🟡 MEDIUM RISK (5 files):
+  src/api/users.ts       18 changes, 60% coverage
+  src/services/email.ts  12 changes, 55% coverage
+
+🟢 LOW RISK: 279 files (stable)
+────────────────────────────────────────────
+Recommendation: Add tests to 3 high-risk files
+→ Priority: payments.ts (most fragile)`,
+  },
+  {
+    id: "incident",
+    name: "claudient incident",
+    icon: "🚨",
+    desc: "Incident Commander — wakes on PagerDuty alerts, reads logs, identifies root cause, executes rollback, drafts post-mortems.",
+    usage: "node scripts/incident.js",
+    tier: "free",
+    output: `claudient incident — PagerDuty Autonomy
+────────────────────────────────────────────
+⏰ ALERT: 500 errors spike (threshold: 5%)
+
+Reading CloudWatch logs...
+  → Error rate: 23% (normal: 0.3%)
+  → Deployment: abc123 (12 min ago)
+  → Error: TypeError in /api/checkout
+
+Root cause identified:
+  → Missing null check on user.cart.items
+  → Introduced in commit abc123
+
+Executing rollback playbook...
+  ✓ Rolling back to previous version (def456)
+  ✓ Health check: passing
+  ✓ Error rate: 0.2% (recovered)
+
+Drafting post-mortem...
+  ✓ docs/postmortems/2026-06-15-checkout.md
+  → 5 action items generated`,
+  },
+  {
+    id: "recommend",
+    name: "claudient recommend",
+    icon: "💡",
+    desc: "Personalized recommendations — analyzes your project structure and suggests the optimal Claudient configuration.",
+    usage: "node scripts/recommend.js",
+    tier: "free",
+    output: `claudient recommend — Personalized Setup
+────────────────────────────────────────────
+Analyzing project: Next.js 15 + TypeScript + Prisma
+
+Recommended skills (8):
+  ✓ frontend/react-components      (score: 0.95)
+  ✓ backend/auth-patterns          (score: 0.92)
+  ✓ database/prisma-optimization   (score: 0.90)
+  ✓ productivity/testing-suite     (score: 0.88)
+  ✓ devops-infra/ci-cd-pipeline    (score: 0.85)
+  + 3 more
+
+Recommended stack: fullstack_developer_stack
+  → 8 skills + 3 commands + 4 hooks + 2 MCP
+
+Recommended hooks (3):
+  ✓ test-coverage-enforcer
+  ✓ security-scanner
+  ✓ performance-regression
+
+Install all: npx claudient add stack fullstack_developer_stack`,
   },
 ];
 
@@ -703,7 +1042,7 @@ export function CliApp() {
       <aside className="sm:w-56 shrink-0 border-r border-hairline bg-cream flex flex-col overflow-hidden">
         <div className="p-3">
           <Eyebrow color="#f54e00">CLI Commands</Eyebrow>
-          <div className="mt-1 text-[11px] text-mute">25 commands — 22 free, 3 enterprise</div>
+          <div className="mt-1 text-[11px] text-mute">38 commands — 35 free, 3 enterprise</div>
         </div>
         <div className="flex-1 overflow-auto px-2 pb-2 space-y-0.5">
           {commands.map((c) => (
@@ -723,7 +1062,7 @@ export function CliApp() {
           ))}
         </div>
         <div className="px-3 py-2 border-t border-hairline text-[10px] text-mute">
-          Free tier: doctor, consult, share, import, benchmark, score, init, dashboard, council, nightshift, tribunal, oracle, learn, chart, spec, bisect, checkpoint, repair, dependency-graph, translate, validate, changelog
+          Free tier: doctor, consult, share, import, benchmark, score, init, dashboard, council, nightshift, tribunal, oracle, learn, chart, spec, bisect, checkpoint, repair, dependency-graph, translate, validate, changelog, caveman, commit, tdd, sweep, documentation, chaos, jit, enforce, handoff, permissions, prophet, incident, recommend
         </div>
       </aside>
 

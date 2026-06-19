@@ -14,7 +14,7 @@ const features = [
   { icon: "🔄", name: "55 Workflows", desc: "Multi-step processes across domains.", color: "#3fb950", app: "workflows" as const },
   { icon: "🧩", name: "19 Plugins", desc: "Bundle, domain & business extensions.", color: "#f5b800", app: "plugins" as const },
   { icon: "🎭", name: "10 Personas", desc: "Role-optimized AI behavior profiles.", color: "#b62ad9", app: "personas" as const },
-  { icon: "⌨️", name: "36 CLI Scripts", desc: "Power tools: nightshift, tribunal, oracle...", color: "#f54e00", app: "cli" as const },
+  { icon: "⌨️", name: "38 CLI Scripts", desc: "Power tools: caveman, tribunal, prophet, chaos...", color: "#f54e00", app: "cli" as const },
   { icon: "🏗️", name: "410 Structures", desc: "Workspace blueprints for every project type.", color: "#3fb950", app: "examples" as const },
   { icon: "🏢", name: "3 Compliance Stacks", desc: "SOC2, GDPR, EU AI Act frameworks.", color: "#1d4aff", app: "enterprise" as const },
   { icon: "🏪", name: "Marketplace", desc: "Publisher program with certification.", color: "#f5b800", app: "marketplace" as const },
@@ -112,7 +112,7 @@ export function HomeApp({ wm }: { wm: WindowManager }) {
       </h1>
       <p className="mt-4 text-[15px] text-body leading-relaxed">
         Claudient is the largest open-source knowledge base for Claude Code.
-        447 skills, 206 agents, 50 workspace stacks, 36 CLI scripts — all installable in 30 seconds.
+        447 skills, 206 agents, 50 workspace stacks, 38 CLI scripts — all installable in 30 seconds.
         Open any window below to explore. 🧠
       </p>
 
@@ -183,16 +183,19 @@ export function HomeApp({ wm }: { wm: WindowManager }) {
       </div>
 
       {/* CLI Tools */}
-      <h2 className="mt-9 text-lg font-bold text-ink">9 Powerful CLI Tools</h2>
-      <p className="mt-1 text-[12.5px] text-mute">Run these today — 36 scripts total, no configuration needed.</p>
+      <h2 className="mt-9 text-lg font-bold text-ink">38 CLI Commands — 35 Free</h2>
+      <p className="mt-1 text-[12.5px] text-mute">Run these today — no configuration needed. 3 enterprise commands available with Pro plan.</p>
       <div className="mt-4 grid sm:grid-cols-3 gap-3">
         {[
           { cmd: "claudient doctor", desc: "Health check: 5 diagnostics in seconds", icon: "🩺" },
-          { cmd: "claudient consult \"need\"", desc: "AI-powered skill & stack recommendations", icon: "💡" },
-          { cmd: "claudient share <id>", desc: "Export stack as shareable GitHub Gist", icon: "📤" },
-          { cmd: "claudient benchmark", desc: "Eval scores for benchmarked skills", icon: "📊" },
-          { cmd: "claudient audit", desc: "Deep compliance audit across 8 dimensions", icon: "🔍" },
-          { cmd: "claudient score", desc: "AI-Readiness Score: 0-100, 8 dimensions", icon: "🎯" },
+          { cmd: "claudient caveman", desc: "Token optimizer — 73% cost reduction", icon: "🦴" },
+          { cmd: "claudient chaos", desc: "Adversarial chaos monkey for your tests", icon: "🐒" },
+          { cmd: "claudient prophet", desc: "Predict which files will break next", icon: "🔮" },
+          { cmd: "claudient handoff", desc: "Architect/Mason dual-model orchestration", icon: "🏗️" },
+          { cmd: "claudient sweep", desc: "Dead code hunter — cleans unused imports", icon: "🧹" },
+          { cmd: "claudient tdd", desc: "Stunt Double TDD — tests first, always", icon: "🧪" },
+          { cmd: "claudient enforce", desc: "Spec-first architectural enforcer", icon: "📋" },
+          { cmd: "claudient recommend", desc: "Personalized setup recommendations", icon: "💡" },
         ].map((t) => (
           <button
             key={t.cmd}
@@ -204,6 +207,47 @@ export function HomeApp({ wm }: { wm: WindowManager }) {
             <p className="mt-1 text-[11.5px] text-mute">{t.desc}</p>
           </button>
         ))}
+      </div>
+
+      {/* Works Everywhere — Harness Neutrality */}
+      <div className="mt-9 rounded-xl border border-brand-purple/30 bg-gradient-to-r from-purple-50 to-white p-5">
+        <div className="flex items-start gap-4">
+          <span className="text-4xl shrink-0">🔗</span>
+          <div>
+            <div className="text-[15px] font-bold text-ink">Harness Neutral — Works Everywhere</div>
+            <p className="text-[12.5px] text-body mt-1 leading-relaxed">
+              Claudient is not tied to any single AI coding tool. Write your rules, skills, and agents once —
+              export to Claude Code, Cursor, Windsurf, GitHub Copilot, Codex, or Cline.
+              No vendor lock-in. Your knowledge system travels with you.
+            </p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {[
+                { name: "Claude Code", file: "CLAUDE.md", color: "#f54e00" },
+                { name: "Cursor", file: ".cursorrules", color: "#1d4aff" },
+                { name: "Windsurf", file: ".windsurfrules", color: "#3fb950" },
+                { name: "Copilot", file: "copilot-instructions.md", color: "#b62ad9" },
+                { name: "Codex", file: "AGENTS.md", color: "#1078a3" },
+                { name: "Cline", file: ".clinerules", color: "#f5b800" },
+              ].map((h) => (
+                <button
+                  key={h.name}
+                  onClick={() => wm.open("toolkit")}
+                  className="inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1 text-[11px] font-semibold hover:bg-cream transition"
+                  style={{ borderColor: h.color + "60", color: h.color }}
+                >
+                  <span className="size-2 rounded-full" style={{ backgroundColor: h.color }} />
+                  {h.name}
+                </button>
+              ))}
+            </div>
+            <button
+              onClick={() => wm.open("toolkit")}
+              className="mt-3 inline-flex items-center gap-1.5 rounded-md bg-brand-purple px-3 py-1.5 text-[12px] font-bold text-white border-b-2 border-brand-purple/70 hover:brightness-105 transition"
+            >
+              Open Toolkit → Download Configs
+            </button>
+          </div>
+        </div>
       </div>
 
       {/* Why Claudient Wins */}
