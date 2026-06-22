@@ -669,7 +669,7 @@ Analyzing git history: v1.9.0 → v1.10.1
   • New MarketplaceApp window
   
 🔧 Improvements (8):
-  • ShowcaseApp: 49 features across 10 categories
+  • ShowcaseApp: 61 features across 10 categories
   • ToolkitApp: added Playground + Harness tabs
 
 🐛 Fixes (5):
