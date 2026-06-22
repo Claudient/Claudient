@@ -1,6 +1,6 @@
 {
-  "version": "1.10.1",
-  "generated": "2026-06-22T04:08:25.049Z",
+  "version": "1.1.0",
+  "generated": "2026-06-22T04:26:09.410Z",
   "skills": [
     {
       "id": "ai-engineering/advanced-tool-use",
@@ -22990,6 +22990,12 @@
       "file": "hooks/post-tool-use/test-runner.md"
     },
     {
+      "id": "pre-dont-stop.md/pre-dont-stop",
+      "category": "pre-dont-stop.md",
+      "title": "Hook: Pre-flight Checks (Don't Stop Engine)",
+      "file": "hooks/pre-dont-stop.md"
+    },
+    {
       "id": "pre-tool-use/auto-allow-readonly",
       "category": "pre-tool-use",
       "title": "Hook: Auto-Allow Read-Only Operations",
@@ -26929,6 +26935,12 @@
       "file": "guides/enterprise/de/multi-region-deployment.md"
     },
     {
+      "id": "observability-error-tracking",
+      "lang": "de",
+      "title": "Beobachtbarkeit & Fehlertracking mit Sentry/Rollbar",
+      "file": "guides/enterprise/de/observability-error-tracking.md"
+    },
+    {
       "id": "deployment-guide",
       "lang": "en",
       "title": "Enterprise Deployment Guide",
@@ -26951,6 +26963,12 @@
       "lang": "es",
       "title": "Implementación Empresarial Multi-Región",
       "file": "guides/enterprise/es/multi-region-deployment.md"
+    },
+    {
+      "id": "observability-error-tracking",
+      "lang": "es",
+      "title": "Observabilidad y Seguimiento de Errores con Sentry/Rollbar",
+      "file": "guides/enterprise/es/observability-error-tracking.md"
     },
     {
       "id": "disaster-recovery",
@@ -26987,6 +27005,12 @@
       "lang": "nl",
       "title": "Enterprise Multi-Region Implementatie",
       "file": "guides/enterprise/nl/multi-region-deployment.md"
+    },
+    {
+      "id": "observability-error-tracking",
+      "lang": "nl",
+      "title": "Observabiliteit & FoutTracking met Sentry/Rollbar",
+      "file": "guides/enterprise/nl/observability-error-tracking.md"
     },
     {
       "id": "observability-error-tracking",
@@ -29263,6 +29287,12 @@
       "file": "guides/svg-inspector-edge-cases.md"
     },
     {
+      "id": "svg-inspector-health-monitoring",
+      "lang": "en",
+      "title": "SVG Inspector Health Monitoring Integration Guide",
+      "file": "guides/svg-inspector-health-monitoring.md"
+    },
+    {
       "id": "svg-map-inspector-tutorial",
       "lang": "en",
       "title": "SVG Map Inspector — Interactive Tutorial",
@@ -30159,7 +30189,7 @@
       "displayName": "Claudient — AI Engineering",
       "description": "Claude API, agent construction, RAG, LangGraph, CrewAI, MCP server building, prompt caching, LLM eval, and AI-native development patterns.",
       "version": "1.10.1",
-      "skills": 40,
+      "skills": 41,
       "file": "plugins/claudient-ai-engineering/.claude-plugin/plugin.json"
     },
     {
@@ -30287,7 +30317,7 @@
       "displayName": "Claudient — Productivity & Engineering",
       "description": "66 skills for daily engineering work: debugging, refactoring, code review, PR automation, test generation, ADR writing, security auditing, context engineering, MCP clients, and dozens more.",
       "version": "1.10.1",
-      "skills": 91,
+      "skills": 92,
       "file": "plugins/claudient-productivity/.claude-plugin/plugin.json"
     },
     {
@@ -31082,11 +31112,11 @@
   "summary": {
     "skills": 438,
     "agents": 207,
-    "hooks": 57,
+    "hooks": 58,
     "rules": 35,
     "workflows": 56,
     "prompts": 31,
-    "guides": 129,
+    "guides": 130,
     "structures": 82,
     "outputStyles": 8,
     "statuslines": 7,

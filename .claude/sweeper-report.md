@@ -1,7 +1,7 @@
 # Codebase Sweeper Quality Report
 
-Generated: 2026-06-22T04:08:27.861Z | Target Workspace: `/Users/tushar/Desktop/Claudient`
-Total issues detected: **29**
+Generated: 2026-06-22T04:26:12.589Z | Target Workspace: `/Users/tushar/Desktop/Claudient`
+Total issues detected: **31**
 
 ### 📁 `scripts/audit-certified.js`
 #### Unused Variables
@@ -18,6 +18,12 @@ Total issues detected: **29**
 ### 📁 `scripts/chaos.js`
 #### Unused Variables
 - Line 19: `DIM`
+
+### 📁 `scripts/claudient-dont-stop.js`
+#### Unused Imports
+- Line 3: `spawn`
+#### Unused Variables
+- Line 89: `remaining`
 
 ### 📁 `scripts/claudient-matrix.js`
 #### Unused Variables

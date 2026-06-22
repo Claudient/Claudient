@@ -1,12 +1,12 @@
 # Chaos Monkey Resilience Audit Log
 
-Generated: 2026-06-22T04:08:28.791Z | Reference Workspace: `/Users/tushar/Desktop/Claudient`
+Generated: 2026-06-22T04:26:06.668Z | Reference Workspace: `/Users/tushar/Desktop/Claudient`
 Chaos Mode: **Network Latency & Boundary Failures**
-Test Suite Stability: STABLE 🟢
+Test Suite Stability: DEGRADED 🔴
 
 ## 📊 Resilience Analysis
-- **Result**: All smoke tests executed successfully despite mock boundary variables.
-- **Resilience Rating**: **EXCELLENT (Grade A)**
+- **Result**: Chaos injection successfully triggered handled process limits.
+- **Resilience Rating**: **ROBUST (Grade B)** — System cleanly intercepted process exit boundaries.
 
 ## 📋 Test Process Log Output
 ```
@@ -23,7 +23,7 @@ CLI Smoke Tests
   ✓ search "testing"
   ✓ scan detects tech stack
   ✓ validate-frontmatter passes
-  ✓ validate-manifests passes
+  ✗ validate-manifests passes
   ✓ validate-stacks passes
   ✓ rejects unknown category
   ✓ tribunal PR adversarial review
@@ -32,17 +32,18 @@ CLI Smoke Tests
   ✓ nightshift daemon
   ✓ caveman token optimizer
   ✓ jit context compiler
-  ✓ commit pre-commit validations (passed checks)
+  ✗ commit pre-commit validations: 
+[1m[36m══════════════════════════════════════════════════════════════════════════════════[0m
+  
   ✓ permissions list rules
   ✓ handoff design build loop
-  ✓ tdd stunt double runner
+  ✗ tdd stunt double runner: [1m[36m══════════════════════════════════════════════════════════════════════════════════[0m
+  [
   ✓ enforce spec first compliance
   ✓ sweep codebase audit
   ✓ documentation sync reference
   ✓ prophet risk analyzer
   ✓ ci pipeline generator
   ✓ incident commander alert triage
-  ✓ sentinel anti-hallucination rules generator
-
-Results: 31 passed, 0 failed
+  ✓ 
 ```
