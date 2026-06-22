@@ -76,6 +76,8 @@ Usage:
   npx claudient prophet                       Calculate change churn to predict outage risk
   npx claudient ci                            Scaffold self-healing GitHub Actions CI pipeline
   npx claudient incident [--alert "<alert>"]  Triage production alerts, audit commits, and revert
+  npx claudient swarm-sandbox [init|run|validate|cleanup] <name>  Orchestrate multi-agent sandboxes
+  npx claudient svg-inspector [inspect|render|export|serve|validate|list] <file>  SVG map inspector & renderer
   npx claudient learn                         Scan project and generate custom rules
   npx claudient sentinel                      Auto-generate anti-hallucination project rules
   npx claudient checkpoint "<task>"          Create workspace state checkpoint
@@ -2762,6 +2764,18 @@ switch (command) {
   case 'ci': {
     const { spawnSync } = require('child_process')
     const res = spawnSync('node', [path.join(__dirname, 'ci.js'), ...process.argv.slice(3)], { stdio: 'inherit' })
+    if (res.status !== 0) process.exit(res.status || 1)
+    break
+  }
+  case 'swarm-sandbox': {
+    const { spawnSync } = require('child_process')
+    const res = spawnSync('node', [path.join(__dirname, 'claudient-swarm-sandbox.js'), ...process.argv.slice(3)], { stdio: 'inherit' })
+    if (res.status !== 0) process.exit(res.status || 1)
+    break
+  }
+  case 'svg-inspector': {
+    const { spawnSync } = require('child_process')
+    const res = spawnSync('node', [path.join(__dirname, 'claudient-svg-inspector.js'), ...process.argv.slice(3)], { stdio: 'inherit' })
     if (res.status !== 0) process.exit(res.status || 1)
     break
   }
