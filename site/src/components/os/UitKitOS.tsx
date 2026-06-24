@@ -5,7 +5,7 @@ import { MenuBar } from "./MenuBar";
 import { Taskbar } from "./Taskbar";
 import { Window } from "./Window";
 
-export default function ClaudientOS() {
+export default function UitKitOS() {
   const wm = useWindows();
 
   useEffect(() => {
@@ -35,7 +35,7 @@ export default function ClaudientOS() {
               <div className="text-5xl mb-2">🧠</div>
               <div className="text-[13px]">
                 Double-click an icon or use the{" "}
-                <span className="font-bold text-ink">claudient.os</span> menu to open a window
+                <span className="font-bold text-ink">uitkit.os</span> menu to open a window
               </div>
             </div>
           </div>
@@ -46,7 +46,7 @@ export default function ClaudientOS() {
         {/* Uitbreiden branding */}
         <div className="absolute bottom-2 right-4 z-[9997] flex items-center gap-2.5 no-select">
           <a
-            href="https://github.com/UitbreidenOS/Claudient"
+            href="https://github.com/UitbreidenOS/UitKit"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 rounded-lg bg-white/80 backdrop-blur border border-hairline px-3 py-1.5 hover:bg-white hover:border-olive/70 hover:-translate-y-0.5 transition shadow-sm"

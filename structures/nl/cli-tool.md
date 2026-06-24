@@ -411,13 +411,13 @@ Voer `my-cli config reset` uit om het config bestand te wissen en de init wizard
 ## Skills te installeren
 
 ```bash
-npx claudient add skill productivity/code-review
-npx claudient add skill productivity/test-generator
-npx claudient add skill git/pr-description
-npx claudient add skill productivity/refactor
-npx claudient add skill productivity/changelog-writer
-npx claudient add skill productivity/tech-interview-kit
-npx claudient add skill devops-infra/oncall-runbook
+npx uitkit add skill productivity/code-review
+npx uitkit add skill productivity/test-generator
+npx uitkit add skill git/pr-description
+npx uitkit add skill productivity/refactor
+npx uitkit add skill productivity/changelog-writer
+npx uitkit add skill productivity/tech-interview-kit
+npx uitkit add skill devops-infra/oncall-runbook
 ```
 
 ## Gerelateerd

@@ -1,4 +1,4 @@
-# Erste Schritte mit Claudient
+# Erste Schritte mit UitKit
 
 Dieser Leitfaden bringt Sie in weniger als 10 Minuten von null zu einer funktionierenden Claude Code-Umgebung mit Ihrer ersten Skill, Ihrem ersten Agenten und Ihrem ersten Hook.
 
@@ -11,7 +11,7 @@ Dieser Leitfaden bringt Sie in weniger als 10 Minuten von null zu einer funktion
 
 ---
 
-## Schritt 1 — Claudient klonen
+## Schritt 1 — UitKit klonen
 
 ```bash
 
@@ -50,7 +50,7 @@ Skills sind Slash-Befehle. Kopieren Sie eine beliebige `.md`-Datei aus `skills/`
 
 ```bash
 # Beispiel: FastAPI-Skill hinzufügen
-cp ~/Claudient/skills/backend/python/fastapi.md your-project/.claude/skills/
+cp ~/UitKit/skills/backend/python/fastapi.md your-project/.claude/skills/
 ```
 
 Öffnen Sie jetzt Claude Code in Ihrem Projekt und tippen Sie `/fastapi` — die Skill wird aktiviert.
@@ -70,7 +70,7 @@ Regeln befinden sich in `CLAUDE.md` im Projektstammverzeichnis. Claude liest die
 
 ```bash
 # Einen gemeinsamen Regelsatz in die CLAUDE.md Ihres Projekts kopieren
-cat ~/Claudient/rules/common/coding-style.md >> your-project/CLAUDE.md
+cat ~/UitKit/rules/common/coding-style.md >> your-project/CLAUDE.md
 ```
 
 Oder öffnen Sie `rules/common/` und kopieren Sie manuell die für Ihr Projekt relevanten Abschnitte.
@@ -112,7 +112,7 @@ Kopieren Sie einen Hook aus `hooks/` — jede Hook-Datei enthält das genaue JSO
 Dann kopieren Sie das zugehörige Skript:
 
 ```bash
-cp ~/Claudient/hooks/lifecycle/cost-tracker.sh your-project/.claude/hooks/
+cp ~/UitKit/hooks/lifecycle/cost-tracker.sh your-project/.claude/hooks/
 chmod +x your-project/.claude/hooks/cost-tracker.sh
 ```
 

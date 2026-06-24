@@ -306,7 +306,7 @@ class EdgeCoordinator extends EventEmitter {
       syncEvents: 0,
       averageLatency: 0,
     };
-    this.cloudUrl = options.cloudUrl || 'https://api.claudient.local/sync';
+    this.cloudUrl = options.cloudUrl || 'https://api.uitkit.local/sync';
     this.syncInterval = options.syncInterval || 5000;
     this.healthCheckInterval = options.healthCheckInterval || 10000;
     this.isRunning = false;
@@ -536,9 +536,9 @@ class CloudflareWorkerProxy {
     return `
 // Cloudflare Worker - Edge Task Router
 const EDGE_NODES = {
-  'us-west': 'https://edge-us-west.claudient.local',
-  'eu-west': 'https://edge-eu-west.claudient.local',
-  'ap-southeast': 'https://edge-ap-southeast.claudient.local',
+  'us-west': 'https://edge-us-west.uitkit.local',
+  'eu-west': 'https://edge-eu-west.uitkit.local',
+  'ap-southeast': 'https://edge-ap-southeast.uitkit.local',
 };
 
 async function handleRequest(request) {
@@ -596,15 +596,15 @@ addEventListener('fetch', event => {
    */
   generateWranglerConfig() {
     return `
-name = "claudient-edge"
+name = "uitkit-edge"
 type = "javascript"
 account_id = "${this.options.accountId || 'CLOUDFLARE_ACCOUNT_ID'}"
 workers_dev = true
-route = "claudient-edge.workers.dev/*"
+route = "uitkit-edge.workers.dev/*"
 zone_id = "${this.options.zoneId || 'CLOUDFLARE_ZONE_ID'}"
 
 [env.production]
-route = "api.claudient.com/edge/*"
+route = "api.uitkit.com/edge/*"
 zone_id = "${this.options.zoneId || 'CLOUDFLARE_ZONE_ID'}"
 
 [build]
@@ -825,7 +825,7 @@ ${COLORS.BOLD}${COLORS.CYAN}╚════════════════�
     : 3;
 
   const coordinator = new EdgeCoordinator({
-    cloudUrl: 'https://api.claudient.local/sync',
+    cloudUrl: 'https://api.uitkit.local/sync',
     syncInterval: 2000,
   });
 
@@ -894,7 +894,7 @@ ${COLORS.BOLD}${COLORS.CYAN}╚════════════════�
   const syncInterval = setInterval(async () => {
     for (const node of nodes) {
       if (node.completedTasks.some(t => !t.synced)) {
-        await node.syncWithCloud('https://api.claudient.local/sync');
+        await node.syncWithCloud('https://api.uitkit.local/sync');
       }
     }
   }, 3000);
@@ -931,7 +931,7 @@ ${COLORS.BOLD}${COLORS.CYAN}╚════════════════�
 
 async function runServer(port) {
   const coordinator = new EdgeCoordinator({
-    cloudUrl: 'https://api.claudient.local/sync',
+    cloudUrl: 'https://api.uitkit.local/sync',
     syncInterval: 5000,
   });
 

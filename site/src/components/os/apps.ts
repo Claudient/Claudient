@@ -3,7 +3,7 @@ import type { AppId, AppMeta } from "./types";
 export const APPS: Record<AppId, AppMeta> = {
   home: {
     id: "home",
-    title: "Welcome to Claudient",
+    title: "Welcome to UitKit",
     icon: "🧠",
     accent: "#f97316",
     defaultSize: { width: 780, height: 580 },
@@ -52,7 +52,7 @@ export const APPS: Record<AppId, AppMeta> = {
   },
   about: {
     id: "about",
-    title: "About Claudient",
+    title: "About UitKit",
     icon: "🏛️",
     accent: "#76786c",
     defaultSize: { width: 680, height: 520 },

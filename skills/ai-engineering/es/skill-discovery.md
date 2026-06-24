@@ -19,7 +19,7 @@ updated: 2026-06-15
 
 - Buscar recursos que no sean habilidades (guías, flujos de trabajo, agentes, reglas)
 - Preguntas triviales puntuales
-- Preguntas genéricas sobre Claude o LLMs no relacionadas con Claudient
+- Preguntas genéricas sobre Claude o LLMs no relacionadas con UitKit
 
 ## Instrucciones
 

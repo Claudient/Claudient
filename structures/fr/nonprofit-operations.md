@@ -267,11 +267,11 @@ Les données de recherche de prospects (notes DonorSearch, scores iWave, estimat
 EOF
 
 # Installer les compétences sans profit
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/investor-update
-npx claudient add skill productivity/process-mapper
-npx claudient add skill data-ml/stakeholder-report
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/investor-update
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill data-ml/stakeholder-report
 ```
 
 ## Modèle CLAUDE.md
@@ -514,23 +514,23 @@ Demande spécifique : [suggestion de montant du don, montant de mise à niveau o
 
 ```bash
 # Rédaction de subventions et rapports
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/investor-update
-npx claudient add skill productivity/process-mapper
-npx claudient add skill data-ml/stakeholder-report
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/investor-update
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill data-ml/stakeholder-report
 
 # Communications et collecte de fonds des donateurs
-npx claudient add skill productivity/vendor-evaluator
-npx claudient add skill productivity/lesson-planner
+npx uitkit add skill productivity/vendor-evaluator
+npx uitkit add skill productivity/lesson-planner
 
 # Gouvernance et conseil
-npx claudient add skill productivity/engineering-strategy
-npx claudient add skill productivity/doc-site-builder
+npx uitkit add skill productivity/engineering-strategy
+npx uitkit add skill productivity/doc-site-builder
 
 # Gestion du programme et résultats
-npx claudient add skill productivity/student-feedback-analyzer
-npx claudient add skill productivity/interview-scorecard
+npx uitkit add skill productivity/student-feedback-analyzer
+npx uitkit add skill productivity/interview-scorecard
 ```
 
 ## Connexe

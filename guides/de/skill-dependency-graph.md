@@ -1,12 +1,12 @@
 # Anleitung zum Fähigkeits-Abhängigkeitsgraph
 
-Diese Anleitung erklärt, wie man die Beziehungen zwischen Skills und Agenten in Claudient mithilfe der Abhängigkeitsgraph-Tools analysiert und visualisiert.
+Diese Anleitung erklärt, wie man die Beziehungen zwischen Skills und Agenten in UitKit mithilfe der Abhängigkeitsgraph-Tools analysiert und visualisiert.
 
 ---
 
 ## Überblick
 
-Das Claudient-Repository ist ein Netzwerk von Skills und Agenten. Im Laufe der Zeit verweisen Skills aufeinander — entweder nach Name, Funktionalität oder Kontext. Das Verständnis dieser Abhängigkeiten hilft Ihnen:
+Das UitKit-Repository ist ein Netzwerk von Skills und Agenten. Im Laufe der Zeit verweisen Skills aufeinander — entweder nach Name, Funktionalität oder Kontext. Das Verständnis dieser Abhängigkeiten hilft Ihnen:
 
 - **Cluster identifizieren**: Welche Skills funktionieren zusammen
 - **Verwaiste identifizieren**: Skills, auf die niemand verweist (Kandidaten für Archivierung)
@@ -226,7 +226,7 @@ Die Anleitung `skill-composition` referenziert vier Kern-Skills. Sie kennen jetz
 
 ## Fehlerbehebung
 
-**Graph ist leer oder hat sehr wenige Kanten**: Stellen Sie sicher, dass Sie vom Repository-Root (`/Users/tushar/Desktop/Claudient`) aus laufen. Das Skript sucht nach `skills/` und `agents/` relativ zum Repository-Root.
+**Graph ist leer oder hat sehr wenige Kanten**: Stellen Sie sicher, dass Sie vom Repository-Root (`/Users/tushar/Desktop/UitKit`) aus laufen. Das Skript sucht nach `skills/` und `agents/` relativ zum Repository-Root.
 
 **Falsch positive (falsch erkannte Verweise)**: Der Abgleich ist groß-/kleinschreibungsunabhängig und verwendet Wortgrenzen. Zeichenketten wie "agent" passen zu "agent-handoff" (korrekt), könnten aber auch zu "agent_supervisor" passen, wenn Sie nicht vorsichtig sind. Überprüfen Sie den tatsächlichen Dateiinhalt des Skills, um zu bestätigen, dass der Verweis beabsichtigt ist.
 

@@ -18,23 +18,23 @@ Vous êtes un professionnel de la finance — analyste FP&A, responsable financi
 
 ```bash
 # Installer la stack financière complète
-npx claudient add skills finance
-npx claudient add skills gtm/commercial-forecaster
-npx claudient add skills gtm/revenue-operations
-npx claudient add agents advisors/cfo-advisor
-npx claudient add agents roles/quant-analyst
+npx uitkit add skills finance
+npx uitkit add skills gtm/commercial-forecaster
+npx uitkit add skills gtm/revenue-operations
+npx uitkit add agents advisors/cfo-advisor
+npx uitkit add agents roles/quant-analyst
 
 # Ou choisir à la carte :
-npx claudient add skill finance/dcf-model
-npx claudient add skill finance/3-statement-model
-npx claudient add skill finance/financial-plan
-npx claudient add skill finance/ic-memo
-npx claudient add skill finance/pitch-deck
-npx claudient add skill finance/gl-reconciler
-npx claudient add skill finance/board-pack-builder
-npx claudient add skill finance/budget-vs-actual
-npx claudient add skill gtm/commercial-forecaster
-npx claudient add skill gtm/revenue-operations
+npx uitkit add skill finance/dcf-model
+npx uitkit add skill finance/3-statement-model
+npx uitkit add skill finance/financial-plan
+npx uitkit add skill finance/ic-memo
+npx uitkit add skill finance/pitch-deck
+npx uitkit add skill finance/gl-reconciler
+npx uitkit add skill finance/board-pack-builder
+npx uitkit add skill finance/budget-vs-actual
+npx uitkit add skill gtm/commercial-forecaster
+npx uitkit add skill gtm/revenue-operations
 ```
 
 ---
@@ -195,7 +195,7 @@ piste de trésorerie révisée pour chaque scénario.
 ## Plan de montée en compétence sur 30 jours (nouveaux analystes financiers)
 
 ### Semaine 1 — Connaître l'entreprise
-- Installer toutes les compétences finance : `npx claudient add skills finance`
+- Installer toutes les compétences finance : `npx uitkit add skills finance`
 - Lancer `/gl-reconciler` sur la clôture du mois dernier — comprendre le plan comptable
 - Lancer `/budget-vs-actual` sur les 3 derniers mois de réalisés — repérer les schémas
 - Lire les 3 derniers dossiers du conseil — comprendre le récit que le DAF a présenté

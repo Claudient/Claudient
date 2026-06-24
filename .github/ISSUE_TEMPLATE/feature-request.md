@@ -1,6 +1,6 @@
 ---
 name: Feature Request
-about: Suggest an improvement to Claudient's CLI, distribution, or structure
+about: Suggest an improvement to UitKit's CLI, distribution, or structure
 title: "[feature] "
 labels: enhancement
 assignees: ''
@@ -28,7 +28,7 @@ assignees: ''
 
 ```
 # Example usage (if applicable)
-npx claudient ...
+npx uitkit ...
 ```
 
 ## Related Features
@@ -47,7 +47,7 @@ npx claudient ...
 
 ## Scope check
 
-- [ ] This is within Claudient's scope (Claude Code skills, agents, hooks, commands, structures)
+- [ ] This is within UitKit's scope (Claude Code skills, agents, hooks, commands, structures)
 - [ ] This is NOT asking us to build a SaaS product, write blog posts, or provide consulting
 - [ ] This benefits the broader community, not just one project
 

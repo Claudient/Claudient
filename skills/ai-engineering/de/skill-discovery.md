@@ -19,7 +19,7 @@ updated: 2026-06-15
 
 - Nach Nicht-Skill-Ressourcen suchen (Guides, Workflows, Agents, Regeln)
 - Triviale Einzelfragen
-- Generische Fragen zu Claude oder LLMs, die nicht mit Claudient zusammenhängen
+- Generische Fragen zu Claude oder LLMs, die nicht mit UitKit zusammenhängen
 
 ## Anweisungen
 

@@ -23,7 +23,7 @@ Einzelpersonen-Unternehmen oder Indie-Unternehmen, in denen der Gründer alles s
 
 **Standard-Tradeoffs:** Bevorzuge No-Code oder Low-Code, wo Geschwindigkeit über Kontrolle geht. Akzeptiere unvollkommene Automatisierung gegenüber manueller Wiederholung.
 
-## Empfohlene Claudient Skills & Agents
+## Empfohlene UitKit Skills & Agents
 - `small-business` — Preisgestaltung, Positionierung und Kundenkommunikation
 - `gtm` — Launch-Strategie, Positionierung, Landing-Page-Texte
 - `sdr` — Outbound-Outreach und Follow-up-Sequenzen

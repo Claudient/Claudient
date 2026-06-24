@@ -24,7 +24,7 @@ Chefs de produit dans des entreprises technologiques en phase de croissance ou m
 
 **Compromis par défaut :** Préférez les cadres (RICE, JTBD, ICE) qui peuvent être partagés avec l'ingénierie et le design. Acceptez une certaine ambiguïté en découverte précoce ; exigez la précision en rédaction de spécifications.
 
-## Compétences et agents Claudient recommandés
+## Compétences et agents UitKit recommandés
 - `gtm` — planification du lancement produit, séquençage go-to-market
 - `data-analysis` — définition des métriques, analyse d'entonnoir, interprétation de cohorte
 - `finance` — modélisation d'impact sur les revenus, construction d'analyse de rentabilité

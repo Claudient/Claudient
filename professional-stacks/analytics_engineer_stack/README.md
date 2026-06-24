@@ -269,4 +269,4 @@ analytics_engineer_stack/
 
 ---
 
-Built by [tushar2704](https://github.com/tushar2704/) · [Claudient](https://github.com/UitbreidenOS/Claudient) · [Claude Code](https://claude.com/claude-code)
+Built by [tushar2704](https://github.com/tushar2704/) · [UitKit](https://github.com/UitbreidenOS/UitKit) · [Claude Code](https://claude.com/claude-code)

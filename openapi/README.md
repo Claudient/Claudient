@@ -1,6 +1,6 @@
 # OpenAPI Specifications
 
-This directory contains OpenAPI 3.1.0 specifications for Claudient's REST APIs.
+This directory contains OpenAPI 3.1.0 specifications for UitKit's REST APIs.
 
 ## Available APIs
 
@@ -19,7 +19,7 @@ This directory contains OpenAPI 3.1.0 specifications for Claudient's REST APIs.
 
 **Base URLs:**
 - Development: `http://localhost:3001/api`
-- Production: `https://sandbox.claudient.io/api`
+- Production: `https://sandbox.uitkit.io/api`
 
 **Main Endpoints:**
 

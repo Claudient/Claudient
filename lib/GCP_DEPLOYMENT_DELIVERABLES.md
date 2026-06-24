@@ -389,7 +389,7 @@ gcp-deployment init --project my-project
 
 ## 📞 Support & Maintenance
 
-- Issue tracking: Claudient repository
+- Issue tracking: UitKit repository
 - Documentation updates: README and guides
 - Test additions: test.js file
 - Feature requests: GitHub issues

@@ -18,18 +18,18 @@ Sie sind Gründer oder CEO eines venture-finanzierten Startups, von Pre-Seed bis
 
 ```bash
 # Das vollständige Gründerpaket installieren
-npx claudient add skill productivity/founder-weekly-review
-npx claudient add skill productivity/investor-update
-npx claudient add skill productivity/board-deck-builder
-npx claudient add skill gtm/revenue-operations
-npx claudient add skill gtm/commercial-forecaster
-npx claudient add skill finance/pitch-deck
-npx claudient add skill finance/financial-plan
-npx claudient add skill finance/dcf-model
-npx claudient add agents advisors/ceo-advisor
-npx claudient add agents advisors/cfo-advisor
-npx claudient add agents advisors/cto-advisor
-npx claudient add agents advisors/chief-of-staff
+npx uitkit add skill productivity/founder-weekly-review
+npx uitkit add skill productivity/investor-update
+npx uitkit add skill productivity/board-deck-builder
+npx uitkit add skill gtm/revenue-operations
+npx uitkit add skill gtm/commercial-forecaster
+npx uitkit add skill finance/pitch-deck
+npx uitkit add skill finance/financial-plan
+npx uitkit add skill finance/dcf-model
+npx uitkit add agents advisors/ceo-advisor
+npx uitkit add agents advisors/cfo-advisor
+npx uitkit add agents advisors/cto-advisor
+npx uitkit add agents advisors/chief-of-staff
 ```
 
 ---

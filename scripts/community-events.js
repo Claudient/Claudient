@@ -440,11 +440,11 @@ function generateId() {
 function showHelp() {
   console.log(`
 ${BOLD}${CYAN}╔════════════════════════════════════════════════════════════════╗${RESET}
-${BOLD}${CYAN}║           Community Events Manager for Claudient                ║${RESET}
+${BOLD}${CYAN}║           Community Events Manager for UitKit                ║${RESET}
 ${BOLD}${CYAN}╚════════════════════════════════════════════════════════════════╝${RESET}
 
 ${BOLD}USAGE${RESET}
-  npx claudient community-events <command> [options]
+  npx uitkit community-events <command> [options]
 
 ${BOLD}COMMANDS${RESET}
   ${CYAN}create${RESET}              Create a new community event
@@ -461,7 +461,7 @@ ${BOLD}COMMANDS${RESET}
 
 ${BOLD}EXAMPLES${RESET}
   # Create monthly skill showcase
-  npx claudient community-events create \\
+  npx uitkit community-events create \\
     --name "June Skill Showcase" \\
     --type showcase \\
     --date "2026-06-28T18:00:00Z" \\
@@ -469,15 +469,15 @@ ${BOLD}EXAMPLES${RESET}
     --format virtual
 
   # List upcoming events
-  npx claudient community-events list --upcoming
+  npx uitkit community-events list --upcoming
 
   # Add recording to event
-  npx claudient community-events record <eventId> \\
+  npx uitkit community-events record <eventId> \\
     --url "https://youtube.com/..." \\
     --title "Recording Title"
 
   # Generate report
-  npx claudient community-events report
+  npx uitkit community-events report
 
 ${BOLD}EVENT TYPES${RESET}
   - showcase:    Monthly skill showcase

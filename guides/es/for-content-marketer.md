@@ -18,20 +18,20 @@ Eres un content marketer, SEO manager o growth marketer cuyo trabajo consiste en
 
 ```bash
 # Instalar el stack completo de content marketing y SEO
-npx claudient add skills marketing
+npx uitkit add skills marketing
 
 # O seleccionar lo que necesitas:
-npx claudient add skill marketing/content-strategy
-npx claudient add skill marketing/content-brief
-npx claudient add skill marketing/editorial-calendar
-npx claudient add skill marketing/seo-audit
-npx claudient add skill marketing/ai-seo
-npx claudient add skill marketing/programmatic-seo
-npx claudient add skill marketing/copywriting
-npx claudient add skill marketing/social-media-manager
-npx claudient add skill marketing/email-sequence
-npx claudient add agents advisors/cmo-advisor
-npx claudient add agents roles/competitive-analyst
+npx uitkit add skill marketing/content-strategy
+npx uitkit add skill marketing/content-brief
+npx uitkit add skill marketing/editorial-calendar
+npx uitkit add skill marketing/seo-audit
+npx uitkit add skill marketing/ai-seo
+npx uitkit add skill marketing/programmatic-seo
+npx uitkit add skill marketing/copywriting
+npx uitkit add skill marketing/social-media-manager
+npx uitkit add skill marketing/email-sequence
+npx uitkit add agents advisors/cmo-advisor
+npx uitkit add agents roles/competitive-analyst
 ```
 
 ---
@@ -216,7 +216,7 @@ Cluster de keywords principal actual: [área temática principal]
 ## Plan de incorporación de 30 días (nuevos content marketers)
 
 ### Semana 1 — Auditar y entender
-- Instala todas las skills de marketing: `npx claudient add skills marketing`
+- Instala todas las skills de marketing: `npx uitkit add skills marketing`
 - Ejecuta `/seo-audit` en todo tu sitio — conoce lo que tienes antes de publicar más
 - Ejecuta `/competitive-analyst` en tus 3 competidores principales — ¿sobre qué escriben ellos que tú no?
 - Audita tu lista de email: tasas de apertura, clicks, bajas — ¿qué contenido rinde?

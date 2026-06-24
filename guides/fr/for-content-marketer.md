@@ -18,20 +18,20 @@ Vous êtes un content marketer, un responsable SEO ou un growth marketer dont le
 
 ```bash
 # Installer la stack complète content marketing et SEO
-npx claudient add skills marketing
+npx uitkit add skills marketing
 
 # Ou choisir à la carte :
-npx claudient add skill marketing/content-strategy
-npx claudient add skill marketing/content-brief
-npx claudient add skill marketing/editorial-calendar
-npx claudient add skill marketing/seo-audit
-npx claudient add skill marketing/ai-seo
-npx claudient add skill marketing/programmatic-seo
-npx claudient add skill marketing/copywriting
-npx claudient add skill marketing/social-media-manager
-npx claudient add skill marketing/email-sequence
-npx claudient add agents advisors/cmo-advisor
-npx claudient add agents roles/competitive-analyst
+npx uitkit add skill marketing/content-strategy
+npx uitkit add skill marketing/content-brief
+npx uitkit add skill marketing/editorial-calendar
+npx uitkit add skill marketing/seo-audit
+npx uitkit add skill marketing/ai-seo
+npx uitkit add skill marketing/programmatic-seo
+npx uitkit add skill marketing/copywriting
+npx uitkit add skill marketing/social-media-manager
+npx uitkit add skill marketing/email-sequence
+npx uitkit add agents advisors/cmo-advisor
+npx uitkit add agents roles/competitive-analyst
 ```
 
 ---
@@ -216,7 +216,7 @@ Cluster thématique principal actuel : [domaine thématique principal]
 ## Plan de montée en compétence sur 30 jours (nouveaux content marketers)
 
 ### Semaine 1 — Audit et compréhension
-- Installez toutes les compétences marketing : `npx claudient add skills marketing`
+- Installez toutes les compétences marketing : `npx uitkit add skills marketing`
 - Exécutez `/seo-audit` sur l'ensemble de votre site — sachez ce que vous avez avant de publier davantage
 - Exécutez `/competitive-analyst` sur vos 3 principaux concurrents — qu'écrivent-ils que vous n'écrivez pas ?
 - Auditez votre liste email : taux d'ouverture, taux de clics, désabonnements — quel contenu performe ?

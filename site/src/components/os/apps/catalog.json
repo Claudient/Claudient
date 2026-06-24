@@ -27,7 +27,7 @@
         "hooks": 2,
         "mcp": 1
       },
-      "install": "claudient-agentic-ai-engineer"
+      "install": "uitkit-agentic-ai-engineer"
     },
     {
       "id": "ai_compliance_risk",
@@ -52,7 +52,7 @@
         "hooks": 2,
         "mcp": 1
       },
-      "install": "claudient-ai-compliance-risk"
+      "install": "uitkit-ai-compliance-risk"
     },
     {
       "id": "ai_ethics_governance",
@@ -77,7 +77,7 @@
         "hooks": 2,
         "mcp": 1
       },
-      "install": "claudient-ai-ethics-governance"
+      "install": "uitkit-ai-ethics-governance"
     },
     {
       "id": "ai_product_manager",
@@ -102,7 +102,7 @@
         "hooks": 2,
         "mcp": 1
       },
-      "install": "claudient-ai-product-manager"
+      "install": "uitkit-ai-product-manager"
     },
     {
       "id": "ai_sdr",
@@ -127,7 +127,7 @@
         "hooks": 4,
         "mcp": 2
       },
-      "install": "claudient-ai-sdr"
+      "install": "uitkit-ai-sdr"
     },
     {
       "id": "analytics_engineer",
@@ -152,7 +152,7 @@
         "hooks": 4,
         "mcp": 3
       },
-      "install": "claudient-analytics-engineer"
+      "install": "uitkit-analytics-engineer"
     },
     {
       "id": "api_developer",
@@ -177,7 +177,7 @@
         "hooks": 0,
         "mcp": 0
       },
-      "install": "claudient-api-developer"
+      "install": "uitkit-api-developer"
     },
     {
       "id": "b2b_consultant",
@@ -202,7 +202,7 @@
         "hooks": 2,
         "mcp": 1
       },
-      "install": "claudient-b2b-consultant"
+      "install": "uitkit-b2b-consultant"
     },
     {
       "id": "bio_research",
@@ -227,7 +227,7 @@
         "hooks": 0,
         "mcp": 0
       },
-      "install": "claudient-bio-research"
+      "install": "uitkit-bio-research"
     },
     {
       "id": "blockchain_web3",
@@ -252,7 +252,7 @@
         "hooks": 0,
         "mcp": 0
       },
-      "install": "claudient-blockchain-web3"
+      "install": "uitkit-blockchain-web3"
     },
     {
       "id": "brand_manager",
@@ -277,7 +277,7 @@
         "hooks": 3,
         "mcp": 3
       },
-      "install": "claudient-brand-manager"
+      "install": "uitkit-brand-manager"
     },
     {
       "id": "cloud_architect",
@@ -302,7 +302,7 @@
         "hooks": 2,
         "mcp": 1
       },
-      "install": "claudient-cloud-architect"
+      "install": "uitkit-cloud-architect"
     },
     {
       "id": "community_manager",
@@ -327,7 +327,7 @@
         "hooks": 8,
         "mcp": 4
       },
-      "install": "claudient-community-manager"
+      "install": "uitkit-community-manager"
     },
     {
       "id": "content_marketing",
@@ -352,7 +352,7 @@
         "hooks": 3,
         "mcp": 2
       },
-      "install": "claudient-content-marketing"
+      "install": "uitkit-content-marketing"
     },
     {
       "id": "customer_success",
@@ -377,7 +377,7 @@
         "hooks": 3,
         "mcp": 2
       },
-      "install": "claudient-customer-success"
+      "install": "uitkit-customer-success"
     },
     {
       "id": "data_engineer",
@@ -406,7 +406,7 @@
         "hooks": 3,
         "mcp": 2
       },
-      "install": "claudient-data-engineer"
+      "install": "uitkit-data-engineer"
     },
     {
       "id": "database_admin",
@@ -431,7 +431,7 @@
         "hooks": 1,
         "mcp": 1
       },
-      "install": "claudient-database-admin"
+      "install": "uitkit-database-admin"
     },
     {
       "id": "devops_platform",
@@ -456,7 +456,7 @@
         "hooks": 3,
         "mcp": 2
       },
-      "install": "claudient-devops-platform"
+      "install": "uitkit-devops-platform"
     },
     {
       "id": "distributed_systems_engineer",
@@ -481,7 +481,7 @@
         "hooks": 2,
         "mcp": 1
       },
-      "install": "claudient-distributed-systems-engineer"
+      "install": "uitkit-distributed-systems-engineer"
     },
     {
       "id": "ecommerce_operator",
@@ -506,7 +506,7 @@
         "hooks": 1,
         "mcp": 1
       },
-      "install": "claudient-ecommerce-operator"
+      "install": "uitkit-ecommerce-operator"
     },
     {
       "id": "embedded_iot",
@@ -531,7 +531,7 @@
         "hooks": 0,
         "mcp": 0
       },
-      "install": "claudient-embedded-iot"
+      "install": "uitkit-embedded-iot"
     },
     {
       "id": "finance_cfo",
@@ -556,7 +556,7 @@
         "hooks": 4,
         "mcp": 1
       },
-      "install": "claudient-finance-cfo"
+      "install": "uitkit-finance-cfo"
     },
     {
       "id": "founder_ceo",
@@ -581,7 +581,7 @@
         "hooks": 3,
         "mcp": 2
       },
-      "install": "claudient-founder-ceo"
+      "install": "uitkit-founder-ceo"
     },
     {
       "id": "frontend_engineer",
@@ -606,7 +606,7 @@
         "hooks": 0,
         "mcp": 0
       },
-      "install": "claudient-frontend-engineer"
+      "install": "uitkit-frontend-engineer"
     },
     {
       "id": "fullstack_developer",
@@ -631,7 +631,7 @@
         "hooks": 3,
         "mcp": 2
       },
-      "install": "claudient-fullstack-developer"
+      "install": "uitkit-fullstack-developer"
     },
     {
       "id": "game_developer",
@@ -656,7 +656,7 @@
         "hooks": 0,
         "mcp": 0
       },
-      "install": "claudient-game-developer"
+      "install": "uitkit-game-developer"
     },
     {
       "id": "growth_engineer",
@@ -681,7 +681,7 @@
         "hooks": 1,
         "mcp": 1
       },
-      "install": "claudient-growth-engineer"
+      "install": "uitkit-growth-engineer"
     },
     {
       "id": "gtm_engineer",
@@ -706,7 +706,7 @@
         "hooks": 4,
         "mcp": 2
       },
-      "install": "claudient-gtm-engineer"
+      "install": "uitkit-gtm-engineer"
     },
     {
       "id": "healthcare",
@@ -731,7 +731,7 @@
         "hooks": 0,
         "mcp": 0
       },
-      "install": "claudient-healthcare"
+      "install": "uitkit-healthcare"
     },
     {
       "id": "hr_people_operations",
@@ -756,7 +756,7 @@
         "hooks": 0,
         "mcp": 0
       },
-      "install": "claudient-hr-people-operations"
+      "install": "uitkit-hr-people-operations"
     },
     {
       "id": "infrastructure_as_code",
@@ -781,7 +781,7 @@
         "hooks": 2,
         "mcp": 1
       },
-      "install": "claudient-infrastructure-as-code"
+      "install": "uitkit-infrastructure-as-code"
     },
     {
       "id": "investor_vc",
@@ -806,7 +806,7 @@
         "hooks": 3,
         "mcp": 3
       },
-      "install": "claudient-investor-vc"
+      "install": "uitkit-investor-vc"
     },
     {
       "id": "legal_operations",
@@ -831,7 +831,7 @@
         "hooks": 3,
         "mcp": 1
       },
-      "install": "claudient-legal-operations"
+      "install": "uitkit-legal-operations"
     },
     {
       "id": "mlai_engineer",
@@ -856,7 +856,7 @@
         "hooks": 3,
         "mcp": 2
       },
-      "install": "claudient-mlai-engineer"
+      "install": "uitkit-mlai-engineer"
     },
     {
       "id": "mobile_developer",
@@ -881,7 +881,7 @@
         "hooks": 0,
         "mcp": 0
       },
-      "install": "claudient-mobile-developer"
+      "install": "uitkit-mobile-developer"
     },
     {
       "id": "newsletter_writer",
@@ -906,7 +906,7 @@
         "hooks": 4,
         "mcp": 1
       },
-      "install": "claudient-newsletter-writer"
+      "install": "uitkit-newsletter-writer"
     },
     {
       "id": "operations_manager",
@@ -931,7 +931,7 @@
         "hooks": 0,
         "mcp": 0
       },
-      "install": "claudient-operations-manager"
+      "install": "uitkit-operations-manager"
     },
     {
       "id": "platform_engineer",
@@ -956,7 +956,7 @@
         "hooks": 2,
         "mcp": 1
       },
-      "install": "claudient-platform-engineer"
+      "install": "uitkit-platform-engineer"
     },
     {
       "id": "podcast_producer",
@@ -981,7 +981,7 @@
         "hooks": 0,
         "mcp": 0
       },
-      "install": "claudient-podcast-producer"
+      "install": "uitkit-podcast-producer"
     },
     {
       "id": "product_manager",
@@ -1006,7 +1006,7 @@
         "hooks": 3,
         "mcp": 2
       },
-      "install": "claudient-product-manager"
+      "install": "uitkit-product-manager"
     },
     {
       "id": "product_operations",
@@ -1031,7 +1031,7 @@
         "hooks": 4,
         "mcp": 0
       },
-      "install": "claudient-product-operations"
+      "install": "uitkit-product-operations"
     },
     {
       "id": "qa_testing_engineer",
@@ -1056,7 +1056,7 @@
         "hooks": 4,
         "mcp": 3
       },
-      "install": "claudient-qa-testing-engineer"
+      "install": "uitkit-qa-testing-engineer"
     },
     {
       "id": "recruiter_ta",
@@ -1081,7 +1081,7 @@
         "hooks": 1,
         "mcp": 1
       },
-      "install": "claudient-recruiter-ta"
+      "install": "uitkit-recruiter-ta"
     },
     {
       "id": "sales_operations",
@@ -1110,7 +1110,7 @@
         "hooks": 8,
         "mcp": 6
       },
-      "install": "claudient-sales-operations"
+      "install": "uitkit-sales-operations"
     },
     {
       "id": "security_engineer",
@@ -1135,7 +1135,7 @@
         "hooks": 3,
         "mcp": 2
       },
-      "install": "claudient-security-engineer"
+      "install": "uitkit-security-engineer"
     },
     {
       "id": "solutions_architect",
@@ -1160,7 +1160,7 @@
         "hooks": 3,
         "mcp": 0
       },
-      "install": "claudient-solutions-architect"
+      "install": "uitkit-solutions-architect"
     },
     {
       "id": "sre",
@@ -1185,7 +1185,7 @@
         "hooks": 3,
         "mcp": 2
       },
-      "install": "claudient-sre"
+      "install": "uitkit-sre"
     },
     {
       "id": "technical_writer",
@@ -1210,7 +1210,7 @@
         "hooks": 3,
         "mcp": 0
       },
-      "install": "claudient-technical-writer"
+      "install": "uitkit-technical-writer"
     },
     {
       "id": "user_research",
@@ -1235,7 +1235,7 @@
         "hooks": 0,
         "mcp": 0
       },
-      "install": "claudient-user-research"
+      "install": "uitkit-user-research"
     },
     {
       "id": "youtube_creator",
@@ -1260,7 +1260,7 @@
         "hooks": 4,
         "mcp": 2
       },
-      "install": "claudient-youtube-creator"
+      "install": "uitkit-youtube-creator"
     }
   ]
 }

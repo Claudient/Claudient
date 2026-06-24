@@ -1,4 +1,4 @@
-# Architectures de Mélange d'Experts (MoE) dans Claudient
+# Architectures de Mélange d'Experts (MoE) dans UitKit
 
 Ce document présente les architectures permettant d'aiguiller les requêtes sur plusieurs modèles afin d'optimiser la génération de code, le raisonnement et les coûts.
 

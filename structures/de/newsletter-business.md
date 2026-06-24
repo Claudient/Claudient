@@ -146,20 +146,20 @@ touch .claude/CLAUDE.md
 touch .claude/settings.json
 
 # Skills installieren
-npx claudient add skill productivity/newsletter-writer
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill data-ml/stakeholder-report
-npx claudient add skill productivity/vendor-evaluator
-npx claudient add skill productivity/process-mapper
+npx uitkit add skill productivity/newsletter-writer
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill data-ml/stakeholder-report
+npx uitkit add skill productivity/vendor-evaluator
+npx uitkit add skill productivity/process-mapper
 
 # Slash Commands installieren
-npx claudient add command write-issue
-npx claudient add command edit-issue
-npx claudient add command sponsorship-brief
-npx claudient add command growth-experiment
-npx claudient add command performance-report
-npx claudient add command social-promo
-npx claudient add command list-health-check
+npx uitkit add command write-issue
+npx uitkit add command edit-issue
+npx uitkit add command sponsorship-brief
+npx uitkit add command growth-experiment
+npx uitkit add command performance-report
+npx uitkit add command social-promo
+npx uitkit add command list-health-check
 
 echo "Newsletter Business-Arbeitsbereich ist bereit."
 ```
@@ -346,13 +346,13 @@ Alle Inhalte sind für ein spezifisches Nischen-Publikum geschrieben — siehe e
 ## Skills zum Installieren
 
 ```bash
-npx claudient add skill productivity/newsletter-writer
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill data-ml/stakeholder-report
-npx claudient add skill productivity/vendor-evaluator
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/founder-weekly-review
+npx uitkit add skill productivity/newsletter-writer
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill data-ml/stakeholder-report
+npx uitkit add skill productivity/vendor-evaluator
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/founder-weekly-review
 ```
 
 ## Verwandt

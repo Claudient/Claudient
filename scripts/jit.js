@@ -27,7 +27,7 @@ function main() {
 
   if (!targetFile) {
     console.error(`${RED}Error: You must specify a target file path to run JIT context injection.${RESET}`);
-    console.error(`Usage: npx claudient jit <filepath>`);
+    console.error(`Usage: npx uitkit jit <filepath>`);
     process.exit(1);
   }
 
@@ -39,7 +39,7 @@ function main() {
   }
 
   if (!fs.existsSync(COB_MAP_PATH)) {
-    console.error(`${YELLOW}Warning: .claude/codebase-map.json not found. Run "npx claudient map" to generate it.${RESET}`);
+    console.error(`${YELLOW}Warning: .claude/codebase-map.json not found. Run "npx uitkit map" to generate it.${RESET}`);
     process.exit(1);
   }
 

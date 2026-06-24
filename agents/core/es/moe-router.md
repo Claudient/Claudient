@@ -22,5 +22,5 @@ Enruta dinámicamente las tareas de desarrollo y contextos de código al experto
 - Enrutamiento automático basado en el contexto de directorio (ej. enrutar cambios de infraestructura a niveles altos de razonamiento y cambios de documentación a niveles rápidos).
 
 ## Cuándo NO delegar aquí
-- Comandos estándar de una sola línea o flags explícitos que sobrescriben los modelos (ej. `claudient run --model haiku`).
+- Comandos estándar de una sola línea o flags explícitos que sobrescriben los modelos (ej. `uitkit run --model haiku`).
 - Ejecuciones de scripts simples que no contienen consideraciones arquitectónicas.

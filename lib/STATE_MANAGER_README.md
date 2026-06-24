@@ -14,7 +14,7 @@ A robust state persistence system for managing and resuming long-running operati
 
 ## Installation
 
-The module is included in the Claudient repository under `lib/state-manager.js`.
+The module is included in the UitKit repository under `lib/state-manager.js`.
 
 ```javascript
 const stateManager = require('./lib/state-manager');
@@ -505,4 +505,4 @@ stateManager.STATE_FILE      // Full path to checkpoint file
 
 ## License
 
-Same as Claudient repository (AGPL-3.0-or-later AND CC-BY-SA-4.0)
+Same as UitKit repository (AGPL-3.0-or-later AND CC-BY-SA-4.0)

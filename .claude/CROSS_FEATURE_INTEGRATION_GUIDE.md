@@ -232,7 +232,7 @@ Autonomous batch processor:
 ### Scenario 1: Autonomous Migration with Visualization
 
 ```
-1. User runs: claudient dont-stop "Migrate .js to TypeScript"
+1. User runs: uitkit dont-stop "Migrate .js to TypeScript"
 2. Engine parses into sequential DAG:
    - task_0: Scan all .js files
    - task_1: Convert to TypeScript (batch)
@@ -264,7 +264,7 @@ Autonomous batch processor:
 ### Scenario 2: Multi-Agent Code Review
 
 ```
-1. User runs: claudient swarm tribunal src/auth.ts
+1. User runs: uitkit swarm tribunal src/auth.ts
 
 2. Three agents spawn:
    - Hacker: Security vulnerabilities
@@ -291,7 +291,7 @@ Autonomous batch processor:
    Executed: task_0, task_1, task_2
    Failed: task_3 (network timeout)
 
-2. User resumes: claudient dont-stop --resume
+2. User resumes: uitkit dont-stop --resume
 
 3. Engine loads checkpoint:
    - Skips completed tasks
@@ -315,7 +315,7 @@ Autonomous batch processor:
 
 ## Dashboard Access
 
-All four features accessible via `claudient dashboard`:
+All four features accessible via `uitkit dashboard`:
 
 ### Swarm Window
 - Open from desktop
@@ -348,7 +348,7 @@ All four features accessible via `claudient dashboard`:
 ### Matrix Theme
 ```bash
 # Install theme
-npx claudient theme install matrix-neon
+npx uitkit theme install matrix-neon
 
 # Apply theme
 /theme matrix-neon
@@ -430,14 +430,14 @@ const swarm = new SwarmOrchestrator({
 ### Issue: Theme colors not applying to dont-stop output
 **Solution**: Ensure theme is installed and active
 ```bash
-npx claudient theme install matrix-neon
+npx uitkit theme install matrix-neon
 /theme matrix-neon
 ```
 
 ### Issue: SVG Inspector shows empty graph
 **Solution**: Verify `ShowcaseApp.tsx` BLAST_GRAPH is loaded
 ```bash
-claudient dashboard
+uitkit dashboard
 → Open Toolkit → Codebase Map
 ```
 
@@ -454,7 +454,7 @@ Circuit Breaker State: OPEN
 ```bash
 ls -la .claude/engine-checkpoint.json
 # If missing, restart without --resume
-claudient dont-stop "goal"
+uitkit dont-stop "goal"
 ```
 
 ---

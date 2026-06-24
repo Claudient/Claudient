@@ -124,7 +124,7 @@ ${staleResults.length > 0
 ## Next Steps
 
 - Run: \`npm run benchmark\` to regenerate this report
-- View benchmarks at: \`npx claudient benchmark\` or visit the 📊 Skill Evals window in the site
+- View benchmarks at: \`npx uitkit benchmark\` or visit the 📊 Skill Evals window in the site
 
 ---
 Last updated: ${new Date().toISOString()}

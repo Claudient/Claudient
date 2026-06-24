@@ -102,7 +102,7 @@ npm run test:regression
 
 ### Example 3: package.json Misconfigured
 ```
-✗ bin.claudient points to ./scripts/cli.js
+✗ bin.uitkit points to ./scripts/cli.js
   Error: Missing or invalid
 ```
 **Fix**: Verify `package.json` has correct `bin` field

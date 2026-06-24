@@ -1,12 +1,12 @@
 # Hoge Beschikbaarheid & Disaster Recovery
 
-Enterprise-implementaties van Claudient vereisen een fouttolerante architectuur met actief-actieve taakverdeling, circuitonderbrekkers en strategieën voor geleidelijke degradatie. Deze gids behandelt implementatietopologieën, gezondheidscontroles, failover-procedures en automatisering van herstel.
+Enterprise-implementaties van UitKit vereisen een fouttolerante architectuur met actief-actieve taakverdeling, circuitonderbrekkers en strategieën voor geleidelijke degradatie. Deze gids behandelt implementatietopologieën, gezondheidscontroles, failover-procedures en automatisering van herstel.
 
 ## Implementatiearchitecturen
 
 ### Architectuur 1: Actief-Actief (Aanbevolen)
 
-Meerdere Claudient-exemplaren verwerken gelijktijdig verkeer in beschikbaarheidszones.
+Meerdere UitKit-exemplaren verwerken gelijktijdig verkeer in beschikbaarheidszones.
 
 ```
                              ┌─────────────────────┐
@@ -97,11 +97,11 @@ Gezondheidscontroles moeten **toepassingsbewust** zijn, niet alleen TCP-sondes.
 apiVersion: v1
 kind: Service
 metadata:
-  name: claudient-lb
+  name: uitkit-lb
 spec:
   type: LoadBalancer
   selector:
-    app: claudient
+    app: uitkit
   ports:
     - name: http
       port: 80
@@ -113,11 +113,11 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: claudient-instance-1
+  name: uitkit-instance-1
 spec:
   containers:
-  - name: claudient
-    image: claudient:latest
+  - name: uitkit
+    image: uitkit:latest
     ports:
       - containerPort: 8080
       - containerPort: 50051
@@ -142,7 +142,7 @@ spec:
         valueFrom:
           fieldRef:
             fieldPath: metadata.name
-      - name: CLAUDIENT_DB_REPLICA_LAG_MAX
+      - name: UITKIT_DB_REPLICA_LAG_MAX
         value: "5s"
 ```
 
@@ -160,12 +160,12 @@ defaults
   timeout client  50000
   timeout server  50000
 
-frontend claudient_lb
+frontend uitkit_lb
   bind *:80
   mode http
-  default_backend claudient_cluster
+  default_backend uitkit_cluster
 
-backend claudient_cluster
+backend uitkit_cluster
   mode http
   balance roundrobin
   option httplog
@@ -173,7 +173,7 @@ backend claudient_cluster
   option http-server-close
   
   # Eindpunt gezondheidscontrole
-  option httpchk GET /health/ready HTTP/1.1\r\nHost:\ claudient.company.com
+  option httpchk GET /health/ready HTTP/1.1\r\nHost:\ uitkit.company.com
   
   server instance1 10.0.1.10:8080 check inter 5s fall 2 rise 2
   server instance2 10.0.1.11:8080 check inter 5s fall 2 rise 2
@@ -368,7 +368,7 @@ Primaire gezondheidscontrole mislukt 3 keer (5s × 3) → Degradatie geactiveerd
 # K8s detecteert Pod-fout, plant nieuwe Pod op gezonde node
 
 # Optie B: Handmatige promotie replica
-claudient-cli db promote-replica --replica=replica-us-west --force
+uitkit-cli db promote-replica --replica=replica-us-west --force
 
 # Replica wordt primair, begint schrijfbewerkingen te accepteren
 # Oude primair wordt standby wanneer het herstelt
@@ -377,19 +377,19 @@ claudient-cli db promote-replica --replica=replica-us-west --force
 **3. Verificatie**
 ```bash
 # Controleer dat nieuwe primair gezond is
-claudient-cli db health --primary
+uitkit-cli db health --primary
 
 # Monitor replicatie van nieuwe primair → standby's
-claudient-cli db replication-status
+uitkit-cli db replication-status
 
 # Bevestig dat schrijfbewerkingen hervatten
-curl -X GET http://claudient-api/metrics | grep claudient_writes_total
+curl -X GET http://uitkit-api/metrics | grep uitkit_writes_total
 ```
 
 **4. Na het incident**
 - Onderzoek root cause (check logs van 10 minuten voor fout)
 - Als oude primair herstelt, herbouw van nieuwe primaire backup
-- Voer consistentiecontroles uit: `claudient-cli db verify-consistency`
+- Voer consistentiecontroles uit: `uitkit-cli db verify-consistency`
 
 ### Cache-Foutstel Herstel
 
@@ -417,7 +417,7 @@ systemctl restart redis-server
 redis-cli FLUSHALL
 
 # Cache opwarmen met hot data
-claudient-cli cache warmup --profile=production
+uitkit-cli cache warmup --profile=production
   ├─ Laadt functiemarkeringen (50MB)
   ├─ Laadt gemeenschappelijke gebruikersgegevens (200MB)
   └─ Laadt sessieindex (100MB)
@@ -434,13 +434,13 @@ Consul/etcd gezondheidscontrole mislukt → Config verouderd (tot 5 min)
 **2. Herstel**
 ```bash
 # Handmatig geforceerde synchronisatie van waarheidssbron
-claudient-cli config sync --force --source=git
+uitkit-cli config sync --force --source=git
 
 # Of start configwatcher opnieuw
-systemctl restart claudient-config-sync
+systemctl restart uitkit-config-sync
 
 # Controleer dat alle exemplaren nieuwe config hebben opgehaald
-claudient-cli config get-applied | jq '.version'
+uitkit-cli config get-applied | jq '.version'
 ```
 
 ## Bewaking & Waarschuwingen
@@ -475,7 +475,7 @@ Faalpercentages:
 
 ```yaml
 groups:
-  - name: claudient_ha
+  - name: uitkit_ha
     rules:
       - alert: HighReplicationLag
         expr: db_replication_lag_seconds > 5
@@ -499,17 +499,17 @@ groups:
           action: "Start Redis-container onmiddellijk opnieuw"
 
       - alert: InstanceUnhealthy
-        expr: up{job="claudient"} == 0
+        expr: up{job="uitkit"} == 0
         for: 30s
         annotations:
           summary: "Exemplaar {{ $labels.instance }} is UIT"
           action: "K8s start automatisch opnieuw; controleer systemd/logs als niet"
 
       - alert: ReadOnlyModeActive
-        expr: claudient_read_only_mode == 1
+        expr: uitkit_read_only_mode == 1
         for: 0s
         annotations:
-          summary: "Claudient in ALLEEN-LEZEN-modus (schrijven uitgeschakeld)"
+          summary: "UitKit in ALLEEN-LEZEN-modus (schrijven uitgeschakeld)"
           action: "P1 incident - waarschuw incidentcommandant onmiddellijk"
 ```
 
@@ -522,7 +522,7 @@ Voor bedrijfsondersteuning implementaties, behoud een warme of hete DR-site.
 ```
 Productiesite (vs-oost)       DR-site (vs-west)
 ┌──────────────────────┐      ┌──────────────────────┐
-│  Claudient-exemplaar │      │  Claudient-exemplaar │
+│  UitKit-exemplaar │      │  UitKit-exemplaar │
 │  + DB Primair        │      │  + DB Replica        │
 └──────────┬───────────┘      └──────────┬───────────┘
            │                             │
@@ -544,7 +544,7 @@ Productiesite (vs-oost)       DR-site (vs-west)
 ```
 Productiesite (vs-oost)       DR-site (vs-west)
 ┌──────────────────────┐      ┌──────────────────────┐
-│  Claudient-exemplaar │      │  Claudient-exemplaar │
+│  UitKit-exemplaar │      │  UitKit-exemplaar │
 │  + DB Primair        │      │  Uitgeschakeld       │
 └──────────┬───────────┘      └──────────────────────┘
            │
@@ -571,20 +571,20 @@ TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 echo "[$TIMESTAMP] DR-failover gestart - Incident-ID: $INCIDENT_ID"
 
 # 1. Controleer dat DR-site klaar is
-if ! curl -f https://dr.claudient.com/health/ready > /dev/null; then
+if ! curl -f https://dr.uitkit.com/health/ready > /dev/null; then
   echo "FOUT: DR-site niet gezond, failover afgebroken"
   exit 1
 fi
 
 # 2. Verhef DR-database naar primair
 echo "DR-database tot primair verheven..."
-psql -U admin -h dr-db.internal -d claudient -c \
+psql -U admin -h dr-db.internal -d uitkit -c \
   "SELECT pg_promote();"
 
 sleep 5
 
 # 3. Controleer dat DR-database schrijfbewerkingen accepteert
-if ! psql -U admin -h dr-db.internal -d claudient -c "SHOW server_version;" > /dev/null; then
+if ! psql -U admin -h dr-db.internal -d uitkit -c "SHOW server_version;" > /dev/null; then
   echo "FOUT: DR-database accepteert geen verbindingen, failover afgebroken"
   exit 1
 fi
@@ -597,10 +597,10 @@ aws route53 change-resource-record-sets \
     "Changes": [{
       "Action": "UPSERT",
       "ResourceRecordSet": {
-        "Name": "claudient.company.com",
+        "Name": "uitkit.company.com",
         "Type": "CNAME",
         "TTL": 30,
-        "ResourceRecords": [{"Value": "dr.claudient.com"}]
+        "ResourceRecords": [{"Value": "dr.uitkit.com"}]
       }
     }]
   }'
@@ -609,9 +609,9 @@ aws route53 change-resource-record-sets \
 sleep 10
 
 # 6. Controleer dat verkeer naar DR stroomt
-REQUESTS_DR=$(curl -s https://dr.claudient.com/metrics | grep claudient_requests_total | awk '{print $2}')
+REQUESTS_DR=$(curl -s https://dr.uitkit.com/metrics | grep uitkit_requests_total | awk '{print $2}')
 sleep 5
-REQUESTS_DR_NEW=$(curl -s https://dr.claudient.com/metrics | grep claudient_requests_total | awk '{print $2}')
+REQUESTS_DR_NEW=$(curl -s https://dr.uitkit.com/metrics | grep uitkit_requests_total | awk '{print $2}')
 
 if [ "$REQUESTS_DR" -eq "$REQUESTS_DR_NEW" ]; then
   echo "FOUT: Geen verkeer naar DR-site"
@@ -634,40 +634,40 @@ exit 0
 
 ```bash
 # 1. Onderhoudsmodus op primair activeren (geen nieuwe verzoeken accepteren)
-claudient-cli maintenance enable --reason="Planned failover to DR"
+uitkit-cli maintenance enable --reason="Planned failover to DR"
 
 # 2. Bestaande verzoeken correct afvoeren (tot 30 seconden)
 # Taakverdeler stopt nieuw verkeer, wacht op in-flight verzoeken
 sleep 30
 
 # 3. Alle hangende schrijfbewerkingen leegmaken
-psql -U admin -h prod-db.internal -d claudient -c \
+psql -U admin -h prod-db.internal -d uitkit -c \
   "SELECT * FROM write_queue WHERE status='pending';" \
-  | xargs -I {} psql -U admin -h dr-db.internal -c "INSERT INTO claudient..."
+  | xargs -I {} psql -U admin -h dr-db.internal -c "INSERT INTO uitkit..."
 
 # 4. Neem uiteindelijke backup van primaire DB
-pg_dump -U admin -h prod-db.internal claudient | gzip > /backups/prod-final-$(date +%s).sql.gz
+pg_dump -U admin -h prod-db.internal uitkit | gzip > /backups/prod-final-$(date +%s).sql.gz
 
 # 5. Verhef DR en zet DNS over (hetzelfde als geautomatiseerde failover hierboven)
 
 # 6. Test DR-site volledig operationeel
-claudient-cli health check --full
+uitkit-cli health check --full
 
 # 7. Onderhoudsmodus op DR uitschakelen
-claudient-cli maintenance disable
+uitkit-cli maintenance disable
 ```
 
 ### Backup & Herstel
 
 ```bash
 # Dagelijkse incrementele backup naar S3
-0 3 * * * /usr/local/bin/claudient-backup.sh --type=incremental --dest=s3://claudient-backups/prod/
+0 3 * * * /usr/local/bin/uitkit-backup.sh --type=incremental --dest=s3://uitkit-backups/prod/
 
 # Wekelijkse volledige backup
-0 2 * * 0 /usr/local/bin/claudient-backup.sh --type=full --dest=s3://claudient-backups/prod/ --retain=30days
+0 2 * * 0 /usr/local/bin/uitkit-backup.sh --type=full --dest=s3://uitkit-backups/prod/ --retain=30days
 
 # Maandelijks herstel testen (controleer dat backups geldig zijn)
-0 4 1 * * /usr/local/bin/claudient-backup.sh --test-restore --backup-date=7days-ago --dest=/tmp/restore-test/
+0 4 1 * * /usr/local/bin/uitkit-backup.sh --test-restore --backup-date=7days-ago --dest=/tmp/restore-test/
 ```
 
 ## Testen & Validatie
@@ -678,7 +678,7 @@ Voer deze maandelijks uit om HA-instellingen te valideren:
 
 ```bash
 # Test 1: Primaire database beëindigen
-kubectl delete pod claudient-db-0
+kubectl delete pod uitkit-db-0
 # Verwacht: Automatische failover naar replica binnen 30s, nul gegevensverlies
 
 # Test 2: Netwerkpartitie (gesimuleerde hoge latentie)
@@ -688,7 +688,7 @@ tc qdisc del dev eth0 root
 # Verwacht: Circuitonderbrekkers openen, verzoeken verslechteren geleidelijk, herstel wanneer latentie daalt
 
 # Test 3: Cascadefout (cache + primaire DB beëindigen)
-kubectl delete pod redis-0 claudient-db-0
+kubectl delete pod redis-0 uitkit-db-0
 # Verwacht: Fallback naar in-memory cache, alleen-lezen modus, nul cascadefouten
 
 # Test 4: Configuratie-synchronisationfout
@@ -704,14 +704,14 @@ stress-ng --cpu 32 --timeout 5m &
 
 ```bash
 # 1. Controleer op gegevensverlies
-claudient-cli db consistency-check --compare=backup
+uitkit-cli db consistency-check --compare=backup
 
 # 2. Controleer dat alle gegevens zijn vastgelegd
 curl -s http://localhost:9090/api/v1/query?query=up | jq '.data.result | length'
 # Moet alle exemplaren weer online tonen
 
 # 3. Controleer logs op cascadefouten
-grep -E "ERROR|WARN|circuit.*open|cascading" /var/log/claudient/*.log | tail -20
+grep -E "ERROR|WARN|circuit.*open|cascading" /var/log/uitkit/*.log | tail -20
 ```
 
 ## SLA & Doelstellingen

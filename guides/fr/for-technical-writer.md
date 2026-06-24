@@ -18,16 +18,16 @@ Vous êtes rédacteur technique, ingénieur de documentation ou développeur adv
 
 ```bash
 # Installer toutes les compétences Rédacteur Technique
-npx claudient add skills productivity
+npx uitkit add skills productivity
 
 # Ou choisir à la carte :
-npx claudient add skill productivity/readme-generator
-npx claudient add skill productivity/runbook-generator
-npx claudient add skill productivity/adr-writer
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill productivity/api-doc-writer
-npx claudient add skill productivity/changelog-writer
-npx claudient add agents roles/changelog-narrator
+npx uitkit add skill productivity/readme-generator
+npx uitkit add skill productivity/runbook-generator
+npx uitkit add skill productivity/adr-writer
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill productivity/api-doc-writer
+npx uitkit add skill productivity/changelog-writer
+npx uitkit add agents roles/changelog-narrator
 ```
 
 ---
@@ -216,7 +216,7 @@ Produisez :
 ## Plan d'intégration sur 30 jours (nouveaux rédacteurs techniques)
 
 ### Semaine 1 — Installation et audit de documentation
-- Installer toutes les compétences de productivité : `npx claudient add skills productivity`
+- Installer toutes les compétences de productivité : `npx uitkit add skills productivity`
 - Exécuter la classification Diátaxis de `/doc-site-builder` sur toute la documentation existante — identifier les lacunes et les pages de type mixte
 - Lire chaque document existant dans votre domaine principal — noter ce qui est obsolète (comparer aux PRs récentes)
 - Assister à 2-3 standups d'ingénierie — entendre ce qui sera livré dans le prochain sprint
@@ -270,7 +270,7 @@ Si votre équipe utilise OpenAPI :
 
 ```bash
 # Générer la documentation à partir de la spec
-npx claudient run api-doc-writer --input openapi.yaml --audience developers
+npx uitkit run api-doc-writer --input openapi.yaml --audience developers
 ```
 
 ### Mintlify / Docusaurus / MkDocs (plateformes de documentation)

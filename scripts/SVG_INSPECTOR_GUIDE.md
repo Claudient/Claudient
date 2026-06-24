@@ -2,15 +2,15 @@
 
 ## Overview
 
-`claudient svg-inspector` is a comprehensive CLI tool for inspecting, validating, rendering, and exporting SVG maps. It converts JSON map definitions to interactive SVG visualizations and provides a local development server for real-time viewing and manipulation.
+`uitkit svg-inspector` is a comprehensive CLI tool for inspecting, validating, rendering, and exporting SVG maps. It converts JSON map definitions to interactive SVG visualizations and provides a local development server for real-time viewing and manipulation.
 
 ## Installation
 
-The tool is included with Claudient. Access via:
+The tool is included with UitKit. Access via:
 
 ```bash
-npx claudient svg-inspector <command> [file] [options]
-node scripts/claudient-svg-inspector.js <command> [file] [options]
+npx uitkit svg-inspector <command> [file] [options]
+node scripts/uitkit-svg-inspector.js <command> [file] [options]
 ```
 
 ## Commands
@@ -20,7 +20,7 @@ node scripts/claudient-svg-inspector.js <command> [file] [options]
 Analyze and display metadata about a map file.
 
 ```bash
-claudient svg-inspector inspect <file>
+uitkit svg-inspector inspect <file>
 ```
 
 **Output includes:**
@@ -34,7 +34,7 @@ claudient svg-inspector inspect <file>
 **Example:**
 
 ```bash
-$ claudient svg-inspector inspect maps/sample-network.json
+$ uitkit svg-inspector inspect maps/sample-network.json
 
 === SVG Map Inspector ===
 
@@ -60,7 +60,7 @@ Color Palette:
 Metadata:
   created: 2026-06-22
   version: 1.0
-  author: Claudient
+  author: UitKit
 ```
 
 ### render
@@ -68,7 +68,7 @@ Metadata:
 Convert a JSON map definition to SVG format.
 
 ```bash
-claudient svg-inspector render <file> [options]
+uitkit svg-inspector render <file> [options]
 ```
 
 **Options:**
@@ -83,16 +83,16 @@ claudient svg-inspector render <file> [options]
 
 ```bash
 # Basic render
-claudient svg-inspector render map.json
+uitkit svg-inspector render map.json
 
 # Render with 2x zoom
-claudient svg-inspector render map.json --zoom 2 --output map-large.svg
+uitkit svg-inspector render map.json --zoom 2 --output map-large.svg
 
 # Render with custom theme
-claudient svg-inspector render map.json --theme dark --output map-dark.svg
+uitkit svg-inspector render map.json --theme dark --output map-dark.svg
 
 # Render with grid overlay
-claudient svg-inspector render map.json --show-grid
+uitkit svg-inspector render map.json --show-grid
 ```
 
 ### export
@@ -100,7 +100,7 @@ claudient svg-inspector render map.json --show-grid
 Export a map to HTML with interactive viewer or standalone SVG.
 
 ```bash
-claudient svg-inspector export <file> [options]
+uitkit svg-inspector export <file> [options]
 ```
 
 **Options:**
@@ -112,13 +112,13 @@ claudient svg-inspector export <file> [options]
 
 ```bash
 # Export as standalone SVG
-claudient svg-inspector export map.json --output map-export.svg
+uitkit svg-inspector export map.json --output map-export.svg
 
 # Export with interactive viewer
-claudient svg-inspector export map.json --export-html --output viewer.html
+uitkit svg-inspector export map.json --export-html --output viewer.html
 
 # Export with preset zoom
-claudient svg-inspector export map.json --export-html --zoom 1.5
+uitkit svg-inspector export map.json --export-html --zoom 1.5
 ```
 
 ### serve
@@ -126,7 +126,7 @@ claudient svg-inspector export map.json --export-html --zoom 1.5
 Start a local development server with interactive map viewer and API endpoints.
 
 ```bash
-claudient svg-inspector serve <file> [options]
+uitkit svg-inspector serve <file> [options]
 ```
 
 **Options:**
@@ -153,13 +153,13 @@ claudient svg-inspector serve <file> [options]
 
 ```bash
 # Start dev server (auto-opens browser)
-claudient svg-inspector serve map.json
+uitkit svg-inspector serve map.json
 
 # Start on custom port
-claudient svg-inspector serve map.json --port 3000
+uitkit svg-inspector serve map.json --port 3000
 
 # Start without opening browser
-claudient svg-inspector serve map.json --interactive
+uitkit svg-inspector serve map.json --interactive
 ```
 
 ### validate
@@ -167,7 +167,7 @@ claudient svg-inspector serve map.json --interactive
 Check map structure for errors and inconsistencies.
 
 ```bash
-claudient svg-inspector validate <file>
+uitkit svg-inspector validate <file>
 ```
 
 **Checks:**
@@ -184,7 +184,7 @@ claudient svg-inspector validate <file>
 **Example:**
 
 ```bash
-$ claudient svg-inspector validate map.json
+$ uitkit svg-inspector validate map.json
 
 === Validation Report ===
 
@@ -197,13 +197,13 @@ File: maps/sample-network.json
 Display all available maps in the `maps/` directory.
 
 ```bash
-claudient svg-inspector list
+uitkit svg-inspector list
 ```
 
 **Example:**
 
 ```bash
-$ claudient svg-inspector list
+$ uitkit svg-inspector list
 
 Available Maps:
 
@@ -396,9 +396,9 @@ Available Maps:
 
 **Render and view:**
 ```bash
-claudient svg-inspector render network.json
-claudient svg-inspector export network.json --export-html
-claudient svg-inspector serve network.json
+uitkit svg-inspector render network.json
+uitkit svg-inspector export network.json --export-html
+uitkit svg-inspector serve network.json
 ```
 
 ### Dashboard Layout
@@ -457,31 +457,31 @@ cat > mymap.json << EOF
 EOF
 
 # 2. Validate structure
-claudient svg-inspector validate mymap.json
+uitkit svg-inspector validate mymap.json
 
 # 3. Inspect metadata
-claudient svg-inspector inspect mymap.json
+uitkit svg-inspector inspect mymap.json
 
 # 4. Render to SVG
-claudient svg-inspector render mymap.json
+uitkit svg-inspector render mymap.json
 
 # 5. Start dev server for interactive editing
-claudient svg-inspector serve mymap.json --port 3000
+uitkit svg-inspector serve mymap.json --port 3000
 
 # 6. Export for production
-claudient svg-inspector export mymap.json --export-html
+uitkit svg-inspector export mymap.json --export-html
 ```
 
 ### Documentation Workflow
 
 ```bash
 # Generate SVG visualization for docs
-claudient svg-inspector render architecture.json \
+uitkit svg-inspector render architecture.json \
   --zoom 1.5 \
   --output docs/architecture.svg
 
 # Create interactive embed for docs site
-claudient svg-inspector export architecture.json \
+uitkit svg-inspector export architecture.json \
   --export-html \
   --output docs/architecture-viewer.html
 ```
@@ -491,12 +491,12 @@ claudient svg-inspector export architecture.json \
 ```bash
 # Validate all maps
 for map in maps/*.json; do
-  claudient svg-inspector validate "$map" || exit 1
+  uitkit svg-inspector validate "$map" || exit 1
 done
 
 # Generate SVGs
 for map in maps/*.json; do
-  claudient svg-inspector render "$map"
+  uitkit svg-inspector render "$map"
 done
 ```
 
@@ -518,12 +518,12 @@ The interactive viewer supports:
 
 ### Port already in use
 ```bash
-claudient svg-inspector serve map.json --port 3001
+uitkit svg-inspector serve map.json --port 3001
 ```
 
 ### Invalid JSON map
 ```bash
-claudient svg-inspector validate map.json
+uitkit svg-inspector validate map.json
 # Review error messages and fix structure
 ```
 
@@ -581,7 +581,7 @@ claudient svg-inspector validate map.json
 
 ```bash
 # Pipe JSON to viewer
-cat map.json | node scripts/claudient-svg-inspector.js render
+cat map.json | node scripts/uitkit-svg-inspector.js render
 
 # Extract metadata via API
 curl http://localhost:8080/api/meta | jq '.colorPalette'
@@ -600,7 +600,7 @@ node -e "
     .forEach(f => {
       const { execSync } = require('child_process');
       try {
-        execSync(\`node scripts/claudient-svg-inspector.js validate maps/\${f}\`);
+        execSync(\`node scripts/uitkit-svg-inspector.js validate maps/\${f}\`);
       } catch(e) {
         console.error(\`Invalid: \${f}\`);
       }
@@ -610,10 +610,10 @@ node -e "
 
 ## License
 
-Part of Claudient. Licensed under AGPL-3.0-or-later and CC-BY-SA-4.0.
+Part of UitKit. Licensed under AGPL-3.0-or-later and CC-BY-SA-4.0.
 
 ## See Also
 
-- `claudient map` — Generate codebase dependency graphs
-- `claudient chart` — Create statistical visualizations
+- `uitkit map` — Generate codebase dependency graphs
+- `uitkit chart` — Create statistical visualizations
 - Maps directory: `maps/`

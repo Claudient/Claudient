@@ -35,8 +35,8 @@ fi
 # Protected patterns
 if [[ "$FILE_PATH" == *"package.json" || "$FILE_PATH" == *".env"* || "$FILE_PATH" == *".github/workflows/"* || "$FILE_PATH" == *"CLAUDE.md" ]]; then
   # Allow if a temporary unlock file exists
-  if [[ -f ".claudient-unlock" ]]; then
-    if grep -q "$FILE_PATH" ".claudient-unlock"; then
+  if [[ -f ".uitkit-unlock" ]]; then
+    if grep -q "$FILE_PATH" ".uitkit-unlock"; then
       exit 0
     fi
   fi
@@ -45,7 +45,7 @@ if [[ "$FILE_PATH" == *"package.json" || "$FILE_PATH" == *".env"* || "$FILE_PATH
     --arg file "$FILE_PATH" \
     '{
       decision: "block",
-      reason: "🚨 WORKSPACE GUARDIAN: Attempted to edit protected infrastructure file \'\($file)\'. This file is locked to prevent accidental corruption. To edit this file, ask the user to run `npx claudient guard unlock \($file)`."
+      reason: "🚨 WORKSPACE GUARDIAN: Attempted to edit protected infrastructure file \'\($file)\'. This file is locked to prevent accidental corruption. To edit this file, ask the user to run `npx uitkit guard unlock \($file)`."
     }'
   exit 0
 fi

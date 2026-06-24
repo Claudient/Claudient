@@ -256,8 +256,8 @@ hook_data = json.load(sys.stdin)
 
 audit_event = {
     'event_type': 'tool_call',
-    'session_id': os.getenv('CLAUDIENT_SESSION_ID'),
-    'user_id': os.getenv('CLAUDIENT_USER'),
+    'session_id': os.getenv('UITKIT_SESSION_ID'),
+    'user_id': os.getenv('UITKIT_USER'),
     'severity': 'INFO',
     'event_data': hook_data,
     'event_timestamp': datetime.now(timezone.utc).isoformat(),

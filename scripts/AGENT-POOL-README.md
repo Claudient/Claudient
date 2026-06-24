@@ -546,10 +546,10 @@ goals.forEach(g => pool.submitGoal(g));
 await pool.start();
 ```
 
-### With claudient-dont-stop.js
+### With uitkit-dont-stop.js
 
 ```javascript
-const { DontStopEngine } = require('./claudient-dont-stop.js');
+const { DontStopEngine } = require('./uitkit-dont-stop.js');
 const { AgentPool } = require('./dont-stop-agent-pool.js');
 
 // Sequential execution with engine
@@ -564,4 +564,4 @@ await pool.start();
 
 ## License
 
-Part of Claudient workflow orchestration system.
+Part of UitKit workflow orchestration system.

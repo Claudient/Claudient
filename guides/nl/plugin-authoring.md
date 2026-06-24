@@ -24,7 +24,7 @@ my-plugin/
     └── my-server.json
 ```
 
-Component files volgen dezelfde indeling als standalone skills, agents, hooks en rules in de Claudient spec.
+Component files volgen dezelfde indeling als standalone skills, agents, hooks en rules in de UitKit spec.
 
 ---
 
@@ -99,13 +99,13 @@ Component files volgen dezelfde indeling als standalone skills, agents, hooks en
 
 **Van npm:**
 ```bash
-npx claudient add plugin my-plugin-package
-npx claudient add plugin @org/my-plugin
+npx uitkit add plugin my-plugin-package
+npx uitkit add plugin @org/my-plugin
 ```
 
 **Van een lokaal pad:**
 ```bash
-npx claudient add plugin ./path/to/my-plugin
+npx uitkit add plugin ./path/to/my-plugin
 ```
 
 **Van een URL (v2.1.90+):**
@@ -121,8 +121,8 @@ Plugins geïnstalleerd per-project schrijven naar `.claude/plugins/`. Plugins ge
 
 | Bereik | Installatieopdracht | Locatie | Wie dit beïnvloedt |
 |---|---|---|---|
-| Per-project | `npx claudient add plugin <pkg> --project` | `.claude/plugins/` | Alleen dit project |
-| User-global | `npx claudient add plugin <pkg> --global` | `~/.claude/plugins/` | Alle projecten voor deze gebruiker |
+| Per-project | `npx uitkit add plugin <pkg> --project` | `.claude/plugins/` | Alleen dit project |
+| User-global | `npx uitkit add plugin <pkg> --global` | `~/.claude/plugins/` | Alle projecten voor deze gebruiker |
 
 Standaard is per-project. Gebruik `--global` voor persoonlijk gereedschap (uw voorkeur agents, productiviteitsvaardigheden) en per-project voor teamgedeeld gereedschap.
 
@@ -138,10 +138,10 @@ npm link
 
 # In the project where you want to test it
 npm link my-plugin-package
-npx claudient add plugin my-plugin-package
+npx uitkit add plugin my-plugin-package
 ```
 
-Of gebruik het `scripts/link-skills.sh`-patroon als u een Claudient-stijl repo onderhoudt:
+Of gebruik het `scripts/link-skills.sh`-patroon als u een UitKit-stijl repo onderhoudt:
 
 ```bash
 #!/bin/bash
@@ -182,7 +182,7 @@ Onderhoud een `CHANGELOG.md` in de plugin root. Gebruikers die plugins upgraden 
 ## Publiceren naar npm
 
 ```bash
-# Ensure "claudient-plugin" is in keywords for discoverability
+# Ensure "uitkit-plugin" is in keywords for discoverability
 npm publish --access public
 ```
 
@@ -190,10 +190,10 @@ Minimum `package.json` voor een publiceerbare plugin:
 
 ```json
 {
-  "name": "claudient-plugin-my-tool",
+  "name": "uitkit-plugin-my-tool",
   "version": "1.0.0",
   "description": "What this plugin provides",
-  "keywords": ["claudient-plugin", "claude-code"],
+  "keywords": ["uitkit-plugin", "claude-code"],
   "files": [
     "plugin.json",
     "skills/",
@@ -205,7 +205,7 @@ Minimum `package.json` voor een publiceerbare plugin:
 }
 ```
 
-Het `claudient-plugin` trefwoord maakt de plugin ontdekt via `npx claudient search plugins <query>`.
+Het `uitkit-plugin` trefwoord maakt de plugin ontdekt via `npx uitkit search plugins <query>`.
 
 ---
 

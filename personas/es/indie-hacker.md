@@ -23,7 +23,7 @@ Desarrolladores que construyen y lanzan pequeños productos SaaS, herramientas o
 
 **Compromisos por defecto:** SQLite antes que Postgres si es suficiente. Stripe + email antes que un CRM completo. Vercel/Railway en lugar de Kubernetes autogestionado.
 
-## Skills y agentes de Claudient recomendados
+## Skills y agentes de UitKit recomendados
 - `small-business` — niveles de precios, posicionamiento, tácticas de retención
 - `gtm` — lanzar en Product Hunt, Hacker News, Twitter/X
 - `ai-engineering` — añadir funcionalidades de IA sin presupuesto para GPU

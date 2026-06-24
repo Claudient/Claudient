@@ -2,7 +2,7 @@
 
 ## What Was Created
 
-Task executor library (`lib/task-executor.js`) — Universal task routing and execution engine for Claudient. Routes tasks to appropriate handlers based on automatic type detection.
+Task executor library (`lib/task-executor.js`) — Universal task routing and execution engine for UitKit. Routes tasks to appropriate handlers based on automatic type detection.
 
 ### Files Created
 
@@ -417,7 +417,7 @@ See INTEGRATION_GUIDE.md → Troubleshooting section
 
 ## License
 
-Part of Claudient. See LICENSE file.
+Part of UitKit. See LICENSE file.
 
 ---
 

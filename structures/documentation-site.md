@@ -179,10 +179,10 @@ touch .claude/commands/update-sidebar.md
 # Create env files
 touch .env.example .env.local
 
-# Install Claudient skills
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill devops-infra/cicd
-npx claudient add skill devops-infra/vercel
+# Install UitKit skills
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill devops-infra/cicd
+npx uitkit add skill devops-infra/vercel
 
 echo "Astro + Starlight docs site scaffolded. Run: npm run dev"
 ```
@@ -410,10 +410,10 @@ Optional:
 ## Skills to install
 
 ```bash
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill devops-infra/cicd
-npx claudient add skill devops-infra/vercel
-npx claudient add skill testing/playwright
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill devops-infra/cicd
+npx uitkit add skill devops-infra/vercel
+npx uitkit add skill testing/playwright
 ```
 
 ## Related

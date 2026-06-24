@@ -1,5 +1,5 @@
 """
-Claudient — Agent SDK Starter Template (Python)
+UitKit — Agent SDK Starter Template (Python)
 Requires: anthropic >= 0.92.0
 """
 

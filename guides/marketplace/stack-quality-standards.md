@@ -65,7 +65,7 @@ Every stack must include a `CLAUDE.md` file at the root. It defines the stack's 
 
 ## Skill Standards
 
-Every skill must follow the claudient skill format and meet these quality criteria.
+Every skill must follow the uitkit skill format and meet these quality criteria.
 
 **Format (required):**
 ```markdown
@@ -125,7 +125,7 @@ Every skill must follow the claudient skill format and meet these quality criter
 
 ## Agent Standards
 
-Every agent must follow the claudient agent format and meet these quality criteria.
+Every agent must follow the uitkit agent format and meet these quality criteria.
 
 **Format (required):**
 ```markdown

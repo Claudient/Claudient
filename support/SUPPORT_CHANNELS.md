@@ -2,7 +2,7 @@
 
 ## Overview
 
-Claudient provides multiple support channels to address different types of inquiries. Use the appropriate channel below to ensure your request reaches the right team and receives timely support.
+UitKit provides multiple support channels to address different types of inquiries. Use the appropriate channel below to ensure your request reaches the right team and receives timely support.
 
 ---
 
@@ -10,7 +10,7 @@ Claudient provides multiple support channels to address different types of inqui
 
 ### GitHub Issues
 **Primary use:** Bug reports, technical issues, feature requests  
-**URL:** https://github.com/tushar2704/Claudient/issues  
+**URL:** https://github.com/tushar2704/UitKit/issues  
 **Response time SLA:** 24-48 hours for initial triage  
 **Resolution target:** Critical bugs: 48 hours | High priority: 1 week | Normal: 2 weeks
 
@@ -31,7 +31,7 @@ Claudient provides multiple support channels to address different types of inqui
 
 ### GitHub Discussions
 **Primary use:** Questions, general guidance, best practices  
-**URL:** https://github.com/tushar2704/Claudient/discussions  
+**URL:** https://github.com/tushar2704/UitKit/discussions  
 **Response time SLA:** 48-72 hours for initial response  
 **Resolution target:** 1 week
 
@@ -52,7 +52,7 @@ Claudient provides multiple support channels to address different types of inqui
 
 ### Discord (#dont-stop)
 **Primary use:** Real-time chat, community support, urgent issues  
-**Server:** Claudient Community Discord  
+**Server:** UitKit Community Discord  
 **Channel:** `#dont-stop`  
 **Response time SLA:** 2-4 hours during business hours (EST)  
 **Resolution target:** Quick answers for immediate blockers
@@ -74,7 +74,7 @@ Claudient provides multiple support channels to address different types of inqui
 
 ### Email Support
 **Primary use:** Sales inquiries, enterprise support, confidential issues  
-**Email:** support@claudient.io  
+**Email:** support@uitkit.io  
 **Response time SLA:** 
 - Enterprise plans: 4 business hours
 - Standard plans: 1 business day
@@ -164,7 +164,7 @@ Is it a feature request?
 └─ Discussion/brainstorm? → Discord
 
 Is it sales/enterprise/confidential?
-└─ Email support@claudient.io
+└─ Email support@uitkit.io
 
 Is it urgent/blocking production?
 ├─ During business hours? → Discord (#dont-stop)
@@ -210,7 +210,7 @@ If your issue is not being resolved:
 
 1. **Initial attempt:** Post in appropriate channel with full context
 2. **No response after SLA:** Add a follow-up comment or message
-3. **Still unresolved:** Escalate via email to support@claudient.io with:
+3. **Still unresolved:** Escalate via email to support@uitkit.io with:
    - Original GitHub issue/discussion link or Discord message timestamp
    - Summary of attempts so far
    - Business impact and urgency
@@ -221,7 +221,7 @@ If your issue is not being resolved:
 ## Status Page
 
 For service status and incident updates, check:  
-**https://status.claudient.io**
+**https://status.uitkit.io**
 
 Subscribe to status updates to be notified of:
 - Planned maintenance windows
@@ -237,14 +237,14 @@ All support channels follow the [Code of Conduct](../CODE_OF_CONDUCT.md). Member
 - Be respectful and constructive
 - Search before asking duplicate questions
 - Share knowledge and help others
-- Report security issues privately (security@claudient.io)
+- Report security issues privately (security@uitkit.io)
 - Keep commercial pitches out of community channels
 
 ---
 
 ## Enterprise Support
 
-For organizations using Claudient at scale:
+For organizations using UitKit at scale:
 
 - **Dedicated support contact:** Named point person
 - **Faster response times:** SLA-based escalation path
@@ -252,20 +252,20 @@ For organizations using Claudient at scale:
 - **Custom integrations:** Support for custom skill development
 - **Training:** Onboarding and team training available
 
-**Contact:** sales@claudient.io or visit [Enterprise Plans](../PRICING.md#enterprise)
+**Contact:** sales@uitkit.io or visit [Enterprise Plans](../PRICING.md#enterprise)
 
 ---
 
 ## Additional Resources
 
-- **Documentation:** https://claudient.io/docs
+- **Documentation:** https://uitkit.io/docs
 - **Guides:** See `guides/` directory in repository
-- **API Reference:** https://claudient.io/api
-- **Changelog:** https://github.com/tushar2704/Claudient/releases
+- **API Reference:** https://uitkit.io/api
+- **Changelog:** https://github.com/tushar2704/UitKit/releases
 - **Security Policy:** [SECURITY.md](../SECURITY.md)
 - **Contributing:** [CONTRIBUTING.md](../CONTRIBUTING.md)
 
 ---
 
 **Last updated:** 2026-06-22  
-**Maintained by:** Claudient Community Team
+**Maintained by:** UitKit Community Team

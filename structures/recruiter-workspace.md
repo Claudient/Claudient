@@ -221,12 +221,12 @@ touch recruiter-workspace/reports/dei-metrics.md
 echo "# Weekly Pipeline — $(date +%Y-W%V)" > recruiter-workspace/reports/weekly/$(date +%Y-W%V).md
 
 # Install all recruiter skills
-npx claudient add skill productivity/candidate-sourcer
-npx claudient add skill productivity/interview-scorecard
-npx claudient add skill productivity/tech-interview-kit
-npx claudient add skill productivity/comp-benchmarker
-npx claudient add skill small-business/hiring-pipeline
-npx claudient add skill small-business/job-description
+npx uitkit add skill productivity/candidate-sourcer
+npx uitkit add skill productivity/interview-scorecard
+npx uitkit add skill productivity/tech-interview-kit
+npx uitkit add skill productivity/comp-benchmarker
+npx uitkit add skill small-business/hiring-pipeline
+npx uitkit add skill small-business/job-description
 
 echo "Recruiter workspace scaffold complete."
 ```
@@ -413,12 +413,12 @@ Do not add application code here. This is a content and workflow workspace.
 ## Skills to install
 
 ```bash
-npx claudient add skill productivity/candidate-sourcer
-npx claudient add skill productivity/interview-scorecard
-npx claudient add skill productivity/tech-interview-kit
-npx claudient add skill productivity/comp-benchmarker
-npx claudient add skill small-business/hiring-pipeline
-npx claudient add skill small-business/job-description
+npx uitkit add skill productivity/candidate-sourcer
+npx uitkit add skill productivity/interview-scorecard
+npx uitkit add skill productivity/tech-interview-kit
+npx uitkit add skill productivity/comp-benchmarker
+npx uitkit add skill small-business/hiring-pipeline
+npx uitkit add skill small-business/job-description
 ```
 
 ## Related

@@ -1,11 +1,11 @@
-# Claudient Discord Bot
+# UitKit Discord Bot
 
-Production-ready Discord bot for Claudient community servers with skill search, project showcase, feature announcements, and 24/7 volunteer-routed support.
+Production-ready Discord bot for UitKit community servers with skill search, project showcase, feature announcements, and 24/7 volunteer-routed support.
 
 ## Features
 
 ### 1. Skill Search
-- Search 400+ Claudient skills, agents, and features
+- Search 400+ UitKit skills, agents, and features
 - Autocomplete suggestions as you type
 - Category, tier, and ID information
 - Gold/Silver/Bronze tier indicators
@@ -18,7 +18,7 @@ Production-ready Discord bot for Claudient community servers with skill search, 
 - Knowledge base of all resolved issues
 
 ### 3. Project Showcase
-- Submit Claudient-powered projects to community
+- Submit UitKit-powered projects to community
 - Browse recent projects
 - Author attribution and links (GitHub, demo, docs)
 - Rich embeds with color-coded categories
@@ -47,8 +47,8 @@ Automatically create and manage:
 
 1. **Clone repository**
    ```bash
-   git clone https://github.com/UitbreidenOS/Claudient.git
-   cd Claudient
+   git clone https://github.com/UitbreidenOS/UitKit.git
+   cd UitKit
    ```
 
 2. **Install dependencies**
@@ -75,7 +75,7 @@ Automatically create and manage:
 
    Expected output:
    ```
-   ✓ Claudient bot ready as Claudient#0000
+   ✓ UitKit bot ready as UitKit#0000
    ```
 
 ### Detailed Setup
@@ -279,7 +279,7 @@ See examples/discord-bot-example.js for 10+ extension examples.
 
 Bot automatically sets activity on startup:
 ```
-Claudient bot watching "Claudient skills | /help"
+UitKit bot watching "UitKit skills | /help"
 ```
 
 Monitor bot status:
@@ -300,7 +300,7 @@ Track key metrics:
 
 All errors logged to console with context:
 ```
-✓ Claudient bot ready as Claudient#0000
+✓ UitKit bot ready as UitKit#0000
 Failed to create support thread: [error details]
 Command error: [command-name] [error details]
 ```
@@ -316,14 +316,14 @@ Bot runs while terminal is open. Suitable for testing only.
 ### Option 2: PM2 (Recommended for persistent servers)
 ```bash
 npm install -g pm2
-pm2 start scripts/discord-bot.js --name claudient-bot
+pm2 start scripts/discord-bot.js --name uitkit-bot
 pm2 startup
 pm2 save
 ```
 
 Monitor:
 ```bash
-pm2 logs claudient-bot
+pm2 logs uitkit-bot
 pm2 monit
 ```
 
@@ -339,8 +339,8 @@ CMD ["node", "scripts/discord-bot.js"]
 ```
 
 ```bash
-docker build -t claudient-bot .
-docker run -e DISCORD_TOKEN=$DISCORD_TOKEN claudient-bot
+docker build -t uitkit-bot .
+docker run -e DISCORD_TOKEN=$DISCORD_TOKEN uitkit-bot
 ```
 
 ### Option 4: Cloud Hosting
@@ -444,7 +444,7 @@ Tested with:
 ### Documentation
 - [Discord.js Docs](https://discord.js.org/)
 - [Discord Developer Portal](https://discord.com/developers)
-- [Claudient Skills Library](https://claudient.dev)
+- [UitKit Skills Library](https://uitkit.dev)
 
 ### External Guides
 - [Creating Discord Applications](https://discord.com/developers/docs/getting-started)
@@ -453,8 +453,8 @@ Tested with:
 
 ### Community
 - [Discord.js Server](https://discord.gg/djs)
-- [Claudient Discord](https://discord.gg/claudient)
-- [GitHub Issues](https://github.com/UitbreidenOS/Claudient/issues)
+- [UitKit Discord](https://discord.gg/uitkit)
+- [GitHub Issues](https://github.com/UitbreidenOS/UitKit/issues)
 
 ## Maintenance
 
@@ -487,19 +487,19 @@ git pull origin main
 npm install
 
 # Restart bot
-pm2 restart claudient-bot
+pm2 restart uitkit-bot
 ```
 
 ## License
 
-Same as Claudient: AGPL-3.0-or-later + CC-BY-SA-4.0
+Same as UitKit: AGPL-3.0-or-later + CC-BY-SA-4.0
 
 ## Support
 
 For issues or questions:
 
 1. Check [Troubleshooting](#troubleshooting) section
-2. Search [GitHub Issues](https://github.com/UitbreidenOS/Claudient/issues)
+2. Search [GitHub Issues](https://github.com/UitbreidenOS/UitKit/issues)
 3. Create new issue with:
    - Discord.js version
    - Node.js version
@@ -511,4 +511,4 @@ For issues or questions:
 
 **Last Updated:** 2026-06-22  
 **Version:** 1.0.0  
-**Author:** Claudient Team
+**Author:** UitKit Team

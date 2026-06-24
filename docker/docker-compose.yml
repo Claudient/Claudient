@@ -1,11 +1,11 @@
 version: '3.9'
 
 services:
-  claudient:
+  uitkit:
     build:
       context: ..
       dockerfile: docker/Dockerfile
-    container_name: claudient
+    container_name: uitkit
     ports:
       # Health check & metrics port
       - "9000:9000"
@@ -42,9 +42,9 @@ services:
     build:
       context: ..
       dockerfile: docker/Dockerfile
-    container_name: claudient-dashboard
+    container_name: uitkit-dashboard
     depends_on:
-      claudient:
+      uitkit:
         condition: service_healthy
     ports:
       - "4321:4321"
@@ -59,5 +59,5 @@ services:
 
 networks:
   default:
-    name: claudient-network
+    name: uitkit-network
     driver: bridge

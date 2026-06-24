@@ -1,8 +1,8 @@
-# HIPAA-Compliant Claudient Deployment Guide
+# HIPAA-Compliant UitKit Deployment Guide
 
 ## Overview
 
-The `hipaa-compliant-system.js` module provides enterprise-grade HIPAA compliance for Claudient deployments. It implements core requirements for protected health information (PHI) handling in healthcare environments.
+The `hipaa-compliant-system.js` module provides enterprise-grade HIPAA compliance for UitKit deployments. It implements core requirements for protected health information (PHI) handling in healthcare environments.
 
 ## Features
 
@@ -179,7 +179,7 @@ const encrypted = system.encryptPHI(patientRecord, {
 // Create authenticated session
 const session = system.createSession('dr.smith', {
   ipAddress: '192.168.1.100',
-  userAgent: 'Claudient-Client/1.0',
+  userAgent: 'UitKit-Client/1.0',
   permissions: ['read_phi', 'write_audit']
 });
 
@@ -378,7 +378,7 @@ const config = {
 ```javascript
 const session = system.createSession('user@hospital.org', {
   ipAddress: '192.168.1.100',
-  userAgent: 'Claudient-Client/1.0',
+  userAgent: 'UitKit-Client/1.0',
   permissions: ['read_phi', 'write_phi', 'audit_access']
 });
 
@@ -389,7 +389,7 @@ const session = system.createSession('user@hospital.org', {
   createdAt: '2026-06-22T10:50:00Z',
   expiresAt: '2026-06-22T11:50:00Z',
   ipAddress: '192.168.1.100',
-  userAgent: 'Claudient-Client/1.0',
+  userAgent: 'UitKit-Client/1.0',
   permissions: ['read_phi', 'write_phi', 'audit_access'],
   accessLog: []
 }
@@ -431,7 +431,7 @@ Each audit entry contains:
   "sessionId": "abc123...",
   "outcome": "success|failure",
   "ipAddress": "192.168.1.100",
-  "userAgent": "Claudient-Client/1.0",
+  "userAgent": "UitKit-Client/1.0",
   "eventDetails": {
     "keyVersion": 1,
     "dataHash": "def456...",
@@ -720,6 +720,6 @@ const config = {
 
 ## License & Attribution
 
-This HIPAA-compliant module is part of Claudient. See LICENSE file for terms.
+This HIPAA-compliant module is part of UitKit. See LICENSE file for terms.
 
 For questions, security issues, or compliance concerns, contact: compliance@uitbreiden.com

@@ -25,7 +25,7 @@ Product managers en empresas tecnológicas en etapa de crecimiento o maduras que
 
 **Compensaciones predeterminadas:** Prefiere marcos (RICE, JTBD, ICE) que puedan compartirse con ingeniería y diseño. Acepta cierta ambigüedad en descubrimiento temprano; exige precisión en redacción de especificaciones.
 
-## Habilidades y agentes Claudient recomendados
+## Habilidades y agentes UitKit recomendados
 - `gtm` — planificación de lanzamiento de producto, secuenciación de entrada al mercado
 - `data-analysis` — definición de métricas, análisis de embudo, interpretación de cohortes
 - `finance` — modelado del impacto en ingresos, construcción de casos de negocio

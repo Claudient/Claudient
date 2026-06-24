@@ -1,6 +1,6 @@
 # Marketplace Monetization
 
-Claudient's monetization model supports creators, users, and the platform ecosystem through transparent, flexible tier options and revenue sharing.
+UitKit's monetization model supports creators, users, and the platform ecosystem through transparent, flexible tier options and revenue sharing.
 
 ---
 
@@ -82,12 +82,12 @@ Claudient's monetization model supports creators, users, and the platform ecosys
 - Custom revenue share negotiated per stack (typically 75–90%)
 - Enterprise features enable higher-value stacks
 - Co-marketing and case study opportunities
-- Direct sales support (Claudient sales team assists)
+- Direct sales support (UitKit sales team assists)
 
 **Revenue model for creators:**
 - Enterprise licensing: flat fee, per-seat, or usage-based
 - Minimum deal size: $500/month
-- Annual contracts encouraged; Claudient handles billing
+- Annual contracts encouraged; UitKit handles billing
 
 **Example creator earnings:**
 - Enterprise stack: compliance monitoring + custom integrations
@@ -130,20 +130,20 @@ Claudient's monetization model supports creators, users, and the platform ecosys
 
 **Terms:**
 - You retain full IP ownership
-- Claudient gets a perpetual, non-exclusive license to distribute
-- Subscriptions managed via Claudient platform (Stripe)
+- UitKit gets a perpetual, non-exclusive license to distribute
+- Subscriptions managed via UitKit platform (Stripe)
 - Users download stack once per subscription year
 
 **Monetization (for creators):**
 
 #### Year 1 (New Publisher)
-- **Revenue split:** 70% creator, 30% Claudient
+- **Revenue split:** 70% creator, 30% UitKit
 - **Payment:** Monthly via Stripe
 - **Minimum payout:** $20 (holds accrue)
 - **Minimum stack price:** $5/month or $50/year
 
 #### Year 2+ (Established Publisher)
-- **Revenue split:** 80% creator, 20% Claudient
+- **Revenue split:** 80% creator, 20% UitKit
 - **Same payment terms**
 - **Auto-upgrade** after 6 months + $1,000 cumulative earnings
 
@@ -155,7 +155,7 @@ Claudient's monetization model supports creators, users, and the platform ecosys
 
 **Tax & Payout:**
 - 1099 self-employment reporting (creator's responsibility)
-- No Claudient tax withholding
+- No UitKit tax withholding
 - Monthly earnings statement provided
 - Payout to bank account or wire transfer
 
@@ -280,7 +280,7 @@ Certification revoked if:
 
 ### Dashboard & Transparency
 
-**Creator dashboard at `claudient.ai/publisher-dashboard`:**
+**Creator dashboard at `uitkit.ai/publisher-dashboard`:**
 - Real-time subscription count
 - MRR (monthly recurring revenue)
 - Churn rate
@@ -303,7 +303,7 @@ Certification revoked if:
 - Responsible for reporting all income to tax authorities
 - Estimated quarterly taxes recommended (varies by country)
 
-**Claudient's role:**
+**UitKit's role:**
 - No tax withholding
 - No W-2 or W-9 reporting to IRS
 - Provides monthly earnings statement for your records
@@ -339,7 +339,7 @@ You cannot:
 - User disputes charge with credit card issuer
 - Stripe arbitrates (provides evidence)
 - Disputed amount held in your account pending resolution
-- Claudient does not absorb chargebacks; creator absorbs risk
+- UitKit does not absorb chargebacks; creator absorbs risk
 
 **Appeal process:**
 - If chargeback ruled in user's favor: refund issued
@@ -369,10 +369,10 @@ You cannot:
 - $5,000+ MRR (3+ months running)
 - 100+ active subscriptions
 - Demonstrated demand from Enterprise Tier users
-- Strategic fit with Claudient growth
+- Strategic fit with UitKit growth
 
 **Process:**
-1. Email `partnerships@claudient.dev` with metrics
+1. Email `partnerships@uitkit.dev` with metrics
 2. Sales team evaluates and proposes custom terms
 3. Legal review (typical NDA/MSA)
 4. Signed agreement & new split applied
@@ -380,7 +380,7 @@ You cannot:
 **Example negotiated deal:**
 - Stack proven with 30 paid users at $20/month = $600 MRR
 - Enterprise prospects requesting white-label version
-- Custom split: 85% creator, 15% Claudient
+- Custom split: 85% creator, 15% UitKit
 - Multi-year contract secures stable revenue
 
 ---
@@ -435,7 +435,7 @@ You cannot:
 
 ## FAQ
 
-**Q: Do I have to pay Claudient to list a free stack?**  
+**Q: Do I have to pay UitKit to list a free stack?**  
 A: No. Free stacks are listed for free. You earn through reputation, referrals, and sponsorships.
 
 **Q: Can I change my stack price after launch?**  
@@ -445,7 +445,7 @@ A: Yes. Price changes take effect at next renewal for existing users. Refund exi
 A: Earnings accrue until you hit $20. Then payout is triggered on the 15th of next month.
 
 **Q: Can I sell my stack or transfer ownership?**  
-A: You can transfer to another creator (new revenue share agreement required). You cannot resell on other platforms while in exclusive deal with Claudient (check your contract).
+A: You can transfer to another creator (new revenue share agreement required). You cannot resell on other platforms while in exclusive deal with UitKit (check your contract).
 
 **Q: What happens if my stack gets delisted?**  
 A: Existing subscribers continue until renewal; you earn revenue share during transition. You can relist after addressing issues.
@@ -460,10 +460,10 @@ A: Yes. Set 14-day free trial in Stripe. Trial users don't generate revenue unti
 
 ## Support & Escalation
 
-- **Monetization questions:** [monetization@claudient.dev](mailto:monetization@claudient.dev)
-- **Revenue & payouts:** [billing@claudient.dev](mailto:billing@claudient.dev)
-- **Partnerships & enterprise:** [partnerships@claudient.dev](mailto:partnerships@claudient.dev)
-- **Disputes & abuse:** [trust-safety@claudient.dev](mailto:trust-safety@claudient.dev)
+- **Monetization questions:** [monetization@uitkit.dev](mailto:monetization@uitkit.dev)
+- **Revenue & payouts:** [billing@uitkit.dev](mailto:billing@uitkit.dev)
+- **Partnerships & enterprise:** [partnerships@uitkit.dev](mailto:partnerships@uitkit.dev)
+- **Disputes & abuse:** [trust-safety@uitkit.dev](mailto:trust-safety@uitkit.dev)
 
 ---
 

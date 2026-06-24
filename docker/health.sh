@@ -8,7 +8,7 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 # Default values
-CONTAINER="claudient"
+CONTAINER="uitkit"
 CHECK_TYPE="all"
 VERBOSE=false
 
@@ -17,7 +17,7 @@ usage() {
   echo "Usage: ./docker/health.sh [OPTIONS]"
   echo ""
   echo "Options:"
-  echo "  -c, --container NAME   Container name (default: claudient)"
+  echo "  -c, --container NAME   Container name (default: uitkit)"
   echo "  -t, --type TYPE        Check type: all|health|metrics|ready|logs (default: all)"
   echo "  -v, --verbose          Verbose output"
   echo "  -h, --help             Show this help message"
@@ -25,7 +25,7 @@ usage() {
   echo "Examples:"
   echo "  ./docker/health.sh                    # Check all endpoints"
   echo "  ./docker/health.sh -t health          # Check /health only"
-  echo "  ./docker/health.sh -c my-claudient    # Check specific container"
+  echo "  ./docker/health.sh -c my-uitkit    # Check specific container"
   exit 1
 }
 
@@ -64,7 +64,7 @@ if ! docker ps --format '{{.Names}}' | grep -q "^${CONTAINER}$"; then
 fi
 
 echo -e "${BLUE}═══════════════════════════════════════════════════════${NC}"
-echo -e "${BLUE}Claudient Health Check - Container: ${GREEN}${CONTAINER}${BLUE}${NC}"
+echo -e "${BLUE}UitKit Health Check - Container: ${GREEN}${CONTAINER}${BLUE}${NC}"
 echo -e "${BLUE}═══════════════════════════════════════════════════════${NC}"
 echo ""
 

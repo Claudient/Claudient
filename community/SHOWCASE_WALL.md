@@ -1,6 +1,6 @@
-# Community Showcase Wall — Claudient
+# Community Showcase Wall — UitKit
 
-A gallery of real customer implementations, case studies, and creative use cases built on Claudient stacks. These showcases document how teams across industries are accelerating workflows and solving domain-specific problems.
+A gallery of real customer implementations, case studies, and creative use cases built on UitKit stacks. These showcases document how teams across industries are accelerating workflows and solving domain-specific problems.
 
 ---
 
@@ -8,7 +8,7 @@ A gallery of real customer implementations, case studies, and creative use cases
 
 We celebrate implementations that demonstrate:
 - **Real-world impact:** Measurable results (time saved, revenue generated, quality improved)
-- **Domain expertise:** Sophisticated use of Claudient for specialized problems
+- **Domain expertise:** Sophisticated use of UitKit for specialized problems
 - **Creative workflows:** Novel combinations of skills and agents
 - **Team scale:** Any size (solo freelancer to enterprise)
 
@@ -34,7 +34,7 @@ We celebrate implementations that demonstrate:
 TechSales SDR team spent 60% of time on research and pipeline qualification instead of engaging prospects. Deal analysis for enterprise accounts required manual spreadsheet work across 5+ data sources.
 
 **The Solution:**
-Deployed Claudient's **GTM Stack** with custom extensions:
+Deployed UitKit's **GTM Stack** with custom extensions:
 - **SDR Research Agent:** Automates prospect firmographics, funding, industry signals (saves 2 hours/day per SDR)
 - **Deal Analysis Skill:** Pulls CRM data, analyzes ROI, sizes opportunity (70% faster qualification)
 - **Proposal Generator:** Templates + personalization hook (reduces 4-hour process to 30 minutes)
@@ -46,7 +46,7 @@ Deployed Claudient's **GTM Stack** with custom extensions:
 - **Quality:** Improved deal sizing accuracy to 94% (vs. 72% manual estimates)
 
 **Testimonial:**
-> "Our sales engineering team went from spreadsheet warriors to strategic consultants. Claudient's agents handle the research grind so our team can focus on customer conversations. We're closing bigger deals, faster." — Marcus Chen, VP Sales Operations
+> "Our sales engineering team went from spreadsheet warriors to strategic consultants. UitKit's agents handle the research grind so our team can focus on customer conversations. We're closing bigger deals, faster." — Marcus Chen, VP Sales Operations
 
 ---
 
@@ -61,7 +61,7 @@ Deployed Claudient's **GTM Stack** with custom extensions:
 Contract review process for 50+ enterprise deals/year involved 120+ hours of manual clause extraction, risk flagging, and GDPR/SOC2 compliance checks. Paralegals bottlenecked the deal pipeline.
 
 **The Solution:**
-Custom stack built on Claudient **Legal Ops Stack**:
+Custom stack built on UitKit **Legal Ops Stack**:
 - **Contract Analyzer Agent:** Extracts key clauses (payment terms, IP, liability caps, jurisdiction)
 - **Compliance Checker:** Flags GDPR/CCPA/SOC2 risks automatically
 - **Redaction Workflow Skill:** Marks sensitive data, generates redacted versions for external counsel
@@ -178,8 +178,8 @@ Custom **Marketing Stack** deployment:
 Company using Claude Code internally had scattered skill definitions, duplicate agent logic, and no standardized workflow documentation. Onboarding took 4 weeks; copy-paste errors slowed development velocity.
 
 **The Solution:**
-Deployed Claudient **AI Engineering Stack** as internal knowledge system:
-- **RAG Document Management:** All internal stacks documented in Claudient format; searchable by skill/agent/workflow
+Deployed UitKit **AI Engineering Stack** as internal knowledge system:
+- **RAG Document Management:** All internal stacks documented in UitKit format; searchable by skill/agent/workflow
 - **Agent Repository:** Centralized library of 15+ company agents (data quality, model eval, performance monitoring)
 - **Code Review Agent:** Automates PR review for Claude integration points (prompt quality, token efficiency, error handling)
 - **Team Onboarding Skill:** New hires get guided tour of all company stacks; auto-generates use-case examples
@@ -192,7 +192,7 @@ Deployed Claudient **AI Engineering Stack** as internal knowledge system:
 - **Hiring:** Ability to onboard mid-level engineers without hand-holding
 
 **Testimonial:**
-> "Claudient turned our AI engineering into a repeatable, documentable practice. New hires are productive in days. Veteran engineers spend less time explaining patterns and more time solving hard problems." — Sofia Reyes, VP Engineering
+> "UitKit turned our AI engineering into a repeatable, documentable practice. New hires are productive in days. Veteran engineers spend less time explaining patterns and more time solving hard problems." — Sofia Reyes, VP Engineering
 
 ---
 
@@ -207,7 +207,7 @@ Deployed Claudient **AI Engineering Stack** as internal knowledge system:
 Government contracts require extensive documentation: compliance certifications, audit trails, conflict-of-interest declarations, regulatory filing. Manual coordination across teams introduced delays and compliance gaps.
 
 **The Solution:**
-Enterprise **Compliance Stack** (custom-built on Claudient core):
+Enterprise **Compliance Stack** (custom-built on UitKit core):
 - **Requirements Extraction Agent:** Reads government RFP, extracts compliance requirements, maps to internal policies
 - **Compliance Checker Skill:** Validates certifications (ISO, SOC2, FISMA, ITAR), flags missing docs
 - **Audit Trail Generator:** Auto-documents decision rationale, stakeholder approvals, version history
@@ -222,7 +222,7 @@ Enterprise **Compliance Stack** (custom-built on Claudient core):
 - **Revenue per bid:** Ability to bid on 3x more opportunities with same staff
 
 **Testimonial:**
-> "Government contracts are a compliance minefield. Claudient is our guardrail—it catches gaps we'd miss and accelerates the bid process dramatically. We've doubled our proposal throughput." — Maria Santos, VP Compliance
+> "Government contracts are a compliance minefield. UitKit is our guardrail—it catches gaps we'd miss and accelerates the bid process dramatically. We've doubled our proposal throughput." — Maria Santos, VP Compliance
 
 ---
 
@@ -237,7 +237,7 @@ Enterprise **Compliance Stack** (custom-built on Claudient core):
 Solo founder building B2B SaaS product needed to manage: customer interviews, feature prioritization, MVP roadmap, launch messaging, and early customer support—all while coding.
 
 **The Solution:**
-Self-built stack combining Claudient **AI Engineering** + **Product Stack**:
+Self-built stack combining UitKit **AI Engineering** + **Product Stack**:
 - **Interview Analyzer:** Records customer calls, extracts pain points, prioritizes themes
 - **Roadmap Agent:** Takes interview insights, generates feature priorities with rationale
 - **Launch Messaging Generator:** Creates positioning, tagline, landing page copy, social posts
@@ -252,7 +252,7 @@ Self-built stack combining Claudient **AI Engineering** + **Product Stack**:
 - **Runway extension:** 4 months extra runway (operational efficiency freed up engineer time for paid features)
 
 **Testimonial:**
-> "Claudient let me punch above my weight class. I have the leverage of a tiny team with the insights of a 10-person product org. Would not have shipped without it." — Alex Turner, Founder
+> "UitKit let me punch above my weight class. I have the leverage of a tiny team with the insights of a 10-person product org. Would not have shipped without it." — Alex Turner, Founder
 
 ---
 
@@ -269,10 +269,10 @@ Use this template to submit your showcase:
 **[Optional: Company Size/Revenue/Founded/Location]**  
 
 **The Challenge:**
-[2-3 sentences describing the problem your team faced before Claudient]
+[2-3 sentences describing the problem your team faced before UitKit]
 
 **The Solution:**
-[Describe which Claudient stacks/skills/agents you deployed and how]
+[Describe which UitKit stacks/skills/agents you deployed and how]
 - [Bullet: Stack/Skill and what it does]
 - [Bullet: Stack/Skill and what it does]
 - [Bullet: Custom workflow or integration]
@@ -311,14 +311,14 @@ Use this template to submit your showcase:
 - **Public by default:** Showcases are published with company name and team details (public profile)
 - **Anonymous option:** If sensitive, request anonymization (e.g., "Enterprise FinTech Firm") — metrics and story still published
 - **Review access:** Your PR reviewer may contact you to verify metrics (optional; trust-based process)
-- **Rights:** You retain full rights to your story; Claudient may share in marketing materials with attribution
+- **Rights:** You retain full rights to your story; UitKit may share in marketing materials with attribution
 
 ---
 
 ## Featured Spotlights
 
 The top 3 new showcases each quarter are featured in:
-- Claudient newsletter
+- UitKit newsletter
 - Community blog post
 - Social media threads
 
@@ -382,9 +382,9 @@ A: No. Indie hackers and solopreneurs are celebrated equally. Team size is infor
 ## Questions?
 
 - Open a discussion issue: `[community] Questions about showcase submission`
-- Email: community@claudient.dev
+- Email: community@uitkit.dev
 - Slack: #showcase-wall (if community Slack exists)
 
 ---
 
-**Last Updated:** June 22, 2026 | **Maintained by:** Claudient Community Team
+**Last Updated:** June 22, 2026 | **Maintained by:** UitKit Community Team

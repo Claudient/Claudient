@@ -7,7 +7,7 @@ This guide is for first-time stack creators who want to build and submit a colle
 ## Who This Guide Is For
 
 - You have 2+ Claude Code skills or tools you want to share
-- You understand the claudient repository structure
+- You understand the uitkit repository structure
 - You're comfortable with Git and GitHub pull requests
 - You want to reach other Claude Code users with a curated, quality collection
 
@@ -49,7 +49,7 @@ backend-productivity-stack/
 - Clear target audience and domain
 - Every skill has tested examples
 - Every guide has concrete, runnable steps
-- All resources follow claudient standards
+- All resources follow uitkit standards
 - 2+ external users have tested it
 
 ---
@@ -80,12 +80,12 @@ Before building, confirm your stack scope:
 
 ### Step 2: Create Your Stack Directory
 
-Fork the Claudient repository and create your stack folder:
+Fork the UitKit repository and create your stack folder:
 
 ```bash
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/Claudient.git
-cd Claudient
+git clone https://github.com/YOUR_USERNAME/UitKit.git
+cd UitKit
 
 # Create stack directory (main branch, not a feature branch yet)
 mkdir -p stacks/your-stack-name-stack
@@ -102,13 +102,13 @@ Naming: `kebab-case-stack` — all lowercase, hyphens, no underscores.
 Populate each directory with complete, tested content:
 
 **Skills** (`skills/*.md`):
-- Write to the claudient skill format (see template below)
+- Write to the uitkit skill format (see template below)
 - Include at least one concrete, runnable example
 - Test each skill yourself in Claude Code
 - No stubs or "coming soon"
 
 **Agents** (`agents/*.md`):
-- Use the claudient agent format
+- Use the uitkit agent format
 - Define model guidance (Haiku/Sonnet/Opus)
 - Specify tool subset
 - Include trigger conditions
@@ -178,7 +178,7 @@ At the root of your stack, create `submission.json`:
    git push origin main
    ```
 
-2. **Open a PR** to the main Claudient repository:
+2. **Open a PR** to the main UitKit repository:
    - Base branch: `main`
    - Title: `feat: add your-stack-name-stack`
    - Description:
@@ -195,7 +195,7 @@ At the root of your stack, create `submission.json`:
      A brief description of what this stack does and why it matters.
      
      **Quality Checklist:**
-     - [x] All files follow claudient standards
+     - [x] All files follow uitkit standards
      - [x] Every skill and agent has concrete examples
      - [x] Tested by 2+ external users
      - [x] No placeholder or stub content

@@ -340,7 +340,7 @@ test('CloudflareWorkerProxy: generates wrangler config', () => {
   const config = proxy.generateWranglerConfig();
 
   assert(config);
-  assert(config.includes('claudient-edge'));
+  assert(config.includes('uitkit-edge'));
   assert(config.includes('test-account'));
   assert(config.includes('test-zone'));
   assert(config.includes('[env.production]'));

@@ -128,7 +128,7 @@ Cuando un usuario inicia sesión por primera vez:
 | Usuario SSO con grupo "Security" | Security Officer | — |
 | Usuario SSO con grupo "Finance" | Cost Controller | — |
 | Usuario SSO (sin grupo) | Viewer | Solicitar desde admin |
-| Usuario Git (local, sin SSO) | Engineer | Establecer variable env CLAUDIENT_ROLE |
+| Usuario Git (local, sin SSO) | Engineer | Establecer variable env UITKIT_ROLE |
 
 ## Gestión de stack de equipo
 
@@ -190,22 +190,22 @@ Configure en settings.json:
 Para on-prem sin SSO:
 
 ```bash
-git config --global claudient.role engineer
-git config --global claudient.team platform-team
+git config --global uitkit.role engineer
+git config --global uitkit.team platform-team
 ```
 
 O variable de entorno:
 
 ```bash
-export CLAUDIENT_ROLE=engineer
-export CLAUDIENT_TEAM=platform-team
+export UITKIT_ROLE=engineer
+export UITKIT_TEAM=platform-team
 ```
 
-### Vía API (Claudient Cloud)
+### Vía API (UitKit Cloud)
 
 ```bash
-curl -X POST https://api.claudient.com/enterprise/users/alice%40company.com/role \
-  -H "Authorization: Bearer $CLAUDIENT_API_KEY" \
+curl -X POST https://api.uitkit.com/enterprise/users/alice%40company.com/role \
+  -H "Authorization: Bearer $UITKIT_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "role": "security-officer",

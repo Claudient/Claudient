@@ -182,7 +182,7 @@ Git Hook (pre-commit):
 
 Automated Regression Report:
   BASELINE=$(node benchmarks/swarm-sandbox-benchmark.js --format=json)
-  CURRENT=$(git stash show -p scripts/claudient-swarm-sandbox.js | \
+  CURRENT=$(git stash show -p scripts/uitkit-swarm-sandbox.js | \
     node benchmarks/swarm-sandbox-benchmark.js --format=json)
   diff <(echo "$BASELINE") <(echo "$CURRENT")
 

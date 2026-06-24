@@ -1,6 +1,6 @@
 # Skill Audit Workflow
 
-Systematically audit the Claudient skill collection for coverage gaps, orphaned skills, over-connected nodes, and maintenance issues. Run this workflow after significant skill additions or periodically (e.g., quarterly) to ensure the collection remains coherent.
+Systematically audit the UitKit skill collection for coverage gaps, orphaned skills, over-connected nodes, and maintenance issues. Run this workflow after significant skill additions or periodically (e.g., quarterly) to ensure the collection remains coherent.
 
 ---
 
@@ -17,7 +17,7 @@ Systematically audit the Claudient skill collection for coverage gaps, orphaned 
 
 ## Prerequisites
 
-- Access to the Claudient repository root
+- Access to the UitKit repository root
 - Node.js installed (for running `scripts/dependency-graph.js`)
 - jq installed (for JSON querying) — optional but recommended
 - Text editor or IDE for reading skill files
@@ -29,7 +29,7 @@ Systematically audit the Claudient skill collection for coverage gaps, orphaned 
 Generate the full dependency graph and stats:
 
 ```bash
-cd /path/to/claudient
+cd /path/to/uitkit
 node scripts/dependency-graph.js --json > /tmp/skill-graph.json
 node scripts/dependency-graph.js --stats > /tmp/skill-stats.txt
 ```
@@ -203,7 +203,7 @@ For a sample of 10–15 skills across different categories, open each file and v
 
 1. **Frontmatter**: Does it have `name`, `description`, `updated` fields?
    - Check date is within the last year
-2. **Structure**: Does it follow the Claudient format (When to activate, When NOT to use, Instructions, Example)?
+2. **Structure**: Does it follow the UitKit format (When to activate, When NOT to use, Instructions, Example)?
 3. **Clarity**: Is the skill description clear and actionable?
 4. **Examples**: Is there a concrete, runnable example?
 
@@ -274,7 +274,7 @@ Compile findings into a structured report:
 
 ## Step 8 — Plan remediation
 
-For each finding, assign an owner and deadline. Update the Claudient roadmap or backlog:
+For each finding, assign an owner and deadline. Update the UitKit roadmap or backlog:
 
 **Example:**
 

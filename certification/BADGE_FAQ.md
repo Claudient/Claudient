@@ -1,4 +1,4 @@
-# Claudient Badge System — Frequently Asked Questions
+# UitKit Badge System — Frequently Asked Questions
 
 ---
 
@@ -144,19 +144,19 @@ Shows breakdown by category, recent activities, and path to next badge level.
 
 ### Q: How do I add my badge to my GitHub profile?
 **A:** Once awarded:
-1. Go to https://claudient.dev/badges/verify/USERNAME
+1. Go to https://uitkit.dev/badges/verify/USERNAME
 2. Copy the badge markdown or SVG URL
 3. Add to your GitHub bio or README:
 ```markdown
-![Claudient Contributor Badge](https://claudient.dev/badges/contributor-badge.svg)
+![UitKit Contributor Badge](https://uitkit.dev/badges/contributor-badge.svg)
 ```
 
 ### Q: How do I add my badge to LinkedIn?
 **A:** 
 1. Go to your LinkedIn profile
 2. Add a "Credential" under licenses & certifications
-3. Use URL: `https://claudient.dev/badges/verify/USERNAME`
-4. Claudient company profile will show the endorsement
+3. Use URL: `https://uitkit.dev/badges/verify/USERNAME`
+4. UitKit company profile will show the endorsement
 
 ### Q: Can I customize my badge appearance?
 **A:** 
@@ -172,14 +172,14 @@ Request customization in your renewal or during award process.
 - Shows expiration date + renewal status
 - Links to your merged PRs for proof
 
-URL format: `https://claudient.dev/badges/verify/USERNAME`
+URL format: `https://uitkit.dev/badges/verify/USERNAME`
 
 ---
 
 ## Special Cases & Exceptions
 
 ### Q: I contributed to another open source project, does it count?
-**A:** No, badges are strictly for contributions to the Claudient repository.
+**A:** No, badges are strictly for contributions to the UitKit repository.
 
 ### Q: What if my contribution was a large, complex project?
 **A:** Complex contributions may earn bonus points:
@@ -205,11 +205,11 @@ Request bonus point review when submitting complex PRs.
 - Dedicated support/integration
 - Long-term commitment (≥1 year)
 
-Contact Claudient leadership: maintainers@claudient.dev
+Contact UitKit leadership: maintainers@uitkit.dev
 
 ### Q: What if I disagreed with a badge decision?
 **A:** Submit an appeal:
-1. Email: badges-appeal@claudient.dev
+1. Email: badges-appeal@uitkit.dev
 2. Explain your reasoning with supporting evidence
 3. Appeal reviewed by independent committee (3 people, not original reviewers)
 4. Decision within 4 weeks
@@ -233,7 +233,7 @@ Contact Claudient leadership: maintainers@claudient.dev
 Most expirations are simply automatic (non-renewal), not revocations.
 
 ### Q: If my badge expires, does my GitHub contribution history still show?
-**A:** Yes! Your contributions remain on your GitHub profile and in Claudient's repository. Only the badge status changes. A badge expiration doesn't erase your work.
+**A:** Yes! Your contributions remain on your GitHub profile and in UitKit's repository. Only the badge status changes. A badge expiration doesn't erase your work.
 
 ---
 
@@ -274,7 +274,7 @@ If all pass: System checks on the 1st of each month. You should see your badge t
 ### Q: The badge verification page shows my name but says "unverified". What's wrong?
 **A:** 
 - This appears during the 2-week verification window after your PR merge
-- Should resolve automatically; if not, contact: badges-support@claudient.dev
+- Should resolve automatically; if not, contact: badges-support@uitkit.dev
 
 ### Q: My badge disappeared! Where did it go?
 **A:** Check renewal status:
@@ -310,10 +310,10 @@ Generates:
 - Earn logo placement, co-marketing, and revenue sharing opportunities
 - Renew annually (not 18 months)
 
-Contact: partnerships@claudient.dev
+Contact: partnerships@uitkit.dev
 
 ### Q: Can an individual be an Enterprise Partner?
-**A:** Yes, if you've commercialized Claudient or integrated it into a business (e.g., consulting practice, SaaS product). Requires agreement and annual review.
+**A:** Yes, if you've commercialized UitKit or integrated it into a business (e.g., consulting practice, SaaS product). Requires agreement and annual review.
 
 ### Q: What's the difference between Expert and Enterprise Partner badges?
 **A:**
@@ -328,16 +328,16 @@ An Expert can also become a Partner (and have both badges).
 
 ### Need help?
 - **General questions:** GitHub Discussions or community Discord
-- **Technical issues:** badges-support@claudient.dev
-- **Appeals:** badges-appeal@claudient.dev
-- **Partnerships:** partnerships@claudient.dev
-- **Admin/maintainer questions:** maintainers@claudient.dev
+- **Technical issues:** badges-support@uitkit.dev
+- **Appeals:** badges-appeal@uitkit.dev
+- **Partnerships:** partnerships@uitkit.dev
+- **Admin/maintainer questions:** maintainers@uitkit.dev
 
 ### Last Updated
 June 22, 2026
 
 ### Feedback
-Have ideas to improve the badge system? File an issue or discussion in the Claudient repository.
+Have ideas to improve the badge system? File an issue or discussion in the UitKit repository.
 
 ---
 
@@ -348,5 +348,5 @@ Have ideas to improve the badge system? File an issue or discussion in the Claud
 | How do I get started? | Make your first contribution | [CONTRIBUTION_GUIDE.md](../community/CONTRIBUTION_GUIDE.md) |
 | What are the requirements? | See full badge specs | [BADGE_SYSTEM.md](BADGE_SYSTEM.md) |
 | How do I renew? | Submit application or wait for auto-check | [RENEWAL_CHECKLIST.md](RENEWAL_CHECKLIST.md) |
-| How do I verify a badge? | Visit verification URL | https://claudient.dev/badges/ |
+| How do I verify a badge? | Visit verification URL | https://uitkit.dev/badges/ |
 | Who are our Expert contributors? | Browse showcase wall | [SHOWCASE_WALL.md](../community/SHOWCASE_WALL.md) |

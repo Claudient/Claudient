@@ -1,12 +1,12 @@
 # Marketplace Revenue Share Model
 
-How Claudient creators earn from the marketplace.
+How UitKit creators earn from the marketplace.
 
 ---
 
 ## Overview
 
-Claudient's marketplace is a distribution channel for open-source **and paid** stacks. Publishers earn revenue share on each subscription to their stack.
+UitKit's marketplace is a distribution channel for open-source **and paid** stacks. Publishers earn revenue share on each subscription to their stack.
 
 **Bottom line:** Build once, earn recurring revenue forever.
 
@@ -23,13 +23,13 @@ Claudient's marketplace is a distribution channel for open-source **and paid** s
 ### Paid Stacks (Proprietary or commercial license)
 
 #### Tier 1: New Publisher (First 6 months)
-- **Revenue split:** 70% to publisher, 30% to Claudient
+- **Revenue split:** 70% to publisher, 30% to UitKit
 - **Subscription model:** Monthly or annual (your choice)
 - **Minimum price:** $5/month or $50/year
-- **Payment processing:** Stripe (Claudient covers fees)
+- **Payment processing:** Stripe (UitKit covers fees)
 
 #### Tier 2: Established Publisher (6+ months, $1K+ earned)
-- **Revenue split:** 80% to publisher, 20% to Claudient
+- **Revenue split:** 80% to publisher, 20% to UitKit
 - **Same subscription model, pricing, and processing**
 - **Auto-upgrade:** Apply after 6 months of Tier 1 status
 
@@ -54,7 +54,7 @@ my-stack/
 ```
 
 ### 2. Submit for Review
-Email [stacks@claudient.ai](mailto:stacks@claudient.ai):
+Email [stacks@uitkit.ai](mailto:stacks@uitkit.ai):
 - Stack folder (zip)
 - README describing the stack
 - Target audience (who is this for?)
@@ -64,13 +64,13 @@ Email [stacks@claudient.ai](mailto:stacks@claudient.ai):
 Review takes 1–2 weeks. Criteria:
 - ✅ Quality (well-documented, tested, no bloat)
 - ✅ Completeness (10+ skills, cohesive domain)
-- ✅ Brand fit (aligns with Claudient values)
+- ✅ Brand fit (aligns with UitKit values)
 - ✅ No duplication (not a copy of existing stack)
 
 ### 3. Approval & Publishing
 - We publish to marketplace
 - You get a marketplace listing with your name, bio, links
-- Listing appears in `claudient.ai/marketplace` search
+- Listing appears in `uitkit.ai/marketplace` search
 
 ### 4. Monetization
 Users subscribe to your stack:
@@ -90,11 +90,11 @@ Monthly revenue: `subscriptions × price × split %`
 
 ### Tax & Legal
 - **1099 / Self-employed:** You're responsible for reporting income to tax authorities
-- **No withholding:** Claudient does not withhold taxes (your responsibility)
-- **Invoice:** Claudient provides monthly earnings statement
+- **No withholding:** UitKit does not withhold taxes (your responsibility)
+- **Invoice:** UitKit provides monthly earnings statement
 
 ### Transparency
-- **Real-time dashboard:** See subscriptions, churn, MRR, and earnings at `claudient.ai/publisher-dashboard`
+- **Real-time dashboard:** See subscriptions, churn, MRR, and earnings at `uitkit.ai/publisher-dashboard`
 - **Detailed reporting:** CSV exports available for accounting/taxes
 
 ---
@@ -162,12 +162,12 @@ You cannot publish stacks that:
 Violation = immediate removal + forfeiture of earnings.
 
 ### Refund Policy
-- **User refunds:** 30-day money-back guarantee (you refund via Stripe, not Claudient)
-- **Chargeback disputes:** Stripe arbitrates; Claudient holds your earnings pending resolution
+- **User refunds:** 30-day money-back guarantee (you refund via Stripe, not UitKit)
+- **Chargeback disputes:** Stripe arbitrates; UitKit holds your earnings pending resolution
 
 ### IP Ownership
 - **Your stack:** You own all IP (code, design, docs)
-- **Claudient's license:** You grant Claudient a perpetual license to host, display, and distribute your stack
+- **UitKit's license:** You grant UitKit a perpetual license to host, display, and distribute your stack
 - **Termination:** You can delist anytime; we continue selling existing subscriptions (you don't earn)
 
 ---
@@ -188,12 +188,12 @@ Violation = immediate removal + forfeiture of earnings.
 - [ ] 2+ updates in last 6 months
 - [ ] Zero critical bugs reported
 
-Email [stacks@claudient.ai](mailto:stacks@claudient.ai) with your metrics.
+Email [stacks@uitkit.ai](mailto:stacks@uitkit.ai) with your metrics.
 
 ---
 
 ## Questions?
 
-- **Revenue share:** [stacks@claudient.ai](mailto:stacks@claudient.ai)
-- **Payout issues:** [billing@claudient.ai](mailto:billing@claudient.ai)
-- **Quality/certification:** [quality@claudient.ai](mailto:quality@claudient.ai)
+- **Revenue share:** [stacks@uitkit.ai](mailto:stacks@uitkit.ai)
+- **Payout issues:** [billing@uitkit.ai](mailto:billing@uitkit.ai)
+- **Quality/certification:** [quality@uitkit.ai](mailto:quality@uitkit.ai)

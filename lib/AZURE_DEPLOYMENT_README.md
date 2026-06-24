@@ -456,9 +456,9 @@ Test coverage includes:
 - State persistence
 - Hybrid cloud configuration
 
-## Integration with Claudient
+## Integration with UitKit
 
-This module integrates with Claudient's ecosystem:
+This module integrates with UitKit's ecosystem:
 
 ```javascript
 // Use with approval-engine for production deployments
@@ -552,7 +552,7 @@ if (!check.healthy) {
 
 ## License
 
-Part of Claudient. See main LICENSE file.
+Part of UitKit. See main LICENSE file.
 
 ## Support
 

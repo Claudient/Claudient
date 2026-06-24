@@ -12,7 +12,7 @@ const os = require('os');
 const CLI = path.join(__dirname, 'cli.js');
 const ROOT = path.resolve(__dirname, '..');
 
-process.env.CLAUDIENT_TEST_SUITE = 'true';
+process.env.UITKIT_TEST_SUITE = 'true';
 
 let passed = 0;
 let failed = 0;
@@ -49,7 +49,7 @@ function run(label, cmd, opts = {}) {
 console.log('CLI Smoke Tests\n');
 
 // 1. Help command
-run('help prints usage', 'help', { expectContains: 'claudient' });
+run('help prints usage', 'help', { expectContains: 'uitkit' });
 
 // 2. List commands
 run('list skills', 'list skills', { expectContains: 'skills' });
@@ -64,7 +64,7 @@ run('search "docker"', 'search docker', { expectContains: 'docker' });
 run('search "testing"', 'search testing');
 
 // 4. Scan (create temp dir with package.json to test recommend)
-const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'claudient-test-'));
+const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'uitkit-test-'));
 fs.writeFileSync(
   path.join(tmpDir, 'package.json'),
   JSON.stringify({
@@ -192,7 +192,7 @@ run('tdd stunt double runner', 'tdd', { expectContains: 'TDD Loop completed succ
 run('enforce spec first compliance', 'enforce', { expectContains: 'SPEC-FIRST COMPLIANCE ENFORCER' });
 run('sweep codebase audit', 'sweep', { expectContains: 'CODEBASE SWEEPER' });
 run('documentation sync reference', 'documentation', { expectContains: 'THE HISTORIAN' });
-if (process.env.CLAUDIENT_CHAOS_ACTIVE !== 'true') {
+if (process.env.UITKIT_CHAOS_ACTIVE !== 'true') {
   run('chaos monkey runner', 'chaos', { expectContains: 'CHAOS MONKEY' });
 }
 run('prophet risk analyzer', 'prophet', { expectContains: 'THE PROPHET' });
@@ -200,7 +200,7 @@ run('ci pipeline generator', 'ci', { expectContains: 'SELF-HEALING CI PIPELINE' 
 run('incident commander alert triage', 'incident', { expectContains: 'THE INCIDENT COMMANDER' });
 
 // 9. Sentinel Command
-const tmpSentinelDir = fs.mkdtempSync(path.join(os.tmpdir(), 'claudient-sentinel-'));
+const tmpSentinelDir = fs.mkdtempSync(path.join(os.tmpdir(), 'uitkit-sentinel-'));
 fs.writeFileSync(
   path.join(tmpSentinelDir, 'package.json'),
   JSON.stringify({

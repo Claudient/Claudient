@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # install-aliases.sh
-# Sets up high-speed Claudient shell aliases.
+# Sets up high-speed UitKit shell aliases.
 
-ALIAS_FILE="$HOME/.claudient_aliases"
+ALIAS_FILE="$HOME/.uitkit_aliases"
 
 cat << 'EOF' > "$ALIAS_FILE"
-# Claudient Power Aliases
-alias cx="npx claudient"
+# UitKit Power Aliases
+alias cx="npx uitkit"
 alias cxd="cx doctor"
 alias cxs="cx score"
 alias cxa="cx audit"

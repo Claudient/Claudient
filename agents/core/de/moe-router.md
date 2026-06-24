@@ -22,5 +22,5 @@ Leitet Entwickleraufgaben und Code-Kontexte dynamisch an den optimalen LLM-Exper
 - Automatisches Routing basierend auf dem Verzeichniskontext (z. B. Weiterleitung von Infrastrukturänderungen an hohe Argumentationsstufen und Dokumentationsänderungen an schnelle Stufen).
 
 ## Wann NICHT hierher delegieren
-- Standardmäßige einzeilige Befehle oder explizite Flags, die Modelle überschreiben (z. B. `claudient run --model haiku`).
+- Standardmäßige einzeilige Befehle oder explizite Flags, die Modelle überschreiben (z. B. `uitkit run --model haiku`).
 - Einfache Skriptausführungen, die keine architektonischen Überlegungen enthalten.

@@ -24,7 +24,7 @@ Fondateurs et opérateurs qui dirigent des agences numériques, de développemen
 
 **Compromis par défaut :** Préférer les modèles de livraison éprouvés aux modèles personnalisés. Accepter une sortie moins qu'idéale si elle se livre rapidement et protège la marge. Une solution réutilisable à 80 % bats une solution sur mesure à 100 %.
 
-## Compétences et agents Claudient recommandés
+## Compétences et agents UitKit recommandés
 - `gtm` — positionnement d'agence, sélection de niche, campagnes de prospection sortante
 - `sdr` — prospection de nouveaux affaires, séquences de suivi de proposition
 - `legal` — modèles de SOW, clauses de contrat, langage de propriété intellectuelle

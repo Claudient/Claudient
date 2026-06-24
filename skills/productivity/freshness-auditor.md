@@ -8,7 +8,7 @@ updated: 2026-06-15
 
 ## When to activate
 
-- **Before certification renewal** — audit Claudient content to ensure all files are current and defensible
+- **Before certification renewal** — audit UitKit content to ensure all files are current and defensible
 - **Before releasing a new version or major update** — verify documentation accuracy
 - **Quarterly maintenance cycle** — identify stale content that needs refreshing (every 3 months)
 - **After a major Claude model release** — flag potentially outdated guidance in skills and workflows
@@ -151,7 +151,7 @@ Based on the audit results:
 
 ### Scenario: Pre-certification audit
 
-Before certifying Claudient as a production tool, you want to ensure all content is current.
+Before certifying UitKit as a production tool, you want to ensure all content is current.
 
 ### Execution:
 

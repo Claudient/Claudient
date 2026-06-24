@@ -7,10 +7,10 @@ const os = require('os');
 const authPath = path.join(os.homedir(), 'Library/Application Support/com.vercel.cli/auth.json');
 const auth = JSON.parse(fs.readFileSync(authPath, 'utf8'));
 
-// Find the claudient-site project ID
+// Find the uitkit-site project ID
 const req = https.request({
   hostname: 'api.vercel.com',
-  path: '/v9/projects?teamId=team_NDyL4VGNQKwczUbIEnil0EiZ&search=claudient',
+  path: '/v9/projects?teamId=team_NDyL4VGNQKwczUbIEnil0EiZ&search=uitkit',
   method: 'GET',
   headers: { 'Authorization': `Bearer ${auth.token}` }
 }, (res) => {

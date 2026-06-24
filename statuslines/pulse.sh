@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# pulse.sh - Futuristic Claudient Statusline
+# pulse.sh - Futuristic UitKit Statusline
 # Displays a real-time dashboard of session health and context.
 
 # Colors
@@ -36,4 +36,4 @@ fi
 MAP_STR="${GRAY}SATELLITE:${NC}${CYAN}${MAP_COUNT}${NC}"
 
 # Final Statusline Output
-echo -e "🧬 ${SWARM_STATUS} | ${MAP_STR} ${MEM_HINT} | ${ORANGE}CLAUDIENT OS${NC}"
+echo -e "🧬 ${SWARM_STATUS} | ${MAP_STR} ${MEM_HINT} | ${ORANGE}UITKIT OS${NC}"

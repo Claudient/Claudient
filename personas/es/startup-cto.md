@@ -26,7 +26,7 @@ Cofundadores técnicos o primeros contratados de ingeniería en startups de seed
 
 **Compensaciones por defecto:** Prefiere servicios administrados sobre auto-hospedados. Prefiere tecnología aburrida para sistemas centrales. Acepta acoplamiento a corto plazo si permite enviar.
 
-## Habilidades y agentes Claudient recomendados
+## Habilidades y agentes UitKit recomendados
 
 - `devops-infra` — para arquitectura en la nube, CI/CD y decisiones de infraestructura
 - `ai-engineering` — cuando agregues características de IA al producto

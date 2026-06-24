@@ -1,12 +1,12 @@
 # Getting Your Stack Certified
 
-This guide walks you through the step-by-step process of certifying your stack in the Claudient Marketplace.
+This guide walks you through the step-by-step process of certifying your stack in the UitKit Marketplace.
 
 ## Prerequisites
 
 Before applying for certification, ensure your stack:
 
-1. **Is already published** in the Claudient Marketplace with positive feedback
+1. **Is already published** in the UitKit Marketplace with positive feedback
 2. **Meets baseline criteria** (see VETTING.md)
 3. **Has a GitHub repository** (public, active, maintained)
 4. **Meets minimum requirements** for your target tier:
@@ -121,7 +121,7 @@ Create a document containing:
 
 ## Step 4: Request Certification Review
 
-Send an email to **marketplace@claudient.dev** with subject line:
+Send an email to **marketplace@uitkit.dev** with subject line:
 
 ```
 Certification Request: [Stack Name] - [Tier] Tier
@@ -212,7 +212,7 @@ Upon approval:
 **30 days before expiration date:**
 - You'll receive recertification notice
 - Verify current metrics still meet tier requirements
-- Submit recertification confirmation to marketplace@claudient.dev
+- Submit recertification confirmation to marketplace@uitkit.dev
 
 **If metrics have declined:**
 - Stack may be downgraded one tier
@@ -237,7 +237,7 @@ Renewal process is same as initial certification.
 To upgrade from Bronze to Silver or Silver to Gold:
 
 1. Ensure new metrics meet target tier
-2. Send upgrade request to marketplace@claudient.dev with updated quality score
+2. Send upgrade request to marketplace@uitkit.dev with updated quality score
 3. Core team verifies metrics (2-3 business days)
 4. Upon approval, listing and badge are updated
 
@@ -258,8 +258,8 @@ If your certification is revoked:
 
 - **Certification criteria:** See [certification-criteria.md](./certification-criteria.md)
 - **Tier details:** See [../CERTIFICATION.md](../CERTIFICATION.md)
-- **General questions:** marketplace@claudient.dev
-- **Community discussion:** [GitHub Discussions](https://github.com/claudients/claudient/discussions)
+- **General questions:** marketplace@uitkit.dev
+- **Community discussion:** [GitHub Discussions](https://github.com/uitkits/uitkit/discussions)
 
 ---
 

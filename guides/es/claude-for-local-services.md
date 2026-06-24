@@ -14,7 +14,7 @@ Los negocios de servicios locales comparten tres hechos operacionales que cambia
 2. **Las reseñas son existenciales.** Un propietario de salón cuya calificación de Google cae de 4,7 a 4,4 pierde el 20% de las nuevas reservas de clientes. La respuesta de reseña no es una conveniencia de marketing — es operación central.
 3. **La mayoría de los propietarios son operadores de campo primero.** El propietario está en un sitio de trabajo, en una silla, detrás de un mostrador. Abren su teléfono, no una laptop. Los flujos de trabajo deben ser ejecutables en 5 minutos desde un teléfono.
 
-El conjunto de habilidades de pequeños negocios de Claudient está construido alrededor de estos tres hechos.
+El conjunto de habilidades de pequeños negocios de UitKit está construido alrededor de estos tres hechos.
 
 ---
 
@@ -162,7 +162,7 @@ Para la automatización de flujos de trabajo vinculada a sus datos de negocio re
 
 ### ¿Y si no soy técnico en absoluto?
 
-Los flujos de trabajo de Claude for Small Business son point-and-click. Las habilidades de Claudient en este repositorio se activan escribiendo instrucciones simples en inglés a Claude. El paso técnico más difícil es conectar QuickBooks a través de OAuth, que es un proceso de 3 clics.
+Los flujos de trabajo de Claude for Small Business son point-and-click. Las habilidades de UitKit en este repositorio se activan escribiendo instrucciones simples en inglés a Claude. El paso técnico más difícil es conectar QuickBooks a través de OAuth, que es un proceso de 3 clics.
 
 ---
 

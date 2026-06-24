@@ -34,19 +34,19 @@ const deployment = new AWSDeployment({
 ```javascript
 // Skills storage
 await deployment.deployS3({
-  bucketName: 'claudient-skills',
+  bucketName: 'uitkit-skills',
   versioningEnabled: true,
 });
 
 // State storage
 await deployment.deployDynamoDB({
-  tableName: 'claudient-state',
+  tableName: 'uitkit-state',
   partitionKey: { name: 'id', type: 'S' },
   billingMode: 'PAY_PER_REQUEST',
 });
 
 // Upload skills
-await deployment.uploadSkillsToS3('claudient-skills', './skills', 'skills/');
+await deployment.uploadSkillsToS3('uitkit-skills', './skills', 'skills/');
 ```
 
 ### Pattern 2: Lambda Dont-Stop Tasks
@@ -54,7 +54,7 @@ await deployment.uploadSkillsToS3('claudient-skills', './skills', 'skills/');
 ```javascript
 // Deploy function
 await deployment.deployLambda({
-  functionName: 'claudient-dont-stop',
+  functionName: 'uitkit-dont-stop',
   runtime: 'nodejs18.x',
   handler: 'index.handler',
   roleArn: 'arn:aws:iam::AWS_ACCOUNT:role/lambda-role',
@@ -65,8 +65,8 @@ await deployment.deployLambda({
 
 // Schedule execution
 await deployment.createLambdaEventRule({
-  functionName: 'claudient-dont-stop',
-  ruleName: 'claudient-schedule',
+  functionName: 'uitkit-dont-stop',
+  ruleName: 'uitkit-schedule',
   scheduleExpression: 'rate(5 minutes)',
 });
 ```
@@ -76,10 +76,10 @@ await deployment.createLambdaEventRule({
 ```javascript
 // Deploy service
 await deployment.deployECS({
-  clusterName: 'claudient-cluster',
-  serviceName: 'claudient-api',
-  taskDefinitionFamily: 'claudient-api-task',
-  image: 'my-registry/claudient-api:latest',
+  clusterName: 'uitkit-cluster',
+  serviceName: 'uitkit-api',
+  taskDefinitionFamily: 'uitkit-api-task',
+  image: 'my-registry/uitkit-api:latest',
   launchType: 'FARGATE',
   desiredCount: 2,
   cpu: '256',
@@ -89,8 +89,8 @@ await deployment.deployECS({
 
 // Check health
 const health = await deployment.healthCheckECS(
-  'claudient-cluster',
-  'claudient-api'
+  'uitkit-cluster',
+  'uitkit-api'
 );
 ```
 
@@ -99,23 +99,23 @@ const health = await deployment.healthCheckECS(
 ```javascript
 // Generate template
 const template = deployment.generateCloudFormationTemplate({
-  stackName: 'claudient-full',
+  stackName: 'uitkit-full',
   resources: {
-    s3: { bucketName: 'claudient-skills' },
-    dynamodb: { tableName: 'claudient-state', ... },
-    lambda: { functionName: 'claudient-dont-stop', ... },
-    ecsCluster: { name: 'claudient-cluster', ... },
+    s3: { bucketName: 'uitkit-skills' },
+    dynamodb: { tableName: 'uitkit-state', ... },
+    lambda: { functionName: 'uitkit-dont-stop', ... },
+    ecsCluster: { name: 'uitkit-cluster', ... },
   },
 });
 
 // Save and deploy
 const filePath = deployment.saveCloudFormationTemplate(
-  { stackName: 'claudient-full', ... },
+  { stackName: 'uitkit-full', ... },
   './cloudformation'
 );
 
 await deployment.deployCloudFormationStack(
-  'claudient-full',
+  'uitkit-full',
   filePath
 );
 ```
@@ -134,9 +134,9 @@ const deployment = new AWSDeployment({
   dryRun: true,                      // Test mode
   costOptimization: true,            // Enable recommendations
   tags: {                            // Default tags
-    ManagedBy: 'Claudient',
+    ManagedBy: 'UitKit',
     Environment: 'production',
-    Project: 'Claudient',
+    Project: 'UitKit',
   },
 });
 ```
@@ -159,7 +159,7 @@ npm test -- lib/aws-deployment.test.js
 # CloudFormation deploy
 aws cloudformation deploy \
   --template-file lib/aws-deployment-cloudformation-template.yaml \
-  --stack-name claudient-main \
+  --stack-name uitkit-main \
   --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM \
   --region us-east-1 \
   --profile default
@@ -169,46 +169,46 @@ aws cloudformation deploy \
 
 ```bash
 # List S3 buckets
-aws s3 ls | grep claudient
+aws s3 ls | grep uitkit
 
 # List DynamoDB tables
-aws dynamodb list-tables | grep claudient
+aws dynamodb list-tables | grep uitkit
 
 # List Lambda functions
-aws lambda list-functions | grep claudient
+aws lambda list-functions | grep uitkit
 
 # List ECS clusters
-aws ecs list-clusters --query 'clusterArns' | grep claudient
+aws ecs list-clusters --query 'clusterArns' | grep uitkit
 
 # List VPCs
-aws ec2 describe-vpcs --filters "Name=tag:Name,Values=claudient*"
+aws ec2 describe-vpcs --filters "Name=tag:Name,Values=uitkit*"
 
 # List CloudWatch logs
-aws logs describe-log-groups | grep claudient
+aws logs describe-log-groups | grep uitkit
 
 # View Lambda logs
-aws logs tail /aws/lambda/claudient-dont-stop-task --follow
+aws logs tail /aws/lambda/uitkit-dont-stop-task --follow
 
 # Check CloudFormation stack status
-aws cloudformation describe-stacks --stack-name claudient-main \
+aws cloudformation describe-stacks --stack-name uitkit-main \
   --query 'Stacks[0].StackStatus'
 
 # List IAM roles
-aws iam list-roles | grep claudient
+aws iam list-roles | grep uitkit
 ```
 
 ## Cost Monitoring
 
 ```bash
 # Get S3 bucket size
-aws s3api list-objects-v2 --bucket claudient-skills \
+aws s3api list-objects-v2 --bucket uitkit-skills \
   --query '[Contents[].Size]' | jq 'add/1024/1024/1024'
 
 # Get DynamoDB consumed capacity
 aws cloudwatch get-metric-statistics \
   --namespace AWS/DynamoDB \
   --metric-name ConsumedWriteCapacityUnits \
-  --dimensions Name=TableName,Value=claudient-state \
+  --dimensions Name=TableName,Value=uitkit-state \
   --start-time $(date -u -d '24 hours ago' +%Y-%m-%dT%H:%M:%S)Z \
   --end-time $(date -u +%Y-%m-%dT%H:%M:%S)Z \
   --period 3600 \
@@ -218,7 +218,7 @@ aws cloudwatch get-metric-statistics \
 aws cloudwatch get-metric-statistics \
   --namespace AWS/Lambda \
   --metric-name Invocations \
-  --dimensions Name=FunctionName,Value=claudient-dont-stop-task \
+  --dimensions Name=FunctionName,Value=uitkit-dont-stop-task \
   --start-time $(date -u -d '24 hours ago' +%Y-%m-%dT%H:%M:%S)Z \
   --end-time $(date -u +%Y-%m-%dT%H:%M:%S)Z \
   --period 3600 \

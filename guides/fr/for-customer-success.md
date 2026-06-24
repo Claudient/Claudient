@@ -18,14 +18,14 @@ Vous êtes un CSM responsable d'un portefeuille de comptes — les fidéliser, l
 
 ```bash
 # Installer la stack CS complète
-npx claudient add skill gtm/customer-success
-npx claudient add skill gtm/qbr-builder
-npx claudient add skill gtm/health-score-analyzer
-npx claudient add skill gtm/expansion-playbook
-npx claudient add skill marketing/churn-prevention
-npx claudient add skill small-business/customer-feedback-synthesizer
-npx claudient add skill gtm/revenue-operations
-npx claudient add agent advisors/cco-advisor
+npx uitkit add skill gtm/customer-success
+npx uitkit add skill gtm/qbr-builder
+npx uitkit add skill gtm/health-score-analyzer
+npx uitkit add skill gtm/expansion-playbook
+npx uitkit add skill marketing/churn-prevention
+npx uitkit add skill small-business/customer-feedback-synthesizer
+npx uitkit add skill gtm/revenue-operations
+npx uitkit add agent advisors/cco-advisor
 ```
 
 ---

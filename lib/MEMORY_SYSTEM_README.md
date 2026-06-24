@@ -18,7 +18,7 @@ Persistent memory system for Claude Code agents to learn patterns, track decisio
 ## Installation
 
 ```bash
-npm install @claudient/memory-system
+npm install @uitkit/memory-system
 ```
 
 Or require directly:

@@ -20,21 +20,21 @@ Du bist Inhouse-Rechtsberater, Compliance-Beauftragter, Datenschutzbeauftragter 
 
 ```bash
 # Installiere den vollständigen Rechts- und Compliance-Stack
-npx claudient add skills legal
+npx uitkit add skills legal
 
 # Oder einzeln auswählen:
-npx claudient add skill legal/contract-review
-npx claudient add skill legal/nda-review
-npx claudient add skill legal/gdpr-expert
-npx claudient add skill legal/soc2-compliance
-npx claudient add skill legal/privacy-pia
-npx claudient add skill legal/eu-ai-act
-npx claudient add skill legal/iso27001
-npx claudient add skill legal/dsar-response
-npx claudient add skill legal/compliance-tracker
-npx claudient add skill legal/legal-research
-npx claudient add agents advisors/general-counsel
-npx claudient add agents advisors/ciso-advisor
+npx uitkit add skill legal/contract-review
+npx uitkit add skill legal/nda-review
+npx uitkit add skill legal/gdpr-expert
+npx uitkit add skill legal/soc2-compliance
+npx uitkit add skill legal/privacy-pia
+npx uitkit add skill legal/eu-ai-act
+npx uitkit add skill legal/iso27001
+npx uitkit add skill legal/dsar-response
+npx uitkit add skill legal/compliance-tracker
+npx uitkit add skill legal/legal-research
+npx uitkit add agents advisors/general-counsel
+npx uitkit add agents advisors/ciso-advisor
 ```
 
 ---
@@ -220,7 +220,7 @@ An externen Anwalt delegieren:
 ## 30-Tage-Einarbeitungsplan (neuer Rechts-/Compliance-Mitarbeiter)
 
 ### Woche 1 — Verstehe deine Verpflichtungslandschaft
-- Installiere alle Rechts-Skills: `npx claudient add skills legal`
+- Installiere alle Rechts-Skills: `npx uitkit add skills legal`
 - Führe `/compliance-tracker` aus — erstelle dein Pflichtregister für jeden anwendbaren Rahmen
 - Überprüfe alle bestehenden Verträge in deinen Standardvorlagen — identifiziere, was marktüblich vs. angepasst ist
 - Identifiziere offene DSARs, Datenpannen-Meldungen oder Audit-Anfragen — kümmere dich sofort um Fristen

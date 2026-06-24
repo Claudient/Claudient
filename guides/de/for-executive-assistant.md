@@ -20,15 +20,15 @@ Claude Code wird Ihre Vorbereitungsmaschine: Briefings in Minuten erstellt, sens
 
 ```bash
 # EA- und CoS-Skills installieren
-npx claudient add skill small-business/meeting-to-action
-npx claudient add skill small-business/monday-brief
-npx claudient add skill productivity/board-deck-builder
-npx claudient add skill productivity/confluence-expert
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/stakeholder-comms
+npx uitkit add skill small-business/meeting-to-action
+npx uitkit add skill small-business/monday-brief
+npx uitkit add skill productivity/board-deck-builder
+npx uitkit add skill productivity/confluence-expert
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/stakeholder-comms
 
 # Den Chief-of-Staff-Agenten installieren
-npx claudient add agent advisors/chief-of-staff
+npx uitkit add agent advisors/chief-of-staff
 ```
 
 ---
@@ -218,7 +218,7 @@ VORSCHAU AUF DIE NÄCHSTE WOCHE:
 ## 30-Tage-Einstiegsplan (neuer EA oder CoS)
 
 ### Woche 1 — Die Landschaft erkunden
-- Alle EA/CoS-Skills installieren: `npx claudient add skill productivity/[name]`
+- Alle EA/CoS-Skills installieren: `npx uitkit add skill productivity/[name]`
 - Den Kalender der Führungskraft kennenlernen: welche Meetings wiederkehren, welche hochkarätig sind, welche sie fürchten
 - Das Monday-Brief-Format mit der Führungskraft besprechen — möchten Sie mehr oder weniger Details? anderen Fokus?
 - Die 5 wichtigsten Stakeholder in der Welt der Führungskraft identifizieren und Profile mit `/exec-briefing` erstellen

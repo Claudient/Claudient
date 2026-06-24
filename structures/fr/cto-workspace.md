@@ -132,23 +132,23 @@ touch org/team-structure.md org/capacity-plan-q3.md org/skill-matrix.md
 touch vendors/evaluation-template.md vendors/approved-vendor-list.md
 
 # Installer les skills Claude Code
-npx claudient add skill productivity/engineering-strategy
-npx claudient add skill productivity/adr-writer
-npx claudient add skill productivity/tech-debt-tracker
-npx claudient add skill productivity/build-optimization
-npx claudient add skill productivity/vendor-evaluator
-npx claudient add skill devops-infra/platform-engineering
-npx claudient add skill devops-infra/monorepo
+npx uitkit add skill productivity/engineering-strategy
+npx uitkit add skill productivity/adr-writer
+npx uitkit add skill productivity/tech-debt-tracker
+npx uitkit add skill productivity/build-optimization
+npx uitkit add skill productivity/vendor-evaluator
+npx uitkit add skill devops-infra/platform-engineering
+npx uitkit add skill devops-infra/monorepo
 
 # Installer les commandes slash
-npx claudient add command arch-review
-npx claudient add command hiring-plan
-npx claudient add command incident-review
-npx claudient add command team-health
-npx claudient add command vendor-eval
-npx claudient add command eng-metrics
-npx claudient add command board-update
-npx claudient add command build-vs-buy
+npx uitkit add command arch-review
+npx uitkit add command hiring-plan
+npx uitkit add command incident-review
+npx uitkit add command team-health
+npx uitkit add command vendor-eval
+npx uitkit add command eng-metrics
+npx uitkit add command board-update
+npx uitkit add command build-vs-buy
 ```
 
 ## Modèle CLAUDE.md
@@ -325,17 +325,17 @@ des résultats précis et spécifiques à l'organisation — pas des conseils g�
 ## Skills à installer
 
 ```bash
-npx claudient add skill productivity/engineering-strategy
-npx claudient add skill productivity/adr-writer
-npx claudient add skill productivity/tech-debt-tracker
-npx claudient add skill productivity/build-optimization
-npx claudient add skill productivity/vendor-evaluator
-npx claudient add skill productivity/tech-interview-kit
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill devops-infra/platform-engineering
-npx claudient add skill devops-infra/monorepo
-npx claudient add skill devops-infra/oncall-runbook
-npx claudient add skill devops-infra/capacity-planner
+npx uitkit add skill productivity/engineering-strategy
+npx uitkit add skill productivity/adr-writer
+npx uitkit add skill productivity/tech-debt-tracker
+npx uitkit add skill productivity/build-optimization
+npx uitkit add skill productivity/vendor-evaluator
+npx uitkit add skill productivity/tech-interview-kit
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill devops-infra/platform-engineering
+npx uitkit add skill devops-infra/monorepo
+npx uitkit add skill devops-infra/oncall-runbook
+npx uitkit add skill devops-infra/capacity-planner
 ```
 
 ## Voir aussi

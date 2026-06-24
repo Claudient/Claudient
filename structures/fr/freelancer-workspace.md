@@ -179,18 +179,18 @@ touch freelancer-workspace/ops/onboarding-sop.md
 touch freelancer-workspace/ops/tools-and-access.md
 
 # Installer les compétences freelance/petite entreprise
-npx claudient add skill small-business/freelancer-proposal
-npx claudient add skill small-business/scope-of-work
-npx claudient add skill small-business/invoice-chaser
-npx claudient add skill small-business/client-status-report
-npx claudient add skill small-business/cold-outreach
+npx uitkit add skill small-business/freelancer-proposal
+npx uitkit add skill small-business/scope-of-work
+npx uitkit add skill small-business/invoice-chaser
+npx uitkit add skill small-business/client-status-report
+npx uitkit add skill small-business/cold-outreach
 
 # Copier les stubs de commandes dans .claude/commands/
-npx claudient add skill small-business/freelancer-proposal --output freelancer-workspace/.claude/commands/proposal-draft.md
-npx claudient add skill small-business/scope-of-work --output freelancer-workspace/.claude/commands/scope-of-work.md
-npx claudient add skill small-business/invoice-chaser --output freelancer-workspace/.claude/commands/invoice-chase.md
-npx claudient add skill small-business/client-status-report --output freelancer-workspace/.claude/commands/status-report.md
-npx claudient add skill small-business/cold-outreach --output freelancer-workspace/.claude/commands/new-business.md
+npx uitkit add skill small-business/freelancer-proposal --output freelancer-workspace/.claude/commands/proposal-draft.md
+npx uitkit add skill small-business/scope-of-work --output freelancer-workspace/.claude/commands/scope-of-work.md
+npx uitkit add skill small-business/invoice-chaser --output freelancer-workspace/.claude/commands/invoice-chase.md
+npx uitkit add skill small-business/client-status-report --output freelancer-workspace/.claude/commands/status-report.md
+npx uitkit add skill small-business/cold-outreach --output freelancer-workspace/.claude/commands/new-business.md
 ```
 
 ## Modèle CLAUDE.md
@@ -404,19 +404,19 @@ Blockers or concerns: [ce qui pèse sur vous]
 
 ```bash
 # Compétences freelance essentielles
-npx claudient add skill small-business/freelancer-proposal
-npx claudient add skill small-business/scope-of-work
-npx claudient add skill small-business/invoice-chaser
-npx claudient add skill small-business/client-status-report
-npx claudient add skill small-business/cold-outreach
+npx uitkit add skill small-business/freelancer-proposal
+npx uitkit add skill small-business/scope-of-work
+npx uitkit add skill small-business/invoice-chaser
+npx uitkit add skill small-business/client-status-report
+npx uitkit add skill small-business/cold-outreach
 
 # Compétences de productivité complémentaires
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/vendor-evaluator
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/vendor-evaluator
 
 # Installer toutes les compétences small-business en une fois
-npx claudient add skills small-business
+npx uitkit add skills small-business
 ```
 
 ## Ressources associées

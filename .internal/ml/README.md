@@ -1,6 +1,6 @@
 # Machine Learning Module
 
-ML utilities for Claude Code and Claudient workflows, including task sequence optimization, failure prediction, and token usage forecasting.
+ML utilities for Claude Code and UitKit workflows, including task sequence optimization, failure prediction, and token usage forecasting.
 
 ## task-sequence-model.py
 

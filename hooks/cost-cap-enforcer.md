@@ -76,7 +76,7 @@ Session cap: $10.00
 
 This tool call is blocked by cost enforcement.
 Options:
-  1. Increase CLAUDIENT_SESSION_CAP in environment
+  1. Increase UITKIT_SESSION_CAP in environment
   2. Start a new session
   3. Contact your account manager for higher limits
 ```
@@ -102,7 +102,7 @@ Current cost estimation (can be replaced with actual API pricing):
 | NotebookEdit | $0.003 |
 | Other | $0.001 |
 
-In production with Claudient Cloud, actual costs from Claude API would be used.
+In production with UitKit Cloud, actual costs from Claude API would be used.
 
 ## Setup
 
@@ -119,9 +119,9 @@ Set via environment variables or settings.json:
 
 ```bash
 # Environment variables (session-specific)
-export CLAUDIENT_SESSION_CAP=25.0          # Cap at $25
-export CLAUDIENT_ALERT_THRESHOLD=20.0      # Warn at $20 (80%)
-export CLAUDIENT_HARD_STOP=true            # Block when cap reached
+export UITKIT_SESSION_CAP=25.0          # Cap at $25
+export UITKIT_ALERT_THRESHOLD=20.0      # Warn at $20 (80%)
+export UITKIT_HARD_STOP=true            # Block when cap reached
 
 # Or in settings.json (project-wide)
 {
@@ -161,7 +161,7 @@ grep "COST UPDATE" .claude/logs/cost.log | awk '{print $8}' | sort | uniq -c
 
 ## Team Budget Management
 
-For Claudient Cloud deployments, set team budgets in settings.json:
+For UitKit Cloud deployments, set team budgets in settings.json:
 
 ```json
 {

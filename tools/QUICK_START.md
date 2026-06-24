@@ -7,7 +7,7 @@ Get started with auto-skill-discovery in 5 minutes.
 No additional dependencies required — uses only Node.js built-ins.
 
 ```bash
-cd /Users/tushar/Desktop/Claudient
+cd /Users/tushar/Desktop/UitKit
 ```
 
 ## Usage
@@ -93,7 +93,7 @@ Discoveries: 169 candidates (functions, classes, patterns)
   ↓
 [Skill Generation]
   ↓
-Skills: 119 suggestions (Claudient-compliant markdown)
+Skills: 119 suggestions (UitKit-compliant markdown)
   ↓
 [Validation & Testing]
   ↓
@@ -119,7 +119,7 @@ Report: Console, Markdown, or JSON
 
 ## Generated Skill Format
 
-Each discovered skill generates Claudient-compliant markdown:
+Each discovered skill generates UitKit-compliant markdown:
 
 ```markdown
 # SandboxBench Usage
@@ -214,7 +214,7 @@ node tools/auto-skill-discovery.js --output=md
 Four main components:
 
 1. **PatternDetector** — Finds reusable patterns in code
-2. **SkillGenerator** — Creates Claudient-compliant markdown
+2. **SkillGenerator** — Creates UitKit-compliant markdown
 3. **SkillValidator** — Checks format compliance
 4. **ReportGenerator** — Produces reports
 
@@ -281,7 +281,7 @@ A: See `AUTO_SKILL_DISCOVERY.md` for full API
 
 ## License
 
-Part of Claudient repository. Uses Node.js built-ins only.
+Part of UitKit repository. Uses Node.js built-ins only.
 
 ---
 

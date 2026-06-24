@@ -186,8 +186,8 @@ const config = {
 ### Standard Production Config
 ```javascript
 const config = {
-  encryptionKeyPath: '/var/claudient/keys/encryption.key',
-  auditLogPath: '/var/claudient/logs/audit.log',
+  encryptionKeyPath: '/var/uitkit/keys/encryption.key',
+  auditLogPath: '/var/uitkit/logs/audit.log',
   baaVerified: true,
   complianceMode: 'standard',
   retentionDays: 2555,

@@ -24,7 +24,7 @@ Performance- und Growth-Marketer bei Startups oder Scale-ups. Verantwortlich fü
 
 **Standard-Kompromisse:** Experimentiergeschwindigkeit der statistischen Perfektion vorziehen. Mehr Tests mit kleineren Stichproben durchführen statt auf Signifikanz eines großen Tests warten.
 
-## Empfohlene Claudient-Skills & Agents
+## Empfohlene UitKit-Skills & Agents
 - `gtm` — Kampagnenstrategie, Kanalauswahl, Messaging-Hierarchie
 - `sdr` — Email-Sequenzen, Nurture-Flows und Outbound-Copy
 - `finance` — Unit-Economics-Modellierung, CAC/LTV-Berechnungen

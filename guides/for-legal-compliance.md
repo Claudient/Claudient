@@ -20,21 +20,21 @@ You are in-house legal counsel, a compliance officer, a DPO, or a GC whose job i
 
 ```bash
 # Install the full legal and compliance stack
-npx claudient add skills legal
+npx uitkit add skills legal
 
 # Or cherry-pick:
-npx claudient add skill legal/contract-review
-npx claudient add skill legal/nda-review
-npx claudient add skill legal/gdpr-expert
-npx claudient add skill legal/soc2-compliance
-npx claudient add skill legal/privacy-pia
-npx claudient add skill legal/eu-ai-act
-npx claudient add skill legal/iso27001
-npx claudient add skill legal/dsar-response
-npx claudient add skill legal/compliance-tracker
-npx claudient add skill legal/legal-research
-npx claudient add agents advisors/general-counsel
-npx claudient add agents advisors/ciso-advisor
+npx uitkit add skill legal/contract-review
+npx uitkit add skill legal/nda-review
+npx uitkit add skill legal/gdpr-expert
+npx uitkit add skill legal/soc2-compliance
+npx uitkit add skill legal/privacy-pia
+npx uitkit add skill legal/eu-ai-act
+npx uitkit add skill legal/iso27001
+npx uitkit add skill legal/dsar-response
+npx uitkit add skill legal/compliance-tracker
+npx uitkit add skill legal/legal-research
+npx uitkit add agents advisors/general-counsel
+npx uitkit add agents advisors/ciso-advisor
 ```
 
 ---
@@ -220,7 +220,7 @@ Delegate to external counsel:
 ## 30-day ramp plan (new legal / compliance hire)
 
 ### Week 1 — Know your obligation landscape
-- Install all legal skills: `npx claudient add skills legal`
+- Install all legal skills: `npx uitkit add skills legal`
 - Run `/compliance-tracker` — build your obligation register for every applicable framework
 - Review all existing contracts in your standard templates — identify what's market standard vs. custom
 - Identify open DSARs, breach notifications, or audit requests — get on top of deadlines immediately

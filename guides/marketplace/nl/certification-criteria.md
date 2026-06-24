@@ -1,6 +1,6 @@
 # Certificeringsmiddelen voor Marketplace Stack
 
-Deze gids beschrijft de gekwantificeerde criteria, kwaliteitsrubrieken en meetmethodologieën voor Claudient Stack-certificering.
+Deze gids beschrijft de gekwantificeerde criteria, kwaliteitsrubrieken en meetmethodologieën voor UitKit Stack-certificering.
 
 ## Overzicht
 
@@ -232,7 +232,7 @@ Als een stack certificering wordt geweigerd of gedowngradeerd:
 1. Auteur kan verduidelijking aanvragen (binnen 1 week)
 2. Kernteam biedt gedetailleerde scoreopschatting
 3. Auteur kan opnieuw aanvragen na aanpak van geïdentificeerde problemen (na 2 weken)
-4. Indien ontevreden met feedback, escaleren naar marketplace@claudient.dev voor onafhankelijke beoordeling
+4. Indien ontevreden met feedback, escaleren naar marketplace@uitkit.dev voor onafhankelijke beoordeling
 
 ---
 

@@ -20,7 +20,7 @@ Le processus de soumission dure 1 à 2 semaines de la pull request à la publica
 
 ## Étape 1 : Fork le repository
 
-1. Accédez à https://github.com/tushar2704/Claudient
+1. Accédez à https://github.com/tushar2704/UitKit
 2. Cliquez sur **Fork** dans le coin supérieur droit
 3. Choisissez votre compte GitHub comme destination du fork
 4. Cliquez sur **Create fork**
@@ -33,11 +33,11 @@ Vous avez maintenant votre propre copie du repository.
 
 ```bash
 # Clonez votre fork
-git clone https://github.com/VOTRE_NOM_UTILISATEUR/Claudient.git
-cd Claudient
+git clone https://github.com/VOTRE_NOM_UTILISATEUR/UitKit.git
+cd UitKit
 
 # Ajoutez le remote upstream pour la synchronisation
-git remote add upstream https://github.com/tushar2704/Claudient.git
+git remote add upstream https://github.com/tushar2704/UitKit.git
 ```
 
 Remplacez `VOTRE_NOM_UTILISATEUR` par votre identifiant GitHub.
@@ -104,7 +104,7 @@ votre-nom-stack/
 ```
 
 **Fichiers obligatoires :**
-- `CLAUDE.md` — Manifeste du stack respectant les normes claudient
+- `CLAUDE.md` — Manifeste du stack respectant les normes uitkit
 - `README.md` — Aperçu, démarrage rapide, 100–200 lignes
 - `LICENSE` — CC0-1.0, MIT, Apache 2.0, ou GPL 3.0
 - `submission.json` — Métadonnées de soumission
@@ -138,7 +138,7 @@ Voir **getting-started.md** pour des directives détaillées sur chaque type de 
     "email": "vous@exemple.com"
   },
   "license": "CC0-1.0",
-  "repository": "https://github.com/VOTRE_NOM_UTILISATEUR/Claudient/tree/main/stacks/votre-nom-stack",
+  "repository": "https://github.com/VOTRE_NOM_UTILISATEUR/UitKit/tree/main/stacks/votre-nom-stack",
   "keywords": [
     "mot-clé1",
     "mot-clé2",
@@ -288,13 +288,13 @@ git push origin main
 
 ## Étape 9 : Ouvrez une Pull Request
 
-1. Accédez à votre fork : https://github.com/VOTRE_NOM_UTILISATEUR/Claudient
+1. Accédez à votre fork : https://github.com/VOTRE_NOM_UTILISATEUR/UitKit
 2. Cliquez sur l'onglet **Pull requests**
 3. Cliquez sur **New pull request**
 4. Définissez :
-   - Repository de base : `tushar2704/Claudient`
+   - Repository de base : `tushar2704/UitKit`
    - Branche de base : `main`
-   - Repository de tête : `VOTRE_NOM_UTILISATEUR/Claudient`
+   - Repository de tête : `VOTRE_NOM_UTILISATEUR/UitKit`
    - Branche de tête : `main`
 5. Cliquez sur **Create pull request**
 
@@ -321,7 +321,7 @@ Description spécifique de l'audience (par ex., « Ingénieurs backend optimisan
 
 ### Liste de vérification de qualité
 
-- [x] Tous les fichiers respectent les normes claudient
+- [x] Tous les fichiers respectent les normes uitkit
 - [x] Chaque compétence a des exemples concrets et testés
 - [x] Chaque agent a un objectif clair et une portée d'outils étroite
 - [x] Tous les guides sont complets et testés

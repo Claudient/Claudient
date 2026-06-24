@@ -203,13 +203,13 @@ touch .claude/commands/checkov-fix.md
 touch .claude/commands/tag-audit.md
 touch .claude/commands/rotate-secret.md
 
-# Instalar habilidades de Claudient
-npx claudient add skill devops-infra/terraform-module
-npx claudient add skill devops-infra/terragrunt-config
-npx claudient add skill devops-infra/aws-iam-policy
-npx claudient add skill devops-infra/checkov-remediation
-npx claudient add skill devops-infra/github-actions-cicd
-npx claudient add skill devops-infra/aws-secrets-manager
+# Instalar habilidades de UitKit
+npx uitkit add skill devops-infra/terraform-module
+npx uitkit add skill devops-infra/terragrunt-config
+npx uitkit add skill devops-infra/aws-iam-policy
+npx uitkit add skill devops-infra/checkov-remediation
+npx uitkit add skill devops-infra/github-actions-cicd
+npx uitkit add skill devops-infra/aws-secrets-manager
 
 # Bootstrap de estado remoto (ejecutar una vez por entorno/región)
 bash scripts/init.sh dev us-east-1
@@ -410,15 +410,15 @@ Ejecutar `/tag-audit` para escanear recursos sin etiquetas requeridas antes de a
 ## Habilidades para instalar
 
 ```bash
-npx claudient add skill devops-infra/terraform-module
-npx claudient add skill devops-infra/terragrunt-config
-npx claudient add skill devops-infra/aws-iam-policy
-npx claudient add skill devops-infra/checkov-remediation
-npx claudient add skill devops-infra/tfsec-remediation
-npx claudient add skill devops-infra/github-actions-cicd
-npx claudient add skill devops-infra/aws-secrets-manager
-npx claudient add skill devops-infra/aws-vpc-design
-npx claudient add skill devops-infra/ecs-service-deploy
+npx uitkit add skill devops-infra/terraform-module
+npx uitkit add skill devops-infra/terragrunt-config
+npx uitkit add skill devops-infra/aws-iam-policy
+npx uitkit add skill devops-infra/checkov-remediation
+npx uitkit add skill devops-infra/tfsec-remediation
+npx uitkit add skill devops-infra/github-actions-cicd
+npx uitkit add skill devops-infra/aws-secrets-manager
+npx uitkit add skill devops-infra/aws-vpc-design
+npx uitkit add skill devops-infra/ecs-service-deploy
 ```
 
 ## Relacionados

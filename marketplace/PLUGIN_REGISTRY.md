@@ -2,10 +2,10 @@
 
 ## Overview
 
-`plugins.json` is the master registry for all Claude Code plugins available in the Claudient marketplace. It maintains the authoritative record of plugin metadata, versioning, ratings, download statistics, and pricing information. This file is consumed by:
+`plugins.json` is the master registry for all Claude Code plugins available in the UitKit marketplace. It maintains the authoritative record of plugin metadata, versioning, ratings, download statistics, and pricing information. This file is consumed by:
 
 - Marketplace UI (plugin discovery, filtering, sorting)
-- Plugin installer (`claudient install <plugin-name>`)
+- Plugin installer (`uitkit install <plugin-name>`)
 - Plugin update checker (version management)
 - Analytics and reporting dashboards
 - Revenue attribution (revenue-share calculations)
@@ -112,7 +112,7 @@ Each entry in `plugins.json` adheres to this structure:
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
-| `id` | string | ✓ | Unique identifier in kebab-case (e.g., `claudient-backend`, `my-custom-plugin`). Used in CLI commands. |
+| `id` | string | ✓ | Unique identifier in kebab-case (e.g., `uitkit-backend`, `my-custom-plugin`). Used in CLI commands. |
 | `name` | string | ✓ | Display name (may contain spaces, punctuation). Shown in marketplace UI. |
 | `version` | semver | ✓ | Current published version (e.g., `1.10.1`). Must be valid semantic versioning. |
 | `description` | string | ✓ | One-sentence description. Used in search results and plugin cards. Max 200 chars recommended. |
@@ -123,7 +123,7 @@ Each entry in `plugins.json` adheres to this structure:
 |-------|------|----------|-------------|
 | `author.name` | string | ✓ | Author username or team name. |
 | `author.email` | string | ✗ | Contact email for support inquiries. |
-| `author.verified` | boolean | ✓ | `true` if author identity verified by Claudient core team (reduces fraud). |
+| `author.verified` | boolean | ✓ | `true` if author identity verified by UitKit core team (reduces fraud). |
 | `repo` | string | ✓ | Source repository URL (GitHub, GitLab, etc.). Used for issue tracking and source browsing. |
 
 ### Download Analytics
@@ -182,7 +182,7 @@ Each entry in `plugins.json` adheres to this structure:
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `metadata.icon` | string | ✓ | Emoji (e.g., `🚀`) or SVG/PNG URL. Used in UI. |
-| `metadata.source` | string | ✓ | Relative path from `.claude-plugin/plugins/` (e.g., `claudient-backend`). |
+| `metadata.source` | string | ✓ | Relative path from `.claude-plugin/plugins/` (e.g., `uitkit-backend`). |
 | `metadata.languages` | array | ✓ | Supported language codes (e.g., `["en", "fr", "de", "es", "nl"]`). |
 | `metadata.assets.skills` | number | ✓ | Count of included skill files. |
 | `metadata.assets.agents` | number | ✓ | Count of included agent definitions. |
@@ -202,7 +202,7 @@ Each entry in `plugins.json` adheres to this structure:
 |-------|------|----------|-------------|
 | `stats.publishedAt` | ISO8601 | ✓ | When plugin first published. |
 | `stats.updatedAt` | ISO8601 | ✓ | When latest version published. Used to highlight recently-updated plugins. |
-| `stats.lastReviewedAt` | ISO8601 | ✗ | When last reviewed by Claudient core team (for certification maintenance). |
+| `stats.lastReviewedAt` | ISO8601 | ✗ | When last reviewed by UitKit core team (for certification maintenance). |
 | `stats.issuesOpen` | number | ✓ | Count of open GitHub issues (if repo is GitHub). |
 | `stats.issuesResolved` | number | ✓ | Count of closed/resolved issues. Used to calculate issue resolution rate. |
 | `stats.prsMerged` | number | ✓ | Count of merged PRs. Indicates maintenance activity. |
@@ -221,15 +221,15 @@ Each entry in `plugins.json` adheres to this structure:
 ### Backend Plugin
 ```json
 {
-  "id": "claudient-backend",
-  "name": "Claudient Backend Stack",
+  "id": "uitkit-backend",
+  "name": "UitKit Backend Stack",
   "version": "1.10.1",
   "description": "41 framework-specific skills covering Python, Node.js, Go, Rust, Ruby, Java, Elixir, Flutter, Swift, Kotlin, .NET, and PHP.",
   "author": {
     "name": "tushar2704",
     "verified": true
   },
-  "repo": "https://github.com/tushar2704/claudient",
+  "repo": "https://github.com/tushar2704/uitkit",
   "downloads": {
     "total": 45230,
     "thisMonth": 2156,
@@ -255,7 +255,7 @@ Each entry in `plugins.json` adheres to this structure:
   },
   "metadata": {
     "icon": "🔙",
-    "source": "claudient-backend",
+    "source": "uitkit-backend",
     "languages": ["en"],
     "assets": {
       "skills": 41,
@@ -282,10 +282,10 @@ Each entry in `plugins.json` adheres to this structure:
     "prsMerged": 47
   },
   "support": {
-    "documentationUrl": "https://github.com/tushar2704/claudient/tree/main/plugins/claudient-backend",
-    "issuesUrl": "https://github.com/tushar2704/claudient/issues",
+    "documentationUrl": "https://github.com/tushar2704/uitkit/tree/main/plugins/uitkit-backend",
+    "issuesUrl": "https://github.com/tushar2704/uitkit/issues",
     "licenseType": "MIT",
-    "licenseUrl": "https://github.com/tushar2704/claudient/blob/main/LICENSE"
+    "licenseUrl": "https://github.com/tushar2704/uitkit/blob/main/LICENSE"
   }
 }
 ```
@@ -339,7 +339,7 @@ Each entry in `plugins.json` adheres to this structure:
       "mcp": 1,
       "guides": 5
     },
-    "dependencies": ["claudient-ai-engineering"],
+    "dependencies": ["uitkit-ai-engineering"],
     "compatibility": {
       "minClaudeVersion": "0.4.0",
       "maxClaudeVersion": null,

@@ -18,20 +18,20 @@ Du bist Content Marketer, SEO-Manager oder Growth Marketer und hast die Aufgabe,
 
 ```bash
 # Den vollständigen Content-Marketing- und SEO-Stack installieren
-npx claudient add skills marketing
+npx uitkit add skills marketing
 
 # Oder einzeln auswählen:
-npx claudient add skill marketing/content-strategy
-npx claudient add skill marketing/content-brief
-npx claudient add skill marketing/editorial-calendar
-npx claudient add skill marketing/seo-audit
-npx claudient add skill marketing/ai-seo
-npx claudient add skill marketing/programmatic-seo
-npx claudient add skill marketing/copywriting
-npx claudient add skill marketing/social-media-manager
-npx claudient add skill marketing/email-sequence
-npx claudient add agents advisors/cmo-advisor
-npx claudient add agents roles/competitive-analyst
+npx uitkit add skill marketing/content-strategy
+npx uitkit add skill marketing/content-brief
+npx uitkit add skill marketing/editorial-calendar
+npx uitkit add skill marketing/seo-audit
+npx uitkit add skill marketing/ai-seo
+npx uitkit add skill marketing/programmatic-seo
+npx uitkit add skill marketing/copywriting
+npx uitkit add skill marketing/social-media-manager
+npx uitkit add skill marketing/email-sequence
+npx uitkit add agents advisors/cmo-advisor
+npx uitkit add agents roles/competitive-analyst
 ```
 
 ---
@@ -216,7 +216,7 @@ Aktuelles Top-Keyword-Cluster: [Hauptthemenbereich]
 ## 30-Tage-Einarbeitungsplan (neue Content Marketer)
 
 ### Woche 1 — Prüfen und verstehen
-- Alle Marketing-Skills installieren: `npx claudient add skills marketing`
+- Alle Marketing-Skills installieren: `npx uitkit add skills marketing`
 - `/seo-audit` für die gesamte Website ausführen — verstehen, was vorhanden ist, bevor mehr veröffentlicht wird
 - `/competitive-analyst` für die Top-3-Wettbewerber ausführen — was schreiben sie, das du nicht schreibst?
 - E-Mail-Liste prüfen: Öffnungsraten, Klickraten, Abmeldungen — welcher Content performt?

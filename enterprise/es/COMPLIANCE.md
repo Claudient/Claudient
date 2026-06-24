@@ -1,25 +1,25 @@
 # Cumplimiento y certificaciones
 
-Este documento describe la posición de cumplimiento de Claudient Enterprise Edition, certificaciones y alineación con marcos reguladores.
+Este documento describe la posición de cumplimiento de UitKit Enterprise Edition, certificaciones y alineación con marcos reguladores.
 
 ## SOC 2 Type II
 
-**Estado**: Atestación disponible para despliegues de Claudient Cloud
+**Estado**: Atestación disponible para despliegues de UitKit Cloud
 
-Claudient Cloud se audita anualmente por una firma de contadores públicos independiente. El informe cubre:
+UitKit Cloud se audita anualmente por una firma de contadores públicos independiente. El informe cubre:
 
 - **CC6 — Controles de acceso lógico y físico**: Autenticación de usuario (SSO), gestión de claves API
 - **CC7 — Monitoreo del sistema**: Registro continuo de todas las llamadas de herramientas
 - **CC8 — Gestión de cambios**: Audit trail de escritura de archivos
 - **CC9 — Mitigación de riesgos**: Los límites de costo previenen sobrecarga
 
-**Cómo acceder**: Solicite `SOC 2 Type II Report` desde sales@claudient.com (NDA requerida)
+**Cómo acceder**: Solicite `SOC 2 Type II Report` desde sales@uitkit.com (NDA requerida)
 
 ## ISO 27001
 
 **Estado**: Certificación en progreso (Q3 2026)
 
-Claudient implementa un Sistema de Gestión de Seguridad de la Información ISO 27001 que cubre:
+UitKit implementa un Sistema de Gestión de Seguridad de la Información ISO 27001 que cubre:
 
 - Organización de seguridad de la información
 - Seguridad de recursos humanos
@@ -38,9 +38,9 @@ Claudient implementa un Sistema de Gestión de Seguridad de la Información ISO 
 
 ### Acuerdo de procesamiento de datos (DPA)
 
-Al utilizar Claudient Cloud, se aplica un Apéndice de procesamiento de datos (DPA):
+Al utilizar UitKit Cloud, se aplica un Apéndice de procesamiento de datos (DPA):
 
-- Claudient actúa como **Procesador de datos** (usted es el Controlador)
+- UitKit actúa como **Procesador de datos** (usted es el Controlador)
 - Cláusulas contractuales estándar de la UE (ECC) incluidas
 - Subprocesadores listados y aprobados
 - Las transferencias de datos a EE.UU. requieren salvaguardas adicionales
@@ -49,7 +49,7 @@ Al utilizar Claudient Cloud, se aplica un Apéndice de procesamiento de datos (D
 
 ### Sus responsabilidades
 
-Como controlador que utiliza Claude Code + Claudient Cloud:
+Como controlador que utiliza Claude Code + UitKit Cloud:
 
 1. **Minimización de datos**: Evite procesar datos personales innecesariamente
 2. **Consentimiento**: Asegúrese de que empleados/usuarios consientan al procesamiento
@@ -59,20 +59,20 @@ Como controlador que utiliza Claude Code + Claudient Cloud:
 
 ## HIPAA
 
-**Estado**: Cumplimiento HIPAA disponible para Claudient Cloud (requiere Acuerdo de asociado comercial)
+**Estado**: Cumplimiento HIPAA disponible para UitKit Cloud (requiere Acuerdo de asociado comercial)
 
 Si procesa Información de Salud Protegida (PHI):
 
-1. **Solicite BAA**: Claudient firmará el Acuerdo de Asociado Comercial
+1. **Solicite BAA**: UitKit firmará el Acuerdo de Asociado Comercial
 2. **Habilite encriptación**: Registros de auditoría encriptados en reposo (AES-256-GCM), TLS 1.3 en tránsito
 3. **Audit trail**: Todos los accesos a PHI se registran
 4. **Controles de acceso**: Use RBAC para limitar quién puede acceder
-5. **Respuesta a incidentes**: Claudient respalda la exportación de registros forenses
+5. **Respuesta a incidentes**: UitKit respalda la exportación de registros forenses
 
 ### Lista de verificación para despliegues HIPAA
 
-- [ ] BAA firmado con Claudient
-- [ ] Claudient Cloud habilitada
+- [ ] BAA firmado con UitKit
+- [ ] UitKit Cloud habilitada
 - [ ] Encriptación en reposo habilitada
 - [ ] TLS 1.3 para todo el tráfico de red
 - [ ] SSO SAML configurado
@@ -84,7 +84,7 @@ Si procesa Información de Salud Protegida (PHI):
 
 ## PCI-DSS
 
-**Estado**: Fuera del alcance para Claudient (Claude Code nunca debe procesar datos de tarjetas)
+**Estado**: Fuera del alcance para UitKit (Claude Code nunca debe procesar datos de tarjetas)
 
 Si trabaja con datos de pago:
 
@@ -99,7 +99,7 @@ Si trabaja con datos de pago:
 
 Para contratistas del gobierno de EE.UU.:
 
-- Claudient Cloud busca autorización **FedRAMP Moderate**
+- UitKit Cloud busca autorización **FedRAMP Moderate**
 - Despliegue on-prem air-gapped disponible ahora
 - Admite controles NIST SP 800-53
 
@@ -114,7 +114,7 @@ Para contratistas del gobierno de EE.UU.:
 
 **Estado**: Alineación con la Regulación de IA de la UE (2024/1689)
 
-Claude Code es un **sistema de IA** bajo la regulación. Claudient implementa:
+Claude Code es un **sistema de IA** bajo la regulación. UitKit implementa:
 
 ### Categorías de alto riesgo
 
@@ -131,13 +131,13 @@ Claude Code **no es** alto riesgo (es una herramienta de desarrollo). Sin embarg
 
 Si su empresa cotizan en bolsa:
 
-1. **Controles generales de TI (ITGC)**: Claudient satisface gestión de cambios, control de acceso, segregación de funciones
+1. **Controles generales de TI (ITGC)**: UitKit satisface gestión de cambios, control de acceso, segregación de funciones
 2. **Cambios de sistemas financieros**: Registre todos los cambios en sistemas contables
 3. **Documentación**: Exporte registros de auditoría para revisión del comité de auditoría
 
 ## Detectión de reglas PII
 
-El escáner PII integrado de Claudient detecta:
+El escáner PII integrado de UitKit detecta:
 
 | Tipo | Regex | Acción |
 |------|-------|--------|
@@ -177,5 +177,5 @@ Utilice cuando se prepare para una auditoría externa:
 ---
 
 **Last updated**: 2026-06-15  
-**Contact**: compliance@claudient.com  
+**Contact**: compliance@uitkit.com  
 **Related files**: `AUDIT_TRAIL.md`, `RBAC.md`, `SSO_SETUP.md`

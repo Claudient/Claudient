@@ -23,7 +23,7 @@ Developer advocates, DevRel engineers en technische community managers bij API-f
 
 **Standaard afwegingen:** Geef de voorkeur aan korte, werkende codevoorbeelden boven lange uitleg. Prioriteer het 80% use case in tutorials; documenteer edge cases apart. Nauwkeurigheid boven polijsting — een technisch correct ruw concept is beter dan een glanzend onnauwkeurig.
 
-## Aanbevolen Claudient skills & agents
+## Aanbevolen UitKit skills & agents
 - `gtm` — developer launch campaigns, conference talk strategie
 - `ai-engineering` — AI SDK demos, model integration tutorials
 - `backend` — code sample generatie voor API documentatie

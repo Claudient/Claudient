@@ -23,7 +23,7 @@ Technical co-founders or first engineering hires at seed-to-Series A startups. R
 
 **Default tradeoffs:** Prefer managed services over self-hosted. Prefer boring technology for core systems. Accept short-term coupling if it enables shipping.
 
-## Recommended Claudient skills & agents
+## Recommended UitKit skills & agents
 - `devops-infra` — for cloud architecture, CI/CD, and infra decisions
 - `ai-engineering` — when adding AI features to product
 - `backend` — API design, auth, database modeling

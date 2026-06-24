@@ -3,7 +3,7 @@
 /**
  * Contributor Onboarding System
  *
- * Guided workflow for new Claudient contributors:
+ * Guided workflow for new UitKit contributors:
  * - Fork repository walkthrough
  * - Create first skill tutorial
  * - Submit PR guidance
@@ -62,7 +62,7 @@ const ACHIEVEMENT_TIERS = {
 const SWAG_REWARDS = {
   [ACHIEVEMENT_TIERS.BRONZE]: {
     name: 'Bronze Badge',
-    items: ['Claudient Sticker Pack (5x)', 'Digital Certificate'],
+    items: ['UitKit Sticker Pack (5x)', 'Digital Certificate'],
     milestone: 1,
   },
   [ACHIEVEMENT_TIERS.SILVER]: {
@@ -184,7 +184,7 @@ function promptYesNo(question) {
  */
 async function stageWelcome() {
   clearScreen();
-  printHeader('Welcome to Claudient Contributors!');
+  printHeader('Welcome to UitKit Contributors!');
 
   console.log(`${Colors.bright}We're excited to have you join our community!${Colors.reset}`);
   console.log(`\nThis onboarding guide will help you:`);
@@ -272,10 +272,10 @@ async function stageForkSetup() {
   clearScreen();
   printHeader('Step 1: Fork the Repository');
 
-  printInfo('You need to create your own copy of the Claudient repository.');
+  printInfo('You need to create your own copy of the UitKit repository.');
 
   console.log(`\n${Colors.bright}Manual Fork Steps:${Colors.reset}`);
-  console.log(`1. Go to: ${Colors.cyan}https://github.com/UitbreidenOS/Claudient${Colors.reset}`);
+  console.log(`1. Go to: ${Colors.cyan}https://github.com/UitbreidenOS/UitKit${Colors.reset}`);
   console.log(`2. Click the ${Colors.bright}"Fork"${Colors.reset} button (top-right)`);
   console.log(`3. Select your account as the destination`);
   console.log(`4. Wait for the fork to complete\n`);
@@ -288,11 +288,11 @@ async function stageForkSetup() {
   }
 
   console.log('\n${Colors.bright}Clone Your Fork:${Colors.reset}');
-  const localPath = await prompt('Where should we clone your fork? (e.g., ~/projects/Claudient)');
+  const localPath = await prompt('Where should we clone your fork? (e.g., ~/projects/UitKit)');
 
   try {
     console.log(`\n${Colors.dim}Cloning...${Colors.reset}`);
-    const cloneCmd = `git clone https://github.com/${contributorProfile.githubHandle}/Claudient.git "${localPath}"`;
+    const cloneCmd = `git clone https://github.com/${contributorProfile.githubHandle}/UitKit.git "${localPath}"`;
     execSync(cloneCmd, { stdio: 'inherit' });
     printSuccess(`Repository cloned to ${localPath}`);
 
@@ -300,7 +300,7 @@ async function stageForkSetup() {
 
     // Add upstream remote
     console.log(`\n${Colors.dim}Adding upstream remote...${Colors.reset}`);
-    execSync('git remote add upstream https://github.com/UitbreidenOS/Claudient.git');
+    execSync('git remote add upstream https://github.com/UitbreidenOS/UitKit.git');
     printSuccess('Upstream remote added');
 
   } catch (error) {
@@ -419,7 +419,7 @@ async function stageSubmitPR() {
 
   console.log(prTemplate);
 
-  const prUrl = await prompt('\nPaste your PR URL (github.com/UitbreidenOS/Claudient/pull/XXX)');
+  const prUrl = await prompt('\nPaste your PR URL (github.com/UitbreidenOS/UitKit/pull/XXX)');
 
   if (prUrl.includes('github.com')) {
     printSuccess(`PR submitted: ${prUrl}`);

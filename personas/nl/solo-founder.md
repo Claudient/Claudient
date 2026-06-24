@@ -23,7 +23,7 @@ Eenmansbedrijven of indie-bedrijven waar de oprichter alles doet: product, code,
 
 **Standaard afwegingen:** Geef voorkeur aan no-code of low-code waarbij snelheid controle overtreft. Accepteer onvolmaakte automatisering boven handmatige herhaling.
 
-## Aanbevolen Claudient-vaardigheden & agenten
+## Aanbevolen UitKit-vaardigheden & agenten
 - `small-business` — prijsstelling, positionering en klantencommunicatie
 - `gtm` — lanceeringstrategie, positionering, landingspagina-copy
 - `sdr` — uitgaande outreach en vervolgsequenties

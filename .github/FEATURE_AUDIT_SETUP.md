@@ -250,7 +250,7 @@ git push
 The feature audit workflow complements existing CI:
 
 - **validate.yml** - Markdown lint, link checks, freshness
-- **claudient-ci.yml** - Core validation, catalog checks, CLI tests
+- **uitkit-ci.yml** - Core validation, catalog checks, CLI tests
 - **feature-audit.yml** - Feature catalog, schema, integration (NEW)
 
 Together they provide comprehensive quality assurance for:
@@ -357,7 +357,7 @@ node test/features/validate-features.js
 - [Feature Audit Workflow](./FEATURE_AUDIT.md)
 - [Workflows Directory](./README.md)
 - [GitHub Actions Docs](https://docs.github.com/en/actions)
-- [Claudient CLAUDE.md](../CLAUDE.md)
+- [UitKit CLAUDE.md](../CLAUDE.md)
 
 ---
 

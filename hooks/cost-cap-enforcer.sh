@@ -44,9 +44,9 @@ LOG_FILE="${CLAUDE_PROJECT_DIR:-$(pwd)}/.claude/logs/cost.log"
 STATE_FILE="${CLAUDE_PROJECT_DIR:-$(pwd)}/.claude/.cost-state"
 
 # Read configuration from environment or set defaults
-MAX_SESSION_COST="${CLAUDIENT_SESSION_CAP:-10.0}"
-ALERT_THRESHOLD="${CLAUDIENT_ALERT_THRESHOLD:-8.0}"
-HARD_STOP="${CLAUDIENT_HARD_STOP:-true}"
+MAX_SESSION_COST="${UITKIT_SESSION_CAP:-10.0}"
+ALERT_THRESHOLD="${UITKIT_ALERT_THRESHOLD:-8.0}"
+HARD_STOP="${UITKIT_HARD_STOP:-true}"
 
 mkdir -p "$(dirname "$LOG_FILE")"
 mkdir -p "$(dirname "$STATE_FILE")"
@@ -111,7 +111,7 @@ if [ "$MODE" = "pre" ]; then
         echo ""
         echo "This tool call is blocked by cost enforcement."
         echo "Options:"
-        echo "  1. Increase CLAUDIENT_SESSION_CAP in environment"
+        echo "  1. Increase UITKIT_SESSION_CAP in environment"
         echo "  2. Start a new session"
         echo "  3. Contact your account manager for higher limits"
         exit 1

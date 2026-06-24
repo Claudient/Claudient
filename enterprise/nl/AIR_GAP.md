@@ -6,7 +6,7 @@ updated: 2026-06-15
 
 # Handleiding voor enterprise air-gap implementatie
 
-Dit document behandelt de implementatie van Claudient en Claude Code in volledig geïsoleerde (air-gap) bedrijfsnetwerken zonder externe connectiviteit. Het bevat beveiligingsmaatregelen, gereedschapswittelist, lokale modelservering en audittrails voor naleving.
+Dit document behandelt de implementatie van UitKit en Claude Code in volledig geïsoleerde (air-gap) bedrijfsnetwerken zonder externe connectiviteit. Het bevat beveiligingsmaatregelen, gereedschapswittelist, lokale modelservering en audittrails voor naleving.
 
 ---
 
@@ -278,7 +278,7 @@ Alleen deze MCP's zijn toegestaan in air-gap-omgevingen:
       "args": ["server", "postgres"],
       "disabled": false,
       "env": {
-        "DATABASE_URL": "postgresql://localhost/claudient"
+        "DATABASE_URL": "postgresql://localhost/uitkit"
       }
     }
   },
@@ -356,7 +356,7 @@ Alle Claude Code-bewerkingen moeten voor naleving worden geregistreerd:
     "level": "INFO",
     "format": "json",
     "outputs": [
-      "file:///var/log/claudient/operations.log",
+      "file:///var/log/uitkit/operations.log",
       "syslog://127.0.0.1:514"
     ]
   },
@@ -405,19 +405,19 @@ Stuur logboeken naar centrale syslog-server:
 sudo apt-get install -y rsyslog
 
 # Syslog-doorstuurconfiguratie
-sudo tee /etc/rsyslog.d/10-claudient-forward.conf > /dev/null <<EOF
-# Claudient-logboeken naar centrale server doorsturen
-:programname, isequal, "claudient" @@<INTERNAL_SYSLOG_SERVER>:514
+sudo tee /etc/rsyslog.d/10-uitkit-forward.conf > /dev/null <<EOF
+# UitKit-logboeken naar centrale server doorsturen
+:programname, isequal, "uitkit" @@<INTERNAL_SYSLOG_SERVER>:514
 
 # Ook lokaal opslaan voor controle
-:programname, isequal, "claudient" /var/log/claudient/operations.log
+:programname, isequal, "uitkit" /var/log/uitkit/operations.log
 EOF
 
 # Rsyslog opnieuw starten
 sudo systemctl restart rsyslog
 
 # Verifiëren
-tail -f /var/log/claudient/operations.log
+tail -f /var/log/uitkit/operations.log
 ```
 
 ### 4.4 Nalevingsrapportgeneratie
@@ -446,7 +446,7 @@ jq -s '
   failed_operations: map(select(.details.exit_code != 0)),
   network_violations: map(select(.security.external_calls_attempted > 0))
 }' \
-  /var/log/claudient/operations.log > "$REPORT_FILE"
+  /var/log/uitkit/operations.log > "$REPORT_FILE"
 
 echo "Nalevingsrapport: $REPORT_FILE"
 ```
@@ -509,7 +509,7 @@ curl -s http://127.0.0.1:11434/api/tags | grep -q "name" && echo "[PASS] Lokale 
 claude --help | grep -q "mcp" && echo "[PASS] MCP-ondersteuning beschikbaar"
 
 # 4. Controlelogboektest
-tail -5 /var/log/claudient/operations.log | grep -q "timestamp" && echo "[PASS] Controlelogboeking actief"
+tail -5 /var/log/uitkit/operations.log | grep -q "timestamp" && echo "[PASS] Controlelogboeking actief"
 
 # 5. Claude Code testen met air-gap-instellingen
 export DISABLE_EXTERNAL_MCP=true
@@ -538,10 +538,10 @@ Onderzoeksprocedure:
 
 ```bash
 # Zoek de overtredende bewerking
-grep "external_calls_attempted.*> 0" /var/log/claudient/operations.log | head -1
+grep "external_calls_attempted.*> 0" /var/log/uitkit/operations.log | head -1
 
 # Identificeer de opdracht
-grep -B5 "external_calls_attempted" /var/log/claudient/operations.log | grep "command"
+grep -B5 "external_calls_attempted" /var/log/uitkit/operations.log | grep "command"
 
 # Controleer of MCP-server geen externe oproep heeft geprobeerd
 journalctl -u mcp-server --since "1 hour ago" | grep -i "connect\|http"

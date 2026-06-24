@@ -1,6 +1,6 @@
-# Claudient TypeScript SDK
+# UitKit TypeScript SDK
 
-Type-safe TypeScript client library for Claudient with async/await support, comprehensive error handling, automatic retry logic, and timeouts.
+Type-safe TypeScript client library for UitKit with async/await support, comprehensive error handling, automatic retry logic, and timeouts.
 
 ## Features
 
@@ -15,18 +15,18 @@ Type-safe TypeScript client library for Claudient with async/await support, comp
 ## Installation
 
 ```bash
-npm install claudient-sdk
+npm install uitkit-sdk
 # or
-yarn add claudient-sdk
+yarn add uitkit-sdk
 ```
 
 ## Quick Start
 
 ```typescript
-import { ClaudientClient } from "claudient-sdk";
+import { UitKitClient } from "uitkit-sdk";
 
-const client = new ClaudientClient({
-  baseUrl: "https://api.claudient.dev",
+const client = new UitKitClient({
+  baseUrl: "https://api.uitkit.dev",
   timeout: 30000,
   maxRetries: 3,
 });
@@ -50,14 +50,14 @@ const plugin = await client.plugins.load({
 
 ```typescript
 interface ClientConfig {
-  baseUrl?: string;        // Default: "https://api.claudient.dev"
+  baseUrl?: string;        // Default: "https://api.uitkit.dev"
   timeout?: number;        // Default: 30000ms
   maxRetries?: number;     // Default: 3
   retryDelayMs?: number;   // Default: 1000ms
-  apiKey?: string;         // Default: process.env.CLAUDIENT_API_KEY
+  apiKey?: string;         // Default: process.env.UITKIT_API_KEY
 }
 
-const client = new ClaudientClient({
+const client = new UitKitClient({
   baseUrl: "https://custom-api.example.com",
   timeout: 60000,
   maxRetries: 5,
@@ -68,7 +68,7 @@ const client = new ClaudientClient({
 
 ## Skills Client
 
-The Skills client provides search and discovery of Claudient skills.
+The Skills client provides search and discovery of UitKit skills.
 
 ### Search Skills
 
@@ -279,12 +279,12 @@ The SDK provides custom error classes for different failure scenarios.
 
 ```typescript
 import {
-  ClaudientError,
+  UitKitError,
   TimeoutError,
   RetryExhaustedError,
   NotFoundError,
   ValidationError,
-} from "claudient-sdk";
+} from "uitkit-sdk";
 
 try {
   const skill = await client.skills.get("nonexistent");
@@ -298,7 +298,7 @@ try {
   } else if (err instanceof RetryExhaustedError) {
     console.error(`Failed after ${err.attempts} attempts`);
     console.error(`Last error: ${err.lastError.message}`);
-  } else if (err instanceof ClaudientError) {
+  } else if (err instanceof UitKitError) {
     console.error(`API Error [${err.code}]: ${err.message}`);
     console.error(`Status: ${err.statusCode}`);
   }
@@ -386,7 +386,7 @@ const skill = await client.skills.get("fastapi-crud", {
 ```typescript
 const healthy = await client.healthCheck();
 if (!healthy) {
-  console.error("Claudient API is unavailable");
+  console.error("UitKit API is unavailable");
 }
 ```
 
@@ -502,17 +502,17 @@ const response: AgentSpawnResponse = await client.agents.spawn(request);
 
 ```bash
 # Set default API key
-export CLAUDIENT_API_KEY="sk-xyz123"
+export UITKIT_API_KEY="sk-xyz123"
 
 # The SDK will use it automatically
-const client = new ClaudientClient();
+const client = new UitKitClient();
 ```
 
 ## Best Practices
 
 1. **Reuse Client Instance**: Create one client per application
    ```typescript
-   const client = new ClaudientClient();
+   const client = new UitKitClient();
    // Use throughout your app
    ```
 
@@ -551,10 +551,10 @@ const client = new ClaudientClient();
 
 ## License
 
-This SDK is part of Claudient and follows the same license: AGPL-3.0-or-later AND CC-BY-SA-4.0
+This SDK is part of UitKit and follows the same license: AGPL-3.0-or-later AND CC-BY-SA-4.0
 
 ## Support
 
 For issues, questions, or contributions:
-- GitHub: https://github.com/UitbreidenOS/Claudient
-- Docs: https://claudient.dev
+- GitHub: https://github.com/UitbreidenOS/UitKit
+- Docs: https://uitkit.dev

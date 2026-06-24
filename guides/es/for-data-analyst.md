@@ -18,18 +18,18 @@ Eres un analista de datos o analista de BI integrado en un equipo de negocio, pr
 
 ```bash
 # Instalar habilidades de analista de datos
-npx claudient add skill data-ml/sql
-npx claudient add skill data-ml/pandas-polars
-npx claudient add skill data-ml/dbt-data-pipelines
-npx claudient add skill data-ml/dashboard-narrator
-npx claudient add skill data-ml/stakeholder-report
-npx claudient add skill data-ml/data-quality-checker
-npx claudient add skill product/product-analytics
-npx claudient add skill marketing/analytics-tracking
+npx uitkit add skill data-ml/sql
+npx uitkit add skill data-ml/pandas-polars
+npx uitkit add skill data-ml/dbt-data-pipelines
+npx uitkit add skill data-ml/dashboard-narrator
+npx uitkit add skill data-ml/stakeholder-report
+npx uitkit add skill data-ml/data-quality-checker
+npx uitkit add skill product/product-analytics
+npx uitkit add skill marketing/analytics-tracking
 
 # Instalar agentes relevantes
-npx claudient add agent roles/data-pipeline-architect
-npx claudient add agent roles/quant-analyst
+npx uitkit add agent roles/data-pipeline-architect
+npx uitkit add agent roles/quant-analyst
 ```
 
 ---
@@ -193,7 +193,7 @@ Genera: el SQL del modelo, schema.yml con tests y documentación.
 ## Plan de 30 días (analista nuevo o stack nuevo)
 
 ### Semana 1 — Dominio de SQL en tu nuevo esquema
-- Instala todas las habilidades de datos: `npx claudient add skill data-ml/[nombre]`
+- Instala todas las habilidades de datos: `npx uitkit add skill data-ml/[nombre]`
 - Documenta tus tablas clave en un CLAUDE.md en tu repositorio de analítica — Claude lo lee para contexto
 - Usa `/sql` para escribir 10 consultas que respondan preguntas comunes de negocio — construye tu biblioteca de consultas
 - Ejecuta `/data-quality-checker` en tus 3 tablas de producción más importantes — comprende tu base de referencia de salud de datos

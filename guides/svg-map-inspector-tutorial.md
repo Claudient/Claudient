@@ -32,10 +32,10 @@ First, generate an architectural map from your codebase:
 
 ```bash
 # Install prophet.js globally or run via npx
-npx @claudient/prophet --output architecture.svg --format svg
+npx @uitkit/prophet --output architecture.svg --format svg
 
 # Or with options for filtering
-npx @claudient/prophet \
+npx @uitkit/prophet \
   --output architecture.svg \
   --format svg \
   --max-depth 3 \
@@ -1102,7 +1102,7 @@ searchNodes(query) {
 
 1. **Generate the map**
    ```bash
-   npx @claudient/prophet showcase/ --output showcase-map.svg --include-circular
+   npx @uitkit/prophet showcase/ --output showcase-map.svg --include-circular
    ```
 
 2. **Load into inspector**

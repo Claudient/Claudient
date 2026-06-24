@@ -18,18 +18,18 @@ You are a data analyst or BI analyst embedded in a business, product, or marketi
 
 ```bash
 # Install data analyst skills
-npx claudient add skill data-ml/sql
-npx claudient add skill data-ml/pandas-polars
-npx claudient add skill data-ml/dbt-data-pipelines
-npx claudient add skill data-ml/dashboard-narrator
-npx claudient add skill data-ml/stakeholder-report
-npx claudient add skill data-ml/data-quality-checker
-npx claudient add skill product/product-analytics
-npx claudient add skill marketing/analytics-tracking
+npx uitkit add skill data-ml/sql
+npx uitkit add skill data-ml/pandas-polars
+npx uitkit add skill data-ml/dbt-data-pipelines
+npx uitkit add skill data-ml/dashboard-narrator
+npx uitkit add skill data-ml/stakeholder-report
+npx uitkit add skill data-ml/data-quality-checker
+npx uitkit add skill product/product-analytics
+npx uitkit add skill marketing/analytics-tracking
 
 # Install relevant agents
-npx claudient add agent roles/data-pipeline-architect
-npx claudient add agent roles/quant-analyst
+npx uitkit add agent roles/data-pipeline-architect
+npx uitkit add agent roles/quant-analyst
 ```
 
 ---
@@ -193,7 +193,7 @@ Generate: the model SQL, schema.yml with tests, and documentation.
 ## 30-day ramp plan (new data analyst or new stack)
 
 ### Week 1 — SQL mastery in your new schema
-- Install all data skills: `npx claudient add skill data-ml/[name]`
+- Install all data skills: `npx uitkit add skill data-ml/[name]`
 - Document your key tables in a CLAUDE.md in your analytics repo — Claude reads this for context
 - Use `/sql` to write 10 queries that answer common business questions — build your query library
 - Run `/data-quality-checker` on your 3 most important production tables — understand your data health baseline

@@ -243,7 +243,7 @@ update-dns \
 
 # Fase 5: Services starten en valideren (10 min)
 echo "Fase 5: Services starten..."
-systemctl start claudient-app
+systemctl start uitkit-app
 sleep 30
 
 # Fase 6: Rook-tests uitvoeren

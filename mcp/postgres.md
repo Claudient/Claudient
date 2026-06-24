@@ -44,4 +44,4 @@ Connects Claude Code to PostgreSQL databases for direct querying, schema inspect
 
 ---
 
-Built with [Claudient](https://github.com/UitbreidenOS/Claudient) · [Claude Code](https://claude.com/claude-code)
+Built with [UitKit](https://github.com/UitbreidenOS/UitKit) · [Claude Code](https://claude.com/claude-code)

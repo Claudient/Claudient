@@ -1,6 +1,6 @@
 # Load Tests Directory
 
-Comprehensive load testing suite for Claudient multi-agent sandbox system.
+Comprehensive load testing suite for UitKit multi-agent sandbox system.
 
 ## Files Overview
 
@@ -68,7 +68,7 @@ node swarm-sandbox-load.js [--scenarios=all|init|run|cleanup|exhaustion] [--repo
 ### Run All Tests
 
 ```bash
-cd /Users/tushar/Desktop/Claudient
+cd /Users/tushar/Desktop/UitKit
 node load-tests/swarm-sandbox-load.js --scenarios=all --report=json
 ```
 
@@ -366,7 +366,7 @@ Solution:
 
 ## Related Resources
 
-- `scripts/claudient-swarm-sandbox.js` — Sandbox CLI
+- `scripts/uitkit-swarm-sandbox.js` — Sandbox CLI
 - `FAQ_SWARM_SANDBOX.md` — Architecture FAQ
 - `COMPLIANCE_CHECKLIST.md` — System requirements
 - `COMPARE.md` — Feature comparison
@@ -385,4 +385,4 @@ For issues or questions:
 
 **Last Updated**: 2026-06-22
 **Version**: 1.0.0
-**Maintainer**: Claudient Development Team
+**Maintainer**: UitKit Development Team

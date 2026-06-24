@@ -64,7 +64,7 @@ const response = await anthropic.messages.create({
 **Besparing:** 50–65% op taaktypen hieronder versus ze op Sonnet uit te voeren.
 
 **Haiku gebruiken voor:**
-- Vertalingen (taal lokalisering — zie Claudients vertalingspijplijn)
+- Vertalingen (taal lokalisering — zie UitKits vertalingspijplijn)
 - Een taak of routering naar specialist classificeren
 - Gestructureerde gegevens extraheren uit tekst (JSON uit ongestructureerde inhoud)
 - Eenvoudige herformattering (markdown → HTML, JSON → CSV)

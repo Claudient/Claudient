@@ -1,17 +1,17 @@
 # Security Policy
 
-Claudient takes security seriously. This document outlines our responsible disclosure process, vulnerability reporting mechanisms, patch timelines, and known security issues.
+UitKit takes security seriously. This document outlines our responsible disclosure process, vulnerability reporting mechanisms, patch timelines, and known security issues.
 
 ---
 
 ## Reporting a Security Vulnerability
 
-If you discover a security vulnerability in Claudient, please **do not** open a public GitHub issue. Instead, report it responsibly to our security team.
+If you discover a security vulnerability in UitKit, please **do not** open a public GitHub issue. Instead, report it responsibly to our security team.
 
 ### Reporting Methods
 
 **Option 1: GitHub Security Advisory (Recommended)**
-- Navigate to [UitbreidenOS/Claudient Security Advisory](https://github.com/UitbreidenOS/Claudient/security/advisories/new)
+- Navigate to [UitbreidenOS/UitKit Security Advisory](https://github.com/UitbreidenOS/UitKit/security/advisories/new)
 - Fill out the vulnerability form with:
   - **Title**: Brief, non-specific description (e.g., "Potential credential exposure in configuration parsing")
   - **Description**: Detailed explanation, affected versions, CVSS score (if known)
@@ -21,12 +21,12 @@ If you discover a security vulnerability in Claudient, please **do not** open a 
   - **Suggested fix**: Your proposed patch (optional)
 
 **Option 2: Email**
-- Contact: `security@claudient.dev` (primary) or `security@uitbreiden.com` (fallback)
+- Contact: `security@uitkit.dev` (primary) or `security@uitbreiden.com` (fallback)
 - Include subject line: `[SECURITY] Vulnerability Report: <brief title>`
 - Use PGP if available (public key: [link to GPG key, if available])
 
 **Option 3: Slack (Private Workspace)**
-- If you have access to the Claudient private Slack, message `@security-team` directly
+- If you have access to the UitKit private Slack, message `@security-team` directly
 
 ### Reporting Guidelines
 
@@ -62,10 +62,10 @@ Upon receipt of a vulnerability report:
 
 | Role | Contact | Availability |
 |---|---|---|
-| **Security Lead** | `security@claudient.dev` | Primary contact; responds within 24 hours |
+| **Security Lead** | `security@uitkit.dev` | Primary contact; responds within 24 hours |
 | **Fallback Contact** | `security@uitbreiden.com` | Escalation; 48-hour response |
-| **GitHub Security** | [Private advisory form](https://github.com/UitbreidenOS/Claudient/security/advisories/new) | Integrated GitHub alert system |
-| **Public Disclosure** | [GitHub Security Advisories](https://github.com/UitbreidenOS/Claudient/security/advisories) | Published advisories appear here |
+| **GitHub Security** | [Private advisory form](https://github.com/UitbreidenOS/UitKit/security/advisories/new) | Integrated GitHub alert system |
+| **Public Disclosure** | [GitHub Security Advisories](https://github.com/UitbreidenOS/UitKit/security/advisories) | Published advisories appear here |
 
 ---
 
@@ -73,19 +73,19 @@ Upon receipt of a vulnerability report:
 
 ### Active Issues
 
-**None currently disclosed.** Check the [GitHub Security Advisories](https://github.com/UitbreidenOS/Claudient/security/advisories) page for the authoritative list.
+**None currently disclosed.** Check the [GitHub Security Advisories](https://github.com/UitbreidenOS/UitKit/security/advisories) page for the authoritative list.
 
 ### Historical Issues
 
-All resolved security issues are published in the [Security Advisories](https://github.com/UitbreidenOS/Claudient/security/advisories) archive after the embargo period expires.
+All resolved security issues are published in the [Security Advisories](https://github.com/UitbreidenOS/UitKit/security/advisories) archive after the embargo period expires.
 
 ---
 
-## Security in Claudient
+## Security in UitKit
 
-### What Claudient Covers
+### What UitKit Covers
 
-Claudient is a **knowledge system** — skills, agents, hooks, prompts, workflows, and documentation for Claude Code. Security considerations include:
+UitKit is a **knowledge system** — skills, agents, hooks, prompts, workflows, and documentation for Claude Code. Security considerations include:
 
 1. **Prompt Injection Prevention** — guides on safely passing user input to Claude
 2. **Credential Management** — best practices for MCP server auth, API key handling
@@ -94,11 +94,11 @@ Claudient is a **knowledge system** — skills, agents, hooks, prompts, workflow
 5. **Infrastructure Security** — cloud security skills for AWS, GCP, Azure, Kubernetes
 6. **Access Control** — role-based permission models in hooks and agents
 
-### What Claudient Does NOT Cover
+### What UitKit Does NOT Cover
 
-- Claudient does **not** provide runtime security for your applications — it is documentation and configuration
-- Security vulnerabilities in your codebase are **not** Claudient's responsibility (but our guides help you find them)
-- Vulnerabilities in third-party tools, MCP servers, or dependencies are **not** Claudient's responsibility (report to the upstream project)
+- UitKit does **not** provide runtime security for your applications — it is documentation and configuration
+- Security vulnerabilities in your codebase are **not** UitKit's responsibility (but our guides help you find them)
+- Vulnerabilities in third-party tools, MCP servers, or dependencies are **not** UitKit's responsibility (report to the upstream project)
 - Claude Code runtime or API security is Anthropic's responsibility — report to [Anthropic's security team](https://www.anthropic.com/security)
 
 ---
@@ -107,7 +107,7 @@ Claudient is a **knowledge system** — skills, agents, hooks, prompts, workflow
 
 ### Dependency Updates
 
-Claudient is maintained with:
+UitKit is maintained with:
 - **npm dependencies** locked in `package-lock.json`
 - **Regular audits** via `npm audit` and dependabot (GitHub Actions)
 - **Patch automation** — security patches applied within 48 hours of disclosure
@@ -121,15 +121,15 @@ If you find a security issue in a **dependency**, **MCP server**, or **Claude Co
 2. **MCP Server** → Report to the MCP server's repository
 3. **Claude Code** → Report to Anthropic: https://www.anthropic.com/security
 
-Do **not** report third-party vulnerabilities to Claudient unless we actively bundle a vulnerable version and fail to patch within our timeline.
+Do **not** report third-party vulnerabilities to UitKit unless we actively bundle a vulnerable version and fail to patch within our timeline.
 
 ---
 
 ## Best Practices for Users
 
-### Securing Your Claudient Installation
+### Securing Your UitKit Installation
 
-1. **Keep Claudient updated** — run `npm update claudient` regularly
+1. **Keep UitKit updated** — run `npm update uitkit` regularly
 2. **Audit your skills** — review third-party skill code before trusting it
 3. **MCP server trust** — only connect to MCP servers you control or trust
 4. **Credential handling** — never hardcode API keys; use `.env` files and `.gitignore`
@@ -152,7 +152,7 @@ This template disables dangerous features by default:
 
 ### Running Security Audits
 
-Claudient includes security audit skills and workflows:
+UitKit includes security audit skills and workflows:
 
 ```bash
 /security-audit          # Scan your codebase for common vulns
@@ -166,7 +166,7 @@ Claudient includes security audit skills and workflows:
 
 ### Contribution Guidelines
 
-If you submit code (hooks, scripts, prompts) to Claudient:
+If you submit code (hooks, scripts, prompts) to UitKit:
 
 1. **No secrets** — do not commit API keys, passwords, or tokens
 2. **Input validation** — sanitize user input; never trust shell arguments
@@ -187,7 +187,7 @@ All PRs undergo security review for:
 
 ## Compliance & Standards
 
-Claudient adheres to:
+UitKit adheres to:
 
 - **OWASP Top 10** — guides cover injection, auth failures, sensitive data exposure
 - **CWE Top 25** — documentation references Common Weakness Enumeration
@@ -217,9 +217,9 @@ In return, we commit to:
 
 ## Legal Disclaimer
 
-Claudient is provided **as-is** under the terms of its [LICENSE](LICENSE) and [LICENSE-CODE](LICENSE-CODE). We make no warranty regarding security or fitness for a particular purpose. Users are responsible for:
+UitKit is provided **as-is** under the terms of its [LICENSE](LICENSE) and [LICENSE-CODE](LICENSE-CODE). We make no warranty regarding security or fitness for a particular purpose. Users are responsible for:
 
-- Reviewing Claudient content for their specific use case
+- Reviewing UitKit content for their specific use case
 - Assessing security implications of skills, hooks, and agents they deploy
 - Maintaining their own security audit and testing processes
 - Reporting vulnerabilities responsibly to upstream projects
@@ -229,15 +229,15 @@ Claudient is provided **as-is** under the terms of its [LICENSE](LICENSE) and [L
 ## Historical Security Advisories
 
 All published advisories are archived at:
-**[github.com/UitbreidenOS/Claudient/security/advisories](https://github.com/UitbreidenOS/Claudient/security/advisories)**
+**[github.com/UitbreidenOS/UitKit/security/advisories](https://github.com/UitbreidenOS/UitKit/security/advisories)**
 
 ---
 
 ## Questions?
 
-- **Security questions** → `security@claudient.dev`
-- **General support** → [GitHub Discussions](https://github.com/UitbreidenOS/Claudient/discussions)
-- **Bug reports** → [GitHub Issues](https://github.com/UitbreidenOS/Claudient/issues)
+- **Security questions** → `security@uitkit.dev`
+- **General support** → [GitHub Discussions](https://github.com/UitbreidenOS/UitKit/discussions)
+- **Bug reports** → [GitHub Issues](https://github.com/UitbreidenOS/UitKit/issues)
 - **Community** → [Reddit r/uitbreiden](https://www.reddit.com/r/uitbreiden/)
 
 ---

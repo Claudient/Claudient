@@ -193,15 +193,15 @@ touch docs/service-catalog.md docs/slo-registry.md docs/disaster-recovery.md
 touch docs/architecture/system-overview.md docs/architecture/network-topology.md
 
 # Install skills
-npx claudient add skill devops-infra/oncall-runbook
-npx claudient add skill devops-infra/capacity-planner
-npx claudient add skill devops-infra/observability-designer
-npx claudient add skill devops-infra/slo-architect
-npx claudient add skill devops-infra/chaos-engineering
-npx claudient add skill devops-infra/terraform
-npx claudient add skill devops-infra/kubernetes
-npx claudient add skill devops-infra/cicd
-npx claudient add skill devops-infra/aws-architect
+npx uitkit add skill devops-infra/oncall-runbook
+npx uitkit add skill devops-infra/capacity-planner
+npx uitkit add skill devops-infra/observability-designer
+npx uitkit add skill devops-infra/slo-architect
+npx uitkit add skill devops-infra/chaos-engineering
+npx uitkit add skill devops-infra/terraform
+npx uitkit add skill devops-infra/kubernetes
+npx uitkit add skill devops-infra/cicd
+npx uitkit add skill devops-infra/aws-architect
 
 # Copy installed skills as workspace commands
 cp ~/.claude/skills/devops-infra/oncall-runbook.md .claude/commands/runbook-new.md
@@ -375,15 +375,15 @@ correctness matter more than speed.
 ## Skills to install
 
 ```bash
-npx claudient add skill devops-infra/oncall-runbook
-npx claudient add skill devops-infra/capacity-planner
-npx claudient add skill devops-infra/observability-designer
-npx claudient add skill devops-infra/slo-architect
-npx claudient add skill devops-infra/chaos-engineering
-npx claudient add skill devops-infra/terraform
-npx claudient add skill devops-infra/kubernetes
-npx claudient add skill devops-infra/cicd
-npx claudient add skill devops-infra/aws-architect
+npx uitkit add skill devops-infra/oncall-runbook
+npx uitkit add skill devops-infra/capacity-planner
+npx uitkit add skill devops-infra/observability-designer
+npx uitkit add skill devops-infra/slo-architect
+npx uitkit add skill devops-infra/chaos-engineering
+npx uitkit add skill devops-infra/terraform
+npx uitkit add skill devops-infra/kubernetes
+npx uitkit add skill devops-infra/cicd
+npx uitkit add skill devops-infra/aws-architect
 ```
 
 ## Related

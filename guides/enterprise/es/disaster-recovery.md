@@ -243,7 +243,7 @@ update-dns \
 
 # Fase 5: Iniciar servicios y validar (10 min)
 echo "Fase 5: Iniciando servicios..."
-systemctl start claudient-app
+systemctl start uitkit-app
 sleep 30
 
 # Fase 6: Ejecutar pruebas de humo

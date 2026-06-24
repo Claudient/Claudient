@@ -23,7 +23,7 @@ Technische Mitgründer oder erste Engineering-Angestellte bei Seed-to-Series A S
 
 **Standard-Trade-offs:** Managed Services gegenüber Self-Hosted bevorzugen. Langweilige Technologie für Kernsysteme bevorzugen. Kurzfristige Kopplung akzeptieren, wenn sie das Ausliefern ermöglicht.
 
-## Empfohlene Claudient-Skills & Agents
+## Empfohlene UitKit-Skills & Agents
 - `devops-infra` — für Cloud-Architektur, CI/CD und Infra-Entscheidungen
 - `ai-engineering` — beim Hinzufügen von KI-Funktionen zum Produkt
 - `backend` — API-Design, Auth, Datenbankmodellierung

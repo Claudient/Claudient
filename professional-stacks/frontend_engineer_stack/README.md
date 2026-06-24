@@ -41,4 +41,4 @@ This stack provides tools for:
 
 ---
 
-Built with [Claudient](https://github.com/Claudients/Claudient)
+Built with [UitKit](https://github.com/UitKits/UitKit)

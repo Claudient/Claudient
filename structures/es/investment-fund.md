@@ -249,17 +249,17 @@ touch investment-fund/portfolio/_template/capital-plan/.gitkeep
 touch investment-fund/portfolio/_template/exit-thesis/.gitkeep
 
 # Instalar habilidades de operaciones del fondo
-npx claudient add skill finance/deal-screening
-npx claudient add skill finance/ic-memo
-npx claudient add skill finance/diligence-synthesis
-npx claudient add skill finance/portfolio-monitor
-npx claudient add skill finance/lp-reporting
-npx claudient add skill finance/cap-table-analysis
-npx claudient add skill finance/market-sizing
-npx claudient add skill finance/comps-analysis
-npx claudient add skill finance/exit-modeling
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/stakeholder-comms
+npx uitkit add skill finance/deal-screening
+npx uitkit add skill finance/ic-memo
+npx uitkit add skill finance/diligence-synthesis
+npx uitkit add skill finance/portfolio-monitor
+npx uitkit add skill finance/lp-reporting
+npx uitkit add skill finance/cap-table-analysis
+npx uitkit add skill finance/market-sizing
+npx uitkit add skill finance/comps-analysis
+npx uitkit add skill finance/exit-modeling
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/stakeholder-comms
 ```
 
 ## Plantilla de CLAUDE.md
@@ -520,25 +520,25 @@ Escenario de retorno objetivo: [escenarios 1x / 3x / 5x / 10x y valoración impl
 
 ```bash
 # Habilidades principales de operaciones del fondo
-npx claudient add skill finance/deal-screening
-npx claudient add skill finance/ic-memo
-npx claudient add skill finance/diligence-synthesis
-npx claudient add skill finance/portfolio-monitor
-npx claudient add skill finance/lp-reporting
-npx claudient add skill finance/cap-table-analysis
-npx claudient add skill finance/market-sizing
-npx claudient add skill finance/comps-analysis
-npx claudient add skill finance/exit-modeling
-npx claudient add skill finance/waterfall-model
+npx uitkit add skill finance/deal-screening
+npx uitkit add skill finance/ic-memo
+npx uitkit add skill finance/diligence-synthesis
+npx uitkit add skill finance/portfolio-monitor
+npx uitkit add skill finance/lp-reporting
+npx uitkit add skill finance/cap-table-analysis
+npx uitkit add skill finance/market-sizing
+npx uitkit add skill finance/comps-analysis
+npx uitkit add skill finance/exit-modeling
+npx uitkit add skill finance/waterfall-model
 
 # Habilidades de productividad y comunicación de apoyo
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/investor-update
-npx claudient add skill data-ml/stakeholder-report
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/investor-update
+npx uitkit add skill data-ml/stakeholder-report
 
 # Instalar todas las habilidades de finanzas a la vez
-npx claudient add skills finance
+npx uitkit add skills finance
 ```
 
 ## Relacionado

@@ -13,7 +13,7 @@ Operations guide for Swarm Sandbox Simulator — sandbox environment for multi-a
 
 ### Installation
 ```bash
-git clone https://github.com/claudient/swarm-sandbox.git
+git clone https://github.com/uitkit/swarm-sandbox.git
 cd swarm-sandbox
 npm install
 ```

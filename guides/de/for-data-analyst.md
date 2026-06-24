@@ -18,18 +18,18 @@ Du bist Data Analyst oder BI Analyst, eingebettet in ein Business-, Produkt- ode
 
 ```bash
 # Data-Analyst-Skills installieren
-npx claudient add skill data-ml/sql
-npx claudient add skill data-ml/pandas-polars
-npx claudient add skill data-ml/dbt-data-pipelines
-npx claudient add skill data-ml/dashboard-narrator
-npx claudient add skill data-ml/stakeholder-report
-npx claudient add skill data-ml/data-quality-checker
-npx claudient add skill product/product-analytics
-npx claudient add skill marketing/analytics-tracking
+npx uitkit add skill data-ml/sql
+npx uitkit add skill data-ml/pandas-polars
+npx uitkit add skill data-ml/dbt-data-pipelines
+npx uitkit add skill data-ml/dashboard-narrator
+npx uitkit add skill data-ml/stakeholder-report
+npx uitkit add skill data-ml/data-quality-checker
+npx uitkit add skill product/product-analytics
+npx uitkit add skill marketing/analytics-tracking
 
 # Relevante Agenten installieren
-npx claudient add agent roles/data-pipeline-architect
-npx claudient add agent roles/quant-analyst
+npx uitkit add agent roles/data-pipeline-architect
+npx uitkit add agent roles/quant-analyst
 ```
 
 ---
@@ -193,7 +193,7 @@ Generieren: das Modell-SQL, schema.yml mit Tests und Dokumentation.
 ## 30-Tage-Einarbeitungsplan (neuer Data Analyst oder neuer Stack)
 
 ### Woche 1 — SQL-Beherrschung im neuen Schema
-- Alle Data-Skills installieren: `npx claudient add skill data-ml/[name]`
+- Alle Data-Skills installieren: `npx uitkit add skill data-ml/[name]`
 - Schlüsseltabellen in einer CLAUDE.md im Analytics-Repo dokumentieren — Claude liest diese für Kontext
 - `/sql` verwenden, um 10 Abfragen für häufige Business-Fragen zu schreiben — Query-Bibliothek aufbauen
 - `/data-quality-checker` für die 3 wichtigsten Produktionstabellen ausführen — Basis-Datenqualitäts-Health verstehen

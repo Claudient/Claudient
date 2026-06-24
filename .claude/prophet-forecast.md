@@ -1,6 +1,6 @@
 # The Prophet: Predictive Outage & Tech Debt Report
 
-Generated: 2026-06-22T10:46:04.670Z | Target Workspace: `/Users/tushar/Desktop/Claudient`
+Generated: 2026-06-22T10:46:04.670Z | Target Workspace: `/Users/tushar/Desktop/UitKit`
 
 This report ranks codebase files by **Outage Risk Score**, which is calculated as:
 $$\text{Risk Score} = \text{Git Churn (last 100 commits)} \times \frac{\text{Line Count}}{100}$$
@@ -20,12 +20,12 @@ $$\text{Risk Score} = \text{Git Churn (last 100 commits)} \times \frac{\text{Lin
 | 9 | `scripts/test-cli.js` | 7 | 226 | **15.82** |
 | 10 | `test/swarm-sandbox.test.js` | 1 | 1313 | **13.13** |
 | 11 | `site/src/components/os/apps/InstallApp.tsx` | 5 | 231 | **11.55** |
-| 12 | `sdk/python/claudient_sdk.py` | 1 | 1124 | **11.24** |
+| 12 | `sdk/python/uitkit_sdk.py` | 1 | 1124 | **11.24** |
 | 13 | `ml/failure-prediction.py` | 2 | 525 | **10.5** |
 | 14 | `test/integration/swarm-matrix-integration.test.js` | 1 | 1037 | **10.37** |
 | 15 | `stress-tests/swarm-sandbox-stress.js` | 1 | 962 | **9.62** |
 | 16 | `site/src/components/os/apps/McpApp.tsx` | 3 | 320 | **9.6** |
-| 17 | `sdk/typescript/claudient-sdk.ts` | 1 | 940 | **9.4** |
+| 17 | `sdk/typescript/uitkit-sdk.ts` | 1 | 940 | **9.4** |
 | 18 | `site/src/components/os/apps/PricingApp.tsx` | 2 | 465 | **9.3** |
 | 19 | `site/src/components/os/MenuBar.tsx` | 9 | 102 | **9.18** |
 | 20 | `profilers/svg-inspector-profiler.js` | 1 | 879 | **8.79** |
@@ -38,20 +38,20 @@ $$\text{Risk Score} = \text{Git Churn (last 100 commits)} \times \frac{\text{Lin
 | 27 | `profilers/swarm-sandbox-profiler.js` | 1 | 816 | **8.16** |
 | 28 | `site/src/components/os/apps/GuidesApp.tsx` | 3 | 267 | **8.01** |
 | 29 | `stress-tests/matrix-theme-stress.js` | 1 | 797 | **7.97** |
-| 30 | `scripts/claudient-svg-inspector.js` | 1 | 797 | **7.97** |
+| 30 | `scripts/uitkit-svg-inspector.js` | 1 | 797 | **7.97** |
 | 31 | `scripts/build-catalog.js` | 3 | 258 | **7.74** |
 | 32 | `site/src/components/os/AppContent.tsx` | 8 | 89 | **7.12** |
 | 33 | `profilers/matrix-theme-profiler.js` | 1 | 671 | **6.71** |
 | 34 | `middleware/svg-inspector-health-check.js` | 1 | 659 | **6.59** |
 | 35 | `lib/task-executor.js` | 1 | 625 | **6.25** |
 | 36 | `test/regression/backward-compatibility.test.js` | 1 | 614 | **6.14** |
-| 37 | `scripts/claudient-swarm-sandbox.js` | 1 | 608 | **6.08** |
+| 37 | `scripts/uitkit-swarm-sandbox.js` | 1 | 608 | **6.08** |
 | 38 | `load-tests/svg-inspector-stress.js` | 1 | 597 | **5.97** |
 | 39 | `scripts/dont-stop-engine.js` | 1 | 596 | **5.96** |
-| 40 | `scripts/claudient-dont-stop.js` | 1 | 582 | **5.82** |
+| 40 | `scripts/uitkit-dont-stop.js` | 1 | 582 | **5.82** |
 | 41 | `benchmarks/svg-inspector-benchmark.js` | 1 | 579 | **5.79** |
 | 42 | `benchmarks/swarm-sandbox-benchmark.js` | 1 | 578 | **5.78** |
-| 43 | `scripts/claudient-matrix.js` | 1 | 576 | **5.76** |
+| 43 | `scripts/uitkit-matrix.js` | 1 | 576 | **5.76** |
 | 44 | `lib/progress-tracker.js` | 1 | 573 | **5.73** |
 | 45 | `test/features/validate-features.js` | 2 | 283 | **5.66** |
 | 46 | `lib/task-optimizer.test.js` | 1 | 566 | **5.66** |
@@ -137,7 +137,7 @@ $$\text{Risk Score} = \text{Git Churn (last 100 commits)} \times \frac{\text{Lin
 | 126 | `scripts/nightshift.js` | 1 | 160 | **1.6** |
 | 127 | `scripts/validate-stacks.js` | 1 | 156 | **1.56** |
 | 128 | `scripts/enforce.js` | 1 | 148 | **1.48** |
-| 129 | `site/src/components/os/ClaudientOS.tsx` | 2 | 73 | **1.46** |
+| 129 | `site/src/components/os/UitKitOS.tsx` | 2 | 73 | **1.46** |
 | 130 | `scripts/sentinel.js` | 1 | 145 | **1.45** |
 | 131 | `scripts/prophet.js` | 1 | 144 | **1.44** |
 | 132 | `scripts/jit.js` | 1 | 143 | **1.43** |

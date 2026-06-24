@@ -57,14 +57,14 @@ function restoreCheckpoint() {
 
   if (!fs.existsSync(checkpointPath)) {
     console.error(`\n❌ Error: No checkpoint found at .claude/checkpoint.json`)
-    console.error(`Run 'npx claudient checkpoint "task summary"' to create one.\n`)
+    console.error(`Run 'npx uitkit checkpoint "task summary"' to create one.\n`)
     process.exit(1)
   }
 
   try {
     const checkpoint = JSON.parse(fs.readFileSync(checkpointPath, 'utf-8'))
     
-    let report = `\n🔄 CLAUDIENT CHECKPOINT RESTORE REPORT\n`
+    let report = `\n🔄 UITKIT CHECKPOINT RESTORE REPORT\n`
     report += `━`.repeat(60) + `\n`
     report += `Saved At:        ${checkpoint.timestamp}\n`
     report += `Working Dir:     ${checkpoint.cwd}\n`

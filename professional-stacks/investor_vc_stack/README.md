@@ -160,4 +160,4 @@ Continuous monitoring of existing portfolio companies. Track funding announcemen
 
 ---
 
-Built by [tushar2704](https://uitbreiden.com/) · [Claudient](https://github.com/Claudients/Claudient) · [Claude Code](https://claude.com/claude-code)
+Built by [tushar2704](https://uitbreiden.com/) · [UitKit](https://github.com/UitKits/UitKit) · [Claude Code](https://claude.com/claude-code)

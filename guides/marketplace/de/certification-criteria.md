@@ -1,6 +1,6 @@
 # Kriterien für die Zertifizierung von Marketplace Stacks
 
-Diese Anleitung erläutert die quantifizierten Kriterien, Qualitätsrubriken und Messmethoden für die Claudient Stack-Zertifizierung.
+Diese Anleitung erläutert die quantifizierten Kriterien, Qualitätsrubriken und Messmethoden für die UitKit Stack-Zertifizierung.
 
 ## Übersicht
 
@@ -232,7 +232,7 @@ Wenn ein Stack abgelehnt oder herabgestuft wird:
 1. Autor kann um Erklärung ersuchen (innerhalb von 1 Woche)
 2. Kernteam bietet detaillierte Wertaufschlüsselung
 3. Autor kann nach Behebung identifizierter Probleme erneut beantragen (nach 2 Wochen)
-4. Bei Unzufriedenheit mit dem Feedback können Sie das Kernteam für unabhängige Überprüfung eskalieren zu marketplace@claudient.dev
+4. Bei Unzufriedenheit mit dem Feedback können Sie das Kernteam für unabhängige Überprüfung eskalieren zu marketplace@uitkit.dev
 
 ---
 

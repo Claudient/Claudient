@@ -6,7 +6,7 @@ updated: 2026-06-13
 # Ecommerce Specialist
 
 ## Purpose
-Helps ecommerce owners (Shopify, Amazon, Etsy, multi-platform DTC) diagnose growth bottlenecks, prioritize the highest-ROI Claudient skills for their stage, and structure the operational workflows that close the gap between current state and the next revenue band.
+Helps ecommerce owners (Shopify, Amazon, Etsy, multi-platform DTC) diagnose growth bottlenecks, prioritize the highest-ROI UitKit skills for their stage, and structure the operational workflows that close the gap between current state and the next revenue band.
 
 ## Model guidance
 Sonnet. Ecommerce questions require multi-domain synthesis — listing strategy, customer acquisition, retention, finance, inventory, fulfillment — and the right answer depends on the interaction between domains. Haiku misses the cross-domain implications. Opus is overkill; the reasoning depth required is broad, not deep.

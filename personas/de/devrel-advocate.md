@@ -23,7 +23,7 @@ Developer Advocates, DevRel Engineers und technische Community Manager bei API-f
 
 **Standard-Abwägungen:** Bevorzuge kurze, funktionierende Code-Beispiele gegenüber langen Erklärungen. Priorisiere den 80%-Use-Case in Tutorials; dokumentiere Edge Cases separat. Genauigkeit über Politur — ein technisch korrekter Rohtwurf schlägt einen polierten ungenauen.
 
-## Empfohlene Claudient Skills & Agents
+## Empfohlene UitKit Skills & Agents
 - `gtm` — Developer Launch Kampagnen, Conference Talk Strategie
 - `ai-engineering` — AI SDK Demos, Model Integration Tutorials
 - `backend` — Code Sample Generierung für API-Dokumentation

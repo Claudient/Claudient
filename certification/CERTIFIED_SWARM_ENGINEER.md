@@ -4,7 +4,7 @@
 
 The Certified Swarm Engineer (CSE) program validates expertise in orchestrating, deploying, and managing Claude Code swarms in production environments. This certification demonstrates mastery of multi-agent architecture, distributed prompt engineering, and enterprise-scale orchestration patterns.
 
-**Certification Body:** Claudient Core  
+**Certification Body:** UitKit Core  
 **Valid Duration:** 24 months (renewable)  
 **Program Status:** General Availability
 
@@ -81,14 +81,14 @@ The Certified Swarm Engineer (CSE) program validates expertise in orchestrating,
 
 **Approval Process:**
 - Submit evidence package (GitHub repo, metrics, documentation)
-- Review by two Claudient-approved mentors
+- Review by two UitKit-approved mentors
 - Mentors sign off on readiness
 
 ### Exam: Swarm Architect Practicum
 
 **Format:** Open-book, hands-on practical  
 **Duration:** 8 hours (can be split across 2 days)  
-**Environment:** Candidate's own workstation + cloud sandbox provided by Claudient
+**Environment:** Candidate's own workstation + cloud sandbox provided by UitKit
 
 #### Scenario
 Candidates receive:
@@ -194,7 +194,7 @@ Candidates receive:
 
 **Approval Process:**
 - Submit operations portfolio (Kubernetes manifests, Terraform/CloudFormation, dashboards, runbooks)
-- Present findings in 1-hour synchronous review with two Claudient mentors
+- Present findings in 1-hour synchronous review with two UitKit mentors
 - Mentors verify production experience and operational maturity
 
 ### Exam: Production Incident Response Simulation
@@ -317,7 +317,7 @@ Candidates are given:
 
 **Approval Process:**
 - Submit strategic portfolio (strategy documents, adoption results, cost/benefit analysis, testimonials)
-- Present findings in 90-minute presentation to panel of 3 senior Claudient mentors + CSE board member
+- Present findings in 90-minute presentation to panel of 3 senior UitKit mentors + CSE board member
 - Defense-style Q&A on business impact, technical tradeoffs, and lessons learned
 - Panel signs off on strategic maturity and organizational impact
 
@@ -366,9 +366,9 @@ Candidates receive a simulated enterprise scenario:
 - Digital badge (highest tier, gold)
 - Certificate of completion
 - Listing in CSE Leadership Registry
-- Eligibility for Claudient Advisory Board
+- Eligibility for UitKit Advisory Board
 - Invitation to annual CSE Leadership Summit
-- Possible speaking opportunities at Claudient events
+- Possible speaking opportunities at UitKit events
 - Access to exclusive enterprise support and strategic consulting
 
 ---
@@ -398,7 +398,7 @@ Candidates receive a simulated enterprise scenario:
   - Monthly architecture reviews (quarterly deep-dives)
   - Strategic consulting (quarterly planning sessions)
   - Custom training for team
-  - Direct access to Claudient engineers
+  - Direct access to UitKit engineers
   - SLA: 99.5% uptime guarantee
 
 ### Tier 4: Strategic Partnership
@@ -411,7 +411,7 @@ Candidates receive a simulated enterprise scenario:
   - Custom roadmap alignment
   - Joint go-to-market opportunities
   - Advisory board seat (optional)
-  - Beta access to new Claudient features
+  - Beta access to new UitKit features
   - Vendor co-marketing rights
 
 ---
@@ -443,7 +443,7 @@ Revocation period: 12–24 months before reapplication eligibility.
 ## Program Governance
 
 ### Certification Board
-- 5 members: Claudient core engineers, community leaders, enterprise customers
+- 5 members: UitKit core engineers, community leaders, enterprise customers
 - Meets quarterly to review exam standards, approval criteria, and program health
 - Publishes annual state-of-certification report
 
@@ -477,29 +477,29 @@ Revocation period: 12–24 months before reapplication eligibility.
   - Issue date and expiration date
   - Verification URL
 - Can be embedded in resumes, LinkedIn, websites
-- Verification via Claudient badge portal
+- Verification via UitKit badge portal
 
 ---
 
 ## FAQ
 
 **Q: How much does the certification program cost?**  
-A: Level 1 workshop (~$800), Level 2 workshop (~$1,200), Level 3 workshop (~$2,000). Exams are free. Mentor/review fees (if self-organized) vary. Claudient-run cohorts include exam.
+A: Level 1 workshop (~$800), Level 2 workshop (~$1,200), Level 3 workshop (~$2,000). Exams are free. Mentor/review fees (if self-organized) vary. UitKit-run cohorts include exam.
 
 **Q: Can I skip levels?**  
-A: No. Levels are sequential prerequisites. However, experienced practitioners may be able to test out of Level 1 (contact program@claudient.ai).
+A: No. Levels are sequential prerequisites. However, experienced practitioners may be able to test out of Level 1 (contact program@uitkit.ai).
 
 **Q: What if I fail an exam?**  
 A: You can retake after 4 weeks. Feedback is provided. Up to 3 attempts; after that, 12-month cooldown before reapplication.
 
 **Q: Is the certification vendor-neutral?**  
-A: No. CSE is specific to Claudient and Claude Code. The skills are transferable to other LLM orchestration platforms, but the badge is Claudient-specific.
+A: No. CSE is specific to UitKit and Claude Code. The skills are transferable to other LLM orchestration platforms, but the badge is UitKit-specific.
 
 **Q: How do I stay current after certification?**  
 A: Participate in swarm projects, engage with community, attend optional workshops, and renew every 2 years. Continuing education is self-directed but recommended.
 
 **Q: Can organizations offer CSE training internally?**  
-A: Yes, with Claudient approval. Organizations can become authorized training partners and deliver Level 1–2 workshops. Contact training@claudient.ai for requirements.
+A: Yes, with UitKit approval. Organizations can become authorized training partners and deliver Level 1–2 workshops. Contact training@uitkit.ai for requirements.
 
 ---
 
@@ -509,8 +509,8 @@ A: Yes, with Claudient approval. Organizations can become authorized training pa
 - **Study Guide:** [CSE-Study-Guide.md](./CSE-Study-Guide.md)
 - **Exam Prep:** [CSE-Exam-Prep.md](./CSE-Exam-Prep.md)
 - **Mentorship:** [CSE-Mentors.md](./CSE-Mentors.md)
-- **Community:** [Claudient Slack #certification channel](https://slack.claudient.io)
-- **Questions:** program@claudient.ai
+- **Community:** [UitKit Slack #certification channel](https://slack.uitkit.io)
+- **Questions:** program@uitkit.ai
 
 ---
 

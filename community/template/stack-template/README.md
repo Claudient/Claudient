@@ -119,11 +119,11 @@ Time: [X-Y hours]
 
 ## Support & Contribution
 
-This stack is maintained as part of the Claudient knowledge system. For bugs, questions, or contributions:
+This stack is maintained as part of the UitKit knowledge system. For bugs, questions, or contributions:
 
 - **GitHub:** [Link to repository, if public]
 - **Issues:** Report problems or suggest improvements
-- **Discussions:** Ask questions in the Claudient community forum
+- **Discussions:** Ask questions in the UitKit community forum
 
 ## Disclaimer
 

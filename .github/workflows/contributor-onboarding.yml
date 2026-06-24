@@ -40,13 +40,13 @@ jobs:
             });
 
             const welcomeMessage = `
-Welcome to Claudient! 🎉
+Welcome to UitKit! 🎉
 
 Thanks for your first contribution, @${pullRequest.user.login}! We're excited to have you join our community.
 
 ### Getting Started
-1. **Read the Contributor Guide**: Check out [CONTRIBUTING.md](https://github.com/UitbreidenOS/Claudient/blob/main/CONTRIBUTING.md)
-2. **Join Our Community**: Connect with us on [Discord](https://discord.gg/claudient)
+1. **Read the Contributor Guide**: Check out [CONTRIBUTING.md](https://github.com/UitbreidenOS/UitKit/blob/main/CONTRIBUTING.md)
+2. **Join Our Community**: Connect with us on [Discord](https://discord.gg/uitkit)
 3. **Track Your Progress**: Run \`npm run contributor-onboarding\` to see your contributor profile
 
 ### Contribution Paths
@@ -130,7 +130,7 @@ Keep contributing and level up! Questions? Reach out to our maintainers.
             let message = `
 Great work, @${author}! ✨
 
-Your contribution has been recorded and you're on your way to earning exclusive Claudient swag!
+Your contribution has been recorded and you're on your way to earning exclusive UitKit swag!
 
 **Progress Update:**
 - Type: \`${{ steps.pr-type.outputs.type }}\`

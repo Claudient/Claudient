@@ -61,7 +61,7 @@ timeline:
       
     - time: "2026-06-13T14:02:12Z"
       source: "kubernetes"
-      event: "Pod claudient-api-7x8f9 ready (3/3 containers)"
+      event: "Pod uitkit-api-7x8f9 ready (3/3 containers)"
       evidence: "kubectl-events.log"
       
     - time: "2026-06-13T14:02:33Z"

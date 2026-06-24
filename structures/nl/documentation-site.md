@@ -179,10 +179,10 @@ touch .claude/commands/update-sidebar.md
 # Maak env-bestanden
 touch .env.example .env.local
 
-# Installeer Claudient-vaardigheden
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill devops-infra/cicd
-npx claudient add skill devops-infra/vercel
+# Installeer UitKit-vaardigheden
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill devops-infra/cicd
+npx uitkit add skill devops-infra/vercel
 
 echo "Astro + Starlight docs-site gesteigers. Voer uit: npm run dev"
 ```
@@ -410,10 +410,10 @@ Optioneel:
 ## Vaardigheden om te installeren
 
 ```bash
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill devops-infra/cicd
-npx claudient add skill devops-infra/vercel
-npx claudient add skill testing/playwright
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill devops-infra/cicd
+npx uitkit add skill devops-infra/vercel
+npx uitkit add skill testing/playwright
 ```
 
 ## Verwant

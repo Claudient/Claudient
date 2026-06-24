@@ -1,6 +1,6 @@
-# Claudient Vendor Program
+# UitKit Vendor Program
 
-Welcome to the Claudient Marketplace Vendor Program — the official pathway for building and earning revenue from specialized stacks on Claude Code.
+Welcome to the UitKit Marketplace Vendor Program — the official pathway for building and earning revenue from specialized stacks on Claude Code.
 
 This document covers requirements, onboarding, support SLAs, revenue tiers, certification levels, and co-marketing opportunities.
 
@@ -12,7 +12,7 @@ The Vendor Program is designed for professional stack authors who want to:
 
 - **Build expertise** — Create domain-specific stacks using best practices
 - **Earn revenue** — Monetize through subscriptions and support
-- **Scale quickly** — Leverage the Claudient platform and community
+- **Scale quickly** — Leverage the UitKit platform and community
 - **Grow sustainably** — Access marketing, certification, and direct support
 
 **Bottom line:** Build once. Ship to millions. Earn recurring revenue forever.
@@ -32,7 +32,7 @@ The Vendor Program is designed for professional stack authors who want to:
 - Responds to issues within 2 weeks
 
 **Benefits:**
-- Free hosting on Claudient Marketplace
+- Free hosting on UitKit Marketplace
 - Community badge and profile page
 - Access to vendor Discord community
 - Community support via GitHub Issues
@@ -83,7 +83,7 @@ The Vendor Program is designed for professional stack authors who want to:
 - Enterprise vendor badge and dedicated marketplace profile
 - Custom revenue terms (negotiable, typically 85-90% split)
 - White-label stack support (publish under your brand)
-- Priority support (Slack channel with dedicated Claudient PM)
+- Priority support (Slack channel with dedicated UitKit PM)
 - Joint marketing and co-branding opportunities
 - Private SLA terms
 - Exclusive featured placement on homepage
@@ -132,7 +132,7 @@ To upgrade from Community to Professional Vendor status, your stack must meet:
 - [ ] **Prepare your stack(s)**
   - At least 1 stack published and gaining traction (50+ installs)
   - OR 2+ stacks published and maintained actively
-  - Follows Claudient directory structure and guidelines
+  - Follows UitKit directory structure and guidelines
   - All content is properly licensed and attributed
 
 - [ ] **Set up business entity** (if not already done)
@@ -153,7 +153,7 @@ To upgrade from Community to Professional Vendor status, your stack must meet:
   - Preferred support contact (email + optional Slack username)
 
 - [ ] **Submit application**
-  - Email: [marketplace@claudient.dev](mailto:marketplace@claudient.dev)
+  - Email: [marketplace@uitkit.dev](mailto:marketplace@uitkit.dev)
   - Subject: "Professional Vendor Application: [Your Name]"
   - Attach: Stack URLs, business info, payment details, vendor profile
   - Include: Statement confirming compliance with Publisher Guidelines
@@ -212,14 +212,14 @@ To upgrade from Community to Professional Vendor status, your stack must meet:
 
 1. **Rights & Ownership**
    - You retain all IP rights to your stack
-   - You grant Claudient a perpetual, non-exclusive license to distribute
+   - You grant UitKit a perpetual, non-exclusive license to distribute
    - You represent that content is original and properly licensed
 
 2. **Revenue Share**
-   - Tier 1 (first 6 months): 70% to vendor, 30% to Claudient
-   - Tier 2 (after 6 months, $1K+ earned): 80% to vendor, 20% to Claudient
+   - Tier 1 (first 6 months): 70% to vendor, 30% to UitKit
+   - Tier 2 (after 6 months, $1K+ earned): 80% to vendor, 20% to UitKit
    - Tier 3 (enterprise, negotiated): Custom split (typically 85-90%)
-   - Payment: Monthly via Stripe, Claudient covers processing fees
+   - Payment: Monthly via Stripe, UitKit covers processing fees
 
 3. **Support SLAs**
    - Professional: Respond to issues within 1 week, critical bugs within 2 weeks
@@ -283,7 +283,7 @@ Day 28: Professional badge live, subscriptions enabled
 **SLA Coverage:**
 - Minimum 2 dedicated support contacts
 - Support hours: 9 AM–5 PM in vendor's timezone
-- Emergency escalation: Direct Claudient PM involvement
+- Emergency escalation: Direct UitKit PM involvement
 - Monthly SLA reporting and review
 
 ---
@@ -294,7 +294,7 @@ Day 28: Professional badge live, subscriptions enabled
 
 #### Tier 1: New Professional Vendor (Months 0–6)
 - **Your cut:** 70%
-- **Claudient's cut:** 30%
+- **UitKit's cut:** 30%
 - **Minimum subscription price:** $5/month or $50/year
 - **Payout frequency:** Monthly (15th of month)
 - **Minimum payout threshold:** $20
@@ -303,15 +303,15 @@ Day 28: Professional badge live, subscriptions enabled
 
 #### Tier 2: Established Professional Vendor (6+ months + $1K earned)
 - **Your cut:** 80%
-- **Claudient's cut:** 20%
+- **UitKit's cut:** 20%
 - **Auto-upgrade:** Automatic after meeting criteria
-- **Request upgrade:** Email [marketplace@claudient.dev](mailto:marketplace@claudient.dev) with metrics
+- **Request upgrade:** Email [marketplace@uitkit.dev](mailto:marketplace@uitkit.dev) with metrics
 
 **Example:** 10 subscribers × $10/month = $100 revenue → $80 to you
 
 #### Tier 3: Enterprise Vendor (Custom Terms)
 - **Your cut:** 85–95% (negotiated)
-- **Claudient's cut:** 5–15% (negotiated)
+- **UitKit's cut:** 5–15% (negotiated)
 - **Volume discounts:** Available for 500+ monthly subscriptions
 - **Dedicated PM:** Assigned for strategy and growth
 - **Custom billing:** Annual contracts, net-30, prepayment options available
@@ -319,7 +319,7 @@ Day 28: Professional badge live, subscriptions enabled
 **Negotiation factors:**
 - Annual revenue run-rate
 - Exclusivity requirements
-- Marketing investment from Claudient
+- Marketing investment from UitKit
 - Co-development opportunities
 
 ### Payment Processing & Payouts
@@ -341,7 +341,7 @@ Day 28: Professional badge live, subscriptions enabled
 **Payout Currency:** USD (Stripe handles conversions automatically)
 
 **Payout Statement:**
-- Real-time dashboard at `claudient.ai/vendor-dashboard`
+- Real-time dashboard at `uitkit.ai/vendor-dashboard`
 - Detailed monthly statement (CSV export)
 - Subscription count, MRR, churn, and lifetime revenue
 - Tax-ready reporting (1099 equivalent)
@@ -354,12 +354,12 @@ Day 28: Professional badge live, subscriptions enabled
 - Obtaining business licenses (if required in your jurisdiction)
 - Maintaining records for accounting
 
-**Claudient does NOT:**
+**UitKit does NOT:**
 - Withhold taxes
 - File 1099 forms (vendor responsibility)
 - Provide tax advice (consult a CPA)
 
-**Claudient WILL:**
+**UitKit WILL:**
 - Provide monthly earnings statements
 - Issue annual revenue summary (if you request)
 - Support Stripe tax forms (if applicable)
@@ -443,7 +443,7 @@ Vendors can pursue certification tiers to increase marketplace prominence and ea
 - Featured prominently on marketplace homepage
 - Exclusive marketing support (co-authored guides, case studies)
 - Featured in "Staff Picks" and curated lists
-- Direct relationship with Claudient PM
+- Direct relationship with UitKit PM
 - Joint event hosting (webinars, workshops)
 - Revenue share eligibility (if not already active)
 - Annual strategy session with marketplace leadership
@@ -453,10 +453,10 @@ Vendors can pursue certification tiers to increase marketplace prominence and ea
 ### Certification Process
 
 **Step 1: Automatic Evaluation** (Ongoing)
-- Claudient tracks installs, ratings, issue response times, and maintenance
+- UitKit tracks installs, ratings, issue response times, and maintenance
 
 **Step 2: Application** (When ready)
-- Email: [marketplace@claudient.dev](mailto:marketplace@claudient.dev)
+- Email: [marketplace@uitkit.dev](mailto:marketplace@uitkit.dev)
 - Subject: "Certification Application: [Stack Name]"
 - Provide: Stack URL, metrics snapshot, maintenance confirmation
 
@@ -506,13 +506,13 @@ Certification is immediately revoked if:
    - Mention in monthly "Community Highlights" post
 
 4. **Social Media**
-   - Optional: Tweet/LinkedIn announcement (@claudient)
+   - Optional: Tweet/LinkedIn announcement (@uitkit)
    - Tag your social profiles (if shared)
    - Retweet and amplification (if request submitted)
 
 5. **Case Study Opportunity** (Silver+ vendors)
    - Co-authored 1,000-word case study
-   - Published on Claudient blog
+   - Published on UitKit blog
    - Included in quarterly vendor newsletter
    - Quoted interviews (via Slack or email)
 
@@ -524,26 +524,26 @@ Certification is immediately revoked if:
    - Year-round visibility (not rotation-based)
 
 2. **Co-Authored Content**
-   - Joint webinar (Claudient streams, both authors present)
+   - Joint webinar (UitKit streams, both authors present)
    - Technical guide or deep-dive article
    - Q&A session in Discord + community call
-   - Video walkthrough (optional, Claudient produced)
+   - Video walkthrough (optional, UitKit produced)
 
 3. **Co-Branding**
    - Joint logo use on marketplace
-   - Vendor logo on Claudient website (Enterprise only)
+   - Vendor logo on UitKit website (Enterprise only)
    - Cross-promotion in newsletters and social media
-   - Speaking slots at Claudient events (if available)
+   - Speaking slots at UitKit events (if available)
 
 4. **Dedicated Marketing Support**
-   - Quarterly business review with Claudient PM
+   - Quarterly business review with UitKit PM
    - Joint strategic planning (Q1 and Q4)
    - Campaign planning for seasonal promotions
    - Co-marketing budget (Enterprise: negotiated)
 
 5. **Media & PR**
    - Pitch vendor to tech media (optional)
-   - Quote vendor in Claudient press releases
+   - Quote vendor in UitKit press releases
    - Inclusion in "vendor spotlights" (monthly articles)
    - Interview opportunity (blog, podcast, or video)
 
@@ -551,7 +551,7 @@ Certification is immediately revoked if:
 
 **To request co-marketing support:**
 
-1. Email: [marketplace@claudient.dev](mailto:marketplace@claudient.dev)
+1. Email: [marketplace@uitkit.dev](mailto:marketplace@uitkit.dev)
   Subject: "Co-Marketing Request: [Stack Name]"
 
 2. Include:
@@ -611,7 +611,7 @@ Maximize your stack's visibility:
 A: Free. You only pay when you earn (revenue share split). No joining fees, no monthly dues.
 
 **Q: Can community vendors make money?**  
-A: Not through Claudient, but you can:
+A: Not through UitKit, but you can:
 - Sell consulting or training around your stack
 - Offer enterprise support packages
 - Accept donations (GitHub Sponsors, Ko-fi)
@@ -629,7 +629,7 @@ A: Start as a Community Vendor. Once you reach 100+ installs and 4.0+ rating, ap
 A: Monthly on the 15th of the following month. Earnings accumulate until you hit $20 (minimum threshold).
 
 **Q: How do refunds work?**  
-A: Customers get a 30-day money-back guarantee. You refund via Stripe; Claudient doesn't mediate refunds.
+A: Customers get a 30-day money-back guarantee. You refund via Stripe; UitKit doesn't mediate refunds.
 
 **Q: What if a customer disputes a charge?**  
 A: Stripe handles disputes. If a chargeback occurs, your earnings are held pending resolution.
@@ -670,11 +670,11 @@ A: Professional vendors have 2 weeks to resolve; Enterprise have 5 business days
 **Q: How do I get featured in the newsletter?**  
 A: Maintain 4.0+ rating and request co-marketing. Marketplace team features ~3–4 stacks monthly (rotating).
 
-**Q: Can I use Claudient branding in my marketing?**  
-A: Yes, with permission. Use official logos (provided by marketplace team) and credit Claudient properly. No false endorsements.
+**Q: Can I use UitKit branding in my marketing?**  
+A: Yes, with permission. Use official logos (provided by marketplace team) and credit UitKit properly. No false endorsements.
 
 **Q: Can I run paid ads for my stack?**  
-A: Yes. State clearly that it's a paid ad (FTC requirement). Don't use Claudient branding without permission.
+A: Yes. State clearly that it's a paid ad (FTC requirement). Don't use UitKit branding without permission.
 
 ### Legal & Disputes
 
@@ -685,7 +685,7 @@ A: If they violate your open-source license, contact the marketplace team. We ha
 A: No. All content must be licensed under MIT, Apache 2.0, CC-BY-SA-4.0, or equivalent open-source license.
 
 **Q: What if I want to sell white-label stacks?**  
-A: This is an Enterprise Vendor feature. Contact [marketplace@claudient.dev](mailto:marketplace@claudient.dev) to discuss custom arrangements.
+A: This is an Enterprise Vendor feature. Contact [marketplace@uitkit.dev](mailto:marketplace@uitkit.dev) to discuss custom arrangements.
 
 ---
 
@@ -705,9 +705,9 @@ Create a stack that solves a real problem for a specific audience:
 
 Follow the submission process in [CONTRIBUTING.md](CONTRIBUTING.md):
 
-1. Prepare stack following Claudient structure
+1. Prepare stack following UitKit structure
 2. Write comprehensive README and STACK.json manifest
-3. Open PR against `github.com/claudients/claudient`
+3. Open PR against `github.com/uitkits/uitkit`
 4. Await review (typically 5–7 business days)
 5. Once approved, stack appears in marketplace
 
@@ -724,7 +724,7 @@ Grow your stack to 100+ installs and 4.0+ rating:
 
 Once you reach 100+ installs and 4.0+ rating:
 
-1. Email [marketplace@claudient.dev](mailto:marketplace@claudient.dev)
+1. Email [marketplace@uitkit.dev](mailto:marketplace@uitkit.dev)
    - Subject: "Professional Vendor Application: [Your Name]"
    - Include: Stack URL, installation metrics, support contact, business info
 
@@ -738,7 +738,7 @@ Once you reach 100+ installs and 4.0+ rating:
 
 Once you've maintained 4.0+ rating and monthly activity:
 
-1. Email [marketplace@claudient.dev](mailto:marketplace@claudient.dev)
+1. Email [marketplace@uitkit.dev](mailto:marketplace@uitkit.dev)
    - Subject: "Certification Application: [Stack Name]"
    - Include: Stack URL, metrics, maintenance confirmation
 
@@ -752,16 +752,16 @@ Once you've maintained 4.0+ rating and monthly activity:
 
 ### Resources
 
-- **General questions:** [marketplace@claudient.dev](mailto:marketplace@claudient.dev)
-- **Revenue & payouts:** [billing@claudient.dev](mailto:billing@claudient.dev)
-- **Certification & quality:** [quality@claudient.dev](mailto:quality@claudient.dev)
-- **Co-marketing & partnerships:** [partnerships@claudient.dev](mailto:partnerships@claudient.dev)
+- **General questions:** [marketplace@uitkit.dev](mailto:marketplace@uitkit.dev)
+- **Revenue & payouts:** [billing@uitkit.dev](mailto:billing@uitkit.dev)
+- **Certification & quality:** [quality@uitkit.dev](mailto:quality@uitkit.dev)
+- **Co-marketing & partnerships:** [partnerships@uitkit.dev](mailto:partnerships@uitkit.dev)
 
 ### Community
 
-- **Discord:** [join.claudient.dev](https://join.claudient.dev) — `#vendors` channel
-- **GitHub Discussions:** [github.com/claudients/claudient/discussions](https://github.com/claudients/claudient/discussions)
-- **Vendor Dashboard:** `claudient.ai/vendor-dashboard` (after onboarding)
+- **Discord:** [join.uitkit.dev](https://join.uitkit.dev) — `#vendors` channel
+- **GitHub Discussions:** [github.com/uitkits/uitkit/discussions](https://github.com/uitkits/uitkit/discussions)
+- **Vendor Dashboard:** `uitkit.ai/vendor-dashboard` (after onboarding)
 
 ### Additional Docs
 
@@ -774,4 +774,4 @@ Once you've maintained 4.0+ rating and monthly activity:
 
 **Last updated:** June 22, 2026
 
-Built by [Claudient](https://github.com/claudients/claudient) · [uitbreiden.com](https://uitbreiden.com/)
+Built by [UitKit](https://github.com/uitkits/uitkit) · [uitbreiden.com](https://uitbreiden.com/)

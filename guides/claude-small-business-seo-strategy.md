@@ -1,6 +1,6 @@
 # Claude for Small Business — SEO Strategy
 
-This document is the single source of truth for how Claudient ranks for small-business search intent. It is written for contributors who add new small-business content and for the maintainer who needs to keep the strategy coherent over time.
+This document is the single source of truth for how UitKit ranks for small-business search intent. It is written for contributors who add new small-business content and for the maintainer who needs to keep the strategy coherent over time.
 
 The strategy is intentionally narrow: capture the operator-grade keyword space around "Claude for small business" and the long tail of vertical and task-level queries that flows from it.
 
@@ -10,7 +10,7 @@ The strategy is intentionally narrow: capture the operator-grade keyword space a
 
 Anthropic launched Claude for Small Business on May 13, 2026. The product covers 15 official workflows. Search demand has run far ahead of supply — owners are typing "Claude for [industry]", "AI tools for [business type]", and "how to use Claude for [task]" into Google, Reddit, and YouTube faster than Anthropic can ship vertical content.
 
-Claudient's opportunity is to be the most-linked-to, most-cited extension of the official launch — a community knowledge base that fills the long tail Anthropic left open.
+UitKit's opportunity is to be the most-linked-to, most-cited extension of the official launch — a community knowledge base that fills the long tail Anthropic left open.
 
 Three structural facts make this opportunity real:
 
@@ -265,10 +265,10 @@ The plan, calibrated to roughly one shipping batch per week.
 The metrics that matter, in order:
 
 1. **GitHub stars** — proxy for organic discovery. Target: +200 in the 30 days following the small-business launch.
-2. **npm install count for `claudient add skills small-business`** — proxy for actual adoption.
+2. **npm install count for `uitkit add skills small-business`** — proxy for actual adoption.
 3. **GitHub traffic for `/skills/small-business/`** — proxy for SEO performance.
 
-5. **Brand search** — "claudient small business" appearing in Google autocomplete or related searches.
+5. **Brand search** — "uitkit small business" appearing in Google autocomplete or related searches.
 
 Avoid optimizing for: total file count, line count, or anything that incentivizes filler.
 

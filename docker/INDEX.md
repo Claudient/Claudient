@@ -1,6 +1,6 @@
 # Docker Directory Index
 
-Complete containerization setup for Claudient - production-ready Docker deployment.
+Complete containerization setup for UitKit - production-ready Docker deployment.
 
 ## File Overview
 
@@ -35,8 +35,8 @@ Multi-stage production Docker image.
 Multi-service orchestration.
 
 **Services:**
-1. `claudient` - Main service with health server
-2. `dashboard` - Optional Astro dev server (depends on claudient)
+1. `uitkit` - Main service with health server
+2. `dashboard` - Optional Astro dev server (depends on uitkit)
 
 **Features:**
 - Health checks enabled
@@ -62,7 +62,7 @@ Environment variable template.
 - `DASHBOARD_PORT` - Dashboard port
 - `LOG_LEVEL` - Logging level
 - `NODE_OPTIONS` - Node.js options
-- `CLAUDIENT_TELEMETRY` - Telemetry enable/disable
+- `UITKIT_TELEMETRY` - Telemetry enable/disable
 
 **Usage:**
 ```bash
@@ -156,8 +156,8 @@ Includes:
 
 **Usage:**
 ```bash
-./build.sh                    # Build: claudient:latest
-./build.sh -t v1.0           # Build: claudient:v1.0
+./build.sh                    # Build: uitkit:latest
+./build.sh -t v1.0           # Build: uitkit:v1.0
 ./build.sh -m -p             # Multiarch build & push
 ```
 
@@ -183,7 +183,7 @@ Includes:
 ```bash
 ./run.sh                      # Run daemon
 ./run.sh -f                   # Run foreground
-./run.sh -i claudient:v1.0 -f # Run specific image
+./run.sh -i uitkit:v1.0 -f # Run specific image
 ```
 
 **Options:**
@@ -210,7 +210,7 @@ Includes:
 ```bash
 ./health.sh                   # Check all endpoints
 ./health.sh -t health         # Check /health only
-./health.sh -c my-claudient   # Check specific container
+./health.sh -c my-uitkit   # Check specific container
 ./health.sh -v                # Verbose output
 ```
 
@@ -391,7 +391,7 @@ docker push ...         # Push to registry
 
 ## Version Information
 
-- **Claudient Version:** 1.10.1
+- **UitKit Version:** 1.10.1
 - **Node Version:** 20-alpine
 - **Docker Base:** node:20-alpine (150MB)
 - **Runtime Image:** ~500-600MB
@@ -412,10 +412,10 @@ docker push ...         # Push to registry
 
 ## License
 
-Same as Claudient: AGPL-3.0-or-later AND CC-BY-SA-4.0
+Same as UitKit: AGPL-3.0-or-later AND CC-BY-SA-4.0
 
 ---
 
 **Last Updated:** 2026-06-22  
 **Maintainer:** tushar2704  
-**Repository:** https://github.com/UitbreidenOS/Claudient
+**Repository:** https://github.com/UitbreidenOS/UitKit

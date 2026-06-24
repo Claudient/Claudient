@@ -1,5 +1,5 @@
 {
-  "name": "claudient",
+  "name": "uitkit",
   "version": "1.1.0",
   "description": "The Claude Code knowledge system — installable plugin marketplace with 400+ skills, 182+ agents, 42 workspace stacks, 41 MCP configs, 100+ commands, 40 hooks, 32 rules, 10 routines, 100+ guides, 83 structures, output styles, themes, statuslines, keybindings, settings templates, and an Agent SDK pack in 5 languages. Features: matrix CLI tool, SVG inspector, swarm sandbox, and advanced CLI automation.",
   "keywords": [
@@ -26,14 +26,14 @@
     "email": "ceo@uitbreiden.com",
     "url": "https://uitbreiden.com"
   },
-  "homepage": "https://github.com/UitbreidenOS/Claudient",
+  "homepage": "https://github.com/UitbreidenOS/UitKit",
   "repository": {
     "type": "git",
-    "url": "https://github.com/UitbreidenOS/Claudient.git"
+    "url": "https://github.com/UitbreidenOS/UitKit.git"
   },
   "license": "(AGPL-3.0-or-later AND CC-BY-SA-4.0)",
   "bin": {
-    "claudient": "./scripts/cli.js"
+    "uitkit": "./scripts/cli.js"
   },
   "files": [
     "scripts/",
@@ -72,7 +72,7 @@
     "matrix": "node scripts/matrix-cli.js",
     "svg-inspector": "node scripts/svg-inspector.js",
     "swarm-sandbox": "node scripts/swarm-sandbox.js",
-    "moe": "node scripts/claudient-moe.js",
+    "moe": "node scripts/uitkit-moe.js",
     "theme-builder": "node scripts/theme-builder.js",
     "theme-builder-batch": "node scripts/theme-builder-batch.js",
     "contributor-onboarding": "node scripts/contributor-onboarding.js",

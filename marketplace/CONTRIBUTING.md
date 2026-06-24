@@ -1,4 +1,4 @@
-# Contributing to Claudient Marketplace
+# Contributing to UitKit Marketplace
 
 Thank you for building specialized stacks for Claude Code. This guide walks you through submission, review, and publication.
 
@@ -116,10 +116,10 @@ Metadata manifest:
 
 ### Step 1: Prepare Your Stack
 
-1. **Clone the Claudient repository:**
+1. **Clone the UitKit repository:**
    ```bash
-   git clone https://github.com/claudients/claudient.git
-   cd claudient
+   git clone https://github.com/uitkits/uitkit.git
+   cd uitkit
    ```
 
 2. **Create your stack directory:**
@@ -192,14 +192,14 @@ claude stack list
    git push -u origin main
    ```
 
-### Step 4: Open a PR Against Claudient
+### Step 4: Open a PR Against UitKit
 
-1. **Fork `github.com/claudients/claudient`** (if not already done)
+1. **Fork `github.com/uitkits/uitkit`** (if not already done)
 
 2. **Clone your fork:**
    ```bash
-   git clone https://github.com/yourname/claudient.git
-   cd claudient
+   git clone https://github.com/yourname/uitkit.git
+   cd uitkit
    ```
 
 3. **Create a feature branch:**
@@ -258,7 +258,7 @@ claude stack list
    - [ ] STACK.json is complete and valid
    - [ ] All content is accurate and current
    - [ ] No proprietary or licensed third-party content
-   - [ ] Aligned with Claudient code of conduct
+   - [ ] Aligned with UitKit code of conduct
    - [ ] All files follow naming conventions (kebab-case)
    - [ ] Examples or session logs included
    - [ ] Public GitHub repository linked
@@ -330,14 +330,14 @@ skills/your-skill/
 ### Certification
 
 After 60 days and 100+ installs, apply for official certification:
-- Email `marketplace@claudient.dev`
+- Email `marketplace@uitkit.dev`
 - Include stack name and GitHub repo
 - Core team evaluates and responds within 5 business days
 
 ## Publishing Best Practices
 
 1. **Version your stack:** Use semantic versioning (1.0.0, 1.1.0, 2.0.0)
-2. **Keep GitHub repo in sync** with Claudient marketplace version
+2. **Keep GitHub repo in sync** with UitKit marketplace version
 3. **Tag releases** on GitHub corresponding to marketplace versions
 4. **Write changelogs** documenting updates
 5. **Respond to users** in GitHub discussions and issues
@@ -345,14 +345,14 @@ After 60 days and 100+ installs, apply for official certification:
 
 ## Support & Questions
 
-- **Marketplace questions:** `marketplace@claudient.dev`
+- **Marketplace questions:** `marketplace@uitkit.dev`
 - **Stack structure:** See [CLAUDE.md template](../agentic_ai_engineer_stack/CLAUDE.md)
-- **Technical issues:** [GitHub Discussions](https://github.com/claudients/claudient/discussions)
-- **Community help:** [Discord](https://join.claudient.dev)
+- **Technical issues:** [GitHub Discussions](https://github.com/uitkits/uitkit/discussions)
+- **Community help:** [Discord](https://join.uitkit.dev)
 
 ## Code of Conduct
 
-All submissions must align with Claudient's [Code of Conduct](../.github/CODE_OF_CONDUCT.md):
+All submissions must align with UitKit's [Code of Conduct](../.github/CODE_OF_CONDUCT.md):
 - Respectful, inclusive language
 - No harassment, discrimination, or hate speech
 - Professional, ethical content
@@ -360,6 +360,6 @@ All submissions must align with Claudient's [Code of Conduct](../.github/CODE_OF
 
 ---
 
-Thank you for contributing to Claudient. We're excited to see what you build.
+Thank you for contributing to UitKit. We're excited to see what you build.
 
-**Questions? Email marketplace@claudient.dev or join our [Discord](https://join.claudient.dev).**
+**Questions? Email marketplace@uitkit.dev or join our [Discord](https://join.uitkit.dev).**

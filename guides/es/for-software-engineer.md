@@ -18,30 +18,30 @@ Eres un ingeniero de software, desarrollador full-stack o líder técnico cuyo t
 
 ```bash
 # Instalar conjuntos de habilidades por disciplina
-npx claudient add skills backend
-npx claudient add skills devops-infra
-npx claudient add skills ai-engineering
-npx claudient add skills database
-npx claudient add skills productivity
+npx uitkit add skills backend
+npx uitkit add skills devops-infra
+npx uitkit add skills ai-engineering
+npx uitkit add skills database
+npx uitkit add skills productivity
 
 # O seleccionar lo que necesitas:
-npx claudient add skill backend/next-js
-npx claudient add skill backend/fastapi
-npx claudient add skill devops-infra/docker
-npx claudient add skill devops-infra/kubernetes
-npx claudient add skill devops-infra/terraform
-npx claudient add skill productivity/code-review
-npx claudient add skill productivity/debug
-npx claudient add skill productivity/refactor
-npx claudient add skill productivity/pr-review
-npx claudient add skill productivity/adr-writer
-npx claudient add skill productivity/ship-gate
-npx claudient add skill productivity/tech-debt-tracker
-npx claudient add skill ai-engineering/claude-api
-npx claudient add skill ai-engineering/rag-architect
-npx claudient add skill ai-engineering/mcp-server-builder
-npx claudient add skill database/drizzle
-npx claudient add skill database/postgres
+npx uitkit add skill backend/next-js
+npx uitkit add skill backend/fastapi
+npx uitkit add skill devops-infra/docker
+npx uitkit add skill devops-infra/kubernetes
+npx uitkit add skill devops-infra/terraform
+npx uitkit add skill productivity/code-review
+npx uitkit add skill productivity/debug
+npx uitkit add skill productivity/refactor
+npx uitkit add skill productivity/pr-review
+npx uitkit add skill productivity/adr-writer
+npx uitkit add skill productivity/ship-gate
+npx uitkit add skill productivity/tech-debt-tracker
+npx uitkit add skill ai-engineering/claude-api
+npx uitkit add skill ai-engineering/rag-architect
+npx uitkit add skill ai-engineering/mcp-server-builder
+npx uitkit add skill database/drizzle
+npx uitkit add skill database/postgres
 ```
 
 ---
@@ -221,7 +221,7 @@ Genera una entrada priorizada en el backlog para cada elemento.
 ## Plan de incorporación de 30 días (ingenieros nuevos en Claude Code)
 
 ### Semana 1 — Instalación y primeras victorias
-- Instalar todos los conjuntos de habilidades: `npx claudient add skills backend devops-infra productivity`
+- Instalar todos los conjuntos de habilidades: `npx uitkit add skills backend devops-infra productivity`
 - Configurar el MCP de GitHub (ver integraciones de herramientas a continuación)
 - Ejecutar `/pr-review` en los últimos 5 PRs fusionados en tu repositorio — calibrar con los patrones de tu código base
 - Usar `/debug` en el error más reciente que resolviste manualmente — ver qué habría detectado más rápido
@@ -319,7 +319,7 @@ El hook obtiene el evento completo de Sentry — stack trace, breadcrumbs, etiqu
 
 ## Métricas de referencia
 
-Estos son resultados observados de equipos de ingeniería que usan el stack completo de Claudient. Los resultados individuales varían según la complejidad del código base y la adopción del flujo de trabajo.
+Estos son resultados observados de equipos de ingeniería que usan el stack completo de UitKit. Los resultados individuales varían según la complejidad del código base y la adopción del flujo de trabajo.
 
 | Métrica | Antes de Claude Code | Después de Claude Code |
 |---|---|---|

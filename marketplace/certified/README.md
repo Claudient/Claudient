@@ -1,6 +1,6 @@
 # Certified Stacks Index
 
-This directory indexes all Claudient Marketplace stacks that have achieved certification status. Certified stacks have met quantified quality standards and active maintenance commitments.
+This directory indexes all UitKit Marketplace stacks that have achieved certification status. Certified stacks have met quantified quality standards and active maintenance commitments.
 
 ## Certification Tiers
 
@@ -55,7 +55,7 @@ Stacks that had certification revoked remain in the marketplace but are not list
 ## How to Get Certified
 
 1. Build and publish a stack on GitHub
-2. Submit to Claudient Marketplace
+2. Submit to UitKit Marketplace
 3. Pass automated validation and human review
 4. Request certification via [becoming-certified.md](../guides/marketplace/becoming-certified.md)
 5. Core team evaluates against certification criteria

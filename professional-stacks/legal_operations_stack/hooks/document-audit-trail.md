@@ -60,10 +60,10 @@ echo "Audit trail updated: $ACTION on $DOCUMENT"
 ## Audit Log Format
 
 ```
-2026-06-13T14:35:22Z | Read | example-contract.pdf | v2.0 | claudient-user
-2026-06-13T14:36:15Z | Write | example-contract.pdf | v2.1 | claudient-user
+2026-06-13T14:35:22Z | Read | example-contract.pdf | v2.0 | uitkit-user
+2026-06-13T14:36:15Z | Write | example-contract.pdf | v2.1 | uitkit-user
 2026-06-13T14:37:42Z | Approve | example-contract.pdf | v2.1 | jane-smith
-2026-06-13T14:38:09Z | Release | example-contract.pdf | v2.1 | claudient-user
+2026-06-13T14:38:09Z | Release | example-contract.pdf | v2.1 | uitkit-user
 ```
 
 ---

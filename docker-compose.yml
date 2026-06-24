@@ -1,12 +1,12 @@
 version: '3.8'
 
 services:
-  claudient:
+  uitkit:
     build:
       context: .
       dockerfile: Dockerfile
-    image: claudient:latest
-    container_name: claudient
+    image: uitkit:latest
+    container_name: uitkit
     environment:
       NODE_ENV: production
     ports:

@@ -98,7 +98,7 @@ for (const [, items] of grouped) {
 const lines = []
 lines.push('# Changelog')
 lines.push('')
-lines.push('All notable changes to Claudient are documented in this file.')
+lines.push('All notable changes to UitKit are documented in this file.')
 lines.push('')
 lines.push(`Generated: ${new Date().toISOString().slice(0, 10)} | ${commits.length} commits`)
 lines.push('')

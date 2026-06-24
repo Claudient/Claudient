@@ -18,7 +18,7 @@ const FEATURE_FLAGS: FeatureFlagEntry[] = [
     name: "The Matrix Theme Pack",
     status: "stable",
     rolloutPercentage: 100,
-    description: "Premium aesthetic themes: Claudient Neon, Ghost Shell. High-contrast, power-user focused.",
+    description: "Premium aesthetic themes: UitKit Neon, Ghost Shell. High-contrast, power-user focused.",
     category: "ui",
     releaseDate: "2026-06-22",
     enabled: true,

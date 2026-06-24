@@ -1,10 +1,10 @@
-# Prometheus Metrics Definitions for Claudient
+# Prometheus Metrics Definitions for UitKit
 # Version: 1.0
 # Last Updated: 2026-06-22
 
 ---
 version: "1.0"
-namespace: "claudient"
+namespace: "uitkit"
 cardinality_limit: 1000
 
 # Counter Metrics - monotonically increasing

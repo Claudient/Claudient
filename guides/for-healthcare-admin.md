@@ -32,17 +32,17 @@ Claude Code is not a HIPAA-covered entity and should not be treated as part of y
 
 ```bash
 # Install all healthcare admin skills and agents
-npx claudient add skill ops/dental-practice
-npx claudient add skill ops/sop-writer
-npx claudient add skill hr/hiring-pipeline
-npx claudient add skill hr/job-description
-npx claudient add skill compliance/gdpr-expert
-npx claudient add skill compliance/privacy-pia
+npx uitkit add skill ops/dental-practice
+npx uitkit add skill ops/sop-writer
+npx uitkit add skill hr/hiring-pipeline
+npx uitkit add skill hr/job-description
+npx uitkit add skill compliance/gdpr-expert
+npx uitkit add skill compliance/privacy-pia
 
 # Or install the full ops, compliance, and HR bundles:
-npx claudient add skills ops
-npx claudient add skills compliance
-npx claudient add skills hr
+npx uitkit add skills ops
+npx uitkit add skills compliance
+npx uitkit add skills hr
 ```
 
 ---
@@ -233,7 +233,7 @@ One-page format. Flag any items needing principal sign-off.
 ## 30-day ramp plan (administrators new to Claude Code)
 
 ### Week 1 — Setup and orientation
-- Install all skills via `npx claudient add skills ops compliance hr`
+- Install all skills via `npx uitkit add skills ops compliance hr`
 - Read the disclaimer section in full — brief your team on what not to paste into prompts
 - Run `/sop-writer` on your three most-used procedures — get familiar with the output quality before relying on it
 - Use `/gdpr-expert` to audit one existing data process you own

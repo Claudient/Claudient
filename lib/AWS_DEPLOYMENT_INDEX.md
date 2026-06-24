@@ -226,9 +226,9 @@ deployment.getFilesRecursive(dir)
   dryRun: false,                          // Test mode
   costOptimization: true,                 // Enable recommendations
   tags: {                                 // Default tags
-    ManagedBy: 'Claudient',
+    ManagedBy: 'UitKit',
     Environment: 'production',
-    Project: 'Claudient',
+    Project: 'UitKit',
   }
 }
 ```
@@ -239,13 +239,13 @@ deployment.getFilesRecursive(dir)
 ```javascript
 // Deploy S3 for skills
 await deployment.deployS3({
-  bucketName: 'claudient-skills',
+  bucketName: 'uitkit-skills',
   versioningEnabled: true,
 });
 
 // Upload skills
 await deployment.uploadSkillsToS3(
-  'claudient-skills',
+  'uitkit-skills',
   './skills',
   'skills/'
 );
@@ -255,7 +255,7 @@ await deployment.uploadSkillsToS3(
 ```javascript
 // Deploy Lambda
 await deployment.deployLambda({
-  functionName: 'claudient-dont-stop',
+  functionName: 'uitkit-dont-stop',
   runtime: 'nodejs18.x',
   handler: 'index.handler',
   roleArn: 'arn:aws:iam::ACCOUNT:role/lambda-role',
@@ -264,8 +264,8 @@ await deployment.deployLambda({
 
 // Schedule execution
 await deployment.createLambdaEventRule({
-  functionName: 'claudient-dont-stop',
-  ruleName: 'claudient-schedule',
+  functionName: 'uitkit-dont-stop',
+  ruleName: 'uitkit-schedule',
   scheduleExpression: 'rate(5 minutes)',
 });
 ```
@@ -274,7 +274,7 @@ await deployment.createLambdaEventRule({
 ```javascript
 // Deploy DynamoDB
 await deployment.deployDynamoDB({
-  tableName: 'claudient-state',
+  tableName: 'uitkit-state',
   partitionKey: { name: 'id', type: 'S' },
   billingMode: 'PAY_PER_REQUEST',
 });
@@ -288,7 +288,7 @@ deployment.loadState('./state.json');
 ```javascript
 // Deploy ECS service
 await deployment.deployECS({
-  clusterName: 'claudient-cluster',
+  clusterName: 'uitkit-cluster',
   serviceName: 'api',
   taskDefinitionFamily: 'api-task',
   image: 'registry/api:latest',
@@ -298,7 +298,7 @@ await deployment.deployECS({
 
 // Monitor health
 const health = await deployment.healthCheckECS(
-  'claudient-cluster',
+  'uitkit-cluster',
   'api'
 );
 ```
@@ -307,18 +307,18 @@ const health = await deployment.healthCheckECS(
 ```javascript
 // Generate CloudFormation template
 const template = deployment.generateCloudFormationTemplate({
-  stackName: 'claudient-full',
+  stackName: 'uitkit-full',
   resources: {
-    s3: { bucketName: 'claudient-skills' },
-    dynamodb: { tableName: 'claudient-state', ... },
-    lambda: { functionName: 'claudient-dont-stop', ... },
-    ecsCluster: { name: 'claudient-cluster', ... },
+    s3: { bucketName: 'uitkit-skills' },
+    dynamodb: { tableName: 'uitkit-state', ... },
+    lambda: { functionName: 'uitkit-dont-stop', ... },
+    ecsCluster: { name: 'uitkit-cluster', ... },
   },
 });
 
 // Deploy stack
 await deployment.deployCloudFormationStack(
-  'claudient-full',
+  'uitkit-full',
   templatePath
 );
 ```
@@ -407,7 +407,7 @@ await deployment.deployCloudFormationStack(
    ```bash
    aws cloudformation deploy \
      --template-file aws-deployment-cloudformation-template.yaml \
-     --stack-name claudient-main \
+     --stack-name uitkit-main \
      --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
    ```
 

@@ -1,5 +1,5 @@
 groups:
-  - name: claudient_alerts
+  - name: uitkit_alerts
     interval: 30s
     rules:
       # Feature Error Rate Alert
@@ -186,7 +186,7 @@ alerting:
 #   scrape_interval: 15s
 #   evaluation_interval: 15s
 #   external_labels:
-#     cluster: 'claudient-prod'
+#     cluster: 'uitkit-prod'
 #     environment: 'production'
 #
 # alertmanager_config:
@@ -194,7 +194,7 @@ alerting:
 #       - targets: ['alertmanager:9093']
 #
 # scrape_configs:
-#   - job_name: 'claudient-services'
+#   - job_name: 'uitkit-services'
 #     static_configs:
 #       - targets: ['localhost:8080']
 #     relabel_configs:

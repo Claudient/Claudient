@@ -1,6 +1,6 @@
 # Escalation Procedures
 
-Critical incident response, on-call rotation, communication protocols, and root cause analysis playbook for Claudient.
+Critical incident response, on-call rotation, communication protocols, and root cause analysis playbook for UitKit.
 
 ---
 
@@ -315,7 +315,7 @@ Timeline for Prevention:
 - Week 2: Circuit breaker pattern [ETA]
 - Week 3: Load shedding graceful degradation [ETA]
 
-Questions? Reach out to support@claudient.com
+Questions? Reach out to support@uitkit.com
 
 Thank you for your patience.
 ```
@@ -434,9 +434,9 @@ issue create \
 ```markdown
 # On-Call Handoff: Week of June 23, 2026
 
-**Outgoing**: alice@claudient.com
-**Incoming**: bob@claudient.com
-**Backup**: charlie@claudient.com (Friday 9 AM → Monday 9 AM)
+**Outgoing**: alice@uitkit.com
+**Incoming**: bob@uitkit.com
+**Backup**: charlie@uitkit.com (Friday 9 AM → Monday 9 AM)
 
 ## Active Incidents
 None currently active.
@@ -457,9 +457,9 @@ None currently active.
 - Expected: 2–3 false alerts per week; safe to acknowledge and snooze 30 min
 
 ## Escalation Contacts
-- VP Engineering: vp@claudient.com (emergency only, 9 AM–5 PM)
-- Database Team Lead: db-lead@claudient.com (pool issues)
-- Frontend Team Lead: frontend-lead@claudient.com (UI crashes)
+- VP Engineering: vp@uitkit.com (emergency only, 9 AM–5 PM)
+- Database Team Lead: db-lead@uitkit.com (pool issues)
+- Frontend Team Lead: frontend-lead@uitkit.com (UI crashes)
 
 ## Questions?
 Ping alice in Slack or call +1-555-0123 (available until Friday 10 AM UTC).

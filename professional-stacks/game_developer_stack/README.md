@@ -5,7 +5,7 @@ Game development workspace — Unity, Unreal, Godot, networking, physics, level 
 ## Quick Start
 
 ```bash
-npx claudient add game_developer_stack
+npx uitkit add game_developer_stack
 ```
 
 ## Skills

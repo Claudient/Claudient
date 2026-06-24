@@ -1,12 +1,12 @@
 # Haute Disponibilité & Récupération d'Urgence
 
-Les déploiements d'entreprise de Claudient nécessitent une architecture tolérante aux pannes avec équilibrage de charge actif-actif, disjoncteurs, et stratégies de dégradation progressive. Ce guide couvre les topologies de déploiement, les vérifications de santé, les procédures de basculement et l'automatisation de la récupération.
+Les déploiements d'entreprise de UitKit nécessitent une architecture tolérante aux pannes avec équilibrage de charge actif-actif, disjoncteurs, et stratégies de dégradation progressive. Ce guide couvre les topologies de déploiement, les vérifications de santé, les procédures de basculement et l'automatisation de la récupération.
 
 ## Architectures de Déploiement
 
 ### Architecture 1 : Actif-Actif (Recommandée)
 
-Plusieurs instances Claudient servent le trafic simultanément sur les zones de disponibilité.
+Plusieurs instances UitKit servent le trafic simultanément sur les zones de disponibilité.
 
 ```
                              ┌─────────────────────┐
@@ -97,11 +97,11 @@ Les vérifications de santé doivent être **conscientes de l'application**, pas
 apiVersion: v1
 kind: Service
 metadata:
-  name: claudient-lb
+  name: uitkit-lb
 spec:
   type: LoadBalancer
   selector:
-    app: claudient
+    app: uitkit
   ports:
     - name: http
       port: 80
@@ -113,11 +113,11 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: claudient-instance-1
+  name: uitkit-instance-1
 spec:
   containers:
-  - name: claudient
-    image: claudient:latest
+  - name: uitkit
+    image: uitkit:latest
     ports:
       - containerPort: 8080
       - containerPort: 50051
@@ -142,7 +142,7 @@ spec:
         valueFrom:
           fieldRef:
             fieldPath: metadata.name
-      - name: CLAUDIENT_DB_REPLICA_LAG_MAX
+      - name: UITKIT_DB_REPLICA_LAG_MAX
         value: "5s"
 ```
 
@@ -160,12 +160,12 @@ defaults
   timeout client  50000
   timeout server  50000
 
-frontend claudient_lb
+frontend uitkit_lb
   bind *:80
   mode http
-  default_backend claudient_cluster
+  default_backend uitkit_cluster
 
-backend claudient_cluster
+backend uitkit_cluster
   mode http
   balance roundrobin
   option httplog
@@ -173,7 +173,7 @@ backend claudient_cluster
   option http-server-close
   
   # Point de terminaison de vérification de santé
-  option httpchk GET /health/ready HTTP/1.1\r\nHost:\ claudient.company.com
+  option httpchk GET /health/ready HTTP/1.1\r\nHost:\ uitkit.company.com
   
   server instance1 10.0.1.10:8080 check inter 5s fall 2 rise 2
   server instance2 10.0.1.11:8080 check inter 5s fall 2 rise 2
@@ -368,7 +368,7 @@ La vérification de santé primaire échoue 3 fois (5s × 3) → Dégradation d�
 # K8s détecte l'échec du Pod, programme un nouveau Pod sur un nœud sain
 
 # Option B : Promotion manuelle de la réplique
-claudient-cli db promote-replica --replica=replica-us-west --force
+uitkit-cli db promote-replica --replica=replica-us-west --force
 
 # La réplique devient primaire, commence à accepter les écritures
 # L'ancien primaire devient secours quand il récupère
@@ -377,19 +377,19 @@ claudient-cli db promote-replica --replica=replica-us-west --force
 **3. Vérification**
 ```bash
 # Vérifier que le nouveau primaire est sain
-claudient-cli db health --primary
+uitkit-cli db health --primary
 
 # Surveiller la réplication à partir du nouveau primaire → secours
-claudient-cli db replication-status
+uitkit-cli db replication-status
 
 # Confirmer que les opérations d'écriture reprennent
-curl -X GET http://claudient-api/metrics | grep claudient_writes_total
+curl -X GET http://uitkit-api/metrics | grep uitkit_writes_total
 ```
 
 **4. Post-incident**
 - Enquêter sur la cause première (vérifier les journaux d'il y a 10 minutes avant l'erreur)
 - Si l'ancien primaire récupère, le reconstruire à partir de la sauvegarde du nouveau primaire
-- Exécuter les vérifications de cohérence : `claudient-cli db verify-consistency`
+- Exécuter les vérifications de cohérence : `uitkit-cli db verify-consistency`
 
 ### Récupération des Défaillances de Cache
 
@@ -417,7 +417,7 @@ systemctl restart redis-server
 redis-cli FLUSHALL
 
 # Réchauffer le cache avec les données chaudes
-claudient-cli cache warmup --profile=production
+uitkit-cli cache warmup --profile=production
   ├─ Charge les drapeaux de fonctionnalité (50MB)
   ├─ Charge les données utilisateur communes (200MB)
   └─ Charge l'index de session (100MB)
@@ -434,13 +434,13 @@ La vérification de santé Consul/etcd échoue → Config obsolète (jusqu'à 5 
 **2. Récupération**
 ```bash
 # Forcer manuellement la synchronisation à partir de la source de vérité
-claudient-cli config sync --force --source=git
+uitkit-cli config sync --force --source=git
 
 # Ou redémarrer le observateur de configuration
-systemctl restart claudient-config-sync
+systemctl restart uitkit-config-sync
 
 # Vérifier que toutes les instances ont repris la nouvelle configuration
-claudient-cli config get-applied | jq '.version'
+uitkit-cli config get-applied | jq '.version'
 ```
 
 ## Surveillance & Alertes
@@ -475,7 +475,7 @@ Taux d'Erreur :
 
 ```yaml
 groups:
-  - name: claudient_ha
+  - name: uitkit_ha
     rules:
       - alert: HighReplicationLag
         expr: db_replication_lag_seconds > 5
@@ -499,17 +499,17 @@ groups:
           action: "Redémarrer immédiatement le conteneur Redis"
 
       - alert: InstanceUnhealthy
-        expr: up{job="claudient"} == 0
+        expr: up{job="uitkit"} == 0
         for: 30s
         annotations:
           summary: "L'instance {{ $labels.instance }} est EN PANNE"
           action: "K8s redémarrera automatiquement ; sinon, vérifier systemd/journaux"
 
       - alert: ReadOnlyModeActive
-        expr: claudient_read_only_mode == 1
+        expr: uitkit_read_only_mode == 1
         for: 0s
         annotations:
-          summary: "Claudient en mode LECTURE SEULE (écritures désactivées)"
+          summary: "UitKit en mode LECTURE SEULE (écritures désactivées)"
           action: "Incident P1 - appeler immédiatement le commandant d'incident"
 ```
 
@@ -522,7 +522,7 @@ Pour les déploiements critiques, maintenir un site DR chaud ou tiède.
 ```
 Site de Production (us-est)   Site DR (us-ouest)
 ┌──────────────────────┐      ┌──────────────────────┐
-│  Instance Claudient  │      │  Instance Claudient  │
+│  Instance UitKit  │      │  Instance UitKit  │
 │  + DB Primaire       │      │  + DB Réplique       │
 └──────────┬───────────┘      └──────────┬───────────┘
            │                             │
@@ -544,7 +544,7 @@ Site de Production (us-est)   Site DR (us-ouest)
 ```
 Site de Production (us-est)   Site DR (us-ouest)
 ┌──────────────────────┐      ┌──────────────────────┐
-│  Instance Claudient  │      │  Instance Claudient  │
+│  Instance UitKit  │      │  Instance UitKit  │
 │  + DB Primaire       │      │  Éteinte             │
 └──────────┬───────────┘      └──────────────────────┘
            │
@@ -571,20 +571,20 @@ TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 echo "[$TIMESTAMP] Basculement DR commencé - ID d'Incident : $INCIDENT_ID"
 
 # 1. Vérifier que le site DR est prêt
-if ! curl -f https://dr.claudient.com/health/ready > /dev/null; then
+if ! curl -f https://dr.uitkit.com/health/ready > /dev/null; then
   echo "ERREUR : Site DR pas sain, abandon du basculement"
   exit 1
 fi
 
 # 2. Promouvoir la base de données DR en primaire
 echo "Promotion de la base de données DR en primaire..."
-psql -U admin -h dr-db.internal -d claudient -c \
+psql -U admin -h dr-db.internal -d uitkit -c \
   "SELECT pg_promote();"
 
 sleep 5
 
 # 3. Vérifier que la base de données DR accepte les écritures
-if ! psql -U admin -h dr-db.internal -d claudient -c "SHOW server_version;" > /dev/null; then
+if ! psql -U admin -h dr-db.internal -d uitkit -c "SHOW server_version;" > /dev/null; then
   echo "ERREUR : Base de données DR n'accepte pas les connexions, abandon"
   exit 1
 fi
@@ -597,10 +597,10 @@ aws route53 change-resource-record-sets \
     "Changes": [{
       "Action": "UPSERT",
       "ResourceRecordSet": {
-        "Name": "claudient.company.com",
+        "Name": "uitkit.company.com",
         "Type": "CNAME",
         "TTL": 30,
-        "ResourceRecords": [{"Value": "dr.claudient.com"}]
+        "ResourceRecords": [{"Value": "dr.uitkit.com"}]
       }
     }]
   }'
@@ -609,9 +609,9 @@ aws route53 change-resource-record-sets \
 sleep 10
 
 # 6. Vérifier que le trafic flux vers DR
-REQUESTS_DR=$(curl -s https://dr.claudient.com/metrics | grep claudient_requests_total | awk '{print $2}')
+REQUESTS_DR=$(curl -s https://dr.uitkit.com/metrics | grep uitkit_requests_total | awk '{print $2}')
 sleep 5
-REQUESTS_DR_NEW=$(curl -s https://dr.claudient.com/metrics | grep claudient_requests_total | awk '{print $2}')
+REQUESTS_DR_NEW=$(curl -s https://dr.uitkit.com/metrics | grep uitkit_requests_total | awk '{print $2}')
 
 if [ "$REQUESTS_DR" -eq "$REQUESTS_DR_NEW" ]; then
   echo "ERREUR : Pas de trafic flux vers le site DR"
@@ -634,40 +634,40 @@ exit 0
 
 ```bash
 # 1. Entrer en mode maintenance sur le primaire (arrêter d'accepter les nouvelles requêtes)
-claudient-cli maintenance enable --reason="Planned failover to DR"
+uitkit-cli maintenance enable --reason="Planned failover to DR"
 
 # 2. Vider gracieusement les requêtes existantes (jusqu'à 30 secondes)
 # L'équilibreur de charge arrête d'envoyer le nouveau trafic, attend les requêtes en vol
 sleep 30
 
 # 3. Vider toutes les écritures en attente
-psql -U admin -h prod-db.internal -d claudient -c \
+psql -U admin -h prod-db.internal -d uitkit -c \
   "SELECT * FROM write_queue WHERE status='pending';" \
-  | xargs -I {} psql -U admin -h dr-db.internal -c "INSERT INTO claudient..."
+  | xargs -I {} psql -U admin -h dr-db.internal -c "INSERT INTO uitkit..."
 
 # 4. Prendre la sauvegarde finale de la base de données primaire
-pg_dump -U admin -h prod-db.internal claudient | gzip > /backups/prod-final-$(date +%s).sql.gz
+pg_dump -U admin -h prod-db.internal uitkit | gzip > /backups/prod-final-$(date +%s).sql.gz
 
 # 5. Promouvoir DR et basculer DNS (même que basculement automatisé ci-dessus)
 
 # 6. Tester le site DR complètement opérationnel
-claudient-cli health check --full
+uitkit-cli health check --full
 
 # 7. Désactiver le mode maintenance sur DR
-claudient-cli maintenance disable
+uitkit-cli maintenance disable
 ```
 
 ### Sauvegarde & Récupération
 
 ```bash
 # Sauvegarde incrémentale quotidienne vers S3
-0 3 * * * /usr/local/bin/claudient-backup.sh --type=incremental --dest=s3://claudient-backups/prod/
+0 3 * * * /usr/local/bin/uitkit-backup.sh --type=incremental --dest=s3://uitkit-backups/prod/
 
 # Sauvegarde complète hebdomadaire
-0 2 * * 0 /usr/local/bin/claudient-backup.sh --type=full --dest=s3://claudient-backups/prod/ --retain=30days
+0 2 * * 0 /usr/local/bin/uitkit-backup.sh --type=full --dest=s3://uitkit-backups/prod/ --retain=30days
 
 # Tester la restauration mensuellement (vérifier que les sauvegardes sont valides)
-0 4 1 * * /usr/local/bin/claudient-backup.sh --test-restore --backup-date=7days-ago --dest=/tmp/restore-test/
+0 4 1 * * /usr/local/bin/uitkit-backup.sh --test-restore --backup-date=7days-ago --dest=/tmp/restore-test/
 ```
 
 ## Tests & Validation
@@ -678,7 +678,7 @@ Exécutez ces tests mensuellement pour valider la configuration HA :
 
 ```bash
 # Test 1 : Tuer la base de données primaire
-kubectl delete pod claudient-db-0
+kubectl delete pod uitkit-db-0
 # Attendu : Basculement automatique vers réplique dans les 30s, zéro perte de données
 
 # Test 2 : Partition réseau (simuler une latence élevée)
@@ -688,7 +688,7 @@ tc qdisc del dev eth0 root
 # Attendu : Les disjoncteurs s'ouvrent, les requêtes se dégradent progressivement, récupération quand la latence baisse
 
 # Test 3 : Défaillance en cascade (tuer cache + base de données primaire)
-kubectl delete pod redis-0 claudient-db-0
+kubectl delete pod redis-0 uitkit-db-0
 # Attendu : Fallback vers cache mémoire, mode lecture seule, zéro défaillance en cascade
 
 # Test 4 : Panne de synchronisation de configuration
@@ -704,14 +704,14 @@ stress-ng --cpu 32 --timeout 5m &
 
 ```bash
 # 1. Vérifier l'absence de perte de données
-claudient-cli db consistency-check --compare=backup
+uitkit-cli db consistency-check --compare=backup
 
 # 2. Vérifier que toutes les métriques sont enregistrées
 curl -s http://localhost:9090/api/v1/query?query=up | jq '.data.result | length'
 # Devrait montrer toutes les instances de retour en ligne
 
 # 3. Examiner les journaux pour les défaillances en cascade
-grep -E "ERROR|WARN|circuit.*open|cascading" /var/log/claudient/*.log | tail -20
+grep -E "ERROR|WARN|circuit.*open|cascading" /var/log/uitkit/*.log | tail -20
 ```
 
 ## SLA & Cibles

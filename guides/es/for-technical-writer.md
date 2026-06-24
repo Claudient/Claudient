@@ -18,16 +18,16 @@ Eres un redactor técnico, ingeniero de documentación o developer advocate cuyo
 
 ```bash
 # Instalar todas las habilidades de Redactor Técnico
-npx claudient add skills productivity
+npx uitkit add skills productivity
 
 # O seleccionar individualmente:
-npx claudient add skill productivity/readme-generator
-npx claudient add skill productivity/runbook-generator
-npx claudient add skill productivity/adr-writer
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill productivity/api-doc-writer
-npx claudient add skill productivity/changelog-writer
-npx claudient add agents roles/changelog-narrator
+npx uitkit add skill productivity/readme-generator
+npx uitkit add skill productivity/runbook-generator
+npx uitkit add skill productivity/adr-writer
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill productivity/api-doc-writer
+npx uitkit add skill productivity/changelog-writer
+npx uitkit add agents roles/changelog-narrator
 ```
 
 ---
@@ -216,7 +216,7 @@ Produce:
 ## Plan de incorporación de 30 días (nuevos redactores técnicos)
 
 ### Semana 1 — Configuración y auditoría de documentación
-- Instalar todas las habilidades de productividad: `npx claudient add skills productivity`
+- Instalar todas las habilidades de productividad: `npx uitkit add skills productivity`
 - Ejecutar `/doc-site-builder` con clasificación Diátaxis en toda la documentación existente — identificar brechas y páginas de tipo mixto
 - Leer toda la documentación existente en tu área principal — anotar todo lo que esté desactualizado (comparar con PRs recientes)
 - Acompañar 2-3 standups de ingeniería — escuchar qué se lanzará en el próximo sprint
@@ -270,7 +270,7 @@ Si tu equipo usa OpenAPI:
 
 ```bash
 # Generar documentación a partir de la especificación
-npx claudient run api-doc-writer --input openapi.yaml --audience developers
+npx uitkit run api-doc-writer --input openapi.yaml --audience developers
 ```
 
 ### Mintlify / Docusaurus / MkDocs (plataformas de documentación)

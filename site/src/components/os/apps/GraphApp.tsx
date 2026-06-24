@@ -380,7 +380,7 @@ export function GraphApp() {
         {/* Title */}
         <div className="p-4 border-b border-[#1e2030]">
           <Eyebrow color="#a855f7">Knowledge Network</Eyebrow>
-          <h2 className="text-lg font-bold text-white mt-1">Claudient Graph</h2>
+          <h2 className="text-lg font-bold text-white mt-1">UitKit Graph</h2>
           <div className="mt-2 text-xs text-gray-400 space-y-1">
             <div>Nodes: <span className="text-purple-400 font-semibold">{stats.totalNodes}</span> (Agents: {stats.agents}, Skills: {stats.skills})</div>
             <div>Connections: <span className="text-cyan-400 font-semibold">{stats.totalLinks}</span></div>

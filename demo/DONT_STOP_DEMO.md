@@ -1,6 +1,6 @@
-# DONT_STOP_DEMO — Interactive Claudient Demo Script
+# DONT_STOP_DEMO — Interactive UitKit Demo Script
 
-> **Interactive walkthrough**: Goal → Agent dispatch → Task execution → Live metrics. Shows Claudient's autonomous agent workflows in action with video storyboard and terminal recordings.
+> **Interactive walkthrough**: Goal → Agent dispatch → Task execution → Live metrics. Shows UitKit's autonomous agent workflows in action with video storyboard and terminal recordings.
 
 ---
 
@@ -19,7 +19,7 @@
 
 **Visual**: Terminal window, Claude Code prompt visible.
 
-**Narrator**: "Claudient automates entire development workflows with autonomous agents. We're going to build, test, and deploy a feature—without stopping."
+**Narrator**: "UitKit automates entire development workflows with autonomous agents. We're going to build, test, and deploy a feature—without stopping."
 
 **On-screen display**:
 ```
@@ -42,7 +42,7 @@ asciinema rec -c "claude /demo-workflow" --rows 30 --cols 120 demo-scene-1.cast
 
 **Visual**: Agent selection menu, workflow planning interface.
 
-**Narrator**: "Claudient reads your codebase, analyzes the task, and automatically dispatches specialist agents. Here, it's spawning an i18n specialist, a test agent, and a DevOps agent in parallel."
+**Narrator**: "UitKit reads your codebase, analyzes the task, and automatically dispatches specialist agents. Here, it's spawning an i18n specialist, a test agent, and a DevOps agent in parallel."
 
 **On-screen display**:
 ```
@@ -145,7 +145,7 @@ tmux send-keys -t demo.2 "claude agent spawn devops-ci-pipeline --watch" Enter
 tmux send-keys -t demo.3 "claude agent spawn code-reviewer --watch" Enter
 
 # Record entire session
-asciinema rec -t "Claudient Parallel Agent Execution" --rows 50 --cols 180 demo-scene-3.cast
+asciinema rec -t "UitKit Parallel Agent Execution" --rows 50 --cols 180 demo-scene-3.cast
 ```
 
 ---
@@ -229,7 +229,7 @@ Creating pull request for main into main
 remote: Resolving deltas: 100% (12/12), completed with 9 local objects.
 
 ✓ Created pull request #247
-  https://github.com/UitbreidenOS/Claudient/pull/247
+  https://github.com/UitbreidenOS/UitKit/pull/247
 
 PR SUMMARY:
 ┌─────────────────────────────────────────────────────────┐
@@ -260,13 +260,13 @@ asciinema rec -c "gh pr create --title 'feat: add i18n' && gh pr view --web" dem
 
 ### Scene 6: Closing (2:50–3:00)
 
-**Visual**: Metrics dashboard, comparison overlay (with/without Claudient).
+**Visual**: Metrics dashboard, comparison overlay (with/without UitKit).
 
-**Narrator**: "Without Claudient, this would take 2-3 days and manual coordination. With autonomous agents, it's done in under 4 minutes. That's your productivity multiplier."
+**Narrator**: "Without UitKit, this would take 2-3 days and manual coordination. With autonomous agents, it's done in under 4 minutes. That's your productivity multiplier."
 
 **On-screen comparison**:
 ```
-WITHOUT CLAUDIENT                  WITH CLAUDIENT
+WITHOUT UITKIT                  WITH UITKIT
 ─────────────────────────────────  ─────────────────────────────────
 Manual work: 3 tasks               Automated: 4 agents in parallel
 - Extract strings (manual)         - i18n extraction: 2m
@@ -281,12 +281,12 @@ Error rate: ~20%                   Error rate: <1%
 
 **Call-to-action**:
 ```
-$ npm install -g claudient
-$ /plugin marketplace add UitbreidenOS/Claudient
-$ /plugin install claudient-everything@claudient
+$ npm install -g uitkit
+$ /plugin marketplace add UitbreidenOS/UitKit
+$ /plugin install uitkit-everything@uitkit
 
 Ready to automate? Start with /help or visit:
-https://github.com/UitbreidenOS/Claudient
+https://github.com/UitbreidenOS/UitKit
 ```
 
 ---
@@ -297,18 +297,18 @@ https://github.com/UitbreidenOS/Claudient
 
 ```bash
 #!/bin/bash
-# Record full 3-minute Claudient demo with all scenes
+# Record full 3-minute UitKit demo with all scenes
 
 set -e
 
 DEMO_DIR="demo/recordings"
 mkdir -p "$DEMO_DIR"
 
-echo "Starting Claudient DONT_STOP_DEMO recording..."
+echo "Starting UitKit DONT_STOP_DEMO recording..."
 
 # Scene 1: Setup
 asciinema rec \
-  --title "Claudient Demo — Scene 1: Goal Setup" \
+  --title "UitKit Demo — Scene 1: Goal Setup" \
   --idle-time-limit 0.5 \
   --rows 30 --cols 120 \
   "$DEMO_DIR/scene-1-setup.cast" \
@@ -316,31 +316,31 @@ asciinema rec \
 
 # Scene 2: Agent Dispatch
 asciinema rec \
-  --title "Claudient Demo — Scene 2: Agent Dispatch" \
+  --title "UitKit Demo — Scene 2: Agent Dispatch" \
   --idle-time-limit 0.5 \
   --rows 35 --cols 140 \
   "$DEMO_DIR/scene-2-dispatch.cast" \
   -c 'claude agent log --follow --watch=4'
 
 # Scene 3: Parallel Execution (tmux multi-pane)
-tmux new-session -d -s claudient-demo -x 180 -y 50
-tmux split-window -h -t claudient-demo
-tmux split-window -v -t claudient-demo.0
-tmux split-window -v -t claudient-demo.1
+tmux new-session -d -s uitkit-demo -x 180 -y 50
+tmux split-window -h -t uitkit-demo
+tmux split-window -v -t uitkit-demo.0
+tmux split-window -v -t uitkit-demo.1
 
 asciinema rec \
-  --title "Claudient Demo — Scene 3: Parallel Execution" \
+  --title "UitKit Demo — Scene 3: Parallel Execution" \
   --idle-time-limit 1.0 \
   --rows 50 --cols 180 \
   "$DEMO_DIR/scene-3-parallel.cast" \
-  -c 'tmux send-keys -t claudient-demo "claude agent spawn i18n-specialist --watch && \
+  -c 'tmux send-keys -t uitkit-demo "claude agent spawn i18n-specialist --watch && \
        claude agent spawn testing-agent --watch && \
        claude agent spawn devops-ci-pipeline --watch && \
        claude agent spawn code-reviewer --watch" Enter'
 
 # Scene 4: Metrics
 asciinema rec \
-  --title "Claudient Demo — Scene 4: Completion & Metrics" \
+  --title "UitKit Demo — Scene 4: Completion & Metrics" \
   --idle-time-limit 0.5 \
   --rows 55 --cols 130 \
   "$DEMO_DIR/scene-4-metrics.cast" \
@@ -348,7 +348,7 @@ asciinema rec \
 
 # Scene 5: PR Creation
 asciinema rec \
-  --title "Claudient Demo — Scene 5: PR Creation" \
+  --title "UitKit Demo — Scene 5: PR Creation" \
   --idle-time-limit 0.5 \
   --rows 40 --cols 120 \
   "$DEMO_DIR/scene-5-pr.cast" \
@@ -374,7 +374,7 @@ chmod +x demo/record-demo.sh
 # Fast 90-second version (no waits)
 
 asciinema rec -c 'bash demo/compact-demo-script.sh' \
-  --title "Claudient 90-Second Demo" \
+  --title "UitKit 90-Second Demo" \
   --rows 40 --cols 120 \
   demo/compact-demo.cast
 
@@ -448,7 +448,7 @@ jobs:
         with:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: demo/full-demo.cast
-          asset_name: claudient-demo.cast
+          asset_name: uitkit-demo.cast
           asset_content_type: application/octet-stream
 ```
 

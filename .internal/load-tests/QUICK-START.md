@@ -3,7 +3,7 @@
 ## One-Command Test Run
 
 ```bash
-cd /Users/tushar/Desktop/Claudient
+cd /Users/tushar/Desktop/UitKit
 node load-tests/swarm-sandbox-load.js --scenarios=all --report=json
 ```
 

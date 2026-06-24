@@ -1,4 +1,4 @@
-# ROLLBACK_PLAYBOOK.md — Emergency Procedures for Claudient Deployment
+# ROLLBACK_PLAYBOOK.md — Emergency Procedures for UitKit Deployment
 
 **Version:** 1.0  
 **Date:** 2026-06-22  
@@ -9,7 +9,7 @@
 
 ## Overview
 
-This playbook defines emergency rollback procedures for Claudient deployments. It covers:
+This playbook defines emergency rollback procedures for UitKit deployments. It covers:
 - Automated rollback triggers (error rate >5%, installation failures, marketplace sync loss)
 - Manual rollback CLI commands
 - Post-rollback verification steps
@@ -49,11 +49,11 @@ Triggers fire independently; any trigger initiates rollback unless manually over
 #### Trigger 1: Error Rate > 5%
 
 **Monitor:** NPM registry responses and GitHub API health  
-**Definition:** >5% of requests to `npm view claudient@latest` or GitHub release endpoint fail
+**Definition:** >5% of requests to `npm view uitkit@latest` or GitHub release endpoint fail
 
 ```bash
 # Automated check (runs every 2 minutes post-deployment, first 2 hours)
-FAILED_REQUESTS=$(curl -s -w "%{http_code}" -o /dev/null https://registry.npmjs.org/claudient/latest)
+FAILED_REQUESTS=$(curl -s -w "%{http_code}" -o /dev/null https://registry.npmjs.org/uitkit/latest)
 if [ $FAILED_REQUESTS -ge 500 ] || [ $FAILED_REQUESTS -eq 429 ]; then
   echo "TRIGGER: Registry unavailable (HTTP $FAILED_REQUESTS)"
   exit 1
@@ -71,14 +71,14 @@ fi
 #### Trigger 2: Installation Failure Rate > 10%
 
 **Monitor:** Installation tests and tarball integrity  
-**Definition:** >10% of fresh `npm install claudient@X.Y.Z` attempts fail
+**Definition:** >10% of fresh `npm install uitkit@X.Y.Z` attempts fail
 
 ```bash
 # Automated check (runs every 5 minutes, first 4 hours)
 for i in {1..10}; do
   TMPDIR=$(mktemp -d)
   cd "$TMPDIR"
-  npm install claudient@1.10.1 --silent 2>&1 | grep -q "ERR\|404\|timeout" && ((FAILURES++))
+  npm install uitkit@1.10.1 --silent 2>&1 | grep -q "ERR\|404\|timeout" && ((FAILURES++))
   cd /
   rm -rf "$TMPDIR"
 done
@@ -139,7 +139,7 @@ When any trigger fires 3+ times consecutively (or manually invoked), the automat
 5. **Initiates verification** — runs post-rollback checks automatically
 
 **Automated Rollback Script Location:**  
-`/Users/tushar/Desktop/Claudient/deployment/scripts/auto-rollback.sh`
+`/Users/tushar/Desktop/UitKit/deployment/scripts/auto-rollback.sh`
 
 ```bash
 #!/bin/bash
@@ -195,7 +195,7 @@ esac
 case "$OPTION" in
   A)
     log "Executing Rollback Option A: Unpublish"
-    npm unpublish "claudient@${VERSION}" --force 2>&1 | tee -a "$ROLLBACK_LOG" || {
+    npm unpublish "uitkit@${VERSION}" --force 2>&1 | tee -a "$ROLLBACK_LOG" || {
       log "ERROR: Unpublish failed"
       notify_slack "Rollback FAILED: npm unpublish failed for v${VERSION}"
       exit 1
@@ -204,8 +204,8 @@ case "$OPTION" in
     ;;
   B)
     log "Executing Rollback Option B: Yank & Mark Deprecated"
-    npm dist-tag rm "claudient@${VERSION}" 2>&1 | tee -a "$ROLLBACK_LOG" || true
-    npm deprecate "claudient@${VERSION}" "Version v${VERSION} has critical issues. Please use v1.10.0." 2>&1 | tee -a "$ROLLBACK_LOG" || {
+    npm dist-tag rm "uitkit@${VERSION}" 2>&1 | tee -a "$ROLLBACK_LOG" || true
+    npm deprecate "uitkit@${VERSION}" "Version v${VERSION} has critical issues. Please use v1.10.0." 2>&1 | tee -a "$ROLLBACK_LOG" || {
       log "ERROR: Deprecation failed"
       notify_slack "Rollback PARTIAL: Yank succeeded but deprecation may have failed"
     }
@@ -215,7 +215,7 @@ case "$OPTION" in
     log "Executing Rollback Option C: GitHub-only (keep NPM)"
     git push origin --delete "v${VERSION}" 2>&1 | tee -a "$ROLLBACK_LOG" || true
     gh release delete "v${VERSION}" -y 2>&1 | tee -a "$ROLLBACK_LOG" || true
-    npm deprecate "claudient@${VERSION}" "Marketplace rollback in progress. Use v1.10.0." 2>&1 | tee -a "$ROLLBACK_LOG" || true
+    npm deprecate "uitkit@${VERSION}" "Marketplace rollback in progress. Use v1.10.0." 2>&1 | tee -a "$ROLLBACK_LOG" || true
     notify_slack "Rollback SUCCESS: v${VERSION} GitHub release/tag deleted, NPM kept (deprecated)"
     ;;
   *)
@@ -228,7 +228,7 @@ log "=== ROLLBACK COMPLETE ==="
 log "Initiating post-rollback verification..."
 
 # Run verification checks (see Post-Rollback Verification section)
-bash /Users/tushar/Desktop/Claudient/deployment/scripts/verify-rollback.sh "$VERSION" 2>&1 | tee -a "$ROLLBACK_LOG"
+bash /Users/tushar/Desktop/UitKit/deployment/scripts/verify-rollback.sh "$VERSION" 2>&1 | tee -a "$ROLLBACK_LOG"
 
 log "Rollback audit trail saved to: $ROLLBACK_LOG"
 ```
@@ -238,7 +238,7 @@ log "Rollback audit trail saved to: $ROLLBACK_LOG"
 # In deployment CI/CD system or cron scheduler:
 # Run this monitoring loop for 4 hours post-deployment
 (while true; do
-  /Users/tushar/Desktop/Claudient/deployment/scripts/auto-rollback-monitor.sh "1.10.1" || true
+  /Users/tushar/Desktop/UitKit/deployment/scripts/auto-rollback-monitor.sh "1.10.1" || true
   sleep 120  # Check every 2 minutes
 done) &
 ```
@@ -251,23 +251,23 @@ done) &
 
 ```bash
 # OPTION A: Unpublish (recommended if <24 hours and no major dependents)
-claudient rollback --feature=1.10.1 --option=A --force
+uitkit rollback --feature=1.10.1 --option=A --force
 
 # OPTION B: Yank (recommended if already installed widely)
-claudient rollback --feature=1.10.1 --option=B
+uitkit rollback --feature=1.10.1 --option=B
 
 # OPTION C: GitHub-only (recommended if NPM is critical)
-claudient rollback --feature=1.10.1 --option=C
+uitkit rollback --feature=1.10.1 --option=C
 
 # Get help
-claudient rollback --help
+uitkit rollback --help
 ```
 
 ### CLI Implementation
 
-The `claudient rollback` command is implemented in the Claude Code CLI suite:
+The `uitkit rollback` command is implemented in the Claude Code CLI suite:
 
-**File:** `/Users/tushar/Desktop/Claudient/src/commands/rollback.ts`
+**File:** `/Users/tushar/Desktop/UitKit/src/commands/rollback.ts`
 
 ```typescript
 import { Command } from '@oclif/core';
@@ -287,9 +287,9 @@ export default class RollbackCommand extends Command {
   static description = 'Emergency rollback for deployed features';
 
   static examples = [
-    '$ claudient rollback --feature=1.10.1 --option=A',
-    '$ claudient rollback --feature=1.10.1 --option=B --verify',
-    '$ claudient rollback --feature=1.10.1 --option=C --dry-run',
+    '$ uitkit rollback --feature=1.10.1 --option=A',
+    '$ uitkit rollback --feature=1.10.1 --option=B --verify',
+    '$ uitkit rollback --feature=1.10.1 --option=C --dry-run',
   ];
 
   static flags = {
@@ -314,7 +314,7 @@ export default class RollbackCommand extends Command {
     
     if (!opts.force && !opts.dryRun) {
       const confirm = await this.confirm(
-        `⚠️  EMERGENCY ROLLBACK: claudient@${opts.feature}\n` +
+        `⚠️  EMERGENCY ROLLBACK: uitkit@${opts.feature}\n` +
         `Option ${opts.option} will ${this.getOptionDescription(opts.option)}\n` +
         `Continue? (yes/no)`
       );
@@ -324,7 +324,7 @@ export default class RollbackCommand extends Command {
       }
     }
 
-    this.log(chalk.bold(`\n🚨 Initiating rollback for claudient@${opts.feature}...\n`));
+    this.log(chalk.bold(`\n🚨 Initiating rollback for uitkit@${opts.feature}...\n`));
 
     const auditTrail = {
       timestamp: new Date().toISOString(),
@@ -332,7 +332,7 @@ export default class RollbackCommand extends Command {
       option: opts.option,
       user: process.env.USER || 'unknown',
       dryRun: opts.dryRun,
-      command: `claudient rollback --feature=${opts.feature} --option=${opts.option}`,
+      command: `uitkit rollback --feature=${opts.feature} --option=${opts.option}`,
       steps: [] as string[],
       errors: [] as string[],
     };
@@ -374,12 +374,12 @@ export default class RollbackCommand extends Command {
     trail.steps.push('Step 1: Verify npm login');
     this.exec('npm whoami', opts.dryRun);
 
-    trail.steps.push(`Step 2: Unpublish claudient@${opts.feature}`);
-    const cmd = `npm unpublish claudient@${opts.feature} --force`;
+    trail.steps.push(`Step 2: Unpublish uitkit@${opts.feature}`);
+    const cmd = `npm unpublish uitkit@${opts.feature} --force`;
     this.exec(cmd, opts.dryRun);
 
     trail.steps.push('Step 3: Verify unpublish succeeded');
-    this.exec(`npm view claudient@latest`, opts.dryRun);
+    this.exec(`npm view uitkit@latest`, opts.dryRun);
 
     trail.steps.push('Step 4: Notify team (Slack)');
     await this.notifySlack(`v${opts.feature} unpublished from NPM`);
@@ -389,12 +389,12 @@ export default class RollbackCommand extends Command {
     this.log(chalk.bold('Option B: Yank Release (Keep in Registry)'));
     this.log('Action: Remove from latest tag, mark deprecated\n');
 
-    trail.steps.push(`Step 1: Yank claudient@${opts.feature}`);
-    this.exec(`npm dist-tag rm claudient@${opts.feature}`, opts.dryRun);
+    trail.steps.push(`Step 1: Yank uitkit@${opts.feature}`);
+    this.exec(`npm dist-tag rm uitkit@${opts.feature}`, opts.dryRun);
 
     trail.steps.push(`Step 2: Mark deprecated`);
     const msg = `Version v${opts.feature} has critical issues. Please use v1.10.0.`;
-    this.exec(`npm deprecate claudient@${opts.feature} "${msg}"`, opts.dryRun);
+    this.exec(`npm deprecate uitkit@${opts.feature} "${msg}"`, opts.dryRun);
 
     trail.steps.push(`Step 3: Publish hotfix v1.10.2`);
     this.log(chalk.yellow('⚠️  Manual step required: Prepare and publish v1.10.2 hotfix'));
@@ -415,7 +415,7 @@ export default class RollbackCommand extends Command {
 
     trail.steps.push(`Step 3: Mark NPM version deprecated`);
     const msg = `Marketplace rollback in progress. Use v1.10.0.`;
-    this.exec(`npm deprecate claudient@${opts.feature} "${msg}"`, opts.dryRun);
+    this.exec(`npm deprecate uitkit@${opts.feature} "${msg}"`, opts.dryRun);
 
     trail.steps.push('Step 4: Revert marketplace.json if needed');
     this.log(chalk.yellow('⚠️  Manual step: Revert marketplace.json commit if present'));
@@ -426,10 +426,10 @@ export default class RollbackCommand extends Command {
 
   private async verifyRollback(version: string): Promise<void> {
     const checks = [
-      { name: 'NPM registry', cmd: `npm info claudient@latest | grep "latest"` },
-      { name: 'Installation test', cmd: `cd /tmp && npm install claudient@1.10.0 --silent` },
+      { name: 'NPM registry', cmd: `npm info uitkit@latest | grep "latest"` },
+      { name: 'Installation test', cmd: `cd /tmp && npm install uitkit@1.10.0 --silent` },
       { name: 'Git tag removal', cmd: `git ls-remote --tags origin v${version} | wc -l` },
-      { name: 'GitHub release removal', cmd: `curl -s -o /dev/null -w "%{http_code}" https://github.com/UitbreidenOS/Claudient/releases/tag/v${version}` },
+      { name: 'GitHub release removal', cmd: `curl -s -o /dev/null -w "%{http_code}" https://github.com/UitbreidenOS/UitKit/releases/tag/v${version}` },
     ];
 
     for (const check of checks) {
@@ -514,12 +514,12 @@ Bug detected in 1.10.1?
 
 ```bash
 # On-call: CLI bug detected in 1.10.1, causes crash
-CLIVersion=$(npm info claudient@latest | grep '"version"')
-ErrorRate=$(curl -s https://registry.npmjs.org/claudient/1.10.1 | jq '.error' | wc -l)
+CLIVersion=$(npm info uitkit@latest | grep '"version"')
+ErrorRate=$(curl -s https://registry.npmjs.org/uitkit/1.10.1 | jq '.error' | wc -l)
 
 if [ "$ErrorRate" -gt "5" ]; then
   echo "✓ Trigger: Error rate >5%"
-  claudient rollback --feature=1.10.1 --option=A --force
+  uitkit rollback --feature=1.10.1 --option=A --force
 fi
 ```
 
@@ -527,7 +527,7 @@ fi
 
 ### Scenario 2: Installation Failures (>10% failure rate)
 
-**Trigger:** Fresh `npm install claudient@1.10.1` fails in >10% of test environments  
+**Trigger:** Fresh `npm install uitkit@1.10.1` fails in >10% of test environments  
 **Severity:** SEV1 (Immediate)  
 **Likely Causes:** Missing files, broken symlinks, corrupted tarball  
 **Decision Tree:**
@@ -561,7 +561,7 @@ FAILURES=0
 for i in {1..10}; do
   TMPDIR=$(mktemp -d)
   cd "$TMPDIR"
-  if ! npm install claudient@1.10.1 --silent 2>&1 | grep -q "ERR\|404"; then
+  if ! npm install uitkit@1.10.1 --silent 2>&1 | grep -q "ERR\|404"; then
     ((FAILURES++))
   fi
   cd / && rm -rf "$TMPDIR"
@@ -571,7 +571,7 @@ if [ $FAILURES -ge 1 ]; then
   echo "⚠️  Installation failures detected: $FAILURES/10"
   # Determine root cause
   npm pack --dry-run 2>&1 | grep -q "warn\|error" && OPTION="B" || OPTION="A"
-  claudient rollback --feature=1.10.1 --option=$OPTION --force --verify
+  uitkit rollback --feature=1.10.1 --option=$OPTION --force --verify
 fi
 ```
 
@@ -627,7 +627,7 @@ if [ $RETRY_COUNT -eq $MAX_RETRIES ]; then
   echo "✗ Marketplace sync failed after 10 minutes"
   # Validate marketplace.json schema
   npx json-schema-validator .claude-plugin/marketplace.json 2>&1 | grep -q "error" && OPTION="C"
-  claudient rollback --feature=1.10.1 --option=$OPTION --force --verify
+  uitkit rollback --feature=1.10.1 --option=$OPTION --force --verify
 fi
 ```
 
@@ -668,7 +668,7 @@ if [ $ISSUE_COUNT -ge 5 ]; then
   read -p "Execute Rollback Option B? (y/n) " -n 1 -r
   echo
   if [[ $REPLY =~ ^[Yy]$ ]]; then
-    claudient rollback --feature=1.10.1 --option=B --force
+    uitkit rollback --feature=1.10.1 --option=B --force
   fi
 fi
 ```
@@ -679,7 +679,7 @@ fi
 
 ### Verification Script
 
-**File:** `/Users/tushar/Desktop/Claudient/deployment/scripts/verify-rollback.sh`
+**File:** `/Users/tushar/Desktop/UitKit/deployment/scripts/verify-rollback.sh`
 
 ```bash
 #!/bin/bash
@@ -691,7 +691,7 @@ VERSION=$1  # e.g., "1.10.1"
 PREVIOUS_VERSION=$2  # e.g., "1.10.0" (defaults to last stable)
 
 if [ -z "$PREVIOUS_VERSION" ]; then
-  PREVIOUS_VERSION=$(npm view claudient@latest version)
+  PREVIOUS_VERSION=$(npm view uitkit@latest version)
   echo "Using previous stable version: $PREVIOUS_VERSION"
 fi
 
@@ -719,16 +719,16 @@ echo ""
 
 # 1. NPM Registry Checks
 echo "[1/5] NPM Registry"
-check "Latest is $PREVIOUS_VERSION" "npm view claudient@latest version | grep -q $PREVIOUS_VERSION"
-check "Previous version exists" "npm view claudient@$PREVIOUS_VERSION > /dev/null"
-check "Rolled-back version unavailable" "! npm info claudient@$VERSION 2>&1 | grep -q 'published'"
+check "Latest is $PREVIOUS_VERSION" "npm view uitkit@latest version | grep -q $PREVIOUS_VERSION"
+check "Previous version exists" "npm view uitkit@$PREVIOUS_VERSION > /dev/null"
+check "Rolled-back version unavailable" "! npm info uitkit@$VERSION 2>&1 | grep -q 'published'"
 
 # 2. Installation Test
 echo "[2/5] Installation"
 TMPDIR=$(mktemp -d)
 cd "$TMPDIR"
-check "Install stable version" "npm install claudient@$PREVIOUS_VERSION --silent"
-check "CLI executes" "npx claudient@$PREVIOUS_VERSION list > /dev/null"
+check "Install stable version" "npm install uitkit@$PREVIOUS_VERSION --silent"
+check "CLI executes" "npx uitkit@$PREVIOUS_VERSION list > /dev/null"
 cd / && rm -rf "$TMPDIR"
 
 # 3. GitHub Checks
@@ -740,8 +740,8 @@ check "Git tag removed for rollback" "! git ls-remote --tags origin v$VERSION | 
 
 # 4. Package Integrity
 echo "[4/5] Package Integrity"
-check "Tarball valid" "npm pack claudient@$PREVIOUS_VERSION --dry-run > /dev/null"
-check "No broken symlinks" "! find node_modules/claudient -type l -xtype l 2>/dev/null | grep -q ."
+check "Tarball valid" "npm pack uitkit@$PREVIOUS_VERSION --dry-run > /dev/null"
+check "No broken symlinks" "! find node_modules/uitkit -type l -xtype l 2>/dev/null | grep -q ."
 
 # 5. Marketplace (if applicable)
 echo "[5/5] Marketplace"
@@ -771,10 +771,10 @@ fi
 
 ```bash
 # Automatic (after rollback)
-bash /Users/tushar/Desktop/Claudient/deployment/scripts/verify-rollback.sh 1.10.1 1.10.0
+bash /Users/tushar/Desktop/UitKit/deployment/scripts/verify-rollback.sh 1.10.1 1.10.0
 
 # Manual (on-demand)
-claudient rollback --feature=1.10.1 --option=A --verify
+uitkit rollback --feature=1.10.1 --option=A --verify
 ```
 
 ---
@@ -790,7 +790,7 @@ claudient rollback --feature=1.10.1 --option=A --verify
 **Severity:** SEV1
 
 ```
-⚠️ INCIDENT: Claudient v1.10.1 Rollback
+⚠️ INCIDENT: UitKit v1.10.1 Rollback
 
 We've detected and immediately rolled back v1.10.1 due to [ISSUE].
 
@@ -799,9 +799,9 @@ We've detected and immediately rolled back v1.10.1 due to [ISSUE].
   • Users who HAVE installed v1.10.1: Please downgrade to v1.10.0
   
 💾 To downgrade:
-  npm install -g claudient@1.10.0
+  npm install -g uitkit@1.10.0
   # or
-  npm install claudient@1.10.0 --save
+  npm install uitkit@1.10.0 --save
 
 🔧 What happened:
   [Brief technical explanation]
@@ -924,21 +924,21 @@ Questions? Reply in thread or DM @on-call-engineer.
 
 VERSION="1.10.1"
 
-echo "🏥 Claudient v$VERSION Health Check — $(date)"
+echo "🏥 UitKit v$VERSION Health Check — $(date)"
 echo ""
 
 # 1. NPM Status
 echo "1. NPM Registry"
-npm info claudient@latest 2>&1 | grep "latest" && echo "   ✓ Accessible" || echo "   ✗ Error"
+npm info uitkit@latest 2>&1 | grep "latest" && echo "   ✓ Accessible" || echo "   ✗ Error"
 
 # 2. Installation Test
 echo "2. Installation Test"
-cd /tmp && mkdir -p test-$RANDOM && cd $_ && npm install claudient@$VERSION --silent 2>&1 > /dev/null && echo "   ✓ Success" || echo "   ✗ Failed"
+cd /tmp && mkdir -p test-$RANDOM && cd $_ && npm install uitkit@$VERSION --silent 2>&1 > /dev/null && echo "   ✓ Success" || echo "   ✗ Failed"
 cd / && rm -rf /tmp/test-* 2>/dev/null
 
 # 3. CLI Smoke Test
 echo "3. CLI Smoke Test"
-npx claudient@$VERSION list 2>&1 > /dev/null && echo "   ✓ Executable" || echo "   ✗ Crash"
+npx uitkit@$VERSION list 2>&1 > /dev/null && echo "   ✓ Executable" || echo "   ✗ Crash"
 
 # 4. GitHub Visibility
 echo "4. GitHub Release"
@@ -961,7 +961,7 @@ echo "Health check complete. Results logged to: /tmp/health-check-$(date +%s).lo
 **File:** `/tmp/incident-report-[version]-[timestamp].md`
 
 ```markdown
-# Incident Report: Claudient v1.10.1
+# Incident Report: UitKit v1.10.1
 
 **Incident ID:** INC-2026-06-22-001  
 **Date/Time:** 2026-06-22T14:30:00Z  
@@ -1049,15 +1049,15 @@ VERSION="1.10.1"
 REPORT="/tmp/incident-report-${VERSION}-$(date +%s).md"
 
 cat > "$REPORT" << 'EOF'
-# Incident Report: Claudient v1.10.1
+# Incident Report: UitKit v1.10.1
 
 **Incident ID:** INC-2026-06-22-001
 [...continues with template...]
 EOF
 
 # Store in artifact repository
-mkdir -p /Users/tushar/Desktop/Claudient/deployment/incidents
-cp "$REPORT" /Users/tushar/Desktop/Claudient/deployment/incidents/
+mkdir -p /Users/tushar/Desktop/UitKit/deployment/incidents
+cp "$REPORT" /Users/tushar/Desktop/UitKit/deployment/incidents/
 
 echo "Incident report created: $REPORT"
 ```
@@ -1136,7 +1136,7 @@ Critical Security     A        2m    Remove ASAP from registry
 
 ### Executing Rollback
 
-- [ ] Run `claudient rollback --feature=X --option=Y --verify`
+- [ ] Run `uitkit rollback --feature=X --option=Y --verify`
 - [ ] Monitor command output for errors
 - [ ] Verify post-rollback checks pass
 - [ ] Confirm rollback completed <10 min from trigger

@@ -1,12 +1,12 @@
 # Gids voor afhankelijkheidsgrafiek van vaardigheden
 
-Deze gids legt uit hoe u de relaties tussen vaardigheden en agenten in Claudient kunt analyseren en visualiseren met behulp van de afhankelijkheidsgrafiek-tools.
+Deze gids legt uit hoe u de relaties tussen vaardigheden en agenten in UitKit kunt analyseren en visualiseren met behulp van de afhankelijkheidsgrafiek-tools.
 
 ---
 
 ## Overzicht
 
-De Claudient-repository is een netwerk van vaardigheden en agenten. Na verloop van tijd verwijzen vaardigheden naar elkaar — hetzij op naam, functionaliteit of context. Het begrijpen van deze afhankelijkheden helpt u om:
+De UitKit-repository is een netwerk van vaardigheden en agenten. Na verloop van tijd verwijzen vaardigheden naar elkaar — hetzij op naam, functionaliteit of context. Het begrijpen van deze afhankelijkheden helpt u om:
 
 - **Clusters identificeren**: welke vaardigheden werken samen
 - **Weesjes opsporen**: vaardigheden waar niemand naar verwijst (kandidaten voor archivering)
@@ -226,7 +226,7 @@ De `skill-composition` gids verwijst naar vier kernvaardigheden. U kent nu het l
 
 ## Probleemoplossing
 
-**Grafiek is leeg of heeft zeer weinig randen**: Zorg ervoor dat u vanaf de repository root (`/Users/tushar/Desktop/Claudient`) bent. Het script zoekt naar `skills/` en `agents/` relatief ten opzichte van de repository root.
+**Grafiek is leeg of heeft zeer weinig randen**: Zorg ervoor dat u vanaf de repository root (`/Users/tushar/Desktop/UitKit`) bent. Het script zoekt naar `skills/` en `agents/` relatief ten opzichte van de repository root.
 
 **Onwaar positieven (onjuist gedetecteerde verwijzingen)**: De overeenkomst is niet-hoofdlettergevoelig en gebruikt woordgrenzen. Strings zoals "agent" komen overeen met "agent-handoff" (correct), maar zouden ook overeen kunnen komen met "agent_supervisor" als u niet voorzichtig bent. Controleer de werkelijke bestandsinhoud van de vaardigheid om te bevestigen dat de verwijzing opzettelijk is.
 

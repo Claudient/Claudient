@@ -1,6 +1,6 @@
-# Niveaux de Certification de Stack Claudient
+# Niveaux de Certification de Stack UitKit
 
-Ce document définit les niveaux de certification pour les stacks du Marketplace Claudient. Les stacks certifiées ont répondu à des normes de qualité quantifiées et des engagements de maintenance.
+Ce document définit les niveaux de certification pour les stacks du Marketplace UitKit. Les stacks certifiées ont répondu à des normes de qualité quantifiées et des engagements de maintenance.
 
 ## Niveaux de Certification
 
@@ -58,7 +58,7 @@ Ce document définit les niveaux de certification pour les stacks du Marketplace
 - Respecte toutes les exigences du niveau Argent
 - Minimum 200 installations sur 180 jours
 - Note utilisateur moyenne de 4.5 ou plus
-- Approbation du responsable officiel (membre officiel de l'équipe Claudient ou responsable communautaire vérifié avec antécédents)
+- Approbation du responsable officiel (membre officiel de l'équipe UitKit ou responsable communautaire vérifié avec antécédents)
 - Documentation et exemples complets
 - Support multilingue (minimum : anglais + 1 langue supplémentaire)
 

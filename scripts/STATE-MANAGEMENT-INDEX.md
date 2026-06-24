@@ -364,7 +364,7 @@ Test categories:
 
 - dont-stop-engine.js - Task DAG execution
 - dont-stop-agent-pool.js - Agent pool management
-- claudient-dont-stop.js - CLI interface
+- uitkit-dont-stop.js - CLI interface
 
 ## Version History
 
@@ -374,5 +374,5 @@ Test categories:
 
 ## License & Attribution
 
-Part of Claudient dont-stop workflows system.
+Part of UitKit dont-stop workflows system.
 Built for autonomous goal execution with distributed agent coordination.

@@ -446,14 +446,14 @@ great_expectations/uncommitted/
 .DS_Store
 EOF
 
-# Installation des compétences Claudient
-npx claudient add skill data-ml/de/stakeholder-report
-npx claudient add skill data-ml/dbt-model-builder
-npx claudient add skill data-ml/ge-suite-authoring
-npx claudient add skill data-ml/airflow-dag-builder
-npx claudient add skill data-ml/sql-query-optimizer
-npx claudient add skill git/pr-description
-npx claudient add skill productivity/test-generator
+# Installation des compétences UitKit
+npx uitkit add skill data-ml/de/stakeholder-report
+npx uitkit add skill data-ml/dbt-model-builder
+npx uitkit add skill data-ml/ge-suite-authoring
+npx uitkit add skill data-ml/airflow-dag-builder
+npx uitkit add skill data-ml/sql-query-optimizer
+npx uitkit add skill git/pr-description
+npx uitkit add skill productivity/test-generator
 
 echo "Initialisation du pipeline de données terminée. Prochaines étapes :"
 echo "  1. cp .env.example .env && renseigner AIRFLOW_FERNET_KEY, WAREHOUSE_URL, etc."
@@ -814,14 +814,14 @@ Sur PR (dbt-ci.yml) :
 ## Compétences à installer
 
 ```bash
-npx claudient add skill data-ml/dbt-model-builder
-npx claudient add skill data-ml/ge-suite-authoring
-npx claudient add skill data-ml/airflow-dag-builder
-npx claudient add skill data-ml/sql-query-optimizer
-npx claudient add skill data-ml/de/stakeholder-report
-npx claudient add skill productivity/test-generator
-npx claudient add skill git/pr-description
-npx claudient add skill devops-infra/de/oncall-runbook
+npx uitkit add skill data-ml/dbt-model-builder
+npx uitkit add skill data-ml/ge-suite-authoring
+npx uitkit add skill data-ml/airflow-dag-builder
+npx uitkit add skill data-ml/sql-query-optimizer
+npx uitkit add skill data-ml/de/stakeholder-report
+npx uitkit add skill productivity/test-generator
+npx uitkit add skill git/pr-description
+npx uitkit add skill devops-infra/de/oncall-runbook
 ```
 
 ## Liens connexes

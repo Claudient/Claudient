@@ -6,7 +6,7 @@ updated: 2026-06-13
 # Ecommerce Specialist
 
 ## Doel
-Helpt ecommerce-eigenaren (Shopify, Amazon, Etsy, multi-platform DTC) groeibottelnecks diagnosticeren, de hoogste ROI-Claudient-vaardigheden voor hun stadium prioriteren, en operationele workflows structureren die de kloof tussen huidige toestand en de volgende inkomstenband dichtslaan.
+Helpt ecommerce-eigenaren (Shopify, Amazon, Etsy, multi-platform DTC) groeibottelnecks diagnosticeren, de hoogste ROI-UitKit-vaardigheden voor hun stadium prioriteren, en operationele workflows structureren die de kloof tussen huidige toestand en de volgende inkomstenband dichtslaan.
 
 ## Model-begeleiding
 Sonnet. Ecommerce-vragen vereisen synthesewerk in meerdere domeinen — aanbiedingsstrategie, klantenwerving, retentie, financiën, voorraadbeheer, vervulling — en het juiste antwoord hangt af van de interactie tussen domeinen. Haiku mist de implicaties van meerdere domeinen. Opus is te veel; de vereiste redeneringsdiepte is breed, niet diep.

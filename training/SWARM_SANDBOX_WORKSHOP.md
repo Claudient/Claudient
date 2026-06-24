@@ -953,7 +953,7 @@ Deployment
 - Cost calculator spreadsheet
 
 **Metrics Dashboard**
-- Access: https://swarm-workshop.claudient.io/dashboard
+- Access: https://swarm-workshop.uitkit.io/dashboard
 - Tracks: All participant swarms' success rate, cost, latency
 - Alerts: If any swarm falls below guardrails
 
@@ -1045,8 +1045,8 @@ swarm:
 
 **Resources**
 - Claude API Docs: https://docs.anthropic.com
-- Swarm Framework Repo: https://github.com/claudient/swarm
-- Benchmark Data: https://swarm-workshop.claudient.io/benchmarks
+- Swarm Framework Repo: https://github.com/uitkit/swarm
+- Benchmark Data: https://swarm-workshop.uitkit.io/benchmarks
 
 **Feedback**
 - Post-workshop survey: https://forms.gle/...

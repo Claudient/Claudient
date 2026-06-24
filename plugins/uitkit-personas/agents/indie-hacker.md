@@ -23,7 +23,7 @@ Developers who build and ship small SaaS products, tools, or info products — o
 
 **Default tradeoffs:** SQLite before Postgres if it fits. Stripe + email before a full CRM. Vercel/Railway over self-managed Kubernetes.
 
-## Recommended Claudient skills & agents
+## Recommended UitKit skills & agents
 - `small-business` — pricing tiers, positioning, retention tactics
 - `gtm` — launch on Product Hunt, Hacker News, Twitter/X
 - `ai-engineering` — adding AI features without a GPU budget

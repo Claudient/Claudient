@@ -1,22 +1,22 @@
-# Claudient Docker Containerization
+# UitKit Docker Containerization
 
-Multi-stage Docker container for Claudient — the Claude Code knowledge system. Includes health checks, monitoring endpoints, and production-ready security hardening.
+Multi-stage Docker container for UitKit — the Claude Code knowledge system. Includes health checks, monitoring endpoints, and production-ready security hardening.
 
 ## Quick Start
 
 ### Build the image
 ```bash
-docker build -t claudient:latest -f docker/Dockerfile .
+docker build -t uitkit:latest -f docker/Dockerfile .
 ```
 
 ### Run standalone container
 ```bash
 docker run -d \
-  --name claudient \
+  --name uitkit \
   -p 9000:9000 \
   -p 4321:4321 \
   -v ~/.claude:/root/.claude \
-  claudient:latest
+  uitkit:latest
 ```
 
 ### Using Docker Compose
@@ -30,7 +30,7 @@ docker-compose up -d
 | Service | Port | Purpose |
 |---------|------|---------|
 | Health Check Server | 9000 | `/health`, `/metrics`, `/ready` endpoints |
-| Dashboard (Astro) | 4321 | Web UI for Claudient management |
+| Dashboard (Astro) | 4321 | Web UI for UitKit management |
 | Alternative | 3000 | Fallback dashboard port |
 
 ## Health Check Endpoints
@@ -99,16 +99,16 @@ Kubernetes-compatible readiness probe:
 
 ## Docker Compose Features
 
-### claudient service
+### uitkit service
 - Runs health check server
 - Mounts local `.claude` directory
 - Auto-restart on failure
 - Health checks enabled
-- Network: claudient-network
+- Network: uitkit-network
 
 ### dashboard service (optional)
 - Runs Astro dev server on port 4321
-- Depends on claudient service
+- Depends on uitkit service
 - Mounts site directory for live reload
 - Development mode
 
@@ -132,7 +132,7 @@ Kubernetes-compatible readiness probe:
 ```bash
 docker run --rm \
   -v ~/.claude:/root/.claude \
-  claudient:latest \
+  uitkit:latest \
   node scripts/cli.js add skills backend
 ```
 
@@ -140,7 +140,7 @@ docker run --rm \
 ```bash
 docker run -it -p 4321:4321 \
   -v ~/.claude:/root/.claude \
-  claudient:latest \
+  uitkit:latest \
   npm run dashboard
 ```
 
@@ -148,7 +148,7 @@ docker run -it -p 4321:4321 \
 ```bash
 docker run -it \
   -v ~/.claude:/root/.claude \
-  claudient:latest \
+  uitkit:latest \
   /bin/sh
 ```
 
@@ -171,20 +171,20 @@ curl http://localhost:9000/ready
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: claudient
+  name: uitkit
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: claudient
+      app: uitkit
   template:
     metadata:
       labels:
-        app: claudient
+        app: uitkit
     spec:
       containers:
-      - name: claudient
-        image: claudient:latest
+      - name: uitkit
+        image: uitkit:latest
         ports:
         - containerPort: 9000
           name: health
@@ -219,10 +219,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: claudient
+  name: uitkit
 spec:
   selector:
-    app: claudient
+    app: uitkit
   ports:
   - name: health
     port: 9000
@@ -237,43 +237,43 @@ spec:
 
 ### Container won't start
 ```bash
-docker logs claudient
+docker logs uitkit
 ```
 
 ### Health check failing
 ```bash
 # Test health endpoint directly
-docker exec claudient curl http://localhost:9000/health
+docker exec uitkit curl http://localhost:9000/health
 
 # Check file permissions
-docker exec claudient ls -la /app/scripts/cli.js
+docker exec uitkit ls -la /app/scripts/cli.js
 ```
 
 ### High memory usage
 ```bash
 # Check Node process memory
-docker exec claudient ps aux
+docker exec uitkit ps aux
 
 # View memory stats
-docker stats claudient
+docker stats uitkit
 ```
 
 ### Port conflicts
 Map to different host ports:
 ```bash
-docker run -p 19000:9000 -p 14321:4321 claudient:latest
+docker run -p 19000:9000 -p 14321:4321 uitkit:latest
 ```
 
 ## Performance Tuning
 
 ### Increase memory limit
 ```bash
-docker run -m 2g claudient:latest
+docker run -m 2g uitkit:latest
 ```
 
 ### CPU limits
 ```bash
-docker run --cpus 2 claudient:latest
+docker run --cpus 2 uitkit:latest
 ```
 
 ### Production settings
@@ -282,7 +282,7 @@ docker run \
   -e NODE_ENV=production \
   --cpus 2 \
   -m 1g \
-  claudient:latest
+  uitkit:latest
 ```
 
 ## Building for ARM64 (Apple Silicon, etc.)
@@ -290,7 +290,7 @@ docker run \
 ```bash
 docker buildx build \
   --platform linux/amd64,linux/arm64 \
-  -t claudient:latest \
+  -t uitkit:latest \
   -f docker/Dockerfile \
   --push .
 ```
@@ -299,15 +299,15 @@ docker buildx build \
 
 ### GitHub Actions
 ```yaml
-- name: Build Claudient Docker image
+- name: Build UitKit Docker image
   run: |
-    docker build -t claudient:${{ github.sha }} \
+    docker build -t uitkit:${{ github.sha }} \
       -f docker/Dockerfile .
     
 - name: Test container
   run: |
     docker run --rm \
-      claudient:${{ github.sha }} \
+      uitkit:${{ github.sha }} \
       npm test
 ```
 
@@ -317,20 +317,20 @@ build_image:
   stage: build
   image: docker:latest
   script:
-    - docker build -t claudient:$CI_COMMIT_SHA -f docker/Dockerfile .
-    - docker run --rm claudient:$CI_COMMIT_SHA npm test
+    - docker build -t uitkit:$CI_COMMIT_SHA -f docker/Dockerfile .
+    - docker run --rm uitkit:$CI_COMMIT_SHA npm test
 ```
 
 ## Cleanup
 
 ### Remove container
 ```bash
-docker rm -f claudient
+docker rm -f uitkit
 ```
 
 ### Remove image
 ```bash
-docker rmi claudient:latest
+docker rmi uitkit:latest
 ```
 
 ### Clean up all
@@ -340,9 +340,9 @@ docker-compose down -v
 
 ## License
 
-Same as Claudient: AGPL-3.0-or-later AND CC-BY-SA-4.0
+Same as UitKit: AGPL-3.0-or-later AND CC-BY-SA-4.0
 
 ## Support
 
-- GitHub Issues: https://github.com/UitbreidenOS/Claudient/issues
-- Documentation: https://github.com/UitbreidenOS/Claudient/blob/main/README.md
+- GitHub Issues: https://github.com/UitbreidenOS/UitKit/issues
+- Documentation: https://github.com/UitbreidenOS/UitKit/blob/main/README.md

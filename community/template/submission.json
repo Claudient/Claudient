@@ -1,7 +1,7 @@
 {
   "name": "stack-template",
   "displayName": "Stack Template",
-  "description": "A template showing the structure and fields required for community stack submissions to Claudient. Replace all [EDIT ME] fields with your actual stack information.",
+  "description": "A template showing the structure and fields required for community stack submissions to UitKit. Replace all [EDIT ME] fields with your actual stack information.",
   "category": "Other",
   "tags": [
     "template",

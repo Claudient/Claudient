@@ -268,15 +268,15 @@ build:
 	docker build -f docker/Dockerfile -t rest-api-service:local .
 EOF
 
-# Installation des skills Claudient
-npx claudient add skill backend/python/fastapi-crud
-npx claudient add skill backend/python/sqlalchemy-patterns
-npx claudient add skill backend/python/celery-task
-npx claudient add skill backend/auth/jwt-api-key
-npx claudient add skill backend/python/alembic-migration
-npx claudient add skill productivity/test-generator
-npx claudient add skill productivity/security-audit
-npx claudient add skill git/pr-description
+# Installation des skills UitKit
+npx uitkit add skill backend/python/fastapi-crud
+npx uitkit add skill backend/python/sqlalchemy-patterns
+npx uitkit add skill backend/python/celery-task
+npx uitkit add skill backend/auth/jwt-api-key
+npx uitkit add skill backend/python/alembic-migration
+npx uitkit add skill productivity/test-generator
+npx uitkit add skill productivity/security-audit
+npx uitkit add skill git/pr-description
 
 echo "REST API service scaffold complete. Next: cp .env.example .env && make dev"
 ```
@@ -522,15 +522,15 @@ Toutes les variables requises se trouvent dans `.env.example`. Les essentielles 
 ## Skills à installer
 
 ```bash
-npx claudient add skill backend/python/fastapi-crud
-npx claudient add skill backend/python/sqlalchemy-patterns
-npx claudient add skill backend/python/celery-task
-npx claudient add skill backend/auth/jwt-api-key
-npx claudient add skill backend/python/alembic-migration
-npx claudient add skill backend/python/pydantic-v2
-npx claudient add skill productivity/test-generator
-npx claudient add skill productivity/security-audit
-npx claudient add skill git/pr-description
+npx uitkit add skill backend/python/fastapi-crud
+npx uitkit add skill backend/python/sqlalchemy-patterns
+npx uitkit add skill backend/python/celery-task
+npx uitkit add skill backend/auth/jwt-api-key
+npx uitkit add skill backend/python/alembic-migration
+npx uitkit add skill backend/python/pydantic-v2
+npx uitkit add skill productivity/test-generator
+npx uitkit add skill productivity/security-audit
+npx uitkit add skill git/pr-description
 ```
 
 ## Liens utiles

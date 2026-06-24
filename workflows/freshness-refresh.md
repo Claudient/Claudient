@@ -6,7 +6,7 @@ updated: 2026-06-15
 
 # Freshness Refresh Workflow
 
-Quarterly content maintenance sprint — systematically audit Claudient files for staleness, spawn review agents per category, and refresh stale content with updated information and frontmatter.
+Quarterly content maintenance sprint — systematically audit UitKit files for staleness, spawn review agents per category, and refresh stale content with updated information and frontmatter.
 
 ## When to use
 

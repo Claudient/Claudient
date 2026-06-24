@@ -65,7 +65,7 @@ Chaque stack doit inclure un fichier `CLAUDE.md` à la racine. Il définit la po
 
 ## Normes des compétences
 
-Chaque compétence doit respecter le format claudient et répondre à ces critères de qualité.
+Chaque compétence doit respecter le format uitkit et répondre à ces critères de qualité.
 
 **Format (obligatoire) :**
 ```markdown
@@ -125,7 +125,7 @@ Chaque compétence doit respecter le format claudient et répondre à ces critè
 
 ## Normes des agents
 
-Chaque agent doit respecter le format claudient et répondre à ces critères de qualité.
+Chaque agent doit respecter le format uitkit et répondre à ces critères de qualité.
 
 **Format (obligatoire) :**
 ```markdown

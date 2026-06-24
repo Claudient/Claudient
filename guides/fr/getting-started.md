@@ -1,4 +1,4 @@
-# Premiers pas avec Claudient
+# Premiers pas avec UitKit
 
 Ce guide vous amène de zéro à un environnement Claude Code fonctionnel avec votre première compétence, votre premier agent et votre premier hook — en moins de 10 minutes.
 
@@ -11,7 +11,7 @@ Ce guide vous amène de zéro à un environnement Claude Code fonctionnel avec v
 
 ---
 
-## Étape 1 — Cloner Claudient
+## Étape 1 — Cloner UitKit
 
 ```bash
 
@@ -50,7 +50,7 @@ Les compétences sont des commandes slash. Copiez n'importe quel fichier `.md` d
 
 ```bash
 # Exemple : ajouter la compétence FastAPI
-cp ~/Claudient/skills/backend/python/fastapi.md your-project/.claude/skills/
+cp ~/UitKit/skills/backend/python/fastapi.md your-project/.claude/skills/
 ```
 
 Ouvrez maintenant Claude Code dans votre projet et tapez `/fastapi` — la compétence s'active.
@@ -70,7 +70,7 @@ Les règles se trouvent dans `CLAUDE.md` à la racine de votre projet. Claude li
 
 ```bash
 # Copier un ensemble de règles communes dans le CLAUDE.md de votre projet
-cat ~/Claudient/rules/common/coding-style.md >> your-project/CLAUDE.md
+cat ~/UitKit/rules/common/coding-style.md >> your-project/CLAUDE.md
 ```
 
 Ou ouvrez `rules/common/` et copiez manuellement les sections pertinentes pour votre projet.
@@ -112,7 +112,7 @@ Copiez un hook depuis `hooks/` — chaque fichier hook contient le JSON exact à
 Puis copiez le script correspondant :
 
 ```bash
-cp ~/Claudient/hooks/lifecycle/cost-tracker.sh your-project/.claude/hooks/
+cp ~/UitKit/hooks/lifecycle/cost-tracker.sh your-project/.claude/hooks/
 chmod +x your-project/.claude/hooks/cost-tracker.sh
 ```
 

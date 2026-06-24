@@ -1,14 +1,14 @@
 # Plugin-Verteilungsleitfaden
 
-Dieser Leitfaden behandelt die Verteilung von Claudient-Plugins über mehrere Kanäle: npm-Registrierung, GitHub-Releases, Marketplace-Einreichung und Versionierungsstrategie.
+Dieser Leitfaden behandelt die Verteilung von UitKit-Plugins über mehrere Kanäle: npm-Registrierung, GitHub-Releases, Marketplace-Einreichung und Versionierungsstrategie.
 
 ## Übersicht
 
-Claudient-Plugins können über drei primäre Kanäle verteilt werden:
+UitKit-Plugins können über drei primäre Kanäle verteilt werden:
 
 1. **npm-Registrierung** — Für programmgesteuerte Installation und Abhängigkeitsverwaltung
 2. **GitHub Releases** — Für direkte Downloads und Versionskontrolle
-3. **Claudient Marketplace** — Für Entdeckbarkeit und Ökosystem-Integration
+3. **UitKit Marketplace** — Für Entdeckbarkeit und Ökosystem-Integration
 
 Jeder Kanal erfüllt unterschiedliche Anwendungsfälle; die meisten Verleger nutzen alle drei.
 
@@ -29,7 +29,7 @@ Stellen Sie sicher, dass die `package.json` der Wurzel Ihres Plugins richtig kon
 
 ```json
 {
-  "name": "@claudient/plugin-ihr-plugin-name",
+  "name": "@uitkit/plugin-ihr-plugin-name",
   "version": "1.0.0",
   "description": "Einzeilige Beschreibung des Plugins (max. 80 Zeichen)",
   "main": "index.js",
@@ -44,7 +44,7 @@ Stellen Sie sicher, dass die `package.json` der Wurzel Ihres Plugins richtig kon
     "CLAUDE.md",
     "LICENSE"
   ],
-  "keywords": ["claude-code", "claudient", "plugin", "domain"],
+  "keywords": ["claude-code", "uitkit", "plugin", "domain"],
   "author": {
     "name": "Ihr Name",
     "email": "sie@example.com",
@@ -127,7 +127,7 @@ npm pack
 npm install ./ihr-plugin-1.0.0.tgz
 
 # Installation überprüfen
-ls node_modules/@claudient/plugin-ihr-plugin-name/
+ls node_modules/@uitkit/plugin-ihr-plugin-name/
 ```
 
 Bei npm veröffentlichen:
@@ -140,10 +140,10 @@ npm publish
 
 ```bash
 # Paket auf npm überprüfen
-npm view @claudient/plugin-ihr-plugin-name
+npm view @uitkit/plugin-ihr-plugin-name
 
 # Installation testen
-npm install @claudient/plugin-ihr-plugin-name
+npm install @uitkit/plugin-ihr-plugin-name
 ```
 
 ---
@@ -182,7 +182,7 @@ Erstellen Sie `RELEASE_NOTES.md`:
 
 ### Via npm
 \`\`\`bash
-npm install @claudient/plugin-ihr-plugin-name
+npm install @uitkit/plugin-ihr-plugin-name
 \`\`\`
 
 ### Via direktem Download
@@ -214,7 +214,7 @@ gh release edit v1.0.0 --draft=false
 
 ---
 
-## Teil 3: Claudient Marketplace-Einreichung
+## Teil 3: UitKit Marketplace-Einreichung
 
 ### Schritt 1: Marketplace-Metadaten vorbereiten
 
@@ -245,7 +245,7 @@ Erstellen Sie `.claude-plugin/plugin.json` im Plugin-Stammverzeichnis:
 
 ### Schritt 2: Zum Marketplace einreichen
 
-1. **Fork** das Claudient-Repository: `github.com/claudients/claudient`
+1. **Fork** das UitKit-Repository: `github.com/uitkits/uitkit`
 2. **Erstelle einen Feature-Branch:**
    ```bash
    git checkout -b submit/ihr-plugin-name
@@ -337,7 +337,7 @@ Alle bemerkenswerten Änderungen sind in dieser Datei dokumentiert.
 
 - [ ] `.claude-plugin/plugin.json` vollständig
 - [ ] README.md marketplace-freundlich
-- [ ] Fork des Claudient-Repository erstellt
+- [ ] Fork des UitKit-Repository erstellt
 - [ ] Plugin zum `plugins/`-Verzeichnis hinzugefügt
 - [ ] PR mit vollständiger Beschreibung geöffnet
 - [ ] PR zusammengeführt
@@ -345,5 +345,5 @@ Alle bemerkenswerten Änderungen sind in dieser Datei dokumentiert.
 ---
 
 **Zuletzt aktualisiert:** 22. Juni 2026  
-**Verwalter:** Claudient Core Team  
+**Verwalter:** UitKit Core Team  
 **Lizenz:** CC-BY-SA-4.0

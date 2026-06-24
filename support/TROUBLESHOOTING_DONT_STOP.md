@@ -1,6 +1,6 @@
 # Troubleshooting Guide: Don't Stop — Diagnose & Recover
 
-This guide covers the three most common failure modes in Claudient workflows, agents, and Claude Code interactions. Each includes diagnosis steps and proven recovery paths.
+This guide covers the three most common failure modes in UitKit workflows, agents, and Claude Code interactions. Each includes diagnosis steps and proven recovery paths.
 
 ---
 

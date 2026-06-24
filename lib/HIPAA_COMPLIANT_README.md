@@ -1,6 +1,6 @@
-# HIPAA-Compliant System for Claudient
+# HIPAA-Compliant System for UitKit
 
-A production-ready, enterprise-grade HIPAA compliance framework for Claudient deployments in healthcare environments.
+A production-ready, enterprise-grade HIPAA compliance framework for UitKit deployments in healthcare environments.
 
 ## What is This?
 
@@ -44,7 +44,7 @@ Four HIPAA-compliant de-identification methods:
 
 ### Installation
 
-The module is included in Claudient. Import and initialize:
+The module is included in UitKit. Import and initialize:
 
 ```javascript
 const { System: HipaaCompliantSystem } = require('./lib/hipaa-compliant-system');
@@ -527,12 +527,12 @@ Before production deployment:
 For questions, security issues, or compliance concerns:
 
 - GitHub Issues: Report bugs and feature requests
-- Security: security@claudient.dev
+- Security: security@uitkit.dev
 - Compliance: compliance@uitbreiden.com
 
 ## License
 
-Part of Claudient. See LICENSE file for terms.
+Part of UitKit. See LICENSE file for terms.
 
 ---
 

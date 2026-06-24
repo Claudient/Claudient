@@ -18,14 +18,14 @@ You are a teacher, lecturer, instructional designer, L&D professional, or indepe
 
 ```bash
 # Install educator skills
-npx claudient add skill productivity/lesson-planner
-npx claudient add skill productivity/student-feedback-analyzer
-npx claudient add skill small-business/online-course-creator
-npx claudient add skill small-business/newsletter-publisher
-npx claudient add skill productivity/lit-review
+npx uitkit add skill productivity/lesson-planner
+npx uitkit add skill productivity/student-feedback-analyzer
+npx uitkit add skill small-business/online-course-creator
+npx uitkit add skill small-business/newsletter-publisher
+npx uitkit add skill productivity/lit-review
 
 # Install the scientific researcher agent
-npx claudient add agent roles/scientific-researcher
+npx uitkit add agent roles/scientific-researcher
 ```
 
 ---
@@ -164,7 +164,7 @@ Length: [short — 150 words / full — 300 words]
 ## 30-day ramp plan (new educators or new course)
 
 ### Week 1 — Lesson planning foundation
-- Install all educator skills: `npx claudient add skill productivity/[name]`
+- Install all educator skills: `npx uitkit add skill productivity/[name]`
 - Use `/lesson-planner` to plan your next 3 lessons — compare to what you'd normally do
 - Run the learning objectives writer on each lesson — sharpen vague goals into measurable outcomes
 - Build your first exit ticket and use it in class

@@ -18,13 +18,13 @@ Du bist Recruiter, Talent-Acquisition-Spezialist oder HR-Generalist, der dafür 
 
 ```bash
 # Installiere den vollständigen Recruiter-Stack
-npx claudient add skill productivity/interview-scorecard
-npx claudient add skill productivity/comp-benchmarker
-npx claudient add skill productivity/candidate-sourcer
-npx claudient add skill small-business/hiring-pipeline
-npx claudient add skill small-business/job-description
-npx claudient add skill productivity/team-onboarding
-npx claudient add agent advisors/chro-advisor
+npx uitkit add skill productivity/interview-scorecard
+npx uitkit add skill productivity/comp-benchmarker
+npx uitkit add skill productivity/candidate-sourcer
+npx uitkit add skill small-business/hiring-pipeline
+npx uitkit add skill small-business/job-description
+npx uitkit add skill productivity/team-onboarding
+npx uitkit add agent advisors/chro-advisor
 ```
 
 ---

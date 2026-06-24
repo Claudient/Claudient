@@ -18,22 +18,22 @@ const colorTier = (tier) => {
 
 const help = () => {
   console.log(`
-${BOLD}claudient-moe — Mixture of Experts model routing${RESET}
+${BOLD}uitkit-moe — Mixture of Experts model routing${RESET}
 
 ${BOLD}Usage:${RESET}
-  claudient moe classify <task>
-  claudient moe cascade <task> [--confidence-threshold=0.65]
-  claudient moe panel <task> [--models=haiku,sonnet,opus] [--strategy=majority|synthesis|weighted]
-  claudient moe domain <paths> <task>
-  claudient moe budget <task> --remaining=<N> [--total=100000]
-  claudient moe status
+  uitkit moe classify <task>
+  uitkit moe cascade <task> [--confidence-threshold=0.65]
+  uitkit moe panel <task> [--models=haiku,sonnet,opus] [--strategy=majority|synthesis|weighted]
+  uitkit moe domain <paths> <task>
+  uitkit moe budget <task> --remaining=<N> [--total=100000]
+  uitkit moe status
 
 ${BOLD}Examples:${RESET}
-  claudient moe classify "format the CSV file"
-  claudient moe cascade "design a distributed system"
-  claudient moe domain "src/security/auth.ts" "review"
-  claudient moe budget "refactor module" --remaining 25000 --total 100000
-  claudient moe status
+  uitkit moe classify "format the CSV file"
+  uitkit moe cascade "design a distributed system"
+  uitkit moe domain "src/security/auth.ts" "review"
+  uitkit moe budget "refactor module" --remaining 25000 --total 100000
+  uitkit moe status
   `);
 };
 
@@ -53,7 +53,7 @@ async function main() {
     case 'classify': {
       const task = args.slice(1).join(' ');
       if (!task) {
-        console.error('Usage: claudient moe classify <task>');
+        console.error('Usage: uitkit moe classify <task>');
         process.exit(1);
       }
       const result = classifyTask(task);
@@ -70,7 +70,7 @@ async function main() {
       const taskArgs = args.filter(a => !a.startsWith('--'));
       const task = taskArgs.slice(1).join(' ');
       if (!task) {
-        console.error('Usage: claudient moe cascade <task> [--confidence-threshold=0.65]');
+        console.error('Usage: uitkit moe cascade <task> [--confidence-threshold=0.65]');
         process.exit(1);
       }
       const cascadeRunner = createCascadeRunner({ confidenceThreshold: threshold });
@@ -90,7 +90,7 @@ async function main() {
       const taskArgs = args.filter(a => !a.startsWith('--'));
       const task = taskArgs.slice(1).join(' ');
       if (!task) {
-        console.error('Usage: claudient moe panel <task> [--strategy=majority|synthesis|weighted]');
+        console.error('Usage: uitkit moe panel <task> [--strategy=majority|synthesis|weighted]');
         process.exit(1);
       }
       const panel = createParallelPanel({ votingStrategy: strategy });
@@ -110,7 +110,7 @@ async function main() {
 
     case 'domain': {
       if (args.length < 3) {
-        console.error('Usage: claudient moe domain <paths> <task>');
+        console.error('Usage: uitkit moe domain <paths> <task>');
         process.exit(1);
       }
       const paths = args[1].split(',').map(p => p.trim());
@@ -127,7 +127,7 @@ async function main() {
       const remainingArg = args.find(a => a.startsWith('--remaining='));
       const totalArg = args.find(a => a.startsWith('--total='));
       if (!remainingArg) {
-        console.error('Usage: claudient moe budget <task> --remaining=<N> [--total=100000]');
+        console.error('Usage: uitkit moe budget <task> --remaining=<N> [--total=100000]');
         process.exit(1);
       }
       const remaining = parseInt(remainingArg.split('=')[1], 10);
@@ -135,7 +135,7 @@ async function main() {
       const taskArgs = args.filter(a => !a.startsWith('--'));
       const task = taskArgs.slice(1).join(' ');
       if (!task) {
-        console.error('Usage: claudient moe budget <task> --remaining=<N> [--total=100000]');
+        console.error('Usage: uitkit moe budget <task> --remaining=<N> [--total=100000]');
         process.exit(1);
       }
       const governor = budgetGovernedRouter({ totalBudget: total });

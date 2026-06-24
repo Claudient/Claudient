@@ -18,16 +18,16 @@ Eres un freelancer o consultor independiente — diseñador, desarrollador, escr
 
 ```bash
 # Instalar todas las habilidades de freelancer
-npx claudient add skill small-business/freelancer-proposal
-npx claudient add skill small-business/scope-of-work
-npx claudient add skill small-business/client-status-report
-npx claudient add skill small-business/invoice-chaser
-npx claudient add skill small-business/cold-outreach
-npx claudient add skill small-business/cash-flow-forecast
-npx claudient add skill small-business/agency-operations
+npx uitkit add skill small-business/freelancer-proposal
+npx uitkit add skill small-business/scope-of-work
+npx uitkit add skill small-business/client-status-report
+npx uitkit add skill small-business/invoice-chaser
+npx uitkit add skill small-business/cold-outreach
+npx uitkit add skill small-business/cash-flow-forecast
+npx uitkit add skill small-business/agency-operations
 
 # Instalar el agente de asesor CEO
-npx claudient add agent advisors/ceo-advisor
+npx uitkit add agent advisors/ceo-advisor
 ```
 
 ---
@@ -205,7 +205,7 @@ Muéstrame: flujo de caja mes a mes, cuándo podría haber un déficit, qué lo 
 ## Plan de 30 días (nuevos freelancers o nuevo mercado)
 
 ### Semana 1 — Infraestructura de negocio
-- Instala todas las habilidades de freelancer: `npx claudient add skill small-business/[nombre]`
+- Instala todas las habilidades de freelancer: `npx uitkit add skill small-business/[nombre]`
 - Escribe tu plantilla de propuesta estándar usando `/freelancer-proposal` — personalízala para tus servicios
 - Escribe tu plantilla maestra de alcance de trabajo usando `/scope-of-work` — úsala para cada proyecto futuro
 - Define tus precios: tarifa por hora, tarifas por proyecto, tarifas de retainer — documéntalos

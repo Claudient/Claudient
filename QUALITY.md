@@ -1,6 +1,6 @@
-# Claudient Quality Standards
+# UitKit Quality Standards
 
-To maintain Claudient as the premier knowledge base for Claude Code, all skills, agents, and hooks are audited and tiered based on their quality.
+To maintain UitKit as the premier knowledge base for Claude Code, all skills, agents, and hooks are audited and tiered based on their quality.
 
 ## Skill Tiers
 

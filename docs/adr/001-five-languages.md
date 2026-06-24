@@ -4,7 +4,7 @@
 Accepted
 
 ## Context
-Claudient targets developers globally. A significant portion of Claude Code users are non-native English speakers, particularly in France, Germany, the Netherlands, and Spanish-speaking countries. Providing translated documentation lowers the adoption barrier for these communities.
+UitKit targets developers globally. A significant portion of Claude Code users are non-native English speakers, particularly in France, Germany, the Netherlands, and Spanish-speaking countries. Providing translated documentation lowers the adoption barrier for these communities.
 
 The question was: how many languages to support, which ones, and for which content types.
 

@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to Claudient are documented in this file.
+All notable changes to UitKit are documented in this file.
 
 Generated: 2026-06-22 | 186 commits
 
@@ -149,14 +149,14 @@ Generated: 2026-06-22 | 186 commits
 - add lean-claude to README and homepage, update skill count to 22 (`92e9666`) — 2026-05-16
 - add lean-claude skill — single activation prompt for token-efficient sessions (`871f005`) — 2026-05-16
 - add Reddit + YouTube badges to top of README, update GitHub SEO (`2db1645`) — 2026-05-16
-- v0.6.0 — add npx claudient search, 21 skills total (`3499310`) — 2026-05-16
+- v0.6.0 — add npx uitkit search, 21 skills total (`3499310`) — 2026-05-16
 - Reddit + YouTube in all 290 public content files, MLflow + Spark skills, frontmatter (`dafc5ed`) — 2026-05-16
 - add YAML frontmatter to all 19 skills + descriptions on cards (`2a301b4`) — 2026-05-16
 - add Reddit and YouTube links to all content and website (`15814a9`) — 2026-05-16
 - CONTEXT-MAP, homepage init section, example translations (`6e4db5b`) — 2026-05-16
 - add 3 example CLAUDE.md reference projects (`96b797a`) — 2026-05-16
 - v0.5.0 — list command uses index.json, works when installed globally (`7a5d9b3`) — 2026-05-16
-- v0.4.0 — add npx claudient init interactive setup (`d317519`) — 2026-05-16
+- v0.4.0 — add npx uitkit init interactive setup (`d317519`) — 2026-05-16
 - add search and filters to all website pages (`b115465`) — 2026-05-16
 - add social preview SVG (1280x640 neo-brutalist OG image) (`da82851`) — 2026-05-16
 - add FR/DE/NL/ES translations for Spring Boot and caveman skills (`16cf98d`) — 2026-05-16
@@ -216,7 +216,7 @@ Generated: 2026-06-22 | 186 commits
 - add guides/getting-started.md — 5-minute onboarding walkthrough (`c4f989b`) — 2026-05-12
 - add CONTRIBUTING.md — contribution guide and quality bar (`d5d387f`) — 2026-05-12
 - add CLAUDE.md — repo-level instructions for Claude Code (`7274399`) — 2026-05-12
-- add README — public hero page for Claudient (`c198f1e`) — 2026-05-12
+- add README — public hero page for UitKit (`c198f1e`) — 2026-05-12
 
 ## Chores
 

@@ -35,7 +35,7 @@
 
 <!-- Steps to verify this works -->
 
-1. Install: `npx claudient add skills <category>`
+1. Install: `npx uitkit add skills <category>`
 2. Open Claude Code
 3. Try: `...`
 

@@ -18,15 +18,15 @@ Je bent een Operations Manager, VP of Operations of COO wiens taak het is het be
 
 ```bash
 # Installeer de volledige operationsstack
-npx claudient add skills small-business/sop-writer
-npx claudient add skills small-business/weekly-pulse
-npx claudient add skills small-business/meeting-to-action
-npx claudient add skills gtm/revenue-operations
-npx claudient add skills productivity/scrum-master
-npx claudient add skills productivity/process-mapper
-npx claudient add skills productivity/vendor-evaluator
-npx claudient add agents advisors/coo-advisor
-npx claudient add agents advisors/chief-of-staff
+npx uitkit add skills small-business/sop-writer
+npx uitkit add skills small-business/weekly-pulse
+npx uitkit add skills small-business/meeting-to-action
+npx uitkit add skills gtm/revenue-operations
+npx uitkit add skills productivity/scrum-master
+npx uitkit add skills productivity/process-mapper
+npx uitkit add skills productivity/vendor-evaluator
+npx uitkit add agents advisors/coo-advisor
+npx uitkit add agents advisors/chief-of-staff
 ```
 
 ---

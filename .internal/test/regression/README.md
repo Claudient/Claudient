@@ -128,7 +128,7 @@ Checks for translated content in supported languages (en, fr, de, nl, es).
 Ensures `package.json` is correctly configured for CLI distribution.
 
 **Tests:**
-- `bin.claudient` points to correct entry point
+- `bin.uitkit` points to correct entry point
 - `files` field includes all required paths
 - Required npm scripts present
 - Version is semantic format
@@ -329,4 +329,4 @@ If a test fails:
 
 **Last Updated**: June 2026
 **Test Suite Version**: 1.0
-**Claudient Version**: 1.10.1+
+**UitKit Version**: 1.10.1+

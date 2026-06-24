@@ -6,7 +6,7 @@ const path = require('path');
 const REPO_ROOT = path.resolve(__dirname, '..');
 const AGENTS_DIR = path.join(REPO_ROOT, 'agents', 'roles');
 const SKILLS_DIR = path.join(REPO_ROOT, 'skills');
-const OUTPUT_DIR = path.join(REPO_ROOT, '.claudient');
+const OUTPUT_DIR = path.join(REPO_ROOT, '.uitkit');
 const OUTPUT_FILE = path.join(OUTPUT_DIR, 'knowledge_graph.json');
 
 const TRANSLATION_DIRS = new Set(['fr', 'de', 'es', 'nl']);
@@ -38,7 +38,7 @@ function parseFrontmatter(content) {
 }
 
 function buildGraph() {
-  console.log('Building Claudient Knowledge Graph...');
+  console.log('Building UitKit Knowledge Graph...');
   const nodes = [];
   const links = [];
   const nodeIds = new Set();
@@ -167,7 +167,7 @@ function runCLI() {
   } else if (command === 'stats') {
     if (!fs.existsSync(OUTPUT_FILE)) buildGraph();
     const data = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf8'));
-    console.log('\nClaudient Knowledge Graph Statistics');
+    console.log('\nUitKit Knowledge Graph Statistics');
     console.log('====================================');
     console.log(`Total Nodes:      ${data.nodes.length}`);
     console.log(`Total Links:      ${data.links.length}`);

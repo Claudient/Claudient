@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: 'Claudient AWS Deployment Stack - Complete Infrastructure as Code'
+Description: 'UitKit AWS Deployment Stack - Complete Infrastructure as Code'
 
 Parameters:
   Environment:
@@ -10,22 +10,22 @@ Parameters:
 
   SkillsBucketName:
     Type: String
-    Default: claudient-skills-storage
+    Default: uitkit-skills-storage
     Description: S3 bucket name for skills storage
 
   StateTableName:
     Type: String
-    Default: claudient-deployment-state
+    Default: uitkit-deployment-state
     Description: DynamoDB table name for state management
 
   LambdaFunctionName:
     Type: String
-    Default: claudient-dont-stop-task
+    Default: uitkit-dont-stop-task
     Description: Lambda function name for dont-stop tasks
 
   ECSClusterName:
     Type: String
-    Default: claudient-ecs-cluster
+    Default: uitkit-ecs-cluster
     Description: ECS cluster name
 
   VPCCIDRBlock:
@@ -64,7 +64,7 @@ Mappings:
 
 Resources:
   # ============ VPC and Networking ============
-  ClaudientVPC:
+  UitKitVPC:
     Type: AWS::EC2::VPC
     Properties:
       CidrBlock: !Ref VPCCIDRBlock
@@ -72,72 +72,72 @@ Resources:
       EnableDnsSupport: true
       Tags:
         - Key: Name
-          Value: claudient-vpc
+          Value: uitkit-vpc
         - Key: Environment
           Value: !Ref Environment
 
   PublicSubnet1:
     Type: AWS::EC2::Subnet
     Properties:
-      VpcId: !Ref ClaudientVPC
+      VpcId: !Ref UitKitVPC
       CidrBlock: !Ref PublicSubnet1CIDR
       AvailabilityZone: !Select [0, !GetAZs '']
       MapPublicIpOnLaunch: true
       Tags:
         - Key: Name
-          Value: claudient-public-subnet-1
+          Value: uitkit-public-subnet-1
 
   PublicSubnet2:
     Type: AWS::EC2::Subnet
     Properties:
-      VpcId: !Ref ClaudientVPC
+      VpcId: !Ref UitKitVPC
       CidrBlock: !Ref PublicSubnet2CIDR
       AvailabilityZone: !Select [1, !GetAZs '']
       MapPublicIpOnLaunch: true
       Tags:
         - Key: Name
-          Value: claudient-public-subnet-2
+          Value: uitkit-public-subnet-2
 
   PrivateSubnet1:
     Type: AWS::EC2::Subnet
     Properties:
-      VpcId: !Ref ClaudientVPC
+      VpcId: !Ref UitKitVPC
       CidrBlock: !Ref PrivateSubnet1CIDR
       AvailabilityZone: !Select [0, !GetAZs '']
       Tags:
         - Key: Name
-          Value: claudient-private-subnet-1
+          Value: uitkit-private-subnet-1
 
   PrivateSubnet2:
     Type: AWS::EC2::Subnet
     Properties:
-      VpcId: !Ref ClaudientVPC
+      VpcId: !Ref UitKitVPC
       CidrBlock: !Ref PrivateSubnet2CIDR
       AvailabilityZone: !Select [1, !GetAZs '']
       Tags:
         - Key: Name
-          Value: claudient-private-subnet-2
+          Value: uitkit-private-subnet-2
 
   InternetGateway:
     Type: AWS::EC2::InternetGateway
     Properties:
       Tags:
         - Key: Name
-          Value: claudient-igw
+          Value: uitkit-igw
 
   AttachGateway:
     Type: AWS::EC2::VPCGatewayAttachment
     Properties:
-      VpcId: !Ref ClaudientVPC
+      VpcId: !Ref UitKitVPC
       InternetGatewayId: !Ref InternetGateway
 
   PublicRouteTable:
     Type: AWS::EC2::RouteTable
     Properties:
-      VpcId: !Ref ClaudientVPC
+      VpcId: !Ref UitKitVPC
       Tags:
         - Key: Name
-          Value: claudient-public-rt
+          Value: uitkit-public-rt
 
   PublicRoute:
     Type: AWS::EC2::Route
@@ -164,7 +164,7 @@ Resources:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Security group for ALB
-      VpcId: !Ref ClaudientVPC
+      VpcId: !Ref UitKitVPC
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 80
@@ -176,13 +176,13 @@ Resources:
           CidrIp: 0.0.0.0/0
       Tags:
         - Key: Name
-          Value: claudient-alb-sg
+          Value: uitkit-alb-sg
 
   ECSSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Security group for ECS tasks
-      VpcId: !Ref ClaudientVPC
+      VpcId: !Ref UitKitVPC
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 3000
@@ -190,7 +190,7 @@ Resources:
           SourceSecurityGroupId: !Ref ALBSecurityGroup
       Tags:
         - Key: Name
-          Value: claudient-ecs-sg
+          Value: uitkit-ecs-sg
 
   # ============ S3 Bucket for Skills Storage ============
   SkillsStorageBucket:
@@ -210,7 +210,7 @@ Resources:
         RestrictPublicBuckets: true
       Tags:
         - Key: Name
-          Value: claudient-skills
+          Value: uitkit-skills
         - Key: Environment
           Value: !Ref Environment
 
@@ -280,7 +280,7 @@ Resources:
         Enabled: true
       Tags:
         - Key: Name
-          Value: claudient-state
+          Value: uitkit-state
         - Key: Environment
           Value: !Ref Environment
 
@@ -298,7 +298,7 @@ Resources:
       ManagedPolicyArns:
         - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
       Policies:
-        - PolicyName: ClaudientS3DynamoDBAccess
+        - PolicyName: UitKitS3DynamoDBAccess
           PolicyDocument:
             Version: '2012-10-17'
             Statement:
@@ -342,7 +342,7 @@ Resources:
               Service: ecs-tasks.amazonaws.com
             Action: sts:AssumeRole
       Policies:
-        - PolicyName: ClaudientS3DynamoDBAccess
+        - PolicyName: UitKitS3DynamoDBAccess
           PolicyDocument:
             Version: '2012-10-17'
             Statement:
@@ -380,20 +380,20 @@ Resources:
       Code:
         ZipFile: |
           exports.handler = async (event) => {
-            console.log('Claudient dont-stop task triggered');
+            console.log('UitKit dont-stop task triggered');
             console.log('Event:', JSON.stringify(event, null, 2));
 
             return {
               statusCode: 200,
               body: JSON.stringify({
-                message: 'Claudient dont-stop task executed successfully',
+                message: 'UitKit dont-stop task executed successfully',
                 timestamp: new Date().toISOString(),
               }),
             };
           };
       Tags:
         - Key: Name
-          Value: claudient-dont-stop
+          Value: uitkit-dont-stop
         - Key: Environment
           Value: !Ref Environment
 
@@ -401,13 +401,13 @@ Resources:
   DontStopTaskScheduleRule:
     Type: AWS::Events::Rule
     Properties:
-      Name: claudient-dont-stop-schedule
-      Description: Trigger Claudient dont-stop task every 5 minutes
+      Name: uitkit-dont-stop-schedule
+      Description: Trigger UitKit dont-stop task every 5 minutes
       ScheduleExpression: rate(5 minutes)
       State: ENABLED
       Targets:
         - Arn: !GetAtt DontStopTaskFunction.Arn
-          Id: ClaudientDontStopTarget
+          Id: UitKitDontStopTarget
           RetryPolicy:
             MaximumEventAge: 3600
             MaximumRetryAttempts: 2
@@ -430,7 +430,7 @@ Resources:
           Value: enabled
       Tags:
         - Key: Name
-          Value: claudient-cluster
+          Value: uitkit-cluster
         - Key: Environment
           Value: !Ref Environment
 
@@ -444,14 +444,14 @@ Resources:
   ECSLogGroup:
     Type: AWS::Logs::LogGroup
     Properties:
-      LogGroupName: !Sub '/ecs/claudient/${ECSClusterName}'
+      LogGroupName: !Sub '/ecs/uitkit/${ECSClusterName}'
       RetentionInDays: 7
 
   # ============ CloudWatch Alarms ============
   LambdaErrorAlarm:
     Type: AWS::CloudWatch::Alarm
     Properties:
-      AlarmName: claudient-lambda-errors
+      AlarmName: uitkit-lambda-errors
       AlarmDescription: Alert when Lambda function has errors
       MetricName: Errors
       Namespace: AWS/Lambda
@@ -468,7 +468,7 @@ Resources:
   DynamoDBThrottleAlarm:
     Type: AWS::CloudWatch::Alarm
     Properties:
-      AlarmName: claudient-dynamodb-throttle
+      AlarmName: uitkit-dynamodb-throttle
       AlarmDescription: Alert when DynamoDB is being throttled
       MetricName: UserErrors
       Namespace: AWS/DynamoDB
@@ -485,7 +485,7 @@ Resources:
 Outputs:
   VPCId:
     Description: VPC ID
-    Value: !Ref ClaudientVPC
+    Value: !Ref UitKitVPC
     Export:
       Name: !Sub '${AWS::StackName}-VPC-ID'
 

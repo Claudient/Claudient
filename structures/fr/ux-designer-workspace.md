@@ -242,11 +242,11 @@ cat > .gitignore <<'EOF'
 EOF
 
 # Installer les skills Claude Code
-npx claudient add skill product/ux-audit
-npx claudient add skill product/ux-researcher
-npx claudient add skill product/usability-report
-npx claudient add skill product/persona-builder
-npx claudient add skill product/competitive-teardown
+npx uitkit add skill product/ux-audit
+npx uitkit add skill product/ux-researcher
+npx uitkit add skill product/usability-report
+npx uitkit add skill product/persona-builder
+npx uitkit add skill product/competitive-teardown
 
 git add .
 git commit -m "chore: initial ux designer workspace scaffold"
@@ -441,11 +441,11 @@ La source de vérité canonique pour chaque type d'artefact :
 ## Skills à installer
 
 ```bash
-npx claudient add skill product/ux-audit
-npx claudient add skill product/ux-researcher
-npx claudient add skill product/usability-report
-npx claudient add skill product/persona-builder
-npx claudient add skill product/competitive-teardown
+npx uitkit add skill product/ux-audit
+npx uitkit add skill product/ux-researcher
+npx uitkit add skill product/usability-report
+npx uitkit add skill product/persona-builder
+npx uitkit add skill product/competitive-teardown
 ```
 
 ## Ressources associées

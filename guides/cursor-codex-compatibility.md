@@ -1,14 +1,14 @@
-# Using Claudient Skills in Cursor, Windsurf, Copilot, and Codex
+# Using UitKit Skills in Cursor, Windsurf, Copilot, and Codex
 
-Claudient skills are plain Markdown files. Nothing in their format is Claude Code-specific — no binary, no proprietary syntax, no API calls. That makes them portable to every major AI coding tool with a rule or context injection mechanism.
+UitKit skills are plain Markdown files. Nothing in their format is Claude Code-specific — no binary, no proprietary syntax, no API calls. That makes them portable to every major AI coding tool with a rule or context injection mechanism.
 
-This guide covers the mechanics of transplanting a Claudient skill into Cursor, Windsurf, GitHub Copilot, and OpenAI Codex CLI — what works, what doesn't, and where to draw the line.
+This guide covers the mechanics of transplanting a UitKit skill into Cursor, Windsurf, GitHub Copilot, and OpenAI Codex CLI — what works, what doesn't, and where to draw the line.
 
 ---
 
 ## Why It Works
 
-A Claudient skill is four Markdown sections: `When to activate`, `When NOT to use`, `Instructions`, and `Example`. The model reads this as plain text and adjusts its behavior accordingly.
+A UitKit skill is four Markdown sections: `When to activate`, `When NOT to use`, `Instructions`, and `Example`. The model reads this as plain text and adjusts its behavior accordingly.
 
 That is exactly what every AI coding tool does when you put text in its rules or instructions file — the text becomes part of the system prompt before your request is processed. The skill format is already optimized for this:
 
@@ -16,7 +16,7 @@ That is exactly what every AI coding tool does when you put text in its rules or
 - `Instructions` contains directive language ("always do X", "never do Y") rather than documentation language
 - `Example` grounds the model in the expected output structure
 
-Any model that accepts a system prompt or custom instructions file can consume a Claudient skill without modification. You lose Claude Code-specific features (slash command invocation, hook triggers, subagent delegation) but the core behavioral guidance transfers completely.
+Any model that accepts a system prompt or custom instructions file can consume a UitKit skill without modification. You lose Claude Code-specific features (slash command invocation, hook triggers, subagent delegation) but the core behavioral guidance transfers completely.
 
 ---
 
@@ -52,7 +52,7 @@ your-project/
 └── src/
 ```
 
-### Converting a Claudient skill to a Cursor rule
+### Converting a UitKit skill to a Cursor rule
 
 1. Copy the `.md` file from `skills/` into `.cursor/rules/`
 2. Rename the extension from `.md` to `.mdc`
@@ -106,7 +106,7 @@ your-project/
 └── package.json
 ```
 
-### Converting a Claudient skill
+### Converting a UitKit skill
 
 Paste the skill content directly into `.windsurfrules`. For multiple skills, concatenate them with a horizontal rule (`---`) as a separator:
 
@@ -148,7 +148,7 @@ your-project/
 
 The file name must be exactly `copilot-instructions.md`. Copilot reads it automatically for any repository where it is present.
 
-### Converting a Claudient skill
+### Converting a UitKit skill
 
 Paste the skill content into `copilot-instructions.md`. The four-section format is understood by the GPT-4-class models powering Copilot — the `When NOT to use` section is particularly effective at preventing Copilot from applying patterns in the wrong context.
 
@@ -201,7 +201,7 @@ your-project/
 └── src/
 ```
 
-### Converting a Claudient skill
+### Converting a UitKit skill
 
 Paste the skill directly into `AGENTS.md`. Codex reads this file at session start and includes it in the system prompt for every request in that directory.
 
@@ -307,6 +307,6 @@ For project-level rules, Continue supports `@Rules` blocks in `.continue/rules.m
 7. Test with a task that matches `When to activate` — verify the model applies the Instructions patterns
 8. Test with a task that matches `When NOT to use` — verify the model does not apply the patterns
 
-The four-section structure was designed to be self-contained. A well-written Claudient skill should require fewer than 10 minutes to port to any of these tools.
+The four-section structure was designed to be self-contained. A well-written UitKit skill should require fewer than 10 minutes to port to any of these tools.
 
 ---

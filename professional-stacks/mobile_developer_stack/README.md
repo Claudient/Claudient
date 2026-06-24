@@ -5,7 +5,7 @@ Cross-platform and native mobile development workspace — React Native, Flutter
 ## Quick Start
 
 ```bash
-npx claudient add mobile_developer_stack
+npx uitkit add mobile_developer_stack
 ```
 
 ## Skills

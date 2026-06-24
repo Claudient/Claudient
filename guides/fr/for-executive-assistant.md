@@ -20,15 +20,15 @@ Claude Code devient votre moteur de préparation : des briefings rédigés en qu
 
 ```bash
 # Installer les compétences EA et CoS
-npx claudient add skill small-business/meeting-to-action
-npx claudient add skill small-business/monday-brief
-npx claudient add skill productivity/board-deck-builder
-npx claudient add skill productivity/confluence-expert
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/stakeholder-comms
+npx uitkit add skill small-business/meeting-to-action
+npx uitkit add skill small-business/monday-brief
+npx uitkit add skill productivity/board-deck-builder
+npx uitkit add skill productivity/confluence-expert
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/stakeholder-comms
 
 # Installer l'agent chief of staff
-npx claudient add agent advisors/chief-of-staff
+npx uitkit add agent advisors/chief-of-staff
 ```
 
 ---
@@ -218,7 +218,7 @@ APERÇU DE LA SEMAINE PROCHAINE :
 ## Plan de montée en compétence sur 30 jours (nouvel EA ou CoS)
 
 ### Semaine 1 — Cartographier le paysage
-- Installer toutes les compétences EA/CoS : `npx claudient add skill productivity/[nom]`
+- Installer toutes les compétences EA/CoS : `npx uitkit add skill productivity/[nom]`
 - Apprendre le calendrier du dirigeant : quelles réunions se répètent, lesquelles sont à enjeux élevés, lesquelles il redoute
 - Soumettre le format du brief du lundi au dirigeant — veut-il plus ou moins de détails ? un focus différent ?
 - Identifier les 5 parties prenantes les plus importantes dans le monde du dirigeant et construire leurs profils avec `/exec-briefing`

@@ -315,5 +315,5 @@ TOTAL                                 ~3,000 lines   62 KB code
 
 ## License
 
-Part of Claudient knowledge system.
+Part of UitKit knowledge system.
 See main repository LICENSE file.

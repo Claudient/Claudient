@@ -220,14 +220,14 @@ appId: com.yourcompany.myapp
 ---
 EOF
 
-# Installeer Claudient-vaardigheden
-npx claudient add skill mobile/expo-router-screen
-npx claudient add skill mobile/supabase-realtime
-npx claudient add skill mobile/eas-build
-npx claudient add skill mobile/revenuecat-paywall
-npx claudient add skill mobile/deep-link-handler
-npx claudient add skill productivity/code-review
-npx claudient add skill git/pr-description
+# Installeer UitKit-vaardigheden
+npx uitkit add skill mobile/expo-router-screen
+npx uitkit add skill mobile/supabase-realtime
+npx uitkit add skill mobile/eas-build
+npx uitkit add skill mobile/revenuecat-paywall
+npx uitkit add skill mobile/deep-link-handler
+npx uitkit add skill productivity/code-review
+npx uitkit add skill git/pr-description
 
 echo "Mobiele app steiger voltooid. Volgende: voeg EXPO_PUBLIC_SUPABASE_URL en EXPO_PUBLIC_SUPABASE_ANON_KEY toe aan .env.local"
 ```
@@ -429,15 +429,15 @@ Linkingconfiguratie leeft in lib/deep-links.ts. Een nieuw diepkoppelingpad verwe
 ## Vaardigheden om te installeren
 
 ```bash
-npx claudient add skill mobile/expo-router-screen
-npx claudient add skill mobile/supabase-realtime
-npx claudient add skill mobile/eas-build
-npx claudient add skill mobile/revenuecat-paywall
-npx claudient add skill mobile/deep-link-handler
-npx claudient add skill mobile/push-notifications
-npx claudient add skill productivity/code-review
-npx claudient add skill git/pr-description
-npx claudient add skill productivity/test-generator
+npx uitkit add skill mobile/expo-router-screen
+npx uitkit add skill mobile/supabase-realtime
+npx uitkit add skill mobile/eas-build
+npx uitkit add skill mobile/revenuecat-paywall
+npx uitkit add skill mobile/deep-link-handler
+npx uitkit add skill mobile/push-notifications
+npx uitkit add skill productivity/code-review
+npx uitkit add skill git/pr-description
+npx uitkit add skill productivity/test-generator
 ```
 
 ## Verwant

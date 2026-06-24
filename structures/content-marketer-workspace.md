@@ -142,23 +142,23 @@ touch .claude/CLAUDE.md
 touch .claude/settings.json
 
 # Install all content marketing skills
-npx claudient add skill marketing/content-brief
-npx claudient add skill marketing/content-strategy
-npx claudient add skill marketing/copywriting
-npx claudient add skill marketing/editorial-calendar
-npx claudient add skill marketing/ai-seo
-npx claudient add skill marketing/programmatic-seo
-npx claudient add skill marketing/social-media-manager
-npx claudient add skill small-business/content-repurposer
+npx uitkit add skill marketing/content-brief
+npx uitkit add skill marketing/content-strategy
+npx uitkit add skill marketing/copywriting
+npx uitkit add skill marketing/editorial-calendar
+npx uitkit add skill marketing/ai-seo
+npx uitkit add skill marketing/programmatic-seo
+npx uitkit add skill marketing/social-media-manager
+npx uitkit add skill small-business/content-repurposer
 
 # Copy slash commands into .claude/commands/
-npx claudient add command content-brief
-npx claudient add command draft-post
-npx claudient add command seo-audit
-npx claudient add command social-copy
-npx claudient add command repurpose
-npx claudient add command editorial-calendar
-npx claudient add command performance-review
+npx uitkit add command content-brief
+npx uitkit add command draft-post
+npx uitkit add command seo-audit
+npx uitkit add command social-copy
+npx uitkit add command repurpose
+npx uitkit add command editorial-calendar
+npx uitkit add command performance-review
 
 # Create brief template placeholder
 touch briefs/_template.md
@@ -333,15 +333,15 @@ for a B2B audience.
 ## Skills to install
 
 ```bash
-npx claudient add skill marketing/content-brief
-npx claudient add skill marketing/content-strategy
-npx claudient add skill marketing/copywriting
-npx claudient add skill marketing/editorial-calendar
-npx claudient add skill marketing/ai-seo
-npx claudient add skill marketing/programmatic-seo
-npx claudient add skill marketing/social-media-manager
-npx claudient add skill small-business/content-repurposer
-npx claudient add skill marketing/seo-audit
+npx uitkit add skill marketing/content-brief
+npx uitkit add skill marketing/content-strategy
+npx uitkit add skill marketing/copywriting
+npx uitkit add skill marketing/editorial-calendar
+npx uitkit add skill marketing/ai-seo
+npx uitkit add skill marketing/programmatic-seo
+npx uitkit add skill marketing/social-media-manager
+npx uitkit add skill small-business/content-repurposer
+npx uitkit add skill marketing/seo-audit
 ```
 
 ## Related

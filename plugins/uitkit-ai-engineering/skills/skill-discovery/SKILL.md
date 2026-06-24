@@ -18,7 +18,7 @@ description: "Find related skills via dependency graph analysis, discover learni
 
 - Searching for non-skill resources (guides, workflows, agents, rules) — use the general repository search instead
 - One-off trivial questions (e.g., "Does prompt-caching exist?") — just search the directory
-- Generic questions about Claude or LLMs unrelated to Claudient's skill collection
+- Generic questions about Claude or LLMs unrelated to UitKit's skill collection
 
 ## Instructions
 

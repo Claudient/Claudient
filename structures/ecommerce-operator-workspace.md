@@ -151,23 +151,23 @@ mkdir -p ecommerce-workspace/reports/monthly
 mkdir -p ecommerce-workspace/reports/attribution
 mkdir -p ecommerce-workspace/sops
 
-# Install Claudient skills
-npx claudient add skill small-business/shopify-operations
-npx claudient add skill small-business/ecommerce-seller
-npx claudient add skill small-business/product-listing-optimizer
-npx claudient add skill small-business/returns-handler
-npx claudient add skill marketing/email-sequence
-npx claudient add skill marketing/paid-ads
-npx claudient add skill marketing/page-cro
+# Install UitKit skills
+npx uitkit add skill small-business/shopify-operations
+npx uitkit add skill small-business/ecommerce-seller
+npx uitkit add skill small-business/product-listing-optimizer
+npx uitkit add skill small-business/returns-handler
+npx uitkit add skill marketing/email-sequence
+npx uitkit add skill marketing/paid-ads
+npx uitkit add skill marketing/page-cro
 
-# Install Claudient slash commands into .claude/commands/
-npx claudient add command listing-optimizer
-npx claudient add command email-campaign
-npx claudient add command ad-copy
-npx claudient add command returns-policy
-npx claudient add command supplier-update
-npx claudient add command weekly-performance
-npx claudient add command inventory-alert
+# Install UitKit slash commands into .claude/commands/
+npx uitkit add command listing-optimizer
+npx uitkit add command email-campaign
+npx uitkit add command ad-copy
+npx uitkit add command returns-policy
+npx uitkit add command supplier-update
+npx uitkit add command weekly-performance
+npx uitkit add command inventory-alert
 
 # Create placeholder CLAUDE.md
 touch ecommerce-workspace/CLAUDE.md
@@ -351,13 +351,13 @@ and drafts a reorder recommendation.
 ## Skills to install
 
 ```bash
-npx claudient add skill small-business/shopify-operations
-npx claudient add skill small-business/ecommerce-seller
-npx claudient add skill small-business/product-listing-optimizer
-npx claudient add skill small-business/returns-handler
-npx claudient add skill marketing/email-sequence
-npx claudient add skill marketing/paid-ads
-npx claudient add skill marketing/page-cro
+npx uitkit add skill small-business/shopify-operations
+npx uitkit add skill small-business/ecommerce-seller
+npx uitkit add skill small-business/product-listing-optimizer
+npx uitkit add skill small-business/returns-handler
+npx uitkit add skill marketing/email-sequence
+npx uitkit add skill marketing/paid-ads
+npx uitkit add skill marketing/page-cro
 ```
 
 ---

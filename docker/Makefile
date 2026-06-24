@@ -1,14 +1,14 @@
 .PHONY: help build build-arm build-push run run-fg stop logs shell health metrics health-dashboard compose-up compose-down compose-logs clean test lint
 
 # Variables
-IMAGE_NAME := claudient
+IMAGE_NAME := uitkit
 IMAGE_TAG := latest
-CONTAINER_NAME := claudient
+CONTAINER_NAME := uitkit
 PLATFORMS := linux/amd64,linux/arm64
 DOCKERFILE := docker/Dockerfile
 
 help: ## Show this help message
-	@echo "Claudient Docker Commands"
+	@echo "UitKit Docker Commands"
 	@echo "═══════════════════════════════════════════════════════"
 	@echo ""
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'

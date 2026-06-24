@@ -148,7 +148,7 @@ Prompts spécifiques → réponses ciblées → moins de tokens.
 
 Utilisez le hook `cost-tracker` pour voir l'utilisation des tokens par appel d'outil :
 ```bash
-npx claudient add hooks
+npx uitkit add hooks
 # Then add hooks/lifecycle/cost-tracker.sh to .claude/settings.json
 ```
 

@@ -18,20 +18,20 @@ Je bent een Account Executive (AE) die een pipeline van mid-market of enterprise
 
 ```bash
 # Installeer alle AE-skills
-npx claudient add skills gtm
+npx uitkit add skills gtm
 
 # Of kies wat je nodig hebt:
-npx claudient add skill gtm/deal-review
-npx claudient add skill gtm/champion-builder
-npx claudient add skill gtm/mutual-success-plan
-npx claudient add skill gtm/deal-desk
-npx claudient add skill gtm/rfp-responder
-npx claudient add skill gtm/commercial-forecaster
-npx claudient add skill gtm/crm-hygiene
-npx claudient add skill gtm/hubspot
-npx claudient add skill gtm/revenue-operations
-npx claudient add agents advisors/cro-advisor
-npx claudient add agents roles/competitive-analyst
+npx uitkit add skill gtm/deal-review
+npx uitkit add skill gtm/champion-builder
+npx uitkit add skill gtm/mutual-success-plan
+npx uitkit add skill gtm/deal-desk
+npx uitkit add skill gtm/rfp-responder
+npx uitkit add skill gtm/commercial-forecaster
+npx uitkit add skill gtm/crm-hygiene
+npx uitkit add skill gtm/hubspot
+npx uitkit add skill gtm/revenue-operations
+npx uitkit add agents advisors/cro-advisor
+npx uitkit add agents roles/competitive-analyst
 ```
 
 ---
@@ -204,7 +204,7 @@ Voor elke verouderde deal: adviseer actie — bijwerken / deactiveren / onderzoe
 ## 30-daags inwerklist (nieuwe AE's of overstap naar een nieuw segment)
 
 ### Week 1 — Setup en dealinventarisatie
-- Installeer alle GTM-skills: `npx claudient add skills gtm`
+- Installeer alle GTM-skills: `npx uitkit add skills gtm`
 - Verbind HubSpot via MCP (zie tool-integraties hieronder)
 - Voer `/deal-review` uit voor elke deal in je overgeerfde pipeline — bepaal een basis MEDDPICC-score
 - Voer `/commercial-forecaster` uit op je volledige pipeline — identificeer welke deals reëel zijn en welke verouderd

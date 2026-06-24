@@ -13,7 +13,7 @@
       "task": "Validate catalog structures",
       "command": "node scripts/validate-catalog.js",
       "success": true,
-      "output": "✓ 50 entries validated\n  Catalog: /Users/tushar/Desktop/Claudient/marketplace/catalog.json\n  Categories: 19\n",
+      "output": "✓ 50 entries validated\n  Catalog: /Users/tushar/Desktop/UitKit/marketplace/catalog.json\n  Categories: 19\n",
       "attempts": 1
     },
     {
@@ -27,7 +27,7 @@
       "task": "Build catalog references",
       "command": "node scripts/build-catalog.js",
       "success": true,
-      "output": "✓ Generated catalog.json with 50 official stacks\n  Location: /Users/tushar/Desktop/Claudient/marketplace/catalog.json\n  Size: 35.9 KB\n",
+      "output": "✓ Generated catalog.json with 50 official stacks\n  Location: /Users/tushar/Desktop/UitKit/marketplace/catalog.json\n  Size: 35.9 KB\n",
       "attempts": 1
     }
   ]

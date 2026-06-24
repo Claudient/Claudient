@@ -1,12 +1,12 @@
-# Compétences Claude Code, Agents et Plugins — Claudient
+# Compétences Claude Code, Agents et Plugins — UitKit
 
-**Claudient** est la plus grande base de connaissances open-source pour **Claude Code** — l'outil CLI de codage IA d'Anthropic. Il comprend 400+ compétences de domaine, 182+ agents spécialisés, 42 piles de travail pré-filaires, 41 configurations MCP, 100+ commandes slash, hooks et workflows, tous installables en 30 secondes. Pas de réexplication de pile. Claude connaît déjà votre domaine.
+**UitKit** est la plus grande base de connaissances open-source pour **Claude Code** — l'outil CLI de codage IA d'Anthropic. Il comprend 400+ compétences de domaine, 182+ agents spécialisés, 42 piles de travail pré-filaires, 41 configurations MCP, 100+ commandes slash, hooks et workflows, tous installables en 30 secondes. Pas de réexplication de pile. Claude connaît déjà votre domaine.
 
-**Nouveau dans Claude Code ?** Claude Code est l'assistant IA officiel en ligne de commande d'Anthropic pour le développement logiciel — il lit votre codebase, exécute les commandes, édite les fichiers et complète les tâches de manière autonome dans votre terminal ou IDE. Claudient est la bibliothèque communautaire open-source qui l'étend avec des compétences au niveau des experts dans toutes les piles et domaines.
+**Nouveau dans Claude Code ?** Claude Code est l'assistant IA officiel en ligne de commande d'Anthropic pour le développement logiciel — il lit votre codebase, exécute les commandes, édite les fichiers et complète les tâches de manière autonome dans votre terminal ou IDE. UitKit est la bibliothèque communautaire open-source qui l'étend avec des compétences au niveau des experts dans toutes les piles et domaines.
 
-[![npm version](https://img.shields.io/npm/v/claudient?color=f97316&label=npm)](https://www.npmjs.com/package/claudient)
-[![npm downloads](https://img.shields.io/npm/dm/claudient?color=f97316)](https://www.npmjs.com/package/claudient)
-[![GitHub Stars](https://img.shields.io/github/stars/UitbreidenOS/Claudient?color=f97316&label=stars)](https://github.com/UitbreidenOS/Claudient)
+[![npm version](https://img.shields.io/npm/v/uitkit?color=f97316&label=npm)](https://www.npmjs.com/package/uitkit)
+[![npm downloads](https://img.shields.io/npm/dm/uitkit?color=f97316)](https://www.npmjs.com/package/uitkit)
+[![GitHub Stars](https://img.shields.io/github/stars/UitbreidenOS/UitKit?color=f97316&label=stars)](https://github.com/UitbreidenOS/UitKit)
 [![License: AGPL-3.0](https://img.shields.io/badge/code-AGPL--3.0-3b82f6.svg)](LICENSE-CODE)
 [![Content License: CC-BY-SA-4.0](https://img.shields.io/badge/content-CC--BY--SA--4.0-ec4899.svg)](LICENSE-CONTENT)
 [![Skills](https://img.shields.io/badge/skills-400+-f97316)](#skills-by-category)
@@ -21,19 +21,19 @@
 
 **[FR](README.fr.md) · [DE](README.de.md) · [ES](README.es.md) · [NL](README.nl.md)**
 
-![Claudient Hero](assets/hero.png)
+![UitKit Hero](assets/hero.png)
 
 **Arrêtez d'expliquer votre pile à Claude à chaque session.**
 
-Claudient est la plus grande base de connaissances open-source pour **Claude Code** — 400+ compétences, 182+ agents spécialisés, 100+ commandes slash, 100+ guides, 40 hooks, 45 workflows, 83 structures de projet, 42 piles de travail, 10 personas, 32 règles, 41 configurations de serveurs MCP, 10 routines d'automatisation, 20 exemples CLAUDE.md annotés, adaptateurs inter-harness (Cursor/Windsurf/Codex/Gemini/Copilot), plus des styles de sortie, des thèmes, des statuslines, des raccourcis clavier, des modèles de paramètres et un pack Agent SDK — tous installables en 30 secondes.
+UitKit est la plus grande base de connaissances open-source pour **Claude Code** — 400+ compétences, 182+ agents spécialisés, 100+ commandes slash, 100+ guides, 40 hooks, 45 workflows, 83 structures de projet, 42 piles de travail, 10 personas, 32 règles, 41 configurations de serveurs MCP, 10 routines d'automatisation, 20 exemples CLAUDE.md annotés, adaptateurs inter-harness (Cursor/Windsurf/Codex/Gemini/Copilot), plus des styles de sortie, des thèmes, des statuslines, des raccourcis clavier, des modèles de paramètres et un pack Agent SDK — tous installables en 30 secondes.
 
 ```bash
 # Installer en tant que plugin du marché Claude Code (recommandé)
-/plugin marketplace add UitbreidenOS/Claudient
-/plugin install claudient-everything@claudient
+/plugin marketplace add UitbreidenOS/UitKit
+/plugin install uitkit-everything@uitkit
 
 # Ou via npm
-npx claudient add all
+npx uitkit add all
 ```
 
 
@@ -43,47 +43,47 @@ npx claudient add all
 
 ## Installer en tant que plugin Claude Code
 
-Claudient se présente comme un **marché de plugins** natif de Claude Code. Ajoutez-le une fois, puis installez uniquement les domaines dont vous avez besoin — les compétences s'auto-invoquent en fonction de ce sur quoi vous travaillez, les agents et les hooks sont fournis en bundle.
+UitKit se présente comme un **marché de plugins** natif de Claude Code. Ajoutez-le une fois, puis installez uniquement les domaines dont vous avez besoin — les compétences s'auto-invoquent en fonction de ce sur quoi vous travaillez, les agents et les hooks sont fournis en bundle.
 
 ```bash
 # 1. Ajouter le marché
-/plugin marketplace add UitbreidenOS/Claudient
+/plugin marketplace add UitbreidenOS/UitKit
 
 # 2. Installer un plugin de domaine (ou le bundle everything)
-/plugin install claudient-gtm@claudient
-/plugin install claudient-devops-infra@claudient
-/plugin install claudient-everything@claudient
+/plugin install uitkit-gtm@uitkit
+/plugin install uitkit-devops-infra@uitkit
+/plugin install uitkit-everything@uitkit
 ```
 
 **19 plugins, 400+ compétences auto-invoquées, 182 agents, 100 commandes slash :**
 
 | Plugin | Compétences | Plugin | Compétences |
 |---|---|---|---|
-| `claudient-productivity` | 66 | `claudient-finance` | 16 |
-| `claudient-small-business` | 47 | `claudient-data-ml` | 15 |
-| `claudient-backend` | 41 | `claudient-product` | 15 |
-| `claudient-devops-infra` | 36 | `claudient-automation` | 14 |
-| `claudient-gtm` | 32 | `claudient-database` | 12 |
-| `claudient-marketing` | 22 | `claudient-git` | 3 |
-| `claudient-legal` | 21 | `claudient-commands` | 100 commandes |
-| `claudient-sdr` | 22 | `claudient-personas` | 10 personas |
-| `claudient-ai-engineering` | 17 | `claudient-finance-payments` | 2 |
-| `claudient-everything` | meta-bundle | | |
+| `uitkit-productivity` | 66 | `uitkit-finance` | 16 |
+| `uitkit-small-business` | 47 | `uitkit-data-ml` | 15 |
+| `uitkit-backend` | 41 | `uitkit-product` | 15 |
+| `uitkit-devops-infra` | 36 | `uitkit-automation` | 14 |
+| `uitkit-gtm` | 32 | `uitkit-database` | 12 |
+| `uitkit-marketing` | 22 | `uitkit-git` | 3 |
+| `uitkit-legal` | 21 | `uitkit-commands` | 100 commandes |
+| `uitkit-sdr` | 22 | `uitkit-personas` | 10 personas |
+| `uitkit-ai-engineering` | 17 | `uitkit-finance-payments` | 2 |
+| `uitkit-everything` | meta-bundle | | |
 
-Chaque compétence est validée avec `claude plugin validate --strict`. Vous préférez npm ? `npx claudient add all` fonctionne toujours.
+Chaque compétence est validée avec `claude plugin validate --strict`. Vous préférez npm ? `npx uitkit add all` fonctionne toujours.
 
 ---
 
 ## Au-delà des compétences — la boîte à outils complète de Claude Code
 
-Claudient couvre chaque primitive supportée par Claude Code, pas seulement les compétences :
+UitKit couvre chaque primitive supportée par Claude Code, pas seulement les compétences :
 
 | Catégorie | Contenu | Installation |
 |---|---|---|
-| **Commandes slash** | 100+ commandes dans 12 catégories — git, test, refactor, docs, debug, devops, base de données, sécurité, frontend, api, ai-engineering, productivité | Plugin `claudient-commands` ou répertoire `commands/` |
-| **Personas** | 10 profils opérationnels — startup-cto, solo-founder, growth-marketer, indie-hacker, enterprise-architect, data-driven-pm, devrel-advocate, agency-operator, ai-product-builder, fractional-exec | Plugin `claudient-personas` ou répertoire `personas/` |
+| **Commandes slash** | 100+ commandes dans 12 catégories — git, test, refactor, docs, debug, devops, base de données, sécurité, frontend, api, ai-engineering, productivité | Plugin `uitkit-commands` ou répertoire `commands/` |
+| **Personas** | 10 profils opérationnels — startup-cto, solo-founder, growth-marketer, indie-hacker, enterprise-architect, data-driven-pm, devrel-advocate, agency-operator, ai-product-builder, fractional-exec | Plugin `uitkit-personas` ou répertoire `personas/` |
 | **Styles de sortie** | 8 styles — concis, mentor, code-reviewer, architect, plain-operator, security-paranoid, diagram-first, tdd-enforcer | Copier vers `~/.claude/output-styles/` |
-| **Thèmes** | 10 thèmes — Dracula, Nord, Tokyo Night, Catppuccin, Gruvbox, Solarized, Monokai, Rosé Pine, + marque Claudient | Copier vers `~/.claude/themes/`, puis `/theme` |
+| **Thèmes** | 10 thèmes — Dracula, Nord, Tokyo Night, Catppuccin, Gruvbox, Solarized, Monokai, Rosé Pine, + marque UitKit | Copier vers `~/.claude/themes/`, puis `/theme` |
 | **Statuslines** | 6 scripts — minimal, full, cost-watch, context-budget, git-focused, rate-limit | Pointer vers `settings.json` `statusLine` |
 | **Raccourcis clavier** | 4 présets — vim, emacs, ergonomic, power-user | Fusionner dans `~/.claude/keybindings.json` |
 | **Modèles de paramètres** | 5 démarreurs — solo-dev, team, security-hardened, enterprise, minimal | Déposer dans `.claude/settings.json` |
@@ -91,7 +91,7 @@ Claudient couvre chaque primitive supportée par Claude Code, pas seulement les 
 | **Routines** | 10 modèles de cloud-agents programmés — daily-standup, pr-triage, dependency-audit, incident-watch, weekly-retro, sprint-planning, code-review-rotation, security-scan, changelog-generator, cost-audit | Voir [`routines/`](routines/) |
 | **Compétences computer-use** | 4 — ui-testing, visual-qa, legacy-app-automation, screenshot-verify | `/plugin install` ou copier |
 | **Galerie CLAUDE.md** | 20 modèles annotés du monde réel — Next.js SaaS, FastAPI, monorepo, outil CLI, dbt, mobile, bibliothèque OSS, k8s, petite entreprise, légal, fintech, développement de jeux, embarqué, et plus | Voir [`claude-md-examples/`](claude-md-examples/) |
-| **Adaptateurs inter-harness** | Utiliser Claudient dans Cursor, Windsurf, Codex CLI, Gemini Code Assist, GitHub Copilot — guides d'adaptateurs + script d'installation | Voir [`compatibility/`](compatibility/) |
+| **Adaptateurs inter-harness** | Utiliser UitKit dans Cursor, Windsurf, Codex CLI, Gemini Code Assist, GitHub Copilot — guides d'adaptateurs + script d'installation | Voir [`compatibility/`](compatibility/) |
 | **Pack Agent SDK** | Guide complet + agents démarreurs exécutables en Python et TypeScript | Voir [`examples/agent-sdk/`](examples/agent-sdk/) |
 
 ---
@@ -117,13 +117,13 @@ Claudient couvre chaque primitive supportée par Claude Code, pas seulement les 
 | `ai-engineering` | prompt-improve, eval-harness, rag-setup, token-optimize, mcp-server-gen, agent-scaffold |
 | `productivity` | standup-notes, meeting-summary, task-breakdown, decision-doc, weekly-review, email-draft |
 
-Installer : `/plugin install claudient-commands@claudient` ou copier [`commands/`](commands/) dans `.claude/commands/`.
+Installer : `/plugin install uitkit-commands@uitkit` ou copier [`commands/`](commands/) dans `.claude/commands/`.
 
 ---
 
 ## Pourquoi utiliser les compétences Claude Code ?
 
-| Problème | Sans Claudient | Avec Claudient |
+| Problème | Sans UitKit | Avec UitKit |
 |---|---|---|
 | **Contexte de domaine** | Réexpliquer votre pile à chaque session | Les compétences s'activent automatiquement |
 | **Tâches spécialisées** | Claude devine les meilleures pratiques | 182+ agents experts avec outils limités |
@@ -161,14 +161,14 @@ Claude Code est l'assistant IA officiel en ligne de commande d'Anthropic pour le
 ### Quelles sont les compétences Claude Code ?
 Les compétences sont des fichiers markdown dans `.claude/commands/` (ou chargés via le système de plugins) qui définissent des comportements experts réutilisables. Lorsqu'elles sont déclenchées par une commande slash ou des mots clés, Claude Code lit la compétence et applique son expertise de domaine à votre contexte actuel — aucun invite répété requis.
 
-### En quoi Claudient est-il différent de l'écriture d'un fichier CLAUDE.md ?
-Un `CLAUDE.md` définit le contexte au niveau du projet pour un seul repo. Les compétences de Claudient sont au niveau du domaine et réutilisables dans tous les projets — 400+ compétences couvrant FastAPI, Kubernetes, HubSpot, React, Terraform et des centaines d'autres piles.
+### En quoi UitKit est-il différent de l'écriture d'un fichier CLAUDE.md ?
+Un `CLAUDE.md` définit le contexte au niveau du projet pour un seul repo. Les compétences de UitKit sont au niveau du domaine et réutilisables dans tous les projets — 400+ compétences couvrant FastAPI, Kubernetes, HubSpot, React, Terraform et des centaines d'autres piles.
 
-### Claudient fonctionne-t-il avec Cursor, GitHub Copilot ou d'autres outils de codage IA ?
-Claudient est conçu pour Claude Code (CLI et extensions IDE). Les adaptateurs inter-harness dans [`compatibility/`](compatibility/) supportent également Cursor, Windsurf, Codex CLI, Gemini Code Assist et GitHub Copilot.
+### UitKit fonctionne-t-il avec Cursor, GitHub Copilot ou d'autres outils de codage IA ?
+UitKit est conçu pour Claude Code (CLI et extensions IDE). Les adaptateurs inter-harness dans [`compatibility/`](compatibility/) supportent également Cursor, Windsurf, Codex CLI, Gemini Code Assist et GitHub Copilot.
 
-### Comment installer les compétences Claude Code de Claudient ?
-Exécutez `npx claudient add all` pour installer tout, ou utilisez le système de plugins de Claude Code : `/plugin marketplace add UitbreidenOS/Claudient` puis `/plugin install claudient-everything@claudient`. Installez par domaine avec `npx claudient add skills backend` ou `npx claudient add skills devops-infra`.
+### Comment installer les compétences Claude Code de UitKit ?
+Exécutez `npx uitkit add all` pour installer tout, ou utilisez le système de plugins de Claude Code : `/plugin marketplace add UitbreidenOS/UitKit` puis `/plugin install uitkit-everything@uitkit`. Installez par domaine avec `npx uitkit add skills backend` ou `npx uitkit add skills devops-infra`.
 
 ---
 
@@ -178,31 +178,31 @@ Exécutez `npx claudient add all` pour installer tout, ou utilisez le système d
 
 | Profession | Installation | Guide |
 |---|---|---|
-| SDR / Représentant commercial | `npx claudient add skill gtm/sdr-research-brief` | [Guide](guides/for-sdr.md) |
-| Fondateur / PDG | `npx claudient add skill gtm/founder-operating-system` | [Guide](guides/for-founder.md) |
-| Gestionnaire de produit | `npx claudient add skill product/product-discovery` | [Guide](guides/for-product-manager.md) |
-| Ingénieur DevOps / Platform | `npx claudient add skill devops-infra/kubernetes-architect` | [Guide](guides/for-devops-engineer.md) |
-| Marketeur de contenu / SEO | `npx claudient add skill marketing/seo-audit` | [Guide](guides/for-content-marketer.md) |
-| Analyste financier / CFO | `npx claudient add skill finance/dcf-model` | [Guide](guides/for-finance-analyst.md) |
-| Juriste / Agent de conformité | `npx claudient add skill legal/contract-review` | [Guide](guides/for-legal-compliance.md) |
-| Growth Hacker / Marketeur de performance | `npx claudient add skill marketing/paid-ads` | [Guide](guides/for-growth-marketer.md) |
-| Gestionnaire du succès client | `npx claudient add skill gtm/customer-success` | [Guide](guides/for-customer-success.md) |
-| Recruteur / Ressources humaines | `npx claudient add skill small-business/hiring-pipeline` | [Guide](guides/for-recruiter.md) |
-| Designer / Chercheur UX | `npx claudient add skill product/ux-research` | [Guide](guides/for-ux-designer.md) |
-| Rédacteur technique | `npx claudient add skill productivity/adr-writer` | [Guide](guides/for-technical-writer.md) |
-| Directeur des comptes | `npx claudient add skill gtm/deal-desk` | [Guide](guides/for-account-executive.md) |
-| Gestionnaire des opérations / COO | `npx claudient add skill small-business/sop-writer` | [Guide](guides/for-operations-manager.md) |
-| Marketeur par email | `npx claudient add skill gtm/email-automation` | [Guide](guides/for-email-marketer.md) |
-| Opérateur e-commerce | `npx claudient add skill small-business/ecommerce-seller` | [Guide](guides/for-ecommerce-operator.md) |
-| CTO / Leader technique | `npx claudient add skill productivity/tech-debt-tracker` | [Guide](guides/for-cto.md) |
-| Agent immobilier | `npx claudient add skill small-business/real-estate-listing` | [Guide](guides/for-real-estate-agent.md) |
-| Investisseur / Analyste VC | `npx claudient add skill finance/ic-memo` | [Guide](guides/for-investor.md) |
-| Analyste de données / Analyste BI | `npx claudient add skill data-ml/dbt` | [Guide](guides/for-data-analyst.md) |
-| Freelancer / Consultant | `npx claudient add skill small-business/freelancer-proposal` | [Guide](guides/for-freelancer.md) |
-| Assistant exécutif / Chief of Staff | `npx claudient add skill productivity/meeting-to-action` | [Guide](guides/for-executive-assistant.md) |
-| Éducateur / Créateur de cours | `npx claudient add skill small-business/online-course-creator` | [Guide](guides/for-educator.md) |
-| Ingénieur logiciel | `npx claudient add skills backend` | utilise les compétences existantes — aucun guide dédié pour le moment |
-| Admin santé | `npx claudient add skills small-business` | utilise les compétences existantes — aucun guide dédié pour le moment |
+| SDR / Représentant commercial | `npx uitkit add skill gtm/sdr-research-brief` | [Guide](guides/for-sdr.md) |
+| Fondateur / PDG | `npx uitkit add skill gtm/founder-operating-system` | [Guide](guides/for-founder.md) |
+| Gestionnaire de produit | `npx uitkit add skill product/product-discovery` | [Guide](guides/for-product-manager.md) |
+| Ingénieur DevOps / Platform | `npx uitkit add skill devops-infra/kubernetes-architect` | [Guide](guides/for-devops-engineer.md) |
+| Marketeur de contenu / SEO | `npx uitkit add skill marketing/seo-audit` | [Guide](guides/for-content-marketer.md) |
+| Analyste financier / CFO | `npx uitkit add skill finance/dcf-model` | [Guide](guides/for-finance-analyst.md) |
+| Juriste / Agent de conformité | `npx uitkit add skill legal/contract-review` | [Guide](guides/for-legal-compliance.md) |
+| Growth Hacker / Marketeur de performance | `npx uitkit add skill marketing/paid-ads` | [Guide](guides/for-growth-marketer.md) |
+| Gestionnaire du succès client | `npx uitkit add skill gtm/customer-success` | [Guide](guides/for-customer-success.md) |
+| Recruteur / Ressources humaines | `npx uitkit add skill small-business/hiring-pipeline` | [Guide](guides/for-recruiter.md) |
+| Designer / Chercheur UX | `npx uitkit add skill product/ux-research` | [Guide](guides/for-ux-designer.md) |
+| Rédacteur technique | `npx uitkit add skill productivity/adr-writer` | [Guide](guides/for-technical-writer.md) |
+| Directeur des comptes | `npx uitkit add skill gtm/deal-desk` | [Guide](guides/for-account-executive.md) |
+| Gestionnaire des opérations / COO | `npx uitkit add skill small-business/sop-writer` | [Guide](guides/for-operations-manager.md) |
+| Marketeur par email | `npx uitkit add skill gtm/email-automation` | [Guide](guides/for-email-marketer.md) |
+| Opérateur e-commerce | `npx uitkit add skill small-business/ecommerce-seller` | [Guide](guides/for-ecommerce-operator.md) |
+| CTO / Leader technique | `npx uitkit add skill productivity/tech-debt-tracker` | [Guide](guides/for-cto.md) |
+| Agent immobilier | `npx uitkit add skill small-business/real-estate-listing` | [Guide](guides/for-real-estate-agent.md) |
+| Investisseur / Analyste VC | `npx uitkit add skill finance/ic-memo` | [Guide](guides/for-investor.md) |
+| Analyste de données / Analyste BI | `npx uitkit add skill data-ml/dbt` | [Guide](guides/for-data-analyst.md) |
+| Freelancer / Consultant | `npx uitkit add skill small-business/freelancer-proposal` | [Guide](guides/for-freelancer.md) |
+| Assistant exécutif / Chief of Staff | `npx uitkit add skill productivity/meeting-to-action` | [Guide](guides/for-executive-assistant.md) |
+| Éducateur / Créateur de cours | `npx uitkit add skill small-business/online-course-creator` | [Guide](guides/for-educator.md) |
+| Ingénieur logiciel | `npx uitkit add skills backend` | utilise les compétences existantes — aucun guide dédié pour le moment |
+| Admin santé | `npx uitkit add skills small-business` | utilise les compétences existantes — aucun guide dédié pour le moment |
 
 Chaque pack comprend : commandes slash spécifiques au domaine, un roster d'agents sélectionnés, un workflow quotidien, un plan de montée en charge de 30 jours et des configurations d'intégration d'outils.
 
@@ -274,7 +274,7 @@ Les piles d'espace de travail complètes avec un `CLAUDE.md`, 8 compétences et 
 
 ```bash
 # Installer une pile d'espace de travail complète
-npx claudient add all   # inclut les 42 piles
+npx uitkit add all   # inclut les 42 piles
 ```
 
 ---
@@ -283,28 +283,28 @@ npx claudient add all   # inclut les 42 piles
 
 ```bash
 # Tout installer
-npx claudient add all
+npx uitkit add all
 
 # Installer par domaine
-npx claudient add skills backend          # 40+ compétences backend
-npx claudient add skills devops-infra     # Kubernetes, Terraform, Docker, CI/CD
-npx claudient add skills ai-engineering   # RAG, LangGraph, Claude API, MCP builder
-npx claudient add skills legal            # RGPD, SOC 2, contrats, examen NDA
-npx claudient add skills finance          # DCF, modèle 3 déclarations, pitch deck
-npx claudient add skills small-business   # Invoice chaser, flux de trésorerie, Shopify
+npx uitkit add skills backend          # 40+ compétences backend
+npx uitkit add skills devops-infra     # Kubernetes, Terraform, Docker, CI/CD
+npx uitkit add skills ai-engineering   # RAG, LangGraph, Claude API, MCP builder
+npx uitkit add skills legal            # RGPD, SOC 2, contrats, examen NDA
+npx uitkit add skills finance          # DCF, modèle 3 déclarations, pitch deck
+npx uitkit add skills small-business   # Invoice chaser, flux de trésorerie, Shopify
 
 # Installer des agents
-npx claudient add agents                  # Tous les 182+ agents spécialisés
+npx uitkit add agents                  # Tous les 182+ agents spécialisés
 
 # Installer dans votre langue
-npx claudient add all --lang fr           # Français
-npx claudient add all --lang de           # Allemand
-npx claudient add all --lang nl           # Néerlandais
-npx claudient add all --lang es           # Espagnol
+npx uitkit add all --lang fr           # Français
+npx uitkit add all --lang de           # Allemand
+npx uitkit add all --lang nl           # Néerlandais
+npx uitkit add all --lang es           # Espagnol
 
 # Découvrir
-npx claudient search "circuit breaker"
-npx claudient list
+npx uitkit search "circuit breaker"
+npx uitkit list
 ```
 
 ---
@@ -312,30 +312,30 @@ npx claudient list
 ## Structure du dépôt
 
 ```
-Claudient/
+UitKit/
 ├── .claude-plugin/           # Manifestes de plugin et de marché
 │   ├── plugin.json           # Métadonnées de plugin et chemins de composants
 │   └── marketplace.json      # Catalogue du marché pour /plugin marketplace add
 │
 ├── plugins/                  # 19 plugins de domaine installables
-│   ├── claudient-productivity/     # 66 compétences
-│   ├── claudient-small-business/   # 47 compétences
-│   ├── claudient-backend/          # 41 compétences
-│   ├── claudient-devops-infra/     # 36 compétences
-│   ├── claudient-gtm/              # 32 compétences
-│   ├── claudient-marketing/        # 22 compétences
-│   ├── claudient-legal/            # 21 compétences
-│   ├── claudient-sdr/              # 18 compétences
-│   ├── claudient-ai-engineering/   # 17 compétences
-│   ├── claudient-finance/          # 16 compétences
-│   ├── claudient-data-ml/          # 15 compétences
-│   ├── claudient-product/          # 15 compétences
-│   ├── claudient-automation/       # 14 compétences
-│   ├── claudient-database/         # 12 compétences
-│   ├── claudient-git/              # 3 compétences
-│   ├── claudient-commands/         # 100 commandes slash
-│   ├── claudient-personas/         # 10 personas
-│   └── claudient-everything/       # meta-bundle (tous les domaines)
+│   ├── uitkit-productivity/     # 66 compétences
+│   ├── uitkit-small-business/   # 47 compétences
+│   ├── uitkit-backend/          # 41 compétences
+│   ├── uitkit-devops-infra/     # 36 compétences
+│   ├── uitkit-gtm/              # 32 compétences
+│   ├── uitkit-marketing/        # 22 compétences
+│   ├── uitkit-legal/            # 21 compétences
+│   ├── uitkit-sdr/              # 18 compétences
+│   ├── uitkit-ai-engineering/   # 17 compétences
+│   ├── uitkit-finance/          # 16 compétences
+│   ├── uitkit-data-ml/          # 15 compétences
+│   ├── uitkit-product/          # 15 compétences
+│   ├── uitkit-automation/       # 14 compétences
+│   ├── uitkit-database/         # 12 compétences
+│   ├── uitkit-git/              # 3 compétences
+│   ├── uitkit-commands/         # 100 commandes slash
+│   ├── uitkit-personas/         # 10 personas
+│   └── uitkit-everything/       # meta-bundle (tous les domaines)
 │
 ├── skills/                   # 400+ compétences de domaine auto-invoquées
 │   ├── backend/              # Next.js, FastAPI, Go, Rust, .NET, Rails, Laravel, Flutter
@@ -420,7 +420,7 @@ Claudient/
 ├── professional-stacks/      # 50 piles d'espace de travail pré-filaires (CLAUDE.md + 8 compétences chacune)
 ├── scripts/                  # Scripts de compilation et d'utilitaires
 ├── docs/                     # ADR et documentation interne
-└── index.json                # Index complet et consultable (npx claudient search)
+└── index.json                # Index complet et consultable (npx uitkit search)
 ```
 
 ---
@@ -469,8 +469,8 @@ Claudient/
 **→ [Guide complet : Top 100 serveurs MCP pour les Indie Builders](mcp/top-mcp-servers.md)** — configurations d'installation, classements de tier et bundles sélectionnés pour chaque pile.
 
 ```bash
-npx claudient add mcp starter   # GitHub + Memory + Playwright
-npx claudient add mcp all       # Tous les 40 guides de configuration individuels
+npx uitkit add mcp starter   # GitHub + Memory + Playwright
+npx uitkit add mcp all       # Tous les 40 guides de configuration individuels
 ```
 
 ---
@@ -479,10 +479,10 @@ npx claudient add mcp all       # Tous les 40 guides de configuration individuel
 
 ## Claude pour les petites entreprises — 30+ compétences verticales
 
-> **La base de connaissances communautaire la plus complète pour utiliser Claude dans une petite entreprise.** Des compétences en langage clair, aucun terminal requis, écrites pour les propriétaires qui paient déjà pour QuickBooks, Shopify, HubSpot et le reste. Claudient étend le lancement officiel d'Anthropic [Claude pour les petites entreprises](guides/claude-for-small-business.md) avec 30+ compétences couvrant la longue traîne de verticales et de workflows.
+> **La base de connaissances communautaire la plus complète pour utiliser Claude dans une petite entreprise.** Des compétences en langage clair, aucun terminal requis, écrites pour les propriétaires qui paient déjà pour QuickBooks, Shopify, HubSpot et le reste. UitKit étend le lancement officiel d'Anthropic [Claude pour les petites entreprises](guides/claude-for-small-business.md) avec 30+ compétences couvrant la longue traîne de verticales et de workflows.
 
 ```bash
-npx claudient add skills small-business
+npx uitkit add skills small-business
 ```
 
 ### Claude pour les petites entreprises par verticale
@@ -556,7 +556,7 @@ Chaque guide est une page de destination de bout en bout pour une industrie spé
 - [`real-estate-specialist`](agents/roles/real-estate-specialist.md) — opérations d'agents immobiliers et de courtage
 
 ```bash
-npx claudient add agents small-business
+npx uitkit add agents small-business
 ```
 
 ---
@@ -565,11 +565,11 @@ npx claudient add agents small-business
 
 ### Qu'est-ce que Claude pour les petites entreprises ?
 
-Claude pour les petites entreprises est la couche de produit axée sur les petites entreprises d'Anthropic dans Claude Cowork, lancée le 13 mai 2026, avec 15 workflows officiels. Claudient est la base de connaissances communautaire qui étend ces workflows avec 30+ compétences supplémentaires couvrant la longue traîne de verticales (dentaire, salon, métiers, photographie, coaching, e-commerce) et de workflows d'opérateur (embauche, attrition, tarification, propositions). [Lisez le guide produit](guides/claude-for-small-business.md).
+Claude pour les petites entreprises est la couche de produit axée sur les petites entreprises d'Anthropic dans Claude Cowork, lancée le 13 mai 2026, avec 15 workflows officiels. UitKit est la base de connaissances communautaire qui étend ces workflows avec 30+ compétences supplémentaires couvrant la longue traîne de verticales (dentaire, salon, métiers, photographie, coaching, e-commerce) et de workflows d'opérateur (embauche, attrition, tarification, propositions). [Lisez le guide produit](guides/claude-for-small-business.md).
 
 ### Claude est-il bon pour les propriétaires de petites entreprises ?
 
-Oui. Les propriétaires exploitant des entreprises de 1 à 50 personnes économisent généralement 6 à 12 heures par semaine dans les 30 jours, sur le travail mécanique qui remplissait auparavant leurs soirées — facturation, suivi des prospects, rapports hebdomadaires, repurposage de contenu, FAQ clients. Les compétences Claudient sont écrites en premier par les opérateurs, aucun terminal requis.
+Oui. Les propriétaires exploitant des entreprises de 1 à 50 personnes économisent généralement 6 à 12 heures par semaine dans les 30 jours, sur le travail mécanique qui remplissait auparavant leurs soirées — facturation, suivi des prospects, rapports hebdomadaires, repurposage de contenu, FAQ clients. Les compétences UitKit sont écrites en premier par les opérateurs, aucun terminal requis.
 
 ### En quoi Claude est-il différent de ChatGPT pour les petites entreprises ?
 
@@ -581,7 +581,7 @@ ChatGPT est un assistant de discussion généraliste. Claude pour les petites en
 
 ### Dois-je savoir comment coder ?
 
-Non. Les workflows officiels de Claude pour les petites entreprises sont point-and-click dans Claude Cowork. Les compétences Claudient dans ce repo sont activées en tapant de l'anglais clair à Claude. Le seul setup est la connexion OAuth de vos outils existants, ce qui prend quelques clics par outil.
+Non. Les workflows officiels de Claude pour les petites entreprises sont point-and-click dans Claude Cowork. Les compétences UitKit dans ce repo sont activées en tapant de l'anglais clair à Claude. Le seul setup est la connexion OAuth de vos outils existants, ce qui prend quelques clics par outil.
 
 ### Claude peut-il lire mes données QuickBooks ?
 
@@ -601,7 +601,7 @@ Oui, via le MCP HubSpot officiel. [Lead Triager](skills/small-business/lead-tria
 
 ### Comment commencer ?
 
-Exécutez `npx claudient add skills small-business` pour installer chaque compétence de petite entreprise dans votre environnement Claude Code. Ensuite, commencez par un workflow — [Invoice Chaser](skills/small-business/invoice-chaser.md) est le point de départ avec le ROI le plus élevé pour la plupart des entreprises — et examinez attentivement le résultat à la première exécution.
+Exécutez `npx uitkit add skills small-business` pour installer chaque compétence de petite entreprise dans votre environnement Claude Code. Ensuite, commencez par un workflow — [Invoice Chaser](skills/small-business/invoice-chaser.md) est le point de départ avec le ROI le plus élevé pour la plupart des entreprises — et examinez attentivement le résultat à la première exécution.
 
 ### Claude pour les petites entreprises en vaut-il la peine ?
 
@@ -609,7 +609,7 @@ Pour les entreprises où le propriétaire passe 6+ heures par semaine sur les ac
 
 ### Que se passe-t-il si je n'utilise aucun de ces outils ?
 
-Les compétences Claudient s'exécutent sur les données copier-coller lorsqu'une intégration directe n'est pas disponible. Vous perdez une partie de l'automatisation du workflow mais gardez le brouillon structuré, la notation et l'analyse. Par exemple, [Review Response](skills/small-business/review-response.md) fonctionne sur les avis Google que vous collez, même sans intégration Google.
+Les compétences UitKit s'exécutent sur les données copier-coller lorsqu'une intégration directe n'est pas disponible. Vous perdez une partie de l'automatisation du workflow mais gardez le brouillon structuré, la notation et l'analyse. Par exemple, [Review Response](skills/small-business/review-response.md) fonctionne sur les avis Google que vous collez, même sans intégration Google.
 
 ---
 
@@ -644,7 +644,7 @@ Agents spécialisés invoqués avec l'outil `Agent` dans Claude Code. Chaque age
 `competitive-analyst` · `market-researcher` · `trend-analyst` · `quant-analyst` · `fintech-engineer` · `healthcare-admin` · `legal-advisor` · `nlp-engineer` · `data-pipeline-architect` + plus
 
 ```bash
-npx claudient add agents
+npx uitkit add agents
 ```
 
 ---
@@ -740,17 +740,17 @@ Chaque compétence, agent, guide, workflow et prompt est disponible en :
 **🇬🇧 Anglais · 🇫🇷 Français · 🇩🇪 Allemand · 🇳🇱 Néerlandais · 🇪🇸 Espagnol**
 
 ```bash
-npx claudient add all --lang fr   # Français
-npx claudient add all --lang de   # Allemand
-npx claudient add all --lang nl   # Néerlandais
-npx claudient add all --lang es   # Espagnol
+npx uitkit add all --lang fr   # Français
+npx uitkit add all --lang de   # Allemand
+npx uitkit add all --lang nl   # Néerlandais
+npx uitkit add all --lang es   # Espagnol
 ```
 
 ---
 
 ## Contribuer une compétence Claude Code — Soyez mis en avant
 
-Claudient est basé sur la communauté. Chaque compétence vit dans un fichier markdown. Contribuer une compétence Claude Code prend moins de temps que de classer un problème GitHub.
+UitKit est basé sur la communauté. Chaque compétence vit dans un fichier markdown. Contribuer une compétence Claude Code prend moins de temps que de classer un problème GitHub.
 
 1. Lisez le [Guide d'authoring des compétences](guides/skill-authoring.md) — 5 minutes
 2. Forkez, ajoutez votre compétence dans un fichier `.md`
@@ -758,13 +758,13 @@ Claudient est basé sur la communauté. Chaque compétence vit dans un fichier m
 
 **Rubriques GitHub recommandées pour les projets Claude Code :** `claude` · `claude-code` · `anthropic` · `llm-tools` · `mcp` · `developer-tools` · `prompt-engineering` · `ai-assistant`
 
-**[Discussions GitHub](https://github.com/UitbreidenOS/Claudient/discussions) · [CONTRIBUTING.md](CONTRIBUTING.md) · [Reddit](https://www.reddit.com/r/uitbreiden/)**
+**[Discussions GitHub](https://github.com/UitbreidenOS/UitKit/discussions) · [CONTRIBUTING.md](CONTRIBUTING.md) · [Reddit](https://www.reddit.com/r/uitbreiden/)**
 
 ---
 
 ## Construit par Uitbreiden
 
-Claudient est soutenu par [Uitbreiden](https://uitbreiden.com/) — construction de produits IA et d'outils B2B avec des communautés de développeurs.
+UitKit est soutenu par [Uitbreiden](https://uitbreiden.com/) — construction de produits IA et d'outils B2B avec des communautés de développeurs.
 
 [![Reddit](https://img.shields.io/badge/Reddit-r%2Fuitbreiden-FF4500?logo=reddit&logoColor=white)](https://www.reddit.com/r/uitbreiden/)
 [![YouTube](https://img.shields.io/badge/YouTube-%40UITBREIDEN-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/@UITBREIDEN)

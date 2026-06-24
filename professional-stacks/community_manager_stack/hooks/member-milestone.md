@@ -81,7 +81,7 @@ cat >> /tmp/community-milestones.log << LOG_END
 LOG_END
 
 # Log to session-log.md (append)
-cat >> /Users/tushar/Desktop/Claudient/community_manager_stack/session-log.md << LOG_END
+cat >> /Users/tushar/Desktop/UitKit/community_manager_stack/session-log.md << LOG_END
 
 ## Milestone Logged: $MEMBER_NAME ($MILESTONE_TYPE)
 

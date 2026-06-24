@@ -102,7 +102,7 @@ Cargue `/lean-claude` al principio de cualquier sesión para activar el modo efi
 - Respuestas directas sin preámbulo
 
 ```bash
-npx claudient add skills productivity
+npx uitkit add skills productivity
 # Luego en Claude Code:
 /lean-claude
 ```

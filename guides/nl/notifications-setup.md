@@ -23,7 +23,7 @@ ntfy is een gratis, open source pushmelding service. Geen account vereist voor z
 
 **Setup (gehoste ntfy.sh):**
 
-1. Installeer de ntfy app op iOS of Android en abonneer op een onderwerp (kies een unieke naam, bijv. `claudient-tushar-2026`).
+1. Installeer de ntfy app op iOS of Android en abonneer op een onderwerp (kies een unieke naam, bijv. `uitkit-tushar-2026`).
 
 2. Voeg een `stop` hook toe aan `settings.json`:
 

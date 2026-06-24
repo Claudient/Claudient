@@ -471,7 +471,7 @@ Output:
 - Linear integration (roadmap sync)
 - Figma integration (design handoff)
 
-**Request new connections:** Submit issue to Claudient repository
+**Request new connections:** Submit issue to UitKit repository
 
 ---
 

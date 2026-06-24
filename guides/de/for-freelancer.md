@@ -18,16 +18,16 @@ Sie sind Freelancer oder unabhängiger Berater — Designer, Entwickler, Texter,
 
 ```bash
 # Alle Freelancer-Skills installieren
-npx claudient add skill small-business/freelancer-proposal
-npx claudient add skill small-business/scope-of-work
-npx claudient add skill small-business/client-status-report
-npx claudient add skill small-business/invoice-chaser
-npx claudient add skill small-business/cold-outreach
-npx claudient add skill small-business/cash-flow-forecast
-npx claudient add skill small-business/agency-operations
+npx uitkit add skill small-business/freelancer-proposal
+npx uitkit add skill small-business/scope-of-work
+npx uitkit add skill small-business/client-status-report
+npx uitkit add skill small-business/invoice-chaser
+npx uitkit add skill small-business/cold-outreach
+npx uitkit add skill small-business/cash-flow-forecast
+npx uitkit add skill small-business/agency-operations
 
 # Den CEO-Berater-Agenten installieren
-npx claudient add agent advisors/ceo-advisor
+npx uitkit add agent advisors/ceo-advisor
 ```
 
 ---
@@ -205,7 +205,7 @@ Zeigen Sie mir: monatlichen Cashflow, wann ich möglicherweise ein Defizit haben
 ## 30-Tage-Einstiegsplan (neue Freelancer oder neuer Markt)
 
 ### Woche 1 — Geschäftsinfrastruktur
-- Alle Freelancer-Skills installieren: `npx claudient add skill small-business/[name]`
+- Alle Freelancer-Skills installieren: `npx uitkit add skill small-business/[name]`
 - Ihre Standard-Angebotsvorlage mit `/freelancer-proposal` schreiben — für Ihre Dienstleistungen personalisieren
 - Ihre Master-Leistungsumfang-Vorlage mit `/scope-of-work` schreiben — für jedes zukünftige Projekt verwenden
 - Ihre Preise definieren: Stundensatz, Projekthonorare, Retainer-Honorare — dokumentieren

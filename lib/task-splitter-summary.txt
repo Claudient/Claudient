@@ -2,7 +2,7 @@ TASK SPLITTER IMPLEMENTATION SUMMARY
 ====================================
 
 Created: June 22, 2026
-Location: /Users/tushar/Desktop/Claudient/lib/
+Location: /Users/tushar/Desktop/UitKit/lib/
 
 FILES CREATED:
 ===============

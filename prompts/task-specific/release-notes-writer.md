@@ -19,7 +19,7 @@ INPUT:
 [paste raw git log output, CHANGELOG section, or bullet list of changes here]
 
 VERSION: [e.g., v2.4.0]
-PRODUCT NAME: [e.g., Claudient, MyApp CLI, Acme SDK]
+PRODUCT NAME: [e.g., UitKit, MyApp CLI, Acme SDK]
 AUDIENCE: [choose one: end users / developers / enterprise buyers]
 
 Produce release notes with this exact structure:
@@ -57,7 +57,7 @@ Rules:
 |---|---|---|
 | `INPUT` | Raw commits, git log, or CHANGELOG block | `git log v2.3.0..v2.4.0 --oneline` output |
 | `VERSION` | Version string being released | `v2.4.0` |
-| `PRODUCT NAME` | The product or package name | `Claudient` |
+| `PRODUCT NAME` | The product or package name | `UitKit` |
 | `AUDIENCE` | Who will read these notes | `developers` |
 
 ## Example

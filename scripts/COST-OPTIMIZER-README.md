@@ -16,7 +16,7 @@ A comprehensive cost analysis and optimization engine for Claude agent pools. An
 ## Installation
 
 ```bash
-npm install # already included in Claudient
+npm install # already included in UitKit
 ```
 
 ## Quick Start

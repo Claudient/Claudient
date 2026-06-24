@@ -18,14 +18,14 @@ Du bist Immobilienmakler — solo oder im Team — und verdienst deinen Lebensun
 
 ```bash
 # Installiere alle Immobilien-Skills
-npx claudient add skill small-business/real-estate-listing
-npx claudient add skill small-business/cma-report
-npx claudient add skill small-business/buyer-offer-writer
-npx claudient add skill small-business/cold-outreach
-npx claudient add skill small-business/customer-inquiry
+npx uitkit add skill small-business/real-estate-listing
+npx uitkit add skill small-business/cma-report
+npx uitkit add skill small-business/buyer-offer-writer
+npx uitkit add skill small-business/cold-outreach
+npx uitkit add skill small-business/customer-inquiry
 
 # Installiere den Immobilien-Spezialisten-Agent
-npx claudient add agent roles/real-estate-specialist
+npx uitkit add agent roles/real-estate-specialist
 ```
 
 ---
@@ -181,7 +181,7 @@ Eine 150-Wort-E-Mail entwerfen, die persönlich klingt, nicht wie ein Newsletter
 ## 30-Tage-Einarbeitungsplan (neue Makler oder neuer Markt)
 
 ### Woche 1 — Einrichtung und Marktwissen
-- Alle Immobilien-Skills über `npx claudient add skill small-business/[name]` installieren
+- Alle Immobilien-Skills über `npx uitkit add skill small-business/[name]` installieren
 - `/cma-report` für 5 aktuelle Verkäufe in deinem Farmgebiet ausführen, um deine Vergleichsobjekt-Analyse zu kalibrieren
 - `/real-estate-listing` nutzen, um 3 vergangene Listing-Beschreibungen neu zu schreiben — Qualität vergleichen
 - Einflussbereich abbilden: 50 Kontakte → `/cold-outreach` für den ersten Kontakt ausführen

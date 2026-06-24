@@ -17,7 +17,7 @@ Un solopreneur dépense généralement sa semaine sur six activités récurrente
 5. Service client — répondre aux questions, gérer les plaintes, planifier
 6. Stratégie — tarification, positionnement, décider sur quoi se concentrer ensuite
 
-De ces six, seule la livraison ne peut pas être assistée par Claude de façon significative (et même là, Claude aide avec les brouillons, la recherche et la révision). Chaque autre activité a au moins un skill Claudient conçu pour le cas d'usage solopreneur.
+De ces six, seule la livraison ne peut pas être assistée par Claude de façon significative (et même là, Claude aide avec les brouillons, la recherche et la révision). Chaque autre activité a au moins un skill UitKit conçu pour le cas d'usage solopreneur.
 
 ---
 
@@ -133,7 +133,7 @@ Vous passez vendredi après-midi à faire le travail que vous vouliez réellemen
 
 ### Claude est-il bon pour les solopreneurs ?
 
-Oui. Claude est conçu spécifiquement pour le cas d'usage solopreneur — propriétaire-lancé, approuvé-basé, pas de développeur requis. Les 15 workflows Claude for Small Business officiels plus la longue traîne des skills Claudient couvrent environ 60-80% du travail hebdomadaire récurrent qu'un opérateur solo fait.
+Oui. Claude est conçu spécifiquement pour le cas d'usage solopreneur — propriétaire-lancé, approuvé-basé, pas de développeur requis. Les 15 workflows Claude for Small Business officiels plus la longue traîne des skills UitKit couvrent environ 60-80% du travail hebdomadaire récurrent qu'un opérateur solo fait.
 
 ### Comment Claude est-il différent de ChatGPT pour les solopreneurs ?
 
@@ -145,7 +145,7 @@ $20/mois pour Claude Pro couvre le cas d'usage pour la plupart des businesses d'
 
 ### J'ai besoin de savoir comment coder ?
 
-Non. Claude for Small Business est point-et-clic à l'intérieur de Claude Cowork. Les skills dans ce repo Claudient sont activés en tapant des instructions en anglais simple à Claude. Le seul setup est de connecter OAuth vos outils existants, ce qui prend quelques clics par outil.
+Non. Claude for Small Business est point-et-clic à l'intérieur de Claude Cowork. Les skills dans ce repo UitKit sont activés en tapant des instructions en anglais simple à Claude. Le seul setup est de connecter OAuth vos outils existants, ce qui prend quelques clics par outil.
 
 ### Claude peut-il lire mes données QuickBooks ?
 

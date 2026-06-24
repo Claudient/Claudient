@@ -3,7 +3,7 @@
 ## Run Your First Stress Test (2 minutes)
 
 ```bash
-cd /path/to/Claudient
+cd /path/to/UitKit
 node stress-tests/swarm-sandbox-stress.js --stress-level=low
 ```
 

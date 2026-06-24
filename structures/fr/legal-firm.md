@@ -191,11 +191,11 @@ touch .claude/commands/deadline-check.md
 touch .claude/commands/cite-check.md
 touch .claude/commands/client-update.md
 
-# Installer les compétences Claudient pertinentes
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/vendor-evaluator
+# Installer les compétences UitKit pertinentes
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/vendor-evaluator
 
 echo "Scaffold complete. Populate CLAUDE.md before first use."
 ```
@@ -394,20 +394,20 @@ Ne pas stocker de documents de dossiers clôturés dans cet espace de travail.
 
 ```bash
 # Flux documentaires et de processus
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/vendor-evaluator
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/vendor-evaluator
 
 # Recherche et analyse
-npx claudient add skill productivity/exec-briefing
+npx uitkit add skill productivity/exec-briefing
 
 # Développement client et commercial
-npx claudient add skill productivity/comp-benchmarker
-npx claudient add skill productivity/investor-update
+npx uitkit add skill productivity/comp-benchmarker
+npx uitkit add skill productivity/investor-update
 
 # Facturation et gestion du temps
-npx claudient add skill productivity/engineering-strategy
+npx uitkit add skill productivity/engineering-strategy
 ```
 
 ## Connexes

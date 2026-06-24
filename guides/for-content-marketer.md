@@ -18,20 +18,20 @@ You are a content marketer, SEO manager, or growth marketer whose job is to buil
 
 ```bash
 # Install the full content marketing and SEO stack
-npx claudient add skills marketing
+npx uitkit add skills marketing
 
 # Or cherry-pick what you need:
-npx claudient add skill marketing/content-strategy
-npx claudient add skill marketing/content-brief
-npx claudient add skill marketing/editorial-calendar
-npx claudient add skill marketing/seo-audit
-npx claudient add skill marketing/ai-seo
-npx claudient add skill marketing/programmatic-seo
-npx claudient add skill marketing/copywriting
-npx claudient add skill marketing/social-media-manager
-npx claudient add skill marketing/email-sequence
-npx claudient add agents advisors/cmo-advisor
-npx claudient add agents roles/competitive-analyst
+npx uitkit add skill marketing/content-strategy
+npx uitkit add skill marketing/content-brief
+npx uitkit add skill marketing/editorial-calendar
+npx uitkit add skill marketing/seo-audit
+npx uitkit add skill marketing/ai-seo
+npx uitkit add skill marketing/programmatic-seo
+npx uitkit add skill marketing/copywriting
+npx uitkit add skill marketing/social-media-manager
+npx uitkit add skill marketing/email-sequence
+npx uitkit add agents advisors/cmo-advisor
+npx uitkit add agents roles/competitive-analyst
 ```
 
 ---
@@ -216,7 +216,7 @@ Current top keyword cluster: [main topic area]
 ## 30-day ramp plan (new content marketers)
 
 ### Week 1 — Audit and understand
-- Install all marketing skills: `npx claudient add skills marketing`
+- Install all marketing skills: `npx uitkit add skills marketing`
 - Run `/seo-audit` on your entire site — know what you have before publishing more
 - Run `/competitive-analyst` on your top 3 competitors — what are they writing about that you're not?
 - Audit your email list: open rates, click rates, unsubscribes — what content performs?

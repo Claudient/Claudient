@@ -1,12 +1,12 @@
-# Claudient — Cross-Harness Compatibility
+# UitKit — Cross-Harness Compatibility
 
-> Use Claudient's 380+ skills, 182 agents, 100 commands, and 32 rules in any AI coding tool.
+> Use UitKit's 380+ skills, 182 agents, 100 commands, and 32 rules in any AI coding tool.
 
 ## Quick reference — what works where
 
 A comprehensive compatibility matrix across tools:
 
-| Claudient content | Claude Code | Cursor | Windsurf | Codex CLI | Gemini | Copilot |
+| UitKit content | Claude Code | Cursor | Windsurf | Codex CLI | Gemini | Copilot |
 |---|---|---|---|---|---|---|
 | Skills (as markdown prompts) | ✅ Native | 🔄 Adapt | 🔄 Adapt | 🔄 Adapt | 🔄 Adapt | 🔄 Adapt |
 | Commands (slash command definitions) | ✅ Native | 🔄 Adapt | 🔄 Adapt | 🔄 Adapt | ❌ N/A | 🔄 Adapt |
@@ -24,14 +24,14 @@ A comprehensive compatibility matrix across tools:
 
 ## What's harness-agnostic (works everywhere with minimal effort)
 
-These Claudient elements are portable across any AI coding tool with minimal or no adaptation:
+These UitKit elements are portable across any AI coding tool with minimal or no adaptation:
 
 - **Skills and commands** — Markdown prompts that can be invoked via any tool's chat, command palette, or slash command system
 - **Rules** — Always-follow guidelines that translate directly to system prompts or instruction sets
 - **Agents** — Agent definitions (YAML or Markdown) can be repurposed as system prompts or spawned via any harness's delegation API
 - **CLAUDE.md examples** — Strip Claude Code-specific references (e.g., `/slash-command` → generic command reference) and reuse the logic
 - **Personas** — Adapt as system prompts or agent role definitions in any tool
-- **MCP** — Most tools support MCP; Claudient's MCP configurations work across harnesses (Claude Code, Cursor, Windsurf, etc.)
+- **MCP** — Most tools support MCP; UitKit's MCP configurations work across harnesses (Claude Code, Cursor, Windsurf, etc.)
 
 ## What's Claude Code exclusive
 
@@ -58,7 +58,7 @@ Adapter guides and patterns for each tool:
 
 ## The adaptation pattern
 
-A universal 5-step process for adapting any Claudient skill to any AI coding tool:
+A universal 5-step process for adapting any UitKit skill to any AI coding tool:
 
 1. **Extract the core prompt** — Copy the skill's Instructions section verbatim.
 2. **Strip harness references** — Remove Claude Code-specific syntax (`/slash-commands`, `@agents`, hooks, settings.json keys).
@@ -68,7 +68,7 @@ A universal 5-step process for adapting any Claudient skill to any AI coding too
 
 ### Example: Adapting the "code-review" skill to Cursor
 
-**Original Claudient skill prompt:**
+**Original UitKit skill prompt:**
 ```
 /code-review --effort high --comment
 Review the current diff for correctness bugs and reuse/simplification/efficiency cleanups at the given effort level.

@@ -20,21 +20,21 @@ Eres asesor legal interno, responsable de cumplimiento, DPO o Director Legal cuy
 
 ```bash
 # Instalar el stack completo de legal y cumplimiento
-npx claudient add skills legal
+npx uitkit add skills legal
 
 # O seleccionar individualmente:
-npx claudient add skill legal/contract-review
-npx claudient add skill legal/nda-review
-npx claudient add skill legal/gdpr-expert
-npx claudient add skill legal/soc2-compliance
-npx claudient add skill legal/privacy-pia
-npx claudient add skill legal/eu-ai-act
-npx claudient add skill legal/iso27001
-npx claudient add skill legal/dsar-response
-npx claudient add skill legal/compliance-tracker
-npx claudient add skill legal/legal-research
-npx claudient add agents advisors/general-counsel
-npx claudient add agents advisors/ciso-advisor
+npx uitkit add skill legal/contract-review
+npx uitkit add skill legal/nda-review
+npx uitkit add skill legal/gdpr-expert
+npx uitkit add skill legal/soc2-compliance
+npx uitkit add skill legal/privacy-pia
+npx uitkit add skill legal/eu-ai-act
+npx uitkit add skill legal/iso27001
+npx uitkit add skill legal/dsar-response
+npx uitkit add skill legal/compliance-tracker
+npx uitkit add skill legal/legal-research
+npx uitkit add agents advisors/general-counsel
+npx uitkit add agents advisors/ciso-advisor
 ```
 
 ---
@@ -220,7 +220,7 @@ Delegar a asesoría externa:
 ## Plan de incorporación de 30 días (nueva contratación legal / cumplimiento)
 
 ### Semana 1 — Conoce tu panorama de obligaciones
-- Instala todas las habilidades legales: `npx claudient add skills legal`
+- Instala todas las habilidades legales: `npx uitkit add skills legal`
 - Ejecuta `/compliance-tracker` — construye tu registro de obligaciones para cada marco aplicable
 - Revisa todos los contratos existentes en tus plantillas estándar — identifica qué es estándar del mercado vs. personalizado
 - Identifica DSARs abiertas, notificaciones de brechas o solicitudes de auditoría — ponte al día con los plazos de inmediato

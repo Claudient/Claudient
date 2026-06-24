@@ -7,8 +7,8 @@ info:
     webhook callbacks, and resource-isolated execution. This API enables creation, monitoring,
     and control of distributed agent swarms before production deployment.
   contact:
-    name: Claudient Support
-    url: https://github.com/claudient/swarm-sandbox
+    name: UitKit Support
+    url: https://github.com/uitkit/swarm-sandbox
   license:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0
@@ -16,7 +16,7 @@ info:
 servers:
   - url: http://localhost:3001/api
     description: Local development sandbox
-  - url: https://sandbox.claudient.io/api
+  - url: https://sandbox.uitkit.io/api
     description: Production sandbox
 
 tags:

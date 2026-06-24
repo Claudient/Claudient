@@ -194,21 +194,21 @@ touch freelance-studio/marketing/portfolio/portfolio-index.md
 touch freelance-studio/marketing/testimonials/testimonials-log.md
 
 # Installer les skills
-npx claudient add skill small-business/freelancer-proposal
-npx claudient add skill small-business/scope-of-work
-npx claudient add skill small-business/invoice-chaser
-npx claudient add skill small-business/client-status-report
-npx claudient add skill small-business/cold-outreach
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/vendor-evaluator
+npx uitkit add skill small-business/freelancer-proposal
+npx uitkit add skill small-business/scope-of-work
+npx uitkit add skill small-business/invoice-chaser
+npx uitkit add skill small-business/client-status-report
+npx uitkit add skill small-business/cold-outreach
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/vendor-evaluator
 
 # Générer les stubs de commandes dans .claude/commands/
-npx claudient add skill small-business/freelancer-proposal --output freelance-studio/.claude/commands/proposal-draft.md
-npx claudient add skill small-business/scope-of-work --output freelance-studio/.claude/commands/scope-of-work.md
-npx claudient add skill small-business/invoice-chaser --output freelance-studio/.claude/commands/invoice-chase.md
-npx claudient add skill small-business/client-status-report --output freelance-studio/.claude/commands/client-status-update.md
-npx claudient add skill small-business/client-onboarding --output freelance-studio/.claude/commands/new-client-onboard.md
+npx uitkit add skill small-business/freelancer-proposal --output freelance-studio/.claude/commands/proposal-draft.md
+npx uitkit add skill small-business/scope-of-work --output freelance-studio/.claude/commands/scope-of-work.md
+npx uitkit add skill small-business/invoice-chaser --output freelance-studio/.claude/commands/invoice-chase.md
+npx uitkit add skill small-business/client-status-report --output freelance-studio/.claude/commands/client-status-update.md
+npx uitkit add skill small-business/client-onboarding --output freelance-studio/.claude/commands/new-client-onboard.md
 ```
 
 ## Modèle CLAUDE.md
@@ -474,20 +474,20 @@ Testimonial: [le client a-t-il accepté d'en fournir un ? oui/non/à demander]
 
 ```bash
 # Skills studio essentiels
-npx claudient add skill small-business/freelancer-proposal
-npx claudient add skill small-business/scope-of-work
-npx claudient add skill small-business/invoice-chaser
-npx claudient add skill small-business/client-status-report
-npx claudient add skill small-business/cold-outreach
+npx uitkit add skill small-business/freelancer-proposal
+npx uitkit add skill small-business/scope-of-work
+npx uitkit add skill small-business/invoice-chaser
+npx uitkit add skill small-business/client-status-report
+npx uitkit add skill small-business/cold-outreach
 
 # Skills productivité et communication
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/vendor-evaluator
-npx claudient add skill productivity/exec-briefing
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/vendor-evaluator
+npx uitkit add skill productivity/exec-briefing
 
 # Installer tous les skills small-business en une seule commande
-npx claudient add skills small-business
+npx uitkit add skills small-business
 ```
 
 ## Voir aussi

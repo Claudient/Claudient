@@ -200,15 +200,15 @@ touch .claude/commands/investor-update.md
 touch .claude/commands/budget-reforecast.md
 
 # Claude Code skills installeren
-npx claudient add skill finance/3-statement-model
-npx claudient add skill finance/dcf-model
-npx claudient add skill finance/budget-vs-actual
-npx claudient add skill finance/board-pack-builder
-npx claudient add skill finance/financial-plan
-npx claudient add skill finance/gl-reconciler
-npx claudient add skill finance/comps-analysis
-npx claudient add skill productivity/investor-update
-npx claudient add skill productivity/exec-briefing
+npx uitkit add skill finance/3-statement-model
+npx uitkit add skill finance/dcf-model
+npx uitkit add skill finance/budget-vs-actual
+npx uitkit add skill finance/board-pack-builder
+npx uitkit add skill finance/financial-plan
+npx uitkit add skill finance/gl-reconciler
+npx uitkit add skill finance/comps-analysis
+npx uitkit add skill productivity/investor-update
+npx uitkit add skill productivity/exec-briefing
 ```
 
 ## CLAUDE.md sjabloon
@@ -371,17 +371,17 @@ organisatiespecifieke outputs te produceren — geen generieke financieel advies
 ## Skills om te installeren
 
 ```bash
-npx claudient add skill finance/3-statement-model
-npx claudient add skill finance/dcf-model
-npx claudient add skill finance/budget-vs-actual
-npx claudient add skill finance/board-pack-builder
-npx claudient add skill finance/financial-plan
-npx claudient add skill finance/gl-reconciler
-npx claudient add skill finance/comps-analysis
-npx claudient add skill productivity/investor-update
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill data-ml/stakeholder-report
+npx uitkit add skill finance/3-statement-model
+npx uitkit add skill finance/dcf-model
+npx uitkit add skill finance/budget-vs-actual
+npx uitkit add skill finance/board-pack-builder
+npx uitkit add skill finance/financial-plan
+npx uitkit add skill finance/gl-reconciler
+npx uitkit add skill finance/comps-analysis
+npx uitkit add skill productivity/investor-update
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill data-ml/stakeholder-report
 ```
 
 ## Gerelateerd

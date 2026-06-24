@@ -4,19 +4,19 @@
 Accepted
 
 ## Context
-Claudient needs to be installable by developers without requiring them to clone the full repository and manually copy files. Two distribution options were evaluated at the start of the project: git clone + manual copy, or npm package.
+UitKit needs to be installable by developers without requiring them to clone the full repository and manually copy files. Two distribution options were evaluated at the start of the project: git clone + manual copy, or npm package.
 
 ## Decision
-Claudient will be distributed as an npm package (`claudient`) from the initial release.
+UitKit will be distributed as an npm package (`uitkit`) from the initial release.
 
-The package exposes a CLI (`npx claudient add [category]`) that copies skill files to the user's `~/.claude/skills/` directory. No runtime dependencies are required — the package is a knowledge artifact, not a library.
+The package exposes a CLI (`npx uitkit add [category]`) that copies skill files to the user's `~/.claude/skills/` directory. No runtime dependencies are required — the package is a knowledge artifact, not a library.
 
 The `package.json` is at the repo root. The `scripts/cli.js` handles installation logic.
 
 ## Consequences
 
 **Positive:**
-- Zero-friction installation: `npx claudient add all` works without cloning
+- Zero-friction installation: `npx uitkit add all` works without cloning
 - Versioned releases via npm — users can pin to a specific version
 - Discoverable via `npm search claude-code`
 - Consistent with how other Claude Code knowledge packages (e.g., everything-claude-code) are distributed
@@ -28,7 +28,7 @@ The `package.json` is at the repo root. The `scripts/cli.js` handles installatio
 - npm package includes all content — no per-skill lazy loading without additional tooling
 
 **Mitigations:**
-- `npx claudient add [category]` allows partial installs to keep it lightweight
+- `npx uitkit add [category]` allows partial installs to keep it lightweight
 - `.claude-plugin/plugin.json` provides a machine-readable manifest for future tooling
 
 ## Alternatives Considered

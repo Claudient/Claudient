@@ -329,9 +329,9 @@ npm test -- lib/azure-deployment.test.js --grep "Health"
 
 ---
 
-## Integration with Claudient
+## Integration with UitKit
 
-This module integrates with other Claudient components:
+This module integrates with other UitKit components:
 
 - **approval-engine**: For production deployment approvals
 - **goal-parser**: For infrastructure automation goals

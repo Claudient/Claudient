@@ -151,4 +151,4 @@ Refunds, cancellations, and adjustments are processed with automatic inventory r
 
 ---
 
-Built by [tushar2704](https://uitbreiden.com/) · [Claudient](https://github.com/Claudients/Claudient) · [Claude Code](https://claude.com/claude-code)
+Built by [tushar2704](https://uitbreiden.com/) · [UitKit](https://github.com/UitKits/UitKit) · [Claude Code](https://claude.com/claude-code)

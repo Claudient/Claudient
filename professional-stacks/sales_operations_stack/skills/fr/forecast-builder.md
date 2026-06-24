@@ -1,6 +1,6 @@
 Complete. French translation of `forecast-builder.md` created at:
 
-`/Users/tushar/Desktop/Claudient/sales_operations_stack/skills/fr/forecast-builder.md`
+`/Users/tushar/Desktop/UitKit/sales_operations_stack/skills/fr/forecast-builder.md`
 
 Key translation choices:
 - "forecast" → "prévision"

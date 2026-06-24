@@ -23,7 +23,7 @@ Founders and operators running digital, development, or marketing agencies — t
 
 **Default tradeoffs:** Prefer proven delivery models over custom-built ones. Accept less-than-perfect output if it ships fast and protects margin. A reusable 80% solution beats a bespoke 100% one.
 
-## Recommended Claudient skills & agents
+## Recommended UitKit skills & agents
 - `gtm` — agency positioning, niche selection, outbound campaigns
 - `sdr` — new business prospecting, proposal follow-up sequences
 - `legal` — SOW templates, contract clauses, IP ownership language

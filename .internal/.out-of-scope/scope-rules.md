@@ -1,13 +1,13 @@
-# Claudient — Out of Scope
+# UitKit — Out of Scope
 
-This document defines what Claudient explicitly will NOT support. It exists to prevent scope creep from well-intentioned contributors and to set clear expectations.
+This document defines what UitKit explicitly will NOT support. It exists to prevent scope creep from well-intentioned contributors and to set clear expectations.
 
 ---
 
 ## Out of Scope
 
 ### Multi-harness support (Cursor, OpenCode, Windsurf, Aider)
-**Claudient is Claude Code-only.** Other AI coding tools use different configuration formats, hook systems, and agent APIs. Supporting multiple harnesses would require per-harness skill variants, fragmented testing, and maintenance overhead that dilutes the Claude Code focus.
+**UitKit is Claude Code-only.** Other AI coding tools use different configuration formats, hook systems, and agent APIs. Supporting multiple harnesses would require per-harness skill variants, fragmented testing, and maintenance overhead that dilutes the Claude Code focus.
 
 If you want Cursor support, fork the repo and adapt the skill format. We may add a Cursor adapter after Claude Code reaches v1.0 maturity.
 

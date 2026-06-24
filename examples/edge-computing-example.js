@@ -19,7 +19,7 @@ async function example1_basicTaskRouting() {
   console.log('\n=== Example 1: Basic Task Routing ===\n');
 
   const coordinator = new EdgeCoordinator({
-    cloudUrl: 'https://api.claudient.local/sync',
+    cloudUrl: 'https://api.uitkit.local/sync',
   });
 
   // Create edge nodes in different regions
@@ -184,7 +184,7 @@ async function example4_cloudSync() {
   console.log('\n=== Example 4: Cloud Sync Pattern ===\n');
 
   const coordinator = new EdgeCoordinator({
-    cloudUrl: 'https://api.claudient.local/sync',
+    cloudUrl: 'https://api.uitkit.local/sync',
     syncInterval: 2000,
   });
 

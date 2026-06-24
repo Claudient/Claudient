@@ -148,7 +148,7 @@ Specifieke prompts → gerichte antwoorden → minder tokens.
 
 Gebruik de `cost-tracker`-hook om tokengebruik per toolaanroep te zien:
 ```bash
-npx claudient add hooks
+npx uitkit add hooks
 # Then add hooks/lifecycle/cost-tracker.sh to .claude/settings.json
 ```
 

@@ -1,12 +1,12 @@
 ---
 name: content-freshness
-description: "SLA de maintenance, seuils de staleness, et procédures de fraîcheur du contenu Claudient"
+description: "SLA de maintenance, seuils de staleness, et procédures de fraîcheur du contenu UitKit"
 updated: 2026-06-15
 ---
 
-# SLA de Fraîcheur du Contenu Claudient
+# SLA de Fraîcheur du Contenu UitKit
 
-Normes de maintenance et procédures pour maintenir le contenu Claudient actuel et précis. Ce guide définit les seuils de staleness, quoi vérifier par type de contenu, et le processus de mise à jour du frontmatter.
+Normes de maintenance et procédures pour maintenir le contenu UitKit actuel et précis. Ce guide définit les seuils de staleness, quoi vérifier par type de contenu, et le processus de mise à jour du frontmatter.
 
 ---
 
@@ -172,7 +172,7 @@ Quand vous ajoutez ou modifiez un fichier :
 
 3. **Vérifiez les liens :**
    - Les URLs externes dans le fichier ne devraient pas donner de 404
-   - Les liens internes (vers d'autres fichiers dans Claudient) devraient référencer des fichiers existants
+   - Les liens internes (vers d'autres fichiers dans UitKit) devraient référencer des fichiers existants
 
 4. **Committez :**
    ```bash

@@ -1,6 +1,6 @@
-# Claudient Troubleshooting Guide
+# UitKit Troubleshooting Guide
 
-Master troubleshooting guide for the Claudient ecosystem. Common issues across **Skills & Agents**, **Plugin Marketplace**, and **MCP Integration**, with diagnostic commands and solutions.
+Master troubleshooting guide for the UitKit ecosystem. Common issues across **Skills & Agents**, **Plugin Marketplace**, and **MCP Integration**, with diagnostic commands and solutions.
 
 ---
 
@@ -10,13 +10,13 @@ Run these commands first to identify your issue:
 
 ```bash
 # Check Claude Code installation & environment
-npx claudient doctor
+npx uitkit doctor
 
-# Audit your Claudient installation
-npx claudient audit
+# Audit your UitKit installation
+npx uitkit audit
 
 # List all installed skills, agents, hooks
-npx claudient list
+npx uitkit list
 
 # Check Node.js version (required: >=18)
 node --version
@@ -32,34 +32,34 @@ ls -la ~/.claude/
 
 ## Feature 1: Installation & Version Conflicts
 
-### Issue: `npx claudient: command not found`
+### Issue: `npx uitkit: command not found`
 
 **Symptom:** Installation failed or not in PATH.
 
 **Diagnosis:**
 ```bash
-npm list -g claudient
+npm list -g uitkit
 npm list -g @anthropic-ai/claude-code
 ```
 
 **Solutions:**
 
-1. **Reinstall claudient:**
+1. **Reinstall uitkit:**
    ```bash
-   npm uninstall -g claudient
-   npm install -g claudient@latest
+   npm uninstall -g uitkit
+   npm install -g uitkit@latest
    ```
 
 2. **Update npm to latest:**
    ```bash
    npm install -g npm@latest
    npm cache clean --force
-   npm install -g claudient
+   npm install -g uitkit
    ```
 
 3. **Use npx directly (no global install):**
    ```bash
-   npx claudient@latest doctor
+   npx uitkit@latest doctor
    ```
 
 4. **Check Node.js version (must be >=18):**
@@ -74,7 +74,7 @@ npm list -g @anthropic-ai/claude-code
 
 ### Issue: `Could not find installation of Claude Code`
 
-**Symptom:** Claudient detected but Claude Code CLI is not installed.
+**Symptom:** UitKit detected but Claude Code CLI is not installed.
 
 **Diagnosis:**
 ```bash
@@ -101,14 +101,14 @@ npm list -g @anthropic-ai/claude-code
 
 ---
 
-### Issue: `Version conflict between Claudient and Claude Code`
+### Issue: `Version conflict between UitKit and Claude Code`
 
-**Symptom:** Error like `Claudient@1.10.1 requires claude-code@^2.5.0 but found @2.1.3`.
+**Symptom:** Error like `UitKit@1.10.1 requires claude-code@^2.5.0 but found @2.1.3`.
 
 **Diagnosis:**
 ```bash
-npm list -g claudient @anthropic-ai/claude-code
-npx claudient doctor | grep -i version
+npm list -g uitkit @anthropic-ai/claude-code
+npx uitkit doctor | grep -i version
 ```
 
 **Solutions:**
@@ -116,11 +116,11 @@ npx claudient doctor | grep -i version
 1. **Update Claude Code to compatible version:**
    ```bash
    npm install -g @anthropic-ai/claude-code@latest
-   npm install -g claudient@latest
+   npm install -g uitkit@latest
    ```
 
 2. **Check compatibility matrix:**
-   | Claudient | Claude Code | Status |
+   | UitKit | Claude Code | Status |
    |---|---|---|
    | 1.10.x | 2.5+ | ✓ Compatible |
    | 1.9.x | 2.3–2.5 | ✓ Compatible |
@@ -128,7 +128,7 @@ npx claudient doctor | grep -i version
 
 3. **Lock to known-good versions:**
    ```bash
-   npm install -g @anthropic-ai/claude-code@2.5.1 claudient@1.10.1
+   npm install -g @anthropic-ai/claude-code@2.5.1 uitkit@1.10.1
    ```
 
 ---
@@ -170,20 +170,20 @@ id -G $USER
 
 ## Feature 2: Skills & Agents Installation
 
-### Issue: `npx claudient add skills backend` fails silently
+### Issue: `npx uitkit add skills backend` fails silently
 
 **Symptom:** Command exits without output or error.
 
 **Diagnosis:**
 ```bash
 # Run with verbose logging
-DEBUG=* npx claudient add skills backend
+DEBUG=* npx uitkit add skills backend
 
 # Check if skills directory exists
 ls -la ~/.claude/skills/
 
 # Test manifest validation
-npx claudient validate:manifests
+npx uitkit validate:manifests
 ```
 
 **Solutions:**
@@ -191,32 +191,32 @@ npx claudient validate:manifests
 1. **Clear npm cache and retry:**
    ```bash
    npm cache clean --force
-   npx claudient add skills backend --force
+   npx uitkit add skills backend --force
    ```
 
 2. **Check disk space:**
    ```bash
    df -h ~
-   # Claudient needs ≥500MB free space
+   # UitKit needs ≥500MB free space
    ```
 
 3. **Validate package.json:**
    ```bash
-   npm ls claudient
+   npm ls uitkit
    npm outdated
    ```
 
 4. **Reinstall from scratch:**
    ```bash
    rm -rf ~/.claude/skills ~/.claude/agents
-   npx claudient add all
+   npx uitkit add all
    ```
 
 ---
 
 ### Issue: Skills not appearing in Claude Code after installation
 
-**Symptom:** Ran `npx claudient add skills backend` but `/swift-backend` doesn't trigger.
+**Symptom:** Ran `npx uitkit add skills backend` but `/swift-backend` doesn't trigger.
 
 **Diagnosis:**
 ```bash
@@ -256,8 +256,8 @@ cd ~/.claude && ls -la
 
 4. **Rebuild skill index:**
    ```bash
-   npx claudient build-index
-   npx claudient add all --force
+   npx uitkit build-index
+   npx uitkit add all --force
    ```
 
 ---
@@ -282,7 +282,7 @@ head -30 ~/.claude/agents/roles/sre-engineer.md
 
 1. **Install agents explicitly:**
    ```bash
-   npx claudient add agents
+   npx uitkit add agents
    ```
 
 2. **Check if agent is in correct subdirectory:**
@@ -354,7 +354,7 @@ cat ~/.claude/settings.json | jq '.permissions'
 
 ## Feature 3: Plugin Marketplace Installation
 
-### Issue: `/plugin marketplace add UitbreidenOS/Claudient` fails
+### Issue: `/plugin marketplace add UitbreidenOS/UitKit` fails
 
 **Symptom:** Error: `Invalid marketplace URL` or `Not found`.
 
@@ -364,7 +364,7 @@ cat ~/.claude/settings.json | jq '.permissions'
 cat ~/.claude/settings.json | jq '.plugin'
 
 # Test marketplace.json accessibility
-curl -s https://raw.githubusercontent.com/UitbreidenOS/Claudient/main/.claude-plugin/marketplace.json | jq '.name'
+curl -s https://raw.githubusercontent.com/UitbreidenOS/UitKit/main/.claude-plugin/marketplace.json | jq '.name'
 
 # Check Claude Code version supports plugins (requires 2.5+)
 claude --version
@@ -392,9 +392,9 @@ claude --version
 
 3. **Retry marketplace add:**
    ```bash
-   /plugin marketplace add UitbreidenOS/Claudient
+   /plugin marketplace add UitbreidenOS/UitKit
    # Or via CLI:
-   npx claudient plugin:marketplace:add UitbreidenOS/Claudient
+   npx uitkit plugin:marketplace:add UitbreidenOS/UitKit
    ```
 
 4. **If GitHub is unreachable:**
@@ -405,12 +405,12 @@ claude --version
 
    # Try with explicit timeout
    npm config set fetch-timeout 60000
-   /plugin marketplace add UitbreidenOS/Claudient
+   /plugin marketplace add UitbreidenOS/UitKit
    ```
 
 ---
 
-### Issue: `/plugin install claudient-everything@claudient` fails or hangs
+### Issue: `/plugin install uitkit-everything@uitkit` fails or hangs
 
 **Symptom:** Command hangs for >5 minutes or returns `Failed to download plugin`.
 
@@ -420,7 +420,7 @@ claude --version
 ls -la ~/.claude/plugin-cache/
 
 # Test individual plugin manifest
-curl -s https://raw.githubusercontent.com/UitbreidenOS/Claudient/main/plugins/claudient-everything/manifest.json | jq '.name'
+curl -s https://raw.githubusercontent.com/UitbreidenOS/UitKit/main/plugins/uitkit-everything/manifest.json | jq '.name'
 
 # Monitor disk usage
 df -h ~
@@ -432,36 +432,36 @@ du -sh ~/.claude/plugins/
 1. **Clear plugin cache and retry:**
    ```bash
    rm -rf ~/.claude/plugin-cache
-   /plugin install claudient-everything@claudient
+   /plugin install uitkit-everything@uitkit
    ```
 
 2. **Install domain plugins instead (lighter-weight):**
    ```bash
-   # Instead of claudient-everything, try:
-   /plugin install claudient-backend@claudient
-   /plugin install claudient-devops-infra@claudient
-   /plugin install claudient-productivity@claudient
+   # Instead of uitkit-everything, try:
+   /plugin install uitkit-backend@uitkit
+   /plugin install uitkit-devops-infra@uitkit
+   /plugin install uitkit-productivity@uitkit
    ```
 
 3. **Check available disk space:**
    ```bash
    df -h
    # Each plugin requires ~50-200MB
-   # claudient-everything needs ~1.5GB
+   # uitkit-everything needs ~1.5GB
    ```
 
 4. **Use CLI fallback if plugin system fails:**
    ```bash
-   npx claudient add all
-   npx claudient add skills backend
-   npx claudient add agents
+   npx uitkit add all
+   npx uitkit add skills backend
+   npx uitkit add agents
    ```
 
 ---
 
 ### Issue: Installed plugin not activating in Claude Code
 
-**Symptom:** `/plugin list` shows `claudient-backend` installed, but skills don't trigger.
+**Symptom:** `/plugin list` shows `uitkit-backend` installed, but skills don't trigger.
 
 **Diagnosis:**
 ```bash
@@ -469,7 +469,7 @@ du -sh ~/.claude/plugins/
 ls -la ~/.claude/plugins/
 
 # Verify plugin.json manifest
-cat ~/.claude/plugins/claudient-backend/plugin.json | jq '.components'
+cat ~/.claude/plugins/uitkit-backend/plugin.json | jq '.components'
 
 # Check if Claude Code reloaded plugin list
 claude --reload-plugins
@@ -486,14 +486,14 @@ claude --reload-plugins
 
 2. **Force plugin re-registration:**
    ```bash
-   /plugin uninstall claudient-backend@claudient
-   /plugin install claudient-backend@claudient
+   /plugin uninstall uitkit-backend@uitkit
+   /plugin install uitkit-backend@uitkit
    ```
 
 3. **Check plugin manifest structure:**
    ```bash
    # Should contain skills, agents, hooks sections
-   cat ~/.claude/plugins/claudient-backend/plugin.json | jq '.components | keys'
+   cat ~/.claude/plugins/uitkit-backend/plugin.json | jq '.components | keys'
    # Output: ["skills", "agents", "hooks"]
    ```
 
@@ -526,9 +526,9 @@ curl http://localhost:3000/health  # if applicable
 
 1. **Install MCP server config:**
    ```bash
-   npx claudient add mcp starter
+   npx uitkit add mcp starter
    # Or specific server:
-   npx claudient add mcp postgres
+   npx uitkit add mcp postgres
    ```
 
 2. **Add MCP server to settings.json:**
@@ -586,7 +586,7 @@ env | grep DB_
 
 1. **Create missing config file:**
    ```bash
-   npx claudient add mcp postgres --generate-config
+   npx uitkit add mcp postgres --generate-config
    # Or manually:
    cat > ~/.claude/mcp/postgres.json << 'EOF'
    {
@@ -661,7 +661,7 @@ echo "test" | bash
 
 2. **Use auto-allowlist for common tools:**
    ```bash
-   npx claudient add hook auto-allow-readonly
+   npx uitkit add hook auto-allow-readonly
    # This auto-approves safe read-only tools (ls, cat, grep, etc.)
    ```
 
@@ -743,16 +743,16 @@ top -n1 | head -20
 
 1. **Install only needed skill categories:**
    ```bash
-   # Instead of: npx claudient add all
-   npx claudient add skills backend
-   npx claudient add skills devops-infra
+   # Instead of: npx uitkit add all
+   npx uitkit add skills backend
+   npx uitkit add skills devops-infra
    # Uninstall unused:
    rm -rf ~/.claude/skills/legal ~/.claude/skills/finance
    ```
 
 2. **Rebuild skill index:**
    ```bash
-   npx claudient build-index
+   npx uitkit build-index
    ```
 
 3. **Increase Claude Code cache timeout:**
@@ -832,16 +832,16 @@ Keep this checklist for quick diagnosis:
 ```bash
 # Environment & installation
 node --version                      # Should be >=18
-npm list -g claudient              # Check claudient version
+npm list -g uitkit              # Check uitkit version
 which claude                        # Claude Code CLI location
 claude --version                    # Check Claude Code version
-npx claudient doctor               # Full system diagnosis
+npx uitkit doctor               # Full system diagnosis
 
 # Skills & agents
 ls -la ~/.claude/skills/           # List installed skills
-npx claudient list                 # All installed skills/agents
-npx claudient validate             # Validate skill YAML
-npx claudient build-index          # Rebuild search index
+npx uitkit list                 # All installed skills/agents
+npx uitkit validate             # Validate skill YAML
+npx uitkit build-index          # Rebuild search index
 
 # Plugins
 /plugin list                        # List installed plugins
@@ -858,7 +858,7 @@ cat ~/.claude/settings.json | jq .permissions  # Permission policy
 # Performance
 du -sh ~/.claude/                  # Disk usage
 du -sh ~/.claude/skills/           # Skills directory size
-time npx claudient list            # Measure command latency
+time npx uitkit list            # Measure command latency
 ```
 
 ---
@@ -867,15 +867,15 @@ time npx claudient list            # Measure command latency
 
 | Symptom | Root Cause | Solution |
 |---|---|---|
-| **Skill doesn't run** | Skill YAML frontmatter is malformed | `npx claudient validate:frontmatter` |
+| **Skill doesn't run** | Skill YAML frontmatter is malformed | `npx uitkit validate:frontmatter` |
 | **Agent spawns but fails** | Tool not in agent's allowed list | Check agent frontmatter `tools:` section |
-| **MCP server "not found"** | MCP not registered in settings.json | `npx claudient add mcp [server-name]` |
+| **MCP server "not found"** | MCP not registered in settings.json | `npx uitkit add mcp [server-name]` |
 | **Plugin installs but doesn't activate** | Claude Code not reloaded after install | `/plugin reload` then quit/reopen app |
 | **Permission denied on file edit** | `bash` not in `allowedTools` | Add to `~/.claude/settings.json` permissions |
 | **Hook not firing** | Hook script not executable | `chmod +x ~/.claude/hooks/**/*.sh` |
 | **Skills appear but trigger fails** | Frontmatter trigger keywords misspelled | Check skill YAML `trigger:` field matches usage |
 | **Agent timeout** | Project too large or MCP server slow | Increase `agent.timeout` in settings |
-| **Marketplace add fails** | GitHub API rate limit or network down | Retry later or use CLI: `npx claudient add all` |
+| **Marketplace add fails** | GitHub API rate limit or network down | Retry later or use CLI: `npx uitkit add all` |
 
 ---
 
@@ -885,7 +885,7 @@ time npx claudient list            # Measure command latency
 - **Skill Format:** [Skills Frontmatter Reference](guides/skills-frontmatter.md)
 - **Agent Format:** [Agent Frontmatter Reference](guides/agent-frontmatter.md)
 - **Plugin Authoring:** [Plugin Authoring Guide](guides/plugin-authoring.md)
-- **GitHub Issues:** [UitbreidenOS/Claudient Issues](https://github.com/UitbreidenOS/Claudient/issues)
+- **GitHub Issues:** [UitbreidenOS/UitKit Issues](https://github.com/UitbreidenOS/UitKit/issues)
 - **Reddit:** [r/uitbreiden](https://www.reddit.com/r/uitbreiden/)
 
 ---
@@ -894,7 +894,7 @@ time npx claudient list            # Measure command latency
 
 | Component | Version | Release Date |
 |---|---|---|
-| Claudient | 1.10.1 | 2026-06-22 |
+| UitKit | 1.10.1 | 2026-06-22 |
 | Claude Code CLI | 2.5+ | Required minimum |
 | Node.js | 18+ | Required minimum |
 | Plugin System | 2.5+ | Requires Claude Code 2.5+ |

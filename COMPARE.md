@@ -1,22 +1,22 @@
-# Claudient vs. The Ecosystem: Feature Comparison
+# UitKit vs. The Ecosystem: Feature Comparison
 
-The Claude Code plugin ecosystem is growing rapidly. Below is a transparent, data-backed comparison of how Claudient stacks up against the other major knowledge bases and subagent collections available as of mid-2026.
+The Claude Code plugin ecosystem is growing rapidly. Below is a transparent, data-backed comparison of how UitKit stacks up against the other major knowledge bases and subagent collections available as of mid-2026.
 
 ## 🏆 The Bottom Line
-If you just want a handful of English-only subagents, any toolkit will work. **Choose Claudient if you want a complete, 5-language localized ecosystem** that covers not just basic coding, but entire business operations (GTM, SDR, Finance, Legal) with strict CI-enforced quality gates.
+If you just want a handful of English-only subagents, any toolkit will work. **Choose UitKit if you want a complete, 5-language localized ecosystem** that covers not just basic coding, but entire business operations (GTM, SDR, Finance, Legal) with strict CI-enforced quality gates.
 
 ---
 
 ## 📊 Feature Matrix
 
-| Feature / Metric | 👑 **Claudient** | ECC (everything-claude-code) | alirezarezvani / claude-skills | VoltAgent | rohitg00 / toolkit |
+| Feature / Metric | 👑 **UitKit** | ECC (everything-claude-code) | alirezarezvani / claude-skills | VoltAgent | rohitg00 / toolkit |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **Total Skills** | **380+** | 249 | 338 | 0 | 35 |
 | **Total Subagents** | **182+** | 63 | 51+ | 154+ | 135 |
 | **Slash Commands** | **100+** | 79 | 87+ | 0 | 42 |
 | **Localization** | **5 Languages** (EN, FR, DE, NL, ES) | English Only | English Only | English Only | English Only |
 | **Workspace Stacks** | **42 Pre-built Workspaces** | ❌ | ❌ | ❌ | ❌ |
-| **CLI Distribution** | **Yes** (`npx claudient`) | ❌ | ❌ | ❌ | ❌ |
+| **CLI Distribution** | **Yes** (`npx uitkit`) | ❌ | ❌ | ❌ | ❌ |
 | **Business Domains** | **Deep** (Legal, SDR, Finance) | Dev/Coding Only | General / Dev | General / Dev | Dev/Coding Only |
 | **Quality Tiering** | **Strict CI & Gold Tiers** | Basic | Basic | Basic | Basic |
 | **Cross-Harness** | Claude Code Native | **13+ Tools** | 13+ Tools | Claude Code | Claude Code |
@@ -26,23 +26,23 @@ If you just want a handful of English-only subagents, any toolkit will work. **C
 ## 🔍 Detailed Differentiators
 
 ### 1. 🌍 5-Language Native Localization
-Claudient is the **only major repository** that ships its entire knowledge base—skills, agents, and rules—in English, French, German, Dutch, and Spanish. Every single prompt is localized, meaning your non-English speaking development teams get the exact same powerful context without translation friction.
+UitKit is the **only major repository** that ships its entire knowledge base—skills, agents, and rules—in English, French, German, Dutch, and Spanish. Every single prompt is localized, meaning your non-English speaking development teams get the exact same powerful context without translation friction.
 
 ### 2. 🏗️ Pre-built Workspace Stacks
-While others give you raw subagents, Claudient gives you **42 complete Workspace Stacks**. Need to run a Go-To-Market strategy? Don't just prompt a GTM agent. Run `npx claudient init` in the `gtm_engineer_stack`, and Claudient automatically configures the precise `CLAUDE.md`, the 8 essential GTM skills, and the specific hooks needed to enforce quality gates for that exact role.
+While others give you raw subagents, UitKit gives you **42 complete Workspace Stacks**. Need to run a Go-To-Market strategy? Don't just prompt a GTM agent. Run `npx uitkit init` in the `gtm_engineer_stack`, and UitKit automatically configures the precise `CLAUDE.md`, the 8 essential GTM skills, and the specific hooks needed to enforce quality gates for that exact role.
 
 ### 3. 💼 Beyond Just Code
-Coding is only 20% of building a business. Claudient has deep, specialized skill trees for:
+Coding is only 20% of building a business. UitKit has deep, specialized skill trees for:
 - **Founders / CEOs**: Pitch deck outlines, financial modeling, cap table analysis.
 - **SDRs**: Outbound sequence automation, objection handling.
 - **Legal Ops**: NDA auditing, compliance tracking.
 - **Content Marketing**: SEO brief generation, brand tone enforcement.
 
 ### 4. 🛡️ CI-Enforced Quality Tiers
-Not all prompts are created equal. Claudient runs an automated nightly **Quality Audit Engine** over its 1,899 files. Over **490 skills** have achieved "Gold Tier" status, guaranteeing they contain explicit triggers, strict constraints, and real-world examples. 
+Not all prompts are created equal. UitKit runs an automated nightly **Quality Audit Engine** over its 1,899 files. Over **490 skills** have achieved "Gold Tier" status, guaranteeing they contain explicit triggers, strict constraints, and real-world examples. 
 
 ### 5. ⚡ Active Guardrails (Workspace Guardian)
-Claudient ships with `hooks/` that physically prevent Claude Code from hallucinating success. The **Self-Healing Protocol** intercepts test failures and forces the AI to fix them. The **Workspace Guardian** locks down critical infrastructure (`package.json`, `.env`) so the AI cannot overwrite them without explicit user `unlock` commands.
+UitKit ships with `hooks/` that physically prevent Claude Code from hallucinating success. The **Self-Healing Protocol** intercepts test failures and forces the AI to fix them. The **Workspace Guardian** locks down critical infrastructure (`package.json`, `.env`) so the AI cannot overwrite them without explicit user `unlock` commands.
 
 ---
 
@@ -50,7 +50,7 @@ Claudient ships with `hooks/` that physically prevent Claude Code from hallucina
 
 ## 🌟 Full Showcase Features (61 Premium Workflows)
 
-Claudient goes far beyond simple scripts. Here is the full list of advanced features built into the Claudient ecosystem:
+UitKit goes far beyond simple scripts. Here is the full list of advanced features built into the UitKit ecosystem:
 
 ### 🚫 .claudeignore Templates
 **Token cost reduction**
@@ -220,12 +220,12 @@ Interactive skill that generates GitHub-compliant specs using Grill Me logic. Au
 ### 🔒 Privacy-First Telemetry Opt-in
 **Secure onboarding configuration**
 
-Secure onboarding configuration step in claudient init with settings state persistence. Users explicitly opt-in to any data collection.
+Secure onboarding configuration step in uitkit init with settings state persistence. Users explicitly opt-in to any data collection.
 
 ### 📊 Executive HTML Compliance Audit
 **SOC2/GDPR audit reports**
 
-Generates strict compliance audit logs in HTML format for SOC2/GDPR auditing. Produces a professional claudient-audit-report.html.
+Generates strict compliance audit logs in HTML format for SOC2/GDPR auditing. Produces a professional uitkit-audit-report.html.
 
 ### 🔐 Model Permission Editor
 **Granular auto-execution control**
@@ -340,7 +340,7 @@ Live statusline showing swarm status, context budget, session cost, and map dens
 ### 🖥️ The Matrix Theme Pack
 **Premium aesthetic UX**
 
-Brand-aligned high-contrast themes: Claudient Neon, Ghost Shell. For senior power users.
+Brand-aligned high-contrast themes: UitKit Neon, Ghost Shell. For senior power users.
 
 ### ⚡ Power-User Keybindings
 **Ergonomic speed**
@@ -348,12 +348,12 @@ Brand-aligned high-contrast themes: Claudient Neon, Ghost Shell. For senior powe
 Shortcut map for high-frequency skills: Doctor, Save-State, Grill-Me. Professional AI engineer ergonomics.
 
 ### 🐚 High-Speed Shell Aliases
-**Claudient as standalone platform**
+**UitKit as standalone platform**
 
-Short-circuit CLI commands: cx, cxd, cxa. Reduces friction and reinforces Claudient as a platform.
+Short-circuit CLI commands: cx, cxd, cxa. Reduces friction and reinforces UitKit as a platform.
 
 ### 🖥️ Offline GUI Desktop Dashboard
 **Local web dashboard launcher**
 
-Launchable local web dashboard interface for playground stacks and harness-neutral downloads. Run claudient dashboard to open the full OS experience.
+Launchable local web dashboard interface for playground stacks and harness-neutral downloads. Run uitkit dashboard to open the full OS experience.
 

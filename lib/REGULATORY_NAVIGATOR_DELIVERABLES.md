@@ -599,7 +599,7 @@ For 10k+ requirements:
 
 ## License
 
-Part of Claudient ecosystem. See main repository for details.
+Part of UitKit ecosystem. See main repository for details.
 
 ---
 

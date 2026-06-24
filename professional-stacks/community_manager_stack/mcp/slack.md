@@ -10,7 +10,7 @@ Connect Claude Code to Slack for real-time community monitoring, member data acc
 
 1. Go to [api.slack.com/apps](https://api.slack.com/apps)
 2. Click "Create New App" → "From scratch"
-3. Name: `Claudient Community Manager`
+3. Name: `UitKit Community Manager`
 4. Workspace: select your community workspace
 5. Click "Create App"
 

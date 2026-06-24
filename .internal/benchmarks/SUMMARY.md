@@ -38,7 +38,7 @@
 ## Next Steps
 
 - Run: `npm run benchmark` to regenerate this report
-- View benchmarks at: `npx claudient benchmark` or visit the 📊 Skill Evals window in the site
+- View benchmarks at: `npx uitkit benchmark` or visit the 📊 Skill Evals window in the site
 
 ---
 Last updated: 2026-06-15T18:23:35.663Z

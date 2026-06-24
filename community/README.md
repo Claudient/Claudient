@@ -1,19 +1,19 @@
-# Community Stacks — Claudient
+# Community Stacks — UitKit
 
-Welcome to the community contribution hub. This directory contains submission guidelines, review processes, and templates for sharing your custom Claude Code stacks with the Claudient community.
+Welcome to the community contribution hub. This directory contains submission guidelines, review processes, and templates for sharing your custom Claude Code stacks with the UitKit community.
 
 ---
 
 ## What Are Community Stacks?
 
-Community stacks are domain-specific toolkits contributed by Claude Code users—including skills, agents, hooks, prompts, and workflows—that extend Claudient's functionality. Examples:
+Community stacks are domain-specific toolkits contributed by Claude Code users—including skills, agents, hooks, prompts, and workflows—that extend UitKit's functionality. Examples:
 
 - **Sales Engineer Stack:** Tools for technical sales, objection handling, deal analysis
 - **Legal Document Review Stack:** Contract analysis, compliance checking, redaction workflows
 - **Data Science Stack:** Exploratory analysis, model evaluation, reproducibility templates
 - **DevOps Stack:** Incident response, infrastructure audit, deployment checklists
 
-Each stack follows Claudient's standards (CLAUDE.md structure, skill format, documentation clarity) and is available for installation via the Claudient marketplace.
+Each stack follows UitKit's standards (CLAUDE.md structure, skill format, documentation clarity) and is available for installation via the UitKit marketplace.
 
 ---
 
@@ -31,7 +31,7 @@ Each stack follows Claudient's standards (CLAUDE.md structure, skill format, doc
 - Reduce duplicated effort across the ecosystem
 - Build a shared library of high-quality templates
 
-**For Claudient:**
+**For UitKit:**
 - Grow the knowledge system with vetted, community-led contributions
 - Maintain quality by centralizing review and testing
 - Empower users to solve domain-specific problems faster
@@ -44,7 +44,7 @@ Each stack follows Claudient's standards (CLAUDE.md structure, skill format, doc
 
 Before submitting, ensure your stack meets these requirements:
 
-- **Structure:** Follows Claudient's directory layout (CLAUDE.md, README.md, skills/, hooks/, etc.)
+- **Structure:** Follows UitKit's directory layout (CLAUDE.md, README.md, skills/, hooks/, etc.)
 - **CLAUDE.md:** Defines stack identity, persona, skills table, commands, hooks, and domain frameworks
 - **Skills:** Each skill has a SKILL.md file with When to activate, When NOT to use, Instructions, and Example sections
 - **Documentation:** All files are clear, written for senior developers, no placeholder content
@@ -80,7 +80,7 @@ Before submitting:
 ### Step 5: Submit Your Stack
 
 **Via GitHub:**
-1. Fork the Claudient repository
+1. Fork the UitKit repository
 2. Create a feature branch: `git checkout -b stacks/your-stack-name`
 3. Add your stack directory to the repo root
 4. Include a completed `submission.json` file in the stack root
@@ -90,7 +90,7 @@ Before submitting:
    - Who it's designed for
    - Any translations planned
 
-**Review time:** 1-2 weeks (automated checks first, then manual review by Claudient maintainers)
+**Review time:** 1-2 weeks (automated checks first, then manual review by UitKit maintainers)
 
 ---
 
@@ -138,7 +138,7 @@ Every stack must include a `submission.json` file with the following fields:
     "github": "janesmith"
   },
   "license": "MIT",
-  "repository": "https://github.com/janesmith/claudient-legal-stack",
+  "repository": "https://github.com/janesmith/uitkit-legal-stack",
   "version": "1.0.0",
   "minimumClaudeVersion": "2026-01",
   "keywords": ["legal", "contracts", "compliance", "document-review"],
@@ -151,7 +151,7 @@ Every stack must include a `submission.json` file with the following fields:
 ```
 
 **Field definitions:**
-- **name:** Kebab-case identifier (unique across Claudient)
+- **name:** Kebab-case identifier (unique across UitKit)
 - **displayName:** Human-readable name for marketplace
 - **description:** 1-2 sentences on what the stack does and who it's for
 - **category:** One of: Legal, Sales, Engineering, Product, Marketing, Operations, Data, Compliance, Other
@@ -172,7 +172,7 @@ By submitting a community stack, you agree to:
 
 1. **Accuracy:** All claims about functionality are truthful and verifiable
 2. **No malware:** Your stack contains no hidden, malicious, or harmful code (automation, analytics, etc.)
-3. **Respect:** You respect the Claudient code of conduct and community guidelines
+3. **Respect:** You respect the UitKit code of conduct and community guidelines
 4. **Attribution:** You credit all sources, inspiration, and prior art
 5. **Maintenance:** You're responsive to bug reports and pull requests for 3+ months post-launch (or transfer maintenance to a co-maintainer)
 6. **Community spirit:** You contribute in the spirit of helping others, not for personal profit or promotion
@@ -183,7 +183,7 @@ Violations may result in stack removal and contributor suspension.
 
 ## Attribution & Credit
 
-**In Claudient marketplace:**
+**In UitKit marketplace:**
 - Your name appears as the stack author
 - Your GitHub profile is linked for discovery
 - Stack README includes a "Maintained by [Author]" disclaimer
@@ -249,7 +249,7 @@ Directory: devops_platform_stack/
 ## FAQ
 
 **Q: Can my stack promote a commercial product or service?**  
-A: No. Claudient is open-source and community-focused. If your stack is tied to a paid SaaS product, it can be included only if it's useful to non-customers too. Obvious advertising will be rejected.
+A: No. UitKit is open-source and community-focused. If your stack is tied to a paid SaaS product, it can be included only if it's useful to non-customers too. Obvious advertising will be rejected.
 
 **Q: How often can I update my stack?**  
 A: As often as needed. Submit via PR; we'll review and merge within 1-2 weeks. We recommend batching updates (monthly or quarterly) unless there's a bug fix.
@@ -272,16 +272,16 @@ A: Respond to PR comments with clarifications or code changes. We're collaborati
 
 **After your stack is published:**
 - GitHub issues and PRs on your repository (if public)
-- Community discussions on the Claudient forum
-- Claudient maintainers monitor for major bugs and security issues
+- Community discussions on the UitKit forum
+- UitKit maintainers monitor for major bugs and security issues
 
 **If you need help:**
 - Ask in the #community-stacks channel (if applicable)
-- Open an issue on the main Claudient repo (for infrastructure problems)
+- Open an issue on the main UitKit repo (for infrastructure problems)
 - Email the maintainers directly (contact info in CLAUDE.md)
 
 **Deprecation & Sunset:**
-- If a stack becomes unmaintained for 6+ months, Claudient may:
+- If a stack becomes unmaintained for 6+ months, UitKit may:
   - Mark it as "archived" (read-only)
   - Recommend community forks as alternatives
   - Remove it from the primary marketplace (keep in archive)
@@ -300,4 +300,4 @@ A: Respond to PR comments with clarifications or code changes. We're collaborati
 
 ---
 
-**Last updated:** June 15, 2026 | **Maintained by:** Claudient Community Team
+**Last updated:** June 15, 2026 | **Maintained by:** UitKit Community Team

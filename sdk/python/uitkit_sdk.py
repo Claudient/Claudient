@@ -1,7 +1,7 @@
 """
-Claudient Python SDK
+UitKit Python SDK
 
-A comprehensive SDK for integrating Claudient skills, agents, and MCP servers
+A comprehensive SDK for integrating UitKit skills, agents, and MCP servers
 into Python applications. Provides production-grade clients with context managers,
 exception hierarchy, and integrated logging.
 
@@ -14,7 +14,7 @@ Features:
   - Logging Integration: structured logging with request/response tracking
 
 Example:
-  from claudient_sdk import SkillsClient, AgentsClient, MCPClient
+  from uitkit_sdk import SkillsClient, AgentsClient, MCPClient
 
   # Skills management
   with SkillsClient(api_key="sk-...") as skills:
@@ -51,7 +51,7 @@ __all__ = [
     "SkillsClient",
     "AgentsClient",
     "MCPClient",
-    "ClaudientException",
+    "UitKitException",
     "SkillNotFoundError",
     "AgentExecutionError",
     "MCPConnectionError",
@@ -69,8 +69,8 @@ __all__ = [
 # EXCEPTION HIERARCHY
 # ============================================================================
 
-class ClaudientException(Exception):
-    """Base exception for all Claudient SDK errors."""
+class UitKitException(Exception):
+    """Base exception for all UitKit SDK errors."""
 
     def __init__(self, message: str, code: Optional[str] = None, details: Optional[Dict[str, Any]] = None):
         self.message = message
@@ -84,42 +84,42 @@ class ClaudientException(Exception):
         return f"{self.__class__.__name__}({self.message!r}, code={self.code!r})"
 
 
-class SkillNotFoundError(ClaudientException):
+class SkillNotFoundError(UitKitException):
     """Raised when a skill cannot be found in the catalog."""
     pass
 
 
-class SkillInstallationError(ClaudientException):
+class SkillInstallationError(UitKitException):
     """Raised when skill installation fails."""
     pass
 
 
-class AgentExecutionError(ClaudientException):
+class AgentExecutionError(UitKitException):
     """Raised when agent execution encounters an error."""
     pass
 
 
-class ToolExecutionError(ClaudientException):
+class ToolExecutionError(UitKitException):
     """Raised when a tool call fails during execution."""
     pass
 
 
-class MCPConnectionError(ClaudientException):
+class MCPConnectionError(UitKitException):
     """Raised when MCP server connection fails."""
     pass
 
 
-class MCPServerError(ClaudientException):
+class MCPServerError(UitKitException):
     """Raised when MCP server returns an error."""
     pass
 
 
-class InvalidConfigurationError(ClaudientException):
+class InvalidConfigurationError(UitKitException):
     """Raised when configuration is invalid."""
     pass
 
 
-class TokenBudgetExceededError(ClaudientException):
+class TokenBudgetExceededError(UitKitException):
     """Raised when token budget is exceeded during agent execution."""
     pass
 
@@ -129,7 +129,7 @@ class TokenBudgetExceededError(ClaudientException):
 # ============================================================================
 
 def _configure_logging(name: str, level: int = logging.INFO) -> logging.Logger:
-    """Configure a logger for Claudient SDK components."""
+    """Configure a logger for UitKit SDK components."""
     logger = logging.getLogger(name)
     logger.setLevel(level)
 
@@ -145,7 +145,7 @@ def _configure_logging(name: str, level: int = logging.INFO) -> logging.Logger:
     return logger
 
 
-logger = _configure_logging("claudient_sdk")
+logger = _configure_logging("uitkit_sdk")
 
 
 # ============================================================================
@@ -154,7 +154,7 @@ logger = _configure_logging("claudient_sdk")
 
 @dataclass
 class Skill:
-    """Represents a Claudient skill."""
+    """Represents a UitKit skill."""
 
     id: str
     name: str
@@ -178,7 +178,7 @@ class Skill:
 
 @dataclass
 class Agent:
-    """Represents a Claudient agent."""
+    """Represents a UitKit agent."""
 
     id: str
     name: str
@@ -281,7 +281,7 @@ class Message:
 # ============================================================================
 
 class BaseClient(ABC):
-    """Abstract base client for Claudient SDK components."""
+    """Abstract base client for UitKit SDK components."""
 
     def __init__(self, api_key: Optional[str] = None, debug: bool = False):
         """
@@ -300,7 +300,7 @@ class BaseClient(ABC):
 
         self.debug = debug
         self.logger = _configure_logging(
-            f"claudient_sdk.{self.__class__.__name__}",
+            f"uitkit_sdk.{self.__class__.__name__}",
             level=logging.DEBUG if debug else logging.INFO
         )
         self._active = False
@@ -330,11 +330,11 @@ class BaseClient(ABC):
         try:
             yield
             self.logger.debug(f"Completed operation: {operation}")
-        except ClaudientException:
+        except UitKitException:
             raise
         except Exception as e:
             self.logger.error(f"Operation {operation} failed: {e}\n{traceback.format_exc()}")
-            raise ClaudientException(
+            raise UitKitException(
                 f"Operation {operation} failed: {str(e)}",
                 code="OPERATION_FAILED",
                 details={"operation": operation, "exception_type": type(e).__name__}
@@ -355,7 +355,7 @@ class BaseClient(ABC):
 
 class SkillsClient(BaseClient):
     """
-    Client for managing and discovering Claudient skills.
+    Client for managing and discovering UitKit skills.
 
     Features:
       - Install and uninstall skills
@@ -429,7 +429,7 @@ class SkillsClient(BaseClient):
             List of matching skills
 
         Raises:
-            ClaudientException: If search fails
+            UitKitException: If search fails
         """
         with self._error_handling("skills.search"):
             self._ensure_active()
@@ -468,7 +468,7 @@ class SkillsClient(BaseClient):
             Dict with recommended skills and suggested stack
 
         Raises:
-            ClaudientException: If consultation fails
+            UitKitException: If consultation fails
         """
         with self._error_handling("skills.consult"):
             self._ensure_active()
@@ -627,7 +627,7 @@ class StopReason(Enum):
 
 class AgentsClient(BaseClient):
     """
-    Client for running and managing Claudient agents.
+    Client for running and managing UitKit agents.
 
     Features:
       - Execute agents with tool use and state management
@@ -1118,6 +1118,6 @@ if __name__ == "__main__":
             capabilities = mcp.get_capabilities("filesystem")
             print(f"Capabilities: {capabilities}")
 
-    except ClaudientException as e:
+    except UitKitException as e:
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)

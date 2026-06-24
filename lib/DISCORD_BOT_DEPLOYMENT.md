@@ -1,6 +1,6 @@
-# Claudient Discord Bot — Deployment Checklist
+# UitKit Discord Bot — Deployment Checklist
 
-Complete, production-ready deployment guide for the Claudient Discord bot.
+Complete, production-ready deployment guide for the UitKit Discord bot.
 
 ## Pre-Deployment Checklist
 
@@ -124,7 +124,7 @@ Alternatively, manually create roles with appropriate permissions.
 npm install -g pm2
 
 # Start bot with PM2
-pm2 start scripts/discord-bot.js --name claudient-bot
+pm2 start scripts/discord-bot.js --name uitkit-bot
 
 # Configure auto-restart
 pm2 startup
@@ -132,7 +132,7 @@ pm2 save
 
 # Verify running
 pm2 status
-pm2 logs claudient-bot
+pm2 logs uitkit-bot
 ```
 
 #### Option B: Docker
@@ -150,13 +150,13 @@ CMD ["node", "scripts/discord-bot.js"]
 
 ```bash
 # Build
-docker build -t claudient-bot .
+docker build -t uitkit-bot .
 
 # Run
-docker run --name claudient-bot -d claudient-bot
+docker run --name uitkit-bot -d uitkit-bot
 
 # Check logs
-docker logs -f claudient-bot
+docker logs -f uitkit-bot
 ```
 
 #### Option C: Cloud Hosting (Heroku, Railway, Render, etc.)
@@ -172,19 +172,19 @@ docker logs -f claudient-bot
 
 #### Option D: Systemd Service (Linux Server)
 
-Create `/etc/systemd/system/claudient-bot.service`:
+Create `/etc/systemd/system/uitkit-bot.service`:
 
 ```ini
 [Unit]
-Description=Claudient Discord Bot
+Description=UitKit Discord Bot
 After=network.target
 
 [Service]
 Type=simple
 User=www-data
-WorkingDirectory=/opt/claudient
-EnvironmentFile=/opt/claudient/.env
-ExecStart=/usr/bin/node /opt/claudient/scripts/discord-bot.js
+WorkingDirectory=/opt/uitkit
+EnvironmentFile=/opt/uitkit/.env
+ExecStart=/usr/bin/node /opt/uitkit/scripts/discord-bot.js
 Restart=on-failure
 RestartSec=10
 
@@ -194,21 +194,21 @@ WantedBy=multi-user.target
 
 ```bash
 # Enable and start
-sudo systemctl enable claudient-bot
-sudo systemctl start claudient-bot
+sudo systemctl enable uitkit-bot
+sudo systemctl start uitkit-bot
 
 # Check status
-sudo systemctl status claudient-bot
+sudo systemctl status uitkit-bot
 
 # View logs
-sudo journalctl -u claudient-bot -f
+sudo journalctl -u uitkit-bot -f
 ```
 
 ### Step 6: Post-Deployment Verification
 
 ```bash
 # ✓ Bot is online (green dot)
-# ✓ Activity shows "Claudient skills | /help"
+# ✓ Activity shows "UitKit skills | /help"
 # ✓ All commands respond
 # ✓ Channels created if needed
 # ✓ Roles created if needed
@@ -314,7 +314,7 @@ cache.setex('skills:index', 3600, JSON.stringify(skillIndex));
 **Daily backups:**
 ```bash
 # Backup support threads
-pg_dump claudient_bot > backups/threads_$(date +%Y%m%d).sql
+pg_dump uitkit_bot > backups/threads_$(date +%Y%m%d).sql
 
 # Backup configuration
 cp .env backups/.env.$(date +%Y%m%d)
@@ -389,13 +389,13 @@ await db.query('DELETE FROM support_threads WHERE resolved AND created_at < NOW(
 
 ```bash
 # Check status
-pm2 status claudient-bot
+pm2 status uitkit-bot
 
 # Restart if needed
-pm2 restart claudient-bot
+pm2 restart uitkit-bot
 
 # Check logs
-pm2 logs claudient-bot --err
+pm2 logs uitkit-bot --err
 
 # If still offline, check:
 # 1. Network connectivity
@@ -415,7 +415,7 @@ pm2 logs claudient-bot --err
 # Force refresh: remove and re-invite bot
 
 # Check for errors
-pm2 logs claudient-bot
+pm2 logs uitkit-bot
 
 # Verify index.json exists
 ls -la index.json
@@ -433,7 +433,7 @@ ls -la index.json
 # Check Discord rate limits
 
 # Check logs for specific error
-pm2 logs claudient-bot | grep "Failed to create"
+pm2 logs uitkit-bot | grep "Failed to create"
 ```
 
 ### Issue: High Memory Usage
@@ -449,7 +449,7 @@ pm2 monit
 # 4. Implement garbage collection
 
 # Restart if needed
-pm2 restart claudient-bot
+pm2 restart uitkit-bot
 ```
 
 ## Performance Optimization
@@ -521,14 +521,14 @@ git revert <commit-hash>
 git checkout v1.0.0
 
 # Restart bot
-pm2 restart claudient-bot
+pm2 restart uitkit-bot
 ```
 
 ### Database migrations:
 
 ```bash
 # Backup before migration
-pg_dump claudient_bot > backup.sql
+pg_dump uitkit_bot > backup.sql
 
 # Run migration
 npm run migrate:up
@@ -537,7 +537,7 @@ npm run migrate:up
 npm run migrate:down
 
 # Restore from backup if needed
-psql claudient_bot < backup.sql
+psql uitkit_bot < backup.sql
 ```
 
 ## Success Metrics

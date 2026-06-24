@@ -19,7 +19,7 @@ updated: 2026-06-15
 
 - Searching for non-skill resources (guides, workflows, agents, rules) — use the general repository search instead
 - One-off trivial questions (e.g., "Does prompt-caching exist?") — just search the directory
-- Generic questions about Claude or LLMs unrelated to Claudient's skill collection
+- Generic questions about Claude or LLMs unrelated to UitKit's skill collection
 
 ## Instructions
 

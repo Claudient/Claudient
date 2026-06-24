@@ -18,7 +18,7 @@ updated: 2026-06-17
 
 ## Instructions
 
-The `learn-codebase` skill runs `npx claudient learn` to inspect the project layout, configurations, and frameworks. It then writes tailored code conventions, lint checks, and testing commands directly to `.claude/rules/project-rules.md`.
+The `learn-codebase` skill runs `npx uitkit learn` to inspect the project layout, configurations, and frameworks. It then writes tailored code conventions, lint checks, and testing commands directly to `.claude/rules/project-rules.md`.
 
 ```
                     ┌───────────────────┐
@@ -62,12 +62,12 @@ Based on the languages discovered, the command builds strict instructions:
 **Running codebase learning on a Next.js TypeScript repository:**
 
 ```bash
-npx claudient learn
+npx uitkit learn
 ```
 
 **Output:**
 ```
-🔍 Scoping codebase at: /Users/tushar/Desktop/Claudient
+🔍 Scoping codebase at: /Users/tushar/Desktop/UitKit
 
 Detected Languages:  JavaScript, TypeScript
 Detected Frameworks: Next.js, React

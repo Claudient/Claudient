@@ -85,7 +85,7 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                   CLAUDIENT DASHBOARD                       │
+│                   UITKIT DASHBOARD                       │
 │ ┌─────────────────┐  ┌──────────────────┐  ┌─────────────┐ │
 │ │  Swarm Window   │  │ Toolkit Map Tab  │  │   Settings  │ │
 │ │  (Sandbox UI)   │  │ (SVG Inspector)  │  │ (Themes)    │ │
@@ -171,7 +171,7 @@
 
 1. **User Input** (Matrix Theme Output)
    ```
-   $ claudient dont-stop "Migrate JS to TypeScript, run tests, deploy"
+   $ uitkit dont-stop "Migrate JS to TypeScript, run tests, deploy"
    ✓ DON'T STOP ENGINE ACTIVATED
    ```
 
@@ -261,7 +261,7 @@
 
 4. **Resume operation**
    ```
-   $ claudient dont-stop --resume
+   $ uitkit dont-stop --resume
    ⟲ Resuming from checkpoint: 2026-06-22T10:30:00Z
    
    ✓ task_0 (cached)

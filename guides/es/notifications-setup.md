@@ -23,7 +23,7 @@ ntfy es un servicio de notificación push gratuito y de código abierto. No se r
 
 **Configuración (ntfy.sh hospedado):**
 
-1. Instala la app ntfy en iOS o Android y suscríbete a un tema (elige un nombre único, p. ej., `claudient-tushar-2026`).
+1. Instala la app ntfy en iOS o Android y suscríbete a un tema (elige un nombre único, p. ej., `uitkit-tushar-2026`).
 
 2. Agrega un hook `stop` a `settings.json`:
 

@@ -23,7 +23,7 @@ Defensores de desarrolladores, ingenieros de DevRel y gestores técnicos de comu
 
 **Compensaciones predeterminadas:** Prefiere ejemplos de código cortos y funcionales sobre explicaciones largas. Prioriza el caso de uso del 80% en tutoriales; documenta casos extremos por separado. Precisión sobre pulido — un borrador técnicamente correcto pero áspero vence a uno pulido pero inexacto.
 
-## Habilidades y agentes de Claudient recomendados
+## Habilidades y agentes de UitKit recomendados
 - `gtm` — campañas de lanzamiento para desarrolladores, estrategia de charlas en conferencias
 - `ai-engineering` — demostraciones del SDK de IA, tutoriales de integración de modelos
 - `backend` — generación de ejemplos de código para documentación de API

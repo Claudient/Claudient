@@ -1,6 +1,6 @@
 # INSTRUCTOR GUIDE
 
-Comprehensive resource for trainers delivering Claudient workshops and certification programs.
+Comprehensive resource for trainers delivering UitKit workshops and certification programs.
 
 ---
 
@@ -22,7 +22,7 @@ Comprehensive resource for trainers delivering Claudient workshops and certifica
 
 ### Instructor Role & Responsibilities
 
-- **Facilitator**: Guide learners through Claudient concepts and workflows
+- **Facilitator**: Guide learners through UitKit concepts and workflows
 - **Environment Manager**: Ensure lab environments are provisioned and functional
 - **Assessor**: Evaluate hands-on exercises using standardized rubrics
 - **Support Provider**: Run office hours and provide async feedback
@@ -43,7 +43,7 @@ Comprehensive resource for trainers delivering Claudient workshops and certifica
 
 ### 4 Weeks Before
 
-- [ ] Review current Claudient docs and release notes
+- [ ] Review current UitKit docs and release notes
 - [ ] Test all lab exercises in a clean environment
 - [ ] Identify any breaking changes or new features
 - [ ] Update slide decks and speaker notes
@@ -88,8 +88,8 @@ Each training format has a corresponding deck in Google Slides (link in syllabus
 
 **Day 1: Foundations**
 - Slide 1–5: Welcome, agenda, logistics
-- Slide 6–15: What is Claudient? Core concepts (skills, agents, hooks)
-- Slide 16–25: Hands-on: Installing Claude Code & Claudient
+- Slide 6–15: What is UitKit? Core concepts (skills, agents, hooks)
+- Slide 16–25: Hands-on: Installing Claude Code & UitKit
 - Slide 26–30: Lab 1: Create your first skill
 
 **Day 2: Workflows & Hooks**
@@ -168,11 +168,11 @@ echo $ANTHROPIC_API_KEY  # Should be set
 
 Provide all learners with this one-line setup:
 ```bash
-curl -fsSL https://claudient-labs.example.com/setup.sh | bash
+curl -fsSL https://uitkit-labs.example.com/setup.sh | bash
 ```
 
 Script tasks:
-1. Clone Claudient repo to ~/claudient-labs
+1. Clone UitKit repo to ~/uitkit-labs
 2. Install dependencies: `npm install`
 3. Copy `.env.example` to `.env.local` and prompt for API key
 4. Run test suite: `npm test`
@@ -241,7 +241,7 @@ Separate environment for live demos and debugging.
 
 **9:30–10:30 — Conceptual Overview**
 
-- Start with pain point: "Why do we need Claudient?"
+- Start with pain point: "Why do we need UitKit?"
   - Without it: manually orchestrate Claude APIs, manage prompts, repeat logic
   - With it: skills, workflows, hooks, reusable agents
 - Show three short examples on screen (code snippets, not full slides)
@@ -654,8 +654,8 @@ OFFICE HOURS:
 Tuesdays 10–11am PT and Thursdays 4–5pm PT. Zoom: [link]
 
 STAY CONNECTED:
-- Slack channel: #claudient-alumni
-- GitHub: github.com/anthropic/claudient
+- Slack channel: #uitkit-alumni
+- GitHub: github.com/anthropic/uitkit
 - Monthly newsletter: [subscribe]
 
 Thanks again. You did great!
@@ -685,7 +685,7 @@ Thanks again. You did great!
 **Feedback Survey** (if not already sent)
 
 ```
-Quick survey: bit.ly/claudient-feedback
+Quick survey: bit.ly/uitkit-feedback
 
 1. Overall satisfaction (1–5)
 2. Most valuable topic (pick one)
@@ -699,7 +699,7 @@ Quick survey: bit.ly/claudient-feedback
 **Alumni Office Hours Continues**
 
 - Reduced to 1x/month (optional drop-in)
-- Share updates: new Claudient features, learner showcases, etc.
+- Share updates: new UitKit features, learner showcases, etc.
 
 **Celebrate Wins**
 
@@ -716,7 +716,7 @@ Quick survey: bit.ly/claudient-feedback
 ```
 Hi [Learner Name],
 
-Excited to have you in the Claudient bootcamp! Before we start, please complete this pre-work.
+Excited to have you in the UitKit bootcamp! Before we start, please complete this pre-work.
 
 INSTALL REQUIRED TOOLS:
 - [ ] Node.js 18+ (node --version)
@@ -738,7 +738,7 @@ VERIFY YOUR SETUP:
 
 WATCH (OPTIONAL):
 - Video: "Getting Started with Claude Code" (15 min)
-- Article: "Claudient in 5 Minutes" (5 min)
+- Article: "UitKit in 5 Minutes" (5 min)
 
 QUESTIONS?
 - Reply to this email or post in Slack #bootcamp-setup
@@ -790,7 +790,7 @@ Here's a $25 Amazon gift card + shoutout in next newsletter.
 **Most Creative Project**
 
 Vote at final presentations; winner gets:
-- Featured in Claudient blog or case study
+- Featured in UitKit blog or case study
 - Free pass to next workshop level
 - Mention in company all-hands
 
@@ -799,20 +799,20 @@ Vote at final presentations; winner gets:
 Top learners invited to TA next cohort:
 - Paid role (if applicable)
 - Co-teaching experience
-- Added to "Claudient Instructor Network"
+- Added to "UitKit Instructor Network"
 
 ---
 
 ## Contact & Support
 
 **Questions about training?**
-- Email: training@claudient.dev
+- Email: training@uitkit.dev
 - Slack: #training-instructors
 - Monthly instructor sync: [calendar link]
 
 **Found a bug in course materials?**
 - GitHub: issues/new (tag: training)
-- Email: training-feedback@claudient.dev
+- Email: training-feedback@uitkit.dev
 
 **Want to contribute?**
 - PR to `training/` directory
@@ -822,5 +822,5 @@ Top learners invited to TA next cohort:
 ---
 
 **Last Updated**: June 2026
-**Maintained By**: Claudient Training Team
+**Maintained By**: UitKit Training Team
 **License**: CC-BY-4.0

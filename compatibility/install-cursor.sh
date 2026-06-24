@@ -3,7 +3,7 @@
 set -euo pipefail
 
 ################################################################################
-# install-cursor.sh — Install Claudient skills and rules into a Cursor project
+# install-cursor.sh — Install UitKit skills and rules into a Cursor project
 #
 # Usage:
 #   ./install-cursor.sh [target_dir] [--dry-run]
@@ -34,10 +34,10 @@ for arg in "$@"; do
 done
 
 ################################################################################
-# find_claudient_dir — Locate the Claudient installation
+# find_uitkit_dir — Locate the UitKit installation
 ################################################################################
-find_claudient_dir() {
-  # If this script is being run from the Claudient repo itself
+find_uitkit_dir() {
+  # If this script is being run from the UitKit repo itself
   if [[ -d "$(dirname "$0")/../skills" ]]; then
     echo "$(cd "$(dirname "$0")/.." && pwd)"
     return 0
@@ -45,9 +45,9 @@ find_claudient_dir() {
 
   # Check common installation locations
   local locations=(
-    "$HOME/.claudient"
-    "$HOME/node_modules/claudient"
-    "$PWD/node_modules/claudient"
+    "$HOME/.uitkit"
+    "$HOME/node_modules/uitkit"
+    "$PWD/node_modules/uitkit"
   )
 
   for loc in "${locations[@]}"; do
@@ -119,11 +119,11 @@ create_cursor_dirs() {
 }
 
 ################################################################################
-# copy_skills — Copy skills from Claudient skills/ directory
+# copy_skills — Copy skills from UitKit skills/ directory
 ################################################################################
 copy_skills() {
-  local CLAUDIENT_DIR="$1"
-  local SKILLS_DIR="$CLAUDIENT_DIR/skills"
+  local UITKIT_DIR="$1"
+  local SKILLS_DIR="$UITKIT_DIR/skills"
   local CURSOR_RULES_DIR="$TARGET_DIR/.cursor/rules"
 
   if [[ ! -d "$SKILLS_DIR" ]]; then
@@ -164,8 +164,8 @@ copy_skills() {
 # copy_rules — Copy rules from rules/common and rules/language-specific
 ################################################################################
 copy_rules() {
-  local CLAUDIENT_DIR="$1"
-  local RULES_DIR="$CLAUDIENT_DIR/rules"
+  local UITKIT_DIR="$1"
+  local RULES_DIR="$UITKIT_DIR/rules"
   local CURSOR_RULES_DIR="$TARGET_DIR/.cursor/rules"
 
   if [[ ! -d "$RULES_DIR" ]]; then
@@ -248,34 +248,34 @@ print_summary() {
 # Main script execution
 ################################################################################
 main() {
-  info "Claudient → Cursor Installer v1.0"
+  info "UitKit → Cursor Installer v1.0"
   printf "\n"
 
   # Validate target directory
   validate_target_dir
 
-  # Find Claudient installation
-  CLAUDIENT_DIR=""
-  if ! CLAUDIENT_DIR=$(find_claudient_dir); then
-    error "Could not locate Claudient installation. Install via: npm install claudient"
+  # Find UitKit installation
+  UITKIT_DIR=""
+  if ! UITKIT_DIR=$(find_uitkit_dir); then
+    error "Could not locate UitKit installation. Install via: npm install uitkit"
   fi
 
-  info "Found Claudient at: $CLAUDIENT_DIR"
+  info "Found UitKit at: $UITKIT_DIR"
   printf "\n"
 
   # Create cursor directories
   create_cursor_dirs
 
   # Copy skills and rules
-  copy_skills "$CLAUDIENT_DIR" || warning "No skills were copied"
-  copy_rules "$CLAUDIENT_DIR" || warning "No rules were copied"
+  copy_skills "$UITKIT_DIR" || warning "No skills were copied"
+  copy_rules "$UITKIT_DIR" || warning "No rules were copied"
 
   # Print summary
   print_summary
 
   if [[ "$DRY_RUN" == false ]]; then
     if [[ $((SKILL_COUNT + RULE_COUNT)) -eq 0 ]]; then
-      warning "No files were installed. Check your Claudient installation."
+      warning "No files were installed. Check your UitKit installation."
       exit 1
     fi
     success "Installation complete!"

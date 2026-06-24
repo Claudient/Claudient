@@ -1,4 +1,4 @@
-name: Claudient CI validation
+name: UitKit CI validation
 
 on:
   push:
@@ -41,8 +41,8 @@ jobs:
       run: |
         echo "================================================================="
         echo "🚨 CI BUILD DETECTED TEST HARNESS REGRESSION!"
-        echo "Running Claudient Self-Healing Diagnostician..."
+        echo "Running UitKit Self-Healing Diagnostician..."
         echo "================================================================="
-        npx claudient repair || true
+        npx uitkit repair || true
         echo "Diagnostic logs compiled inside .claude/repair-context.json."
-        echo "Pull this branch locally and execute 'npx claudient repair' to auto-fix."
+        echo "Pull this branch locally and execute 'npx uitkit repair' to auto-fix."

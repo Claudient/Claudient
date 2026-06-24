@@ -178,7 +178,7 @@ Generate reports automatically:
 
 ```bash
 # Run benchmark daily
-0 2 * * * cd /path/to/claudient && node benchmarks/matrix-theme-benchmark.js > benchmarks/matrix-benchmark-report.json
+0 2 * * * cd /path/to/uitkit && node benchmarks/matrix-theme-benchmark.js > benchmarks/matrix-benchmark-report.json
 ```
 
 ## Troubleshooting
@@ -224,8 +224,8 @@ const {
 
 - **Main Theme:** `/themes/matrix.json`
 - **Setup Guide:** `/guides/matrix-theme-installation.md`
-- **CLI Tool:** `/scripts/claudient-matrix.js`
+- **CLI Tool:** `/scripts/uitkit-matrix.js`
 
 ## License
 
-Same as Claudient project (MIT)
+Same as UitKit project (MIT)

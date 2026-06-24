@@ -11,7 +11,7 @@ Automate GDPR data governance and consent tracking for Claude Code teams in Euro
 - Consent validator hook (PostToolUse)
 - Data residency enforcer hook (Stop)
 
-**Quick start:** `npx claudient add stack enterprise/compliance_stacks/gdpr`
+**Quick start:** `npx uitkit add stack enterprise/compliance_stacks/gdpr`
 
 After install, Claude Code sessions flag personal data usage and enforce retention policies.
 
@@ -27,7 +27,7 @@ After install, Claude Code sessions flag personal data usage and enforce retenti
 
 ## Setup (5 min)
 
-1. Install: `npx claudient add stack enterprise/compliance_stacks/gdpr`
+1. Install: `npx uitkit add stack enterprise/compliance_stacks/gdpr`
 2. Configure `.claude/settings.json`:
    ```json
    {
@@ -38,14 +38,14 @@ After install, Claude Code sessions flag personal data usage and enforce retenti
      }
    }
    ```
-3. Verify: `npx claudient audit` → GDPR section
+3. Verify: `npx uitkit audit` → GDPR section
 
 ## Evidence for DPA Audits
 
 - Consent logs: `~/.claude/gdpr-consent.jsonl`
 - Data processing records: `~/.claude/gdpr-processing-log.jsonl`
-- DPIA assessments: `npx claudient gdpr-dpia [task]`
+- DPIA assessments: `npx uitkit gdpr-dpia [task]`
 
 All GDPR-required evidence auto-generated. No manual documentation needed.
 
-Enterprise: `enterprise@claudient.ai`
+Enterprise: `enterprise@uitkit.ai`

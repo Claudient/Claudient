@@ -65,6 +65,6 @@ tickets into 5 categories. Return only: ticket_id, category.
 
 ---
 
-**Referencia:** [github.com/JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) — la implementación caveman de referencia. Claudient hace referencia a este trabajo; no se duplica aquí.
+**Referencia:** [github.com/JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) — la implementación caveman de referencia. UitKit hace referencia a este trabajo; no se duplica aquí.
 
 ---

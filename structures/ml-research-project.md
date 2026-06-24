@@ -383,14 +383,14 @@ GOOGLE_APPLICATION_CREDENTIALS=/path/to/service-account.json
 MLFLOW_EXPERIMENT_NAME=ml-research-project
 EOF
 
-# Install Claudient skills
-npx claudient add skill data-ml/experiment-tracker
-npx claudient add skill data-ml/dvc-pipeline
-npx claudient add skill data-ml/model-evaluator
-npx claudient add skill data-ml/feature-engineer
-npx claudient add skill backend/python/hydra-config
-npx claudient add skill productivity/notebook-reviewer
-npx claudient add skill productivity/test-generator
+# Install UitKit skills
+npx uitkit add skill data-ml/experiment-tracker
+npx uitkit add skill data-ml/dvc-pipeline
+npx uitkit add skill data-ml/model-evaluator
+npx uitkit add skill data-ml/feature-engineer
+npx uitkit add skill backend/python/hydra-config
+npx uitkit add skill productivity/notebook-reviewer
+npx uitkit add skill productivity/test-generator
 
 echo "ML research scaffold complete. Next steps:"
 echo "  1. cp .env.example .env && edit .env with your DVC remote credentials"
@@ -618,15 +618,15 @@ uv run mlflow ui --port 5001
 ## Skills to install
 
 ```bash
-npx claudient add skill data-ml/experiment-tracker
-npx claudient add skill data-ml/dvc-pipeline
-npx claudient add skill data-ml/model-evaluator
-npx claudient add skill data-ml/feature-engineer
-npx claudient add skill data-ml/stakeholder-report
-npx claudient add skill backend/python/hydra-config
-npx claudient add skill productivity/notebook-reviewer
-npx claudient add skill productivity/test-generator
-npx claudient add skill git/pr-description
+npx uitkit add skill data-ml/experiment-tracker
+npx uitkit add skill data-ml/dvc-pipeline
+npx uitkit add skill data-ml/model-evaluator
+npx uitkit add skill data-ml/feature-engineer
+npx uitkit add skill data-ml/stakeholder-report
+npx uitkit add skill backend/python/hydra-config
+npx uitkit add skill productivity/notebook-reviewer
+npx uitkit add skill productivity/test-generator
+npx uitkit add skill git/pr-description
 ```
 
 ## Related

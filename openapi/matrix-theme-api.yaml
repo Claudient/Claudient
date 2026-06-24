@@ -11,8 +11,8 @@ info:
     and validate theme configurations in real-time.
   version: 1.0.0
   contact:
-    name: Claudient Support
-    url: https://github.com/UitbreidenOS/Claudient
+    name: UitKit Support
+    url: https://github.com/UitbreidenOS/UitKit
     email: support@uitbreiden.com
   license:
     name: CC-BY-SA-4.0
@@ -21,7 +21,7 @@ info:
 servers:
   - url: http://localhost:3000/api/themes
     description: Local development server
-  - url: https://themes-api.claudient.io/api/themes
+  - url: https://themes-api.uitkit.io/api/themes
     description: Production API endpoint
 
 paths:

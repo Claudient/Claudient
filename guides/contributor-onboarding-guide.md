@@ -1,6 +1,6 @@
 # Contributor Onboarding Guide
 
-A comprehensive guide to the Claudient Contributor Onboarding System — transforming newcomers into active community members through guided workflows, mentorship, and gamified rewards.
+A comprehensive guide to the UitKit Contributor Onboarding System — transforming newcomers into active community members through guided workflows, mentorship, and gamified rewards.
 
 ## Table of Contents
 
@@ -233,7 +233,7 @@ const mentors = [
 - **Name**: Bronze Badge
 - **Requirements**: First contribution merged
 - **Rewards**:
-  - Claudient Sticker Pack (5x)
+  - UitKit Sticker Pack (5x)
   - Digital Certificate
   - GitHub Badge
 - **Time to Earn**: 1-2 weeks average
@@ -289,7 +289,7 @@ const mentors = [
 
 All physical items are:
 - **High Quality**: Premium materials, professional printing
-- **Branded**: Claudient logo and contributor name
+- **Branded**: UitKit logo and contributor name
 - **Packaged**: Special packaging for higher tiers
 - **Tracked**: Shipping notifications and support
 - **Sustainable**: Eco-friendly materials where possible
@@ -362,7 +362,7 @@ Selected: Jordan (lowest load among compatible)
 
 ### Mentor Dashboard (Coming Soon)
 
-Access at `claudient.dev/mentor-dashboard`:
+Access at `uitkit.dev/mentor-dashboard`:
 - Mentee progress tracking
 - PR review queue
 - Scheduled check-ins
@@ -542,8 +542,8 @@ node scripts/contributor-onboarding.js  # Creates file on first run
 
 **Manual Fix**:
 ```bash
-git clone https://github.com/YOUR_HANDLE/Claudient.git
-cd Claudient
+git clone https://github.com/YOUR_HANDLE/UitKit.git
+cd UitKit
 node scripts/contributor-onboarding.js  # Continue from cloned directory
 ```
 
@@ -639,11 +639,11 @@ npm run contributor-rewards -- --leaderboard  # Regenerates
 **Questions?** Reach out:
 - Discord: `#contributors`
 - GitHub: Open an issue
-- Email: contributors@claudient.com
+- Email: contributors@uitkit.com
 - Office Hours: Fridays 2pm EST
 
 ---
 
 **Last Updated**: 2026-06-22  
 **Version**: 1.0.0  
-**Maintained by**: Claudient Core Team
+**Maintained by**: UitKit Core Team

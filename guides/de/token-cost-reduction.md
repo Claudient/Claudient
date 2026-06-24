@@ -64,7 +64,7 @@ const response = await anthropic.messages.create({
 **Savings:** 50–65% auf Aufgaben-Typen unterhalb vs. Laufen auf Sonnet.
 
 **Verwenden Sie Haiku für:**
-- Übersetzungen (Sprach-Lokalisierung — siehe Claudients Übersetzungs-Pipeline)
+- Übersetzungen (Sprach-Lokalisierung — siehe UitKits Übersetzungs-Pipeline)
 - Eine Aufgabe oder Routing zu einem Specialist klassifizieren
 - Strukturierte Daten aus Text extrahieren (JSON aus unstrukturiertem Inhalt)
 - Einfaches Reformatieren (Markdown → HTML, JSON → CSV)

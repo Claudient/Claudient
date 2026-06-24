@@ -1,11 +1,11 @@
-# AWS Deployment Module for Claudient
+# AWS Deployment Module for UitKit
 
-Complete AWS deployment solution for Claudient, managing ECS/EKS, Lambda serverless tasks, S3 skill storage, DynamoDB state management, and CloudFormation templates with cost optimization.
+Complete AWS deployment solution for UitKit, managing ECS/EKS, Lambda serverless tasks, S3 skill storage, DynamoDB state management, and CloudFormation templates with cost optimization.
 
 ## Overview
 
 The AWS Deployment module provides:
-- **ECS/EKS**: Container orchestration for long-running Claudient services
+- **ECS/EKS**: Container orchestration for long-running UitKit services
 - **Lambda**: Serverless execution for dont-stop tasks with EventBridge scheduling
 - **S3**: Centralized skill and artifact storage with versioning and lifecycle policies
 - **DynamoDB**: Distributed state and deployment tracking with TTL support
@@ -40,21 +40,21 @@ const deployment = new AWSDeployment({
 
 // Deploy S3 bucket for skills
 await deployment.deployS3({
-  bucketName: 'claudient-skills',
+  bucketName: 'uitkit-skills',
   versioningEnabled: true,
   serverSideEncryption: true,
 });
 
 // Deploy DynamoDB for state
 await deployment.deployDynamoDB({
-  tableName: 'claudient-state',
+  tableName: 'uitkit-state',
   partitionKey: { name: 'deploymentId', type: 'S' },
   billingMode: 'PAY_PER_REQUEST',
 });
 
 // Deploy Lambda dont-stop task
 await deployment.deployLambda({
-  functionName: 'claudient-dont-stop',
+  functionName: 'uitkit-dont-stop',
   runtime: 'nodejs18.x',
   roleArn: 'arn:aws:iam::123456789012:role/lambda-role',
   codeZip: '/path/to/lambda.zip',
@@ -76,7 +76,7 @@ new AWSDeployment({
   dryRun: false,                     // Dry-run mode
   costOptimization: true,            // Enable cost recommendations
   tags: {                            // Default tags for all resources
-    ManagedBy: 'Claudient',
+    ManagedBy: 'UitKit',
     Environment: 'production',
   },
 })
@@ -94,13 +94,13 @@ export AWS_ACCOUNT_ID=123456789012
 
 ### 1. ECS Deployment
 
-Deploy containerized Claudient services on ECS:
+Deploy containerized UitKit services on ECS:
 
 ```javascript
 await deployment.deployECS({
-  clusterName: 'claudient-cluster',
-  serviceName: 'claudient-orchestrator',
-  taskDefinitionFamily: 'claudient-task',
+  clusterName: 'uitkit-cluster',
+  serviceName: 'uitkit-orchestrator',
+  taskDefinitionFamily: 'uitkit-task',
   desiredCount: 2,
   launchType: 'FARGATE',           // or 'EC2'
   image: 'your-registry/image:latest',
@@ -108,8 +108,8 @@ await deployment.deployECS({
   memory: '512',
   containerPort: 8080,
   environment: {
-    SKILLS_BUCKET: 'claudient-skills',
-    STATE_TABLE: 'claudient-state',
+    SKILLS_BUCKET: 'uitkit-skills',
+    STATE_TABLE: 'uitkit-state',
   },
   subnets: ['subnet-12345'],
   securityGroups: ['sg-12345'],
@@ -127,7 +127,7 @@ Deploy Kubernetes clusters for advanced orchestration:
 
 ```javascript
 await deployment.deployEKS({
-  clusterName: 'claudient-eks',
+  clusterName: 'uitkit-eks',
   version: '1.28',
   roleArn: 'arn:aws:iam::123456789012:role/eks-role',
   subnets: ['subnet-12345', 'subnet-67890'],
@@ -141,12 +141,12 @@ await deployment.deployEKS({
 
 ### 3. Lambda Dont-Stop Tasks
 
-Deploy serverless functions that maintain Claudient continuity:
+Deploy serverless functions that maintain UitKit continuity:
 
 ```javascript
 // Deploy function
 await deployment.deployLambda({
-  functionName: 'claudient-dont-stop',
+  functionName: 'uitkit-dont-stop',
   runtime: 'nodejs18.x',
   handler: 'index.handler',
   roleArn: 'arn:aws:iam::123456789012:role/lambda-role',
@@ -155,15 +155,15 @@ await deployment.deployLambda({
   memorySize: 256,
   ephemeralStorageSize: 512,
   environment: {
-    SKILLS_BUCKET: 'claudient-skills',
-    STATE_TABLE: 'claudient-state',
+    SKILLS_BUCKET: 'uitkit-skills',
+    STATE_TABLE: 'uitkit-state',
   },
 });
 
 // Create EventBridge scheduling rule
 await deployment.createLambdaEventRule({
-  functionName: 'claudient-dont-stop',
-  ruleName: 'claudient-schedule',
+  functionName: 'uitkit-dont-stop',
+  ruleName: 'uitkit-schedule',
   scheduleExpression: 'rate(5 minutes)',
   description: 'Execute dont-stop task every 5 minutes',
 });
@@ -180,7 +180,7 @@ Centralized repository for skills with versioning and lifecycle:
 
 ```javascript
 await deployment.deployS3({
-  bucketName: 'claudient-skills-storage',
+  bucketName: 'uitkit-skills-storage',
   versioningEnabled: true,
   serverSideEncryption: true,
   publicRead: false,
@@ -205,7 +205,7 @@ await deployment.deployS3({
 
 // Upload skills directory
 await deployment.uploadSkillsToS3(
-  'claudient-skills-storage',
+  'uitkit-skills-storage',
   '/path/to/skills',
   'skills/'
 );
@@ -222,7 +222,7 @@ Distributed state management with automatic scaling:
 
 ```javascript
 await deployment.deployDynamoDB({
-  tableName: 'claudient-deployment-state',
+  tableName: 'uitkit-deployment-state',
   partitionKey: { name: 'deploymentId', type: 'S' },
   sortKey: { name: 'timestamp', type: 'N' },
   billingMode: 'PAY_PER_REQUEST',  // or 'PROVISIONED'
@@ -251,23 +251,23 @@ Generate Infrastructure as Code templates:
 ```javascript
 // Generate template
 const template = deployment.generateCloudFormationTemplate({
-  stackName: 'claudient-main',
+  stackName: 'uitkit-main',
   resources: {
     ecsCluster: {
-      name: 'claudient-cluster',
+      name: 'uitkit-cluster',
       containerInsights: true,
     },
     lambda: {
-      functionName: 'claudient-dont-stop',
+      functionName: 'uitkit-dont-stop',
       runtime: 'nodejs18.x',
       handler: 'index.handler',
     },
     s3: {
-      bucketName: 'claudient-skills',
+      bucketName: 'uitkit-skills',
       versioningEnabled: true,
     },
     dynamodb: {
-      tableName: 'claudient-state',
+      tableName: 'uitkit-state',
       partitionKey: { name: 'id', type: 'S' },
       billingMode: 'PAY_PER_REQUEST',
     },
@@ -282,12 +282,12 @@ const template = deployment.generateCloudFormationTemplate({
 
 // Save as file
 const filePath = deployment.saveCloudFormationTemplate(
-  { stackName: 'claudient-main', resources: {} },
+  { stackName: 'uitkit-main', resources: {} },
   './deployments/cloudformation'
 );
 
 // Deploy stack
-await deployment.deployCloudFormationStack('claudient-main', filePath);
+await deployment.deployCloudFormationStack('uitkit-main', filePath);
 ```
 
 ### 7. Cost Optimization
@@ -320,12 +320,12 @@ Monitor deployment health:
 
 ```javascript
 // ECS health check
-const ecsHealth = await deployment.healthCheckECS('claudient-cluster', 'claudient-service');
+const ecsHealth = await deployment.healthCheckECS('uitkit-cluster', 'uitkit-service');
 console.log(ecsHealth);
 // { status: 'healthy', desiredCount: 2, runningCount: 2, serviceStatus: 'ACTIVE' }
 
 // Lambda health check
-const lambdaHealth = await deployment.healthCheckLambda('claudient-dont-stop');
+const lambdaHealth = await deployment.healthCheckLambda('uitkit-dont-stop');
 console.log(lambdaHealth);
 // { status: 'healthy', state: 'Active', updateStatus: 'Successful' }
 ```
@@ -344,12 +344,12 @@ newDeployment.loadState('/path/to/state.json');
 
 const currentState = newDeployment.getDeploymentState();
 console.log(currentState);
-// { 'claudient-skills': { type: 's3', status: 'success', ... } }
+// { 'uitkit-skills': { type: 's3', status: 'success', ... } }
 ```
 
 ## AWS Cost Estimation
 
-Based on typical Claudient deployment:
+Based on typical UitKit deployment:
 
 | Service | Configuration | Estimated Monthly Cost |
 |---------|---|---|
@@ -358,7 +358,7 @@ Based on typical Claudient deployment:
 | S3 Storage | 100 GB standard + Glacier transitions | $2.50 |
 | S3 Requests | 100K reads, 50K writes | $1 |
 | DynamoDB | PAY_PER_REQUEST, 10K reads/writes | $20 |
-| CloudWatch Logs | Claudient logs | $5 |
+| CloudWatch Logs | UitKit logs | $5 |
 | Data Transfer | 1 TB outbound | $85 |
 | **TOTAL** | | **$150/month** |
 
@@ -398,9 +398,9 @@ const regions = ['us-east-1', 'us-west-2', 'eu-west-1'];
 
 for (const region of regions) {
   const regional = new AWSDeployment({ region });
-  await regional.deployS3({ bucketName: `claudient-skills-${region}` });
+  await regional.deployS3({ bucketName: `uitkit-skills-${region}` });
   await regional.deployDynamoDB({
-    tableName: `claudient-state-${region}`,
+    tableName: `uitkit-state-${region}`,
     partitionKey: { name: 'id', type: 'S' },
   });
 }
@@ -549,4 +549,4 @@ MIT
 
 ## Support
 
-For issues or questions, refer to the Claudient documentation or AWS SDK documentation.
+For issues or questions, refer to the UitKit documentation or AWS SDK documentation.

@@ -5,7 +5,7 @@ Workspace for user research workflows — study design, participant recruitment,
 ## Quick Start
 
 ```bash
-npx claudient add user_research_stack
+npx uitkit add user_research_stack
 ```
 
 ## Skills

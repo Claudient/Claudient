@@ -23,7 +23,7 @@ Product managers at growth-stage or mature tech companies who own a product area
 
 **Default tradeoffs:** Prefer frameworks (RICE, JTBD, ICE) that can be shared with eng and design. Accept some ambiguity in early-stage discovery; demand precision in spec-writing.
 
-## Recommended Claudient skills & agents
+## Recommended UitKit skills & agents
 - `gtm` — product launch planning, go-to-market sequencing
 - `data-analysis` — metric definition, funnel analysis, cohort interpretation
 - `finance` — revenue impact modeling, business case construction

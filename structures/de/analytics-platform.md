@@ -295,14 +295,14 @@ touch .claude/commands/run-quality.md
 touch .claude/commands/publish-dashboard.md
 touch .claude/commands/data-incident.md
 
-# Claudient-Skills installieren
-npx claudient add skill data-ml/sql
-npx claudient add skill data-ml/dbt-data-pipelines
-npx claudient add skill data-ml/data-quality-checker
-npx claudient add skill data-ml/dashboard-narrator
-npx claudient add skill data-ml/stakeholder-report
-npx claudient add skill devops-infra/terraform
-npx claudient add skill devops-infra/cicd
+# UitKit-Skills installieren
+npx uitkit add skill data-ml/sql
+npx uitkit add skill data-ml/dbt-data-pipelines
+npx uitkit add skill data-ml/data-quality-checker
+npx uitkit add skill data-ml/dashboard-narrator
+npx uitkit add skill data-ml/stakeholder-report
+npx uitkit add skill devops-infra/terraform
+npx uitkit add skill devops-infra/cicd
 
 echo "Analytics-Plattform wurde eingerichtet. Nächste Schritte: profiles.yml konfigurieren, Terraform-Backend einrichten, dann ausführen: dbt debug"
 ```
@@ -573,14 +573,14 @@ terraform apply tfplan
 ## Zu installierende Skills
 
 ```bash
-npx claudient add skill data-ml/sql
-npx claudient add skill data-ml/dbt-data-pipelines
-npx claudient add skill data-ml/data-quality-checker
-npx claudient add skill data-ml/dashboard-narrator
-npx claudient add skill data-ml/stakeholder-report
-npx claudient add skill devops-infra/terraform
-npx claudient add skill devops-infra/cicd
-npx claudient add skill productivity/stakeholder-comms
+npx uitkit add skill data-ml/sql
+npx uitkit add skill data-ml/dbt-data-pipelines
+npx uitkit add skill data-ml/data-quality-checker
+npx uitkit add skill data-ml/dashboard-narrator
+npx uitkit add skill data-ml/stakeholder-report
+npx uitkit add skill devops-infra/terraform
+npx uitkit add skill devops-infra/cicd
+npx uitkit add skill productivity/stakeholder-comms
 ```
 
 ## Verwandte Ressourcen

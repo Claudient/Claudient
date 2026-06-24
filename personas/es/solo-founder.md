@@ -26,7 +26,7 @@ Empresas de una sola persona o negocios independientes donde el fundador hace to
 
 **Compensaciones por defecto:** Preferir sin código o bajo código donde la velocidad vence al control. Aceptar automatización imperfecta sobre repetición manual.
 
-## Habilidades y agentes de Claudient recomendados
+## Habilidades y agentes de UitKit recomendados
 
 - `small-business` — precios, posicionamiento y comunicación con clientes
 - `gtm` — estrategia de lanzamiento, posicionamiento, copia de página de destino

@@ -18,20 +18,20 @@ Je bent een content marketeer, SEO-manager of groeimarketeer wiens taak het is e
 
 ```bash
 # Installeer de volledige content marketing en SEO-stack
-npx claudient add skills marketing
+npx uitkit add skills marketing
 
 # Of kies wat je nodig hebt:
-npx claudient add skill marketing/content-strategy
-npx claudient add skill marketing/content-brief
-npx claudient add skill marketing/editorial-calendar
-npx claudient add skill marketing/seo-audit
-npx claudient add skill marketing/ai-seo
-npx claudient add skill marketing/programmatic-seo
-npx claudient add skill marketing/copywriting
-npx claudient add skill marketing/social-media-manager
-npx claudient add skill marketing/email-sequence
-npx claudient add agents advisors/cmo-advisor
-npx claudient add agents roles/competitive-analyst
+npx uitkit add skill marketing/content-strategy
+npx uitkit add skill marketing/content-brief
+npx uitkit add skill marketing/editorial-calendar
+npx uitkit add skill marketing/seo-audit
+npx uitkit add skill marketing/ai-seo
+npx uitkit add skill marketing/programmatic-seo
+npx uitkit add skill marketing/copywriting
+npx uitkit add skill marketing/social-media-manager
+npx uitkit add skill marketing/email-sequence
+npx uitkit add agents advisors/cmo-advisor
+npx uitkit add agents roles/competitive-analyst
 ```
 
 ---
@@ -216,7 +216,7 @@ Huidig top trefwoordcluster: [hoofd onderwerpsgebied]
 ## 30-daags inwerklist (nieuwe content marketeers)
 
 ### Week 1 — Controleer en begrijp
-- Installeer alle marketing-skills: `npx claudient add skills marketing`
+- Installeer alle marketing-skills: `npx uitkit add skills marketing`
 - Voer `/seo-audit` uit op je hele site — weet wat je hebt voordat je meer publiceert
 - Voer `/competitive-analyst` uit op je top 3 concurrenten — waar schrijven zij over dat jij niet doet?
 - Controleer je e-maillijst: openingsratio's, klikratio's, uitschrijvingen — welke content presteert?

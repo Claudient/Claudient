@@ -1,4 +1,4 @@
-# Claudient Partnerships Program
+# UitKit Partnerships Program
 
 Partner with us to expand Claude Code adoption and drive mutual growth.
 
@@ -14,30 +14,30 @@ We partner with three types of organizations:
 Examples: CodeRabbit, Greptile, modal.com, Anthropic-adjacent tools.
 
 **What you get:**
-- Logo placement on Claudient README + homepage
+- Logo placement on UitKit README + homepage
 - Co-marketing opportunities (blog posts, webinars, joint content)
 - Early access to new stacks and features
 - Revenue share on referrals (if applicable)
-- Discounted / free Claudient licenses for your team
+- Discounted / free UitKit licenses for your team
 
 **Time commitment:** ~4 hours/quarter for collaboration.
 
 **Examples of partnerships:**
-- Greptile (code search) + Claudient (code context) — joint webinar: "Automating code search with Claude Code"
-- Modal (serverless compute) + Claudient (cloud stack) — bundled guide: "Deploy a serverless AI agent with Modal + Claude"
+- Greptile (code search) + UitKit (code context) — joint webinar: "Automating code search with Claude Code"
+- Modal (serverless compute) + UitKit (cloud stack) — bundled guide: "Deploy a serverless AI agent with Modal + Claude"
 
 ---
 
 ### 2. Consulting Partners
-**Agencies and consultancies deploying Claudient for clients**
+**Agencies and consultancies deploying UitKit for clients**
 
 Examples: AI consulting firms, developer agencies, SaaS implementation partners.
 
 **What you get:**
 - Referral fees for new customer sign-ups (20% recurring commission)
-- White-label Claudient stacks customized for your clients
+- White-label UitKit stacks customized for your clients
 - Co-branded case studies and client wins (anonymized)
-- Discount on Claudient Team tier for your internal use
+- Discount on UitKit Team tier for your internal use
 - Access to a partner Slack channel for sales support
 
 **Time commitment:** Ongoing (self-directed).
@@ -54,7 +54,7 @@ Examples: AI consulting firms, developer agencies, SaaS implementation partners.
 Examples: DevOps engineer building a k8s stack, fintech expert building a payments stack.
 
 **What you get:**
-- Revenue share on paid stacks (70% to you, 30% to Claudient platform)
+- Revenue share on paid stacks (70% to you, 30% to UitKit platform)
 - Marketplace listing with your name/bio/links
 - "Certified Stack" badge for quality assurance
 - Priority listing placement
@@ -80,7 +80,7 @@ Examples: DevOps engineer building a k8s stack, fintech expert building a paymen
 ## How to Apply
 
 ### Technology Partners
-Email [partnerships@claudient.ai](mailto:partnerships@claudient.ai) with:
+Email [partnerships@uitkit.ai](mailto:partnerships@uitkit.ai) with:
 - Company name, mission, and how your product complements Claude Code
 - 2–3 ideas for co-marketing (webinar, blog post, integration)
 - Any existing integrations or partnerships you'd like to discuss
@@ -88,7 +88,7 @@ Email [partnerships@claudient.ai](mailto:partnerships@claudient.ai) with:
 We review within 1 week. Decision criteria: product-market fit, audience overlap, brand alignment.
 
 ### Consulting Partners
-Sign up at [claudient.ai/partner](https://claudient.ai/partner):
+Sign up at [uitkit.ai/partner](https://uitkit.ai/partner):
 - Provide company info, team size, domains of expertise
 - Your target customer (company size, industry)
 - Expected referral volume per quarter
@@ -124,7 +124,7 @@ Approval is automatic. You get your unique referral link and partner dashboard w
 - **Non-exclusive:** You can partner with other tools/platforms (no lock-in)
 - **Term:** 1 year, auto-renew (cancel anytime with 30 days notice)
 - **Confidentiality:** We keep partner relationship confidential unless you request co-marketing
-- **Dispute resolution:** Escalate to [partnerships@claudient.ai](mailto:partnerships@claudient.ai)
+- **Dispute resolution:** Escalate to [partnerships@uitkit.ai](mailto:partnerships@uitkit.ai)
 
 ---
 
@@ -132,18 +132,18 @@ Approval is automatic. You get your unique referral link and partner dashboard w
 
 We feature partner case studies on our homepage. Examples:
 
-> **"Using Claudient + Greptile reduced our onboarding time by 60%"** — Engineering Director, Series B SaaS
+> **"Using UitKit + Greptile reduced our onboarding time by 60%"** — Engineering Director, Series B SaaS
 >
-> **"Our consulting team now bundles Claudient with every AI implementation"** — Agency Partner, Scaling from 5 → 15 AI projects/year
+> **"Our consulting team now bundles UitKit with every AI implementation"** — Agency Partner, Scaling from 5 → 15 AI projects/year
 >
-> **"Building a Certified Stack on Claudient is like passive income for our expertise"** — Freelance DevOps Engineer, $2K/mo from stack
+> **"Building a Certified Stack on UitKit is like passive income for our expertise"** — Freelance DevOps Engineer, $2K/mo from stack
 
-If you'd like to share your story, email [marketing@claudient.ai](mailto:marketing@claudient.ai).
+If you'd like to share your story, email [marketing@uitkit.ai](mailto:marketing@uitkit.ai).
 
 ---
 
 ## Questions?
 
-- **Partnerships:** [partnerships@claudient.ai](mailto:partnerships@claudient.ai)
-- **Consulting / Referrals:** [consulting@claudient.ai](mailto:consulting@claudient.ai)
-- **Stack Publishers:** [stacks@claudient.ai](mailto:stacks@claudient.ai)
+- **Partnerships:** [partnerships@uitkit.ai](mailto:partnerships@uitkit.ai)
+- **Consulting / Referrals:** [consulting@uitkit.ai](mailto:consulting@uitkit.ai)
+- **Stack Publishers:** [stacks@uitkit.ai](mailto:stacks@uitkit.ai)

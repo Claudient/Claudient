@@ -557,9 +557,9 @@ fi
 
 ---
 
-## The 6 Claudient Statusline Scripts Explained
+## The 6 UitKit Statusline Scripts Explained
 
-Claudient ships with 6 reference implementations demonstrating different styles and use cases. Use these as templates.
+UitKit ships with 6 reference implementations demonstrating different styles and use cases. Use these as templates.
 
 ### 1. Minimal — Bare Essentials
 
@@ -1364,7 +1364,7 @@ Before shipping a statusline script:
 
 **OSC Sequences:** https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Operating-System-Commands
 
-**Claudient Statusline Scripts:** See `statuslines/` directory for 6 complete reference implementations.
+**UitKit Statusline Scripts:** See `statuslines/` directory for 6 complete reference implementations.
 
 **Performance Tuning:** Use `time` and `/tmp/statusline.log` for debugging; aim for 25–40ms execution.
 

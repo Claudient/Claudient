@@ -23,7 +23,7 @@ Fundadores y operadores que dirigen agencias digitales, de desarrollo o marketin
 
 **Compensaciones predeterminadas:** Prefiere modelos de entrega probados sobre los construidos a medida. Acepta resultados menos que perfectos si se envían rápido y protegen el margen. Una solución reutilizable del 80% supera una personalizada del 100%.
 
-## Habilidades y agentes de Claudient recomendados
+## Habilidades y agentes de UitKit recomendados
 - `gtm` — posicionamiento de agencia, selección de nicho, campañas salientes
 - `sdr` — prospección de nuevo negocio, secuencias de seguimiento de propuestas
 - `legal` — plantillas SOW, cláusulas de contrato, lenguaje de propiedad intelectual

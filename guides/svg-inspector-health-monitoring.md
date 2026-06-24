@@ -501,5 +501,5 @@ describe('SVG Inspector Health Endpoints', () => {
 - **Endpoints Reference:** `/health-check-endpoints.md`
 - **Middleware Code:** `/middleware/svg-inspector-health-check.js`
 - **Performance Report:** `/benchmarks/SVG_INSPECTOR_PERFORMANCE_REPORT.md`
-- **CLI Tool:** `/scripts/claudient-svg-inspector.js`
+- **CLI Tool:** `/scripts/uitkit-svg-inspector.js`
 

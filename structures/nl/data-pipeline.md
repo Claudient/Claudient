@@ -446,14 +446,14 @@ great_expectations/uncommitted/
 .DS_Store
 EOF
 
-# Installeer Claudient-vaardigheden
-npx claudient add skill data-ml/de/stakeholder-report
-npx claudient add skill data-ml/dbt-model-builder
-npx claudient add skill data-ml/ge-suite-authoring
-npx claudient add skill data-ml/airflow-dag-builder
-npx claudient add skill data-ml/sql-query-optimizer
-npx claudient add skill git/pr-description
-npx claudient add skill productivity/test-generator
+# Installeer UitKit-vaardigheden
+npx uitkit add skill data-ml/de/stakeholder-report
+npx uitkit add skill data-ml/dbt-model-builder
+npx uitkit add skill data-ml/ge-suite-authoring
+npx uitkit add skill data-ml/airflow-dag-builder
+npx uitkit add skill data-ml/sql-query-optimizer
+npx uitkit add skill git/pr-description
+npx uitkit add skill productivity/test-generator
 
 echo "Data pipeline steiger compleet. Volgende stappen:"
 echo "  1. cp .env.example .env && vul AIRFLOW_FERNET_KEY, WAREHOUSE_URL, etc. in"
@@ -814,14 +814,14 @@ Op merge naar main (deploy.yml):
 ## Vaardigheden om te installeren
 
 ```bash
-npx claudient add skill data-ml/dbt-model-builder
-npx claudient add skill data-ml/ge-suite-authoring
-npx claudient add skill data-ml/airflow-dag-builder
-npx claudient add skill data-ml/sql-query-optimizer
-npx claudient add skill data-ml/de/stakeholder-report
-npx claudient add skill productivity/test-generator
-npx claudient add skill git/pr-description
-npx claudient add skill devops-infra/de/oncall-runbook
+npx uitkit add skill data-ml/dbt-model-builder
+npx uitkit add skill data-ml/ge-suite-authoring
+npx uitkit add skill data-ml/airflow-dag-builder
+npx uitkit add skill data-ml/sql-query-optimizer
+npx uitkit add skill data-ml/de/stakeholder-report
+npx uitkit add skill productivity/test-generator
+npx uitkit add skill git/pr-description
+npx uitkit add skill devops-infra/de/oncall-runbook
 ```
 
 ## Gerelateerd

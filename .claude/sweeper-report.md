@@ -1,6 +1,6 @@
 # Codebase Sweeper Quality Report
 
-Generated: 2026-06-22T10:46:00.947Z | Target Workspace: `/Users/tushar/Desktop/Claudient`
+Generated: 2026-06-22T10:46:00.947Z | Target Workspace: `/Users/tushar/Desktop/UitKit`
 Total issues detected: **58**
 
 ### 📁 `scripts/agent-cloning-integration.js`
@@ -30,17 +30,17 @@ Total issues detected: **58**
 #### Unused Variables
 - Line 19: `DIM`
 
-### 📁 `scripts/claudient-dont-stop.js`
+### 📁 `scripts/uitkit-dont-stop.js`
 #### Unused Imports
 - Line 3: `spawn`
 #### Unused Variables
 - Line 89: `remaining`
 
-### 📁 `scripts/claudient-matrix.js`
+### 📁 `scripts/uitkit-matrix.js`
 #### Unused Variables
 - Line 7: `CWD`
 
-### 📁 `scripts/claudient-swarm-sandbox.js`
+### 📁 `scripts/uitkit-swarm-sandbox.js`
 #### Unused Imports
 - Line 19: `execSync`
 - Line 19: `spawnSync`

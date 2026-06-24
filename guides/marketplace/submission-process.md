@@ -20,7 +20,7 @@ The submission process takes 1–2 weeks from pull request to publication. You'l
 
 ## Step 1: Fork the Repository
 
-1. Navigate to https://github.com/tushar2704/Claudient
+1. Navigate to https://github.com/tushar2704/UitKit
 2. Click **Fork** in the top-right corner
 3. Choose your GitHub account as the fork destination
 4. Click **Create fork**
@@ -33,11 +33,11 @@ You now have your own copy of the repository.
 
 ```bash
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/Claudient.git
-cd Claudient
+git clone https://github.com/YOUR_USERNAME/UitKit.git
+cd UitKit
 
 # Add upstream remote for syncing
-git remote add upstream https://github.com/tushar2704/Claudient.git
+git remote add upstream https://github.com/tushar2704/UitKit.git
 ```
 
 Replace `YOUR_USERNAME` with your GitHub handle.
@@ -104,7 +104,7 @@ your-stack-name-stack/
 ```
 
 **Required files:**
-- `CLAUDE.md` — Stack manifest following claudient standards
+- `CLAUDE.md` — Stack manifest following uitkit standards
 - `README.md` — Overview, quick start, 100–200 lines
 - `LICENSE` — CC0-1.0, MIT, Apache 2.0, or GPL 3.0
 - `submission.json` — Submission metadata
@@ -138,7 +138,7 @@ At the root of your stack, create `submission.json`:
     "email": "you@example.com"
   },
   "license": "CC0-1.0",
-  "repository": "https://github.com/YOUR_USERNAME/Claudient/tree/main/stacks/your-stack-name-stack",
+  "repository": "https://github.com/YOUR_USERNAME/UitKit/tree/main/stacks/your-stack-name-stack",
   "keywords": [
     "keyword1",
     "keyword2",
@@ -288,13 +288,13 @@ git push origin main
 
 ## Step 9: Open a Pull Request
 
-1. Navigate to your fork: https://github.com/YOUR_USERNAME/Claudient
+1. Navigate to your fork: https://github.com/YOUR_USERNAME/UitKit
 2. Click **Pull requests** tab
 3. Click **New pull request**
 4. Set:
-   - Base repository: `tushar2704/Claudient`
+   - Base repository: `tushar2704/UitKit`
    - Base branch: `main`
-   - Head repository: `YOUR_USERNAME/Claudient`
+   - Head repository: `YOUR_USERNAME/UitKit`
    - Head branch: `main`
 5. Click **Create pull request**
 
@@ -321,7 +321,7 @@ Specific audience description (e.g., "Backend engineers optimizing service perfo
 
 ### Quality Checklist
 
-- [x] All files follow claudient standards
+- [x] All files follow uitkit standards
 - [x] Every skill has concrete, tested examples
 - [x] Every agent has clear purpose and tool scoping
 - [x] All guides are complete and tested

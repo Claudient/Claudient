@@ -24,7 +24,7 @@ my-plugin/
     └── my-server.json
 ```
 
-Los archivos de componentes siguen el mismo formato que las habilidades, agentes, hooks y reglas independientes en la especificación Claudient.
+Los archivos de componentes siguen el mismo formato que las habilidades, agentes, hooks y reglas independientes en la especificación UitKit.
 
 ---
 
@@ -99,13 +99,13 @@ Los archivos de componentes siguen el mismo formato que las habilidades, agentes
 
 **Desde npm:**
 ```bash
-npx claudient add plugin my-plugin-package
-npx claudient add plugin @org/my-plugin
+npx uitkit add plugin my-plugin-package
+npx uitkit add plugin @org/my-plugin
 ```
 
 **Desde una ruta local:**
 ```bash
-npx claudient add plugin ./path/to/my-plugin
+npx uitkit add plugin ./path/to/my-plugin
 ```
 
 **Desde una URL (v2.1.90+):**
@@ -121,8 +121,8 @@ Los complementos instalados por proyecto se escriben en `.claude/plugins/`. Los 
 
 | Alcance | Comando de instalación | Ubicación | A quién afecta |
 |---|---|---|---|
-| Por proyecto | `npx claudient add plugin <pkg> --project` | `.claude/plugins/` | Solo este proyecto |
-| Usuario global | `npx claudient add plugin <pkg> --global` | `~/.claude/plugins/` | Todos los proyectos para este usuario |
+| Por proyecto | `npx uitkit add plugin <pkg> --project` | `.claude/plugins/` | Solo este proyecto |
+| Usuario global | `npx uitkit add plugin <pkg> --global` | `~/.claude/plugins/` | Todos los proyectos para este usuario |
 
 El predeterminado es por proyecto. Usa `--global` para herramientas personales (tus agentes preferidos, habilidades de productividad) y por proyecto para herramientas compartidas con equipo.
 
@@ -138,10 +138,10 @@ npm link
 
 # En el proyecto donde quieras probarlo
 npm link my-plugin-package
-npx claudient add plugin my-plugin-package
+npx uitkit add plugin my-plugin-package
 ```
 
-O usa el patrón `scripts/link-skills.sh` si mantienes un repositorio estilo Claudient:
+O usa el patrón `scripts/link-skills.sh` si mantienes un repositorio estilo UitKit:
 
 ```bash
 #!/bin/bash
@@ -182,7 +182,7 @@ Mantén un `CHANGELOG.md` en la raíz del complemento. Los usuarios que actualic
 ## Publicación en npm
 
 ```bash
-# Asegúrate de que "claudient-plugin" esté en palabras clave para descubribilidad
+# Asegúrate de que "uitkit-plugin" esté en palabras clave para descubribilidad
 npm publish --access public
 ```
 
@@ -190,10 +190,10 @@ Mínimo `package.json` para un complemento publicable:
 
 ```json
 {
-  "name": "claudient-plugin-my-tool",
+  "name": "uitkit-plugin-my-tool",
   "version": "1.0.0",
   "description": "What this plugin provides",
-  "keywords": ["claudient-plugin", "claude-code"],
+  "keywords": ["uitkit-plugin", "claude-code"],
   "files": [
     "plugin.json",
     "skills/",
@@ -205,7 +205,7 @@ Mínimo `package.json` para un complemento publicable:
 }
 ```
 
-La palabra clave `claudient-plugin` hace que el complemento sea detectable vía `npx claudient search plugins <query>`.
+La palabra clave `uitkit-plugin` hace que el complemento sea detectable vía `npx uitkit search plugins <query>`.
 
 ---
 

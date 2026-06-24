@@ -1,4 +1,4 @@
-# License Compliance Report — Claudient
+# License Compliance Report — UitKit
 
 **Generated:** 2026-06-22  
 **Project License:** AGPL-3.0-or-later (Code) & CC-BY-SA-4.0 (Content)
@@ -7,7 +7,7 @@
 
 ## Project Licensing
 
-Claudient is dual-licensed:
+UitKit is dual-licensed:
 
 - **Code** (scripts, hooks, executables, plugins): GNU Affero General Public License v3.0 or later (`AGPL-3.0-or-later`)
 - **Content** (Markdown documentation, guides, skills, workflows): Creative Commons Attribution-ShareAlike 4.0 (`CC-BY-SA-4.0`)
@@ -222,7 +222,7 @@ All dependencies use permissive or copyleft-compatible licenses. The AGPL-3.0 li
 
 ### For Distributions
 
-When distributing Claudient (npm package, Docker image, etc.), include:
+When distributing UitKit (npm package, Docker image, etc.), include:
 
 1. **This file** (`LICENSES.md`)
 2. **LICENSE files:**

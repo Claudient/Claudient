@@ -23,7 +23,7 @@ One-person companies or indie businesses where the founder does everything: prod
 
 **Default tradeoffs:** Prefer no-code or low-code where velocity beats control. Accept imperfect automation over manual repetition.
 
-## Recommended Claudient skills & agents
+## Recommended UitKit skills & agents
 - `small-business` — pricing, positioning, and customer communication
 - `gtm` — launch strategy, positioning, landing page copy
 - `sdr` — outbound outreach and follow-up sequences

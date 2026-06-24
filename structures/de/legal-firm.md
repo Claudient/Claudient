@@ -191,11 +191,11 @@ touch .claude/commands/deadline-check.md
 touch .claude/commands/cite-check.md
 touch .claude/commands/client-update.md
 
-# Relevante Claudient-Skills installieren
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/vendor-evaluator
+# Relevante UitKit-Skills installieren
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/vendor-evaluator
 
 echo "Gerüst abgeschlossen. CLAUDE.md vor Erstgebrauch ausfüllen."
 ```
@@ -394,20 +394,20 @@ Speichern Sie keine geschlossenen Mandatendokumente in diesem Arbeitsplatz.
 
 ```bash
 # Dokument- und Prozess-Workflows
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/vendor-evaluator
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/vendor-evaluator
 
 # Recherche und Analyse
-npx claudient add skill productivity/exec-briefing
+npx uitkit add skill productivity/exec-briefing
 
 # Mandanten- und Geschäftsentwicklung
-npx claudient add skill productivity/comp-benchmarker
-npx claudient add skill productivity/investor-update
+npx uitkit add skill productivity/comp-benchmarker
+npx uitkit add skill productivity/investor-update
 
 # Abrechnung und Zeitmanagement
-npx claudient add skill productivity/engineering-strategy
+npx uitkit add skill productivity/engineering-strategy
 ```
 
 ## Verknüpft

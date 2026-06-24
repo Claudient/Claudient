@@ -11,11 +11,11 @@ Automate SOC2 Type II compliance checks and audit logging for Claude Code teams.
 - Access control validator hook (PreToolUse)
 - Compliance alert hook (Stop)
 
-**Quick start:** `npx claudient add stack enterprise/compliance_stacks/soc2`
+**Quick start:** `npx uitkit add stack enterprise/compliance_stacks/soc2`
 
 After install, every Claude Code session logs to `~/.claude/audit-logs/` (append-only, immutable).
 
-Run `npx claudient audit` to see SOC2 controls status.
+Run `npx uitkit audit` to see SOC2 controls status.
 
 ## Controls Covered
 
@@ -28,7 +28,7 @@ Run `npx claudient audit` to see SOC2 controls status.
 
 ## Setup (5 min)
 
-1. Install: `npx claudient add stack enterprise/compliance_stacks/soc2`
+1. Install: `npx uitkit add stack enterprise/compliance_stacks/soc2`
 2. Enable hooks in `.claude/settings.json`:
    ```json
    {
@@ -39,15 +39,15 @@ Run `npx claudient audit` to see SOC2 controls status.
      }
    }
    ```
-3. Verify: `npx claudient doctor` → should show "Audit hooks active ✅"
+3. Verify: `npx uitkit doctor` → should show "Audit hooks active ✅"
 
 ## For Auditors
 
 Provide this evidence each audit cycle:
 - `~/.claude/audit-logs/` (30-day rolling)
-- Output of `npx claudient compliance-report`
+- Output of `npx uitkit compliance-report`
 - Git change log with signed commits
 
 No manual work — fully automated.
 
-Enterprise: `enterprise@claudient.ai`
+Enterprise: `enterprise@uitkit.ai`

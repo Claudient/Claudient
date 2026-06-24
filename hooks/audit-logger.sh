@@ -49,9 +49,9 @@ except:
     print('unknown')
 " 2>/dev/null || echo "unknown")
 
-USER_ID="${CLAUDIENT_USER:-$(git config user.email 2>/dev/null || echo 'unknown')}"
-SESSION_ID="${CLAUDIENT_SESSION_ID:-unknown}"
-SESSION_COST="${CLAUDIENT_SESSION_COST:-0.0}"
+USER_ID="${UITKIT_USER:-$(git config user.email 2>/dev/null || echo 'unknown')}"
+SESSION_ID="${UITKIT_SESSION_ID:-unknown}"
+SESSION_COST="${UITKIT_SESSION_COST:-0.0}"
 
 # Sanitize input: remove secrets and PII
 SANITIZED_INPUT=$(echo "$INPUT" | python3 << 'PYTHONEOF'

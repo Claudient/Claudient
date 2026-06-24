@@ -1,6 +1,6 @@
-# Claudient — Context Map
+# UitKit — Context Map
 
-This file defines shared terminology for the Claudient repository. When Claude Code works inside this repo, it uses these definitions as ground truth.
+This file defines shared terminology for the UitKit repository. When Claude Code works inside this repo, it uses these definitions as ground truth.
 
 ---
 
@@ -49,9 +49,9 @@ This file defines shared terminology for the Claudient repository. When Claude C
 
 ## Flagged Ambiguities
 
-**"skill" vs "command"** — In Claude Code, the underlying files are called "slash commands" or "commands". Claudient uses "skill" to describe the same files when they encode reusable domain expertise. Functionally identical.
+**"skill" vs "command"** — In Claude Code, the underlying files are called "slash commands" or "commands". UitKit uses "skill" to describe the same files when they encode reusable domain expertise. Functionally identical.
 
-**"agent" vs "subagent"** — In Claudient's `agents/` directory, files define subagent specifications. In general Claude Code usage, "agent" often means the primary session. Here, "agent" always means a subagent spawned via the `Agent` tool.
+**"agent" vs "subagent"** — In UitKit's `agents/` directory, files define subagent specifications. In general Claude Code usage, "agent" often means the primary session. Here, "agent" always means a subagent spawned via the `Agent` tool.
 
 **"hook" vs "rule"** — Hooks run code; rules set behavioral guidelines. A hook is executable; a rule is instructional.
 

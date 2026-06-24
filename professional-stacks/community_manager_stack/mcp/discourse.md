@@ -11,7 +11,7 @@ Connect Claude Code to Discourse community platform for member segmentation, top
 In Discourse Admin:
 1. Go to **Admin** → **API** → **Keys**
 2. Click "New API Key"
-3. Description: `Claudient Community Manager`
+3. Description: `UitKit Community Manager`
 4. Scope: Select:
    - `read`
    - `write`

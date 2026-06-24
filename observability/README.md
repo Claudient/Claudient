@@ -1,6 +1,6 @@
-# Claudient Observability
+# UitKit Observability
 
-Prometheus alerting rules and configuration for monitoring Claudient services.
+Prometheus alerting rules and configuration for monitoring UitKit services.
 
 ## Files
 

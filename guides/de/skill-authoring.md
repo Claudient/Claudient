@@ -143,7 +143,7 @@ Wenn Ihre Skill 500 Zeilen überschreitet, teilen Sie sie in zwei fokussierte Sk
 
 ## Ihre Skill testen
 
-Bevor Sie an Claudient einreichen:
+Bevor Sie an UitKit einreichen:
 
 1. Kopieren Sie die Skill in das `.claude/skills/` eines echten Projekts
 2. Öffnen Sie Claude Code und lösen Sie sie mit dem Slash-Befehl aus

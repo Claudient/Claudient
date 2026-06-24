@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // build-plugins.js — generates Claude Code plugin marketplace packaging
-// Output: plugins/claudient-<category>/ with SKILL.md files + plugin.json manifests
+// Output: plugins/uitkit-<category>/ with SKILL.md files + plugin.json manifests
 // Root: .claude-plugin/marketplace.json
 
 const fs = require('fs')
@@ -258,7 +258,7 @@ const pluginSummaries = []  // for marketplace.json
 const buildStats = []
 
 for (const category of SKILL_CATEGORIES) {
-  const pluginName = `claudient-${category}`
+  const pluginName = `uitkit-${category}`
   const pluginDir = path.join(PLUGINS_DIR, pluginName)
   const skillsOutDir = path.join(pluginDir, 'skills')
   const agentsOutDir = path.join(pluginDir, 'agents')
@@ -269,7 +269,7 @@ for (const category of SKILL_CATEGORIES) {
 
   const meta = CATEGORY_META[category] || {
     display: category.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
-    description: `Claudient skills for ${category}.`,
+    description: `UitKit skills for ${category}.`,
     keywords: [category],
   }
 
@@ -292,7 +292,7 @@ for (const category of SKILL_CATEGORIES) {
     let skillMd = `---\nname: ${JSON.stringify(cappedName)}\ndescription: ${JSON.stringify(cappedDesc)}\n---\n\n`
     skillMd += body
 
-    // Output dir: plugins/claudient-<cat>/skills/<slug>/SKILL.md
+    // Output dir: plugins/uitkit-<cat>/skills/<slug>/SKILL.md
     const slug = skillSlug(skillFile, categorySkillDir)
     const skillOutDir = path.join(skillsOutDir, slug)
     ensureDir(skillOutDir)
@@ -341,7 +341,7 @@ for (const category of SKILL_CATEGORIES) {
   const pluginJson = {
     $schema: 'https://json.schemastore.org/claude-code-plugin-manifest.json',
     name: pluginName,
-    displayName: `Claudient — ${meta.display}`,
+    displayName: `UitKit — ${meta.display}`,
     version: version,
     description: meta.description,
     author: {
@@ -349,10 +349,10 @@ for (const category of SKILL_CATEGORIES) {
       email: 'ceo@uitbreiden.com',
       url: 'https://uitbreiden.com',
     },
-    homepage: 'https://github.com/UitbreidenOS/Claudient',
-    repository: 'https://github.com/UitbreidenOS/Claudient',
+    homepage: 'https://github.com/UitbreidenOS/UitKit',
+    repository: 'https://github.com/UitbreidenOS/UitKit',
     license: 'CC-BY-SA-4.0',
-    keywords: ['claudient', 'claude-code', ...meta.keywords],
+    keywords: ['uitkit', 'claude-code', ...meta.keywords],
     skills: ['./skills/'],
   }
   if (agentCount > 0) {
@@ -375,9 +375,9 @@ for (const category of SKILL_CATEGORIES) {
   })
 }
 
-// ---- claudient-commands plugin ----
+// ---- uitkit-commands plugin ----
 {
-  const cmdPluginDir = path.join(PLUGINS_DIR, 'claudient-commands')
+  const cmdPluginDir = path.join(PLUGINS_DIR, 'uitkit-commands')
   const cmdPluginMetaDir = path.join(cmdPluginDir, '.claude-plugin')
   const cmdCommandsDir = path.join(cmdPluginDir, 'commands')
   ensureDir(cmdCommandsDir)
@@ -400,22 +400,22 @@ for (const category of SKILL_CATEGORIES) {
   const cmdTotalFiles = collectSkillFiles(cmdCommandsDir).length
   const cmdPluginJson = {
     $schema: 'https://json.schemastore.org/claude-code-plugin-manifest.json',
-    name: 'claudient-commands',
-    displayName: 'Claudient — Slash Commands',
+    name: 'uitkit-commands',
+    displayName: 'UitKit — Slash Commands',
     version: version,
     description: `${cmdTotalFiles}+ slash commands across git, testing, refactor, docs, debug, devops, database, security, frontend, api, ai-engineering, and productivity.`,
     author: { name: 'tushar2704', email: 'ceo@uitbreiden.com', url: 'https://uitbreiden.com' },
-    homepage: 'https://github.com/UitbreidenOS/Claudient',
-    repository: 'https://github.com/UitbreidenOS/Claudient',
+    homepage: 'https://github.com/UitbreidenOS/UitKit',
+    repository: 'https://github.com/UitbreidenOS/UitKit',
     license: 'CC-BY-SA-4.0',
-    keywords: ['claudient', 'claude-code', 'commands', 'slash-commands'],
+    keywords: ['uitkit', 'claude-code', 'commands', 'slash-commands'],
     commands: ['./commands/'],
   }
   fs.writeFileSync(path.join(cmdPluginMetaDir, 'plugin.json'), JSON.stringify(cmdPluginJson, null, 2) + '\n')
-  buildStats.push({ plugin: 'claudient-commands', skills: 0, agents: 0, commands: cmdTotalFiles })
+  buildStats.push({ plugin: 'uitkit-commands', skills: 0, agents: 0, commands: cmdTotalFiles })
   pluginSummaries.push({
-    name: 'claudient-commands',
-    source: './plugins/claudient-commands',
+    name: 'uitkit-commands',
+    source: './plugins/uitkit-commands',
     description: cmdPluginJson.description,
     category: 'commands',
     version: version,
@@ -423,9 +423,9 @@ for (const category of SKILL_CATEGORIES) {
   })
 }
 
-// ---- claudient-personas plugin ----
+// ---- uitkit-personas plugin ----
 {
-  const pPluginDir = path.join(PLUGINS_DIR, 'claudient-personas')
+  const pPluginDir = path.join(PLUGINS_DIR, 'uitkit-personas')
   const pPluginMetaDir = path.join(pPluginDir, '.claude-plugin')
   const pAgentsDir = path.join(pPluginDir, 'agents')
   ensureDir(pAgentsDir)
@@ -442,22 +442,22 @@ for (const category of SKILL_CATEGORIES) {
 
   const pPluginJson = {
     $schema: 'https://json.schemastore.org/claude-code-plugin-manifest.json',
-    name: 'claudient-personas',
-    displayName: 'Claudient — Personas',
+    name: 'uitkit-personas',
+    displayName: 'UitKit — Personas',
     version: version,
     description: `10 operating personas for Claude: startup-cto, solo-founder, growth-marketer, indie-hacker, enterprise-architect, data-driven-pm, devrel-advocate, agency-operator, ai-product-builder, fractional-exec.`,
     author: { name: 'tushar2704', email: 'ceo@uitbreiden.com', url: 'https://uitbreiden.com' },
-    homepage: 'https://github.com/UitbreidenOS/Claudient',
-    repository: 'https://github.com/UitbreidenOS/Claudient',
+    homepage: 'https://github.com/UitbreidenOS/UitKit',
+    repository: 'https://github.com/UitbreidenOS/UitKit',
     license: 'CC-BY-SA-4.0',
-    keywords: ['claudient', 'claude-code', 'personas', 'roles'],
+    keywords: ['uitkit', 'claude-code', 'personas', 'roles'],
     agents: personaFiles,
   }
   fs.writeFileSync(path.join(pPluginMetaDir, 'plugin.json'), JSON.stringify(pPluginJson, null, 2) + '\n')
-  buildStats.push({ plugin: 'claudient-personas', skills: 0, agents: personaFiles.length })
+  buildStats.push({ plugin: 'uitkit-personas', skills: 0, agents: personaFiles.length })
   pluginSummaries.push({
-    name: 'claudient-personas',
-    source: './plugins/claudient-personas',
+    name: 'uitkit-personas',
+    source: './plugins/uitkit-personas',
     description: pPluginJson.description,
     category: 'personas',
     version: version,
@@ -465,44 +465,44 @@ for (const category of SKILL_CATEGORIES) {
   })
 }
 
-// ---- claudient-everything meta-bundle ----
+// ---- uitkit-everything meta-bundle ----
 // Strategy: list in marketplace.json as a top-level entry, no physical copy needed.
 // Users who want everything install individual domain plugins.
 // We create a thin meta-bundle that documents itself.
-const everythingDir = path.join(PLUGINS_DIR, 'claudient-everything')
+const everythingDir = path.join(PLUGINS_DIR, 'uitkit-everything')
 const everythingPluginDir = path.join(everythingDir, '.claude-plugin')
 ensureDir(everythingDir)
 ensureDir(everythingPluginDir)
 
-const allPluginNames = SKILL_CATEGORIES.map(c => `claudient-${c}`)
-const everythingReadme = `# Claudient Everything
+const allPluginNames = SKILL_CATEGORIES.map(c => `uitkit-${c}`)
+const everythingReadme = `# UitKit Everything
 
-This meta-bundle references all Claudient domain plugins.
+This meta-bundle references all UitKit domain plugins.
 
 Install each domain plugin directly:
 
 ${allPluginNames.map(n => `- \`/plugin install ${n}\``).join('\n')}
 
 Or install from the marketplace registry:
-  /plugin marketplace add UitbreidenOS/Claudient
+  /plugin marketplace add UitbreidenOS/UitKit
 `
 fs.writeFileSync(path.join(everythingDir, 'README.md'), everythingReadme)
 
 const everythingJson = {
   $schema: 'https://json.schemastore.org/claude-code-plugin-manifest.json',
-  name: 'claudient-everything',
-  displayName: 'Claudient — Everything',
+  name: 'uitkit-everything',
+  displayName: 'UitKit — Everything',
   version: version,
-  description: `Meta-bundle listing all Claudient domain plugins (377+ skills, 104 agents). Install individual plugins: ${allPluginNames.join(', ')}. See README.md for install commands.`,
+  description: `Meta-bundle listing all UitKit domain plugins (377+ skills, 104 agents). Install individual plugins: ${allPluginNames.join(', ')}. See README.md for install commands.`,
   author: {
     name: 'tushar2704',
     email: 'ceo@uitbreiden.com',
     url: 'https://uitbreiden.com',
   },
-  homepage: 'https://github.com/UitbreidenOS/Claudient',
-  repository: 'https://github.com/UitbreidenOS/Claudient',
+  homepage: 'https://github.com/UitbreidenOS/UitKit',
+  repository: 'https://github.com/UitbreidenOS/UitKit',
   license: 'CC-BY-SA-4.0',
-  keywords: ['claudient', 'claude-code', 'all', 'meta-bundle'],
+  keywords: ['uitkit', 'claude-code', 'all', 'meta-bundle'],
 }
 fs.writeFileSync(
   path.join(everythingPluginDir, 'plugin.json'),
@@ -510,8 +510,8 @@ fs.writeFileSync(
 )
 
 pluginSummaries.push({
-  name: 'claudient-everything',
-  source: './plugins/claudient-everything',
+  name: 'uitkit-everything',
+  source: './plugins/uitkit-everything',
   description: everythingJson.description,
   category: 'meta',
   version: version,
@@ -521,7 +521,7 @@ pluginSummaries.push({
 // ---- Write root marketplace.json ----
 const marketplace = {
   $schema: 'https://code.claude.com/schema/marketplace.json',
-  name: 'claudient',
+  name: 'uitkit',
   description: 'The Claude Code knowledge system — 377+ skills, 104 agents, hooks, MCP configs, and project structures across every professional domain.',
   owner: { name: 'tushar2704', email: 'ceo@uitbreiden.com' },
   metadata: { pluginRoot: './plugins' },
@@ -536,9 +536,9 @@ fs.writeFileSync(
 const totalSkills = buildStats.reduce((s, r) => s + r.skills, 0)
 const totalAgents = buildStats.reduce((s, r) => s + r.agents, 0)
 
-console.log('\nClaudient Plugin Build Summary')
+console.log('\nUitKit Plugin Build Summary')
 console.log('================================')
-console.log(`Generated ${buildStats.length} domain plugins + 1 meta-bundle (claudient-everything)`)
+console.log(`Generated ${buildStats.length} domain plugins + 1 meta-bundle (uitkit-everything)`)
 console.log(`Total skills packaged : ${totalSkills}`)
 console.log(`Total agents packaged : ${totalAgents}`)
 console.log()
@@ -556,8 +556,8 @@ console.log('  plugins/                         <- all per-category plugin dirs'
 console.log('  .claude-plugin/marketplace.json  <- root marketplace manifest')
 console.log()
 console.log('Install commands:')
-console.log('  /plugin marketplace add UitbreidenOS/Claudient')
+console.log('  /plugin marketplace add UitbreidenOS/UitKit')
 console.log('  # then install any domain plugin, e.g.:')
-console.log('  /plugin install claudient-productivity')
-console.log('  /plugin install claudient-backend')
-console.log('  /plugin install claudient-gtm')
+console.log('  /plugin install uitkit-productivity')
+console.log('  /plugin install uitkit-backend')
+console.log('  /plugin install uitkit-gtm')

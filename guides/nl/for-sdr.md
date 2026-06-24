@@ -18,22 +18,22 @@ Je bent een SDR, BDR of salesvertegenwoordiger wiens taak het is gekwalificeerde
 
 ```bash
 # Installeer alle SDR-vaardigheden, agents en workflows
-npx claudient add skills gtm
-npx claudient add agents roles/sdr-agent
+npx uitkit add skills gtm
+npx uitkit add agents roles/sdr-agent
 
 # Of selecteer wat je nodig hebt:
-npx claudient add skill gtm/sdr-research-brief
-npx claudient add skill gtm/sdr-reply-classifier
-npx claudient add skill gtm/sdr-call-prep
-npx claudient add skill gtm/sdr-call-analysis
-npx claudient add skill gtm/sdr-objection-handler
-npx claudient add skill gtm/sdr-territory-mapper
-npx claudient add skill gtm/sdr-lead-scorer
-npx claudient add skill gtm/sdr-agent
-npx claudient add skill gtm/email-automation
-npx claudient add skill gtm/lead-enrichment
-npx claudient add skill gtm/crm-hygiene
-npx claudient add skill gtm/hubspot
+npx uitkit add skill gtm/sdr-research-brief
+npx uitkit add skill gtm/sdr-reply-classifier
+npx uitkit add skill gtm/sdr-call-prep
+npx uitkit add skill gtm/sdr-call-analysis
+npx uitkit add skill gtm/sdr-objection-handler
+npx uitkit add skill gtm/sdr-territory-mapper
+npx uitkit add skill gtm/sdr-lead-scorer
+npx uitkit add skill gtm/sdr-agent
+npx uitkit add skill gtm/email-automation
+npx uitkit add skill gtm/lead-enrichment
+npx uitkit add skill gtm/crm-hygiene
+npx uitkit add skill gtm/hubspot
 ```
 
 ---
@@ -184,7 +184,7 @@ en of ik op schema lig voor mijn maandelijkse meeting-quotum.
 ## 30-daags opstartplan (nieuwe SDR's)
 
 ### Week 1 — Installatie en beheersing van onderzoek
-- Installeer alle SDR-vaardigheden via `npx claudient add skills gtm`
+- Installeer alle SDR-vaardigheden via `npx uitkit add skills gtm`
 - Configureer HubSpot MCP (zie `/hubspot`-vaardigheid voor installatie)
 - Voer `/sdr-territory-mapper` uit op je initiële accountlijst
 - Score 50+ accounts met `/sdr-lead-scorer` — raak vertrouwd met je ICP

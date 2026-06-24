@@ -1,10 +1,10 @@
-# Claudient Python SDK
+# UitKit Python SDK
 
-A production-grade Python SDK for integrating Claudient skills, agents, and MCP servers into your applications.
+A production-grade Python SDK for integrating UitKit skills, agents, and MCP servers into your applications.
 
 ## Features
 
-- **Skills Management**: Discover, install, and execute Claudient skills
+- **Skills Management**: Discover, install, and execute UitKit skills
 - **Agents Orchestration**: Run specialized agents with tool use and state management
 - **MCP Integration**: Connect to and communicate with Model Context Protocol servers
 - **Context Managers**: Automatic resource cleanup and lifecycle management
@@ -15,13 +15,13 @@ A production-grade Python SDK for integrating Claudient skills, agents, and MCP 
 ## Installation
 
 ```bash
-pip install claudient-sdk
+pip install uitkit-sdk
 ```
 
 Or from source:
 
 ```bash
-pip install -e /path/to/Claudient/sdk/python
+pip install -e /path/to/UitKit/sdk/python
 ```
 
 ## Quick Start
@@ -34,7 +34,7 @@ pip install -e /path/to/Claudient/sdk/python
 ### Basic Usage
 
 ```python
-from claudient_sdk import SkillsClient, AgentsClient, MCPClient
+from uitkit_sdk import SkillsClient, AgentsClient, MCPClient
 
 # Skills Management
 with SkillsClient() as skills:
@@ -77,7 +77,7 @@ with MCPClient() as mcp:
 
 ### SkillsClient
 
-Manage and discover Claudient skills from the 400+ skill catalog.
+Manage and discover UitKit skills from the 400+ skill catalog.
 
 #### Methods
 
@@ -92,7 +92,7 @@ Manage and discover Claudient skills from the 400+ skill catalog.
 #### Example
 
 ```python
-from claudient_sdk import SkillsClient
+from uitkit_sdk import SkillsClient
 
 with SkillsClient() as skills:
     # Search for skills
@@ -123,7 +123,7 @@ Execute agents with tool use, state management, and agentic loops.
 #### Tool Registration
 
 ```python
-from claudient_sdk import AgentsClient
+from uitkit_sdk import AgentsClient
 import subprocess
 
 with AgentsClient() as agents:
@@ -193,7 +193,7 @@ Manage Model Context Protocol (MCP) servers for extended capabilities.
 #### Example
 
 ```python
-from claudient_sdk import MCPClient
+from uitkit_sdk import MCPClient
 
 with MCPClient() as mcp:
     # Discover available servers
@@ -223,8 +223,8 @@ The SDK provides a semantic exception hierarchy for type-safe error handling.
 ### Exception Types
 
 ```python
-from claudient_sdk import (
-    ClaudientException,           # Base exception
+from uitkit_sdk import (
+    UitKitException,           # Base exception
     SkillNotFoundError,          # Skill lookup failed
     SkillInstallationError,      # Skill installation failed
     AgentExecutionError,         # Agent execution failed
@@ -239,7 +239,7 @@ from claudient_sdk import (
 ### Handling Errors
 
 ```python
-from claudient_sdk import SkillsClient, SkillNotFoundError
+from uitkit_sdk import SkillsClient, SkillNotFoundError
 
 try:
     with SkillsClient() as skills:
@@ -258,25 +258,25 @@ The SDK integrates structured logging with configurable levels.
 
 ```python
 import logging
-from claudient_sdk import SkillsClient
+from uitkit_sdk import SkillsClient
 
 # Enable debug logging
 with SkillsClient(debug=True) as skills:
     skills.install("backend/fastapi-expert")
 
 # Output:
-# 2026-06-22 10:15:32 [claudient_sdk.SkillsClient] DEBUG: Starting operation: skills.install
-# 2026-06-22 10:15:32 [claudient_sdk.SkillsClient] INFO: Installed skill: backend/fastapi-expert ...
+# 2026-06-22 10:15:32 [uitkit_sdk.SkillsClient] DEBUG: Starting operation: skills.install
+# 2026-06-22 10:15:32 [uitkit_sdk.SkillsClient] INFO: Installed skill: backend/fastapi-expert ...
 ```
 
 ### Custom Logging Configuration
 
 ```python
 import logging
-from claudient_sdk import _configure_logging
+from uitkit_sdk import _configure_logging
 
 # Configure custom logger
-logger = _configure_logging("claudient_sdk.MyApp", level=logging.DEBUG)
+logger = _configure_logging("uitkit_sdk.MyApp", level=logging.DEBUG)
 logger.info("My custom message")
 ```
 
@@ -339,7 +339,7 @@ class MCPServer:
 ### Multi-Agent Coordination
 
 ```python
-from claudient_sdk import AgentsClient
+from uitkit_sdk import AgentsClient
 
 with AgentsClient() as agents:
     # Get specialized agents
@@ -361,7 +361,7 @@ with AgentsClient() as agents:
 ### Tool Chaining
 
 ```python
-from claudient_sdk import AgentsClient
+from uitkit_sdk import AgentsClient
 
 with AgentsClient() as agents:
     # Register chained tools
@@ -476,4 +476,4 @@ AGPL-3.0 (Code) / CC-BY-SA-4.0 (Content)
 
 - **Issues**: GitHub Issues
 - **Discussions**: GitHub Discussions
-- **Documentation**: [claudient.dev](https://claudient.dev)
+- **Documentation**: [uitkit.dev](https://uitkit.dev)

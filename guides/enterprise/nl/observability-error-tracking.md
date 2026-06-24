@@ -171,7 +171,7 @@ export const fingerprintStrategies = {
 ```javascript
 Sentry.setUser({
   id: process.env.CLAUDE_USER_ID || "anonymous",
-  email: process.env.CLAUDIENT_USER_EMAIL,
+  email: process.env.UITKIT_USER_EMAIL,
   username: process.env.USER,
   organization: process.env.CLAUDE_ORG_ID,
 });

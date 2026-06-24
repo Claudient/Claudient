@@ -179,10 +179,10 @@ touch .claude/commands/update-sidebar.md
 # Creer les fichiers d'environnement
 touch .env.example .env.local
 
-# Installer les skills Claudient
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill devops-infra/cicd
-npx claudient add skill devops-infra/vercel
+# Installer les skills UitKit
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill devops-infra/cicd
+npx uitkit add skill devops-infra/vercel
 
 echo "Site de documentation Astro + Starlight genere. Lancer : npm run dev"
 ```
@@ -411,10 +411,10 @@ Optionnel :
 ## Skills a installer
 
 ```bash
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill devops-infra/cicd
-npx claudient add skill devops-infra/vercel
-npx claudient add skill testing/playwright
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill devops-infra/cicd
+npx uitkit add skill devops-infra/vercel
+npx uitkit add skill testing/playwright
 ```
 
 ## En lien

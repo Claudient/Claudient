@@ -18,14 +18,14 @@ Du bist E-Commerce-Betreiber, Online-Shop-Inhaber oder Marktplatz-Verkäufer, un
 
 ```bash
 # Den vollständigen E-Commerce-Stack installieren
-npx claudient add skills small-business/shopify-operations
-npx claudient add skills small-business/ecommerce-seller
-npx claudient add skills small-business/email-campaign
-npx claudient add skills small-business/review-response
-npx claudient add skills marketing/paid-ads
-npx claudient add skills small-business/product-listing-optimizer
-npx claudient add skills small-business/returns-handler
-npx claudient add agents specialists/ecommerce-specialist
+npx uitkit add skills small-business/shopify-operations
+npx uitkit add skills small-business/ecommerce-seller
+npx uitkit add skills small-business/email-campaign
+npx uitkit add skills small-business/review-response
+npx uitkit add skills marketing/paid-ads
+npx uitkit add skills small-business/product-listing-optimizer
+npx uitkit add skills small-business/returns-handler
+npx uitkit add agents specialists/ecommerce-specialist
 ```
 
 ---

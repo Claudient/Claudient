@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 
 /**
- * claudient-svg-inspector.js
+ * uitkit-svg-inspector.js
  *
  * SVG map inspector and rendering CLI tool.
  * Convert JSON maps to SVG, launch interactive server, export HTML.
  *
  * Usage:
- *   claudient svg-inspector inspect <file>                    Inspect SVG/JSON metadata
- *   claudient svg-inspector render <file>                     Render JSON map to SVG
- *   claudient svg-inspector export <file> [--export-html]    Export to HTML with viewer
- *   claudient svg-inspector serve <file> [--port 8080]       Start local dev server
- *   claudient svg-inspector validate <file>                   Validate map structure
- *   claudient svg-inspector list                              List available maps
+ *   uitkit svg-inspector inspect <file>                    Inspect SVG/JSON metadata
+ *   uitkit svg-inspector render <file>                     Render JSON map to SVG
+ *   uitkit svg-inspector export <file> [--export-html]    Export to HTML with viewer
+ *   uitkit svg-inspector serve <file> [--port 8080]       Start local dev server
+ *   uitkit svg-inspector validate <file>                   Validate map structure
+ *   uitkit svg-inspector list                              List available maps
  *
  * Options:
  *   --interactive                                 Launch interactive mode
@@ -748,10 +748,10 @@ document.addEventListener('wheel', (e) => {
 
 function showHelp() {
   console.log(`
-claudient svg-inspector — SVG Map Inspector & Renderer
+uitkit svg-inspector — SVG Map Inspector & Renderer
 
 USAGE
-  claudient svg-inspector <command> [file] [options]
+  uitkit svg-inspector <command> [file] [options]
 
 COMMANDS
   inspect <file>              Analyze and display map metadata
@@ -776,21 +776,21 @@ OPTIONS
 
 EXAMPLES
   # Inspect map structure
-  claudient svg-inspector inspect map.json
+  uitkit svg-inspector inspect map.json
 
   # Render JSON to SVG
-  claudient svg-inspector render map.json --output map.svg
+  uitkit svg-inspector render map.json --output map.svg
 
   # Export with interactive viewer
-  claudient svg-inspector export map.json --export-html
+  uitkit svg-inspector export map.json --export-html
 
   # Start dev server on custom port
-  claudient svg-inspector serve map.json --port 3000
+  uitkit svg-inspector serve map.json --port 3000
 
   # Validate map and check for errors
-  claudient svg-inspector validate map.json
+  uitkit svg-inspector validate map.json
 
   # List all available maps
-  claudient svg-inspector list
+  uitkit svg-inspector list
 `)
 }

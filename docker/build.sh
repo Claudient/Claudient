@@ -10,7 +10,7 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 # Default values
-IMAGE_NAME="claudient"
+IMAGE_NAME="uitkit"
 IMAGE_TAG="latest"
 DOCKERFILE="docker/Dockerfile"
 BUILD_CONTEXT="."
@@ -24,14 +24,14 @@ usage() {
   echo ""
   echo "Options:"
   echo "  -t, --tag TAG          Image tag (default: latest)"
-  echo "  -n, --name NAME        Image name (default: claudient)"
+  echo "  -n, --name NAME        Image name (default: uitkit)"
   echo "  -p, --push             Push to registry after build"
   echo "  -m, --multiarch        Build for multiple architectures (requires buildx)"
   echo "  -h, --help             Show this help message"
   echo ""
   echo "Examples:"
-  echo "  ./docker/build.sh                    # Build locally: claudient:latest"
-  echo "  ./docker/build.sh -t v1.0            # Build: claudient:v1.0"
+  echo "  ./docker/build.sh                    # Build locally: uitkit:latest"
+  echo "  ./docker/build.sh -t v1.0            # Build: uitkit:v1.0"
   echo "  ./docker/build.sh -m -p              # Build ARM64 + AMD64 and push"
   exit 1
 }
@@ -68,7 +68,7 @@ done
 IMAGE="${IMAGE_NAME}:${IMAGE_TAG}"
 
 echo -e "${BLUE}═══════════════════════════════════════════════════════${NC}"
-echo -e "${BLUE}Claudient Docker Image Builder${NC}"
+echo -e "${BLUE}UitKit Docker Image Builder${NC}"
 echo -e "${BLUE}═══════════════════════════════════════════════════════${NC}"
 echo ""
 echo -e "Image:  ${GREEN}${IMAGE}${NC}"

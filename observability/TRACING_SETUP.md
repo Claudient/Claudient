@@ -1,6 +1,6 @@
 # OpenTelemetry Tracing Setup
 
-Distributed tracing instrumentation for Claudient's critical performance paths using OpenTelemetry (OTEL).
+Distributed tracing instrumentation for UitKit's critical performance paths using OpenTelemetry (OTEL).
 
 ## Overview
 
@@ -36,7 +36,7 @@ npm install \
 OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4318
 
 # Service name and version
-OTEL_SERVICE_NAME=claudient
+OTEL_SERVICE_NAME=uitkit
 OTEL_SERVICE_VERSION=1.0.0
 
 # Sampling ratio (10% for production)
@@ -62,7 +62,7 @@ const { SemanticResourceAttributes } = require("@opentelemetry/semantic-conventi
 
 const sdk = new NodeSDK({
   resource: new Resource({
-    [SemanticResourceAttributes.SERVICE_NAME]: "claudient",
+    [SemanticResourceAttributes.SERVICE_NAME]: "uitkit",
     [SemanticResourceAttributes.SERVICE_VERSION]: "1.0.0",
   }),
   traceExporter: new OTLPTraceExporter({
@@ -111,7 +111,7 @@ process.on("SIGTERM", () => {
 
 ```javascript
 const { trace } = require("@opentelemetry/api");
-const tracer = trace.getTracer("claudient-ui");
+const tracer = trace.getTracer("uitkit-ui");
 
 export async function switchTheme(newTheme) {
   const span = tracer.startSpan("theme.switch", {
@@ -133,7 +133,7 @@ export async function switchTheme(newTheme) {
 
         // Storage persist
         const storageSpan = tracer.startSpan("theme.switch.storage");
-        localStorage.setItem("claudient-theme", newTheme);
+        localStorage.setItem("uitkit-theme", newTheme);
         storageSpan.end();
 
         // Event emit
@@ -659,7 +659,7 @@ docker run -d --name jaeger \
 ```bash
 export OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4318
 export DD_TRACE_ENABLED=true
-export DD_SERVICE=claudient
+export DD_SERVICE=uitkit
 export DD_VERSION=1.0.0
 ```
 
@@ -671,24 +671,24 @@ export DD_VERSION=1.0.0
 
 **Find all theme switches in the last hour:**
 ```
-service.name=claudient AND span.kind=INTERNAL AND span.name=theme.switch
+service.name=uitkit AND span.kind=INTERNAL AND span.name=theme.switch
 ```
 
 **Average SVG render time by element count:**
 ```
-service.name=claudient AND span.name=svg.render
+service.name=uitkit AND span.name=svg.render
 | stats avg(svg.total_ms) by svg.elements_count
 ```
 
 **Sandbox execution errors:**
 ```
-service.name=claudient AND span.name=sandbox.exec AND status=ERROR
+service.name=uitkit AND span.name=sandbox.exec AND status=ERROR
 | stats count by sandbox.error_category
 ```
 
 **Loop poll backoff distribution:**
 ```
-service.name=claudient AND span.name=loop.poll
+service.name=uitkit AND span.name=loop.poll
 | histogram(loop.current_delay_ms)
 ```
 

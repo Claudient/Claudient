@@ -20,7 +20,7 @@ The SVG Inspector Load Test is a production-ready performance testing suite for 
 No additional dependencies required. Uses Node.js built-in `perf_hooks` for timing.
 
 ```bash
-cd /Users/tushar/Desktop/Claudient
+cd /Users/tushar/Desktop/UitKit
 node load-tests/svg-inspector-load.js
 ```
 

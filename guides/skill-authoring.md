@@ -155,7 +155,7 @@ If your skill exceeds 500 lines, split it into two focused skills. Long skills d
 
 ## Testing Your Skill
 
-Before submitting to Claudient:
+Before submitting to UitKit:
 
 1. Copy the skill into a real project's `.claude/skills/`
 2. Open Claude Code and trigger it with the slash command

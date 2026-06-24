@@ -23,7 +23,7 @@ Ingenieure, Gründer und PMs, die Produkte bauen, bei denen AI ein Kernfeature i
 
 **Standardtrade-offs:** Bevorzuge Prompt Engineering vor RAG, RAG vor Fine-Tuning. Bevorzuge Claude Haiku für latenzempfindliche Pfade; Sonnet oder Opus für qualitätskritische. Baue Evals vor der Optimierung auf.
 
-## Empfohlene Claudient Skills & Agents
+## Empfohlene UitKit Skills & Agents
 - `ai-engineering` — Core LLM Integration, Agent Design, RAG-Pipelines
 - `backend` — API Wrapper Muster, Streaming, Async-Handling
 - `devops-infra` — Model Serving, Cost Monitoring, Rate Limit Handling

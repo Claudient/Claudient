@@ -1,6 +1,6 @@
 # Knowledge Graph System
 
-Enterprise-grade knowledge graph builder for Claudient skills, agents, and domains.
+Enterprise-grade knowledge graph builder for UitKit skills, agents, and domains.
 
 ## Features
 

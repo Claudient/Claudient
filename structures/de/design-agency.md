@@ -233,25 +233,25 @@ touch ops/new-hire-checklist.md
 touch ops/offboarding-sop.md
 
 # Relevante Skills installieren
-npx claudient add skill product/ux-audit
-npx claudient add skill product/persona-builder
-npx claudient add skill marketing/brand-guidelines
-npx claudient add skill productivity/creative-brief
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/vendor-evaluator
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill data-ml/stakeholder-report
+npx uitkit add skill product/ux-audit
+npx uitkit add skill product/persona-builder
+npx uitkit add skill marketing/brand-guidelines
+npx uitkit add skill productivity/creative-brief
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/vendor-evaluator
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill data-ml/stakeholder-report
 
 # Slash-Befehle installieren
-npx claudient add command new-client
-npx claudient add command creative-brief
-npx claudient add command design-review
-npx claudient add command handoff
-npx claudient add command revision-log
-npx claudient add command proposal
-npx claudient add command ux-audit
-npx claudient add command invoice-summary
+npx uitkit add command new-client
+npx uitkit add command creative-brief
+npx uitkit add command design-review
+npx uitkit add command handoff
+npx uitkit add command revision-log
+npx uitkit add command proposal
+npx uitkit add command ux-audit
+npx uitkit add command invoice-summary
 
 echo "Design-Agentur-Arbeitsbereich bereit."
 ```
@@ -446,14 +446,14 @@ befindet sich unter ops/.
 ## Zu installierende Skills
 
 ```bash
-npx claudient add skill product/ux-audit
-npx claudient add skill product/persona-builder
-npx claudient add skill marketing/brand-guidelines
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/vendor-evaluator
-npx claudient add skill data-ml/stakeholder-report
+npx uitkit add skill product/ux-audit
+npx uitkit add skill product/persona-builder
+npx uitkit add skill marketing/brand-guidelines
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/vendor-evaluator
+npx uitkit add skill data-ml/stakeholder-report
 ```
 
 ## Verwandte Inhalte

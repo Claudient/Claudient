@@ -235,7 +235,7 @@ To add new benchmarks:
 
 ## License
 
-Same as Claudient (AGPL-3.0-or-later AND CC-BY-SA-4.0)
+Same as UitKit (AGPL-3.0-or-later AND CC-BY-SA-4.0)
 
 ---
 

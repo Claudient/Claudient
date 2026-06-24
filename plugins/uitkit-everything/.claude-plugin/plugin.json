@@ -1,19 +1,19 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
-  "name": "claudient-everything",
-  "displayName": "Claudient — Everything",
+  "name": "uitkit-everything",
+  "displayName": "UitKit — Everything",
   "version": "1.10.1",
-  "description": "Meta-bundle listing all Claudient domain plugins (377+ skills, 104 agents). Install individual plugins: claudient-ai-engineering, claudient-automation, claudient-backend, claudient-data-ml, claudient-database, claudient-devops-infra, claudient-finance, claudient-finance-payments, claudient-git, claudient-gtm, claudient-legal, claudient-marketing, claudient-product, claudient-productivity, claudient-sdr, claudient-small-business. See README.md for install commands.",
+  "description": "Meta-bundle listing all UitKit domain plugins (377+ skills, 104 agents). Install individual plugins: uitkit-ai-engineering, uitkit-automation, uitkit-backend, uitkit-data-ml, uitkit-database, uitkit-devops-infra, uitkit-finance, uitkit-finance-payments, uitkit-git, uitkit-gtm, uitkit-legal, uitkit-marketing, uitkit-product, uitkit-productivity, uitkit-sdr, uitkit-small-business. See README.md for install commands.",
   "author": {
     "name": "tushar2704",
     "email": "ceo@uitbreiden.com",
     "url": "https://uitbreiden.com"
   },
-  "homepage": "https://github.com/UitbreidenOS/Claudient",
-  "repository": "https://github.com/UitbreidenOS/Claudient",
+  "homepage": "https://github.com/UitbreidenOS/UitKit",
+  "repository": "https://github.com/UitbreidenOS/UitKit",
   "license": "CC-BY-SA-4.0",
   "keywords": [
-    "claudient",
+    "uitkit",
     "claude-code",
     "all",
     "meta-bundle"

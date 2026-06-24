@@ -24,7 +24,7 @@ my-plugin/
     └── my-server.json
 ```
 
-Component files follow the same format as standalone skills, agents, hooks, and rules in the Claudient spec.
+Component files follow the same format as standalone skills, agents, hooks, and rules in the UitKit spec.
 
 ---
 
@@ -99,13 +99,13 @@ Component files follow the same format as standalone skills, agents, hooks, and 
 
 **From npm:**
 ```bash
-npx claudient add plugin my-plugin-package
-npx claudient add plugin @org/my-plugin
+npx uitkit add plugin my-plugin-package
+npx uitkit add plugin @org/my-plugin
 ```
 
 **From a local path:**
 ```bash
-npx claudient add plugin ./path/to/my-plugin
+npx uitkit add plugin ./path/to/my-plugin
 ```
 
 **From a URL (v2.1.90+):**
@@ -121,8 +121,8 @@ Plugins installed per-project write to `.claude/plugins/`. Plugins installed glo
 
 | Scope | Install command | Location | Who it affects |
 |---|---|---|---|
-| Per-project | `npx claudient add plugin <pkg> --project` | `.claude/plugins/` | Only this project |
-| User-global | `npx claudient add plugin <pkg> --global` | `~/.claude/plugins/` | All projects for this user |
+| Per-project | `npx uitkit add plugin <pkg> --project` | `.claude/plugins/` | Only this project |
+| User-global | `npx uitkit add plugin <pkg> --global` | `~/.claude/plugins/` | All projects for this user |
 
 Default is per-project. Use `--global` for personal tooling (your preferred agents, productivity skills) and per-project for team-shared tooling.
 
@@ -138,10 +138,10 @@ npm link
 
 # In the project where you want to test it
 npm link my-plugin-package
-npx claudient add plugin my-plugin-package
+npx uitkit add plugin my-plugin-package
 ```
 
-Or use the `scripts/link-skills.sh` pattern if you maintain a Claudient-style repo:
+Or use the `scripts/link-skills.sh` pattern if you maintain a UitKit-style repo:
 
 ```bash
 #!/bin/bash
@@ -182,7 +182,7 @@ Maintain a `CHANGELOG.md` at the plugin root. Users upgrading plugins need to kn
 ## Publishing to npm
 
 ```bash
-# Ensure "claudient-plugin" is in keywords for discoverability
+# Ensure "uitkit-plugin" is in keywords for discoverability
 npm publish --access public
 ```
 
@@ -190,10 +190,10 @@ Minimum `package.json` for a publishable plugin:
 
 ```json
 {
-  "name": "claudient-plugin-my-tool",
+  "name": "uitkit-plugin-my-tool",
   "version": "1.0.0",
   "description": "What this plugin provides",
-  "keywords": ["claudient-plugin", "claude-code"],
+  "keywords": ["uitkit-plugin", "claude-code"],
   "files": [
     "plugin.json",
     "skills/",
@@ -205,7 +205,7 @@ Minimum `package.json` for a publishable plugin:
 }
 ```
 
-The `claudient-plugin` keyword makes the plugin discoverable via `npx claudient search plugins <query>`.
+The `uitkit-plugin` keyword makes the plugin discoverable via `npx uitkit search plugins <query>`.
 
 ---
 

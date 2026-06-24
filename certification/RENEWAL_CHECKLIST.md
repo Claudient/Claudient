@@ -1,6 +1,6 @@
-# Claudient Badge Renewal Checklist
+# UitKit Badge Renewal Checklist
 
-Step-by-step guide to renewing your Claudient badge after 18 months.
+Step-by-step guide to renewing your UitKit badge after 18 months.
 
 ---
 
@@ -73,7 +73,7 @@ npm run badge:score <your-github-username>
 - [ ] Active community standing? (No flagged issues)
 
 **Tracking your contributions:**
-1. Visit: https://github.com/UitbreidenOS/Claudient/pulls?q=author:<YOUR-USERNAME>+merged
+1. Visit: https://github.com/UitbreidenOS/UitKit/pulls?q=author:<YOUR-USERNAME>+merged
 2. Filter by date (18 months back to today)
 3. Count merged PRs
 
@@ -160,7 +160,7 @@ npm run badge:apply-renewal expert --evidence EVIDENCE_URL
 **Requirement:** Active partnership agreement + annual review
 
 - [ ] Partnership agreement still valid? (Check expiration date in legal docs)
-- [ ] Completed annual review with Claudient leadership?
+- [ ] Completed annual review with UitKit leadership?
 - [ ] Met SLA commitments? (Response times, integrations, support)
 - [ ] ≥1 major deliverable/integration in past 12 months?
 
@@ -231,7 +231,7 @@ npm run badge:apply-renewal <level> --evidence "path/to/evidence.md"
 
 **Or submit via GitHub:**
 1. Create a private GitHub Gist with your evidence
-2. File a private issue in the Claudient repo titled: "Badge Renewal: [YOUR-USERNAME]"
+2. File a private issue in the UitKit repo titled: "Badge Renewal: [YOUR-USERNAME]"
 3. Include link to your evidence Gist
 4. Maintainers will review within 2 weeks
 
@@ -249,7 +249,7 @@ Don't worry! Renewal denials are usually fixable.
 
 ### Common reasons for denial:
 1. **Incomplete evidence:** Missing links or dates
-   - **Fix:** Resubmit with detailed PR links (e.g., github.com/UitbreidenOS/Claudient/pull/123)
+   - **Fix:** Resubmit with detailed PR links (e.g., github.com/UitbreidenOS/UitKit/pull/123)
 
 2. **Contributions don't meet threshold:** Fewer than required
    - **Fix:** Make additional contributions and reapply after 30 days
@@ -293,14 +293,14 @@ npm run badge:appeal-renewal --case-id <case-id>
 
 ### Situation: My GitHub username changed
 **Solution:**
-1. Contact: badges-support@claudient.dev
+1. Contact: badges-support@uitkit.dev
 2. Provide old and new usernames
 3. Provide proof of account ownership (screenshot with both shown)
 4. Maintainers will update registry and transfer badge
 
 ### Situation: I want to downgrade my badge
 **Solution:**
-1. Email: badges-support@claudient.dev
+1. Email: badges-support@uitkit.dev
 2. Request downgrade (e.g., Expert → Contributor)
 3. Confirmation sent, badge updated immediately
 4. Can upgrade again later if you meet requirements
@@ -320,19 +320,19 @@ npm run badge:verify <your-github-username>
 - [ ] Badge level shows correctly
 - [ ] New expiration date shows (18 months from renewal date)
 - [ ] Renewal status shows "active"
-- [ ] Badge appears on your profile at https://claudient.dev/badges/
+- [ ] Badge appears on your profile at https://uitkit.dev/badges/
 
 ### Update Your Profiles
 
 #### GitHub
 Add or update your profile/README with badge:
 ```markdown
-[![Claudient Contributor](https://claudient.dev/badges/contributor-badge.svg)](https://claudient.dev/badges/verify/YOUR-USERNAME)
+[![UitKit Contributor](https://uitkit.dev/badges/contributor-badge.svg)](https://uitkit.dev/badges/verify/YOUR-USERNAME)
 ```
 
 #### LinkedIn
 - Verify renewal shows in your credentials section
-- Claudient company profile has endorsed your badge
+- UitKit company profile has endorsed your badge
 
 #### Community Site
 - Your profile auto-updates with new expiration date
@@ -370,7 +370,7 @@ A: Renewal checks are on a schedule (1st of month). You can't force an early che
 A: You can appeal the decision. See "Appeal a denial" section above.
 
 **Q: Will the renewal process change in the future?**
-A: Possibly. Claudient reviews the badge system annually. You'll be notified of any major changes.
+A: Possibly. UitKit reviews the badge system annually. You'll be notified of any major changes.
 
 **Q: Can I have multiple badges at once?**
 A: Yes! If you upgrade from Learner to Contributor, you now have a Contributor badge. You can also have both a Community badge and an Enterprise Partner badge.
@@ -381,8 +381,8 @@ A: Yes! If you upgrade from Learner to Contributor, you now have a Contributor b
 
 - **General questions:** [BADGE_FAQ.md](BADGE_FAQ.md)
 - **Full system documentation:** [BADGE_SYSTEM.md](BADGE_SYSTEM.md)
-- **Technical issues:** badges-support@claudient.dev
-- **Appeals:** badges-appeal@claudient.dev
+- **Technical issues:** badges-support@uitkit.dev
+- **Appeals:** badges-appeal@uitkit.dev
 
 ---
 

@@ -1,12 +1,12 @@
 ---
 name: content-freshness
-description: "SLA de mantenimiento, umbrales de obsolescencia y procedimientos de actualización de contenido de Claudient"
+description: "SLA de mantenimiento, umbrales de obsolescencia y procedimientos de actualización de contenido de UitKit"
 updated: 2026-06-15
 ---
 
-# SLA de actualización de contenido de Claudient
+# SLA de actualización de contenido de UitKit
 
-Estándares de mantenimiento y procedimientos para mantener el contenido de Claudient actual y preciso. Esta guía define umbrales de obsolescencia, qué verificar por tipo de contenido y el proceso de actualización del frontmatter.
+Estándares de mantenimiento y procedimientos para mantener el contenido de UitKit actual y preciso. Esta guía define umbrales de obsolescencia, qué verificar por tipo de contenido y el proceso de actualización del frontmatter.
 
 ---
 
@@ -172,7 +172,7 @@ Al agregar o modificar un archivo:
 
 3. **Verificar links:**
    - Las URLs externas en el archivo no deben dar 404
-   - Los links internos (a otros archivos en Claudient) deben hacer referencia a archivos existentes
+   - Los links internos (a otros archivos en UitKit) deben hacer referencia a archivos existentes
 
 4. **Confirme:**
    ```bash

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
-  "name": "claudient-commands",
-  "displayName": "Claudient — Slash Commands",
+  "name": "uitkit-commands",
+  "displayName": "UitKit — Slash Commands",
   "version": "1.10.1",
   "description": "100+ slash commands across git, testing, refactor, docs, debug, devops, database, security, frontend, api, ai-engineering, and productivity.",
   "author": {
@@ -9,11 +9,11 @@
     "email": "ceo@uitbreiden.com",
     "url": "https://uitbreiden.com"
   },
-  "homepage": "https://github.com/UitbreidenOS/Claudient",
-  "repository": "https://github.com/UitbreidenOS/Claudient",
+  "homepage": "https://github.com/UitbreidenOS/UitKit",
+  "repository": "https://github.com/UitbreidenOS/UitKit",
   "license": "CC-BY-SA-4.0",
   "keywords": [
-    "claudient",
+    "uitkit",
     "claude-code",
     "commands",
     "slash-commands"

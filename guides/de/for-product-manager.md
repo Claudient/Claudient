@@ -18,18 +18,18 @@ Du bist PM bei einem Startup oder Scale-up und verwaltest ein Produkt mit echten
 
 ```bash
 # Installiere den vollständigen PM-Stack
-npx claudient add skill product/product-discovery
-npx claudient add skill product/product-roadmap
-npx claudient add skill product/experiment-designer
-npx claudient add skill product/product-analytics
-npx claudient add skill product/competitive-teardown
-npx claudient add skill product/ux-researcher
-npx claudient add skill product/code-to-prd
-npx claudient add skill product/product-manager-toolkit
-npx claudient add skill product/pm-sprint-review
-npx claudient add skill product/user-story-writer
-npx claudient add agents advisors/cpo-advisor
-npx claudient add agents roles/competitive-analyst
+npx uitkit add skill product/product-discovery
+npx uitkit add skill product/product-roadmap
+npx uitkit add skill product/experiment-designer
+npx uitkit add skill product/product-analytics
+npx uitkit add skill product/competitive-teardown
+npx uitkit add skill product/ux-researcher
+npx uitkit add skill product/code-to-prd
+npx uitkit add skill product/product-manager-toolkit
+npx uitkit add skill product/pm-sprint-review
+npx uitkit add skill product/user-story-writer
+npx uitkit add agents advisors/cpo-advisor
+npx uitkit add agents roles/competitive-analyst
 ```
 
 ---

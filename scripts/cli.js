@@ -41,63 +41,63 @@ const SUPPORTED_LANGS = ['en', 'fr', 'de', 'nl', 'es']
 
 function usage() {
   console.log(`
-claudient — Claude Code knowledge system
+uitkit — Claude Code knowledge system
 
 Usage:
-  npx claudient init                          Interactive first-run setup
-  npx claudient init --enterprise             Set up enterprise-scale governance & compliance
-  npx claudient doctor                        Check Claude Code setup health
-  npx claudient dashboard                    Launch local dashboard app in browser
-  npx claudient consult "<need>"             Recommend skills and stacks by keyword
-  npx claudient benchmark [skill-id]          Show eval scores for skills
-  npx claudient audit                         Deep compliance audit of your Claude Code setup
-  npx claudient score                         AI-Readiness Score (0–100) across 8 dimensions
-  npx claudient share                         Export your installed skills as a shareable bundle
-  npx claudient import <gist-url>            Import a shared skill bundle from GitHub Gist
-  npx claudient export <harness>              Export rules/guidelines to Cursor or Windsurf
-  npx claudient council <domain>             Trigger domain-wide subagent swarm session
-  npx claudient map                           Generate interactive codebase dependency graph
-  npx claudient spec                          Run interactive Specify Wizard for Spec Kit
-  npx claudient repair                        Run tests and capture errors for self-healing
-  npx claudient tribunal                      Run PR adversarial review swarm on active changes
-  npx claudient bisect                        Run autonomous git bisect debugger for regressions
-  npx claudient oracle                        Trace downstream blast radius & audit concurrency
-  npx claudient nightshift                    Run daemon for autonomous batch refactoring
-  npx claudient caveman [--enable|--disable]  Toggle ultra-dense token optimization rules
-  npx claudient jit <file>                    Compile JIT import dependencies context payload
-  npx claudient commit -m "<msg>"             Verify validations and tests before git commit
-  npx claudient permissions [list|add|remove] Edit and track model tool auto-permissions
-  npx claudient handoff [--task "<task>"]    Orchestrate Architect/Mason design-to-code loop
-  npx claudient tdd [--file <f>] [--test <t>] Automate Red-Green-Refactor test loops
-  npx claudient enforce                       Audit changes against SPEC.md guidelines
-  npx claudient sweep                         Scan project for dead code, unused imports/vars
-  npx claudient documentation                 Synthesize zero-drift reference documentation
-  npx claudient chaos                         Execute test suites under boundary latency injection
-  npx claudient prophet                       Calculate change churn to predict outage risk
-  npx claudient ci                            Scaffold self-healing GitHub Actions CI pipeline
-  npx claudient incident [--alert "<alert>"]  Triage production alerts, audit commits, and revert
-  npx claudient swarm-sandbox [init|run|validate|cleanup] <name>  Orchestrate multi-agent sandboxes
-  npx claudient svg-inspector [inspect|render|export|serve|validate|list] <file>  SVG map inspector & renderer
-  npx claudient learn                         Scan project and generate custom rules
-  npx claudient sentinel                      Auto-generate anti-hallucination project rules
-  npx claudient checkpoint "<task>"          Create workspace state checkpoint
-  npx claudient restore                       Restore from latest checkpoint
-  npx claudient search <query>               Search skills, agents, structures
-  npx claudient add skills [category] [--lang <lang>]
-  npx claudient add agents
-  npx claudient add rules [--write]
-  npx claudient add hooks
-  npx claudient add statusline <name>        Install a statusline script preset
-  npx claudient add structure <name>         Copy a project structure to current dir
-  npx claudient add all [--lang <lang>]
-  npx claudient scaffold <name>              Print scaffold commands for a structure
-  npx claudient remove skills [category]
-  npx claudient remove agents
-  npx claudient remove rules
-  npx claudient update
-  npx claudient scan                          Scan project and recommend skills/hooks/MCP
-  npx claudient list [skills|agents|rules|hooks|structures]
-  npx claudient help
+  npx uitkit init                          Interactive first-run setup
+  npx uitkit init --enterprise             Set up enterprise-scale governance & compliance
+  npx uitkit doctor                        Check Claude Code setup health
+  npx uitkit dashboard                    Launch local dashboard app in browser
+  npx uitkit consult "<need>"             Recommend skills and stacks by keyword
+  npx uitkit benchmark [skill-id]          Show eval scores for skills
+  npx uitkit audit                         Deep compliance audit of your Claude Code setup
+  npx uitkit score                         AI-Readiness Score (0–100) across 8 dimensions
+  npx uitkit share                         Export your installed skills as a shareable bundle
+  npx uitkit import <gist-url>            Import a shared skill bundle from GitHub Gist
+  npx uitkit export <harness>              Export rules/guidelines to Cursor or Windsurf
+  npx uitkit council <domain>             Trigger domain-wide subagent swarm session
+  npx uitkit map                           Generate interactive codebase dependency graph
+  npx uitkit spec                          Run interactive Specify Wizard for Spec Kit
+  npx uitkit repair                        Run tests and capture errors for self-healing
+  npx uitkit tribunal                      Run PR adversarial review swarm on active changes
+  npx uitkit bisect                        Run autonomous git bisect debugger for regressions
+  npx uitkit oracle                        Trace downstream blast radius & audit concurrency
+  npx uitkit nightshift                    Run daemon for autonomous batch refactoring
+  npx uitkit caveman [--enable|--disable]  Toggle ultra-dense token optimization rules
+  npx uitkit jit <file>                    Compile JIT import dependencies context payload
+  npx uitkit commit -m "<msg>"             Verify validations and tests before git commit
+  npx uitkit permissions [list|add|remove] Edit and track model tool auto-permissions
+  npx uitkit handoff [--task "<task>"]    Orchestrate Architect/Mason design-to-code loop
+  npx uitkit tdd [--file <f>] [--test <t>] Automate Red-Green-Refactor test loops
+  npx uitkit enforce                       Audit changes against SPEC.md guidelines
+  npx uitkit sweep                         Scan project for dead code, unused imports/vars
+  npx uitkit documentation                 Synthesize zero-drift reference documentation
+  npx uitkit chaos                         Execute test suites under boundary latency injection
+  npx uitkit prophet                       Calculate change churn to predict outage risk
+  npx uitkit ci                            Scaffold self-healing GitHub Actions CI pipeline
+  npx uitkit incident [--alert "<alert>"]  Triage production alerts, audit commits, and revert
+  npx uitkit swarm-sandbox [init|run|validate|cleanup] <name>  Orchestrate multi-agent sandboxes
+  npx uitkit svg-inspector [inspect|render|export|serve|validate|list] <file>  SVG map inspector & renderer
+  npx uitkit learn                         Scan project and generate custom rules
+  npx uitkit sentinel                      Auto-generate anti-hallucination project rules
+  npx uitkit checkpoint "<task>"          Create workspace state checkpoint
+  npx uitkit restore                       Restore from latest checkpoint
+  npx uitkit search <query>               Search skills, agents, structures
+  npx uitkit add skills [category] [--lang <lang>]
+  npx uitkit add agents
+  npx uitkit add rules [--write]
+  npx uitkit add hooks
+  npx uitkit add statusline <name>        Install a statusline script preset
+  npx uitkit add structure <name>         Copy a project structure to current dir
+  npx uitkit add all [--lang <lang>]
+  npx uitkit scaffold <name>              Print scaffold commands for a structure
+  npx uitkit remove skills [category]
+  npx uitkit remove agents
+  npx uitkit remove rules
+  npx uitkit update
+  npx uitkit scan                          Scan project and recommend skills/hooks/MCP
+  npx uitkit list [skills|agents|rules|hooks|structures]
+  npx uitkit help
 
 Skill categories:
   ${SKILL_CATEGORIES.join('\n  ')}
@@ -109,23 +109,23 @@ Structure names (82 available):
   Professional workspaces: sdr-workspace, product-manager-workspace, devops-sre-workspace, founder-workspace ...
   Project templates: saas-web-app, rest-api-service, ai-agent-app, data-pipeline, monorepo ...
   AI/GTM workspaces: autonomous-saas-core, llm-guardrail-proxy, hitl-agentic-workflow, devsecops-workspace ...
-  Run: npx claudient list structures
+  Run: npx uitkit list structures
 
 SDR skill category:
-  npx claudient add skills sdr
+  npx uitkit add skills sdr
   Includes: icp-scoring, buying-signals, cold-email-sequence, messaging-frameworks,
             qualification-meddpicc, reply-classification, objection-handling, and 11 more
 
 Examples:
-  npx claudient add structure saas-web-app
-  npx claudient add structure sdr-workspace
-  npx claudient scaffold saas-web-app
-  npx claudient add skills
-  npx claudient add skills backend --lang fr
-  npx claudient add agents
-  npx claudient add all --lang de
-  npx claudient list structures
-  npx claudient search data pipeline
+  npx uitkit add structure saas-web-app
+  npx uitkit add structure sdr-workspace
+  npx uitkit scaffold saas-web-app
+  npx uitkit add skills
+  npx uitkit add skills backend --lang fr
+  npx uitkit add agents
+  npx uitkit add all --lang de
+  npx uitkit list structures
+  npx uitkit search data pipeline
 `)
 }
 
@@ -292,7 +292,7 @@ Rule files are located in:
   ${rulesDir}
 
 Quick copy all rules into a new CLAUDE.md:`)
-  console.log(`  npx claudient add rules --write`)
+  console.log(`  npx uitkit add rules --write`)
 }
 
 function addRulesWrite() {
@@ -302,7 +302,7 @@ function addRulesWrite() {
   const exists = fs.existsSync(claudeMd)
 
   let content = exists ? fs.readFileSync(claudeMd, 'utf-8') : '# Project Rules\n\n'
-  content += '\n\n---\n<!-- Claudient Rules -->\n\n'
+  content += '\n\n---\n<!-- UitKit Rules -->\n\n'
 
   for (const cat of fs.readdirSync(rulesDir, { withFileTypes: true })) {
     if (!cat.isDirectory() || SUPPORTED_LANGS.includes(cat.name)) continue
@@ -350,7 +350,7 @@ Next step — add hooks to your settings.json:
 See hook documentation at:
   ${path.join(REPO_ROOT, 'hooks')}
 
-Or browse online: https://github.com/UitbreidenOS/Claudient/tree/main/hooks
+Or browse online: https://github.com/UitbreidenOS/UitKit/tree/main/hooks
 `)
 }
 
@@ -365,7 +365,7 @@ Available statuslines:
   ${validStatuslines.join('\n  ')}
 
 Example:
-  npx claudient add statusline cost-watch`)
+  npx uitkit add statusline cost-watch`)
     process.exit(1)
   }
 
@@ -419,7 +419,7 @@ Available harnesses:
   windsurf    Generates .windsurfrules for Windsurf IDE
 
 Example:
-  npx claudient export cursor`)
+  npx uitkit export cursor`)
     process.exit(1)
   }
 
@@ -428,7 +428,7 @@ Example:
 
   console.log(`Compiling rules for ${harness}...`)
 
-  let compiledContent = `# Claudient AI Rules for ${harness === 'cursor' ? 'Cursor' : 'Windsurf'}\n\n`
+  let compiledContent = `# UitKit AI Rules for ${harness === 'cursor' ? 'Cursor' : 'Windsurf'}\n\n`
   compiledContent += `This file configures custom instructions for the AI assistant inside this workspace.\n\n`
 
   let rulesAdded = 0
@@ -472,7 +472,7 @@ Example:
   }
 
   if (rulesAdded === 0) {
-    console.error('Error: No rules found to export. Install rules first using \`npx claudient add rules\`.')
+    console.error('Error: No rules found to export. Install rules first using \`npx uitkit add rules\`.')
     process.exit(1)
   }
 
@@ -483,7 +483,7 @@ Example:
 
 function dashboardCommand() {
   const { spawn } = require('child_process')
-  console.log('Launching Claudient Workspace Dashboard locally...')
+  console.log('Launching UitKit Workspace Dashboard locally...')
   
   const siteDir = path.join(REPO_ROOT, 'site')
   if (!fs.existsSync(siteDir)) {
@@ -564,26 +564,26 @@ function listStructures() {
       console.log()
     }
 
-    console.log(`Install a structure:  npx claudient add structure <name>`)
-    console.log(`Scaffold directories: npx claudient scaffold <name>`)
+    console.log(`Install a structure:  npx uitkit add structure <name>`)
+    console.log(`Scaffold directories: npx uitkit scaffold <name>`)
     return
   }
 
   // Fallback: filesystem scan
   if (!fs.existsSync(STRUCTURES_SRC)) {
-    console.log('No structures found. Update claudient: npx claudient update')
+    console.log('No structures found. Update uitkit: npx uitkit update')
     return
   }
   const files = fs.readdirSync(STRUCTURES_SRC).filter(f => f.endsWith('.md') && f !== 'README.md')
   console.log(`\nProject Structures (${files.length}):\n`)
   for (const f of files) console.log(`  ${f.replace('.md', '')}`)
-  console.log(`\nInstall: npx claudient add structure <name>`)
+  console.log(`\nInstall: npx uitkit add structure <name>`)
 }
 
 function addStack(nameOrPath) {
   checkClaudeInstalled()
   if (!nameOrPath) {
-    console.error('Usage: npx claudient add stack <stack-name-or-path>')
+    console.error('Usage: npx uitkit add stack <stack-name-or-path>')
     process.exit(1)
   }
 
@@ -663,8 +663,8 @@ function addStructure(name) {
   const RESET = '\x1b[0m'
 
   if (!name) {
-    console.log('Usage: npx claudient add structure <name>')
-    console.log('       npx claudient list structures\n')
+    console.log('Usage: npx uitkit add structure <name>')
+    console.log('       npx uitkit list structures\n')
     listStructures()
     return
   }
@@ -672,7 +672,7 @@ function addStructure(name) {
   const srcFile = path.join(STRUCTURES_SRC, `${name}.md`)
   if (!fs.existsSync(srcFile)) {
     console.error(`\n${ORANGE}Structure not found: "${name}"${RESET}`)
-    console.error('Run: npx claudient list structures\n')
+    console.error('Run: npx uitkit list structures\n')
     process.exit(1)
   }
 
@@ -681,7 +681,7 @@ function addStructure(name) {
 
   const content = fs.readFileSync(srcFile, 'utf-8')
   const tagline = (content.match(/^>\s*(.+)$/m) || [])[1] || ''
-  const skillsMatch = content.match(/```bash\n([\s\S]*?npx claudient[\s\S]*?)```/)
+  const skillsMatch = content.match(/```bash\n([\s\S]*?npx uitkit[\s\S]*?)```/)
   const skills = skillsMatch ? skillsMatch[1].trim() : null
 
   console.log(`\n${GREEN}${BOLD}✓ ${name}-structure.md${RESET}`)
@@ -689,7 +689,7 @@ function addStructure(name) {
   console.log(`\nSaved to: ${destFile}`)
   console.log('\nNext steps:')
   console.log(`  1. Read the structure: cat ${name}-structure.md`)
-  console.log(`  2. Scaffold the directories: npx claudient scaffold ${name}`)
+  console.log(`  2. Scaffold the directories: npx uitkit scaffold ${name}`)
   if (skills) {
     console.log('  3. Install skills:')
     for (const line of skills.split('\n').filter(l => l.trim().startsWith('npx'))) {
@@ -706,14 +706,14 @@ function scaffoldStructure(name) {
   const RESET = '\x1b[0m'
 
   if (!name) {
-    console.error('Usage: npx claudient scaffold <structure-name>')
-    console.error('       npx claudient list structures')
+    console.error('Usage: npx uitkit scaffold <structure-name>')
+    console.error('       npx uitkit list structures')
     process.exit(1)
   }
 
   const srcFile = path.join(STRUCTURES_SRC, `${name}.md`)
   if (!fs.existsSync(srcFile)) {
-    console.error(`Structure not found: "${name}". Run: npx claudient list structures`)
+    console.error(`Structure not found: "${name}". Run: npx uitkit list structures`)
     process.exit(1)
   }
 
@@ -723,7 +723,7 @@ function scaffoldStructure(name) {
   const scaffoldSection = content.match(/## Quick scaffold\s*\n+```bash\n([\s\S]*?)```/)
   if (!scaffoldSection) {
     console.log(`No scaffold commands found in ${name}. Read the full structure:`)
-    console.log(`  npx claudient add structure ${name}`)
+    console.log(`  npx uitkit add structure ${name}`)
     return
   }
 
@@ -802,15 +802,15 @@ function updateCommand() {
   console.log('Checking for updates...\n')
   try {
     const current = require(path.join(REPO_ROOT, 'package.json')).version
-    const latest = execSync('npm view claudient version', { encoding: 'utf-8' }).trim()
+    const latest = execSync('npm view uitkit version', { encoding: 'utf-8' }).trim()
     if (current === latest) {
       console.log(`Already up to date (v${current}).`)
       return
     }
     console.log(`Update available: v${current} → v${latest}`)
-    console.log('Run: npm install -g claudient  or  npx claudient@latest add all')
+    console.log('Run: npm install -g uitkit  or  npx uitkit@latest add all')
   } catch {
-    console.log('Could not check for updates. Visit: https://www.npmjs.com/package/claudient')
+    console.log('Could not check for updates. Visit: https://www.npmjs.com/package/uitkit')
   }
 }
 
@@ -893,7 +893,7 @@ function listCommand(type) {
       listRules(); console.log()
       listHooks(); console.log()
       console.log(`Generated: ${index.generated}`)
-      console.log(`Version:   claudient@${index.version}`)
+      console.log(`Version:   uitkit@${index.version}`)
     }
 
     switch (type) {
@@ -974,7 +974,7 @@ function searchCommand(query) {
 
   if (total === 0) {
     console.log(`No results for "${query}".`)
-    console.log(`Try: npx claudient list`)
+    console.log(`Try: npx uitkit list`)
     return
   }
 
@@ -989,7 +989,7 @@ function searchCommand(query) {
         : ''
       console.log(`  ${ORANGE}${s.id}${RESET}`)
       if (desc) console.log(desc)
-      console.log(`  Install: npx claudient add skills ${s.category}`)
+      console.log(`  Install: npx uitkit add skills ${s.category}`)
       console.log()
     }
   }
@@ -999,7 +999,7 @@ function searchCommand(query) {
     for (const a of agentMatches) {
       console.log(`  ${ORANGE}${a.id}${RESET} — ${a.title}`)
     }
-    console.log(`  Install: npx claudient add agents`)
+    console.log(`  Install: npx uitkit add agents`)
     console.log()
   }
 
@@ -1008,7 +1008,7 @@ function searchCommand(query) {
     for (const h of hookMatches) {
       console.log(`  ${ORANGE}${h.id}${RESET} — ${h.title}`)
     }
-    console.log(`  Install: npx claudient add hooks`)
+    console.log(`  Install: npx uitkit add hooks`)
     console.log()
   }
 
@@ -1017,7 +1017,7 @@ function searchCommand(query) {
     for (const s of structureMatches) {
       console.log(`  ${ORANGE}${s.id}${RESET} — ${s.title}`)
       if (s.tagline) console.log(`  ${DIM}${s.tagline.slice(0, 90)}${RESET}`)
-      console.log(`  Install: npx claudient add structure ${s.id}`)
+      console.log(`  Install: npx uitkit add structure ${s.id}`)
       console.log()
     }
   }
@@ -1033,10 +1033,10 @@ function guardCommand(action, file) {
   
   if (action === 'unlock') {
     if (!file) {
-      console.error(`${ORANGE}Usage: npx claudient guard unlock <file>${RESET}`)
+      console.error(`${ORANGE}Usage: npx uitkit guard unlock <file>${RESET}`)
       process.exit(1)
     }
-    const unlockFile = path.join(process.cwd(), '.claudient-unlock')
+    const unlockFile = path.join(process.cwd(), '.uitkit-unlock')
     let unlocked = []
     if (fs.existsSync(unlockFile)) {
       unlocked = fs.readFileSync(unlockFile, 'utf-8').split('\n').filter(Boolean)
@@ -1052,7 +1052,7 @@ function guardCommand(action, file) {
   } else {
     console.log(`${BOLD}Workspace Guardian${RESET}`)
     console.log(`Protects infrastructure files (package.json, .env, etc.) from AI overwrite.`)
-    console.log(`\nUsage: npx claudient guard unlock <file>`)
+    console.log(`\nUsage: npx uitkit guard unlock <file>`)
   }
 }
 
@@ -1070,7 +1070,7 @@ async function initCommand() {
 
   console.log(`
 ${BOLD}╔══════════════════════════════════════════════╗
-║         CLAUDIENT SETUP                     ║
+║         UITKIT SETUP                     ║
 ║   The Claude Code Knowledge System          ║
 ╚══════════════════════════════════════════════╝${RESET}
 `)
@@ -1116,7 +1116,7 @@ ${BOLD}╔═══════════════════════�
       addRulesWrite()
       addSkills(null, 'en')
       addAgents()
-      console.log(`\n${GREEN}✓ Magic Init complete! Claudient is fully optimized for your stack.${RESET}\n`)
+      console.log(`\n${GREEN}✓ Magic Init complete! UitKit is fully optimized for your stack.${RESET}\n`)
       rl.close()
       return
     }
@@ -1172,7 +1172,7 @@ ${BOLD}╔═══════════════════════�
 
   // 6. Telemetry
   console.log(`${BOLD}Step 6/6 — Telemetry${RESET}`)
-  console.log('  Enable anonymous setup metrics to help improve Claudient?')
+  console.log('  Enable anonymous setup metrics to help improve UitKit?')
   const telemetryInput = (await ask('  Share anonymous metrics? [Y/n] ')).trim().toLowerCase()
   summary.telemetry = telemetryInput !== 'n'
   console.log(`  → ${summary.telemetry ? 'Yes' : 'No'}\n`)
@@ -1224,21 +1224,21 @@ ${BOLD}╔═══════════════════════�
       settings = JSON.parse(fs.readFileSync(settingsPath, 'utf-8'))
     } catch (e) {}
   }
-  if (!settings.claudient) settings.claudient = {}
-  settings.claudient.telemetry = summary.telemetry
+  if (!settings.uitkit) settings.uitkit = {}
+  settings.uitkit.telemetry = summary.telemetry
   fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 2), 'utf-8')
 
-  console.log(`${GREEN}${BOLD}✓ Claudient setup complete!${RESET}`)
+  console.log(`${GREEN}${BOLD}✓ UitKit setup complete!${RESET}`)
   console.log()
   console.log('Next steps:')
   if (summary.hooks) {
     console.log(`  1. Add hook entries to .claude/settings.json`)
-    console.log(`     See: https://github.com/UitbreidenOS/Claudient/tree/main/hooks`)
+    console.log(`     See: https://github.com/UitbreidenOS/UitKit/tree/main/hooks`)
   }
   console.log(`  2. Restart Claude Code to activate all installed content`)
   console.log(`  3. Try a skill — type /fastapi or /kubernetes in Claude Code`)
   console.log()
-  console.log(`  Full docs: https://github.com/UitbreidenOS/Claudient`)
+  console.log(`  Full docs: https://github.com/UitbreidenOS/UitKit`)
 }
 
 function getFiles(dir, prefix = '') {
@@ -1267,7 +1267,7 @@ function doctorCommand() {
     console.log(`✅ Skills installed: ${skillsCount}`)
   } else {
     console.log(`❌ No skills installed`)
-    issues.push('Run "npx claudient add skills all" to install skills')
+    issues.push('Run "npx uitkit add skills all" to install skills')
     score -= 1
   }
 
@@ -1285,7 +1285,7 @@ function doctorCommand() {
     console.log(`✅ CLAUDE.md: Found`)
   } else {
     console.log(`⚠️  CLAUDE.md: Not found`)
-    issues.push('Run "claudient init" to create a CLAUDE.md')
+    issues.push('Run "uitkit init" to create a CLAUDE.md')
     score -= 0.5
   }
 
@@ -1312,7 +1312,7 @@ function doctorCommand() {
   }
   if (staleCount > 0) {
     console.log(`⚠️  Freshness: ${staleCount} skill(s) need update (>30 days old)`)
-    issues.push('Run "claudient update" to refresh stale skills')
+    issues.push('Run "uitkit update" to refresh stale skills')
     score -= 0.5
   } else if (skillsCount > 0) {
     console.log(`✅ Freshness: All current`)
@@ -1333,8 +1333,8 @@ function doctorCommand() {
 
 function consultCommand(need) {
   if (!need || need.trim().length === 0) {
-    console.error('Usage: npx claudient consult "<skill or need>"')
-    console.error('Example: npx claudient consult "sales automation"')
+    console.error('Usage: npx uitkit consult "<skill or need>"')
+    console.error('Example: npx uitkit consult "sales automation"')
     process.exit(1)
   }
 
@@ -1357,7 +1357,7 @@ function consultCommand(need) {
   if (matched.length === 0) {
     console.log()
     console.log('No skills found matching: "' + need + '"')
-    console.log('Try a broader search or run: npx claudient list skills')
+    console.log('Try a broader search or run: npx uitkit list skills')
     console.log()
     return
   }
@@ -1371,7 +1371,7 @@ function consultCommand(need) {
     const skillId = skill.id.replace(/\//g, ' / ')
     console.log(`${i + 1}. [${skill.title}]`)
     console.log(`   ${skill.description}`)
-    console.log(`   Install: npx claudient add skill ${skill.category}/${skill.title.toLowerCase().replace(/ /g, '-')}`)
+    console.log(`   Install: npx uitkit add skill ${skill.category}/${skill.title.toLowerCase().replace(/ /g, '-')}`)
     console.log()
   })
 
@@ -1397,7 +1397,7 @@ function consultCommand(need) {
 
   if (suggestedStack) {
     console.log('Suggested stack:')
-    console.log(`  npx claudient add stack ${suggestedStack}`)
+    console.log(`  npx uitkit add stack ${suggestedStack}`)
   }
 
   console.log()
@@ -1433,7 +1433,7 @@ function shareCommand() {
 
   // Build bundle
   const bundle = {
-    claudient: '1.10.1',
+    uitkit: '1.10.1',
     shared_at: new Date().toISOString(),
     author: '',
     description: 'My Claude Code setup',
@@ -1456,7 +1456,7 @@ function shareCommand() {
   console.log('  2. Create a GitHub Gist: https://gist.github.com')
   console.log('  3. Paste the JSON into the gist and save')
   console.log('  4. Share the gist raw URL with others:')
-  console.log('     npx claudient import <gist-raw-url>')
+  console.log('     npx uitkit import <gist-raw-url>')
   console.log()
 }
 
@@ -1491,14 +1491,14 @@ function importCommand(gistUrl) {
     })
     .then(bundle => {
       // Validate bundle
-      if (!bundle.claudient) {
-        throw new Error('Invalid bundle: missing claudient version field')
+      if (!bundle.uitkit) {
+        throw new Error('Invalid bundle: missing uitkit version field')
       }
       if (!Array.isArray(bundle.skills)) {
         throw new Error('Invalid bundle: skills must be an array')
       }
 
-      console.log(`✓ Bundle loaded (claudient ${bundle.claudient})`)
+      console.log(`✓ Bundle loaded (uitkit ${bundle.uitkit})`)
       if (bundle.description) console.log(`  ${bundle.description}`)
       console.log()
 
@@ -1569,7 +1569,7 @@ function benchmarkCommand(skillId) {
     })
 
     console.log()
-    console.log(`Run: npx claudient benchmark <skill-id>  for details`)
+    console.log(`Run: npx uitkit benchmark <skill-id>  for details`)
     console.log()
   } else {
     // Show detail card for a specific skill
@@ -1637,12 +1637,12 @@ function writeHtmlReport(filename, title, date, score, percentage, results) {
     if (r.status.includes('FAIL') || r.status.includes('WARN')) {
       let rec = ''
       switch (r.dim) {
-        case 'Skills Coverage': rec = 'Install more skill categories: <code>npx claudient add skills all</code>'; break;
-        case 'Agent Configuration': rec = 'Deploy agents: <code>npx claudient add agents</code>'; break;
-        case 'Hook Security': rec = 'Review and install hooks: <code>npx claudient add hooks</code>'; break;
-        case 'CLAUDE.md Governance': rec = 'Create CLAUDE.md: <code>npx claudient init</code> or <code>add rules --write</code>'; break;
-        case 'Rules Compliance': rec = 'Add rules to CLAUDE.md: <code>npx claudient add rules --write</code>'; break;
-        case 'Freshness': rec = 'Update stale skills: <code>npx claudient update</code>'; break;
+        case 'Skills Coverage': rec = 'Install more skill categories: <code>npx uitkit add skills all</code>'; break;
+        case 'Agent Configuration': rec = 'Deploy agents: <code>npx uitkit add agents</code>'; break;
+        case 'Hook Security': rec = 'Review and install hooks: <code>npx uitkit add hooks</code>'; break;
+        case 'CLAUDE.md Governance': rec = 'Create CLAUDE.md: <code>npx uitkit init</code> or <code>add rules --write</code>'; break;
+        case 'Rules Compliance': rec = 'Add rules to CLAUDE.md: <code>npx uitkit add rules --write</code>'; break;
+        case 'Freshness': rec = 'Update stale skills: <code>npx uitkit update</code>'; break;
         case 'Permission Scope': rec = 'Review ~/.claude/settings.json for overly broad permissions'; break;
         case 'Benchmark Coverage': rec = 'Run benchmarks: <code>npm run benchmark</code>'; break;
       }
@@ -1828,8 +1828,8 @@ function writeHtmlReport(filename, title, date, score, percentage, results) {
       <div class="enterprise-box">
         <div class="enterprise-title">🏢 Need a formal SOC2 / GDPR Governance Audit?</div>
         <div style="font-size: 13px; line-height: 1.6;">
-          Claudient Enterprise provides regulatory-compliant workspace stack validation hooks, centralized permission controls, SSO, and audit-trail logging.<br>
-          <a href="https://claudient.ai/enterprise" style="color: #b62ad9; font-weight: bold; text-decoration: underline;">Book a governance demo</a> &bull; Contact: <strong>enterprise@claudient.ai</strong>
+          UitKit Enterprise provides regulatory-compliant workspace stack validation hooks, centralized permission controls, SSO, and audit-trail logging.<br>
+          <a href="https://uitkit.ai/enterprise" style="color: #b62ad9; font-weight: bold; text-decoration: underline;">Book a governance demo</a> &bull; Contact: <strong>enterprise@uitkit.ai</strong>
         </div>
       </div>
     </div>
@@ -2106,22 +2106,22 @@ function auditCommand() {
       let rec = ''
       switch (r.dim) {
         case 'Skills Coverage':
-          rec = 'Install more skill categories: npx claudient add skills all'
+          rec = 'Install more skill categories: npx uitkit add skills all'
           break
         case 'Agent Configuration':
-          rec = 'Deploy agents: npx claudient add agents'
+          rec = 'Deploy agents: npx uitkit add agents'
           break
         case 'Hook Security':
-          rec = 'Review and install hooks: npx claudient add hooks'
+          rec = 'Review and install hooks: npx uitkit add hooks'
           break
         case 'CLAUDE.md Governance':
-          rec = 'Create CLAUDE.md: npx claudient init or add rules --write'
+          rec = 'Create CLAUDE.md: npx uitkit init or add rules --write'
           break
         case 'Rules Compliance':
-          rec = 'Add rules to CLAUDE.md: npx claudient add rules --write'
+          rec = 'Add rules to CLAUDE.md: npx uitkit add rules --write'
           break
         case 'Freshness':
-          rec = 'Update stale skills: npx claudient update'
+          rec = 'Update stale skills: npx uitkit update'
           break
         case 'Permission Scope':
           rec = 'Review ~/.claude/settings.json for overly broad permissions'
@@ -2136,16 +2136,16 @@ function auditCommand() {
 
   output += `\n${'─'.repeat(65)}\n`
   output += `🏢 Need a full governance audit with remediation support?\n`
-  output += `   Claudient Enterprise includes:\n`
+  output += `   UitKit Enterprise includes:\n`
   output += `   • SOC2 / GDPR / EU-AI-Act compliance stacks\n`
   output += `   • Audit trail hooks with SSO integration\n`
   output += `   • Dedicated stack engineer\n`
-  output += `   → Book a demo: https://claudient.ai/enterprise\n`
-  output += `   → Email: enterprise@claudient.ai\n`
+  output += `   → Book a demo: https://uitkit.ai/enterprise\n`
+  output += `   → Email: enterprise@uitkit.ai\n`
   output += `${'─'.repeat(65)}\n`
 
-  writeReport('claudient-audit-report.md', output)
-  writeHtmlReport('claudient-audit-report.html', 'Claude Code Compliance Audit', date, totalScore, percentage, results)
+  writeReport('uitkit-audit-report.md', output)
+  writeHtmlReport('uitkit-audit-report.html', 'Claude Code Compliance Audit', date, totalScore, percentage, results)
 }
 
 function scoreCommand() {
@@ -2386,22 +2386,22 @@ function scoreCommand() {
       if (s.score < 12.5) {
         switch (s.dim) {
           case 'Skills Installed':
-            if (s.score < 12.5) recs.push(`Install additional skill categories: npx claudient add skills`)
+            if (s.score < 12.5) recs.push(`Install additional skill categories: npx uitkit add skills`)
             break
           case 'Agents Deployed':
-            if (s.score < 12.5) recs.push(`Deploy 6+ agents: npx claudient add agents`)
+            if (s.score < 12.5) recs.push(`Deploy 6+ agents: npx uitkit add agents`)
             break
           case 'Hooks Active':
-            if (s.score < 12.5) recs.push(`Install 3+ hooks: npx claudient add hooks`)
+            if (s.score < 12.5) recs.push(`Install 3+ hooks: npx uitkit add hooks`)
             break
           case 'Rules Configured':
-            if (s.score < 12.5) recs.push(`Add 5+ rules: npx claudient add rules --write`)
+            if (s.score < 12.5) recs.push(`Add 5+ rules: npx uitkit add rules --write`)
             break
           case 'CLAUDE.md Quality':
             if (s.score < 12.5) recs.push(`Expand CLAUDE.md with substantial content`)
             break
           case 'Freshness':
-            if (s.score < 12.5) recs.push(`Update stale skills: npx claudient update`)
+            if (s.score < 12.5) recs.push(`Update stale skills: npx uitkit update`)
             break
           case 'Benchmark Coverage':
             if (s.score < 12.5) recs.push(`Benchmark 10+ skills: npm run benchmark`)
@@ -2422,7 +2422,7 @@ function scoreCommand() {
   }
 
   console.log(output)
-  writeReport('claudient-score-report.md', output)
+  writeReport('uitkit-score-report.md', output)
 }
 
 async function initEnterpriseCommand() {
@@ -2439,7 +2439,7 @@ async function initEnterpriseCommand() {
 
   console.log(`
 ${BOLD}╔══════════════════════════════════════════════════════════╗
-║         CLAUDIENT ENTERPRISE SETUP                         ║
+║         UITKIT ENTERPRISE SETUP                         ║
 ║   Configure governance, compliance, and team-scale features ║
 ╚══════════════════════════════════════════════════════════════╝${RESET}
 `)
@@ -2498,11 +2498,11 @@ ${BOLD}╔═══════════════════════�
     const stackPath = path.join(REPO_ROOT, 'enterprise', 'compliance_stacks', compliance)
     if (fs.existsSync(stackPath)) {
       try {
-        execSync(`cd "${process.cwd()}" && npx claudient add stack ${stackPath}`, { stdio: 'inherit' })
+        execSync(`cd "${process.cwd()}" && npx uitkit add stack ${stackPath}`, { stdio: 'inherit' })
         console.log(`${GREEN}✓ Compliance stack installed${RESET}\n`)
       } catch (e) {
         console.error(`${ORANGE}⚠ Could not auto-install stack. Run manually:${RESET}`)
-        console.error(`  npx claudient add stack ${stackPath}\n`)
+        console.error(`  npx uitkit add stack ${stackPath}\n`)
       }
     }
   }
@@ -2512,13 +2512,13 @@ ${BOLD}╔═══════════════════════�
   console.log(`${GREEN}✓ Enterprise setup complete!${RESET}`)
   console.log(`
 Your next steps:
-  1. Run ${BLUE}npx claudient doctor${RESET} to verify setup
-  2. Run ${BLUE}npx claudient audit${RESET} to check compliance status
+  1. Run ${BLUE}npx uitkit doctor${RESET} to verify setup
+  2. Run ${BLUE}npx uitkit audit${RESET} to check compliance status
   3. Review ${BLUE}enterprise/PRICING.md${RESET} for tier benefits
 
 ${BOLD}Ready to scale?${RESET}
-  ${BLUE}https://claudient.ai/enterprise${RESET}
-  ${BLUE}enterprise@claudient.ai${RESET}
+  ${BLUE}https://uitkit.ai/enterprise${RESET}
+  ${BLUE}enterprise@uitkit.ai${RESET}
 
 We'll help you:
   → Configure governance hooks and audit trails
@@ -2565,11 +2565,11 @@ switch (command) {
         addHooks()
         break
       case undefined:
-        console.error('Usage: claudient add <skills|agents|rules|hooks|statusline|all>')
+        console.error('Usage: uitkit add <skills|agents|rules|hooks|statusline|all>')
         process.exit(1)
         break
       default:
-        // Backward compat: claudient add backend (old syntax)
+        // Backward compat: uitkit add backend (old syntax)
         if (SKILL_CATEGORIES.includes(type)) {
           addSkills(type, lang)
         } else {
@@ -2582,7 +2582,7 @@ switch (command) {
   case 'remove': {
     const type = positional[0]
     const arg2 = positional[1]
-    if (!type) { console.error('Usage: claudient remove <skills|agents|rules|hooks>'); process.exit(1) }
+    if (!type) { console.error('Usage: uitkit remove <skills|agents|rules|hooks>'); process.exit(1) }
     removeCommand(type, arg2)
     break
   }
@@ -2598,7 +2598,7 @@ switch (command) {
     break
   case 'search': {
     const query = positional.join(' ')
-    if (!query) { console.error('Usage: claudient search <query>'); process.exit(1) }
+    if (!query) { console.error('Usage: uitkit search <query>'); process.exit(1) }
     searchCommand(query)
     break
   }
@@ -2769,13 +2769,13 @@ switch (command) {
   }
   case 'swarm-sandbox': {
     const { spawnSync } = require('child_process')
-    const res = spawnSync('node', [path.join(__dirname, 'claudient-swarm-sandbox.js'), ...process.argv.slice(3)], { stdio: 'inherit' })
+    const res = spawnSync('node', [path.join(__dirname, 'uitkit-swarm-sandbox.js'), ...process.argv.slice(3)], { stdio: 'inherit' })
     if (res.status !== 0) process.exit(res.status || 1)
     break
   }
   case 'svg-inspector': {
     const { spawnSync } = require('child_process')
-    const res = spawnSync('node', [path.join(__dirname, 'claudient-svg-inspector.js'), ...process.argv.slice(3)], { stdio: 'inherit' })
+    const res = spawnSync('node', [path.join(__dirname, 'uitkit-svg-inspector.js'), ...process.argv.slice(3)], { stdio: 'inherit' })
     if (res.status !== 0) process.exit(res.status || 1)
     break
   }
@@ -2798,7 +2798,7 @@ switch (command) {
     break
   case 'import': {
     const url = positional[0]
-    if (!url) { console.error('Usage: claudient import <gist-url>'); process.exit(1) }
+    if (!url) { console.error('Usage: uitkit import <gist-url>'); process.exit(1) }
     importCommand(url)
     break
   }

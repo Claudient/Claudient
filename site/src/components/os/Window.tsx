@@ -109,7 +109,7 @@ export function Window({ win, wm, isTop }: Props) {
         </div>
         <span className="text-sm" aria-hidden>{meta.icon}</span>
         <span className="text-[13px] font-semibold text-ink truncate">{meta.title}</span>
-        <span className="ml-auto text-[11px] font-mono text-mute hidden sm:block">claudient.os</span>
+        <span className="ml-auto text-[11px] font-mono text-mute hidden sm:block">uitkit.os</span>
       </div>
 
       {/* Content */}

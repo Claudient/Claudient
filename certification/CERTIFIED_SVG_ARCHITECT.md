@@ -309,7 +309,7 @@ The SVG Architect Certification track transforms practitioners into specialized 
 #### Digital Badge
 
 **Badge Name:** SVG Architect  
-**Issuing Organization:** Claudient Marketplace  
+**Issuing Organization:** UitKit Marketplace  
 **Credential ID:** `SVG-ARCH-[YYMMDD-UNIQUE]`  
 **Valid For:** 3 years (renewable with re-certification)
 
@@ -327,7 +327,7 @@ The SVG Architect Certification track transforms practitioners into specialized 
 #### LinkedIn Endorsement
 
 **Process:**
-1. Claudient sends LinkedIn connection request to graduate
+1. UitKit sends LinkedIn connection request to graduate
 2. Endorsement issued via LinkedIn platform (native badge)
 3. Badge displayed on LinkedIn profile (under Skills section)
 4. Can be used in LinkedIn Recommendations
@@ -336,14 +336,14 @@ The SVG Architect Certification track transforms practitioners into specialized 
 
 **Badge Visibility:**
 - Public profile badge (searchable)
-- Featured in Claudient alumni directory
-- Included in Claudient Marketplace mentor profiles
+- Featured in UitKit alumni directory
+- Included in UitKit Marketplace mentor profiles
 
 #### Badge Usage Rights
 
 - Display on personal website, portfolio, GitHub profile
 - Include in resume and LinkedIn profile
-- Use in marketing materials (with attribution to Claudient)
+- Use in marketing materials (with attribution to UitKit)
 - Share on social media with course promotion link (optional)
 
 ---
@@ -414,7 +414,7 @@ The SVG Architect Certification track transforms practitioners into specialized 
 ### Post-Certification Benefits
 
 1. **Alumni Directory**
-   - Searchable profile on Claudient marketplace
+   - Searchable profile on UitKit marketplace
    - Networking events (quarterly virtual meetups)
    - Alumni Slack channel (1000+ members)
    - Job board exclusive listings
@@ -474,7 +474,7 @@ A: Partial refund available if you don't pass the exam or capstone (30-day money
    - Premium with Mentorship ($598-$1,198)
 
 3. **Register & Get Started**
-   - Create Claudient account
+   - Create UitKit account
    - Enroll in bootcamp
    - Access learning materials immediately
    - Join Slack community
@@ -519,4 +519,4 @@ A: Partial refund available if you don't pass the exam or capstone (30-day money
 
 ---
 
-**For questions or feedback, contact:** certifications@claudient.ai
+**For questions or feedback, contact:** certifications@uitkit.ai

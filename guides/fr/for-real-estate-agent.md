@@ -18,14 +18,14 @@ Vous êtes agent immobilier — en solo ou en équipe — qui gagne sa vie en co
 
 ```bash
 # Installer toutes les compétences immobilières
-npx claudient add skill small-business/real-estate-listing
-npx claudient add skill small-business/cma-report
-npx claudient add skill small-business/buyer-offer-writer
-npx claudient add skill small-business/cold-outreach
-npx claudient add skill small-business/customer-inquiry
+npx uitkit add skill small-business/real-estate-listing
+npx uitkit add skill small-business/cma-report
+npx uitkit add skill small-business/buyer-offer-writer
+npx uitkit add skill small-business/cold-outreach
+npx uitkit add skill small-business/customer-inquiry
 
 # Installer l'agent spécialisé en immobilier
-npx claudient add agent roles/real-estate-specialist
+npx uitkit add agent roles/real-estate-specialist
 ```
 
 ---
@@ -181,7 +181,7 @@ Rédigez un email de 150 mots qui sonne personnel, pas comme une newsletter. Inc
 ## Plan de montée en compétences sur 30 jours (nouveaux agents ou nouveau marché)
 
 ### Semaine 1 — Configuration et connaissance du marché
-- Installer toutes les compétences immobilières via `npx claudient add skill small-business/[nom]`
+- Installer toutes les compétences immobilières via `npx uitkit add skill small-business/[nom]`
 - Exécuter `/cma-report` sur 5 ventes récentes dans votre zone de farming pour calibrer votre lecture des comparables
 - Utiliser `/real-estate-listing` pour réécrire 3 de vos descriptions d'annonces passées — comparer la qualité
 - Cartographier votre sphère d'influence : 50 contacts → exécuter `/cold-outreach` sur votre premier contact

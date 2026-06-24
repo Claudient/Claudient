@@ -18,14 +18,14 @@ Vous êtes enseignant, chargé de cours, concepteur pédagogique, professionnel 
 
 ```bash
 # Installer les compétences pour enseignants
-npx claudient add skill productivity/lesson-planner
-npx claudient add skill productivity/student-feedback-analyzer
-npx claudient add skill small-business/online-course-creator
-npx claudient add skill small-business/newsletter-publisher
-npx claudient add skill productivity/lit-review
+npx uitkit add skill productivity/lesson-planner
+npx uitkit add skill productivity/student-feedback-analyzer
+npx uitkit add skill small-business/online-course-creator
+npx uitkit add skill small-business/newsletter-publisher
+npx uitkit add skill productivity/lit-review
 
 # Installer l'agent chercheur scientifique
-npx claudient add agent roles/scientific-researcher
+npx uitkit add agent roles/scientific-researcher
 ```
 
 ---
@@ -164,7 +164,7 @@ Longueur : [court — 150 mots / complet — 300 mots]
 ## Plan de montée en compétence sur 30 jours (nouveaux enseignants ou nouveau cours)
 
 ### Semaine 1 — Fondations de la planification de leçons
-- Installer toutes les compétences pour enseignants : `npx claudient add skill productivity/[nom]`
+- Installer toutes les compétences pour enseignants : `npx uitkit add skill productivity/[nom]`
 - Utiliser `/lesson-planner` pour planifier vos 3 prochaines leçons — comparer au processus habituel
 - Lancer le rédacteur d'objectifs d'apprentissage sur chaque leçon — transformer des objectifs vagues en résultats mesurables
 - Créer votre premier ticket de sortie et l'utiliser en classe

@@ -335,7 +335,7 @@ svg.addEventListener('click', (e) => {
 ## Files Location
 
 ```
-/Users/tushar/Desktop/Claudient/profilers/
+/Users/tushar/Desktop/UitKit/profilers/
 ├── svg-inspector-profiler.js          (878 lines)
 ├── svg-inspector-profiler.md          (523 lines)
 ├── svg-inspector-profiler.test.js     (544 lines)

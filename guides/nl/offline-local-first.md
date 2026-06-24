@@ -1,31 +1,31 @@
 ---
 name: offline-local-first
-description: "Offline en local-first modus: Claudient uitvoeren in gesloten omgevingen, offline-veilige stacks, fallback-patronen en wat netwerkconnectiviteit vereist"
+description: "Offline en local-first modus: UitKit uitvoeren in gesloten omgevingen, offline-veilige stacks, fallback-patronen en wat netwerkconnectiviteit vereist"
 updated: 2026-06-15
 ---
 
 # Offline en local-first modus gids
 
-Deze gids behandelt het uitvoeren van Claudient, zijn stacks en Claude Code-workflows in gesloten, offline en laag-connectiviteitsomgevingen. Het maakt onderscheid tussen mogelijkheden die offline werken en die netwerktoegangen vereisen, en documenteert fallback-patronen voor verbroken scenario's.
+Deze gids behandelt het uitvoeren van UitKit, zijn stacks en Claude Code-workflows in gesloten, offline en laag-connectiviteitsomgevingen. Het maakt onderscheid tussen mogelijkheden die offline werken en die netwerktoegangen vereisen, en documenteert fallback-patronen voor verbroken scenario's.
 
 ---
 
 ## Overzicht
 
-Claudient is ontworpen voor integratie met Claude Code en externe tools (Claude API, MCP-servers, cloudplatforms). Veel workflows kunnen echter offline draaien met:
+UitKit is ontworpen voor integratie met Claude Code en externe tools (Claude API, MCP-servers, cloudplatforms). Veel workflows kunnen echter offline draaien met:
 
 1. **Lokale modeluitvoering** (Claude via lokale API-proxy)
 2. **Offline-veilige stacks** (vaardigheden die geen externe MCP-servers of API's vereisen)
 3. **Gecachte kennis** (CLAUDE.md, documentatie, promptsjablonen)
 4. **Losgekoppelde tools** (lokale CLI, git, shell, bestandsbewerkingen)
 
-Deze gids identificeert welke Claudient-componenten offline werken en hoe deze moeten worden geconfigureerd.
+Deze gids identificeert welke UitKit-componenten offline werken en hoe deze moeten worden geconfigureerd.
 
 ---
 
 ## Wat offline werkt
 
-### Claudient-kernfuncties (volledig offline)
+### UitKit-kernfuncties (volledig offline)
 
 - **Gidsen, vaardigheden, agenten, workflows, prompts** — alle Markdown-documentatie en patronen
 - **Git-bewerkingen** — klonen, committen, branching (alleen lokale repo)
@@ -62,7 +62,7 @@ Als u MCP lokaal uitvoert, hebben deze servers geen externe afhankelijkheden:
 
 ## Wat netwerk vereist
 
-### Claudient-functies die Internet nodig hebben
+### UitKit-functies die Internet nodig hebben
 
 - **Claude API-aanroepen** — elke vaardigheid/agent die Claude aanroept (vereist Anthropic-API-sleutel en netwerktoegang)
 - **Externe MCP-servers** — externe servers (GitHub, Linear, Slack, enz.)
@@ -103,7 +103,7 @@ pip install anthropic
 python -m anthropic.proxy --host 127.0.0.1 --port 8000
 ```
 
-Configureer vervolgens Claudient om het lokale eindpunt te gebruiken:
+Configureer vervolgens UitKit om het lokale eindpunt te gebruiken:
 
 ```json
 {
@@ -164,22 +164,22 @@ export DISABLE_EXTERNAL_MCP=true
 export MCP_SERVERS=filesystem,git  # kommagescheiden lijst
 ```
 
-### 3. Claudient lokaal klonen
+### 3. UitKit lokaal klonen
 
-Download de volledige Claudient-repository voor offline-toegang:
+Download de volledige UitKit-repository voor offline-toegang:
 
 ```bash
-git clone https://github.com/tushar2704/Claudient.git /opt/claudient
-export CLAUDIENT_PATH=/opt/claudient
+git clone https://github.com/tushar2704/UitKit.git /opt/uitkit
+export UITKIT_PATH=/opt/uitkit
 
 # Offline-toegang controleren
-ls /opt/claudient/guides/offline-local-first.md
+ls /opt/uitkit/guides/offline-local-first.md
 ```
 
-Wijs Claude Code naar lokale Claudient:
+Wijs Claude Code naar lokale UitKit:
 
 ```bash
---project /opt/claudient
+--project /opt/uitkit
 ```
 
 ### 4. Cache API-reacties
@@ -210,7 +210,7 @@ export MCP_SERVERS=filesystem,git
 
 # Laad de stack
 claude --stack backend \
-       --project /opt/claudient \
+       --project /opt/uitkit \
        "Build a Go API server with tests and Docker image"
 ```
 
@@ -286,7 +286,7 @@ Als AWS API niet beschikbaar is, gebruik vooraf gegenereerde CloudFormation-sjab
 \`\`\`bash
 if ! aws ec2 describe-instances &>/dev/null; then
   echo "AWS API unavailable. Using cached templates."
-  cat /opt/claudient/cache/cf-templates/*.json
+  cat /opt/uitkit/cache/cf-templates/*.json
 fi
 \`\`\`
 ```
@@ -378,10 +378,10 @@ claude --stack "$STACK" "$@"
 
 ## Offline-documentatiestructuur
 
-Wanneer u offline werkt, navigeert u in de documentatiestructuur van Claudient:
+Wanneer u offline werkt, navigeert u in de documentatiestructuur van UitKit:
 
 ```
-/opt/claudient
+/opt/uitkit
 ├── guides/offline-local-first.md       ← U bent hier
 ├── enterprise/AIR_GAP.md               ← Implementatiegids
 ├── skills/devops-infra/air-gap-deployment.md
@@ -393,7 +393,7 @@ Wanneer u offline werkt, navigeert u in de documentatiestructuur van Claudient:
 └── workflows/                          ← Alle workflowpatronen
 ```
 
-Lees van `/opt/claudient` (niet van git remote) wanneer offline.
+Lees van `/opt/uitkit` (niet van git remote) wanneer offline.
 
 ---
 
@@ -408,7 +408,7 @@ lsof -i :8000  # als u lokale proxy gebruikt
 # Forceer offline modus
 export DISABLE_EXTERNAL_MCP=true
 export OFFLINE_MODE=true
-claude --project /opt/claudient "test query"
+claude --project /opt/uitkit "test query"
 ```
 
 ### Symptoom: "API key not found"
@@ -436,7 +436,7 @@ pip install --no-index --find-links ./cache -r requirements.txt
 
 ## Samenvatting
 
-**Offline-first-principes voor Claudient:**
+**Offline-first-principes voor UitKit:**
 
 1. **Local-first-afhankelijkheden** — alles cachen; netwerk is optioneel
 2. **Graceful degradation** — detecteer beschikbare MCP; bied fallbacks

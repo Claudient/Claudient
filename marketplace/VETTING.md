@@ -1,6 +1,6 @@
-# Claudient Marketplace Vetting Criteria
+# UitKit Marketplace Vetting Criteria
 
-This document defines the quality standards for stacks submitted to the Claudient Marketplace. All official stacks meet these criteria. Community stacks must meet baseline criteria to appear in the marketplace.
+This document defines the quality standards for stacks submitted to the UitKit Marketplace. All official stacks meet these criteria. Community stacks must meet baseline criteria to appear in the marketplace.
 
 ## Vetting Levels
 
@@ -8,7 +8,7 @@ This document defines the quality standards for stacks submitted to the Claudien
 
 All stacks — official and community — must meet baseline criteria:
 
-- **Structure:** Follows Claudient directory structure
+- **Structure:** Follows UitKit directory structure
 - **Naming:** All files use kebab-case; directories are lowercase
 - **Required files:** README.md, STACK.json present and valid
 - **No prohibited content:** No proprietary secrets, licensed third-party IP, or unethical content
@@ -30,7 +30,7 @@ Community stacks undergo light review:
 
 ### Official (High Bar for Official Certification)
 
-Official stacks (Claudient-certified or promoted from community) meet higher standards:
+Official stacks (UitKit-certified or promoted from community) meet higher standards:
 
 - **Completeness:** End-to-end coverage of the domain; users can build end products
 - **Breadth:** 5+ skills; multi-component architecture (skills + agents + workflows)
@@ -146,7 +146,7 @@ A community stack becomes officially certified when:
 
 ### Certification Process
 
-1. Author emails `marketplace@claudient.dev` with stack name and GitHub repo
+1. Author emails `marketplace@uitkit.dev` with stack name and GitHub repo
 2. Core team evaluates stack using certification criteria
 3. If approved: official badge is added; stack is moved to official section
 4. Core team may offer to co-maintain (optional)
@@ -208,7 +208,7 @@ Reviewers evaluate stacks holistically:
 If a stack is rejected or a review decision is disputed:
 
 1. Author can request clarification from reviewer (within 1 week of decision)
-2. If unsatisfied, author can escalate to `marketplace@claudient.dev`
+2. If unsatisfied, author can escalate to `marketplace@uitkit.dev`
 3. Escalation is reviewed by 2 core team members (5 business days)
 4. Decision is final; no further appeals accepted
 
@@ -251,9 +251,9 @@ If issues arise post-publication:
 
 ## Questions?
 
-- **Vetting questions:** marketplace@claudient.dev
-- **Process questions:** [GitHub Discussions](https://github.com/claudients/claudient/discussions)
-- **Community support:** [Discord](https://join.claudient.dev)
+- **Vetting questions:** marketplace@uitkit.dev
+- **Process questions:** [GitHub Discussions](https://github.com/uitkits/uitkit/discussions)
+- **Community support:** [Discord](https://join.uitkit.dev)
 
 ---
 

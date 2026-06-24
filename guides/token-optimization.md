@@ -177,7 +177,7 @@ multi-step sequences where fragment ambiguity risks misread.
 /caveman-compress .claude/memory/project-context.md
 ```
 
-**Reference:** The full implementation is at [github.com/JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman). Claudient also includes `skills/productivity/caveman.md` as a concise usage reference.
+**Reference:** The full implementation is at [github.com/JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman). UitKit also includes `skills/productivity/caveman.md` as a concise usage reference.
 
 **When NOT to use:** Security warnings, irreversible action confirmations, onboarding docs, external-facing documentation.
 

@@ -329,14 +329,14 @@ bash "$BASE/scripts/generate-keys.sh" 2>/dev/null || \
 echo "Microservices scaffold aangemaakt op $BASE"
 
 # Installeer relevante skills
-npx claudient add skill devops-infra/docker-compose-local-dev
-npx claudient add skill devops-infra/k8s-deployment
-npx claudient add skill devops-infra/helm-chart
-npx claudient add skill devops-infra/oncall-runbook
-npx claudient add skill backend/fastapi-crud
-npx claudient add skill backend/alembic-migration
-npx claudient add skill backend/rabbitmq-consumer
-npx claudient add skill devops-infra/capacity-planner
+npx uitkit add skill devops-infra/docker-compose-local-dev
+npx uitkit add skill devops-infra/k8s-deployment
+npx uitkit add skill devops-infra/helm-chart
+npx uitkit add skill devops-infra/oncall-runbook
+npx uitkit add skill backend/fastapi-crud
+npx uitkit add skill backend/alembic-migration
+npx uitkit add skill backend/rabbitmq-consumer
+npx uitkit add skill devops-infra/capacity-planner
 ```
 
 ## CLAUDE.md template
@@ -594,16 +594,16 @@ Elke service heeft zijn eigen workflow bestand in .github/workflows/:
 ## Skills to install
 
 ```bash
-npx claudient add skill devops-infra/docker-compose-local-dev
-npx claudient add skill devops-infra/k8s-deployment
-npx claudient add skill devops-infra/helm-chart
-npx claudient add skill devops-infra/oncall-runbook
-npx claudient add skill devops-infra/capacity-planner
-npx claudient add skill backend/fastapi-crud
-npx claudient add skill backend/alembic-migration
-npx claudient add skill backend/rabbitmq-consumer
-npx claudient add skill data-ml/stakeholder-report
-npx claudient add skill productivity/engineering-strategy
+npx uitkit add skill devops-infra/docker-compose-local-dev
+npx uitkit add skill devops-infra/k8s-deployment
+npx uitkit add skill devops-infra/helm-chart
+npx uitkit add skill devops-infra/oncall-runbook
+npx uitkit add skill devops-infra/capacity-planner
+npx uitkit add skill backend/fastapi-crud
+npx uitkit add skill backend/alembic-migration
+npx uitkit add skill backend/rabbitmq-consumer
+npx uitkit add skill data-ml/stakeholder-report
+npx uitkit add skill productivity/engineering-strategy
 ```
 
 ## Gerelateerd

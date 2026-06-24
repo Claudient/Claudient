@@ -1,6 +1,6 @@
-# Claudient Contributor Guide
+# UitKit Contributor Guide
 
-Welcome to Claudient's community contribution ecosystem. This guide covers how to contribute themes, skill enhancements, CLI commands, and other Claude Code extensions to the project.
+Welcome to UitKit's community contribution ecosystem. This guide covers how to contribute themes, skill enhancements, CLI commands, and other Claude Code extensions to the project.
 
 ---
 
@@ -33,10 +33,10 @@ All contributors must:
    # Or via desktop app: https://claude.com/download
    ```
 
-2. **Fork the Claudient repository**
+2. **Fork the UitKit repository**
    ```bash
-   git clone https://github.com/UitbreidenOS/Claudient
-   cd Claudient
+   git clone https://github.com/UitbreidenOS/UitKit
+   cd UitKit
    ```
 
 3. **Read the repository standards**
@@ -78,7 +78,7 @@ Before writing, check:
 
 1. Does the skill already exist?
    ```bash
-   npx claudient search "your-topic"
+   npx uitkit search "your-topic"
    find ./skills -name "*.md" | grep -i "keyword"
    ```
 
@@ -317,7 +317,7 @@ Create a **themes/README-[theme-name].md** (optional but recommended):
 
 ## Installation
 \`\`\`bash
-/plugin install claudient-themes  # if via marketplace
+/plugin install uitkit-themes  # if via marketplace
 # Or manually copy to ~/.claude/themes/
 \`\`\`
 
@@ -923,11 +923,11 @@ For contributing a complete stack (multiple skills, commands, hooks, CLAUDE.md, 
 
 ## Code of Conduct
 
-By contributing to Claudient, you agree to:
+By contributing to UitKit, you agree to:
 
 1. **Accuracy** — All claims about functionality are truthful and verifiable
 2. **No malware** — Your contribution contains no hidden, malicious, or harmful code
-3. **Respect** — You respect the Claudient code of conduct and community guidelines
+3. **Respect** — You respect the UitKit code of conduct and community guidelines
 4. **Attribution** — You credit all sources, inspiration, and prior art
 5. **Maintenance** — For stacks/significant contributions, you're responsive to issues for 3+ months
 6. **Community spirit** — You contribute to help others, not for self-promotion or profit
@@ -980,7 +980,7 @@ A: Monitor GitHub issues and discussions for bugs, feature requests, and feedbac
 ---
 
 **Last updated:** June 22, 2026  
-**Maintained by:** Claudient Community Team
+**Maintained by:** UitKit Community Team
 
 ---
 

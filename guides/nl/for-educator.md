@@ -18,14 +18,14 @@ Je bent een leraar, docent, instructional designer, L&D-professional of zelfstan
 
 ```bash
 # Installeer docentvaardigheden
-npx claudient add skill productivity/lesson-planner
-npx claudient add skill productivity/student-feedback-analyzer
-npx claudient add skill small-business/online-course-creator
-npx claudient add skill small-business/newsletter-publisher
-npx claudient add skill productivity/lit-review
+npx uitkit add skill productivity/lesson-planner
+npx uitkit add skill productivity/student-feedback-analyzer
+npx uitkit add skill small-business/online-course-creator
+npx uitkit add skill small-business/newsletter-publisher
+npx uitkit add skill productivity/lit-review
 
 # Installeer de wetenschappelijke onderzoeker-agent
-npx claudient add agent roles/scientific-researcher
+npx uitkit add agent roles/scientific-researcher
 ```
 
 ---
@@ -164,7 +164,7 @@ Lengte: [kort — 150 woorden / volledig — 300 woorden]
 ## 30-dagenplan (nieuwe docenten of nieuwe cursus)
 
 ### Week 1 — Lesplanningsfundament
-- Installeer alle docentvaardigheden: `npx claudient add skill productivity/[naam]`
+- Installeer alle docentvaardigheden: `npx uitkit add skill productivity/[naam]`
 - Gebruik `/lesson-planner` om je volgende 3 lessen te plannen — vergelijk dit met wat je normaal doet
 - Voer de schrijver van leerdoelstellingen uit voor elke les — scherp vage doelen aan tot meetbare uitkomsten
 - Maak je eerste exitticket en gebruik het in de les

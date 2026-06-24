@@ -114,7 +114,7 @@ This file outlines the core invariants and rules of the road for the **${project
   console.log(`  📄 SPEC.md -> ${YELLOW}${specPath}${RESET}`);
   console.log(`  📄 CONSTITUTION.md -> ${YELLOW}${constPath}${RESET}`);
   console.log(`\n${BOLD}Tip:${RESET} Install the \`constitution-guard\` hook to automatically enforce these invariants in Claude Code:`);
-  console.log(`  ${CYAN}npx claudient add hooks${RESET}\n`);
+  console.log(`  ${CYAN}npx uitkit add hooks${RESET}\n`);
 }
 
 main().catch(err => {

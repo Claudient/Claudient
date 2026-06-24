@@ -1,8 +1,8 @@
-# Claudient Docker Architecture
+# UitKit Docker Architecture
 
 ## Overview
 
-This document describes the containerization architecture of Claudient, including the multi-stage build process, health monitoring system, and deployment strategies.
+This document describes the containerization architecture of UitKit, including the multi-stage build process, health monitoring system, and deployment strategies.
 
 ## Build Architecture
 
@@ -210,7 +210,7 @@ volumes:
 ```yaml
 networks:
   default:
-    name: claudient-network
+    name: uitkit-network
     driver: bridge
 ```
 
@@ -218,21 +218,21 @@ networks:
 
 ```yaml
 services:
-  claudient:
+  uitkit:
     # Main service: runs health server
     # Mounts .claude and workspace
     # Port mapping: 9000, 4321, 3000
     
   dashboard:
     # Optional dev service: runs Astro dev server
-    # Depends on claudient (health check)
+    # Depends on uitkit (health check)
     # Port mapping: 4321
     # Mounts site directory for live reload
 ```
 
 ### Service Dependencies
 ```
-dashboard → claudient (health check)
+dashboard → uitkit (health check)
 ```
 
 ## Kubernetes Integration
@@ -241,7 +241,7 @@ dashboard → claudient (health check)
 ```yaml
 Deployment:
   - Pod:
-      - Container: claudient
+      - Container: uitkit
         - livenessProbe: /health (30s interval)
         - readinessProbe: /ready (10s interval)
         - resources: requests/limits
@@ -258,14 +258,14 @@ Service:
 
 ### Local Build
 ```bash
-docker build -f docker/Dockerfile -t claudient:latest .
+docker build -f docker/Dockerfile -t uitkit:latest .
 ```
 
 ### Multi-architecture Build
 ```bash
 docker buildx build \
   --platform linux/amd64,linux/arm64 \
-  -t claudient:latest \
+  -t uitkit:latest \
   -f docker/Dockerfile \
   --push .
 ```
@@ -312,12 +312,12 @@ npm scripts or custom commands
 
 ### Container Logs
 ```bash
-docker logs -f claudient
+docker logs -f uitkit
 ```
 
 ### Resource Stats
 ```bash
-docker stats claudient
+docker stats uitkit
 ```
 
 ### Health Status
@@ -327,16 +327,16 @@ curl http://localhost:9000/health
 
 ### Process Inspection
 ```bash
-docker exec claudient ps aux
-docker exec claudient node -e "console.log(process.memoryUsage())"
+docker exec uitkit ps aux
+docker exec uitkit node -e "console.log(process.memoryUsage())"
 ```
 
 ## Troubleshooting
 
 ### Health Check Failures
-- Verify CLI files exist: `docker exec claudient ls /app/scripts/cli.js`
-- Check site build: `docker exec claudient ls /app/site/dist`
-- Inspect health server: `docker exec claudient ps aux`
+- Verify CLI files exist: `docker exec uitkit ls /app/scripts/cli.js`
+- Check site build: `docker exec uitkit ls /app/site/dist`
+- Inspect health server: `docker exec uitkit ps aux`
 
 ### Port Conflicts
 - Map to different port: `-p 19000:9000`
@@ -365,7 +365,7 @@ docker exec claudient node -e "console.log(process.memoryUsage())"
 # After: Single 500MB image
 
 # Copy existing .claude directory
-docker run -v ~/.claude:/root/.claude claudient:latest
+docker run -v ~/.claude:/root/.claude uitkit:latest
 
 # All skills/agents/hooks preserved
 ```
@@ -373,7 +373,7 @@ docker run -v ~/.claude:/root/.claude claudient:latest
 ### To Kubernetes
 ```bash
 # Push to registry
-docker push myregistry/claudient:latest
+docker push myregistry/uitkit:latest
 
 # Deploy with provided YAML
 kubectl apply -f docker/k8s-deployment.yaml
@@ -387,7 +387,7 @@ kubectl apply -f docker/k8s-deployment.yaml
 docker build --no-cache -f docker/Dockerfile .
 
 # Test before pushing
-docker run --rm claudient:latest npm test
+docker run --rm uitkit:latest npm test
 ```
 
 ### Dependency Management

@@ -23,7 +23,7 @@ Ingenieros, fundadores y PM que construyen productos donde la IA es una caracter
 
 **Tradeoffs por defecto:** Prefiere ingeniería de prompts antes que RAG, RAG antes que fine-tuning. Prefiere Claude Haiku para rutas sensibles a la latencia; Sonnet u Opus para las críticas en calidad. Construye evaluaciones antes de optimizar.
 
-## Habilidades y agentes recomendados de Claudient
+## Habilidades y agentes recomendados de UitKit
 - `ai-engineering` — integración LLM central, diseño de agentes, canalizaciones RAG
 - `backend` — patrones de envolvimiento de API, streaming, manejo asincrónico
 - `devops-infra` — servicio de modelos, monitoreo de costos, manejo de límites de velocidad

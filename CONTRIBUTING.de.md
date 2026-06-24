@@ -1,8 +1,8 @@
 > 🇩🇪 Deutsche Version. [Englische Version](CONTRIBUTING.md).
 
-# Zu Claudient beitragen
+# Zu UitKit beitragen
 
-Claudient wächst durch Beiträge der Community. Wenn Sie einen Skill, einen Agent, einen Hook, einen Workflow oder einen Prompt haben, der Claude Code für Sie spürbar verbessert hat — gehört er hierher.
+UitKit wächst durch Beiträge der Community. Wenn Sie einen Skill, einen Agent, einen Hook, einen Workflow oder einen Prompt haben, der Claude Code für Sie spürbar verbessert hat — gehört er hierher.
 
 ---
 
@@ -119,6 +119,6 @@ Unterstützte Sprachen: Englisch (primär), Französisch (`fr/`), Deutsch (`de/`
 
 ## Mit uns arbeiten
 
-Claudient wird von [Uitbreiden](https://uitbreiden.com/) unterstützt — wir entwickeln KI-Produkte mit Entwickler-Communities und liefern B2B-KI-Lösungen. Wenn Sie über das Beitragen zu diesem Repository hinausgehen und tatsächlich KI-Produkte oder B2B-Lösungen mit uns entwickeln möchten, nehmen Sie Kontakt auf.
+UitKit wird von [Uitbreiden](https://uitbreiden.com/) unterstützt — wir entwickeln KI-Produkte mit Entwickler-Communities und liefern B2B-KI-Lösungen. Wenn Sie über das Beitragen zu diesem Repository hinausgehen und tatsächlich KI-Produkte oder B2B-Lösungen mit uns entwickeln möchten, nehmen Sie Kontakt auf.
 
 **[uitbreiden.com](https://uitbreiden.com/) · [Reddit](https://www.reddit.com/r/uitbreiden/) · [YouTube](https://www.youtube.com/@UITBREIDEN)**

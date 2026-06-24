@@ -12,13 +12,13 @@ assignees: ''
 
 ## How to reproduce
 
-1. Run: `npx claudient ...`
+1. Run: `npx uitkit ...`
 2. ...
 3. ...
 
 ## Environment
 
-- **Claudient version**: (check `package.json` version)
+- **UitKit version**: (check `package.json` version)
 - **Claude Code version**: (check `claude --version`)
 - **OS**: macOS / Linux / WSL
 - **Node.js version**: (run `node -v`)
@@ -28,7 +28,7 @@ assignees: ''
 <!-- Which skill, agent, hook, or CLI command is broken? -->
 
 - File path: `skills/...` or `agents/...` or `hooks/...`
-- Or CLI command: `npx claudient ...`
+- Or CLI command: `npx uitkit ...`
 
 ## Expected behavior
 

@@ -8,7 +8,7 @@ updated: 2026-06-15
 
 ## Quand l'activer
 
-- **Avant le renouvellement de la certification** — auditez le contenu de Claudient pour assurer que tous les fichiers sont actuels et défendables
+- **Avant le renouvellement de la certification** — auditez le contenu de UitKit pour assurer que tous les fichiers sont actuels et défendables
 - **Avant la publication d'une nouvelle version ou mise à jour majeure** — vérifiez la précision de la documentation
 - **Cycle de maintenance trimestriel** — identifiez le contenu obsolète qui doit être rafraîchi (tous les 3 mois)
 - **Après une version majeure du modèle Claude** — signalisez les conseils potentiellement obsolètes dans les compétences et les flux de travail
@@ -151,7 +151,7 @@ En fonction des résultats de l'audit :
 
 ### Scénario : Audit pré-certification
 
-Avant de certifier Claudient comme outil de production, vous souhaitez vous assurer que tout le contenu est actuel.
+Avant de certifier UitKit comme outil de production, vous souhaitez vous assurer que tout le contenu est actuel.
 
 ### Exécution :
 

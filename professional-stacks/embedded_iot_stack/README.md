@@ -5,7 +5,7 @@ Embedded systems and IoT development workspace — firmware, RTOS, BLE, sensors,
 ## Quick Start
 
 ```bash
-npx claudient add embedded_iot_stack
+npx uitkit add embedded_iot_stack
 ```
 
 ## Skills

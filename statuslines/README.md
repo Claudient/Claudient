@@ -41,11 +41,11 @@ If `jq` is missing, scripts print `[no jq]` and exit cleanly — Claude Code nev
 
 | Script | Focus | Sample output |
 |---|---|---|
-| `minimal.sh` | Model + dir + branch | `[sonnet] claudient main` |
-| `full.sh` | Everything in one line | `[sonnet] claudient:main | $0.03 | +42/-5 | ▓▓░░░░░░░░ 20%` |
+| `minimal.sh` | Model + dir + branch | `[sonnet] uitkit main` |
+| `full.sh` | Everything in one line | `[sonnet] uitkit:main | $0.03 | +42/-5 | ▓▓░░░░░░░░ 20%` |
 | `cost-watch.sh` | Spend + lines + colored context | `$0.03 | +42/-5 lines | CTX 20%` |
 | `context-budget.sh` | Visual bar + token count + effort | `CTX [▓▓▓▓░░░░░░] 47% | 94K/200K tokens | effort:high` |
-| `git-focused.sh` | Branch, worktree flag, version | `claudient main [worktree] | v1.2.3` |
+| `git-focused.sh` | Branch, worktree flag, version | `uitkit main [worktree] | v1.2.3` |
 | `rate-limit.sh` | 5h rate limit bar + model + cost | `5h:[▓▓▓░░] 34% | [sonnet] $0.03` |
 
 ---

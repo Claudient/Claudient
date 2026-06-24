@@ -198,7 +198,7 @@ Deploy log: 5,234 lines → 12 relevant lines
 
 Timeline of failure:
 1. [14:02:12] Build: 120/120 modules ✓ (4.2s)
-2. [14:02:18] Docker image built: claudient:1.11.0-rc1 (245MB)
+2. [14:02:18] Docker image built: uitkit:1.11.0-rc1 (245MB)
 3. [14:02:45] Deploy to staging started
 4. [14:03:12] Health check: /api/health → 200 ✓
 5. [14:03:15] Database migration started

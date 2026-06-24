@@ -18,20 +18,20 @@ Vous êtes un Chargé de Compte (AE) qui gère un portefeuille de deals mid-mark
 
 ```bash
 # Installer toutes les compétences AE
-npx claudient add skills gtm
+npx uitkit add skills gtm
 
 # Ou choisir à la carte :
-npx claudient add skill gtm/deal-review
-npx claudient add skill gtm/champion-builder
-npx claudient add skill gtm/mutual-success-plan
-npx claudient add skill gtm/deal-desk
-npx claudient add skill gtm/rfp-responder
-npx claudient add skill gtm/commercial-forecaster
-npx claudient add skill gtm/crm-hygiene
-npx claudient add skill gtm/hubspot
-npx claudient add skill gtm/revenue-operations
-npx claudient add agents advisors/cro-advisor
-npx claudient add agents roles/competitive-analyst
+npx uitkit add skill gtm/deal-review
+npx uitkit add skill gtm/champion-builder
+npx uitkit add skill gtm/mutual-success-plan
+npx uitkit add skill gtm/deal-desk
+npx uitkit add skill gtm/rfp-responder
+npx uitkit add skill gtm/commercial-forecaster
+npx uitkit add skill gtm/crm-hygiene
+npx uitkit add skill gtm/hubspot
+npx uitkit add skill gtm/revenue-operations
+npx uitkit add agents advisors/cro-advisor
+npx uitkit add agents roles/competitive-analyst
 ```
 
 ---
@@ -204,7 +204,7 @@ Pour chaque deal stagnant : recommandez une action — mettre à jour / désacti
 ## Plan de montée en compétence sur 30 jours (nouveaux AE ou changement de segment)
 
 ### Semaine 1 — Installation et inventaire des deals
-- Installez toutes les compétences GTM : `npx claudient add skills gtm`
+- Installez toutes les compétences GTM : `npx uitkit add skills gtm`
 - Connectez HubSpot via MCP (voir les intégrations d'outils ci-dessous)
 - Exécutez `/deal-review` sur chaque deal de votre pipeline hérité — obtenez un score MEDDPICC de référence
 - Exécutez `/commercial-forecaster` sur l'ensemble de votre pipeline — identifiez quels deals sont réels vs. stagnants

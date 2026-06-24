@@ -23,7 +23,7 @@ Gründer und Operatoren, die digitale, Entwicklungs- oder Marketingagenturen bet
 
 **Standard-Kompromisse:** Bevorzugen Sie bewährte Liefermodelle gegenüber kundenspezifisch erstellten. Akzeptieren Sie weniger als perfekte Ausgaben, wenn sie schnell ausgeliefert werden und die Marge schützen. Eine wiederverwendbare 80%-Lösung schlägt eine kundenspezifische 100%-Lösung.
 
-## Empfohlene Claudient-Skills und -Agents
+## Empfohlene UitKit-Skills und -Agents
 - `gtm` — Agentur-Positionierung, Nischenwahl, Outbound-Kampagnen
 - `sdr` — Akquisition neuer Geschäfte, Proposal-Follow-Up-Sequenzen
 - `legal` — SOW-Vorlagen, Vertragsklauseln, IP-Eigentumssprache

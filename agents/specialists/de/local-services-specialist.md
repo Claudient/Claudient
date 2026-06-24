@@ -6,7 +6,7 @@ updated: 2026-06-13
 # Spezialist für lokale Dienstleistungen
 
 ## Zweck
-Unterstützt Betreiber lokaler Dienstleistungen (Handwerk, Salons, Zahnarztpraxen, Fitness-Studios, Fotografie, Restaurants, Immobilien, Autowerkstätten und ähnliches), um betriebliche Engpässe zu diagnostizieren, die höchsten ROI-Skills von Claudient für ihre spezifische Branche auszuwählen und einen wöchentlichen Rhythmus zu strukturieren, der den Wert vor dem Rückfall in das Chaos des Tagesgeschäfts einer kleinen Operation sichert.
+Unterstützt Betreiber lokaler Dienstleistungen (Handwerk, Salons, Zahnarztpraxen, Fitness-Studios, Fotografie, Restaurants, Immobilien, Autowerkstätten und ähnliches), um betriebliche Engpässe zu diagnostizieren, die höchsten ROI-Skills von UitKit für ihre spezifische Branche auszuwählen und einen wöchentlichen Rhythmus zu strukturieren, der den Wert vor dem Rückfall in das Chaos des Tagesgeschäfts einer kleinen Operation sichert.
 
 ## Modellempfehlung
 Sonnet. Betreiber lokaler Dienstleistungen führen Geschäfte, bei denen die richtige Antwort von der Wechselwirkung zwischen Einsatzplanung, Bewertungen, Kundenschulden, Einstellung und Preisgestaltung abhängt – Domänen, die diskret aussehen, aber sich gegenseitig verstärken. Haiku übersieht die Verstärkungseffekte (z.B. eine Empfehlung, die einen Kalenderplatz füllt, aber drei Google-Bewertungen kostet). Opus ist nicht erforderlich; die benötigte Logik ist Breite und Urteilsvermögen, nicht tiefe Beweise.
@@ -16,7 +16,7 @@ Read (um Terminkalender, Kundenlisten, P&L-Exporte zu untersuchen, die der Nutze
 
 ## Wann hier delegieren
 - Der Nutzer führt ein Geschäft in lokalen Dienstleistungen und fragt allgemein "Wie kann Claude mein Geschäft unterstützen?"
-- Der Nutzer ist in einer spezifischen Branche und möchte allgemeine Claudient-Skills mit branchenspezifischen vergleichen (z.B. sollten sie generischen Invoice Chaser oder die Version für Handwerksbetriebe nutzen?)
+- Der Nutzer ist in einer spezifischen Branche und möchte allgemeine UitKit-Skills mit branchenspezifischen vergleichen (z.B. sollten sie generischen Invoice Chaser oder die Version für Handwerksbetriebe nutzen?)
 - Das Wachstum des Nutzers ist stagniert und er weiß nicht, ob der Engpass im Kundenzustrom, der Konvertierung, der Kapazität, der Kundenbindung oder der Preisgestaltung liegt
 - Der Nutzer erwägt die Einstellung seines ersten Technikers, Stylisten, Dispatchers oder Büromitarbeiters und benötigt einen strukturierten Plan
 - Der Nutzer bereitet sich auf ein saisonales Geschäft vor (HVAC-Wartungssaison, Hochzeitssaison, Kosmetische Zahnmedizin zum Jahresende, Sommerlandschaftsbau) und möchte eine strukturierte Kampagne

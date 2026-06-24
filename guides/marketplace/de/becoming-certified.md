@@ -1,12 +1,12 @@
 # Ihre Stack Zertifizieren
 
-Diese Anleitung führt Sie durch den Schritt-für-Schritt-Prozess der Zertifizierung Ihrer Stack im Claudient Marketplace.
+Diese Anleitung führt Sie durch den Schritt-für-Schritt-Prozess der Zertifizierung Ihrer Stack im UitKit Marketplace.
 
 ## Voraussetzungen
 
 Vor dem Antrag auf Zertifizierung stellen Sie sicher, dass Ihre Stack:
 
-1. **Bereits veröffentlicht** ist im Claudient Marketplace mit positivem Feedback
+1. **Bereits veröffentlicht** ist im UitKit Marketplace mit positivem Feedback
 2. **Die Basis-Kriterien erfüllt** (siehe VETTING.md)
 3. **Ein GitHub-Repository hat** (öffentlich, aktiv, gepflegt)
 4. **Die Mindestanforderungen erfüllt** für Ihre Zielstadium:
@@ -121,7 +121,7 @@ Erstellen Sie ein Dokument mit:
 
 ## Schritt 4: Zertifizierungsüberprüfung Anfordern
 
-Senden Sie eine E-Mail an **marketplace@claudient.dev** mit der Betreffzeile:
+Senden Sie eine E-Mail an **marketplace@uitkit.dev** mit der Betreffzeile:
 
 ```
 Certification Request: [Stack Name] - [Tier] Tier
@@ -212,7 +212,7 @@ Nach der Genehmigung:
 **30 Tage vor dem Ablaufdatum:**
 - Sie erhalten einen Rezertifizierungshinweis
 - Überprüfen Sie, ob die aktuellen Metriken die Stadiums-Anforderungen noch erfüllen
-- Senden Sie die Rezertifizierungsbestätigung an marketplace@claudient.dev
+- Senden Sie die Rezertifizierungsbestätigung an marketplace@uitkit.dev
 
 **Falls die Metriken rückläufig sind:**
 - Stack kann um eine Stadiums abgestuft werden
@@ -237,7 +237,7 @@ Der Erneuerungsprozess ist identisch mit der Erstzertifizierung.
 Zum Upgrade von Bronze zu Silber oder Silber zu Gold:
 
 1. Stellen Sie sicher, dass neue Metriken das Zielstadium erfüllen
-2. Senden Sie eine Upgrade-Anfrage an marketplace@claudient.dev mit aktualiertem Qualitätswert
+2. Senden Sie eine Upgrade-Anfrage an marketplace@uitkit.dev mit aktualiertem Qualitätswert
 3. Das Kernteam verifikert die Metriken (2-3 Geschäftstage)
 4. Nach Genehmigung werden Auflistung und Abzeichen aktualisiert
 
@@ -258,8 +258,8 @@ Falls Ihre Zertifizierung widerrufen wird:
 
 - **Zertifizierungskriterien:** Siehe [certification-criteria.md](./certification-criteria.md)
 - **Stadiums-Details:** Siehe [../CERTIFICATION.md](../CERTIFICATION.md)
-- **Allgemeine Fragen:** marketplace@claudient.dev
-- **Community-Diskussion:** [GitHub Discussions](https://github.com/claudients/claudient/discussions)
+- **Allgemeine Fragen:** marketplace@uitkit.dev
+- **Community-Diskussion:** [GitHub Discussions](https://github.com/uitkits/uitkit/discussions)
 
 ---
 

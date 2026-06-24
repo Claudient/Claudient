@@ -14,7 +14,7 @@ Local services businesses share three operational facts that change how Claude i
 2. **Reviews are existential.** A salon owner whose Google rating drops from 4.7 to 4.4 loses 20% of new client bookings. Review response is not a marketing nice-to-have — it is core operations.
 3. **Most owners are field operators first.** The owner is on a job site, in a chair, behind a counter. They open their phone, not a laptop. Workflows have to be runnable in 5 minutes from a phone.
 
-Claudient's small-business skill set is built around those three facts.
+UitKit's small-business skill set is built around those three facts.
 
 ---
 
@@ -162,7 +162,7 @@ For workflow automation tied to your real business data, yes — significantly. 
 
 ### What if I'm not technical at all?
 
-The Claude for Small Business workflows are point-and-click. The Claudient skills in this repo are activated by typing plain English instructions to Claude. The most technical step is connecting QuickBooks via OAuth, which is a 3-click process.
+The Claude for Small Business workflows are point-and-click. The UitKit skills in this repo are activated by typing plain English instructions to Claude. The most technical step is connecting QuickBooks via OAuth, which is a 3-click process.
 
 ---
 

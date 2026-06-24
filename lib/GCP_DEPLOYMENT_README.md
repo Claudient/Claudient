@@ -59,7 +59,7 @@ Complete Google Cloud Platform deployment automation with support for Cloud Run,
 npm install gcp-deployment
 ```
 
-Or use from Claudient:
+Or use from UitKit:
 ```javascript
 const GCPDeployment = require('./lib/gcp-deployment');
 ```
@@ -514,4 +514,4 @@ MIT
 
 ## Support
 
-For issues and feature requests, visit the Claudient repository.
+For issues and feature requests, visit the UitKit repository.

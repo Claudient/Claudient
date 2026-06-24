@@ -1,12 +1,12 @@
 ---
 name: content-freshness
-description: "Onderhouds-SLA, vervalsdrempels en versnapperingsprocedures voor Claudient-inhoud"
+description: "Onderhouds-SLA, vervalsdrempels en versnapperingsprocedures voor UitKit-inhoud"
 updated: 2026-06-15
 ---
 
-# Claudient Content Freshness SLA
+# UitKit Content Freshness SLA
 
-Onderhoudsnormen en -procedures voor het actueel en nauwkeurig houden van Claudient-inhoud. Deze gids definieert vervalsdrempels, wat per inhoudstype moet worden gecontroleerd en het frontmatter-updateproces.
+Onderhoudsnormen en -procedures voor het actueel en nauwkeurig houden van UitKit-inhoud. Deze gids definieert vervalsdrempels, wat per inhoudstype moet worden gecontroleerd en het frontmatter-updateproces.
 
 ---
 
@@ -172,7 +172,7 @@ Wanneer u een bestand toevoegt of wijzigt:
 
 3. **Controleer koppelingen:**
    - Externe URL's in het bestand mogen geen 404 zijn
-   - Interne koppelingen (naar andere bestanden in Claudient) moeten naar bestaande bestanden verwijzen
+   - Interne koppelingen (naar andere bestanden in UitKit) moeten naar bestaande bestanden verwijzen
 
 4. **Commit:**
    ```bash

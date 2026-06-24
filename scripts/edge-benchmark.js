@@ -245,7 +245,7 @@ class EdgeBenchmark {
     // Sync multiple times
     for (let i = 0; i < syncCount; i++) {
       const start = Date.now();
-      await node.syncWithCloud('https://api.claudient.local/sync');
+      await node.syncWithCloud('https://api.uitkit.local/sync');
       const syncTime = Date.now() - start;
       syncTimes.push(syncTime);
 

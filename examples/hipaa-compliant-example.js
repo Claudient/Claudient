@@ -3,7 +3,7 @@
 /**
  * hipaa-compliant-example.js
  *
- * Example usage of HipaaCompliantSystem for Claudient deployments.
+ * Example usage of HipaaCompliantSystem for UitKit deployments.
  *
  * Demonstrates:
  *   - System initialization with configuration
@@ -30,10 +30,10 @@ const {
 
 console.log('=== HIPAA-Compliant System Initialization ===\n');
 
-// Configuration for a healthcare provider using Claudient
+// Configuration for a healthcare provider using UitKit
 const config = {
-  encryptionKeyPath: path.join('/tmp/claudient', 'encryption.key'),
-  auditLogPath: path.join('/tmp/claudient', 'audit.log'),
+  encryptionKeyPath: path.join('/tmp/uitkit', 'encryption.key'),
+  auditLogPath: path.join('/tmp/uitkit', 'audit.log'),
   baaVerified: true,
   complianceMode: COMPLIANCE_MODES.STANDARD,
   dataClassification: {
@@ -107,7 +107,7 @@ console.log(`  Data Hash: ${encrypted.metadata.dataHash}`);
 // Create authenticated session
 const session = system.createSession('dr.jane.doe', {
   ipAddress: '192.168.1.100',
-  userAgent: 'Claudient/1.0',
+  userAgent: 'UitKit/1.0',
   permissions: ['read_phi', 'write_audit']
 });
 
@@ -296,7 +296,7 @@ const sessions = {};
 users.forEach(user => {
   const session = system.createSession(user.username, {
     ipAddress: '192.168.1.' + Math.floor(Math.random() * 255),
-    userAgent: 'Claudient-Client/1.0',
+    userAgent: 'UitKit-Client/1.0',
     permissions: user.permissions
   });
 

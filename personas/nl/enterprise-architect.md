@@ -23,7 +23,7 @@ Principal of staff engineers, solution architects en enterprise architects in be
 
 **Standaard afwegingen:** Geef de voorkeur aan op standaarden gebaseerde oplossingen boven nieuwe. Accepteer meer configuratieoverhead voor betere observeerbaarheid en auditability. Vendor lock-in is een kosten, geen dealbreaker.
 
-## Aanbevolen Claudient skills & agents
+## Aanbevolen UitKit skills & agents
 - `devops-infra` — platform engineering, IaC, multi-cloud strategie
 - `security-review` — threat modeling, compliance mapping, zero-trust design
 - `data-analysis` — data platform architectuur, governance, lineage

@@ -191,11 +191,11 @@ touch .claude/commands/deadline-check.md
 touch .claude/commands/cite-check.md
 touch .claude/commands/client-update.md
 
-# Installeer relevante Claudient-vaardigheden
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/vendor-evaluator
+# Installeer relevante UitKit-vaardigheden
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/vendor-evaluator
 
 echo "Steiger voltooid. Vul CLAUDE.md in vóór eerste gebruik."
 ```
@@ -394,20 +394,20 @@ Sla gesloten zaakdocumenten niet op in deze werkplek.
 
 ```bash
 # Document en procesworkflows
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/vendor-evaluator
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/vendor-evaluator
 
 # Onderzoeks- en analysegegevens
-npx claudient add skill productivity/exec-briefing
+npx uitkit add skill productivity/exec-briefing
 
 # Cliënt- en zakelijke ontwikkeling
-npx claudient add skill productivity/comp-benchmarker
-npx claudient add skill productivity/investor-update
+npx uitkit add skill productivity/comp-benchmarker
+npx uitkit add skill productivity/investor-update
 
 # Facturering en tijdbeheer
-npx claudient add skill productivity/engineering-strategy
+npx uitkit add skill productivity/engineering-strategy
 ```
 
 ## Gerelateerd

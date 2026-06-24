@@ -191,20 +191,20 @@ touch .claude/CLAUDE.md
 touch .claude/settings.json
 
 # Podcast-Produktions-Skills installieren
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill data-ml/stakeholder-report
-npx claudient add skill marketing/social-media-manager
-npx claudient add skill small-business/content-repurposer
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill data-ml/stakeholder-report
+npx uitkit add skill marketing/social-media-manager
+npx uitkit add skill small-business/content-repurposer
 
 # Benutzerdefinierte Slash-Befehle hinzufügen
-npx claudient add command new-episode
-npx claudient add command show-notes
-npx claudient add command social-promo
-npx claudient add command guest-outreach
-npx claudient add command sponsor-pitch
-npx claudient add command newsletter-episode
-npx claudient add command performance-review
+npx uitkit add command new-episode
+npx uitkit add command show-notes
+npx uitkit add command social-promo
+npx uitkit add command guest-outreach
+npx uitkit add command sponsor-pitch
+npx uitkit add command newsletter-episode
+npx uitkit add command performance-review
 
 echo "Podcast Studio-Workspace bereit."
 ```
@@ -397,13 +397,13 @@ Beispiele: ep042-sarah-jones, ep043-ai-in-healthcare, ep044-solo-q-and-a
 ## Skills zu installieren
 
 ```bash
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/vendor-evaluator
-npx claudient add skill data-ml/stakeholder-report
-npx claudient add skill marketing/social-media-manager
-npx claudient add skill small-business/content-repurposer
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/vendor-evaluator
+npx uitkit add skill data-ml/stakeholder-report
+npx uitkit add skill marketing/social-media-manager
+npx uitkit add skill small-business/content-repurposer
 ```
 
 ## Verwandt

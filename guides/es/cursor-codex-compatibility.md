@@ -1,14 +1,14 @@
-# Usar skills de Claudient en Cursor, Windsurf, Copilot y Codex
+# Usar skills de UitKit en Cursor, Windsurf, Copilot y Codex
 
-Los skills de Claudient son archivos Markdown simples. Nada en su formato es específico de Claude Code — sin binarios, sin sintaxis propietaria, sin llamadas API. Eso los hace portables a todas las herramientas principales de codificación IA con un mecanismo de inyección de reglas o contexto.
+Los skills de UitKit son archivos Markdown simples. Nada en su formato es específico de Claude Code — sin binarios, sin sintaxis propietaria, sin llamadas API. Eso los hace portables a todas las herramientas principales de codificación IA con un mecanismo de inyección de reglas o contexto.
 
-Esta guía cubre la mecánica de trasplante de un skill de Claudient a Cursor, Windsurf, GitHub Copilot y OpenAI Codex CLI — qué funciona, qué no funciona y dónde trazar la línea.
+Esta guía cubre la mecánica de trasplante de un skill de UitKit a Cursor, Windsurf, GitHub Copilot y OpenAI Codex CLI — qué funciona, qué no funciona y dónde trazar la línea.
 
 ---
 
 ## Por qué funciona
 
-Un skill de Claudient es cuatro secciones Markdown: `When to activate`, `When NOT to use`, `Instructions` y `Example`. El modelo lee esto como texto plano y ajusta su comportamiento en consecuencia.
+Un skill de UitKit es cuatro secciones Markdown: `When to activate`, `When NOT to use`, `Instructions` y `Example`. El modelo lee esto como texto plano y ajusta su comportamiento en consecuencia.
 
 Eso es exactamente lo que hace cada herramienta de codificación IA cuando coloca texto en su archivo de reglas o instrucciones — el texto se convierte en parte del prompt del sistema antes de que se procese su solicitud. El formato de skill ya está optimizado para esto:
 
@@ -16,7 +16,7 @@ Eso es exactamente lo que hace cada herramienta de codificación IA cuando coloc
 - `Instructions` contiene lenguaje directivo ("siempre haz X", "nunca hagas Y") en lugar de lenguaje de documentación
 - `Example` ancla el modelo en la estructura de salida esperada
 
-Cualquier modelo que acepte un prompt del sistema o un archivo de instrucciones personalizado puede consumir un skill de Claudient sin modificación. Pierdes características específicas de Claude Code (invocación de comandos slash, desencadenadores de hooks, delegación de subagentes), pero la guía de comportamiento central se transfiere completamente.
+Cualquier modelo que acepte un prompt del sistema o un archivo de instrucciones personalizado puede consumir un skill de UitKit sin modificación. Pierdes características específicas de Claude Code (invocación de comandos slash, desencadenadores de hooks, delegación de subagentes), pero la guía de comportamiento central se transfiere completamente.
 
 ---
 
@@ -52,7 +52,7 @@ your-project/
 └── src/
 ```
 
-### Convertir un skill de Claudient a una regla de Cursor
+### Convertir un skill de UitKit a una regla de Cursor
 
 1. Copie el archivo `.md` de `skills/` en `.cursor/rules/`
 2. Cambie la extensión de `.md` a `.mdc`
@@ -106,7 +106,7 @@ your-project/
 └── package.json
 ```
 
-### Convertir un skill de Claudient
+### Convertir un skill de UitKit
 
 Pegue el contenido del skill directamente en `.windsurfrules`. Para múltiples skills, concatene con una regla horizontal (`---`) como separador:
 
@@ -148,7 +148,7 @@ your-project/
 
 El nombre del archivo debe ser exactamente `copilot-instructions.md`. Copilot lo lee automáticamente para cualquier repositorio donde esté presente.
 
-### Convertir un skill de Claudient
+### Convertir un skill de UitKit
 
 Pegue el contenido del skill en `copilot-instructions.md`. El formato de cuatro secciones es entendido por los modelos de clase GPT-4 que potencian Copilot — la sección `When NOT to use` es particularmente efectiva para prevenir que Copilot aplique patrones en el contexto incorrecto.
 
@@ -201,7 +201,7 @@ your-project/
 └── src/
 ```
 
-### Convertir un skill de Claudient
+### Convertir un skill de UitKit
 
 Pegue el skill directamente en `AGENTS.md`. Codex lee este archivo al iniciar la sesión e lo incluye en el prompt del sistema para cada solicitud en ese directorio.
 
@@ -307,6 +307,6 @@ Para reglas a nivel de proyecto, Continue soporta bloques `@Rules` en `.continue
 7. Pruebe con una tarea que coincida con `When to activate` — verifique que el modelo aplique patrones de `Instructions`
 8. Pruebe con una tarea que coincida con `When NOT to use` — verifique que el modelo no aplique los patrones
 
-La estructura de cuatro secciones fue diseñada para ser autónoma. Un skill de Claudient bien escrito debe requerir menos de 10 minutos para portarse a cualquiera de estas herramientas.
+La estructura de cuatro secciones fue diseñada para ser autónoma. Un skill de UitKit bien escrito debe requerir menos de 10 minutos para portarse a cualquiera de estas herramientas.
 
 ---

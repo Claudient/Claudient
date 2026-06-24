@@ -1,6 +1,6 @@
 # GitHub Actions Workflows
 
-This directory contains CI/CD automation for Claudient repository.
+This directory contains CI/CD automation for UitKit repository.
 
 ## Available Workflows
 
@@ -25,8 +25,8 @@ node test/features/validate-features.js
 
 ---
 
-### 2. claudient-ci.yml
-**Claudient CI Validation** - Core system validation
+### 2. uitkit-ci.yml
+**UitKit CI Validation** - Core system validation
 
 - Installs dependencies
 - Runs core codebase validations
@@ -75,7 +75,7 @@ npm test
 ## Workflow Status
 
 All workflows run independently but can be viewed in the Actions tab:
-https://github.com/UitbreidenOS/Claudient/actions
+https://github.com/UitbreidenOS/UitKit/actions
 
 ## Common Tasks
 
@@ -128,7 +128,7 @@ See individual workflow files for exact permission requirements.
 |----------|-------|----------|
 | feature-audit | Missing files in references | Update paths in feature-presence.txt to be relative to repo root |
 | feature-audit | Line count mismatch | Sync feature-presence.txt and feature-inventory.txt |
-| claudient-ci | Tests timeout | Check for infinite loops; increase timeout if needed |
+| uitkit-ci | Tests timeout | Check for infinite loops; increase timeout if needed |
 | validate.yml | Broken markdown links | Update links or add exceptions to .markdown-link-check.json |
 
 ## Adding New Workflows

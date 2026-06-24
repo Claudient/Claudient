@@ -197,4 +197,4 @@ Track and report on:
 
 ---
 
-Built with [Claudient](https://github.com/UitbreidenOS/Claudient) · Community Builder Edition
+Built with [UitKit](https://github.com/UitbreidenOS/UitKit) · Community Builder Edition

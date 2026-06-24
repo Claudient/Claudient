@@ -18,23 +18,23 @@ Eres un profesional de finanzas — analista de FP&A, gerente de finanzas, VP de
 
 ```bash
 # Instalar la pila financiera completa
-npx claudient add skills finance
-npx claudient add skills gtm/commercial-forecaster
-npx claudient add skills gtm/revenue-operations
-npx claudient add agents advisors/cfo-advisor
-npx claudient add agents roles/quant-analyst
+npx uitkit add skills finance
+npx uitkit add skills gtm/commercial-forecaster
+npx uitkit add skills gtm/revenue-operations
+npx uitkit add agents advisors/cfo-advisor
+npx uitkit add agents roles/quant-analyst
 
 # O seleccionar individualmente:
-npx claudient add skill finance/dcf-model
-npx claudient add skill finance/3-statement-model
-npx claudient add skill finance/financial-plan
-npx claudient add skill finance/ic-memo
-npx claudient add skill finance/pitch-deck
-npx claudient add skill finance/gl-reconciler
-npx claudient add skill finance/board-pack-builder
-npx claudient add skill finance/budget-vs-actual
-npx claudient add skill gtm/commercial-forecaster
-npx claudient add skill gtm/revenue-operations
+npx uitkit add skill finance/dcf-model
+npx uitkit add skill finance/3-statement-model
+npx uitkit add skill finance/financial-plan
+npx uitkit add skill finance/ic-memo
+npx uitkit add skill finance/pitch-deck
+npx uitkit add skill finance/gl-reconciler
+npx uitkit add skill finance/board-pack-builder
+npx uitkit add skill finance/budget-vs-actual
+npx uitkit add skill gtm/commercial-forecaster
+npx uitkit add skill gtm/revenue-operations
 ```
 
 ---
@@ -195,7 +195,7 @@ pista de efectivo revisada en cada escenario.
 ## Plan de 30 días (nuevos analistas financieros)
 
 ### Semana 1 — Conocer el negocio
-- Instala todas las habilidades financieras: `npx claudient add skills finance`
+- Instala todas las habilidades financieras: `npx uitkit add skills finance`
 - Ejecuta `/gl-reconciler` en el cierre del mes pasado — comprende el plan de cuentas
 - Ejecuta `/budget-vs-actual` en los últimos 3 meses de reales — identifica los patrones
 - Lee los últimos 3 paquetes del consejo — comprende la narrativa que el CFO ha estado contando

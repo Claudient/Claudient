@@ -18,7 +18,7 @@ const TARGETS = [
 
 function printUsage() {
   console.log(`
-Claudient Translation Engine (Gemini Powered)
+UitKit Translation Engine (Gemini Powered)
 
 Usage:
   node scripts/translate-assets.js [options]

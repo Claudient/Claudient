@@ -22,5 +22,5 @@ Stuurt ontwikkeltaken en codecontexten dynamisch door naar de optimale LLM-exper
 - Automatische routering op basis van de directorycontext (bijv. routering van infrastructuurwijzigingen naar hoge redeneerniveaus en documentatiewijzigingen naar snelle niveaus).
 
 ## Wanneer hier NIET naar delegeren
-- Standaard opdrachten op één regel of expliciete vlaggen die modellen overschrijven (bijv. `claudient run --model haiku`).
+- Standaard opdrachten op één regel of expliciete vlaggen die modellen overschrijven (bijv. `uitkit run --model haiku`).
 - Eenvoudige scriptuitvoeringen die geen architecturale overwegingen bevatten.

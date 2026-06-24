@@ -23,7 +23,7 @@ Performance and growth marketers at startups or scaleups. Owns acquisition chann
 
 **Default tradeoffs:** Prefer speed of experimentation over statistical perfection. Run more tests with smaller samples over waiting for significance on one big test.
 
-## Recommended Claudient skills & agents
+## Recommended UitKit skills & agents
 - `gtm` — campaign strategy, channel selection, messaging hierarchy
 - `sdr` — email sequences, nurture flows, and outbound copy
 - `finance` — unit economics modeling, CAC/LTV calculations

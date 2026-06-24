@@ -1,6 +1,6 @@
-# HIPAA Integration Guide for Claudient
+# HIPAA Integration Guide for UitKit
 
-Step-by-step guide for integrating HIPAA compliance into your Claudient deployment.
+Step-by-step guide for integrating HIPAA compliance into your UitKit deployment.
 
 ## Step 1: Legal & Governance Setup
 
@@ -56,12 +56,12 @@ Required documents:
 
 ```bash
 # Create secure directory structure
-mkdir -p /var/claudient/{keys,logs,backups}
+mkdir -p /var/uitkit/{keys,logs,backups}
 
 # Set restrictive permissions
-chmod 700 /var/claudient/keys
-chmod 700 /var/claudient/logs
-chmod 700 /var/claudient/backups
+chmod 700 /var/uitkit/keys
+chmod 700 /var/uitkit/logs
+chmod 700 /var/uitkit/backups
 
 # Encrypt the partition (recommended)
 # Use full-disk encryption on filesystem
@@ -77,12 +77,12 @@ chmod 700 /var/claudient/backups
 
 ```bash
 # Create audit log location
-mkdir -p /var/claudient/logs
-chmod 700 /var/claudient/logs
+mkdir -p /var/uitkit/logs
+chmod 700 /var/uitkit/logs
 
 # Configure log rotation
-cat > /etc/logrotate.d/claudient-audit << EOF
-/var/claudient/logs/audit.log {
+cat > /etc/logrotate.d/uitkit-audit << EOF
+/var/uitkit/logs/audit.log {
     daily
     rotate 2555                 # ~7 years
     compress
@@ -91,8 +91,8 @@ cat > /etc/logrotate.d/claudient-audit << EOF
     create 0600 nobody nobody
     sharedscripts
     postrotate
-        chown nobody:nobody /var/claudient/logs/audit.log*
-        chmod 0600 /var/claudient/logs/audit.log*
+        chown nobody:nobody /var/uitkit/logs/audit.log*
+        chmod 0600 /var/uitkit/logs/audit.log*
     endscript
 }
 EOF
@@ -110,7 +110,7 @@ EOF
 # Backup script example:
 #!/bin/bash
 DATE=$(date +%Y-%m-%d)
-tar czf /secure/vault/keys-$DATE.tar.gz /var/claudient/keys/
+tar czf /secure/vault/keys-$DATE.tar.gz /var/uitkit/keys/
 # Encrypt with passphrase or AWS KMS
 # Copy to secure offsite location
 ```
@@ -153,8 +153,8 @@ module.exports = hipaaSystem;
 
 ```bash
 # .env or .env.production
-HIPAA_KEY_PATH=/var/claudient/keys/encryption.key
-HIPAA_AUDIT_PATH=/var/claudient/logs/audit.log
+HIPAA_KEY_PATH=/var/uitkit/keys/encryption.key
+HIPAA_AUDIT_PATH=/var/uitkit/logs/audit.log
 BAA_VERIFIED=true
 COMPLIANCE_MODE=standard
 LOG_LEVEL=info
@@ -603,15 +603,15 @@ WORKDIR /app
 COPY . .
 
 # Security: Run as non-root
-RUN addgroup -g 1000 claudient && \
-    adduser -D -u 1000 -G claudient claudient
+RUN addgroup -g 1000 uitkit && \
+    adduser -D -u 1000 -G uitkit uitkit
 
 # Secure directories
-RUN mkdir -p /var/claudient/{keys,logs} && \
-    chown -R claudient:claudient /var/claudient && \
-    chmod 700 /var/claudient/keys /var/claudient/logs
+RUN mkdir -p /var/uitkit/{keys,logs} && \
+    chown -R uitkit:uitkit /var/uitkit && \
+    chmod 700 /var/uitkit/keys /var/uitkit/logs
 
-USER claudient
+USER uitkit
 
 CMD ["node", "app.js"]
 ```
@@ -654,23 +654,23 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: claudient-app
+  name: uitkit-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: claudient
+      app: uitkit
   template:
     metadata:
       labels:
-        app: claudient
+        app: uitkit
     spec:
       securityContext:
         runAsNonRoot: true
         runAsUser: 1000
       containers:
-      - name: claudient
-        image: claudient:latest
+      - name: uitkit
+        image: uitkit:latest
         envFrom:
         - configMapRef:
             name: hipaa-config

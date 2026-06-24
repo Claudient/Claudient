@@ -143,4 +143,4 @@ Every action is logged to `session-log.md` with an activity hash to prevent dupl
 
 ---
 
-Built by [tushar2704](https://uitbreiden.com/) · [Claudient](https://github.com/Claudients/Claudient) · [Claude Code](https://claude.com/claude-code)
+Built by [tushar2704](https://uitbreiden.com/) · [UitKit](https://github.com/UitKits/UitKit) · [Claude Code](https://claude.com/claude-code)

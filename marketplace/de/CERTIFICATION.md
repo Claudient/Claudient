@@ -1,6 +1,6 @@
-# Claudient Stack-Zertifizierungs-Stufen
+# UitKit Stack-Zertifizierungs-Stufen
 
-Dieses Dokument definiert die Zertifizierungsstufen für Stacks im Claudient Marketplace. Zertifizierte Stacks haben quantifizierte Qualitätsstandards und Wartungsverpflichtungen erfüllt.
+Dieses Dokument definiert die Zertifizierungsstufen für Stacks im UitKit Marketplace. Zertifizierte Stacks haben quantifizierte Qualitätsstandards und Wartungsverpflichtungen erfüllt.
 
 ## Zertifizierungsstufen
 
@@ -58,7 +58,7 @@ Dieses Dokument definiert die Zertifizierungsstufen für Stacks im Claudient Mar
 - Erfüllt alle Silber-Stufe-Anforderungen
 - Mindestens 200 Installationen über 180 Tage
 - Durchschnittliche Benutzer-Bewertung von 4.5 oder höher
-- Offizielle Betreuer-Billigung (offizieller Claudient-Team-Mitglied oder verifizierten Community-Betreuer mit Erfolgsbilanz)
+- Offizielle Betreuer-Billigung (offizieller UitKit-Team-Mitglied oder verifizierten Community-Betreuer mit Erfolgsbilanz)
 - Umfassende Dokumentation und Beispiele
 - Multi-Sprachen-Support (Minimum: Englisch + 1 zusätzliche Sprache)
 

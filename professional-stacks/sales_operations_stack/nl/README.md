@@ -1,4 +1,4 @@
-Complete. The English Sales Operations Stack README has been translated to Dutch and saved at `/Users/tushar/Desktop/Claudient/sales_operations_stack/nl/README.md`.
+Complete. The English Sales Operations Stack README has been translated to Dutch and saved at `/Users/tushar/Desktop/UitKit/sales_operations_stack/nl/README.md`.
 
 The translation preserves:
 - All markdown structure (headers, tables, code blocks, links)

@@ -24,7 +24,7 @@ Principal oder Staff Engineers, Solution Architects und Enterprise Architects in
 
 **Standard-Tradeoffs:** Bevorzugen Sie standardbasierte Lösungen gegenüber neuartigen. Akzeptieren Sie mehr Konfigurationsaufwand für bessere Observabilität und Auditierbarkeit. Vendor Lock-in ist ein Kostenfaktor, kein Hindernis.
 
-## Empfohlene Claudient-Skills & Agents
+## Empfohlene UitKit-Skills & Agents
 - `devops-infra` — Platform Engineering, IaC, Multi-Cloud-Strategie
 - `security-review` — Threat Modeling, Compliance Mapping, Zero-Trust-Design
 - `data-analysis` — Data Platform Architecture, Governance, Lineage

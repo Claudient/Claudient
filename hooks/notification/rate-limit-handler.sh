@@ -20,7 +20,7 @@ if [[ "$MSG_LOWER" == *"rate limit"* ]] || \
 fi
 
 if [[ "$IS_RATE_LIMIT" == true ]]; then
-  echo "⚠️  RATE LIMIT DETECTED BY CLAUDIENT HOOK ⚠️"
+  echo "⚠️  RATE LIMIT DETECTED BY UITKIT HOOK ⚠️"
   echo "Message: $NOTIFY_MSG"
   echo "Entering Night Shift preservation mode. Pausing execution for 5 minutes to let API limits reset..."
   

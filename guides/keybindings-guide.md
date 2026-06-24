@@ -6,7 +6,7 @@
 
 ## What This Guide Covers
 
-Claude Code ships with sensible defaults but lets you remap nearly every interactive action through a single JSON file at `~/.claude/keybindings.json`. This guide covers the full schema, every available context and action, keystroke syntax edge cases, reserved keys you cannot touch, the four Claudient presets and when to reach for each, live-reload behavior, and a troubleshooting index for every category of failure.
+Claude Code ships with sensible defaults but lets you remap nearly every interactive action through a single JSON file at `~/.claude/keybindings.json`. This guide covers the full schema, every available context and action, keystroke syntax edge cases, reserved keys you cannot touch, the four UitKit presets and when to reach for each, live-reload behavior, and a troubleshooting index for every category of failure.
 
 ---
 
@@ -264,9 +264,9 @@ On Linux, whether `ctrl+shift+<letter>` bindings are passed through depends enti
 
 ---
 
-## The Four Claudient Presets
+## The Four UitKit Presets
 
-These presets live in `keybindings/` in the Claudient repository. Each is a complete `keybindings.json` file you can drop in directly or use as a base for further customization.
+These presets live in `keybindings/` in the UitKit repository. Each is a complete `keybindings.json` file you can drop in directly or use as a base for further customization.
 
 ### `vim.json` — Vim-style navigation
 

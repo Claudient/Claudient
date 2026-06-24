@@ -1,13 +1,13 @@
 # Auto-Skill Discovery System
 
-Automatically discover new skills from the Claudient codebase. Scans JavaScript files, detects reusable patterns, generates Claudient-compliant skill markdown, and validates with automatic testing.
+Automatically discover new skills from the UitKit codebase. Scans JavaScript files, detects reusable patterns, generates UitKit-compliant skill markdown, and validates with automatic testing.
 
 ## Overview
 
 The auto-skill-discovery system enables code-to-skill conversion through:
 
 - **Pattern Detection** — Identifies profilers, validators, formatters, handlers, and more
-- **Skill Generation** — Creates Claudient-compliant `.md` files from discovered functions and classes
+- **Skill Generation** — Creates UitKit-compliant `.md` files from discovered functions and classes
 - **Validation** — Checks generated skills against CLAUDE.md format rules
 - **Testing** — Automatically tests pattern detection, format compliance, and documentation
 - **Reporting** — Produces detailed discovery reports with confidence scores
@@ -95,7 +95,7 @@ Traverses the codebase, analyzes files, and returns discovery objects:
 const scanner = new CodebaseScanner();
 
 // Scan entire codebase
-const discoveries = scanner.scan(CLAUDIENT_ROOT);
+const discoveries = scanner.scan(UITKIT_ROOT);
 // → [{ filePath, patterns, functions, classes, jsDoc, ... }, ...]
 
 // Scan specific directory
@@ -106,7 +106,7 @@ const discoveries = scanner.scan('/path/to/dir', {
 
 Returns discovery objects with:
 - `filePath` — Absolute path to source file
-- `relPath` — Relative path from Claudient root
+- `relPath` — Relative path from UitKit root
 - `patterns` — Detected pattern names
 - `functions` — Extracted function definitions
 - `classes` — Extracted class definitions
@@ -115,7 +115,7 @@ Returns discovery objects with:
 - `hasExports` — Whether file exports anything
 
 #### SkillGenerator
-Converts discoveries into Claudient-compliant skills:
+Converts discoveries into UitKit-compliant skills:
 
 ```javascript
 const generator = new SkillGenerator();
@@ -404,7 +404,7 @@ node tools/auto-skill-discovery.test.js
 node tools/auto-skill-discovery.js [options]
 
 Options:
-  --scan-dir=PATH        Directory to scan (default: Claudient root)
+  --scan-dir=PATH        Directory to scan (default: UitKit root)
   --output=FORMAT        Output format: console, json, md (default: console)
   --test                 Run automatic tests on discoveries
   --validate             Validate skills against CLAUDE.md

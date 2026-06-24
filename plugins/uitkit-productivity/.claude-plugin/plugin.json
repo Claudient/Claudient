@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
-  "name": "claudient-productivity",
-  "displayName": "Claudient — Productivity & Engineering",
+  "name": "uitkit-productivity",
+  "displayName": "UitKit — Productivity & Engineering",
   "version": "1.10.1",
   "description": "66 skills for daily engineering work: debugging, refactoring, code review, PR automation, test generation, ADR writing, security auditing, context engineering, MCP clients, and dozens more.",
   "author": {
@@ -9,11 +9,11 @@
     "email": "ceo@uitbreiden.com",
     "url": "https://uitbreiden.com"
   },
-  "homepage": "https://github.com/UitbreidenOS/Claudient",
-  "repository": "https://github.com/UitbreidenOS/Claudient",
+  "homepage": "https://github.com/UitbreidenOS/UitKit",
+  "repository": "https://github.com/UitbreidenOS/UitKit",
   "license": "CC-BY-SA-4.0",
   "keywords": [
-    "claudient",
+    "uitkit",
     "claude-code",
     "productivity",
     "code-review",

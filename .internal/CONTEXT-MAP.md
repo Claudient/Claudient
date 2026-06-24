@@ -1,6 +1,6 @@
-# Claudient — Context Map
+# UitKit — Context Map
 
-This file points to the relevant CONTEXT.md for each part of the Claudient repository.
+This file points to the relevant CONTEXT.md for each part of the UitKit repository.
 Useful for multi-context repos or when working on a specific area.
 
 ---
@@ -13,7 +13,7 @@ Useful for multi-context repos or when working on a specific area.
 | **Website** | [web/CLAUDE.md](web/CLAUDE.md) → [web/AGENTS.md](web/AGENTS.md) | Next.js 16 App Router conventions, breaking changes |
 | **CLI / Package** | [scripts/cli.js](scripts/cli.js) | Installation logic, command structure |
 | **Architecture decisions** | [docs/adr/](docs/adr/) | Why we made hard-to-reverse decisions |
-| **Scope boundaries** | [.out-of-scope/scope-rules.md](.out-of-scope/scope-rules.md) | What Claudient will not support |
+| **Scope boundaries** | [.out-of-scope/scope-rules.md](.out-of-scope/scope-rules.md) | What UitKit will not support |
 
 ---
 

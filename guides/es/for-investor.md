@@ -18,19 +18,19 @@ Eres analista, asociado, socio o inversor ángel independiente de capital de rie
 
 ```bash
 # Instalar todas las habilidades para inversores
-npx claudient add skill finance/deal-screening
-npx claudient add skill finance/deal-memo
-npx claudient add skill finance/ic-memo
-npx claudient add skill finance/dcf-model
-npx claudient add skill finance/diligence-review
-npx claudient add skill finance/comps-analysis
-npx claudient add skill finance/portfolio-monitor
-npx claudient add skill finance/earnings-analysis
+npx uitkit add skill finance/deal-screening
+npx uitkit add skill finance/deal-memo
+npx uitkit add skill finance/ic-memo
+npx uitkit add skill finance/dcf-model
+npx uitkit add skill finance/diligence-review
+npx uitkit add skill finance/comps-analysis
+npx uitkit add skill finance/portfolio-monitor
+npx uitkit add skill finance/earnings-analysis
 
 # Instalar agentes relevantes
-npx claudient add agent advisors/cfo-advisor
-npx claudient add agent roles/quant-analyst
-npx claudient add agent roles/scientific-researcher
+npx uitkit add agent advisors/cfo-advisor
+npx uitkit add agent roles/quant-analyst
+npx uitkit add agent roles/scientific-researcher
 ```
 
 ---
@@ -191,7 +191,7 @@ Resume el flujo de operaciones de esta semana:
 ## Plan de incorporación de 30 días (nuevo analista de VC)
 
 ### Semana 1 — Dominio del filtrado de operaciones
-- Instalar todas las habilidades para inversores: `npx claudient add skill finance/[nombre]`
+- Instalar todas las habilidades para inversores: `npx uitkit add skill finance/[nombre]`
 - Ejecutar `/deal-screening` en 20 operaciones recientes del archivo de tu fondo — compara tu resultado con lo que los socios decidieron
 - Entiende el ICP de tu fondo: etapa, sector, tamaño del cheque, estrategia de inversión adicional
 - Lee la habilidad `/comps-analysis` — entiende cómo funcionan los múltiplos en tus sectores

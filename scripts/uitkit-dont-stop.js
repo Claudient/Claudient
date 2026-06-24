@@ -520,10 +520,10 @@ async function main() {
 
   if (args.length === 0 || args[0] === '--help' || args[0] === '-h') {
     console.log(`
-${COLORS.BOLD}claudient dont-stop${COLORS.RESET} — Autonomous task execution engine
+${COLORS.BOLD}uitkit dont-stop${COLORS.RESET} — Autonomous task execution engine
 
 ${COLORS.BOLD}Usage:${COLORS.RESET}
-  claudient dont-stop "<goal string>" [options]
+  uitkit dont-stop "<goal string>" [options]
 
 ${COLORS.BOLD}Options:${COLORS.RESET}
   --budget=NUM          Token budget limit (default: 100000)
@@ -534,10 +534,10 @@ ${COLORS.BOLD}Options:${COLORS.RESET}
   --resume              Resume from previous session if available
 
 ${COLORS.BOLD}Examples:${COLORS.RESET}
-  claudient dont-stop "add feature X, then add feature Y, then run tests"
-  claudient dont-stop "refactor module A, then refactor B" --budget 50000 --verbose
-  claudient dont-stop "deploy to staging, then run smoke tests" --auto-commit
-  claudient dont-stop "continue work" --resume
+  uitkit dont-stop "add feature X, then add feature Y, then run tests"
+  uitkit dont-stop "refactor module A, then refactor B" --budget 50000 --verbose
+  uitkit dont-stop "deploy to staging, then run smoke tests" --auto-commit
+  uitkit dont-stop "continue work" --resume
 
 ${COLORS.BOLD}Output:${COLORS.RESET}
   Real-time progress bar showing task status (pending/running/done/failed)

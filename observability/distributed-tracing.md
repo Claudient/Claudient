@@ -1,12 +1,12 @@
 # Distributed Tracing — OpenTelemetry Instrumentation
 
-Comprehensive trace instrumentation for Claudient components using OpenTelemetry (OTEL). Captures parent-child span relationships, sampling strategy, and end-to-end tracing for feature calls, theme switches, SVG renders, and sandbox executions.
+Comprehensive trace instrumentation for UitKit components using OpenTelemetry (OTEL). Captures parent-child span relationships, sampling strategy, and end-to-end tracing for feature calls, theme switches, SVG renders, and sandbox executions.
 
 ---
 
 ## Overview
 
-Distributed tracing provides end-to-end request flow visibility across Claudient services. Each trace consists of:
+Distributed tracing provides end-to-end request flow visibility across UitKit services. Each trace consists of:
 
 - **Root Span** — Initiating request (e.g., user clicks feature, triggers theme change)
 - **Child Spans** — Sub-operations (module loading, rendering, validation)
@@ -577,7 +577,7 @@ For event-driven systems (CLI events, sandbox notifications):
 ```typescript
 import { trace, context, SpanStatusCode } from '@opentelemetry/api';
 
-const tracer = trace.getTracer('claudient-features');
+const tracer = trace.getTracer('uitkit-features');
 
 export async function executeFeature(
   featureName: string,
@@ -666,7 +666,7 @@ export async function executeFeature(
 ```typescript
 import { trace, context, SpanStatusCode } from '@opentelemetry/api';
 
-const tracer = trace.getTracer('claudient-ui');
+const tracer = trace.getTracer('uitkit-ui');
 
 export function useThemeSwitch() {
   const switchTheme = (newTheme: string) => {
@@ -767,7 +767,7 @@ export function useThemeSwitch() {
 ```typescript
 import { trace, context, SpanStatusCode } from '@opentelemetry/api';
 
-const tracer = trace.getTracer('claudient-svg-inspector');
+const tracer = trace.getTracer('uitkit-svg-inspector');
 
 export async function renderSVG(
   svgData: SVGData,
@@ -880,7 +880,7 @@ export async function renderSVG(
 ```typescript
 import { trace, context, SpanStatusCode } from '@opentelemetry/api';
 
-const tracer = trace.getTracer('claudient-sandbox');
+const tracer = trace.getTracer('uitkit-sandbox');
 
 export async function executeSandbox(
   code: string,
@@ -1146,22 +1146,22 @@ service:
 
 **Find slow feature executions:**
 ```
-service.name="claudient-features" AND operation="feature.execution" AND duration>2000
+service.name="uitkit-features" AND operation="feature.execution" AND duration>2000
 ```
 
 **Find failed SVG renders:**
 ```
-service.name="claudient-svg-inspector" AND operation="svg.render" AND error=true
+service.name="uitkit-svg-inspector" AND operation="svg.render" AND error=true
 ```
 
 **Find sandbox timeouts:**
 ```
-service.name="claudient-sandbox" AND operation="sandbox.execution" AND error_type="timeout"
+service.name="uitkit-sandbox" AND operation="sandbox.execution" AND error_type="timeout"
 ```
 
 **Find theme switches by user:**
 ```
-service.name="claudient-ui" AND operation="theme.switch" AND baggage.userId="alice"
+service.name="uitkit-ui" AND operation="theme.switch" AND baggage.userId="alice"
 ```
 
 ### Trace Analysis Dashboards
@@ -1170,7 +1170,7 @@ service.name="claudient-ui" AND operation="theme.switch" AND baggage.userId="ali
 ```json
 {
   "dashboard": {
-    "title": "Claudient Distributed Traces",
+    "title": "UitKit Distributed Traces",
     "panels": [
       {
         "title": "Feature Execution P95 Duration",

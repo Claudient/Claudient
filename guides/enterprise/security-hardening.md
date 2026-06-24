@@ -18,7 +18,7 @@ Complete security hardening checklist for production Claude Code Enterprise depl
 - [ ] **RBAC deployed**: Role-based access control configured in settings.json
 - [ ] **No default passwords**: All credentials rotated after deployment
 - [ ] **Session timeout**: Idle sessions timeout after 30 minutes (configurable)
-- [ ] **Certificate pinning**: TLS certificate pinning enabled (if using managed Claudient Cloud)
+- [ ] **Certificate pinning**: TLS certificate pinning enabled (if using managed UitKit Cloud)
 
 ## Secrets & Encryption
 
@@ -163,7 +163,7 @@ jq . .claude/logs/audit.log  # Should be valid JSONL
 # Should be BLOCKED or WARNED
 
 # 4. Test cost capping
-export CLAUDIENT_SESSION_CAP=0.01  # Very low cap
+export UITKIT_SESSION_CAP=0.01  # Very low cap
 claude code "test"  # Should block after first tool call
 
 # 5. Verify RBAC

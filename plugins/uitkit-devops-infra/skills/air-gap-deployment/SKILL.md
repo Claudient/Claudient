@@ -1,17 +1,17 @@
 ---
 name: "air-gap-deployment"
-description: "Deploy Claudient stacks and infrastructure in air-gapped environments: audit MCP dependencies, replace with local equivalents, configure DISABLE_EXTERNAL_MCP"
+description: "Deploy UitKit stacks and infrastructure in air-gapped environments: audit MCP dependencies, replace with local equivalents, configure DISABLE_EXTERNAL_MCP"
 ---
 
 # Air-Gap Deployment Skill
 
-Deploy Claudient stacks, skills, and infrastructure in fully offline, air-gapped environments. This skill covers auditing external dependencies, replacing them with local equivalents, configuring offline modes, and validating zero external calls.
+Deploy UitKit stacks, skills, and infrastructure in fully offline, air-gapped environments. This skill covers auditing external dependencies, replacing them with local equivalents, configuring offline modes, and validating zero external calls.
 
 ---
 
 ## When to activate
 
-- Deploying Claude Code and Claudient stacks in air-gapped networks
+- Deploying Claude Code and UitKit stacks in air-gapped networks
 - Migrating from internet-connected to fully isolated infrastructure
 - Auditing which skills require network access (MCP servers, APIs, cloud services)
 - Replacing external dependencies with local equivalents (git mirrors, package caches, local LLMs)
@@ -31,7 +31,7 @@ Deploy Claudient stacks, skills, and infrastructure in fully offline, air-gapped
 
 ### Step 1: Audit Stack Dependencies
 
-Every Claudient stack has external dependencies. Map them before going air-gap.
+Every UitKit stack has external dependencies. Map them before going air-gap.
 
 **Create a dependency audit script:**
 
@@ -41,16 +41,16 @@ Every Claudient stack has external dependencies. Map them before going air-gap.
 # Usage: bash audit-stack-dependencies.sh <stack-name>
 
 STACK=$1
-CLAUDIENT_PATH=${CLAUDIENT_PATH:-.}
+UITKIT_PATH=${UITKIT_PATH:-.}
 
 if [[ -z "$STACK" ]]; then
   echo "Usage: bash audit-stack-dependencies.sh <stack-name>"
   echo "Available stacks:"
-  ls "$CLAUDIENT_PATH" | grep -E "_stack$" | sed 's/_stack//'
+  ls "$UITKIT_PATH" | grep -E "_stack$" | sed 's/_stack//'
   exit 1
 fi
 
-STACK_DIR="$CLAUDIENT_PATH/${STACK}_stack"
+STACK_DIR="$UITKIT_PATH/${STACK}_stack"
 
 if [[ ! -d "$STACK_DIR" ]]; then
   echo "[ERROR] Stack not found: $STACK_DIR"
@@ -271,7 +271,7 @@ for pattern in "${BLOCKED_PATTERNS[@]}"; do
   if [[ "$COMMAND" =~ $pattern ]]; then
     echo "[AUDIT] EXTERNAL_CALL_DETECTED: $COMMAND"
     # Log to audit trail
-    echo "{\"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\", \"command\": \"$COMMAND\", \"type\": \"external_call_attempted\"}" >> /var/log/claudient-audit.jsonl
+    echo "{\"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\", \"command\": \"$COMMAND\", \"type\": \"external_call_attempted\"}" >> /var/log/uitkit-audit.jsonl
     
     if [[ "${BLOCK_EXTERNAL_CALLS:-true}" == "true" ]]; then
       echo "[BLOCKED] Command blocked by air-gap policy"
@@ -344,7 +344,7 @@ export DISABLE_EXTERNAL_MCP=true
 export API_URL=http://localhost:11434/v1
 
 claude --stack backend-offline \
-       --project /opt/claudient \
+       --project /opt/uitkit \
        "Build and test a Go service"
 ```
 
@@ -400,7 +400,7 @@ fi
 
 # Test 4: No external calls in audit log
 echo -n "[TEST 4] No external calls attempted... "
-if ! grep -q "external_call_attempted" /var/log/claudient-audit.jsonl 2>/dev/null; then
+if ! grep -q "external_call_attempted" /var/log/uitkit-audit.jsonl 2>/dev/null; then
   echo "PASS"
   ((TESTS_PASSED++))
 else
@@ -492,7 +492,7 @@ curl -s http://localhost:8000/health | jq .
 
 # 4. Load backend stack and execute offline
 claude --stack backend \
-       --project /opt/claudient \
+       --project /opt/uitkit \
        --offline \
        <<'EOF'
 
@@ -507,7 +507,7 @@ Use only what's available offline.
 EOF
 
 # 5. Verify no external calls
-tail -20 /var/log/claudient-audit.jsonl | grep "external_call"
+tail -20 /var/log/uitkit-audit.jsonl | grep "external_call"
 echo "If no output above, air-gap deployment successful."
 ```
 

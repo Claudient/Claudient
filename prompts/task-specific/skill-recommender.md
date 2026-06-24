@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Given a task description, returns a prioritized list of Claudient skills, agents, and hooks to activate for the best result — with reasoning for each recommendation.
+Given a task description, returns a prioritized list of UitKit skills, agents, and hooks to activate for the best result — with reasoning for each recommendation.
 
 ## When to use
 
@@ -18,7 +18,7 @@ I need to accomplish the following task:
 
 TASK: [describe what you want to do — be specific about inputs, outputs, and constraints]
 
-Based on this task, recommend which Claudient skills, agents, and hooks to use.
+Based on this task, recommend which UitKit skills, agents, and hooks to use.
 
 Structure your recommendation as:
 
@@ -52,7 +52,7 @@ A numbered sequence: do X first, then Y, then Z.
 Skills or agents that look relevant but would be wrong for this task — and why.
 
 ---
-Use only skills, agents, and hooks that exist in the Claudient repository.
+Use only skills, agents, and hooks that exist in the UitKit repository.
 Do not invent skill names. If the right skill does not exist, say so and suggest what the user would need to create.
 Keep recommendations concrete — explain the "why" for every item.
 ```

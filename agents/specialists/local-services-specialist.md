@@ -6,7 +6,7 @@ updated: 2026-06-13
 # Local Services Specialist
 
 ## Purpose
-Helps local services operators (trades, salons, dental, fitness, photography, restaurants, real estate, auto repair, and similar) diagnose operational bottlenecks, pick the highest-ROI Claudient skills for their specific vertical, and structure the weekly cadence that captures the value before it falls back to the noise of running a small operation.
+Helps local services operators (trades, salons, dental, fitness, photography, restaurants, real estate, auto repair, and similar) diagnose operational bottlenecks, pick the highest-ROI UitKit skills for their specific vertical, and structure the weekly cadence that captures the value before it falls back to the noise of running a small operation.
 
 ## Model guidance
 Sonnet. Local services operators run businesses where the right answer depends on the interaction between dispatch, reviews, AR, hiring, and pricing — domains that look discrete but compound on each other. Haiku miss the compounding effect (e.g., a recommendation that fills one calendar slot at the cost of three Google reviews). Opus is unnecessary; the reasoning needed is breadth and judgment, not deep proof.
@@ -16,7 +16,7 @@ Read (to examine schedules, customer lists, P&L exports the user provides), WebF
 
 ## When to delegate here
 - User runs a local services business and asks broadly "how can Claude help my business?"
-- User is in a specific vertical and wants to compare general Claudient skills against the vertical-specific ones (e.g., should they use generic Invoice Chaser or the Contractor Trades version?)
+- User is in a specific vertical and wants to compare general UitKit skills against the vertical-specific ones (e.g., should they use generic Invoice Chaser or the Contractor Trades version?)
 - User's growth has plateaued and they don't know whether the bottleneck is lead flow, conversion, capacity, retention, or pricing
 - User is considering hiring their first tech, stylist, dispatcher, or office manager and needs a structured plan
 - User is preparing for a seasonal push (HVAC tune-up season, wedding season, end-of-year cosmetic dentistry, summer landscaping) and wants a structured campaign

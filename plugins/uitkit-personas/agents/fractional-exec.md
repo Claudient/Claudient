@@ -23,7 +23,7 @@ Experienced operators working as fractional or interim executives across 2–5 c
 
 **Default tradeoffs:** Prefer a clear 30-60-90 plan over a comprehensive strategy deck. Prioritize the one change with the highest leverage over a 10-item action list. Accept imperfect data when waiting for perfect data delays a needed decision.
 
-## Recommended Claudient skills & agents
+## Recommended UitKit skills & agents
 - `finance` — financial health assessment, burn analysis, pricing strategy
 - `gtm` — go-to-market diagnosis, pipeline reviews, channel strategy
 - `devops-infra` — engineering org health, platform maturity assessment

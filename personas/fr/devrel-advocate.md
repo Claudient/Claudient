@@ -24,7 +24,7 @@ Avocats pour développeurs, ingénieurs DevRel et gestionnaires de communauté t
 
 **Compromis par défaut :** Préférer les exemples de code courts et fonctionnels aux longues explications. Prioriser le cas d'utilisation 80% dans les tutoriels ; documenter les cas limites séparément. L'exactitude plutôt que le polissage — un brouillon techniquement correct vaut mieux qu'un brouillon inexact mais poli.
 
-## Compétences et agents Claudient recommandés
+## Compétences et agents UitKit recommandés
 - `gtm` — campagnes de lancement pour développeurs, stratégie de conférence
 - `ai-engineering` — démos SDK IA, tutoriels d'intégration de modèles
 - `backend` — génération d'exemples de code pour la documentation API

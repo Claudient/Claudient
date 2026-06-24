@@ -152,7 +152,7 @@ Demonstrate ability to:
 
 ### Badge Details
 - **Name:** Certified Matrix Expert
-- **Issuer:** Claudient Certification Board
+- **Issuer:** UitKit Certification Board
 - **Valid Duration:** 3 years
 - **Renewal:** Requires re-examination or continuing education credits
 
@@ -170,12 +170,12 @@ Demonstrate ability to:
 {
   "name": "Certified Matrix Expert",
   "description": "Advanced proficiency in Matrix protocol, client architecture, federation, and ecosystem management",
-  "image": "https://badges.claudient.io/matrix-expert.png",
-  "issuer": "Claudient Certification Board",
+  "image": "https://badges.uitkit.io/matrix-expert.png",
+  "issuer": "UitKit Certification Board",
   "issuedDate": "YYYY-MM-DD",
   "expirationDate": "YYYY-MM-DD",
-  "certificateUrl": "https://certs.claudient.io/CERT-XXXXX",
-  "criteria": "https://claudient.io/certification/matrix-expert",
+  "certificateUrl": "https://certs.uitkit.io/CERT-XXXXX",
+  "criteria": "https://uitkit.io/certification/matrix-expert",
   "skills": [
     "Matrix Protocol",
     "Client Architecture",
@@ -191,7 +191,7 @@ Demonstrate ability to:
 
 ### Badge Display & Sharing
 - Awardees receive badge PNG for email signature, LinkedIn, GitHub profile
-- Badge links to verification page: `https://verify.claudient.io/{badge-serial}`
+- Badge links to verification page: `https://verify.uitkit.io/{badge-serial}`
 - Certificate of completion issued (printable format)
 - Optional: Badge embeddable as OpenBadges 2.0 format
 
@@ -208,7 +208,7 @@ Demonstrate ability to:
 ### Certification Record
 - Certificate issued via digital portal
 - Badge generated and distributed
-- Entry added to Claudient Certification Registry
+- Entry added to UitKit Certification Registry
 - Optional: LinkedIn integration for automatic credential posting
 
 ---
@@ -272,7 +272,7 @@ A: Yes, but project submission requires prior exam passage. You may develop earl
 A: 3 years. Renewal requires either retaking the exam or earning 20 continuing education credits.
 
 **Q: Is this certification recognized industry-wide?**
-A: Yes. Claudient certification is recognized by organizations adopting Matrix for secure communication infrastructure.
+A: Yes. UitKit certification is recognized by organizations adopting Matrix for secure communication infrastructure.
 
 **Q: Can I use the badge professionally?**
 A: Yes. You own the badge and may include it in email signatures, LinkedIn profiles, professional websites, and resumes.

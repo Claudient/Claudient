@@ -1,4 +1,4 @@
-# Claudient Pricing & Plans
+# UitKit Pricing & Plans
 
 The most comprehensive Claude Code knowledge base — choose the tier that fits your team.
 
@@ -28,8 +28,8 @@ The most comprehensive Claude Code knowledge base — choose the tier that fits 
 
 **Free forever.**
 
-- Install via npm: `npx claudient add all`
-- Or via Claude Code plugin system: `/plugin marketplace add UitbreidenOS/Claudient`
+- Install via npm: `npx uitkit add all`
+- Or via Claude Code plugin system: `/plugin marketplace add UitbreidenOS/UitKit`
 - All 400+ open-source skills, 182+ agents, 42 stacks
 - AGPL-3.0 / CC-BY-SA-4.0 licensed
 - Support: GitHub Discussions + Reddit (r/uitbreiden)
@@ -44,16 +44,16 @@ The most comprehensive Claude Code knowledge base — choose the tier that fits 
 
 - Everything in Community, plus:
 - **Private stack hosting** — custom organization stacks not in public repo
-- **Weekly auto-updates** — skills refresh via `claudient update`
+- **Weekly auto-updates** — skills refresh via `uitkit update`
 - **Priority feature requests** — vote on next stack to build
 - **Localized packs** — bundle skills in EN/FR/DE/ES/NL for your team language
 - **Email support** — response within 24 hours
 - **Usage statistics** — basic telemetry on which skills your team uses most
 
-**Best for:** teams 5–50, agencies using Claudient with clients, early-stage startups scaling Claude Code adoption.
+**Best for:** teams 5–50, agencies using UitKit with clients, early-stage startups scaling Claude Code adoption.
 
 **How it works:**
-1. Sign up at claudient.ai/pricing
+1. Sign up at uitkit.ai/pricing
 2. Create a team workspace
 3. Invite teammates by email
 4. Pay per active seat per month
@@ -64,7 +64,7 @@ The most comprehensive Claude Code knowledge base — choose the tier that fits 
 
 **Custom pricing · Enterprise features for growing teams.**
 
-Contact sales: [sales@claudient.ai](mailto:sales@claudient.ai) or [Book a demo](https://calendly.com/claudient/demo)
+Contact sales: [sales@uitkit.ai](mailto:sales@uitkit.ai) or [Book a demo](https://calendly.com/uitkit/demo)
 
 - Everything in Team, plus:
 - **Certified marketplace** — curated, verified stack bundles with quality assurances
@@ -83,19 +83,19 @@ Contact sales: [sales@claudient.ai](mailto:sales@claudient.ai) or [Book a demo](
 
 **Annual contract · Full platform + compliance + dedicated support.**
 
-Contact sales: [enterprise@claudient.ai](mailto:enterprise@claudient.ai) or [Schedule executive brief](https://calendly.com/claudient/enterprise)
+Contact sales: [enterprise@uitkit.ai](mailto:enterprise@uitkit.ai) or [Schedule executive brief](https://calendly.com/uitkit/enterprise)
 
 - Everything in Business, plus:
-- **Self-hosted / VPC deployment** — run Claudient platform in your own cloud (AWS/GCP/Azure)
+- **Self-hosted / VPC deployment** — run UitKit platform in your own cloud (AWS/GCP/Azure)
 - **Compliance-certified stacks** — bundles pre-audited for SOC 2, GDPR, EU-AI-Act, HIPAA (coming 2026)
 - **Unlimited custom domain stacks** — internal vertical-specific skill libraries
 - **Custom integrations** — hook into your existing SaaS stack (Jira, Slack, Salesforce, etc.)
 - **Custom SLA** — guaranteed uptime % and support response time defined in contract
 - **Dedicated stack engineer** — person on our team responsible for your success
 - **On-site training** — workshop your teams on best practices + custom extensions
-- **White-label option** — resell Claudient stacks under your brand
+- **White-label option** — resell UitKit stacks under your brand
 
-**Best for:** enterprises 250+, heavily regulated (finance, government, healthcare), multi-geography deployments, companies building on Claudient as a platform layer.
+**Best for:** enterprises 250+, heavily regulated (finance, government, healthcare), multi-geography deployments, companies building on UitKit as a platform layer.
 
 ---
 
@@ -123,7 +123,7 @@ Enterprise: custom language packs available.
 ### How do governance hooks work?
 Hooks log every time a skill is invoked: who ran it, when, on which file, and what was output. Useful for compliance audits and usage analytics.
 
-### Can we use Claudient offline?
+### Can we use UitKit offline?
 Community: Yes, skills are files in `~/.claude/`. Team+: Depends on subscription tier. Self-hosted Enterprise supports full offline mode.
 
 ### What's included in "Certified Marketplace"?
@@ -136,7 +136,7 @@ Enterprise customers. 99.9% uptime SLA is guaranteed in contract. Downtime beyon
 
 ## Upgrade Path
 
-Start free, grow with Claudient:
+Start free, grow with UitKit:
 
 ```
 Community (free)
@@ -152,6 +152,6 @@ Enterprise (annual contract)
 
 ## Questions?
 
-- **Pricing:** [pricing@claudient.ai](mailto:pricing@claudient.ai)
-- **Sales:** [sales@claudient.ai](mailto:sales@claudient.ai)
-- **Support:** [support@claudient.ai](mailto:support@claudient.ai) or [GitHub Discussions](https://github.com/UitbreidenOS/Claudient/discussions)
+- **Pricing:** [pricing@uitkit.ai](mailto:pricing@uitkit.ai)
+- **Sales:** [sales@uitkit.ai](mailto:sales@uitkit.ai)
+- **Support:** [support@uitkit.ai](mailto:support@uitkit.ai) or [GitHub Discussions](https://github.com/UitbreidenOS/UitKit/discussions)

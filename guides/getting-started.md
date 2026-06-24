@@ -1,4 +1,4 @@
-# Getting Started with Claudient
+# Getting Started with UitKit
 
 This guide gets you from zero to a working Claude Code environment with your first skill, agent, and hook — in under 10 minutes.
 
@@ -11,7 +11,7 @@ This guide gets you from zero to a working Claude Code environment with your fir
 
 ---
 
-## Step 1 — Clone Claudient
+## Step 1 — Clone UitKit
 
 ```bash
 
@@ -50,7 +50,7 @@ Skills are slash commands. Copy any `.md` file from `skills/` into `.claude/skil
 
 ```bash
 # Example: add the FastAPI skill
-cp ~/Claudient/skills/backend/python/fastapi.md your-project/.claude/skills/
+cp ~/UitKit/skills/backend/python/fastapi.md your-project/.claude/skills/
 ```
 
 Now open Claude Code in your project and type `/fastapi` — the skill activates.
@@ -70,7 +70,7 @@ Rules live in `CLAUDE.md` at your project root. Claude reads this file at the st
 
 ```bash
 # Copy a common rule set into your project's CLAUDE.md
-cat ~/Claudient/rules/common/coding-style.md >> your-project/CLAUDE.md
+cat ~/UitKit/rules/common/coding-style.md >> your-project/CLAUDE.md
 ```
 
 Or open `rules/common/` and manually copy the sections relevant to your project.
@@ -112,7 +112,7 @@ Copy a hook from `hooks/` — each hook file includes the exact JSON to paste in
 Then copy the accompanying script:
 
 ```bash
-cp ~/Claudient/hooks/lifecycle/cost-tracker.sh your-project/.claude/hooks/
+cp ~/UitKit/hooks/lifecycle/cost-tracker.sh your-project/.claude/hooks/
 chmod +x your-project/.claude/hooks/cost-tracker.sh
 ```
 

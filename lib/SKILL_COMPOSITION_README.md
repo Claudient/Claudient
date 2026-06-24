@@ -20,7 +20,7 @@ Skill Composition provides a complete workflow orchestration system for Claude C
 ### Installation
 
 ```bash
-npm install claudient
+npm install uitkit
 ```
 
 ### Basic Workflow

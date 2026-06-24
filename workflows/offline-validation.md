@@ -1,12 +1,12 @@
 ---
 name: offline-validation
-description: "Workflow to validate a Claudient stack for offline/air-gap readiness: map tools, classify dependencies, test each skill, document limitations"
+description: "Workflow to validate a UitKit stack for offline/air-gap readiness: map tools, classify dependencies, test each skill, document limitations"
 updated: 2026-06-15
 ---
 
 # Offline Validation Workflow
 
-A step-by-step workflow for validating whether a Claudient stack can run fully offline (air-gapped). Determines offline-readiness percentage, identifies which skills work without network, classifies dependencies, and produces a compliance report.
+A step-by-step workflow for validating whether a UitKit stack can run fully offline (air-gapped). Determines offline-readiness percentage, identifies which skills work without network, classifies dependencies, and produces a compliance report.
 
 ---
 

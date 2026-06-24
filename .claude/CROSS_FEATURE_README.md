@@ -129,7 +129,7 @@ Dont-Stop Engine (parses to DAG)
    - Real-time progress tracking
 
 5. **Dashboard Integration**
-   - All features accessible from claudient dashboard
+   - All features accessible from uitkit dashboard
    - Swarm window shows sandbox with SVG
    - Toolkit → Codebase Map shows inspector
 
@@ -142,7 +142,7 @@ Dont-Stop Engine (parses to DAG)
 
 ### Command
 ```bash
-$ claudient dont-stop "Build REST API, add auth, run tests, deploy"
+$ uitkit dont-stop "Build REST API, add auth, run tests, deploy"
 ```
 
 ### What Happens Internally
@@ -243,8 +243,8 @@ scripts/
 ## Next Steps
 
 ### For Users
-1. Run `claudient dashboard` to see all features in action
-2. Try `claudient dont-stop "your goal"` to execute autonomously
+1. Run `uitkit dashboard` to see all features in action
+2. Try `uitkit dont-stop "your goal"` to execute autonomously
 3. Monitor progress via SVG Inspector in the Toolkit
 4. Observe Matrix theme styling in terminal output
 
@@ -278,7 +278,7 @@ scripts/
 - **Main Guide**: Read `CROSS_FEATURE_INTEGRATION_GUIDE.md`
 - **Code Examples**: See `INTEGRATION_EXAMPLES.md`
 - **Test Suite**: Run `validate-cross-feature-integration.js`
-- **Live Demo**: Execute `claudient dashboard` → Swarm window
+- **Live Demo**: Execute `uitkit dashboard` → Swarm window
 - **Metrics**: Check `cross-feature-validation.json`
 
 ---

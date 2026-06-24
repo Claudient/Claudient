@@ -1,6 +1,6 @@
-# Claudient Certification & Badge System
+# UitKit Certification & Badge System
 
-A comprehensive badge and certification framework for recognizing contributions, expertise, and partnership within the Claudient community.
+A comprehensive badge and certification framework for recognizing contributions, expertise, and partnership within the UitKit community.
 
 ---
 
@@ -10,7 +10,7 @@ A comprehensive badge and certification framework for recognizing contributions,
 **Tier 1 — Entry Level**
 
 #### Eligibility
-- Completed the Claudient onboarding pathway (READ: `CLAUDE.md`, `CONTRIBUTION_GUIDE.md`)
+- Completed the UitKit onboarding pathway (READ: `CLAUDE.md`, `CONTRIBUTION_GUIDE.md`)
 - First successful contribution merged (skill enhancement, bug fix, documentation, or theme)
 - Passed automated quality checks (linting, format validation)
 - Community reputation score ≥ 10 points
@@ -30,7 +30,7 @@ A comprehensive badge and certification framework for recognizing contributions,
 
 #### Benefits
 - Profile badge on GitHub & community site
-- Listing in "Claudient Learners" wall
+- Listing in "UitKit Learners" wall
 - Access to private #learner-insights Discord channel (if applicable)
 - Invitation to monthly community calls
 - Eligible for swag (stickers, t-shirt) — one-time
@@ -76,7 +76,7 @@ A comprehensive badge and certification framework for recognizing contributions,
 - Professional certificate (printable/frameable)
 
 #### Benefits
-- Listing in "Claudient Contributors" top section
+- Listing in "UitKit Contributors" top section
 - Priority review for new submissions (48-hour SLA)
 - Contributor-only Office Hours (monthly, live Q&A)
 - Early access to new features/marketplace plugins
@@ -134,13 +134,13 @@ A comprehensive badge and certification framework for recognizing contributions,
 - GitHub badge (Expert tier, gold/premium visual)
 - LinkedIn "Expert" endorsement badge
 - Dedicated Expert profile page with bio/expertise areas
-- Featured on Claudient homepage (rotating expert spotlight)
+- Featured on UitKit homepage (rotating expert spotlight)
 - Custom badge design option
-- Formal certificate (official Claudient letterhead)
+- Formal certificate (official UitKit letterhead)
 
 #### Benefits
 - Automatic approval for substantive contributions
-- Speaking slots at Claudient conferences/webinars
+- Speaking slots at UitKit conferences/webinars
 - Access to Expert-only Slack/Discord channel
 - Quarterly leadership calls with maintainers
 - Ability to propose major features/breaking changes
@@ -176,8 +176,8 @@ A comprehensive badge and certification framework for recognizing contributions,
 
 #### Eligibility (by invitation only)
 - Organization or individual with strategic partnership agreement
-- Demonstrated financial or resource contribution to Claudient
-- Integrated Claudient into commercial products/services
+- Demonstrated financial or resource contribution to UitKit
+- Integrated UitKit into commercial products/services
 - Committed long-term support (≥ 1 year engagement)
 - Maintains Expert-level contributor status (if applicable)
 
@@ -189,12 +189,12 @@ A comprehensive badge and certification framework for recognizing contributions,
 - Contribute advanced tooling or AI capabilities
 
 **B. Reseller/Distribution Partner**
-- Distribute Claudient through official channels
+- Distribute UitKit through official channels
 - Provide enterprise support or consulting services
 - Include in commercial product bundles
 
 **C. Educational Partner**
-- Use Claudient in curriculum or training programs
+- Use UitKit in curriculum or training programs
 - Maintain ≥ 10 active student accounts
 - Contribute case studies or research
 
@@ -209,10 +209,10 @@ A comprehensive badge and certification framework for recognizing contributions,
 - [ ] ≥ 1 integration or joint deliverable per year
 - [ ] Regular communication (quarterly check-ins minimum)
 - [ ] Public acknowledgment/disclosure of partnership
-- [ ] No conflicts with Claudient values or community guidelines
+- [ ] No conflicts with UitKit values or community guidelines
 
 #### Display
-- **Logo placement:** Official Claudient website (partners section)
+- **Logo placement:** Official UitKit website (partners section)
 - **Badge:** Custom partner badge on GitHub repos/documentation
 - **LinkedIn:** Company page features partnership
 - **Featured:** Dedicated blog post and case study
@@ -221,7 +221,7 @@ A comprehensive badge and certification framework for recognizing contributions,
 #### Benefits
 - Co-marketing opportunities
 - Press releases and media mentions
-- Speaking slots at Claudient events
+- Speaking slots at UitKit events
 - Exclusive partner advisory board access
 - Early access to features and roadmap
 - Custom technical support (SLA-backed)
@@ -254,11 +254,11 @@ A comprehensive badge and certification framework for recognizing contributions,
 
 ### GitHub Profile Display
 ```markdown
-**Claudient Certifications**
-- [Learner Badge 🎓] (https://github.com/claudient/claudient/blob/main/community/badges/learner-badge.svg)
-- [Contributor Badge 🚀] (https://github.com/claudient/claudient/blob/main/community/badges/contributor-badge.svg)
-- [Expert Badge 🏆] (https://github.com/claudient/claudient/blob/main/community/badges/expert-badge.svg)
-- [Enterprise Partner Badge 💼] (https://github.com/claudient/claudient/blob/main/community/badges/partner-badge.svg)
+**UitKit Certifications**
+- [Learner Badge 🎓] (https://github.com/uitkit/uitkit/blob/main/community/badges/learner-badge.svg)
+- [Contributor Badge 🚀] (https://github.com/uitkit/uitkit/blob/main/community/badges/contributor-badge.svg)
+- [Expert Badge 🏆] (https://github.com/uitkit/uitkit/blob/main/community/badges/expert-badge.svg)
+- [Enterprise Partner Badge 💼] (https://github.com/uitkit/uitkit/blob/main/community/badges/partner-badge.svg)
 ```
 
 ### Verification System
@@ -272,7 +272,7 @@ A comprehensive badge and certification framework for recognizing contributions,
 3. **Automated tracking:** GitHub Actions workflow checks renewal conditions monthly
 
 ### LinkedIn Endorsement
-- Official Claudient company profile endorses badge skills
+- Official UitKit company profile endorses badge skills
 - Custom skill tags per badge level
 - Verification through LinkedIn's company verification system
 
@@ -405,7 +405,7 @@ jobs:
       "domains": ["skills", "workflows"],
       "contributions": 25,
       "reputation_score": 520,
-      "verification_url": "https://claudient.dev/badges/verify/username"
+      "verification_url": "https://uitkit.dev/badges/verify/username"
     }
   ]
 }
@@ -469,7 +469,7 @@ jobs:
 - Malicious code or security vulnerabilities intentionally introduced
 - Violation of open source licenses
 - Off-topic or spam contributions
-- Unauthorized use of Claudient branding
+- Unauthorized use of UitKit branding
 
 ---
 
@@ -489,7 +489,7 @@ jobs:
 ### For Community
 - **[SHOWCASE_WALL.md](../community/SHOWCASE_WALL.md)** — Featured contributors
 - **Badge registry:** `community/badges/registry.json`
-- **Verification pages:** `https://claudient.dev/badges/`
+- **Verification pages:** `https://uitkit.dev/badges/`
 
 ---
 
@@ -502,7 +502,7 @@ jobs:
 | **Reputation Score** | Accumulated points from contributions and community interactions |
 | **Verification** | Public proof of badge authenticity linked from badge URL |
 | **Revocation** | Removal of badge due to code of conduct or inactivity violations |
-| **Enterprise Partner** | Organization with formal partnership agreement with Claudient |
+| **Enterprise Partner** | Organization with formal partnership agreement with UitKit |
 | **Domain** | Specific category of contribution (skills, workflows, themes, tools, etc.) |
 | **SLA** | Service Level Agreement (commitment timeframe for responses) |
 
@@ -515,5 +515,5 @@ jobs:
 | 2026-06-22 | 1.0 | Initial badge system specification |
 
 **Last Updated:** June 22, 2026
-**Maintained By:** Claudient Core Community Team
+**Maintained By:** UitKit Core Community Team
 **Next Review:** December 2026

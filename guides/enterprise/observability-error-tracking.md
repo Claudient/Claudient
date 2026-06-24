@@ -201,7 +201,7 @@ const rollbar = new Rollbar({
   payload: {
     platform: "node",
     notifier: {
-      name: "claudient-error-tracking",
+      name: "uitkit-error-tracking",
       version: "1.0.0",
     },
   },
@@ -354,7 +354,7 @@ const rollbar = new Rollbar({
 // Set when session starts or user identified
 Sentry.setUser({
   id: process.env.CLAUDE_USER_ID || "anonymous",
-  email: process.env.CLAUDIENT_USER_EMAIL,
+  email: process.env.UITKIT_USER_EMAIL,
   username: process.env.USER,
   organization: process.env.CLAUDE_ORG_ID,
   ip_address: process.env.CLIENT_IP,
@@ -365,7 +365,7 @@ rollbar.configure({
   payload: {
     person: {
       id: process.env.CLAUDE_USER_ID || "anonymous",
-      email: process.env.CLAUDIENT_USER_EMAIL,
+      email: process.env.UITKIT_USER_EMAIL,
       username: process.env.USER,
     },
   },

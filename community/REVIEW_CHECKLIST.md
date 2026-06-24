@@ -1,6 +1,6 @@
 # Community Stack Review Checklist
 
-This document defines the review process and acceptance criteria for community stack submissions to Claudient.
+This document defines the review process and acceptance criteria for community stack submissions to UitKit.
 
 ---
 
@@ -53,7 +53,7 @@ Before manual review begins, all submissions are validated by automated checks. 
 
 ## Phase 2: Manual Review (1-2 weeks)
 
-Reviewers check content quality, accuracy, completeness, and alignment with Claudient standards. A single reviewer is assigned per submission.
+Reviewers check content quality, accuracy, completeness, and alignment with UitKit standards. A single reviewer is assigned per submission.
 
 ### CLAUDE.md Completeness
 
@@ -110,7 +110,7 @@ All required sections must be present and substantive (not placeholders).
 
 ### Skill Content Quality
 
-Each skill must follow Claudient's SKILL.md format and provide real, actionable instructions.
+Each skill must follow UitKit's SKILL.md format and provide real, actionable instructions.
 
 #### Format Compliance
 - [ ] Skill file is named `SKILL.md` and located in `skills/[skill-name]/`
@@ -285,7 +285,7 @@ If all checks pass, the reviewer approves the PR with a comment:
 ```markdown
 ## ✅ APPROVED
 
-This community stack meets all Claudient standards:
+This community stack meets all UitKit standards:
 - [x] CLAUDE.md is complete and clear
 - [x] All skills follow the SKILL.md format
 - [x] Examples are concrete and actionable
@@ -298,7 +298,7 @@ This community stack meets all Claudient standards:
 3. Credit the author
 4. Open an issue for translation (DE, ES, FR, NL if desired)
 
-Welcome to the Claudient community! 🎉
+Welcome to the UitKit community! 🎉
 ```
 
 ### Changes Requested 🔄
@@ -335,7 +335,7 @@ If major issues make the submission unsuitable:
 ## ❌ REJECTED
 
 Thanks for the contribution. Unfortunately, this submission doesn't meet 
-Claudient standards at this time:
+UitKit standards at this time:
 
 1. **No application code:** Your submission includes `src/compile.py` and `dist/` 
    directory, which violates our policy. Remove these and resubmit.
@@ -362,7 +362,7 @@ We're happy to help if you have questions. Feel free to open a discussion issue.
 |-------|----------|--------------|
 | **Submitted** | 0 days | PR is opened |
 | **Automated checks** | 1 day | Syntax, structure, metadata validated |
-| **Reviewer assigned** | 1-2 days | Claudient maintainer claims PR |
+| **Reviewer assigned** | 1-2 days | UitKit maintainer claims PR |
 | **Manual review** | 5-7 days | Reviewer checks all criteria; may request changes |
 | **Changes requested** | 3-5 days | Submitter responds to feedback; re-reviews happen |
 | **Approved & merged** | 1 day | PR is merged; stack added to marketplace |
@@ -379,7 +379,7 @@ We're happy to help if you have questions. Feel free to open a discussion issue.
 
 ## Reviewer Guidelines
 
-(For Claudient maintainers)
+(For UitKit maintainers)
 
 ### Tone
 - Be encouraging and constructive
@@ -424,4 +424,4 @@ Use this structure for consistency:
 
 ---
 
-**Last updated:** June 15, 2026 | **Maintained by:** Claudient Community Team
+**Last updated:** June 15, 2026 | **Maintained by:** UitKit Community Team

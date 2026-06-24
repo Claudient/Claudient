@@ -6,7 +6,7 @@ updated: 2026-06-15
 
 # Bereitstellungsleitfaden für Enterprise Air-Gap
 
-Dieses Dokument behandelt die Bereitstellung von Claudient und Claude Code in vollständig isolierten (luftgestützten) Unternehmensnetzwerken ohne externe Konnektivität. Es umfasst Sicherheitskontrollen, Werkzeug-Whitelisting, lokale Modellbereitstellung und Audit-Trails für Compliance.
+Dieses Dokument behandelt die Bereitstellung von UitKit und Claude Code in vollständig isolierten (luftgestützten) Unternehmensnetzwerken ohne externe Konnektivität. Es umfasst Sicherheitskontrollen, Werkzeug-Whitelisting, lokale Modellbereitstellung und Audit-Trails für Compliance.
 
 ---
 
@@ -278,7 +278,7 @@ Nur diese MCPs sind in Air-Gap-Umgebungen zulässig:
       "args": ["server", "postgres"],
       "disabled": false,
       "env": {
-        "DATABASE_URL": "postgresql://localhost/claudient"
+        "DATABASE_URL": "postgresql://localhost/uitkit"
       }
     }
   },
@@ -356,7 +356,7 @@ Alle Claude Code-Vorgänge müssen zu Compliance-Zwecken protokolliert werden:
     "level": "INFO",
     "format": "json",
     "outputs": [
-      "file:///var/log/claudient/operations.log",
+      "file:///var/log/uitkit/operations.log",
       "syslog://127.0.0.1:514"
     ]
   },
@@ -405,19 +405,19 @@ Senden Sie Logs an den zentralen Syslog-Server:
 sudo apt-get install -y rsyslog
 
 # Syslog-Weiterleitungskonfiguration
-sudo tee /etc/rsyslog.d/10-claudient-forward.conf > /dev/null <<EOF
-# Claudient-Logs an zentralen Server weiterleiten
-:programname, isequal, "claudient" @@<INTERNAL_SYSLOG_SERVER>:514
+sudo tee /etc/rsyslog.d/10-uitkit-forward.conf > /dev/null <<EOF
+# UitKit-Logs an zentralen Server weiterleiten
+:programname, isequal, "uitkit" @@<INTERNAL_SYSLOG_SERVER>:514
 
 # Auch lokal für Audit speichern
-:programname, isequal, "claudient" /var/log/claudient/operations.log
+:programname, isequal, "uitkit" /var/log/uitkit/operations.log
 EOF
 
 # Starten Sie rsyslog neu
 sudo systemctl restart rsyslog
 
 # Überprüfen
-tail -f /var/log/claudient/operations.log
+tail -f /var/log/uitkit/operations.log
 ```
 
 ### 4.4 Compliance-Berichtsgenerierung
@@ -446,7 +446,7 @@ jq -s '
   failed_operations: map(select(.details.exit_code != 0)),
   network_violations: map(select(.security.external_calls_attempted > 0))
 }' \
-  /var/log/claudient/operations.log > "$REPORT_FILE"
+  /var/log/uitkit/operations.log > "$REPORT_FILE"
 
 echo "Compliance-Bericht: $REPORT_FILE"
 ```
@@ -509,7 +509,7 @@ curl -s http://127.0.0.1:11434/api/tags | grep -q "name" && echo "[PASS] Lokales
 claude --help | grep -q "mcp" && echo "[PASS] MCP-Unterstützung verfügbar"
 
 # 4. Audit-Logging-Test
-tail -5 /var/log/claudient/operations.log | grep -q "timestamp" && echo "[PASS] Audit-Logging funktioniert"
+tail -5 /var/log/uitkit/operations.log | grep -q "timestamp" && echo "[PASS] Audit-Logging funktioniert"
 
 # 5. Claude Code mit Air-Gap-Einstellungen testen
 export DISABLE_EXTERNAL_MCP=true
@@ -538,10 +538,10 @@ Untersuchungsverfahren:
 
 ```bash
 # Finden Sie die verstößende Operation
-grep "external_calls_attempted.*> 0" /var/log/claudient/operations.log | head -1
+grep "external_calls_attempted.*> 0" /var/log/uitkit/operations.log | head -1
 
 # Identifizieren Sie den Befehl
-grep -B5 "external_calls_attempted" /var/log/claudient/operations.log | grep "command"
+grep -B5 "external_calls_attempted" /var/log/uitkit/operations.log | grep "command"
 
 # Überprüfen Sie, dass der MCP-Server keinen externen Anruf versucht hat
 journalctl -u mcp-server --since "1 hour ago" | grep -i "connect\|http"

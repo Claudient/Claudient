@@ -8,7 +8,7 @@ updated: 2026-06-15
 
 ## Wann man es aktiviert
 
-- **Vor Zertifizierungserneuerung** — Audit von Claudient-Inhalten, um sicherzustellen, dass alle Dateien aktuell und verteidigbar sind
+- **Vor Zertifizierungserneuerung** — Audit von UitKit-Inhalten, um sicherzustellen, dass alle Dateien aktuell und verteidigbar sind
 - **Vor dem Veröffentlichen einer neuen Version oder größeren Aktualisierung** — Überprüfen der Dokumentationsgenauigkeit
 - **Quartalsweise Wartung** — Identifizierung von veralteten Inhalten, die aktualisiert werden müssen (alle 3 Monate)
 - **Nach einer großen Claude-Modellversion** — Markieren Sie möglicherweise veraltete Anleitungen in Fähigkeiten und Workflows
@@ -151,7 +151,7 @@ Basierend auf Audit-Ergebnissen:
 
 ### Szenario: Vor-Zertifizierungs-Audit
 
-Vor der Zertifizierung von Claudient als Produktionswerkzeug möchten Sie sicherstellen, dass alle Inhalte aktuell sind.
+Vor der Zertifizierung von UitKit als Produktionswerkzeug möchten Sie sicherstellen, dass alle Inhalte aktuell sind.
 
 ### Ausführung:
 

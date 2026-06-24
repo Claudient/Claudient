@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Regression & Backward-Compatibility Tests for Claudient CLI
+ * Regression & Backward-Compatibility Tests for UitKit CLI
  *
  * Tests verify:
  * - All legacy CLI commands continue to work (no breaking changes)
@@ -19,7 +19,7 @@ const os = require('os');
 const CLI = path.join(__dirname, '../../scripts/cli.js');
 const ROOT = path.resolve(__dirname, '../..');
 
-process.env.CLAUDIENT_TEST_SUITE = 'true';
+process.env.UITKIT_TEST_SUITE = 'true';
 
 let passed = 0;
 let failed = 0;
@@ -111,10 +111,10 @@ function run(label, cmd, opts = {}) {
 
 logSection('REGRESSION: Help & Usage Commands');
 
-run('help command prints usage', 'help', { expectContains: 'claudient' });
+run('help command prints usage', 'help', { expectContains: 'uitkit' });
 run('help shows skill categories', 'help', { expectContains: 'Skill categories' });
 run('help shows examples', 'help', { expectContains: 'Examples' });
-run('help shows all commands', 'help', { expectContains: 'npx claudient' });
+run('help shows all commands', 'help', { expectContains: 'npx uitkit' });
 
 // ────────────────────────────────────────────────────────────────────────────
 // TEST SUITE: List Commands (Backward Compat)
@@ -361,13 +361,13 @@ try {
   const pkg = JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf-8'));
 
   // Check bin field
-  if (pkg.bin && pkg.bin.claudient) {
+  if (pkg.bin && pkg.bin.uitkit) {
     passed++;
-    log(`  ✓ bin.claudient points to ${pkg.bin.claudient}`, 'GREEN');
+    log(`  ✓ bin.uitkit points to ${pkg.bin.uitkit}`, 'GREEN');
   } else {
     failed++;
-    failures.push({ label: 'bin.claudient', error: 'Missing or invalid' });
-    log(`  ✗ bin.claudient not configured`, 'RED');
+    failures.push({ label: 'bin.uitkit', error: 'Missing or invalid' });
+    log(`  ✗ bin.uitkit not configured`, 'RED');
   }
 
   // Check files field

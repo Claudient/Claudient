@@ -11,7 +11,7 @@ Automate EU AI Act compliance (transparency, risk, human oversight) for Claude C
 - Transparency logger hook (PostToolUse)
 - Risk classification hook (PreToolUse)
 
-**Quick start:** `npx claudient add stack enterprise/compliance_stacks/eu_ai_act`
+**Quick start:** `npx uitkit add stack enterprise/compliance_stacks/eu_ai_act`
 
 After install, Claude Code workflows flag prohibited uses, log transparency info, and enforce human oversight.
 
@@ -27,7 +27,7 @@ After install, Claude Code workflows flag prohibited uses, log transparency info
 
 ## Setup (5 min)
 
-1. Install: `npx claudient add stack enterprise/compliance_stacks/eu_ai_act`
+1. Install: `npx uitkit add stack enterprise/compliance_stacks/eu_ai_act`
 2. Configure `.claude/settings.json`:
    ```json
    {
@@ -38,15 +38,15 @@ After install, Claude Code workflows flag prohibited uses, log transparency info
      }
    }
    ```
-3. Verify: `npx claudient audit` → EU-AI-Act section
+3. Verify: `npx uitkit audit` → EU-AI-Act section
 
 ## Evidence for Regulators
 
 - Risk classification: `~/.claude/eu-ai-risk-log.jsonl`
 - Transparency records: `~/.claude/eu-ai-transparency.jsonl`
 - Human approvals: `~/.claude/eu-ai-approvals.jsonl`
-- Bias audit reports: `npx claudient eu-ai-bias-audit`
+- Bias audit reports: `npx uitkit eu-ai-bias-audit`
 
 All required documentation auto-generated for regulatory submission.
 
-Enterprise: `enterprise@claudient.ai`
+Enterprise: `enterprise@uitkit.ai`

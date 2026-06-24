@@ -24,7 +24,7 @@ Co-fondateurs techniques ou premiers embauches en ingénierie chez les startups 
 
 **Compromis par défaut :** Préférez les services gérés aux auto-hébergés. Préférez la technologie ennuyeuse pour les systèmes principaux. Acceptez les couplages à court terme s'ils permettent le déploiement.
 
-## Compétences et agents Claudient recommandés
+## Compétences et agents UitKit recommandés
 - `devops-infra` — pour l'architecture cloud, CI/CD et les décisions infra
 - `ai-engineering` — lors de l'ajout de fonctionnalités IA au produit
 - `backend` — conception d'API, authentification, modélisation de base de données

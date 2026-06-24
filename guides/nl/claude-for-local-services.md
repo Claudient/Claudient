@@ -14,7 +14,7 @@ Lokale servicebedrijven delen drie operationele feiten die veranderen hoe Claude
 2. **Beoordelingen zijn existentieel.** Een saloneigenaar wiens Google-beoordeling van 4,7 naar 4,4 daalt verliest 20% van nieuwe klantboeking. Beoordelingsreactie is geen marketing nice-to-have â€” het is kernoperatie.
 3. **De meeste eigenaren zijn eerst veldoperators.** De eigenaar is op een bouwplaats, in een stoel, achter een toonbank. Ze openen hun telefoon, niet een laptop. Workflows moeten in 5 minuten van een telefoon uit te voeren zijn.
 
-Claudients small-business-vaardigheidsverzameling is rond deze drie feiten gebouwd.
+UitKits small-business-vaardigheidsverzameling is rond deze drie feiten gebouwd.
 
 ---
 
@@ -162,7 +162,7 @@ Voor workflowautomatisering gekoppeld aan uw werkelijke zakelijke gegevens, ja â
 
 ### Wat als ik helemaal niet technisch ben?
 
-De Claude for Small Business workflows zijn point-and-click. De Claudient-vaardigheden in deze repo worden geactiveerd door plaintext-instructies naar Claude te typen. De moeilijkste technische stap is het verbinden van QuickBooks via OAuth, wat een 3-klik-proces is.
+De Claude for Small Business workflows zijn point-and-click. De UitKit-vaardigheden in deze repo worden geactiveerd door plaintext-instructies naar Claude te typen. De moeilijkste technische stap is het verbinden van QuickBooks via OAuth, wat een 3-klik-proces is.
 
 ---
 

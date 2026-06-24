@@ -18,14 +18,14 @@ Eres docente, conferencista, diseñador instruccional, profesional de aprendizaj
 
 ```bash
 # Instalar habilidades para educadores
-npx claudient add skill productivity/lesson-planner
-npx claudient add skill productivity/student-feedback-analyzer
-npx claudient add skill small-business/online-course-creator
-npx claudient add skill small-business/newsletter-publisher
-npx claudient add skill productivity/lit-review
+npx uitkit add skill productivity/lesson-planner
+npx uitkit add skill productivity/student-feedback-analyzer
+npx uitkit add skill small-business/online-course-creator
+npx uitkit add skill small-business/newsletter-publisher
+npx uitkit add skill productivity/lit-review
 
 # Instalar el agente investigador científico
-npx claudient add agent roles/scientific-researcher
+npx uitkit add agent roles/scientific-researcher
 ```
 
 ---
@@ -164,7 +164,7 @@ Longitud: [corto — 150 palabras / completo — 300 palabras]
 ## Plan de 30 días (nuevos educadores o nuevo curso)
 
 ### Semana 1 — Fundamentos de planificación de lecciones
-- Instala todas las habilidades para educadores: `npx claudient add skill productivity/[nombre]`
+- Instala todas las habilidades para educadores: `npx uitkit add skill productivity/[nombre]`
 - Usa `/lesson-planner` para planificar tus próximas 3 lecciones — compara con lo que harías normalmente
 - Ejecuta el escritor de objetivos de aprendizaje en cada lección — convierte metas vagas en resultados medibles
 - Crea tu primer ticket de salida y úsalo en clase

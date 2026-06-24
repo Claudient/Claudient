@@ -213,16 +213,16 @@ Violation of this policy is a HIPAA breach risk. Escalate questions to the Priva
 EOF
 
 # Install healthcare admin skills
-npx claudient add skill legal/compliance-tracker
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/sop-writer
-npx claudient add skill productivity/team-onboarding
+npx uitkit add skill legal/compliance-tracker
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/sop-writer
+npx uitkit add skill productivity/team-onboarding
 
 # Copy command stubs into .claude/commands/
-npx claudient add skill legal/compliance-tracker --output healthcare-admin-workspace/.claude/commands/compliance-check.md
-npx claudient add skill productivity/sop-writer --output healthcare-admin-workspace/.claude/commands/prior-auth.md
-npx claudient add skill productivity/process-mapper --output healthcare-admin-workspace/.claude/commands/patient-intake.md
-npx claudient add skill productivity/team-onboarding --output healthcare-admin-workspace/.claude/commands/staff-schedule.md
+npx uitkit add skill legal/compliance-tracker --output healthcare-admin-workspace/.claude/commands/compliance-check.md
+npx uitkit add skill productivity/sop-writer --output healthcare-admin-workspace/.claude/commands/prior-auth.md
+npx uitkit add skill productivity/process-mapper --output healthcare-admin-workspace/.claude/commands/patient-intake.md
+npx uitkit add skill productivity/team-onboarding --output healthcare-admin-workspace/.claude/commands/staff-schedule.md
 ```
 
 ## CLAUDE.md template
@@ -422,15 +422,15 @@ Special requirements: [e.g., minor patient, interpreter needed, disability accom
 
 ```bash
 # Core healthcare admin skills
-npx claudient add skill legal/compliance-tracker
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/sop-writer
-npx claudient add skill productivity/team-onboarding
+npx uitkit add skill legal/compliance-tracker
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/sop-writer
+npx uitkit add skill productivity/team-onboarding
 
 # Supporting productivity skills
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/vendor-evaluator
-npx claudient add skill productivity/exec-briefing
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/vendor-evaluator
+npx uitkit add skill productivity/exec-briefing
 ```
 
 ## Related

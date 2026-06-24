@@ -6,7 +6,7 @@ metadata:
   name: app-feature-flags
   namespace: default
   labels:
-    app: claudient
+    app: uitkit
     version: v1
 data:
   features.json: |
@@ -21,7 +21,7 @@ data:
     }
   config.yaml: |
     app:
-      name: claudient
+      name: uitkit
       version: 1.0.0
       environment: production
     features:
@@ -36,10 +36,10 @@ data:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: claudient-app
+  name: uitkit-app
   namespace: default
   labels:
-    app: claudient
+    app: uitkit
     version: v1
 spec:
   replicas: 3
@@ -50,25 +50,25 @@ spec:
       maxUnavailable: 0
   selector:
     matchLabels:
-      app: claudient
+      app: uitkit
   template:
     metadata:
       labels:
-        app: claudient
+        app: uitkit
         version: v1
       annotations:
         prometheus.io/scrape: "true"
         prometheus.io/port: "8080"
         prometheus.io/path: "/metrics"
     spec:
-      serviceAccountName: claudient-sa
+      serviceAccountName: uitkit-sa
       securityContext:
         runAsNonRoot: true
         runAsUser: 1000
         fsGroup: 1000
       containers:
-      - name: claudient
-        image: claudient:latest
+      - name: uitkit
+        image: uitkit:latest
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
@@ -182,7 +182,7 @@ spec:
                 - key: app
                   operator: In
                   values:
-                  - claudient
+                  - uitkit
               topologyKey: kubernetes.io/hostname
 
       terminationGracePeriodSeconds: 30
@@ -192,14 +192,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: claudient-service
+  name: uitkit-service
   namespace: default
   labels:
-    app: claudient
+    app: uitkit
 spec:
   type: ClusterIP
   selector:
-    app: claudient
+    app: uitkit
   ports:
   - name: http
     port: 80
@@ -215,25 +215,25 @@ spec:
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: claudient-sa
+  name: uitkit-sa
   namespace: default
   labels:
-    app: claudient
+    app: uitkit
 
 ---
 # HorizontalPodAutoscaler
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: claudient-hpa
+  name: uitkit-hpa
   namespace: default
   labels:
-    app: claudient
+    app: uitkit
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: claudient-app
+    name: uitkit-app
   minReplicas: 3
   maxReplicas: 10
   metrics:
@@ -272,12 +272,12 @@ spec:
 apiVersion: policy/v1
 kind: PodDisruptionBudget
 metadata:
-  name: claudient-pdb
+  name: uitkit-pdb
   namespace: default
   labels:
-    app: claudient
+    app: uitkit
 spec:
   minAvailable: 2
   selector:
     matchLabels:
-      app: claudient
+      app: uitkit

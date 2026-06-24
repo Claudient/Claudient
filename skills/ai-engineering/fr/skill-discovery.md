@@ -19,7 +19,7 @@ updated: 2026-06-15
 
 - Rechercher des ressources non-compétences (guides, flux de travail, agents, règles)
 - Questions triviales ponctuelles
-- Questions génériques sur Claude ou les LLM non liées à Claudient
+- Questions génériques sur Claude ou les LLM non liées à UitKit
 
 ## Instructions
 

@@ -224,12 +224,12 @@ exclude_path = ["changelogs/archive"]
 EOF
 
 # Skills installieren
-npx claudient add skill productivity/api-doc-writer
-npx claudient add skill productivity/readme-generator
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill productivity/runbook-generator
-npx claudient add skill git/changelog-generator
-npx claudient add skill productivity/lit-review
+npx uitkit add skill productivity/api-doc-writer
+npx uitkit add skill productivity/readme-generator
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill productivity/runbook-generator
+npx uitkit add skill git/changelog-generator
+npx uitkit add skill productivity/lit-review
 
 # Installierte Skills als Workspace-Befehle kopieren
 cp ~/.claude/skills/productivity/api-doc-writer.md .claude/commands/api-doc.md
@@ -411,12 +411,12 @@ Vor dem Öffnen eines PR, verifiziere alle Elemente in reviews/doc-review-checkl
 ## Zu installierende Skills
 
 ```bash
-npx claudient add skill productivity/api-doc-writer
-npx claudient add skill productivity/readme-generator
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill productivity/runbook-generator
-npx claudient add skill git/changelog-generator
-npx claudient add skill productivity/lit-review
+npx uitkit add skill productivity/api-doc-writer
+npx uitkit add skill productivity/readme-generator
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill productivity/runbook-generator
+npx uitkit add skill git/changelog-generator
+npx uitkit add skill productivity/lit-review
 ```
 
 ## Verwandt

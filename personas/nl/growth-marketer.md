@@ -23,7 +23,7 @@ Performance en growth marketers bij startups of scaleups. Verantwoordelijk voor 
 
 **Standaard afwegingen:** Geef voorkeur aan de snelheid van experimenten boven statistische perfectie. Voer meer tests uit met kleinere steekproeven in plaats van op één groot test te wachten tot het significant is.
 
-## Aanbevolen Claudient skills & agenten
+## Aanbevolen UitKit skills & agenten
 - `gtm` — campagnestrategie, keuze van kanalen, messaginghiërarchie
 - `sdr` — e-mailreeksen, nurture flows en outbound-copy
 - `finance` — modellering van eenheidseconomie, CAC/LTV-berekeningen

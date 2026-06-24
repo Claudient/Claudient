@@ -1,10 +1,10 @@
-# Claudient Capacity Planning Guide
+# UitKit Capacity Planning Guide
 
 **Version:** 1.0  
 **Last Updated:** June 2026  
 **Audience:** DevOps, SRE, Platform Engineers, Enterprise Operators
 
-This document provides infrastructure recommendations, scaling guidance, performance curves, and hardware sizing for deploying Claudient at scale—whether as a local plugin, enterprise marketplace, or cloud-hosted platform.
+This document provides infrastructure recommendations, scaling guidance, performance curves, and hardware sizing for deploying UitKit at scale—whether as a local plugin, enterprise marketplace, or cloud-hosted platform.
 
 ---
 
@@ -24,7 +24,7 @@ This document provides infrastructure recommendations, scaling guidance, perform
 
 ## Overview
 
-Claudient ships as:
+UitKit ships as:
 
 - **Local Plugin** (~50–500 MB) — single developer machine
 - **Enterprise Marketplace** — multi-tenant, internal usage (50–500 users)
@@ -1001,4 +1001,4 @@ Security:
 **Last Reviewed:** June 2026  
 **Next Review:** December 2026  
 **Owner:** Platform Engineering Team  
-**Emergency Contact:** devops@claudient.io
+**Emergency Contact:** devops@uitkit.io

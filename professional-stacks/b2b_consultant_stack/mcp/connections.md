@@ -62,8 +62,8 @@ Add to `settings.json`:
     "file": {
       "enabled": true,
       "allowedPaths": [
-        "/Users/tushar/Desktop/Claudient/b2b_consultant_stack",
-        "/Users/tushar/Desktop/Claudient/b2b_consultant_stack/deliverables"
+        "/Users/tushar/Desktop/UitKit/b2b_consultant_stack",
+        "/Users/tushar/Desktop/UitKit/b2b_consultant_stack/deliverables"
       ]
     }
   }

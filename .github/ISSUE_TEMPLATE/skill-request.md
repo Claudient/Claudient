@@ -26,7 +26,7 @@ assignees: ''
 
 ## Does anything similar already exist?
 
-<!-- Check `npx claudient list skills` or `npx claudient list agents`. Is there an existing skill that partially covers this? -->
+<!-- Check `npx uitkit list skills` or `npx uitkit list agents`. Is there an existing skill that partially covers this? -->
 
 - Existing skill/agent:
 - Gap that needs filling:

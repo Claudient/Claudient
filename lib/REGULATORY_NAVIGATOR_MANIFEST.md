@@ -342,7 +342,7 @@ Complete list of delivered files for the Regulatory Navigator compliance managem
 - **Version:** 1.0.0
 - **Release Date:** June 2024
 - **Status:** Production Ready
-- **License:** Part of Claudient ecosystem
+- **License:** Part of UitKit ecosystem
 
 ---
 

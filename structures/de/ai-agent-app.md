@@ -590,16 +590,16 @@ pnpm db:studio         # Drizzle Studio auf localhost:4983 öffnen
 ## Zu installierende Skills
 
 ```bash
-npx claudient add skill backend/typescript/hono-api
-npx claudient add skill backend/typescript/drizzle-orm
-npx claudient add skill backend/typescript/zod-schemas
-npx claudient add skill data-ml/ai/anthropic-tool-use
-npx claudient add skill data-ml/ai/mcp-server-integration
-npx claudient add skill data-ml/ai/prompt-versioning
-npx claudient add skill data-ml/ai/eval-harness
-npx claudient add skill productivity/test-generator
-npx claudient add skill productivity/security-audit
-npx claudient add skill git/pr-description
+npx uitkit add skill backend/typescript/hono-api
+npx uitkit add skill backend/typescript/drizzle-orm
+npx uitkit add skill backend/typescript/zod-schemas
+npx uitkit add skill data-ml/ai/anthropic-tool-use
+npx uitkit add skill data-ml/ai/mcp-server-integration
+npx uitkit add skill data-ml/ai/prompt-versioning
+npx uitkit add skill data-ml/ai/eval-harness
+npx uitkit add skill productivity/test-generator
+npx uitkit add skill productivity/security-audit
+npx uitkit add skill git/pr-description
 ```
 
 ## Verwandte Ressourcen

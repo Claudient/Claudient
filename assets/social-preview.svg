@@ -63,10 +63,10 @@
   <rect x="1257" y="580" width="3" height="40" fill="#f97316"/>
 
   <!-- Orange glow layer for title -->
-  <text x="640" y="148" text-anchor="middle" font-size="108" font-weight="900" fill="#f97316" opacity="0.15" letter-spacing="-3">CLAUDIENT</text>
+  <text x="640" y="148" text-anchor="middle" font-size="108" font-weight="900" fill="#f97316" opacity="0.15" letter-spacing="-3">UITKIT</text>
 
   <!-- Main title -->
-  <text x="640" y="148" text-anchor="middle" font-size="108" font-weight="900" fill="white" letter-spacing="-3" filter="url(#glow)">CLAUDIENT</text>
+  <text x="640" y="148" text-anchor="middle" font-size="108" font-weight="900" fill="white" letter-spacing="-3" filter="url(#glow)">UITKIT</text>
 
   <!-- Gradient underline -->
   <rect x="180" y="162" width="920" height="3" fill="url(#orange)" rx="2" opacity="0.9"/>
@@ -125,7 +125,7 @@
   <line x1="272" y1="298" x2="272" y2="356" stroke="#21262d" stroke-width="1"/>
   <!-- Command -->
   <text x="288" y="324" font-family="'Courier New', monospace" font-size="14" fill="#7c3aed">$</text>
-  <text x="302" y="324" font-family="'Courier New', monospace" font-size="14" fill="#f97316" font-weight="700">npx claudient add all</text>
+  <text x="302" y="324" font-family="'Courier New', monospace" font-size="14" fill="#f97316" font-weight="700">npx uitkit add all</text>
   <text x="288" y="344" font-family="'Courier New', monospace" font-size="12" fill="#4b5563">Installing 256+ skills, 77+ agents, hooks, MCP configs, guides...</text>
 
   <!-- Stat cards row -->
@@ -178,7 +178,7 @@
 
   <!-- Footer credit -->
   <text x="640" y="580" text-anchor="middle" font-size="12" font-weight="600" fill="#374151">
-    uitbreiden.com · github.com/Claudients/Claudient · MIT License
+    uitbreiden.com · github.com/UitKits/UitKit · MIT License
   </text>
 
   <!-- Orange dot accent at footer -->

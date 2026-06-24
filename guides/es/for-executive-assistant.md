@@ -20,15 +20,15 @@ Claude Code se convierte en tu motor de preparación: briefings redactados en mi
 
 ```bash
 # Instalar habilidades para EA y JG
-npx claudient add skill small-business/meeting-to-action
-npx claudient add skill small-business/monday-brief
-npx claudient add skill productivity/board-deck-builder
-npx claudient add skill productivity/confluence-expert
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/stakeholder-comms
+npx uitkit add skill small-business/meeting-to-action
+npx uitkit add skill small-business/monday-brief
+npx uitkit add skill productivity/board-deck-builder
+npx uitkit add skill productivity/confluence-expert
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/stakeholder-comms
 
 # Instalar el agente jefe de gabinete
-npx claudient add agent advisors/chief-of-staff
+npx uitkit add agent advisors/chief-of-staff
 ```
 
 ---
@@ -218,7 +218,7 @@ VISTA PREVIA DE LA PRÓXIMA SEMANA:
 ## Plan de 30 días (nuevo EA o JG)
 
 ### Semana 1 — Mapear el panorama
-- Instala todas las habilidades de EA/JG: `npx claudient add skill productivity/[nombre]`
+- Instala todas las habilidades de EA/JG: `npx uitkit add skill productivity/[nombre]`
 - Conoce el calendario del ejecutivo: qué reuniones se repiten, cuáles son de alto impacto, cuáles temen
 - Presenta el formato del brief del lunes al ejecutivo — ¿quieren más o menos detalle? ¿distinto enfoque?
 - Identifica a las 5 partes interesadas más importantes en el mundo del ejecutivo y construye perfiles usando `/exec-briefing`

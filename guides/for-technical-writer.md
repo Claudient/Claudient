@@ -18,16 +18,16 @@ You are a technical writer, docs engineer, or developer advocate whose job is to
 
 ```bash
 # Install all Technical Writer skills
-npx claudient add skills productivity
+npx uitkit add skills productivity
 
 # Or cherry-pick:
-npx claudient add skill productivity/readme-generator
-npx claudient add skill productivity/runbook-generator
-npx claudient add skill productivity/adr-writer
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill productivity/api-doc-writer
-npx claudient add skill productivity/changelog-writer
-npx claudient add agents roles/changelog-narrator
+npx uitkit add skill productivity/readme-generator
+npx uitkit add skill productivity/runbook-generator
+npx uitkit add skill productivity/adr-writer
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill productivity/api-doc-writer
+npx uitkit add skill productivity/changelog-writer
+npx uitkit add agents roles/changelog-narrator
 ```
 
 ---
@@ -216,7 +216,7 @@ Produce:
 ## 30-day ramp plan (new technical writers)
 
 ### Week 1 — Setup and docs audit
-- Install all productivity skills: `npx claudient add skills productivity`
+- Install all productivity skills: `npx uitkit add skills productivity`
 - Run `/doc-site-builder` Diátaxis classification on all existing docs — identify gaps and mixed-type pages
 - Read every existing doc in your primary area — note anything outdated (compare against recent PRs)
 - Shadow 2-3 engineering standups — hear what's shipping in the next sprint
@@ -270,7 +270,7 @@ If your team uses OpenAPI:
 
 ```bash
 # Generate docs from spec
-npx claudient run api-doc-writer --input openapi.yaml --audience developers
+npx uitkit run api-doc-writer --input openapi.yaml --audience developers
 ```
 
 ### Mintlify / Docusaurus / MkDocs (docs platforms)

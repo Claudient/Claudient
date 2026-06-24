@@ -8,7 +8,7 @@ updated: 2026-06-15
 
 ## Objectif
 
-Analyse la documentation et le code d'une stack Claudient pour identifier toutes les dépendances externes (MCP, API, services cloud, registres de paquets), classe chacune comme sûre hors ligne ou nécessitant le réseau, détecte les violations de sécurité dans les environnements air-gappés et produit un rapport détaillé de disponibilité hors ligne avec les étapes de correction.
+Analyse la documentation et le code d'une stack UitKit pour identifier toutes les dépendances externes (MCP, API, services cloud, registres de paquets), classe chacune comme sûre hors ligne ou nécessitant le réseau, détecte les violations de sécurité dans les environnements air-gappés et produit un rapport détaillé de disponibilité hors ligne avec les étapes de correction.
 
 ## Orientation du modèle
 
@@ -36,7 +36,7 @@ Exclure : récupération Web, outils réseau, intégrations de plate-forme cloud
 ```
 /offline-validator
 
-Chemin de stack : /opt/claudient/backend_stack
+Chemin de stack : /opt/uitkit/backend_stack
 Générer : rapport de disponibilité hors ligne
 Sortie : JSON + Markdown
 
@@ -58,7 +58,7 @@ Livrables :
 
 L'agent reçoit :
 
-1. **Chemin de stack** — par exemple, `/opt/claudient/backend_stack`
+1. **Chemin de stack** — par exemple, `/opt/uitkit/backend_stack`
 2. **Portée** — quels sous-répertoires analyser (compétences, guides, agents, workflows)
 3. **Format de sortie** — JSON, Markdown ou les deux
 4. **Niveau de stricteur** — "loose" (audit basique), "standard" (approfondi), "strict" (prêt pour air-gap)
@@ -212,7 +212,7 @@ curl|wget|fetch|axios\.post|requests\.post
   },
   "security_requirements": {
     "firewall": "DROP tout sortant sauf localhost et réseau interne",
-    "audit_logging": "activer la piste d'audit JSON vers /var/log/claudient-audit.jsonl",
+    "audit_logging": "activer la piste d'audit JSON vers /var/log/uitkit-audit.jsonl",
     "network_isolation_verified": false
   },
   "deployment_readiness": {
@@ -309,7 +309,7 @@ Appelez l'agent validateur hors ligne dans ces workflows :
 # Invoquer l'agent depuis le workflow ou la compétence
 /offline-validator <<'EOF'
 {
-  "stack_path": "/opt/claudient/backend_stack",
+  "stack_path": "/opt/uitkit/backend_stack",
   "scope": ["skills", "guides"],
   "output_format": ["json", "markdown"],
   "strictness": "standard"
@@ -341,14 +341,14 @@ cat backend_AIR_GAP_CONFIG.json | jq .
 ```bash
 /offline-validator
 
-Chemin de stack : /opt/claudient/backend_stack
+Chemin de stack : /opt/uitkit/backend_stack
 Portée : all
 Stricteur : standard
 Format de sortie : json,markdown
 
 ---
 
-Analyse de /opt/claudient/backend_stack...
+Analyse de /opt/uitkit/backend_stack...
 
 [1] Collecte des fichiers CLAUDE.md...
   Trouvés 12 fichiers

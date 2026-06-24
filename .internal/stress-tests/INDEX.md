@@ -415,7 +415,7 @@ rm -rf ~/.claude/stress-test-sandboxes/
 
 - **Version**: 1.0
 - **Last Updated**: 2026-06-22
-- **Maintained By**: Claudient Team
+- **Maintained By**: UitKit Team
 - **Status**: Production
 
 ## Next Steps

@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://claudient.dev',
+  site: 'https://uitkit.dev',
   output: 'static',
   integrations: [
     react(),

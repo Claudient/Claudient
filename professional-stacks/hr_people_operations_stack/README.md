@@ -5,5 +5,5 @@ Human resources and people operations workspace — hiring, onboarding, compensa
 ## Quick Start
 
 ```bash
-npx claudient add hr_people_operations_stack
+npx uitkit add hr_people_operations_stack
 ```

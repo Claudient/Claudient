@@ -217,7 +217,7 @@ d3.selectAll('rect')
 ## Week 3: Integration with Codebase Tools
 
 ### Learning Objectives
-- Understand Claudient's CliApp SVG inspector architecture
+- Understand UitKit's CliApp SVG inspector architecture
 - Build interactive inspection tools
 - Integrate with clipboard and file I/O APIs
 - Parse and visualize structured data (JSON, tree formats)
@@ -226,13 +226,13 @@ d3.selectAll('rect')
 ### Curriculum
 
 #### Day 1: CliApp Architecture Review (3 hours)
-- Claudient codebase structure: `site/src/components/os/apps/`
+- UitKit codebase structure: `site/src/components/os/apps/`
 - CliApp component lifecycle and event handling
 - SVG rendering within React components
 - State management for interactive tools
 - **Exercise:** Analyze existing CliApp implementations
 
-**Reference file:** `/Users/tushar/Desktop/Claudient/site/src/components/os/apps/CliApp.tsx`
+**Reference file:** `/Users/tushar/Desktop/UitKit/site/src/components/os/apps/CliApp.tsx`
 
 #### Day 2: Building Inspector Components (4 hours)
 - Parse CLI commands and output
@@ -310,7 +310,7 @@ const pieChartPlugin: InspectorPlugin = {
 - **Exercise:** Implement copy-to-clipboard for selected nodes
 
 ### Live Session (Thursday 6pm PT)
-**"Extending Claudient"** — Plugin architecture deep dive, demo custom inspector, Q&A on integration patterns
+**"Extending UitKit"** — Plugin architecture deep dive, demo custom inspector, Q&A on integration patterns
 
 ### Weekly Assignment
 **Deliverable:** Inspector Plugin Prototype
@@ -366,7 +366,7 @@ const pieChartPlugin: InspectorPlugin = {
    - Timeline scrubber
    - Filter by status, type, domain
 
-5. **Component Hierarchy Inspector** (Claudient-specific)
+5. **Component Hierarchy Inspector** (UitKit-specific)
    - Visualize React component tree
    - Show props, state, event flow
    - Performance profiling overlay
@@ -423,7 +423,7 @@ const pieChartPlugin: InspectorPlugin = {
 - 20 min: Animation smoothness and easing strategies
 - 10 min: Assignment Q&A
 
-### Week 3 (Thu 6pm PT): Extending Claudient
+### Week 3 (Thu 6pm PT): Extending UitKit
 - 20 min: Plugin architecture walkthrough
 - 40 min: Live plugin development (pair programming)
 - 20 min: Integration patterns and gotchas
@@ -446,9 +446,9 @@ const pieChartPlugin: InspectorPlugin = {
 
 ### Development Environment
 ```bash
-# Clone Claudient
-git clone https://github.com/tushar2704/Claudient.git
-cd Claudient
+# Clone UitKit
+git clone https://github.com/tushar2704/UitKit.git
+cd UitKit
 
 # Install dependencies
 npm install
@@ -479,7 +479,7 @@ npm test
 ### Recommended Reading
 - "SVG Essentials" — J. David Eisenberg
 - "Interactive Data Visualization" — Scott Murray
-- Claudient architecture docs: `/docs/` in repo
+- UitKit architecture docs: `/docs/` in repo
 
 ### Example Projects
 - `site/src/components/os/apps/` — CliApp reference implementations
@@ -606,7 +606,7 @@ const responsiveSVG = (container, width = 800, height = 600) => {
 This bootcamp is living documentation. After each cohort:
 - Collect student feedback via anonymous survey
 - Update curriculum based on common pain points
-- Refresh examples with latest Claudient features
+- Refresh examples with latest UitKit features
 - Share learnings with community
 
 **Last Updated:** 2026-06-22  

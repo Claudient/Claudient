@@ -23,7 +23,7 @@ Engineers, founders, and PMs building products where AI is a core feature, not a
 
 **Default tradeoffs:** Prefer prompt engineering before RAG, RAG before fine-tuning. Prefer Claude Haiku for latency-sensitive paths; Sonnet or Opus for quality-critical ones. Build evals before optimizing.
 
-## Recommended Claudient skills & agents
+## Recommended UitKit skills & agents
 - `ai-engineering` — core LLM integration, agent design, RAG pipelines
 - `backend` — API wrapper patterns, streaming, async handling
 - `devops-infra` — model serving, cost monitoring, rate limit handling

@@ -1,6 +1,6 @@
 # Integration Tests
 
-This directory contains comprehensive integration tests for Claudient's core systems.
+This directory contains comprehensive integration tests for UitKit's core systems.
 
 ## Available Test Suites
 

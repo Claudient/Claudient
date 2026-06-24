@@ -36,7 +36,7 @@ export function MenuBar({ wm }: { wm: WindowManager }) {
           className="flex items-center gap-1.5 rounded-md px-2 py-1 hover:bg-white/70"
         >
           <span className="size-5 grid place-items-center rounded-md bg-gradient-to-br from-brand-orange to-brand-red text-white text-[10px] font-extrabold">C</span>
-          <span className="text-[13px] font-extrabold text-ink">claudient.os</span>
+          <span className="text-[13px] font-extrabold text-ink">uitkit.os</span>
         </button>
         {open && (
           <div className="absolute left-0 mt-1.5 w-56 rounded-lg border border-hairline bg-white py-1.5 win-shadow">
@@ -80,7 +80,7 @@ export function MenuBar({ wm }: { wm: WindowManager }) {
           ⚖️ Compare
         </button>
         <a
-          href="https://github.com/UitbreidenOS/Claudient"
+          href="https://github.com/UitbreidenOS/UitKit"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden sm:flex items-center gap-1.5 text-[12.5px] font-semibold text-ink hover:text-body hover:bg-white/70 rounded-md px-2 py-1 transition"

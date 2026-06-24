@@ -51,7 +51,7 @@ const MARKETPLACE_INFO = [
     title: "Quality Assurance",
     icon: "✅",
     items: [
-      { label: "Certified Badge", desc: "Stacks passing vetting get the Claudient Certified badge." },
+      { label: "Certified Badge", desc: "Stacks passing vetting get the UitKit Certified badge." },
       { label: "Automated Testing", desc: "Every stack tested via validate-stacks.js before listing." },
       { label: "Freshness Monitoring", desc: "Stale stacks flagged automatically. Publishers notified for updates." },
     ],
@@ -138,7 +138,7 @@ export function MarketplaceApp() {
                       <div className="mt-2 flex items-center gap-2">
                         <Tag color="#8b949e">{item.category}</Tag>
                         <pre className="text-[9px] font-mono text-mute">
-                          <code>{`npx claudient install ${item.id}`}</code>
+                          <code>{`npx uitkit install ${item.id}`}</code>
                         </pre>
                       </div>
                     </div>
@@ -152,7 +152,7 @@ export function MarketplaceApp() {
         {tab === "publish" && (
           <div>
             <h2 className="text-lg font-extrabold text-ink mb-1">Publisher Program</h2>
-            <p className="text-[12.5px] text-mute mb-4">Submit your stacks to the Claudient Marketplace and reach thousands of Claude Code users.</p>
+            <p className="text-[12.5px] text-mute mb-4">Submit your stacks to the UitKit Marketplace and reach thousands of Claude Code users.</p>
             {MARKETPLACE_INFO.map((section) => (
               <div key={section.title} className="mb-5">
                 <div className="flex items-center gap-2 mb-3">
@@ -174,7 +174,7 @@ export function MarketplaceApp() {
 
         {tab === "certified" && (
           <div>
-            <h2 className="text-lg font-extrabold text-ink mb-1">Claudient Certified</h2>
+            <h2 className="text-lg font-extrabold text-ink mb-1">UitKit Certified</h2>
             <p className="text-[12.5px] text-mute mb-4">Quality-assured stacks that meet our vetting criteria.</p>
 
             <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-5 mb-5">
@@ -182,7 +182,7 @@ export function MarketplaceApp() {
                 <span className="text-3xl">🏅</span>
                 <div>
                   <div className="text-[14px] font-bold text-emerald-800">Certification Badge</div>
-                  <p className="text-[11.5px] text-emerald-700">Stacks passing all criteria receive the Claudient Certified badge and priority placement.</p>
+                  <p className="text-[11.5px] text-emerald-700">Stacks passing all criteria receive the UitKit Certified badge and priority placement.</p>
                 </div>
               </div>
             </div>

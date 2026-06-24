@@ -666,10 +666,10 @@ export function StacksApp() {
               <div className="text-[11px] font-bold text-mute uppercase tracking-wider mb-2">Install Full Stack</div>
               <div className="flex items-center gap-2">
                 <pre className="flex-1 rounded-xl bg-code-bg text-code-text px-4 py-3 text-[12px] font-mono overflow-auto">
-                  <code>{`npx claudient install ${stack.name.toLowerCase().replace(/[\s/]/g, "_")}_stack`}</code>
+                  <code>{`npx uitkit install ${stack.name.toLowerCase().replace(/[\s/]/g, "_")}_stack`}</code>
                 </pre>
                 <button
-                  onClick={() => copy(`npx claudient install ${stack.name.toLowerCase().replace(/[\s/]/g, "_")}_stack`)}
+                  onClick={() => copy(`npx uitkit install ${stack.name.toLowerCase().replace(/[\s/]/g, "_")}_stack`)}
                   className="shrink-0 rounded-lg border border-olive/50 bg-white px-3 py-2.5 text-[12px] font-semibold text-ink hover:bg-cream transition"
                 >
                   {copied.includes("install") ? "✓ Copied!" : "Copy"}

@@ -118,8 +118,8 @@ jq '.[-1].session_cost_usd' .claude/logs/audit.log
 
 Set at session start to customize behavior:
 
-- `CLAUDIENT_USER` — override user email (default: git config user.email)
-- `CLAUDIENT_SESSION_ID` — provide custom session ID (default: auto-generated)
-- `CLAUDIENT_SESSION_COST` — track cumulative cost
+- `UITKIT_USER` — override user email (default: git config user.email)
+- `UITKIT_SESSION_ID` — provide custom session ID (default: auto-generated)
+- `UITKIT_SESSION_COST` — track cumulative cost
 
 ---

@@ -23,7 +23,7 @@ Ontwikkelaars die kleine SaaS-producten, tools of informatieproducten bouwen en 
 
 **Standaard compromissen:** SQLite vóór Postgres als het past. Stripe + e-mail vóór een volledige CRM. Vercel/Railway boven zelf-beheerde Kubernetes.
 
-## Aanbevolen Claudient skills & agents
+## Aanbevolen UitKit skills & agents
 - `small-business` — prijsstelling, positionering, retentietactieken
 - `gtm` — lanceer op Product Hunt, Hacker News, Twitter/X
 - `ai-engineering` — AI-functies toevoegen zonder GPU-budget

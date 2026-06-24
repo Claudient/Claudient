@@ -14,12 +14,12 @@ interface CmdDef {
 const commands: CmdDef[] = [
   {
     id: "doctor",
-    name: "claudient doctor",
+    name: "uitkit doctor",
     icon: "🩺",
     desc: "Health check — scans .claude/ setup, reports conflicts, stale skills, missing hooks, token waste.",
-    usage: "claudient doctor",
+    usage: "uitkit doctor",
     tier: "free",
-    output: `claudient doctor — Health Check Report
+    output: `uitkit doctor — Health Check Report
 ────────────────────────────────────────────
 ✓ CLAUDE.md found              (3 files)
 ✓ Skills installed             (412 files)
@@ -36,16 +36,16 @@ const commands: CmdDef[] = [
 ✓ No conflicts found
 ────────────────────────────────────────────
 Score: 88/100  Grade: B+
-Recommendation: Update 4 stale skills → run claudient update`,
+Recommendation: Update 4 stale skills → run uitkit update`,
   },
   {
     id: "consult",
-    name: "claudient consult",
+    name: "uitkit consult",
     icon: "🔍",
     desc: "Skill finder — asks what you're building, recommends stacks and skills from the 400+ catalog.",
-    usage: 'claudient consult "I need to build a REST API with auth and testing"',
+    usage: 'uitkit consult "I need to build a REST API with auth and testing"',
     tier: "free",
-    output: `claudient consult — Skill Recommendation
+    output: `uitkit consult — Skill Recommendation
 ────────────────────────────────────────────
 Query: "build a REST API with auth and testing"
 
@@ -60,19 +60,19 @@ Recommended stack: fullstack_developer_stack
   → 8 skills + 3 commands + 4 hooks + 2 MCP configs
 
 Install with:
-  npx claudient add stack fullstack_developer_stack`,
+  npx uitkit add stack fullstack_developer_stack`,
   },
   {
     id: "share",
-    name: "claudient share",
+    name: "uitkit share",
     icon: "📤",
     desc: "Export your active skills as a shareable GitHub Gist. Network effect: every share is a referral.",
-    usage: "claudient share --gist",
+    usage: "uitkit share --gist",
     tier: "free",
-    output: `claudient share — Bundle Export
+    output: `uitkit share — Bundle Export
 ────────────────────────────────────────────
 Bundling 12 active skills...
-✓ Created bundle: claudient-bundle-2026-06-15.yaml
+✓ Created bundle: uitkit-bundle-2026-06-15.yaml
 
 Skills included:
   backend/fastapi-expert
@@ -83,16 +83,16 @@ Skills included:
   + 7 more
 
 Gist URL: https://gist.github.com/tushar2704/abc123...
-Share with: claudient import https://gist.github.com/tushar2704/abc123`,
+Share with: uitkit import https://gist.github.com/tushar2704/abc123`,
   },
   {
     id: "import",
-    name: "claudient import",
+    name: "uitkit import",
     icon: "📥",
     desc: "Import a community bundle from a GitHub Gist URL. One command to replicate any team's setup.",
-    usage: "claudient import <gist-url>",
+    usage: "uitkit import <gist-url>",
     tier: "free",
-    output: `claudient import — Bundle Import
+    output: `uitkit import — Bundle Import
 ────────────────────────────────────────────
 Fetching: https://gist.github.com/community/backend-pro...
 ✓ Validated bundle (15 skills, 2 agents, 3 hooks)
@@ -108,16 +108,16 @@ Installing:
 ✓ Added 2 agents: pr-reviewer, test-generator
 ✓ Activated 3 hooks: test-coverage, lint-check, security-scan
 
-Next: Run claudient doctor to verify your setup`,
+Next: Run uitkit doctor to verify your setup`,
   },
   {
     id: "audit",
-    name: "claudient audit",
+    name: "uitkit audit",
     icon: "📋",
     desc: "Deep compliance audit across 8 dimensions: SOC2, GDPR, EU-AI-Act, HIPAA. Score 0–160.",
-    usage: "claudient audit --full",
+    usage: "uitkit audit --full",
     tier: "enterprise",
-    output: `claudient audit — Compliance Report (8 Dimensions)
+    output: `uitkit audit — Compliance Report (8 Dimensions)
 ────────────────────────────────────────────
 Date: 2026-06-15 | Scope: Full Organization
 
@@ -151,12 +151,12 @@ Fix 3 warnings → upgrade to Enterprise for automated remediation`,
   },
   {
     id: "score",
-    name: "claudient score",
+    name: "uitkit score",
     icon: "🎯",
     desc: "AI-Readiness Scorecard — evaluates your team's Claude Code setup on 5 axes, outputs 0–100 with tier recommendations.",
-    usage: "claudient score",
+    usage: "uitkit score",
     tier: "free",
-    output: `claudient score — AI-Readiness Scorecard
+    output: `uitkit score — AI-Readiness Scorecard
 ────────────────────────────────────────────
 Organization: acme-corp
 Date: 2026-06-15
@@ -177,19 +177,19 @@ Recommendations:
 
 Projected after fixes: 99/100 (Grade A, Enterprise-ready)
 
-→ Run claudient consult to find the right skills
+→ Run uitkit consult to find the right skills
 → Upgrade to Team for governance hooks + priority support`,
   },
   {
     id: "init",
-    name: "claudient init",
+    name: "uitkit init",
     icon: "🚀",
     desc: "Interactive first-run setup — walks through CLAUDE.md generation, skill selection, hook configuration, and MCP server setup.",
-    usage: "claudient init",
+    usage: "uitkit init",
     tier: "free",
-    output: `claudient init — First-Run Setup
+    output: `uitkit init — First-Run Setup
 ────────────────────────────────────────────
-Welcome to Claudient! Let's set up your Claude Code environment.
+Welcome to UitKit! Let's set up your Claude Code environment.
 
 [1/4] Project Detection
   Detected: Next.js 15 + TypeScript + Tailwind
@@ -216,18 +216,18 @@ Welcome to Claudient! Let's set up your Claude Code environment.
   ✓ github (github-mcp-server)
   → 2 MCP servers connected
 ────────────────────────────────────────────
-✓ Setup complete! Run claudient doctor to verify.
+✓ Setup complete! Run uitkit doctor to verify.
 
-For enterprise governance: claudient init --enterprise`,
+For enterprise governance: uitkit init --enterprise`,
   },
   {
     id: "benchmark",
-    name: "claudient benchmark",
+    name: "uitkit benchmark",
     icon: "📊",
     desc: "Display eval scores for benchmarked skills. No args: top 10 by score. With skill-id: detailed result card with grade, tests, and notes.",
-    usage: "claudient benchmark [skill-id]",
+    usage: "uitkit benchmark [skill-id]",
     tier: "free",
-    output: `claudient benchmark — Skill Eval Scores
+    output: `uitkit benchmark — Skill Eval Scores
 ────────────────────────────────────────────
 Benchmarked: 20 skills | Avg score: 88.8%
 
@@ -246,18 +246,18 @@ Top 10 by score:
 Grade scale: A (90%+) | B (75-89%) | C (60-74%) | F (<60%)
 Methodology: each skill tested on 10 real-world prompts.
 
-→ Run claudient benchmark <skill-id> for details`,
+→ Run uitkit benchmark <skill-id> for details`,
   },
   {
     id: "init-enterprise",
-    name: "claudient init --enterprise",
+    name: "uitkit init --enterprise",
     icon: "🏢",
     desc: "Enterprise-scale setup wizard — configures SSO, RBAC, audit trails, compliance stacks (SOC2/GDPR/EU-AI-Act), PII scanning, and cost governance.",
-    usage: "claudient init --enterprise",
+    usage: "uitkit init --enterprise",
     tier: "enterprise",
-    output: `claudient init --enterprise — Enterprise Governance Setup
+    output: `uitkit init --enterprise — Enterprise Governance Setup
 ────────────────────────────────────────────
-Welcome to Claudient Enterprise. This wizard configures
+Welcome to UitKit Enterprise. This wizard configures
 full governance, compliance, and security for your organization.
 
 [1/7] Organization Profile
@@ -304,17 +304,17 @@ full governance, compliance, and security for your organization.
 ────────────────────────────────────────────
 ✓ Enterprise governance ready! Score: 158/160
 
-Next: Run claudient audit for your first compliance report.
+Next: Run uitkit audit for your first compliance report.
 Support: ceo@uitbreiden.com`,
   },
   {
     id: "dashboard",
-    name: "claudient dashboard",
+    name: "uitkit dashboard",
     icon: "🖥️",
     desc: "Launch the local dashboard app. Spawns the Astro dev server and auto-opens the web GUI in the default browser.",
-    usage: "claudient dashboard",
+    usage: "uitkit dashboard",
     tier: "free",
-    output: `Launching Claudient Workspace Dashboard locally...
+    output: `Launching UitKit Workspace Dashboard locally...
 Starting local Astro dev server...
 Opening dashboard at http://localhost:4321 in your browser...
 
@@ -322,10 +322,10 @@ Press Ctrl+C to terminate dashboard server.`,
   },
   {
     id: "council",
-    name: "claudient council",
+    name: "uitkit council",
     icon: "🤝",
     desc: "Trigger domain-wide subagent swarm orchestration. Compiles stack-specific agent roles, tools, and rules into a dynamic markdown instruction file (COUNCIL_INSTRUCTIONS.md) to run collaborative multi-agent swarms.",
-    usage: "claudient council <domain>",
+    usage: "uitkit council <domain>",
     tier: "free",
     output: `
 ══════════════════════════════════════════════════════════════════════════════════
@@ -350,19 +350,19 @@ Define the Swarm Objective/Task:
 > Draft a personalized cold email sequence for VP of Engineering at Vercel targeting Next.js cost optimizations.
 
 ✔ Claude Council Swarm instructions formulated successfully!
-Saved instructions file to: /Users/tushar/Desktop/Claudient/COUNCIL_INSTRUCTIONS.md
+Saved instructions file to: /Users/tushar/Desktop/UitKit/COUNCIL_INSTRUCTIONS.md
 
 To run the swarm, start your Claude Code session and instruct it:
   "Read COUNCIL_INSTRUCTIONS.md and execute the swarm workflow steps to achieve the objective."`,
   },
   {
     id: "nightshift",
-    name: "claudient nightshift",
+    name: "uitkit nightshift",
     icon: "🌙",
     desc: "Autonomous batch processor — queues hundreds of files, manages its own API rate limits, designed for 3+ hour unsupervised sessions.",
     usage: "node scripts/nightshift.js",
     tier: "free",
-    output: `claudient nightshift — Batch Queue
+    output: `uitkit nightshift — Batch Queue
 ────────────────────────────────────────────
 Queue: BATCH_QUEUE.md (50 files)
 Mode: autonomous | Rate limit: auto-managed
@@ -378,12 +378,12 @@ Processed: 50/50 | Errors: 2 | Time: 3h 12m`,
   },
   {
     id: "tribunal",
-    name: "claudient tribunal",
+    name: "uitkit tribunal",
     icon: "⚖️",
     desc: "3-agent adversarial PR review — spawns Hacker, Performance Junkie, and Senior Pedant to audit a PR from every angle.",
     usage: "node scripts/tribunal.js <file>",
     tier: "free",
-    output: `claudient tribunal — Adversarial Review
+    output: `uitkit tribunal — Adversarial Review
 ────────────────────────────────────────────
 File: src/auth/handler.ts
 
@@ -404,12 +404,12 @@ Verdict: 6 issues found | 3 critical, 3 minor`,
   },
   {
     id: "oracle",
-    name: "claudient oracle",
+    name: "uitkit oracle",
     icon: "🎱",
     desc: "Pre-mortem prediction — simulates edge cases against a PR to predict specific production failure modes before merge.",
     usage: "node scripts/oracle.js <file>",
     tier: "free",
-    output: `claudient oracle — Pre-Mortem Analysis
+    output: `uitkit oracle — Pre-Mortem Analysis
 ────────────────────────────────────────────
 PR: #128 "Add payment retry logic"
 
@@ -424,12 +424,12 @@ Recommendation: Fix 2 critical issues before merge`,
   },
   {
     id: "learn",
-    name: "claudient learn",
+    name: "uitkit learn",
     icon: "📖",
     desc: "Scans your project and generates custom CLAUDE.md guidelines and rules based on your actual codebase patterns.",
     usage: "node scripts/learn.js",
     tier: "free",
-    output: `claudient learn — Codebase Analysis
+    output: `uitkit learn — Codebase Analysis
 ────────────────────────────────────────────
 Scanning project structure...
 ✓ Detected: Next.js 15 + TypeScript + Prisma
@@ -448,12 +448,12 @@ Generating custom guidelines:
   },
   {
     id: "chart",
-    name: "claudient chart",
+    name: "uitkit chart",
     icon: "🗺️",
     desc: "Codebase cartographer — AST/signature extraction for massive repos. Gives Claude an exact map of all APIs and types.",
     usage: "node scripts/chart.js",
     tier: "free",
-    output: `claudient chart — Codebase Map
+    output: `uitkit chart — Codebase Map
 ────────────────────────────────────────────
 Scanning 2,400 files...
 
@@ -464,7 +464,7 @@ Indexed:
   1,200 functions
    65 modules
 
-Output: .claudient/map.json
+Output: .uitkit/map.json
 Density: 84% | Coverage: 92%
 
 Claude now has full repo vision.
@@ -473,12 +473,12 @@ Claude now has full repo vision.
   },
   {
     id: "spec",
-    name: "claudient spec",
+    name: "uitkit spec",
     icon: "📐",
     desc: "Spec-first enforcement wizard — reads SPEC.md and blocks Claude from violating approved architecture.",
     usage: "node scripts/spec.js",
     tier: "free",
-    output: `claudient spec — Architecture Enforcement
+    output: `uitkit spec — Architecture Enforcement
 ────────────────────────────────────────────
 Loading: SPEC.md (127 lines, 8 sections)
 
@@ -497,12 +497,12 @@ Session: 14 writes checked | 2 blocked`,
   },
   {
     id: "bisect",
-    name: "claudient bisect",
+    name: "uitkit bisect",
     icon: "🔬",
     desc: "Time-travel debugger — writes a test script and jumps through Git history to find the exact commit that broke the code.",
     usage: "node scripts/bisect.js",
     tier: "free",
-    output: `claudient bisect — Bug Finder
+    output: `uitkit bisect — Bug Finder
 ────────────────────────────────────────────
 Issue: "Login returns 500 for expired tokens"
 
@@ -522,12 +522,12 @@ Applying fix...`,
   },
   {
     id: "checkpoint",
-    name: "claudient checkpoint",
+    name: "uitkit checkpoint",
     icon: "💾",
     desc: "Session checkpointing — saves current state (decisions, edits, context) so you can resume without losing progress.",
     usage: "node scripts/checkpoint.js",
     tier: "free",
-    output: `claudient checkpoint — Session Save
+    output: `uitkit checkpoint — Session Save
 ────────────────────────────────────────────
 Saving session state...
 
@@ -536,20 +536,20 @@ Saving session state...
 ✓ Context: compressed to CLAUDE_STATE.md
 ✓ Tasks: 4/7 completed, 3 remaining
 
-Checkpoint: .claudient/checkpoint-2026-06-15.md
+Checkpoint: .uitkit/checkpoint-2026-06-15.md
 
 To resume:
   Add @CLAUDE_STATE.md to your next session
-  Run: claudient doctor to verify state`,
+  Run: uitkit doctor to verify state`,
   },
   {
     id: "repair",
-    name: "claudient repair",
+    name: "uitkit repair",
     icon: "🩹",
     desc: "Auto-repair — reads failing test output, patches the code, and re-runs tests until all pass.",
     usage: "node scripts/repair.js",
     tier: "free",
-    output: `claudient repair — Auto-Fix
+    output: `uitkit repair — Auto-Fix
 ────────────────────────────────────────────
 Running test suite... 3 failing
 
@@ -572,12 +572,12 @@ Repaired: 3/3 | All tests passing`,
   },
   {
     id: "dependency-graph",
-    name: "claudient dependency-graph",
+    name: "uitkit dependency-graph",
     icon: "🕸️",
     desc: "AST dependency analysis — analyzes skill and agent files for cross-references, generates dependency maps.",
     usage: "node scripts/dependency-graph.js",
     tier: "free",
-    output: `claudient dependency-graph — Analysis
+    output: `uitkit dependency-graph — Analysis
 ────────────────────────────────────────────
 Scanning 1400+ skills + 700+ agents...
 
@@ -591,17 +591,17 @@ Top connected:
   2. devops-infra/terraform-modules (9)
   3. productivity/testing-suite (8)
 
-Output: .claudient/dependency-graph.json
+Output: .uitkit/dependency-graph.json
 → Visualize: node scripts/visualize-graph.js`,
   },
   {
     id: "translate",
-    name: "claudient translate",
+    name: "uitkit translate",
     icon: "🌍",
     desc: "Auto-translation — translates skills, agents, and guides into DE, FR, NL, ES using structured templates.",
     usage: "node scripts/translate-assets.js",
     tier: "free",
-    output: `claudient translate — Asset Localization
+    output: `uitkit translate — Asset Localization
 ────────────────────────────────────────────
 Source: English (en)
 Targets: de, fr, nl, es
@@ -622,12 +622,12 @@ Translated: 383 files across 4 languages`,
   },
   {
     id: "validate-all",
-    name: "claudient validate",
+    name: "uitkit validate",
     icon: "✅",
     desc: "Suite of 5 validators — catalog, frontmatter, manifests, stacks, and certification checks.",
     usage: "node scripts/validate-catalog.js && node scripts/validate-frontmatter.js && node scripts/validate-stacks.js",
     tier: "free",
-    output: `claudient validate — Full Suite
+    output: `uitkit validate — Full Suite
 ────────────────────────────────────────────
 1/5: Catalog Validation
   ✓ 50 stacks indexed
@@ -654,12 +654,12 @@ Result: PASS | 0 errors, 3 warnings`,
   },
   {
     id: "generate-changelog",
-    name: "claudient changelog",
+    name: "uitkit changelog",
     icon: "📝",
     desc: "Generates structured changelog from git history with categorized entries and version tagging.",
     usage: "node scripts/generate-changelog.js",
     tier: "free",
-    output: `claudient changelog — Release Notes
+    output: `uitkit changelog — Release Notes
 ────────────────────────────────────────────
 Analyzing git history: v1.9.0 → v1.10.1
 
@@ -680,12 +680,12 @@ Output: CHANGELOG.md (v1.10.1)`
   },
   {
     id: "caveman",
-    name: "claudient caveman",
+    name: "uitkit caveman",
     icon: "🦴",
     desc: "Token-efficient mode — enforces a strict DSL that forbids conversational output, saving ~40% API tokens per session.",
     usage: "node scripts/caveman.js",
     tier: "free",
-    output: `claudient caveman — Token Optimizer
+    output: `uitkit caveman — Token Optimizer
 ────────────────────────────────────────────
 Mode: ACTIVATED
 DSL: strict (JSON-only output)
@@ -701,12 +701,12 @@ Claude output: {"action":"write","file":"auth.ts","lines":42}
   },
   {
     id: "commit",
-    name: "claudient commit",
+    name: "uitkit commit",
     icon: "🛡️",
     desc: "Safe commit — runs validation audits and unit tests before executing git commits under the strict author profile.",
     usage: 'node scripts/commit.js -m "feat: add auth module"',
     tier: "free",
-    output: `claudient commit — Safe Commit
+    output: `uitkit commit — Safe Commit
 ────────────────────────────────────────────
 Message: feat: add auth module
 
@@ -722,12 +722,12 @@ Committing: abc1234 feat: add auth module
   },
   {
     id: "tdd",
-    name: "claudient tdd",
+    name: "uitkit tdd",
     icon: "🧪",
     desc: "Stunt Double TDD — automates recursive Red-Green-Refactor: TestEngineer writes failing tests, ImplementationEngineer makes them pass.",
     usage: "node scripts/tdd.js Add rate limiter",
     tier: "free",
-    output: `claudient tdd — Test-Driven Development
+    output: `uitkit tdd — Test-Driven Development
 ────────────────────────────────────────────
 Task: Add rate limiter
 
@@ -752,12 +752,12 @@ Phase 3: REFACTOR
   },
   {
     id: "sweep",
-    name: "claudient sweep",
+    name: "uitkit sweep",
     icon: "🧹",
     desc: "Codebase sweeper — background agent that hunts dead code, unused imports, duplicate utilities, and stale comments.",
     usage: "node scripts/sweep.js",
     tier: "free",
-    output: `claudient sweep — Dead Code Hunter
+    output: `uitkit sweep — Dead Code Hunter
 ────────────────────────────────────────────
 Scanning 340 files...
 
@@ -772,16 +772,16 @@ Auto-removed: 35 (safe deletions)
 Flagged for review: 15
 
 Lines removed: ~200
-→ Run again: claudient sweep --deep`,
+→ Run again: uitkit sweep --deep`,
   },
   {
     id: "documentation",
-    name: "claudient documentation",
+    name: "uitkit documentation",
     icon: "📖",
     desc: "The Historian — automated docs updater that watches code changes and rewrites ARCHITECTURE.md to eliminate documentation drift.",
     usage: "node scripts/documentation.js",
     tier: "free",
-    output: `claudient documentation — The Historian
+    output: `uitkit documentation — The Historian
 ────────────────────────────────────────────
 Scanning recent changes: 12 files
 
@@ -800,12 +800,12 @@ Docs synchronized: 3 sections updated
   },
   {
     id: "chaos",
-    name: "claudient chaos",
+    name: "uitkit chaos",
     icon: "🐒",
     desc: "Chaos Monkey — adversarial agent that injects edge cases, network delays, null returns, and exceptions to test unit test resilience.",
     usage: "node scripts/chaos.js src/api/payments.ts",
     tier: "free",
-    output: `claudient chaos — Adversarial Resilience Test
+    output: `uitkit chaos — Adversarial Resilience Test
 ────────────────────────────────────────────
 Target: src/api/payments.ts
 Spawning 5 chaos agents...
@@ -830,12 +830,12 @@ Result: 3/5 scenarios broke your code
   },
   {
     id: "jit",
-    name: "claudient jit",
+    name: "uitkit jit",
     icon: "💉",
     desc: "JIT Context Injector — fetches public dependency signatures before file modifications to safeguard codebase stability.",
     usage: "node scripts/jit.js src/api/users.ts",
     tier: "free",
-    output: `claudient jit — Just-In-Time Context
+    output: `uitkit jit — Just-In-Time Context
 ────────────────────────────────────────────
 Target: src/api/users.ts
 
@@ -856,12 +856,12 @@ Injecting signatures:
   },
   {
     id: "enforce",
-    name: "claudient enforce",
+    name: "uitkit enforce",
     icon: "📋",
     desc: "Spec-first enforcer — audits active git diff against SPEC.md rules and blocks any non-compliant changes.",
     usage: "node scripts/enforce.js",
     tier: "free",
-    output: `claudient enforce — Spec Audit
+    output: `uitkit enforce — Spec Audit
 ────────────────────────────────────────────
 Loading: SPEC.md (127 lines, 8 sections)
 Active git diff: 14 files changed
@@ -881,12 +881,12 @@ Result: 14 checked | 12 compliant | 2 blocked`,
   },
   {
     id: "handoff",
-    name: "claudient handoff",
+    name: "uitkit handoff",
     icon: "🏗️",
     desc: "Architect/Mason handoff — coordinates design specification generation (Opus) and code scaffolding (Haiku) loops.",
     usage: "node scripts/handoff.js Build notification system",
     tier: "free",
-    output: `claudient handoff — Dual-Model Orchestration
+    output: `uitkit handoff — Dual-Model Orchestration
 ────────────────────────────────────────────
 Task: Build notification system
 
@@ -908,12 +908,12 @@ Total: $0.11 | 5 files | Enterprise architecture`,
   },
   {
     id: "permissions",
-    name: "claudient permissions",
+    name: "uitkit permissions",
     icon: "🔐",
     desc: "Permission editor — lists, allows, denies, and revokes Claude model tool permissions in .claude/settings.local.json.",
     usage: "node scripts/permissions.js",
     tier: "free",
-    output: `claudient permissions — Tool Permission Manager
+    output: `uitkit permissions — Tool Permission Manager
 ────────────────────────────────────────────
 Reading: .claude/settings.local.json
 
@@ -935,12 +935,12 @@ Interactive:
   },
   {
     id: "prophet",
-    name: "claudient prophet",
+    name: "uitkit prophet",
     icon: "🔮",
     desc: "Predictive tech debt analyzer — correlates git hotspots, change frequency, and test coverage to predict fragile files.",
     usage: "node scripts/prophet.js",
     tier: "free",
-    output: `claudient prophet — Predictive Debt Analysis
+    output: `uitkit prophet — Predictive Debt Analysis
 ────────────────────────────────────────────
 Analyzing 6 months of git history...
 432 commits | 287 files | 18 contributors
@@ -961,12 +961,12 @@ Recommendation: Add tests to 3 high-risk files
   },
   {
     id: "incident",
-    name: "claudient incident",
+    name: "uitkit incident",
     icon: "🚨",
     desc: "Incident Commander — wakes on PagerDuty alerts, reads logs, identifies root cause, executes rollback, drafts post-mortems.",
     usage: "node scripts/incident.js",
     tier: "free",
-    output: `claudient incident — PagerDuty Autonomy
+    output: `uitkit incident — PagerDuty Autonomy
 ────────────────────────────────────────────
 ⏰ ALERT: 500 errors spike (threshold: 5%)
 
@@ -990,12 +990,12 @@ Drafting post-mortem...
   },
   {
     id: "recommend",
-    name: "claudient recommend",
+    name: "uitkit recommend",
     icon: "💡",
-    desc: "Personalized recommendations — analyzes your project structure and suggests the optimal Claudient configuration.",
+    desc: "Personalized recommendations — analyzes your project structure and suggests the optimal UitKit configuration.",
     usage: "node scripts/recommend.js",
     tier: "free",
-    output: `claudient recommend — Personalized Setup
+    output: `uitkit recommend — Personalized Setup
 ────────────────────────────────────────────
 Analyzing project: Next.js 15 + TypeScript + Prisma
 
@@ -1015,7 +1015,7 @@ Recommended hooks (3):
   ✓ security-scanner
   ✓ performance-regression
 
-Install all: npx claudient add stack fullstack_developer_stack`,
+Install all: npx uitkit add stack fullstack_developer_stack`,
   },
 ];
 
@@ -1054,7 +1054,7 @@ export function CliApp() {
               }`}
             >
               <span className="text-sm">{c.icon}</span>
-              <span className="flex-1 truncate">{c.name.replace("claudient ", "")}</span>
+              <span className="flex-1 truncate">{c.name.replace("uitkit ", "")}</span>
               {c.tier === "enterprise" && (
                 <span className="text-[8px] font-bold uppercase text-brand-purple bg-brand-purple/10 px-1 py-0.5 rounded">Pro</span>
               )}
@@ -1121,7 +1121,7 @@ export function CliApp() {
           )}
           {cmd.tier === "free" && (
             <a
-              href="https://github.com/UitbreidenOS/Claudient"
+              href="https://github.com/UitbreidenOS/UitKit"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-md border border-olive/60 bg-white px-3 py-1.5 text-[12px] font-semibold text-ink hover:bg-cream transition"

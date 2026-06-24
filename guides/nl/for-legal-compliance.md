@@ -20,21 +20,21 @@ Je bent interne juridisch adviseur, compliance officer, DPO of GC wiens taak het
 
 ```bash
 # Install the full legal and compliance stack
-npx claudient add skills legal
+npx uitkit add skills legal
 
 # Or cherry-pick:
-npx claudient add skill legal/contract-review
-npx claudient add skill legal/nda-review
-npx claudient add skill legal/gdpr-expert
-npx claudient add skill legal/soc2-compliance
-npx claudient add skill legal/privacy-pia
-npx claudient add skill legal/eu-ai-act
-npx claudient add skill legal/iso27001
-npx claudient add skill legal/dsar-response
-npx claudient add skill legal/compliance-tracker
-npx claudient add skill legal/legal-research
-npx claudient add agents advisors/general-counsel
-npx claudient add agents advisors/ciso-advisor
+npx uitkit add skill legal/contract-review
+npx uitkit add skill legal/nda-review
+npx uitkit add skill legal/gdpr-expert
+npx uitkit add skill legal/soc2-compliance
+npx uitkit add skill legal/privacy-pia
+npx uitkit add skill legal/eu-ai-act
+npx uitkit add skill legal/iso27001
+npx uitkit add skill legal/dsar-response
+npx uitkit add skill legal/compliance-tracker
+npx uitkit add skill legal/legal-research
+npx uitkit add agents advisors/general-counsel
+npx uitkit add agents advisors/ciso-advisor
 ```
 
 ---
@@ -220,7 +220,7 @@ Delegeren aan externe raadsman:
 ## 30-dagenplan (nieuwe juridische / compliance-medewerker)
 
 ### Week 1 — Ken je verplichtingenlandschap
-- Installeer alle juridische skills: `npx claudient add skills legal`
+- Installeer alle juridische skills: `npx uitkit add skills legal`
 - Voer `/compliance-tracker` uit — bouw je verplichtingenregister voor elk toepasselijk kader
 - Bekijk alle bestaande contracten in je standaardsjablonen — identificeer wat marktstandaard is versus maatwerk
 - Identificeer openstaande DSAR's, inbreuknotificaties of auditvraagstukken — kom direct bovenop deadlines

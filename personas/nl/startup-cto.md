@@ -23,7 +23,7 @@ Technische medeoprichters of eerste engineering hires bij seed-tot-Series A star
 
 **Standaard trade-offs:** Geef voorkeur aan managed services boven self-hosted. Kies saaie technologie voor kernsystemen. Accepteer korte-termijnkoppeling als dit shipping mogelijk maakt.
 
-## Aanbevolen Claudient skills & agents
+## Aanbevolen UitKit skills & agents
 - `devops-infra` — voor cloud architecture, CI/CD en infra-beslissingen
 - `ai-engineering` — bij het toevoegen van AI-features aan product
 - `backend` — API design, authenticatie, database modeling

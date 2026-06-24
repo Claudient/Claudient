@@ -4,7 +4,7 @@ import { Eyebrow } from "./ui";
 type Tab = "Themes" | "Statuslines" | "Keybindings" | "Output Styles" | "Routines" | "Settings" | "Playground" | "Harness" | "Codebase Map";
 
 const THEMES = [
-  { name: "Claudient Brand", id: "claudient-brand", colors: ["#f5b800", "#f54e00", "#1d4aff"] },
+  { name: "UitKit Brand", id: "uitkit-brand", colors: ["#f5b800", "#f54e00", "#1d4aff"] },
   { name: "Catppuccin", id: "catppuccin", colors: ["#cba6f7", "#89b4fa", "#a6e3a1"] },
   { name: "Dracula", id: "dracula", colors: ["#bd93f9", "#ff79c6", "#50fa7b"] },
   { name: "Gruvbox", id: "gruvbox", colors: ["#fabd2f", "#fb4934", "#b8bb26"] },
@@ -15,7 +15,7 @@ const THEMES = [
   { name: "Solarized Light", id: "solarized-light", colors: ["#268bd2", "#b58900", "#2aa198"] },
   { name: "Tokyo Night", id: "tokyo-night", colors: ["#7aa2f7", "#bb9af7", "#9ece6a"] },
   { name: "Ghost Shell", id: "ghost-shell", colors: ["#c0c0c0", "#4a4a4a", "#00ff41"] },
-  { name: "Claudient Neon", id: "claudient-neon", colors: ["#00ff41", "#ff00ff", "#00ffff"] },
+  { name: "UitKit Neon", id: "uitkit-neon", colors: ["#00ff41", "#ff00ff", "#00ffff"] },
 ];
 
 const STATUSLINES = [
@@ -79,7 +79,7 @@ const CODEBASE_MAP = {
     { id: "index.json", label: "index.json", group: "Core Data", x: 200, y: 100, color: "#1078a3", functions: [], imports: [] },
     { id: "professional-stacks", label: "stacks/", group: "Core Data", x: 200, y: 280, color: "#1078a3", functions: [], imports: [] },
     
-    { id: "site/src/components/os/ClaudientOS.tsx", label: "ClaudientOS.tsx", group: "Website", x: 350, y: 50, color: "#b62ad9", functions: ["ClaudientOS"], imports: ["React", "useWindows"] },
+    { id: "site/src/components/os/UitKitOS.tsx", label: "UitKitOS.tsx", group: "Website", x: 350, y: 50, color: "#b62ad9", functions: ["UitKitOS"], imports: ["React", "useWindows"] },
     { id: "site/src/components/os/apps/CliApp.tsx", label: "CliApp.tsx", group: "Website", x: 350, y: 150, color: "#b62ad9", functions: ["CliApp"], imports: ["React", "ui"] },
     { id: "site/src/components/os/apps/SwarmApp.tsx", label: "SwarmApp.tsx", group: "Website", x: 350, y: 250, color: "#b62ad9", functions: ["SwarmApp"], imports: ["React", "ui"] },
     { id: "site/src/components/os/apps/ToolkitApp.tsx", label: "ToolkitApp.tsx", group: "Website", x: 350, y: 350, color: "#b62ad9", functions: ["ToolkitApp"], imports: ["React"] },
@@ -89,9 +89,9 @@ const CODEBASE_MAP = {
     { source: "scripts/cli.js", target: "scripts/chart.js" },
     { source: "scripts/cli.js", target: "scripts/translate-assets.js" },
     { source: "scripts/council.js", target: "professional-stacks" },
-    { source: "site/src/components/os/ClaudientOS.tsx", target: "site/src/components/os/apps/CliApp.tsx" },
-    { source: "site/src/components/os/ClaudientOS.tsx", target: "site/src/components/os/apps/SwarmApp.tsx" },
-    { source: "site/src/components/os/ClaudientOS.tsx", target: "site/src/components/os/apps/ToolkitApp.tsx" },
+    { source: "site/src/components/os/UitKitOS.tsx", target: "site/src/components/os/apps/CliApp.tsx" },
+    { source: "site/src/components/os/UitKitOS.tsx", target: "site/src/components/os/apps/SwarmApp.tsx" },
+    { source: "site/src/components/os/UitKitOS.tsx", target: "site/src/components/os/apps/ToolkitApp.tsx" },
   ]
 };
 
@@ -101,17 +101,17 @@ const TAB_ICONS: Record<Tab, string> = {
 
 export function ToolkitApp() {
   const [tab, setTab] = useState<Tab>("Themes");
-  const [currentTheme, setCurrentTheme] = useState("claudient-brand");
+  const [currentTheme, setCurrentTheme] = useState("uitkit-brand");
   const tabs: Tab[] = ["Themes", "Statuslines", "Keybindings", "Output Styles", "Routines", "Settings", "Playground", "Harness", "Codebase Map"];
 
   useEffect(() => {
-    const saved = localStorage.getItem("claudient-theme") || "claudient-brand";
+    const saved = localStorage.getItem("uitkit-theme") || "uitkit-brand";
     setCurrentTheme(saved);
   }, []);
 
   const handleThemeSelect = (themeId: string) => {
     setCurrentTheme(themeId);
-    localStorage.setItem("claudient-theme", themeId);
+    localStorage.setItem("uitkit-theme", themeId);
     document.documentElement.setAttribute("data-theme", themeId);
   };
 
@@ -140,7 +140,7 @@ export function ToolkitApp() {
       case "minimal": return <span>[<span className="text-sky-400">main</span>] index.ts</span>;
       case "cost-watch": return <span><span className="text-emerald-400 font-semibold">${pgCost.toFixed(2)}</span> | <span className="text-cyan-400">+{pgAdded}/-{pgRemoved} lines</span> | <span className={ctxColor}>CTX {pgCtx}%</span> | MCP: <span className="text-purple-400">{pgMcp}</span></span>;
       case "context-budget": return <span>CTX [<span className={ctxColor}>{makeBar(pgCtx)}</span>] <span className={ctxColor}>{pgCtx}%</span> | <span className="text-purple-400">{(pgCtx * 2000).toLocaleString()}</span>/200K tokens</span>;
-      case "full": return <span><span className="text-indigo-400">[sonnet]</span> claudient:<span className="text-sky-400">main</span> | <span className="text-emerald-400 font-semibold">${pgCost.toFixed(2)}</span> | <span className="text-cyan-400">+{pgAdded}/-{pgRemoved}</span> | [<span className={ctxColor}>{makeBar(pgCtx)}</span>] {pgCtx}% | MCP:<span className="text-purple-400">{pgMcp}</span></span>;
+      case "full": return <span><span className="text-indigo-400">[sonnet]</span> uitkit:<span className="text-sky-400">main</span> | <span className="text-emerald-400 font-semibold">${pgCost.toFixed(2)}</span> | <span className="text-cyan-400">+{pgAdded}/-{pgRemoved}</span> | [<span className={ctxColor}>{makeBar(pgCtx)}</span>] {pgCtx}% | MCP:<span className="text-purple-400">{pgMcp}</span></span>;
       case "pulse": return <span>Swarm: <span className="text-emerald-400 font-semibold">{pgMcp} active</span> | Density: <span className="text-purple-400">{Math.min(99, pgCtx + 20)}%</span> | Budget: <span className="text-emerald-400">${pgCost.toFixed(2)}</span> | CTX: [<span className={ctxColor}>{makeBar(pgCtx)}</span>]</span>;
       default: return <span><span className="text-emerald-400">${pgCost.toFixed(2)}</span> | CTX {pgCtx}%</span>;
     }
@@ -189,7 +189,7 @@ export function ToolkitApp() {
       case "full":
         return (
           <span>
-            <span className="text-indigo-400">[sonnet]</span> claudient:<span className="text-sky-400">{simBranch}</span>
+            <span className="text-indigo-400">[sonnet]</span> uitkit:<span className="text-sky-400">{simBranch}</span>
             {" | "}
             <span className="text-emerald-500 font-semibold">${simCost.toFixed(2)}</span>
             {" | "}
@@ -348,12 +348,12 @@ export function ToolkitApp() {
             </div>
             <div className="flex gap-2 mb-5">
               <button onClick={() => {
-                const config = `# Claudient Statusline — ${pgPreset}\n# Generated by Claudient Toolkit\nCLAUDIENT_PRESET="${pgPreset}"\nCLAUDIENT_SHOW_COST=true\nCLAUDIENT_SHOW_CONTEXT=true\nCLAUDIENT_SHOW_MCP=true\nCLAUDIENT_CONTEXT_WARN=${pgCtx >= 80 ? 80 : pgCtx >= 50 ? 50 : 80}\n# Install: cp statusline-${pgPreset}.sh ~/.claude/statusline.sh`;
+                const config = `# UitKit Statusline — ${pgPreset}\n# Generated by UitKit Toolkit\nUITKIT_PRESET="${pgPreset}"\nUITKIT_SHOW_COST=true\nUITKIT_SHOW_CONTEXT=true\nUITKIT_SHOW_MCP=true\nUITKIT_CONTEXT_WARN=${pgCtx >= 80 ? 80 : pgCtx >= 50 ? 50 : 80}\n# Install: cp statusline-${pgPreset}.sh ~/.claude/statusline.sh`;
                 const blob = new Blob([config], { type: "text/plain" });
                 const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `statusline-${pgPreset}.sh`; a.click();
               }} className="rounded-md bg-brand-orange text-white px-3 py-1.5 text-[11px] font-bold hover:brightness-105 transition">⬇ Download .sh</button>
               <button onClick={() => {
-                navigator.clipboard.writeText(`CLAUDIENT_PRESET="${pgPreset}"\nCLAUDIENT_SHOW_COST=true\nCLAUDIENT_SHOW_CONTEXT=true\nCLAUDIENT_SHOW_MCP=true`);
+                navigator.clipboard.writeText(`UITKIT_PRESET="${pgPreset}"\nUITKIT_SHOW_COST=true\nUITKIT_SHOW_CONTEXT=true\nUITKIT_SHOW_MCP=true`);
               }} className="rounded-md border border-hairline bg-white px-3 py-1.5 text-[11px] font-bold text-ink hover:bg-cream transition">📋 Copy Config</button>
             </div>
             <div className="mb-4">
@@ -392,24 +392,24 @@ export function ToolkitApp() {
         {tab === "Harness" && (
           <div>
             <p className="text-[12.5px] text-body leading-relaxed mb-5">
-              Claudient is <strong>harness-neutral</strong> — works with Claude Code, Cursor, Windsurf, Codex, GitHub Copilot, and Cline.
+              UitKit is <strong>harness-neutral</strong> — works with Claude Code, Cursor, Windsurf, Codex, GitHub Copilot, and Cline.
               Download the config for your harness below.
             </p>
             <div className="grid sm:grid-cols-2 gap-3">
               {(() => {
                 const harnesses = [
                   { name: "Claude Code", file: "CLAUDE.md", desc: "Native format — works out of the box.", color: "#f54e00",
-                    config: `# CLAUDE.md — Generated by Claudient\n# Install: cp CLAUDE.md ~/.claude/CLAUDE.md\n\n## Identity\nYou are using Claudient, the largest open-source Claude Code knowledge system.\n\n## Active Skills: 1400+\n## Active Agents: 700+\n## Stacks: 50\n\n## Rules\n- Always check .claudeignore before reading files\n- Run /doctor before starting any session\n- Use /save-state before clearing context` },
+                    config: `# CLAUDE.md — Generated by UitKit\n# Install: cp CLAUDE.md ~/.claude/CLAUDE.md\n\n## Identity\nYou are using UitKit, the largest open-source Claude Code knowledge system.\n\n## Active Skills: 1400+\n## Active Agents: 700+\n## Stacks: 50\n\n## Rules\n- Always check .claudeignore before reading files\n- Run /doctor before starting any session\n- Use /save-state before clearing context` },
                   { name: "Cursor", file: ".cursorrules", desc: "Drop into your repo root for instant context.", color: "#1d4aff",
-                    config: `# .cursorrules — Generated by Claudient\n# Install: cp .cursorrules ./\n\nYou are an expert engineer using Claudient context.\n- Always run diagnostics before editing\n- Use spec-first approach\n- Check blast radius before breaking changes\n- 1400+ skills available, 700+ agents` },
+                    config: `# .cursorrules — Generated by UitKit\n# Install: cp .cursorrules ./\n\nYou are an expert engineer using UitKit context.\n- Always run diagnostics before editing\n- Use spec-first approach\n- Check blast radius before breaking changes\n- 1400+ skills available, 700+ agents` },
                   { name: "Windsurf", file: ".windsurfrules", desc: "Compatible with Windsurf's Cascade engine.", color: "#3fb950",
-                    config: `# .windsurfrules — Generated by Claudient\n# Install: cp .windsurfrules ./\n\nCascade should use Claudient context:\n- 1400+ skills, 700+ agents, 50 stacks\n- Spec-first enforcement active\n- Shadow compiler on every edit` },
+                    config: `# .windsurfrules — Generated by UitKit\n# Install: cp .windsurfrules ./\n\nCascade should use UitKit context:\n- 1400+ skills, 700+ agents, 50 stacks\n- Spec-first enforcement active\n- Shadow compiler on every edit` },
                   { name: "GitHub Copilot", file: ".github/copilot-instructions.md", desc: "Project-level instructions for Copilot.", color: "#b62ad9",
-                    config: `# Copilot Instructions — Generated by Claudient\n# Install: mkdir -p .github && cp copilot-instructions.md .github/\n\n- Use Claudient skill context for all suggestions\n- Prefer spec-first architecture patterns\n- Run shadow compiler validation` },
+                    config: `# Copilot Instructions — Generated by UitKit\n# Install: mkdir -p .github && cp copilot-instructions.md .github/\n\n- Use UitKit skill context for all suggestions\n- Prefer spec-first architecture patterns\n- Run shadow compiler validation` },
                   { name: "Codex", file: "AGENTS.md", desc: "OpenAI Codex agent configuration.", color: "#1078a3",
-                    config: `# AGENTS.md — Generated by Claudient\n# Install: cp AGENTS.md ./\n\n## Agent Configuration\n- Framework: Claudient Knowledge System\n- Skills: 1400+ available\n- Agents: 700+ specialist agents\n- Compliance: SOC2/GDPR/EU-AI-Act ready` },
+                    config: `# AGENTS.md — Generated by UitKit\n# Install: cp AGENTS.md ./\n\n## Agent Configuration\n- Framework: UitKit Knowledge System\n- Skills: 1400+ available\n- Agents: 700+ specialist agents\n- Compliance: SOC2/GDPR/EU-AI-Act ready` },
                   { name: "Cline", file: ".clinerules", desc: "Cline-specific rules and context.", color: "#f5b800",
-                    config: `# .clinerules — Generated by Claudient\n# Install: cp .clinerules ./\n\n- Use Claudient context for all operations\n- 1400+ skills, 700+ agents available\n- Spec-first enforcement\n- Shadow compiler validation` },
+                    config: `# .clinerules — Generated by UitKit\n# Install: cp .clinerules ./\n\n- Use UitKit context for all operations\n- 1400+ skills, 700+ agents available\n- Spec-first enforcement\n- Shadow compiler validation` },
                 ];
                 return harnesses.map((h) => (
                   <div key={h.name} className="rounded-xl border border-hairline bg-white p-4 hover:border-olive/70 transition">
@@ -434,14 +434,14 @@ export function ToolkitApp() {
             <div className="mt-5 rounded-lg border border-hairline bg-cream p-4">
               <div className="text-[12px] font-bold text-ink mb-1">Cross-harness export</div>
               <p className="text-[11.5px] text-body leading-relaxed">
-                Run <code className="rounded bg-white px-1.5 py-0.5 text-[11px] font-mono text-brand-purple">claudient export --harness cursor</code> to
-                convert any Claudient skill or stack into the target harness format.
+                Run <code className="rounded bg-white px-1.5 py-0.5 text-[11px] font-mono text-brand-purple">uitkit export --harness cursor</code> to
+                convert any UitKit skill or stack into the target harness format.
               </p>
             </div>
             <div className="mt-4 rounded-lg border border-brand-purple/30 bg-brand-purple/5 p-4">
               <div className="text-[12px] font-bold text-brand-purple mb-1">🔗 Harness Neutral</div>
               <p className="text-[11.5px] text-body leading-relaxed">
-                Claudient rules, skills, and agents are format-agnostic. Write once in CLAUDE.md format, export to any harness.
+                UitKit rules, skills, and agents are format-agnostic. Write once in CLAUDE.md format, export to any harness.
                 No vendor lock-in — your knowledge system works everywhere.
               </p>
             </div>

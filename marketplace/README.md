@@ -1,10 +1,10 @@
-# Claudient Marketplace
+# UitKit Marketplace
 
-The official hub for discovering, sharing, and installing expert stacks for Claude Code. Claudient transforms Claude into specialized professionals across engineering, data, business, operations, and creative domains.
+The official hub for discovering, sharing, and installing expert stacks for Claude Code. UitKit transforms Claude into specialized professionals across engineering, data, business, operations, and creative domains.
 
-## What is Claudient?
+## What is UitKit?
 
-Claudient is a curated marketplace of **specialized stacks** — complete knowledge systems bundled with skills, agents, hooks, workflows, and prompts. Each stack equips Claude Code with expert-level guidance for a specific profession or domain.
+UitKit is a curated marketplace of **specialized stacks** — complete knowledge systems bundled with skills, agents, hooks, workflows, and prompts. Each stack equips Claude Code with expert-level guidance for a specific profession or domain.
 
 Think of a stack as a persona with muscle memory: domain expertise, best practices, tool integrations, and runnable patterns designed by practitioners.
 
@@ -12,12 +12,12 @@ Think of a stack as a persona with muscle memory: domain expertise, best practic
 
 ### Official Stacks (Certified)
 
-Maintained by the Claudient core team. They meet our quality bar:
+Maintained by the UitKit core team. They meet our quality bar:
 - **Completeness:** End-to-end coverage of the domain
 - **Accuracy:** Reviewed against current best practices and tools (as of last update)
 - **Examples:** Runnable workflows, concrete use cases
 - **Maintenance:** Updated regularly; deprecations announced ahead of time
-- **Badge:** Certified by Claudient — appears in marketplace UI
+- **Badge:** Certified by UitKit — appears in marketplace UI
 
 **Current official stacks:** 50+, spanning engineering, data, business, operations, marketing, product, and specialized domains.
 
@@ -26,7 +26,7 @@ Maintained by the Claudient core team. They meet our quality bar:
 Built and maintained by community members. They offer niche expertise and fresh perspectives:
 - **Author-curated:** Reflects their personal methodology and tools
 - **Licensing:** MIT, Apache 2.0, CC-BY-SA-4.0, or equivalent
-- **Review:** Vetted for quality and alignment with Claudient code of conduct
+- **Review:** Vetted for quality and alignment with UitKit code of conduct
 - **Badge:** Community badge — indicates community authorship
 - **Discoverability:** Featured by download count, recency, user ratings
 
@@ -106,7 +106,7 @@ Have a domain expertise? Share it with the community.
 
 ### Submission Checklist
 
-- [ ] Stack follows Claudient structure (see below)
+- [ ] Stack follows UitKit structure (see below)
 - [ ] README documents the stack's scope and use cases
 - [ ] Minimum 3 skills or agents included
 - [ ] Examples or session logs showing real usage
@@ -118,10 +118,10 @@ Have a domain expertise? Share it with the community.
 
 ### Step-by-Step Submission
 
-1. **Prepare your stack** following the Claudient directory structure
+1. **Prepare your stack** following the UitKit directory structure
 2. **Write a README** documenting scope, components, and use cases
 3. **Create a `STACK.json` manifest** with metadata (see CONTRIBUTING.md)
-4. **Open a PR** against `github.com/claudients/claudient` (see instructions in CONTRIBUTING.md)
+4. **Open a PR** against `github.com/uitkits/uitkit` (see instructions in CONTRIBUTING.md)
 5. **Await review** — typically 5-7 business days
 6. **Publish** — once approved, your stack appears in the marketplace
 
@@ -129,7 +129,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed submission guide.
 
 ## Get Certified
 
-Your community stack can become **officially certified** if it meets Claudient's quality bar.
+Your community stack can become **officially certified** if it meets UitKit's quality bar.
 
 ### Certification Criteria
 
@@ -142,7 +142,7 @@ Your community stack can become **officially certified** if it meets Claudient's
 
 ### Certification Process
 
-1. Email `marketplace@claudient.dev` with stack name and GitHub repo
+1. Email `marketplace@uitkit.dev` with stack name and GitHub repo
 2. Core team evaluates stack against criteria
 3. If approved: official badge added; stack moved to official section
 4. Ongoing: Annual recertification required
@@ -151,7 +151,7 @@ Certified stacks get:
 - Official badge on marketplace
 - Featured in discovery and curated lists
 - Priority in search results
-- Ongoing support from Claudient core team
+- Ongoing support from UitKit core team
 
 ## Popular Stacks (Official)
 
@@ -187,7 +187,7 @@ Certified stacks get:
 
 ## FAQs
 
-**Q: Is Claudient marketplace free?**  
+**Q: Is UitKit marketplace free?**  
 A: Yes. Installation and use are free. Optional: donate to support community authors.
 
 **Q: Can I sell a stack?**  
@@ -207,13 +207,13 @@ A: Major updates quarterly; security/critical fixes as needed. Authors announce 
 
 ## Community
 
-- **Discord:** [join.claudient.dev](https://join.claudient.dev)
-- **GitHub Discussions:** [github.com/claudients/claudient/discussions](https://github.com/claudients/claudient/discussions)
-- **Issues & Bugs:** [github.com/claudients/claudient/issues](https://github.com/claudients/claudient/issues)
-- **Twitter:** [@claudient](https://twitter.com/claudient)
+- **Discord:** [join.uitkit.dev](https://join.uitkit.dev)
+- **GitHub Discussions:** [github.com/uitkits/uitkit/discussions](https://github.com/uitkits/uitkit/discussions)
+- **Issues & Bugs:** [github.com/uitkits/uitkit/issues](https://github.com/uitkits/uitkit/issues)
+- **Twitter:** [@uitkit](https://twitter.com/uitkit)
 
 ---
 
-**Built by [Claudient](https://github.com/claudients/claudient) · [uitbreiden.com](https://uitbreiden.com/)**
+**Built by [UitKit](https://github.com/uitkits/uitkit) · [uitbreiden.com](https://uitbreiden.com/)**
 
 Last updated: June 15, 2026

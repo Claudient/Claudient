@@ -196,23 +196,23 @@ touch comms/investor-updates/update-template.md
 touch comms/all-hands/all-hands-template.md
 
 # Instalar habilidades de Claude Code
-npx claudient add skill productivity/founder-weekly-review
-npx claudient add skill productivity/investor-update
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/engineering-strategy
-npx claudient add skill finance/pitch-deck
-npx claudient add skill finance/financial-plan
-npx claudient add skill small-business/cash-flow-forecast
-npx claudient add skill small-business/hiring-pipeline
+npx uitkit add skill productivity/founder-weekly-review
+npx uitkit add skill productivity/investor-update
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/engineering-strategy
+npx uitkit add skill finance/pitch-deck
+npx uitkit add skill finance/financial-plan
+npx uitkit add skill small-business/cash-flow-forecast
+npx uitkit add skill small-business/hiring-pipeline
 
 # Instalar comandos de barra inclinada
-npx claudient add command investor-update
-npx claudient add command board-prep
-npx claudient add command hiring-decision
-npx claudient add command okr-review
-npx claudient add command weekly-brief
-npx claudient add command fundraising-status
-npx claudient add command competitive-pulse
+npx uitkit add command investor-update
+npx uitkit add command board-prep
+npx uitkit add command hiring-decision
+npx uitkit add command okr-review
+npx uitkit add command weekly-brief
+npx uitkit add command fundraising-status
+npx uitkit add command competitive-pulse
 ```
 
 ## Plantilla CLAUDE.md
@@ -380,16 +380,16 @@ Un espacio de trabajo de Claude Code para un fundador o CEO. Cada directorio se 
 ## Habilidades a instalar
 
 ```bash
-npx claudient add skill productivity/founder-weekly-review
-npx claudient add skill productivity/investor-update
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/engineering-strategy
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/comp-benchmarker
-npx claudient add skill finance/pitch-deck
-npx claudient add skill finance/financial-plan
-npx claudient add skill small-business/cash-flow-forecast
-npx claudient add skill small-business/hiring-pipeline
+npx uitkit add skill productivity/founder-weekly-review
+npx uitkit add skill productivity/investor-update
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/engineering-strategy
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/comp-benchmarker
+npx uitkit add skill finance/pitch-deck
+npx uitkit add skill finance/financial-plan
+npx uitkit add skill small-business/cash-flow-forecast
+npx uitkit add skill small-business/hiring-pipeline
 ```
 
 ## Relacionado

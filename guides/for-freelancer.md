@@ -18,16 +18,16 @@ You are a freelancer or independent consultant — designer, developer, writer, 
 
 ```bash
 # Install all freelancer skills
-npx claudient add skill small-business/freelancer-proposal
-npx claudient add skill small-business/scope-of-work
-npx claudient add skill small-business/client-status-report
-npx claudient add skill small-business/invoice-chaser
-npx claudient add skill small-business/cold-outreach
-npx claudient add skill small-business/cash-flow-forecast
-npx claudient add skill small-business/agency-operations
+npx uitkit add skill small-business/freelancer-proposal
+npx uitkit add skill small-business/scope-of-work
+npx uitkit add skill small-business/client-status-report
+npx uitkit add skill small-business/invoice-chaser
+npx uitkit add skill small-business/cold-outreach
+npx uitkit add skill small-business/cash-flow-forecast
+npx uitkit add skill small-business/agency-operations
 
 # Install the CEO advisor agent
-npx claudient add agent advisors/ceo-advisor
+npx uitkit add agent advisors/ceo-advisor
 ```
 
 ---
@@ -205,7 +205,7 @@ Show me: month-by-month cash flow, when I might have a shortfall, what's driving
 ## 30-day ramp plan (new freelancers or new market)
 
 ### Week 1 — Business infrastructure
-- Install all freelancer skills: `npx claudient add skill small-business/[name]`
+- Install all freelancer skills: `npx uitkit add skill small-business/[name]`
 - Write your standard proposal template using `/freelancer-proposal` — personalize for your services
 - Write your master scope of work template using `/scope-of-work` — use it for every future project
 - Define your pricing: hourly rate, project rates, retainer rates — document them

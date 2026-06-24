@@ -1,14 +1,14 @@
 ---
 name: discord-bot
-description: "Discord bot for Claudient: skill search, project showcase, feature announcements, role management, 24/7 support thread routing with volunteer assignment"
+description: "Discord bot for UitKit: skill search, project showcase, feature announcements, role management, 24/7 support thread routing with volunteer assignment"
 updated: 2026-06-22
 ---
 
-# Claudient Discord Bot Skill
+# UitKit Discord Bot Skill
 
 ## When to activate
 
-- Deploying a Claudient community server with integrated skill search
+- Deploying a UitKit community server with integrated skill search
 - Setting up 24/7 support with volunteer-routed threads
 - Broadcasting feature announcements to community
 - Showcasing community-built projects
@@ -27,15 +27,15 @@ updated: 2026-06-22
 ### Bot setup and authentication
 
 ```
-Set up Claudient Discord bot.
+Set up UitKit Discord bot.
 
 Server: [your-server-name]
-Bot name: Claudient (or custom name)
+Bot name: UitKit (or custom name)
 
 Step 1: Create Discord Application
 - Go to https://discord.com/developers/applications
 - Click "New Application"
-- Name: Claudient (or custom)
+- Name: UitKit (or custom)
 - Accept terms and create
 
 Step 2: Create bot user
@@ -75,7 +75,7 @@ node scripts/discord-bot.js
 
 ```
 /skill [query]
-  - Search Claudient skills, agents, features
+  - Search UitKit skills, agents, features
   - Query: keyword or category name
   - Returns: up to 5 matching skills with details
   - Autocomplete enabled
@@ -93,7 +93,7 @@ node scripts/discord-bot.js
   - Returns: thread link for immediate access
 
 /project submit [title] [description] [url?]
-  - Submit Claudient-powered project to showcase
+  - Submit UitKit-powered project to showcase
   - Title: project name
   - Description: brief overview (200 chars ideal)
   - URL: optional GitHub/demo link
@@ -298,13 +298,13 @@ Channels created automatically on first use:
 - Auto-archives threads after 24 hours
 
 #project-showcase
-- Topic: "Community projects built with Claudient"
+- Topic: "Community projects built with UitKit"
 - Type: Text channel
 - Purpose: Project submissions and browsing
 - Pinned announcement about submission process
 
 #announcements
-- Topic: "Claudient updates and feature releases"
+- Topic: "UitKit updates and feature releases"
 - Type: Text channel
 - Purpose: Official release announcements
 - Managed by moderators
@@ -388,7 +388,7 @@ Skill result embed:
 - Description: Full description text
 - Color: Tier-based (Gold→yellow, Silver→gray, etc.)
 - Fields: Category, Tier, ID
-- Footer: "Claudient Skills Library"
+- Footer: "UitKit Skills Library"
 - Timestamp: Current time
 
 Project showcase embed:
@@ -404,7 +404,7 @@ Feature announcement embed:
 - Description: Announcement text
 - Color: 0x00DD00 (bright green)
 - Fields: Version, Status, Category, Highlights
-- Footer: "Claudient Updates"
+- Footer: "UitKit Updates"
 - Timestamp: Announcement time
 
 Support thread embed:
@@ -458,7 +458,7 @@ Recovery:
 
 ## Example
 
-**User:** Set up Claudient Discord bot for our community server with support threads and skill search.
+**User:** Set up UitKit Discord bot for our community server with support threads and skill search.
 
 **Setup (5 min):**
 
@@ -474,7 +474,7 @@ npm install discord.js dotenv
 
 # Step 3: Start bot
 node scripts/discord-bot.js
-# Output: ✓ Claudient bot ready as claudient#0000
+# Output: ✓ UitKit bot ready as uitkit#0000
 ```
 
 **Community in action:**
@@ -538,11 +538,11 @@ Community sees announcement and checks /skill agent-supervisor
 
 ```
 Developer showcases project:
-/project submit "AI Code Reviewer" "Automated code reviews using Claudient security-review skill" https://github.com/user/ai-code-reviewer
+/project submit "AI Code Reviewer" "Automated code reviews using UitKit security-review skill" https://github.com/user/ai-code-reviewer
 
 Bot posts to #project-showcase:
 ┌─ AI Code Reviewer ──────────────────────┐
-│ Automated code reviews using Claudient │
+│ Automated code reviews using UitKit │
 │ security-review skill                   │
 │                                         │
 │ Author: @developer-name                │
@@ -556,7 +556,7 @@ Bot posts to #project-showcase:
 Community reacts with ✨, clicks link to check out project
 ```
 
-Your Claudient Discord community now has:
+Your UitKit Discord community now has:
 - Instant skill search with 400+ results
 - 24/7 volunteer-routed support
 - Feature announcement broadcasts

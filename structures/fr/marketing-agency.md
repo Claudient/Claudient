@@ -240,26 +240,26 @@ touch operations/sops/retainer-renewal.md
 touch operations/rate-card.md
 
 # Installer toutes les compétences pertinentes
-npx claudient add skill marketing/campaign-brief
-npx claudient add skill marketing/ad-copy-generator
-npx claudient add skill marketing/monthly-report
-npx claudient add skill marketing/seo-audit
-npx claudient add skill marketing/content-strategy
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/vendor-evaluator
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill data-ml/stakeholder-report
+npx uitkit add skill marketing/campaign-brief
+npx uitkit add skill marketing/ad-copy-generator
+npx uitkit add skill marketing/monthly-report
+npx uitkit add skill marketing/seo-audit
+npx uitkit add skill marketing/content-strategy
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/vendor-evaluator
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill data-ml/stakeholder-report
 
 # Installer les commandes slash
-npx claudient add command new-client
-npx claudient add command campaign-brief
-npx claudient add command monthly-report
-npx claudient add command retainer-check
-npx claudient add command proposal
-npx claudient add command ad-copy
-npx claudient add command seo-audit
-npx claudient add command scope-change
+npx uitkit add command new-client
+npx uitkit add command campaign-brief
+npx uitkit add command monthly-report
+npx uitkit add command retainer-check
+npx uitkit add command proposal
+npx uitkit add command ad-copy
+npx uitkit add command seo-audit
+npx uitkit add command scope-change
 
 echo "Marketing agency workspace ready."
 ```
@@ -444,18 +444,18 @@ dispose d'un répertoire isolé sous clients/. Tous les modèles se trouvent dan
 ## Compétences à installer
 
 ```bash
-npx claudient add skill marketing/campaign-brief
-npx claudient add skill marketing/ad-copy-generator
-npx claudient add skill marketing/monthly-report
-npx claudient add skill marketing/seo-audit
-npx claudient add skill marketing/content-strategy
-npx claudient add skill marketing/social-media-manager
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/vendor-evaluator
-npx claudient add skill data-ml/stakeholder-report
-npx claudient add skill productivity/investor-update
+npx uitkit add skill marketing/campaign-brief
+npx uitkit add skill marketing/ad-copy-generator
+npx uitkit add skill marketing/monthly-report
+npx uitkit add skill marketing/seo-audit
+npx uitkit add skill marketing/content-strategy
+npx uitkit add skill marketing/social-media-manager
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/vendor-evaluator
+npx uitkit add skill data-ml/stakeholder-report
+npx uitkit add skill productivity/investor-update
 ```
 
 ## Liens connexes

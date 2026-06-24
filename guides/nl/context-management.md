@@ -102,7 +102,7 @@ Laad `/lean-claude` aan het begin van elke sessie om token-efficiënte modus in 
 - Directe antwoorden zonder inleiding
 
 ```bash
-npx claudient add skills productivity
+npx uitkit add skills productivity
 # Vervolgens in Claude Code:
 /lean-claude
 ```

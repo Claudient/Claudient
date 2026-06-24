@@ -1,22 +1,22 @@
-# Claudient × Cursor
+# UitKit × Cursor
 
-> How to use Claudient skills, agents, rules, and CLAUDE.md examples in Cursor.
+> How to use UitKit skills, agents, rules, and CLAUDE.md examples in Cursor.
 
-Claudient is a knowledge system built for Claude Code. Cursor, Anthropic's code editor, supports many of the same customization patterns. This guide shows how to adapt Claudient content for use in Cursor.
+UitKit is a knowledge system built for Claude Code. Cursor, Anthropic's code editor, supports many of the same customization patterns. This guide shows how to adapt UitKit content for use in Cursor.
 
 ---
 
 ## What works natively
 
-- **Rules** — Claudient `rules/` files map directly to Cursor's `.cursor/rules/` directory with zero adaptation.
-- **System prompts** — Claudient CLAUDE.md and agent files can be used as Cursor system prompts or agent mode instructions.
-- **Project context** — Claudient guides and workflows document project structure and conventions; paste relevant sections into `.cursorrules` or `.cursor/rules/`.
+- **Rules** — UitKit `rules/` files map directly to Cursor's `.cursor/rules/` directory with zero adaptation.
+- **System prompts** — UitKit CLAUDE.md and agent files can be used as Cursor system prompts or agent mode instructions.
+- **Project context** — UitKit guides and workflows document project structure and conventions; paste relevant sections into `.cursorrules` or `.cursor/rules/`.
 
 ---
 
 ## What needs adaptation
 
-| Claudient feature | Cursor equivalent | Notes |
+| UitKit feature | Cursor equivalent | Notes |
 |---|---|---|
 | Skills (`.md` files with "When to activate") | Rules (`.mdc` files in `.cursor/rules/`) | Strip context-specific triggers; keep substance and examples |
 | Agents (delegation + model guidance) | Chat custom modes or agent mode system prompts | Paste agent purpose and prompt template into Cursor's agent mode |
@@ -28,9 +28,9 @@ Claudient is a knowledge system built for Claude Code. Cursor, Anthropic's code 
 
 ## Installation
 
-### Adapt a Claudient Skill → Cursor Rule
+### Adapt a UitKit Skill → Cursor Rule
 
-Claudient skills live in `skills/` directories and follow this structure:
+UitKit skills live in `skills/` directories and follow this structure:
 
 ```
 skills/
@@ -156,18 +156,18 @@ Organize `.cursor/rules/` to mirror your domain structure:
 
 ---
 
-### Copy Claudient Rules → Cursor Rules
+### Copy UitKit Rules → Cursor Rules
 
-Claudient's `rules/` directory contains coding style and language-specific guidelines. These map **directly and unchanged** to `.cursor/rules/`.
+UitKit's `rules/` directory contains coding style and language-specific guidelines. These map **directly and unchanged** to `.cursor/rules/`.
 
 #### Copy command
 
 ```bash
-# Recursive copy from Claudient to your project's .cursor/rules/
-cp -r /path/to/Claudient/rules/* /your-project/.cursor/rules/
+# Recursive copy from UitKit to your project's .cursor/rules/
+cp -r /path/to/UitKit/rules/* /your-project/.cursor/rules/
 
 # Or selectively copy specific categories:
-cp -r /path/to/Claudient/rules/language-specific/python.md \
+cp -r /path/to/UitKit/rules/language-specific/python.md \
   /your-project/.cursor/rules/python.mdc
 ```
 
@@ -197,9 +197,9 @@ Apply to all Python files (*.py) in any project.
 
 ---
 
-### Use Claudient Agents → Cursor Agent Mode or Custom System Prompts
+### Use UitKit Agents → Cursor Agent Mode or Custom System Prompts
 
-Claudient agents define:
+UitKit agents define:
 - **Purpose** — what domain/task the agent owns
 - **Model guidance** — which Claude model to use and why
 - **Tools** — which capabilities the agent should access
@@ -209,11 +209,11 @@ Cursor's agent mode and custom instructions support this pattern directly.
 
 #### Option A: Agent Mode System Prompt
 
-In Cursor's agent mode (or when you customize agent behavior), use the Claudient agent's **purpose** and **prompt template** as your system prompt.
+In Cursor's agent mode (or when you customize agent behavior), use the UitKit agent's **purpose** and **prompt template** as your system prompt.
 
 **Example: Code Reviewer Agent**
 
-Original Claudient agent (`.agents/core/code-reviewer.md`):
+Original UitKit agent (`.agents/core/code-reviewer.md`):
 
 ```markdown
 # Code Reviewer Agent
@@ -271,7 +271,7 @@ If Cursor doesn't support custom agent modes in your version, save the agent's p
 
 ### CLAUDE.md Examples → `.cursorrules` or `.cursor/rules/examples.mdc`
 
-If your project has a `CLAUDE.md` file (Claudient's project instructions), extract the relevant **example projects** and **coding patterns** and add them to Cursor's rule system.
+If your project has a `CLAUDE.md` file (UitKit's project instructions), extract the relevant **example projects** and **coding patterns** and add them to Cursor's rule system.
 
 #### Option A: Global `.cursorrules` file
 
@@ -289,7 +289,7 @@ You are working on [Project Name], a [brief description].
 [Paste CLAUDE.md conventions]
 
 ## Coding Rules
-[Paste language-specific rules from CLAUDE.md or Claudient rules/]
+[Paste language-specific rules from CLAUDE.md or UitKit rules/]
 
 ## Example: [Example from CLAUDE.md]
 [Paste concrete example]
@@ -319,14 +319,14 @@ Use the FastAPI CRUD pattern when building REST APIs with SQLAlchemy models.
 
 When deploying to Kubernetes, follow these steps:
 
-[Paste example from Claudient workflows/]
+[Paste example from UitKit workflows/]
 ```
 
 ---
 
 ## Compatibility Matrix
 
-| Claudient Content | Cursor Equivalent | Adaptation Effort | Status |
+| UitKit Content | Cursor Equivalent | Adaptation Effort | Status |
 |---|---|---|---|
 | `rules/*.md` | `.cursor/rules/*.mdc` | None — direct rename | ✓ Native |
 | `skills/*.md` | `.cursor/rules/*.mdc` | Medium — strip triggers, keep substance | ✓ Manual |
@@ -341,34 +341,34 @@ When deploying to Kubernetes, follow these steps:
 
 ## Quick Install Script
 
-Save this as `/Users/tushar/Desktop/Claudient/compatibility/install-cursor.sh` and run in your project:
+Save this as `/Users/tushar/Desktop/UitKit/compatibility/install-cursor.sh` and run in your project:
 
 ```bash
 #!/usr/bin/env bash
 
-# install-cursor.sh — Adapt Claudient content into Cursor rules
-# Usage: bash install-cursor.sh /path/to/claudient-repo
+# install-cursor.sh — Adapt UitKit content into Cursor rules
+# Usage: bash install-cursor.sh /path/to/uitkit-repo
 
-CLAUDIENT_ROOT="${1:-.}"
+UITKIT_ROOT="${1:-.}"
 TARGET_DIR=".cursor/rules"
 
-# Verify Claudient directory exists
-if [ ! -d "$CLAUDIENT_ROOT/rules" ]; then
-    echo "Error: Claudient rules/ directory not found at $CLAUDIENT_ROOT/rules"
-    echo "Usage: bash install-cursor.sh /path/to/claudient-repo"
+# Verify UitKit directory exists
+if [ ! -d "$UITKIT_ROOT/rules" ]; then
+    echo "Error: UitKit rules/ directory not found at $UITKIT_ROOT/rules"
+    echo "Usage: bash install-cursor.sh /path/to/uitkit-repo"
     exit 1
 fi
 
 # Create .cursor/rules directory
 mkdir -p "$TARGET_DIR"
 
-echo "Installing Claudient rules into $TARGET_DIR..."
+echo "Installing UitKit rules into $TARGET_DIR..."
 
 # Copy language-specific rules
-if [ -d "$CLAUDIENT_ROOT/rules/language-specific" ]; then
+if [ -d "$UITKIT_ROOT/rules/language-specific" ]; then
     mkdir -p "$TARGET_DIR/language-specific"
     echo "  → Copying language-specific rules..."
-    for file in "$CLAUDIENT_ROOT/rules/language-specific"/*.md; do
+    for file in "$UITKIT_ROOT/rules/language-specific"/*.md; do
         basename=$(basename "$file" .md)
         cp "$file" "$TARGET_DIR/language-specific/${basename}.mdc"
         echo "    ✓ $basename"
@@ -376,10 +376,10 @@ if [ -d "$CLAUDIENT_ROOT/rules/language-specific" ]; then
 fi
 
 # Copy common rules
-if [ -d "$CLAUDIENT_ROOT/rules/common" ]; then
+if [ -d "$UITKIT_ROOT/rules/common" ]; then
     mkdir -p "$TARGET_DIR/common"
     echo "  → Copying common rules..."
-    for file in "$CLAUDIENT_ROOT/rules/common"/*.md; do
+    for file in "$UITKIT_ROOT/rules/common"/*.md; do
         basename=$(basename "$file" .md)
         cp "$file" "$TARGET_DIR/common/${basename}.mdc"
         echo "    ✓ $basename"
@@ -387,12 +387,12 @@ if [ -d "$CLAUDIENT_ROOT/rules/common" ]; then
 fi
 
 # Copy all skills into rules/skills/
-if [ -d "$CLAUDIENT_ROOT/skills" ]; then
+if [ -d "$UITKIT_ROOT/skills" ]; then
     mkdir -p "$TARGET_DIR/skills"
     echo "  → Copying skills as rules..."
-    find "$CLAUDIENT_ROOT/skills" -name "*.md" -type f | while read file; do
+    find "$UITKIT_ROOT/skills" -name "*.md" -type f | while read file; do
         # Preserve directory structure
-        relpath="${file#$CLAUDIENT_ROOT/skills/}"
+        relpath="${file#$UITKIT_ROOT/skills/}"
         dirname=$(dirname "$relpath")
         basename=$(basename "$relpath" .md)
         
@@ -431,7 +431,7 @@ echo "  1. Review .cursor/rules/ and customize for your project"
 echo "  2. Edit .cursorrules to add project-specific context"
 echo "  3. In Cursor, reload the rules (or restart Cursor)"
 echo ""
-echo "To use agent prompts from Claudient:"
+echo "To use agent prompts from UitKit:"
 echo "  - Copy an agent's purpose + prompt template to .cursor/settings.json (agent mode)"
 echo "  - Or save as a chat prompt snippet in Cursor"
 EOF
@@ -440,24 +440,24 @@ EOF
 Make the script executable:
 
 ```bash
-chmod +x /Users/tushar/Desktop/Claudient/compatibility/install-cursor.sh
+chmod +x /Users/tushar/Desktop/UitKit/compatibility/install-cursor.sh
 ```
 
 **Usage:**
 
 ```bash
 # In your project directory
-bash /path/to/install-cursor.sh /path/to/Claudient
+bash /path/to/install-cursor.sh /path/to/UitKit
 
-# Or if in the Claudient repo itself
+# Or if in the UitKit repo itself
 bash compatibility/install-cursor.sh .
 ```
 
 **What it does:**
 
 1. Creates `.cursor/rules/` directory
-2. Copies all Claudient `rules/` files as `.mdc` (rename `.md` → `.mdc`)
-3. Copies all Claudient `skills/` files as `.mdc` in `.cursor/rules/skills/`
+2. Copies all UitKit `rules/` files as `.mdc` (rename `.md` → `.mdc`)
+3. Copies all UitKit `skills/` files as `.mdc` in `.cursor/rules/skills/`
 4. Creates a template `.cursorrules` file at project root
 5. Preserves directory structure for easy navigation
 
@@ -510,16 +510,16 @@ bash compatibility/install-cursor.sh .
 - Remove "When NOT to use" sections if they don't apply
 - Combine related rules into a single `.mdc` file if they're used together
 
-### Skills reference Claudient-specific features (slash commands, hooks)
+### Skills reference UitKit-specific features (slash commands, hooks)
 
-- Strip Claudient-specific references (e.g., "When to activate" → "When this applies")
+- Strip UitKit-specific references (e.g., "When to activate" → "When this applies")
 - Keep the substance: instructions, examples, and anti-patterns
-- Note in comments that the rule was adapted from Claudient
+- Note in comments that the rule was adapted from UitKit
 
 ---
 
 ## See Also
 
-- [Claudient Repository](https://github.com/tushar2704/Claudient) — Full source of skills, agents, and rules
+- [UitKit Repository](https://github.com/tushar2704/UitKit) — Full source of skills, agents, and rules
 - [Cursor Documentation](https://docs.cursor.com) — Official Cursor rules and customization guide
 - [Claude Code Documentation](https://claude.com/claude-code) — Original Claude Code features that inspire these patterns

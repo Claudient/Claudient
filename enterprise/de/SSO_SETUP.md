@@ -12,9 +12,9 @@ Enterprise Edition integriert sich mit SAML 2.0 und OpenID Connect (OIDC) Identi
 
 Claude Code authentifiziert sich nicht direkt gegen einen IdP. Stattdessen:
 
-1. **Cloud-Integration** (Claudient Cloud): Enterprise Cloud agiert als SAML/OIDC Service Provider (SP), verwaltet Sessions
+1. **Cloud-Integration** (UitKit Cloud): Enterprise Cloud agiert als SAML/OIDC Service Provider (SP), verwaltet Sessions
 2. **On-Prem** (lokale `.claude/` Hooks): Git-Config-Identität + optionale JWT-Token-Validierung über öffentlichen Schlüssel im `pem`-Format
-3. **Hybrid**: Lokaler Claude Code + Claudient Cloud Session-Backend für Audit/Kostendurchsetzung
+3. **Hybrid**: Lokaler Claude Code + UitKit Cloud Session-Backend für Audit/Kostendurchsetzung
 
 ## Setup: Okta (SAML 2.0)
 
@@ -24,28 +24,28 @@ Claude Code authentifiziert sich nicht direkt gegen einen IdP. Stattdessen:
 2. **Applications** → **Create App Integration**
 3. Wählen Sie **SAML 2.0**
 4. Konfigurieren Sie:
-   - **Single sign on URL**: `https://cloud.claudient.com/auth/saml/acs`
-   - **Audience URI (Entity ID)**: `https://cloud.claudient.com`
+   - **Single sign on URL**: `https://cloud.uitkit.com/auth/saml/acs`
+   - **Audience URI (Entity ID)**: `https://cloud.uitkit.com`
    - **Name ID Format**: Email address
    - **Application username**: `${user.email}`
 
 ### Schritt 2: Benutzer und Gruppen zuweisen
 
-- Fügen Sie Benutzer/Gruppen zur Claudient-Anwendung in Okta hinzu
+- Fügen Sie Benutzer/Gruppen zur UitKit-Anwendung in Okta hinzu
 - Konfigurieren Sie Gruppenmitgliedschaftsansprüche (z. B. „Engineering", „Finance")
 
-### Schritt 3: Claudient Cloud konfigurieren
+### Schritt 3: UitKit Cloud konfigurieren
 
-Stellen Sie Okta-Metadaten-XML für Claudient bereit:
+Stellen Sie Okta-Metadaten-XML für UitKit bereit:
 
 ```bash
 # Laden Sie Metadaten von Okta herunter:
-# Admin → Applications → Claudient → SAML 2.0 → Identity Provider metadata
+# Admin → Applications → UitKit → SAML 2.0 → Identity Provider metadata
 curl https://company.okta.com/app/exk123abc/sso/saml/metadata > okta-metadata.xml
 
-# Hochladen zu Claudient Cloud:
-curl -X POST https://api.claudient.com/enterprise/sso/okta \
-  -H "Authorization: Bearer $CLAUDIENT_API_KEY" \
+# Hochladen zu UitKit Cloud:
+curl -X POST https://api.uitkit.com/enterprise/sso/okta \
+  -H "Authorization: Bearer $UITKIT_API_KEY" \
   -F "metadata=@okta-metadata.xml"
 ```
 
@@ -53,10 +53,10 @@ curl -X POST https://api.claudient.com/enterprise/sso/okta \
 
 ```bash
 # Claude Code erkennt SAML-Anforderung und fordert auf:
-# "Please authenticate via Okta: https://cloud.claudient.com/auth/okta?challenge=xyz"
+# "Please authenticate via Okta: https://cloud.uitkit.com/auth/okta?challenge=xyz"
 
 # Nach Okta-Anmeldung erhalten Sie ein Session-Token:
-# CLAUDIENT_SESSION_TOKEN=eyJ...
+# UITKIT_SESSION_TOKEN=eyJ...
 ```
 
 ## Setup: Azure AD (OIDC)
@@ -65,8 +65,8 @@ curl -X POST https://api.claudient.com/enterprise/sso/okta \
 
 1. **Azure Portal** → **Azure Active Directory** → **App registrations** → **New registration**
 2. Konfigurieren Sie:
-   - **Name**: Claudient
-   - **Redirect URI**: `https://cloud.claudient.com/auth/oidc/callback`
+   - **Name**: UitKit
+   - **Redirect URI**: `https://cloud.uitkit.com/auth/oidc/callback`
    - **Accounts in this organizational directory only**
 
 ### Schritt 2: Client Secret erstellen
@@ -81,11 +81,11 @@ curl -X POST https://api.claudient.com/enterprise/sso/okta \
 2. **Token configuration**:
    - Optionalen Anspruch hinzufügen: `groups` (im Access Token)
 
-### Schritt 4: Claudient Cloud konfigurieren
+### Schritt 4: UitKit Cloud konfigurieren
 
 ```bash
-curl -X POST https://api.claudient.com/enterprise/sso/azure \
-  -H "Authorization: Bearer $CLAUDIENT_API_KEY" \
+curl -X POST https://api.uitkit.com/enterprise/sso/azure \
+  -H "Authorization: Bearer $UITKIT_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "client_id": "12345678-abcd-efgh-ijkl-mnopqrstuvwx",
@@ -114,7 +114,7 @@ Ihr IdP generiert und signiert JWT-Token. Beschaffen Sie sich den **öffentliche
 
 ```bash
 # Von Ihrem IdP (Keycloak, Ping, etc.) herunterladen, öffentliche Schlüssel im PEM-Format:
-# Beispiel: https://keycloak.company.com/auth/realms/claudient/protocol/openid-connect/certs
+# Beispiel: https://keycloak.company.com/auth/realms/uitkit/protocol/openid-connect/certs
 
 # Speichern Sie unter .claude/auth/public-key.pem
 mkdir -p .claude/auth
@@ -145,7 +145,7 @@ Fügen Sie zu `settings.json` hinzu:
     "mode": "jwt",
     "public_key_path": "${CLAUDE_PROJECT_DIR}/.claude/auth/public-key.pem",
     "expected_issuer": "https://your-idp.company.com",
-    "expected_audience": "claudient"
+    "expected_audience": "uitkit"
   }
 }
 ```
@@ -156,7 +156,7 @@ Benutzer müssen ein gültiges JWT-Token bereitstellen:
 
 ```bash
 # Option A: Umgebungsvariable
-export CLAUDIENT_TOKEN=$(curl -X POST https://your-idp.company.com/token \
+export UITKIT_TOKEN=$(curl -X POST https://your-idp.company.com/token \
   -d "grant_type=client_credentials&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET")
 
 # Option B: Aus Git-Konfiguration (falls IdP mit Git integriert)
@@ -209,24 +209,24 @@ Nach erfolgreichem Authentifizierung ordnen Sie IdP-Gruppen Claude Code-Rollen z
 Wenn sich ein Benutzer zum ersten Mal über SSO anmeldet:
 
 1. IdP-Ansprüche werden validiert
-2. Benutzerdatensatz wird in Claudient mit folgenden Angaben erstellt:
+2. Benutzerdatensatz wird in UitKit mit folgenden Angaben erstellt:
    - E-Mail aus `email`-Anspruch
    - Name aus `name`-Anspruch
    - Rollen aus `groups`-Anspruch (zugeordnet via group_mapping)
 3. Benutzer werden Standard-Berechtigungen zugewiesen (z. B. „Engineer" kann Bash, Read, Write ausführen)
 
-### SCIM-Bereitstellung (nur Claudient Cloud)
+### SCIM-Bereitstellung (nur UitKit Cloud)
 
 Synchronisieren Sie Benutzer automatisch von Okta/Azure:
 
 ```bash
-curl -X POST https://api.claudient.com/enterprise/scim/config \
-  -H "Authorization: Bearer $CLAUDIENT_API_KEY" \
+curl -X POST https://api.uitkit.com/enterprise/scim/config \
+  -H "Authorization: Bearer $UITKIT_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "enabled": true,
     "provider": "okta",
-    "scim_endpoint": "https://cloud.claudient.com/scim/v2",
+    "scim_endpoint": "https://cloud.uitkit.com/scim/v2",
     "bearer_token": "scim_secret_token_here"
   }'
 ```

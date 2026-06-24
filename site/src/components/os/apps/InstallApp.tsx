@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Eyebrow, YellowButton, GhostButton } from "./ui";
 
 const methods = [
-  { title: "Plugin Marketplace", cmd: "/plugin marketplace add UitbreidenOS/Claudient", desc: "Recommended — installs all plugins", recommended: true },
-  { title: "npm CLI", cmd: "npx claudient add skills backend", desc: "Cherry-pick specific categories" },
-  { title: "Git Clone", cmd: "git clone https://github.com/UitbreidenOS/Claudient.git", desc: "Full repository access" },
+  { title: "Plugin Marketplace", cmd: "/plugin marketplace add UitbreidenOS/UitKit", desc: "Recommended — installs all plugins", recommended: true },
+  { title: "npm CLI", cmd: "npx uitkit add skills backend", desc: "Cherry-pick specific categories" },
+  { title: "Git Clone", cmd: "git clone https://github.com/UitbreidenOS/UitKit.git", desc: "Full repository access" },
 ];
 
 const stats = [
@@ -25,7 +25,7 @@ const complianceStacks = [
     skills: ["Access audit", "Change log", "Security reviewer", "Compliance reporter"],
     hooks: ["Audit trail (PostToolUse)", "Access control validator (PreToolUse)", "Compliance alert (Stop)"],
     controls: ["CC6.1 Logical access", "CC6.2 Access removal", "CC7.1 Change management", "CC7.2 Change testing"],
-    install: "npx claudient add stack enterprise/compliance_stacks/soc2",
+    install: "npx uitkit add stack enterprise/compliance_stacks/soc2",
   },
   {
     name: "GDPR",
@@ -35,7 +35,7 @@ const complianceStacks = [
     skills: ["Data processing", "Consent tracker", "Privacy impact assessor", "Data retention policy"],
     hooks: ["Data deletion (PreToolUse)", "Consent validator (PostToolUse)", "Data residency enforcer (Stop)"],
     controls: ["Art 5 Lawfulness", "Art 6 Legal basis", "Art 17 Right to delete", "Art 32 Security", "Art 35 DPIA"],
-    install: "npx claudient add stack enterprise/compliance_stacks/gdpr",
+    install: "npx uitkit add stack enterprise/compliance_stacks/gdpr",
   },
   {
     name: "EU-AI-Act",
@@ -45,7 +45,7 @@ const complianceStacks = [
     skills: ["High-risk detector", "Transparency logger", "Human-in-the-loop enforcer", "Bias auditor"],
     hooks: ["Prohibited use blocker (Stop)", "Transparency logger (PostToolUse)", "Risk classification (PreToolUse)"],
     controls: ["Art 5 Prohibited uses", "Art 6 High-risk systems", "Art 13 Transparency", "Art 14 Human oversight", "Art 26 Bias mitigation"],
-    install: "npx claudient add stack enterprise/compliance_stacks/eu_ai_act",
+    install: "npx uitkit add stack enterprise/compliance_stacks/eu_ai_act",
   },
 ];
 
@@ -117,7 +117,7 @@ export function InstallApp() {
       <div className="mt-5 rounded-xl border border-olive/50 bg-cream p-4">
         <div className="text-[13px] font-bold text-ink">FAQ</div>
         <div className="mt-2.5 space-y-2 text-[12px] text-body">
-          <div><strong>Is Claudient free?</strong> Yes. Open source under AGPL-3.0 and CC-BY-SA-4.0.</div>
+          <div><strong>Is UitKit free?</strong> Yes. Open source under AGPL-3.0 and CC-BY-SA-4.0.</div>
           <div><strong>What version of Claude Code?</strong> Works with Claude Code v1.0+. We track latest features.</div>
           <div><strong>Does it send my code anywhere?</strong> No. Everything runs locally. Skills are markdown files read by Claude Code.</div>
           <div><strong>What's included?</strong> 400+ skills, 190+ agents, 41 MCP configs, 103 guides, 50 workspace stacks, and 80+ commands.</div>
@@ -125,10 +125,10 @@ export function InstallApp() {
       </div>
 
       <div className="mt-4 flex gap-2">
-        <YellowButton onClick={() => copy(99, "/plugin marketplace add UitbreidenOS/Claudient")}>
+        <YellowButton onClick={() => copy(99, "/plugin marketplace add UitbreidenOS/UitKit")}>
           {copied === 99 ? "✓ Copied!" : "Quick Install →"}
         </YellowButton>
-        <GhostButton onClick={() => window.open("https://github.com/UitbreidenOS/Claudient", "_blank")}>
+        <GhostButton onClick={() => window.open("https://github.com/UitbreidenOS/UitKit", "_blank")}>
           GitHub
         </GhostButton>
       </div>
@@ -136,7 +136,7 @@ export function InstallApp() {
       {/* Pricing Tiers */}
       <div className="mt-6 pt-5 border-t border-hairline">
         <Eyebrow color="#b62ad9">Plans & Pricing</Eyebrow>
-        <p className="mt-1 text-[12px] text-mute">Start free, grow with Claudient.</p>
+        <p className="mt-1 text-[12px] text-mute">Start free, grow with UitKit.</p>
         <div className="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-2">
           {tiers.map((t) => (
             <div key={t.name} className="rounded-xl border border-hairline bg-white p-3">
@@ -158,7 +158,7 @@ export function InstallApp() {
                 </a>
               )}
               {t.name === "Team" && (
-                <a href="https://github.com/UitbreidenOS/Claudient" target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex items-center rounded-md border border-olive/60 bg-white px-2 py-1 text-[10px] font-semibold text-ink hover:bg-cream transition w-full text-center justify-center">
+                <a href="https://github.com/UitbreidenOS/UitKit" target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex items-center rounded-md border border-olive/60 bg-white px-2 py-1 text-[10px] font-semibold text-ink hover:bg-cream transition w-full text-center justify-center">
                   Learn More
                 </a>
               )}
@@ -222,7 +222,7 @@ export function InstallApp() {
           ))}
         </div>
         <div className="mt-3 rounded-lg border-l-4 border-[#b62ad9] bg-[#b62ad9]/10 px-4 py-3 text-[12px] text-body">
-          🏢 <strong>Setup all three at once:</strong> Run <code className="bg-white px-1.5 py-0.5 rounded text-[11px] font-mono">claudient init --enterprise</code> for the interactive wizard that configures SSO, RBAC, audit trails, and all compliance stacks.
+          🏢 <strong>Setup all three at once:</strong> Run <code className="bg-white px-1.5 py-0.5 rounded text-[11px] font-mono">uitkit init --enterprise</code> for the interactive wizard that configures SSO, RBAC, audit trails, and all compliance stacks.
         </div>
       </div>
     </div>

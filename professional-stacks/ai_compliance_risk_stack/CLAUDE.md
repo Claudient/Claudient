@@ -270,4 +270,4 @@ Track and report on:
 
 ---
 
-Built with [Claudient](https://github.com/Claudients/Claudient) · Compliance-first AI governance
+Built with [UitKit](https://github.com/UitKits/UitKit) · Compliance-first AI governance

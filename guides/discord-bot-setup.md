@@ -1,6 +1,6 @@
-# Claudient Discord Bot Setup Guide
+# UitKit Discord Bot Setup Guide
 
-Quick start for deploying the Claudient Discord bot in your community server.
+Quick start for deploying the UitKit Discord bot in your community server.
 
 ## Prerequisites
 
@@ -12,7 +12,7 @@ Quick start for deploying the Claudient Discord bot in your community server.
 
 1. Go to https://discord.com/developers/applications
 2. Click "New Application"
-3. Name: "Claudient" (or custom)
+3. Name: "UitKit" (or custom)
 4. Accept terms → Create
 
 ## Step 2: Create Bot User
@@ -53,7 +53,7 @@ Quick start for deploying the Claudient Discord bot in your community server.
 
 ## Step 5: Environment Setup
 
-In your Claudient project directory:
+In your UitKit project directory:
 
 ```bash
 # Create .env file
@@ -75,7 +75,7 @@ npm install discord.js dotenv
 node scripts/discord-bot.js
 
 # Expected output:
-# ✓ Claudient bot ready as Claudient#0000
+# ✓ UitKit bot ready as UitKit#0000
 ```
 
 The bot will automatically create channels on first use:
@@ -135,8 +135,8 @@ CMD ["node", "scripts/discord-bot.js"]
 
 ```bash
 # Build and run
-docker build -t claudient-bot .
-docker run -e DISCORD_TOKEN=$DISCORD_TOKEN claudient-bot
+docker build -t uitkit-bot .
+docker run -e DISCORD_TOKEN=$DISCORD_TOKEN uitkit-bot
 ```
 
 ### Option D: PM2 (Recommended)
@@ -146,14 +146,14 @@ docker run -e DISCORD_TOKEN=$DISCORD_TOKEN claudient-bot
 npm install -g pm2
 
 # Start bot with PM2
-pm2 start scripts/discord-bot.js --name claudient-bot
+pm2 start scripts/discord-bot.js --name uitkit-bot
 
 # Auto-restart on reboot
 pm2 startup
 pm2 save
 
 # Monitor
-pm2 logs claudient-bot
+pm2 logs uitkit-bot
 pm2 monit
 ```
 
@@ -168,7 +168,7 @@ All commands support autocomplete and instant feedback:
 | `/skill` | Search 400+ skills | `/skill agent` |
 | `/help` | Show all commands | `/help` |
 | `/support` | Create support thread | `/support I can't find the security-review skill` |
-| `/project submit` | Share your project | `/project submit "My Bot" "Built with Claudient"` |
+| `/project submit` | Share your project | `/project submit "My Bot" "Built with UitKit"` |
 | `/project list` | Browse projects | `/project list` |
 | `/announce` | Post announcements (mods) | `/announce "New Feature" "Agent Supervisor"` |
 | `/roles` | Toggle role | `/roles volunteer` |
@@ -312,7 +312,7 @@ Check bot health:
 pm2 status
 
 # Watch logs real-time
-pm2 logs claudient-bot
+pm2 logs uitkit-bot
 
 # Check memory usage
 pm2 monit
@@ -370,7 +370,7 @@ Post in #project-showcase manually (or via `/project submit`):
 
 > 🎉 Check out this amazing project by @username:
 > 
-> **AI Code Reviewer** — Automated code reviews using Claudient
+> **AI Code Reviewer** — Automated code reviews using UitKit
 > 
 > [GitHub](link) • [Demo](link) • [Docs](link)
 
@@ -387,7 +387,7 @@ Post in #project-showcase manually (or via `/project submit`):
 
 - [Discord.js Documentation](https://discord.js.org/)
 - [Discord Developer Portal](https://discord.com/developers)
-- [Claudient Skills Library](https://claudient.dev)
+- [UitKit Skills Library](https://uitkit.dev)
 - [Claude Code Documentation](https://claude.com/docs)
 
 ---

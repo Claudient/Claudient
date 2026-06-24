@@ -1,4 +1,4 @@
-# Mixture of Experts (MoE) Architecturen in Claudient
+# Mixture of Experts (MoE) Architecturen in UitKit
 
 Dit document beschrijrat de architecturen voor het routeren van verzoeken over meerdere modellen om codegeneratie, redenering en kosten te optimaliseren.
 

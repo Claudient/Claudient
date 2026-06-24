@@ -18,16 +18,16 @@ Je bent een UX-designer, UX-onderzoeker of productdesigner wiens werk zich uitst
 
 ```bash
 # Installeer alle UX-designervaardigheden
-npx claudient add skills product
+npx uitkit add skills product
 
 # Of selecteer wat je nodig hebt:
-npx claudient add skill product/ux-researcher
-npx claudient add skill product/usability-report
-npx claudient add skill product/persona-builder
-npx claudient add skill product/ux-audit
-npx claudient add skill product/product-discovery
-npx claudient add skill product/experiment-designer
-npx claudient add agents roles/hypothesis-tester
+npx uitkit add skill product/ux-researcher
+npx uitkit add skill product/usability-report
+npx uitkit add skill product/persona-builder
+npx uitkit add skill product/ux-audit
+npx uitkit add skill product/product-discovery
+npx uitkit add skill product/experiment-designer
+npx uitkit add agents roles/hypothesis-tester
 ```
 
 ---
@@ -202,7 +202,7 @@ Bewijsbasis: [beschikbare onderzoeksdata — interviews / analyses / ondersteuni
 ## 30-daags ingroeiplan (nieuwe UX-medewerkers of carrièreoverstappers)
 
 ### Week 1 — Installatie en onderzoekstools
-- Installeer alle productvaardigheden: `npx claudient add skills product`
+- Installeer alle productvaardigheden: `npx uitkit add skills product`
 - Voer `/persona-builder` uit op bestaande gebruikersonderzoeksdata — maak kennis met het huidige gebruikersbegrip
 - Voer `/ux-audit` uit op de meest gebruikte flow van het product — basisheuristieke beoordeling
 - Bekijk bestaande bruikbaarheidstestrapporten met `/usability-report` als opmaakreferentie

@@ -1,14 +1,14 @@
-# Claudient × Codex CLI
+# UitKit × Codex CLI
 
-> How to use Claudient content with OpenAI Codex CLI (codex command-line tool).
+> How to use UitKit content with OpenAI Codex CLI (codex command-line tool).
 
-Codex CLI is a lightweight command-line interface to Claude and other LLMs, with support for persistent instruction sets via `AGENTS.md`. This guide shows how to migrate Claudient's 380+ skills, 182 agents, and 100+ rules into Codex CLI's workflow.
+Codex CLI is a lightweight command-line interface to Claude and other LLMs, with support for persistent instruction sets via `AGENTS.md`. This guide shows how to migrate UitKit's 380+ skills, 182 agents, and 100+ rules into Codex CLI's workflow.
 
 ---
 
 ## What works natively
 
-Codex CLI is a text-first, prompt-driven interface. These Claudient patterns translate directly:
+Codex CLI is a text-first, prompt-driven interface. These UitKit patterns translate directly:
 
 - **Markdown skill content** — Instructions, code examples, and prompts work as-is
 - **Plain-text rules** — Guidelines and best practices require no adaptation
@@ -73,17 +73,17 @@ When the user needs to [specific task], use this agent.
 - Always [requirements]
 
 ## Instructions
-[Extracted from Claudient skill's Instructions section]
+[Extracted from UitKit skill's Instructions section]
 
 ## Examples
-[Concrete examples from Claudient skill]
+[Concrete examples from UitKit skill]
 
 ---
 ```
 
 ### Example: Converting "browser" skill to Codex agent
 
-**Original Claudient skill** (`skills/automation/browser.md`):
+**Original UitKit skill** (`skills/automation/browser.md`):
 ```markdown
 # Browser Skill
 
@@ -253,11 +253,11 @@ codex --list-prompts
 
 ## Rules → AGENTS.md sections
 
-Claudient's rules are always-follow guidelines. In Codex CLI, add them to the agent's **Context and constraints** section or as a dedicated "Rules" agent.
+UitKit's rules are always-follow guidelines. In Codex CLI, add them to the agent's **Context and constraints** section or as a dedicated "Rules" agent.
 
 ### Example: Adding API Design rules to an agent
 
-**From Claudient** (`rules/common/api-design.md`):
+**From UitKit** (`rules/common/api-design.md`):
 ```markdown
 # API Design Rules
 
@@ -302,7 +302,7 @@ You are building REST APIs. Always follow these rules:
 | 403 | Authenticated but not authorized |
 | 404 | Resource not found |
 
-[Include full rules section from Claudient]
+[Include full rules section from UitKit]
 
 ## Instructions
 [API design patterns]
@@ -342,10 +342,10 @@ Every file in `skills/` must follow this structure:
 
 **Adapted for Codex agent**:
 ```markdown
-# Agent: Skill Author (for Claudient)
+# Agent: Skill Author (for UitKit)
 
 ## Context
-You are writing a skill file for the Claudient knowledge system.
+You are writing a skill file for the UitKit knowledge system.
 
 ## File format (REQUIRED)
 Every skill must follow this structure:
@@ -376,7 +376,7 @@ Do not add sections beyond this structure without a clear reason.
 - Keep examples concrete and runnable
 
 ## Example use case
-User: "Create a FastAPI CRUD skill for Claudient."
+User: "Create a FastAPI CRUD skill for UitKit."
 
 Expected output:
 - File: `skills/backend/fastapi-crud.md`
@@ -391,7 +391,7 @@ Expected output:
 
 ## Compatibility matrix
 
-| Claudient content | Codex CLI equivalent | Effort | Notes |
+| UitKit content | Codex CLI equivalent | Effort | Notes |
 |---|---|---|---|
 | **Skills** (markdown prompts) | AGENTS.md entries | Low | Extract Instructions section, add activation context |
 | **Commands** (slash definitions) | `--agent` + `--prompt` flags | Low | Convert to reusable prompts in `.codex/prompts/` |
@@ -399,13 +399,13 @@ Expected output:
 | **Agents** (subagent YAML/MD) | AGENTS.md definitions | Low | Convert Purpose, Tools, When to delegate into agent entry |
 | **CLAUDE.md examples** | Agent system prompts | Medium | Strip Claude Code references, generalize to LLM patterns |
 | **Personas** (system prompts) | Custom agents | Medium | Create agents for each persona; reuse as `--agent` |
-| **Code snippets** | Inline examples in agents | None | Copy verbatim from Claudient |
+| **Code snippets** | Inline examples in agents | None | Copy verbatim from UitKit |
 | **Hooks** (event-driven) | Shell scripts + git hooks | High | Implement as bash/sh scripts that call `codex` |
 | **Plugin marketplace** | Custom prompt library | N/A | Not supported in Codex CLI |
 
 ---
 
-## Workflow example: Adapt Claudient to Codex CLI
+## Workflow example: Adapt UitKit to Codex CLI
 
 ### Step 1: Create .codex structure
 ```bash
@@ -413,10 +413,10 @@ mkdir -p .codex/prompts
 touch .codex/AGENTS.md .codex/config.json
 ```
 
-### Step 2: Pick a Claudient skill to adapt
+### Step 2: Pick a UitKit skill to adapt
 Choose `skills/backend/python/fastapi-crud.md`:
 ```bash
-cat /path/to/claudient/skills/backend/python/fastapi-crud.md
+cat /path/to/uitkit/skills/backend/python/fastapi-crud.md
 ```
 
 ### Step 3: Extract and adapt
@@ -469,7 +469,7 @@ codex --prompt fastapi-users
 
 ---
 
-## Best practices for Codex CLI + Claudient
+## Best practices for Codex CLI + UitKit
 
 1. **Organize by domain**: Create separate AGENTS.md files per domain (backend, frontend, devops) or keep one master file with clear sections.
    ```bash
@@ -488,15 +488,15 @@ codex --prompt fastapi-users
    # Agent: DevOps — K8s Deployment
    ```
 
-3. **Reference Claudient**: Link to the source skill in comments:
+3. **Reference UitKit**: Link to the source skill in comments:
    ```markdown
    # Agent: Browser Automation
-   > Source: https://github.com/uitbreiden/claudient/tree/main/skills/automation/browser.md
+   > Source: https://github.com/uitbreiden/uitkit/tree/main/skills/automation/browser.md
    ```
 
-4. **Version your agents**: Tag with dates or Claudient versions:
+4. **Version your agents**: Tag with dates or UitKit versions:
    ```markdown
-   # Agent: Code Review (Claudient v1.10.0, 2026-06)
+   # Agent: Code Review (UitKit v1.10.0, 2026-06)
    ```
 
 5. **Chain agents with scripts**: Use shell scripts to invoke multiple agents in sequence:
@@ -534,12 +534,12 @@ codex --prompt fastapi-users
 
 - [ ] Install Codex CLI: `npm install -g codex-cli`
 - [ ] Create `.codex/` directory structure
-- [ ] Extract 5-10 key Claudient skills → AGENTS.md
+- [ ] Extract 5-10 key UitKit skills → AGENTS.md
 - [ ] Test each adapted agent with 2-3 example prompts
 - [ ] Create shell scripts for common workflows
 - [ ] Document custom agents in `.codex/README.md`
 - [ ] Share AGENTS.md with team via version control
-- [ ] Archive original Claudient skill references in comments
+- [ ] Archive original UitKit skill references in comments
 - [ ] Set up git hooks to invoke Codex on pre-commit (optional)
 
 ---
@@ -548,5 +548,5 @@ codex --prompt fastapi-users
 
 - **Codex CLI documentation**: https://openai.com/blog/codex (see CLI section)
 - **OpenAI API reference**: https://platform.openai.com/docs/api-reference
-- **Claudient repository**: https://github.com/uitbreiden/claudient
+- **UitKit repository**: https://github.com/uitbreiden/uitkit
 - **AGENTS.md specification**: [See Codex documentation for agent format]

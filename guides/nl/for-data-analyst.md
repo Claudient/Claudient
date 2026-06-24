@@ -18,18 +18,18 @@ Je bent een data-analist of BI-analist ingebed in een bedrijfs-, product- of mar
 
 ```bash
 # Installeer data-analist-skills
-npx claudient add skill data-ml/sql
-npx claudient add skill data-ml/pandas-polars
-npx claudient add skill data-ml/dbt-data-pipelines
-npx claudient add skill data-ml/dashboard-narrator
-npx claudient add skill data-ml/stakeholder-report
-npx claudient add skill data-ml/data-quality-checker
-npx claudient add skill product/product-analytics
-npx claudient add skill marketing/analytics-tracking
+npx uitkit add skill data-ml/sql
+npx uitkit add skill data-ml/pandas-polars
+npx uitkit add skill data-ml/dbt-data-pipelines
+npx uitkit add skill data-ml/dashboard-narrator
+npx uitkit add skill data-ml/stakeholder-report
+npx uitkit add skill data-ml/data-quality-checker
+npx uitkit add skill product/product-analytics
+npx uitkit add skill marketing/analytics-tracking
 
 # Installeer relevante agents
-npx claudient add agent roles/data-pipeline-architect
-npx claudient add agent roles/quant-analyst
+npx uitkit add agent roles/data-pipeline-architect
+npx uitkit add agent roles/quant-analyst
 ```
 
 ---
@@ -193,7 +193,7 @@ Genereer: de model-SQL, schema.yml met tests en documentatie.
 ## 30-daags inwerklist (nieuwe data-analist of nieuw stack)
 
 ### Week 1 — SQL-meesterschap in je nieuwe schema
-- Installeer alle data-skills: `npx claudient add skill data-ml/[naam]`
+- Installeer alle data-skills: `npx uitkit add skill data-ml/[naam]`
 - Documenteer je kernta tabellen in een CLAUDE.md in je analytics-repo — Claude leest dit voor context
 - Gebruik `/sql` om 10 query's te schrijven die veelgestelde zakelijke vragen beantwoorden — bouw je query-bibliotheek
 - Voer `/data-quality-checker` uit op je 3 belangrijkste productietabellen — begrijp je baseline datakwaliteitsgezonheid

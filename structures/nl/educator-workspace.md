@@ -200,12 +200,12 @@ touch educator-workspace/feedback/templates/growth-mindset-feedback-template.md
 touch educator-workspace/curriculum/sy2025-2026/scope-and-sequence.md
 
 # Docentenvaardigheden installeren
-npx claudient add skill productivity/lesson-planner
-npx claudient add skill productivity/student-feedback-analyzer
-npx claudient add skill productivity/rubric-creator
-npx claudient add skill productivity/assignment-builder
-npx claudient add skill productivity/differentiation
-npx claudient add skill productivity/parent-email
+npx uitkit add skill productivity/lesson-planner
+npx uitkit add skill productivity/student-feedback-analyzer
+npx uitkit add skill productivity/rubric-creator
+npx uitkit add skill productivity/assignment-builder
+npx uitkit add skill productivity/differentiation
+npx uitkit add skill productivity/parent-email
 ```
 
 ## CLAUDE.md sjabloon
@@ -376,13 +376,13 @@ IEP/504 accommodaties: lees student-data/iep-accommodations.md voordat je gediff
 ## Vaardigheden om te installeren
 
 ```bash
-npx claudient add skill productivity/lesson-planner
-npx claudient add skill productivity/student-feedback-analyzer
-npx claudient add skill productivity/rubric-creator
-npx claudient add skill productivity/assignment-builder
-npx claudient add skill productivity/differentiation
-npx claudient add skill productivity/parent-email
-npx claudient add skill productivity/quiz-builder
+npx uitkit add skill productivity/lesson-planner
+npx uitkit add skill productivity/student-feedback-analyzer
+npx uitkit add skill productivity/rubric-creator
+npx uitkit add skill productivity/assignment-builder
+npx uitkit add skill productivity/differentiation
+npx uitkit add skill productivity/parent-email
+npx uitkit add skill productivity/quiz-builder
 ```
 
 ## Gerelateerd

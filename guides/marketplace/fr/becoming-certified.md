@@ -1,12 +1,12 @@
 # Obtenir la Certification de Votre Stack
 
-Ce guide vous guide à travers le processus étape par étape de la certification de votre stack sur le Marketplace Claudient.
+Ce guide vous guide à travers le processus étape par étape de la certification de votre stack sur le Marketplace UitKit.
 
 ## Prérequis
 
 Avant de demander la certification, assurez-vous que votre stack :
 
-1. **Est déjà publiée** sur le Marketplace Claudient avec des retours positifs
+1. **Est déjà publiée** sur le Marketplace UitKit avec des retours positifs
 2. **Respecte les critères de base** (voir VETTING.md)
 3. **Dispose d'un référentiel GitHub** (public, actif, maintenu)
 4. **Respecte les exigences minimales** pour votre niveau cible :
@@ -121,7 +121,7 @@ Créez un document contenant :
 
 ## Étape 4 : Demander un Examen de Certification
 
-Envoyez un email à **marketplace@claudient.dev** avec la ligne d'objet :
+Envoyez un email à **marketplace@uitkit.dev** avec la ligne d'objet :
 
 ```
 Certification Request: [Stack Name] - [Tier] Tier
@@ -212,7 +212,7 @@ Après approbation :
 **30 jours avant la date d'expiration :**
 - Vous recevrez un avis de recertification
 - Vérifiez que les métriques actuelles respectent toujours les exigences de niveau
-- Soumettez la confirmation de recertification à marketplace@claudient.dev
+- Soumettez la confirmation de recertification à marketplace@uitkit.dev
 
 **Si les métriques ont baissé :**
 - La stack peut être rétrogradée d'un niveau
@@ -237,7 +237,7 @@ Le processus de renouvellement est le même que la certification initiale.
 Pour passer de Bronze à Argent ou d'Argent à Or :
 
 1. Assurez-vous que les nouvelles métriques respectent le niveau cible
-2. Envoyez une demande de mise à niveau à marketplace@claudient.dev avec le score de qualité mis à jour
+2. Envoyez une demande de mise à niveau à marketplace@uitkit.dev avec le score de qualité mis à jour
 3. L'équipe principale vérifie les métriques (2-3 jours ouvrables)
 4. Après approbation, le listing et le badge sont mis à jour
 
@@ -258,8 +258,8 @@ Si votre certification est révoquée :
 
 - **Critères de certification :** Voir [certification-criteria.md](./certification-criteria.md)
 - **Détails des niveaux :** Voir [../CERTIFICATION.md](../CERTIFICATION.md)
-- **Questions générales :** marketplace@claudient.dev
-- **Discussion communautaire :** [GitHub Discussions](https://github.com/claudients/claudient/discussions)
+- **Questions générales :** marketplace@uitkit.dev
+- **Discussion communautaire :** [GitHub Discussions](https://github.com/uitkits/uitkit/discussions)
 
 ---
 

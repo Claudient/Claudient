@@ -220,14 +220,14 @@ appId: com.yourcompany.myapp
 ---
 EOF
 
-# Instalar skills de Claudient
-npx claudient add skill mobile/expo-router-screen
-npx claudient add skill mobile/supabase-realtime
-npx claudient add skill mobile/eas-build
-npx claudient add skill mobile/revenuecat-paywall
-npx claudient add skill mobile/deep-link-handler
-npx claudient add skill productivity/code-review
-npx claudient add skill git/pr-description
+# Instalar skills de UitKit
+npx uitkit add skill mobile/expo-router-screen
+npx uitkit add skill mobile/supabase-realtime
+npx uitkit add skill mobile/eas-build
+npx uitkit add skill mobile/revenuecat-paywall
+npx uitkit add skill mobile/deep-link-handler
+npx uitkit add skill productivity/code-review
+npx uitkit add skill git/pr-description
 
 echo "Andamiaje de aplicación móvil completado. Siguiente: agregar EXPO_PUBLIC_SUPABASE_URL y EXPO_PUBLIC_SUPABASE_ANON_KEY a .env.local"
 ```
@@ -429,15 +429,15 @@ La configuración de Linking se encuentra en lib/deep-links.ts. Para manejar una
 ## Skills a instalar
 
 ```bash
-npx claudient add skill mobile/expo-router-screen
-npx claudient add skill mobile/supabase-realtime
-npx claudient add skill mobile/eas-build
-npx claudient add skill mobile/revenuecat-paywall
-npx claudient add skill mobile/deep-link-handler
-npx claudient add skill mobile/push-notifications
-npx claudient add skill productivity/code-review
-npx claudient add skill git/pr-description
-npx claudient add skill productivity/test-generator
+npx uitkit add skill mobile/expo-router-screen
+npx uitkit add skill mobile/supabase-realtime
+npx uitkit add skill mobile/eas-build
+npx uitkit add skill mobile/revenuecat-paywall
+npx uitkit add skill mobile/deep-link-handler
+npx uitkit add skill mobile/push-notifications
+npx uitkit add skill productivity/code-review
+npx uitkit add skill git/pr-description
+npx uitkit add skill productivity/test-generator
 ```
 
 ## Relacionado

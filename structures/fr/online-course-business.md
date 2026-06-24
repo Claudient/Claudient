@@ -207,11 +207,11 @@ touch online-course-business/assets/brand-guide.md
 touch online-course-business/assets/loom-recordings-log.md
 
 # Installer les skills pertinents
-npx claudient add skill productivity/lesson-planner
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill data-ml/de/stakeholder-report
+npx uitkit add skill productivity/lesson-planner
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill data-ml/de/stakeholder-report
 ```
 
 ## Modèle CLAUDE.md
@@ -414,13 +414,13 @@ Niveau 3 — escalade immédiate (ne pas rédiger) : contestations de paiement, 
 ## Skills à installer
 
 ```bash
-npx claudient add skill productivity/lesson-planner
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/vendor-evaluator
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill data-ml/stakeholder-report
+npx uitkit add skill productivity/lesson-planner
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/vendor-evaluator
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill data-ml/stakeholder-report
 ```
 
 ## Liens connexes

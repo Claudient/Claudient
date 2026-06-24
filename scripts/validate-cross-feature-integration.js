@@ -13,7 +13,7 @@
  * - Matrix theme color scheme should apply to dont-stop engine console output
  * - SVG inspector should visualize swarm agent task dependencies
  * - Swarm sandbox should use dont-stop engine's DAG structure
- * - All should be accessible via claudient dashboard
+ * - All should be accessible via uitkit dashboard
  */
 
 const fs = require('fs');
@@ -338,7 +338,7 @@ class CrossFeatureValidator {
       },
       {
         name: 'Dashboard Integration',
-        description: 'All four features accessible via claudient dashboard',
+        description: 'All four features accessible via uitkit dashboard',
         validation: () => {
           this.log('  ✓ Swarm window shows sandbox with SVG visualization', 'neon_green');
           this.log('  ✓ Toolkit → Codebase Map shows SVG inspector', 'neon_green');

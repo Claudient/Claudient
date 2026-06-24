@@ -1,7 +1,7 @@
 # Especialista en Servicios Locales
 
 ## Propósito
-Ayuda a los operadores de servicios locales (oficios, salones, dentales, fitness, fotografía, restaurantes, bienes raíces, reparación de autos, y similares) a diagnosticar cuellos de botella operacionales, elegir las habilidades Claudient de mayor ROI para su vertical específico, y estructurar el ritmo semanal que captura el valor antes de que vuelva al ruido de dirigir una pequeña operación.
+Ayuda a los operadores de servicios locales (oficios, salones, dentales, fitness, fotografía, restaurantes, bienes raíces, reparación de autos, y similares) a diagnosticar cuellos de botella operacionales, elegir las habilidades UitKit de mayor ROI para su vertical específico, y estructurar el ritmo semanal que captura el valor antes de que vuelva al ruido de dirigir una pequeña operación.
 
 ## Orientación del modelo
 Sonnet. Los operadores de servicios locales dirigen negocios donde la respuesta correcta depende de la interacción entre envío, reseñas, AR, contratación, y precios — dominios que parecen discretos pero se componen entre sí. Haiku se pierde el efecto compuesto (por ejemplo, una recomendación que llena un ranura de calendario al costo de tres reseñas de Google). Opus es innecesario; el razonamiento necesario es amplitud y juicio, no prueba profunda.
@@ -11,7 +11,7 @@ Read (para examinar cronogramas, listas de clientes, exportaciones P&L que propo
 
 ## Cuándo delegar aquí
 - El usuario dirige un negocio de servicios locales y pregunta ampliamente "¿cómo puede Claude ayudar a mi negocio?"
-- El usuario está en un vertical específico y quiere comparar habilidades Claudient generales contra verticales específicas (por ejemplo, ¿deberían usar el Contractor Trades genérico o la versión Contractor Trades?)
+- El usuario está en un vertical específico y quiere comparar habilidades UitKit generales contra verticales específicas (por ejemplo, ¿deberían usar el Contractor Trades genérico o la versión Contractor Trades?)
 - El crecimiento del usuario se ha estancado y no saben si el cuello de botella es flujo de leads, conversión, capacidad, retención, o precios
 - El usuario está considerando contratar su primer técnico, estilista, despachador, u oficinista y necesita un plan estructurado
 - El usuario se está preparando para una campaña estacional (temporada de ajuste de HVAC, temporada de bodas, odontología cosmética de fin de año, paisajismo de verano) y quiere una campaña estructurada

@@ -179,10 +179,10 @@ touch .claude/commands/update-sidebar.md
 # Umgebungsdateien erstellen
 touch .env.example .env.local
 
-# Claudient Skills installieren
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill devops-infra/cicd
-npx claudient add skill devops-infra/vercel
+# UitKit Skills installieren
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill devops-infra/cicd
+npx uitkit add skill devops-infra/vercel
 
 echo "Astro + Starlight Dokumentationsseite erstellt. Starten mit: npm run dev"
 ```
@@ -411,10 +411,10 @@ Optional:
 ## Zu installierende Skills
 
 ```bash
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill devops-infra/cicd
-npx claudient add skill devops-infra/vercel
-npx claudient add skill testing/playwright
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill devops-infra/cicd
+npx uitkit add skill devops-infra/vercel
+npx uitkit add skill testing/playwright
 ```
 
 ## Verwandte Ressourcen

@@ -348,11 +348,11 @@ Use `local` for large cached data (unlimited quota, device-only).
 ## Skills to install
 
 ```bash
-npx claudient add skill devops-infra/github-actions-ci
-npx claudient add skill frontend/react-component
-npx claudient add skill frontend/tailwind-ui
-npx claudient add skill devops-infra/release-management
-npx claudient add workflow chrome-extension-publish
+npx uitkit add skill devops-infra/github-actions-ci
+npx uitkit add skill frontend/react-component
+npx uitkit add skill frontend/tailwind-ui
+npx uitkit add skill devops-infra/release-management
+npx uitkit add workflow chrome-extension-publish
 ```
 
 ## Related

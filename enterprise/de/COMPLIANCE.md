@@ -1,27 +1,27 @@
 # Compliance & Zertifizierungen
 
-Dieses Dokument beschreibt die Compliance-Position der Claudient Enterprise Edition, Zertifizierungen und Ausrichtung auf regulatorische Frameworks.
+Dieses Dokument beschreibt die Compliance-Position der UitKit Enterprise Edition, Zertifizierungen und Ausrichtung auf regulatorische Frameworks.
 
 ## SOC 2 Type II
 
-**Status**: Attestation für Claudient Cloud Bereitstellungen verfügbar
+**Status**: Attestation für UitKit Cloud Bereitstellungen verfügbar
 
-Claudient Cloud wird jährlich von einer unabhängigen CPA-Wirtschaftsprüfungsgesellschaft geprüft. Der Bericht behandelt:
+UitKit Cloud wird jährlich von einer unabhängigen CPA-Wirtschaftsprüfungsgesellschaft geprüft. Der Bericht behandelt:
 
 - **CC6 — Logische und physische Zugangskontrollen**: Benutzerauthentifizierung (SSO), API-Schlüsselverwaltung, Audit-Log-Zugriff
 - **CC7 — Systemüberwachung**: Kontinuierliche Protokollierung aller Tool-Aufrufe, Kostendurchsetzung, Anomalieerkennung
 - **CC8 — Änderungsverwaltung**: Dateiablauf-Audit-Trail, Genehmigungsarbeitsabläufe, Rollback-Funktionen
 - **CC9 — Risikominderung**: Kostengrenzen verhindern Ausgabenüberschreitungen; PII-Scanning verhindert Datenoffenlegung
 
-**So greifen Sie zu**: Fordern Sie `SOC 2 Type II Report` von sales@claudient.com an (NDA erforderlich)
+**So greifen Sie zu**: Fordern Sie `SOC 2 Type II Report` von sales@uitkit.com an (NDA erforderlich)
 
-**Umfang**: Claudient Cloud-Infrastruktur und verwaltete Bereitstellungen nur. On-Prem `.claude/` Hooks werden vom Kunden verwaltet.
+**Umfang**: UitKit Cloud-Infrastruktur und verwaltete Bereitstellungen nur. On-Prem `.claude/` Hooks werden vom Kunden verwaltet.
 
 ## ISO 27001
 
 **Status**: Zertifizierung in Arbeit (Q3 2026)
 
-Claudient implementiert ISO 27001 Informationssicherheitsmanagementsystem (ISMS) mit Abdeckung:
+UitKit implementiert ISO 27001 Informationssicherheitsmanagementsystem (ISMS) mit Abdeckung:
 
 - **A.5**: Organisation der Informationssicherheit
 - **A.6**: Personalversicherheit
@@ -40,18 +40,18 @@ Claudient implementiert ISO 27001 Informationssicherheitsmanagementsystem (ISMS)
 
 ### Datenverarbeitungsvereinbarung (DPA)
 
-Bei Verwendung von Claudient Cloud gilt ein Datenverarbeitungszusatz (DPA):
+Bei Verwendung von UitKit Cloud gilt ein Datenverarbeitungszusatz (DPA):
 
-- Claudient fungiert als **Datenverarbeiter** (Sie sind der Controller)
+- UitKit fungiert als **Datenverarbeiter** (Sie sind der Controller)
 - EU Standard Contractual Clauses (SCCs) enthalten
 - Unterauftragnehmer aufgelistet und genehmigt
 - Datentransfers in die USA erfordern zusätzliche Schutzmaßnahmen
 
-**So erhalten Sie**: Enthalten in Enterprise-Lizenz. Fordern Sie von sales@claudient.com an.
+**So erhalten Sie**: Enthalten in Enterprise-Lizenz. Fordern Sie von sales@uitkit.com an.
 
 ### Ihre Verantwortung
 
-Als Controller, der Claude Code + Claudient Cloud nutzt:
+Als Controller, der Claude Code + UitKit Cloud nutzt:
 
 1. **Dateneinsparung**: Vermeiden Sie unnötige Verarbeitung personenbezogener Daten
 2. **Zustimmung**: Stellen Sie sicher, dass Mitarbeiter/Benutzer der Verarbeitung zustimmen
@@ -70,25 +70,25 @@ Als Controller, der Claude Code + Claudient Cloud nutzt:
 
 ## HIPAA
 
-**Status**: HIPAA-Compliance für Claudient Cloud verfügbar (Business Associate Agreement erforderlich)
+**Status**: HIPAA-Compliance für UitKit Cloud verfügbar (Business Associate Agreement erforderlich)
 
 Bei Verarbeitung von Protected Health Information (PHI):
 
-1. **BAA anfordern**: Claudient unterzeichnet Business Associate Agreement per 45 CFR §164.308(b)
+1. **BAA anfordern**: UitKit unterzeichnet Business Associate Agreement per 45 CFR §164.308(b)
 2. **Verschlüsselung aktivieren**: 
    - Audit-Logs im Ruhezustand verschlüsselt (AES-256-GCM)
    - TLS 1.3 während Übertragung
    - `encryption_at_rest: true` in settings.json setzen
 3. **Audit-Trail**: Alle PHI-Zugriffe werden protokolliert
 4. **Zugangskontrollen**: RBAC zur Einschränkung des Claude Code Zugriffs verwenden
-5. **Incident Response**: Claudient unterstützt Forensik-Log-Export
+5. **Incident Response**: UitKit unterstützt Forensik-Log-Export
 
 **Nicht abgedeckt**: On-Prem-Bereitstellungen (Sie sind für HIPAA-Compliance Ihrer `.claude/` Hooks verantwortlich).
 
 ### Checkliste für HIPAA-Bereitstellungen
 
-- [ ] BAA mit Claudient signiert
-- [ ] Claudient Cloud aktiviert
+- [ ] BAA mit UitKit signiert
+- [ ] UitKit Cloud aktiviert
 - [ ] Verschlüsselung im Ruhezustand aktiviert
 - [ ] TLS 1.3 für alle Netzwerkverkehr
 - [ ] SAML SSO konfiguriert
@@ -100,7 +100,7 @@ Bei Verarbeitung von Protected Health Information (PHI):
 
 ## PCI-DSS
 
-**Status**: Nicht im Umfang für Claudient (Claude Code sollte niemals Kartennummern verarbeiten)
+**Status**: Nicht im Umfang für UitKit (Claude Code sollte niemals Kartennummern verarbeiten)
 
 Bei Arbeit mit Zahlungsdaten:
 
@@ -115,7 +115,7 @@ Bei Arbeit mit Zahlungsdaten:
 
 Für US-Regierungsauftragnehmer:
 
-- Claudient Cloud verfolgt **FedRAMP Moderate** Autorisierung
+- UitKit Cloud verfolgt **FedRAMP Moderate** Autorisierung
 - Air-Gapped On-Prem-Bereitstellung verfügbar (keine externen Netzwerkaufrufe)
 - Unterstützt NIST SP 800-53 Kontrollen
 
@@ -135,7 +135,7 @@ Für US-Regierungsauftragnehmer:
 
 **Status**: Alignment mit EU AI Regulation (2024/1689)
 
-Claude Code ist ein **AI-System** unter der Verordnung. Claudient implementiert:
+Claude Code ist ein **AI-System** unter der Verordnung. UitKit implementiert:
 
 ### Hochrisiko-Kategorien (Anhang III)
 
@@ -168,7 +168,7 @@ Wenn Sie Claude Code zum Entwickeln eines Hochrisiko-AI-Systems nutzen:
 
 Wenn Ihr Unternehmen börsennotiert ist:
 
-1. **IT General Controls (ITGCs)**: Claudient erfüllt Change Management, Zugriffskontrolle, Segregation of Duties
+1. **IT General Controls (ITGCs)**: UitKit erfüllt Change Management, Zugriffskontrolle, Segregation of Duties
 2. **Finanzielle Systemänderungen**: Protokollieren Sie alle Änderungen an Buchhaltungssystemen
 3. **Dokumentation**: Exportieren Sie Audit-Logs für Audit Committee Review
 
@@ -179,7 +179,7 @@ Wenn Ihr Unternehmen börsennotiert ist:
 
 ## PII-Erkennungsregeln
 
-Der Built-in PII Scanner von Claudient erkennt:
+Der Built-in PII Scanner von UitKit erkennt:
 
 | Typ | Regex | Aktion |
 |------|-------|--------|
@@ -228,5 +228,5 @@ Verwenden Sie bei der Vorbereitung auf externe Audits:
 ---
 
 **Last updated**: 2026-06-15  
-**Contact**: compliance@claudient.com  
+**Contact**: compliance@uitkit.com  
 **Related files**: `AUDIT_TRAIL.md`, `RBAC.md`, `SSO_SETUP.md`

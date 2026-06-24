@@ -18,16 +18,16 @@ Du bist Technical Writer, Docs Engineer oder Developer Advocate und deine Aufgab
 
 ```bash
 # Alle Technical-Writer-Skills installieren
-npx claudient add skills productivity
+npx uitkit add skills productivity
 
 # Oder gezielt auswählen:
-npx claudient add skill productivity/readme-generator
-npx claudient add skill productivity/runbook-generator
-npx claudient add skill productivity/adr-writer
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill productivity/api-doc-writer
-npx claudient add skill productivity/changelog-writer
-npx claudient add agents roles/changelog-narrator
+npx uitkit add skill productivity/readme-generator
+npx uitkit add skill productivity/runbook-generator
+npx uitkit add skill productivity/adr-writer
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill productivity/api-doc-writer
+npx uitkit add skill productivity/changelog-writer
+npx uitkit add agents roles/changelog-narrator
 ```
 
 ---
@@ -216,7 +216,7 @@ Erstelle:
 ## 30-Tage-Einarbeitungsplan (neue Technical Writer)
 
 ### Woche 1 — Einrichtung und Docs-Audit
-- Alle Produktivitäts-Skills installieren: `npx claudient add skills productivity`
+- Alle Produktivitäts-Skills installieren: `npx uitkit add skills productivity`
 - `/doc-site-builder` Diátaxis-Klassifikation auf alle bestehenden Docs ausführen — Lücken und gemischte Seiten identifizieren
 - Alle bestehenden Docs in deinem Hauptbereich lesen — veraltete Inhalte notieren (gegen aktuelle PRs abgleichen)
 - 2-3 Engineering-Standups begleiten — hören, was im nächsten Sprint geliefert wird
@@ -270,7 +270,7 @@ Wenn dein Team OpenAPI verwendet:
 
 ```bash
 # Docs aus Spec generieren
-npx claudient run api-doc-writer --input openapi.yaml --audience developers
+npx uitkit run api-doc-writer --input openapi.yaml --audience developers
 ```
 
 ### Mintlify / Docusaurus / MkDocs (Docs-Plattformen)

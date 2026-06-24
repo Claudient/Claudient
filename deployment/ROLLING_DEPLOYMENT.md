@@ -10,7 +10,7 @@
 
 ## Overview
 
-This document describes the production deployment procedure for Claudient using a blue-green deployment pattern with gradual traffic splitting. The strategy minimizes risk by deploying to an isolated environment (green) while keeping the current production version (blue) live, then gradually shifting traffic and automatically rolling back if error rates exceed tolerance.
+This document describes the production deployment procedure for UitKit using a blue-green deployment pattern with gradual traffic splitting. The strategy minimizes risk by deploying to an isolated environment (green) while keeping the current production version (blue) live, then gradually shifting traffic and automatically rolling back if error rates exceed tolerance.
 
 ### Deployment Pattern Benefits
 
@@ -31,21 +31,21 @@ Ensure both blue and green environments are ready:
 ```bash
 # Verify both environments exist and are healthy
 echo "Blue Environment (Production):"
-curl -s https://prod-blue.claudient.io/health | jq '.status'
+curl -s https://prod-blue.uitkit.io/health | jq '.status'
 # Expected: "healthy"
 
 echo "Green Environment (Staging):"
-curl -s https://prod-green.claudient.io/health | jq '.status'
+curl -s https://prod-green.uitkit.io/health | jq '.status'
 # Expected: "healthy" or "initializing"
 
 # Verify load balancer configuration
 echo "Load Balancer Config:"
-curl -s https://api.loadbalancer.claudient.io/routing | jq '.current_split'
+curl -s https://api.loadbalancer.uitkit.io/routing | jq '.current_split'
 # Expected: { "blue": 100, "green": 0 }
 
 # Confirm monitoring is active
 echo "Monitoring Status:"
-curl -s https://monitoring.claudient.io/api/status | jq '.alerts_enabled'
+curl -s https://monitoring.uitkit.io/api/status | jq '.alerts_enabled'
 # Expected: true
 ```
 
@@ -61,7 +61,7 @@ Configure real-time error rate monitoring before traffic shift:
 
 ```bash
 # 1. Enable error rate metrics on green environment
-curl -X POST https://monitoring.claudient.io/api/metrics \
+curl -X POST https://monitoring.uitkit.io/api/metrics \
   -H "Content-Type: application/json" \
   -d '{
     "environment": "green",
@@ -74,11 +74,11 @@ curl -X POST https://monitoring.claudient.io/api/metrics \
 
 # 2. Verify monitoring is collecting baseline data
 sleep 30
-curl -s https://monitoring.claudient.io/api/metrics/green/current | jq '.error_rate'
+curl -s https://monitoring.uitkit.io/api/metrics/green/current | jq '.error_rate'
 # Expected: ~0% (no traffic yet)
 
 # 3. Set up auto-rollback alert
-curl -X POST https://monitoring.claudient.io/api/alerts \
+curl -X POST https://monitoring.uitkit.io/api/alerts \
   -H "Content-Type: application/json" \
   -d '{
     "name": "green_error_rate_critical",
@@ -89,7 +89,7 @@ curl -X POST https://monitoring.claudient.io/api/alerts \
   }'
 
 # 4. Create custom dashboard for deployment
-echo "Dashboard URL: https://monitoring.claudient.io/dashboards/rolling-deployment"
+echo "Dashboard URL: https://monitoring.uitkit.io/dashboards/rolling-deployment"
 ```
 
 **Duration:** 10 minutes  
@@ -104,7 +104,7 @@ echo "Dashboard URL: https://monitoring.claudient.io/dashboards/rolling-deployme
 
 ```bash
 # 1.1.1 Pull latest code and build artifacts
-cd /Users/tushar/Desktop/Claudient
+cd /Users/tushar/Desktop/UitKit
 git pull origin main
 git log -1 --oneline
 
@@ -118,7 +118,7 @@ npm run validate:catalog
 # 1.1.3 Create deployment artifact
 DEPLOY_VERSION=$(node -e "console.log(require('./package.json').version)")
 DEPLOY_TIMESTAMP=$(date -u +"%Y%m%d_%H%M%SZ")
-ARTIFACT_NAME="claudient_${DEPLOY_VERSION}_${DEPLOY_TIMESTAMP}"
+ARTIFACT_NAME="uitkit_${DEPLOY_VERSION}_${DEPLOY_TIMESTAMP}"
 
 tar -czf /tmp/${ARTIFACT_NAME}.tar.gz \
   --exclude=node_modules \
@@ -134,7 +134,7 @@ SHA256=$(shasum -a 256 /tmp/${ARTIFACT_NAME}.tar.gz | awk '{print $1}')
 echo "Deployment Artifact SHA256: ${SHA256}"
 
 # 1.1.5 Upload to green environment
-curl -X POST https://prod-green.claudient.io/api/deployments \
+curl -X POST https://prod-green.uitkit.io/api/deployments \
   -H "Content-Type: application/octet-stream" \
   -H "X-Artifact-Name: ${ARTIFACT_NAME}" \
   -H "X-Checksum-SHA256: ${SHA256}" \
@@ -146,7 +146,7 @@ echo "Green deployment initiated. Artifact: ${ARTIFACT_NAME}"
 # 1.1.6 Wait for deployment to complete
 echo "Waiting for green deployment..."
 for i in {1..120}; do
-  STATUS=$(curl -s https://prod-green.claudient.io/api/deployments/status | jq -r '.state')
+  STATUS=$(curl -s https://prod-green.uitkit.io/api/deployments/status | jq -r '.state')
   if [ "$STATUS" == "ready" ]; then
     echo "✓ Green deployment complete"
     break
@@ -170,7 +170,7 @@ done
 ```bash
 # 1.2.1 Verify green environment is responding
 echo "Testing green health endpoints..."
-curl -s https://prod-green.claudient.io/health | jq '.'
+curl -s https://prod-green.uitkit.io/health | jq '.'
 # Expected: { "status": "healthy", "version": "1.10.1", "timestamp": "..." }
 
 # 1.2.2 Run smoke tests against green
@@ -181,7 +181,7 @@ npm run test:smoke -- --environment=green --timeout=60000
 # 1.2.3 Verify all critical services are up
 SERVICES=("api" "marketplace" "cdn" "database" "cache")
 for service in "${SERVICES[@]}"; do
-  STATUS=$(curl -s https://prod-green.claudient.io/status/$service | jq -r '.status')
+  STATUS=$(curl -s https://prod-green.uitkit.io/status/$service | jq -r '.status')
   echo "  $service: $STATUS"
   if [ "$STATUS" != "operational" ]; then
     echo "  WARNING: $service is not operational"
@@ -189,7 +189,7 @@ for service in "${SERVICES[@]}"; do
 done
 
 # 1.2.4 Baseline error rate should be near zero
-ERROR_RATE=$(curl -s https://monitoring.claudient.io/api/metrics/green/current | jq '.error_rate')
+ERROR_RATE=$(curl -s https://monitoring.uitkit.io/api/metrics/green/current | jq '.error_rate')
 echo "Green baseline error rate: ${ERROR_RATE}%"
 if (( $(echo "$ERROR_RATE > 0.5" | bc -l) )); then
   echo "⚠ WARNING: High baseline error rate on green"
@@ -198,9 +198,9 @@ fi
 # 1.2.5 Verify connectivity to dependencies
 echo "Testing external dependencies..."
 # Database
-curl -s https://prod-green.claudient.io/api/db-health | jq '.connected'
+curl -s https://prod-green.uitkit.io/api/db-health | jq '.connected'
 # Cache
-curl -s https://prod-green.claudient.io/api/cache-health | jq '.connected'
+curl -s https://prod-green.uitkit.io/api/cache-health | jq '.connected'
 # External APIs (if any)
 echo "✓ All dependencies reachable"
 ```
@@ -220,15 +220,15 @@ npm run test:e2e -- --environment=green --headless --timeout=120000
 # 1.3.2 Test critical user journeys
 echo "Testing critical user journeys..."
 # Journey 1: Install a skill
-curl -X POST https://prod-green.claudient.io/api/marketplace/install \
+curl -X POST https://prod-green.uitkit.io/api/marketplace/install \
   -H "Content-Type: application/json" \
   -d '{"skill_id": "fastapi-crud", "version": "latest"}'
 
 # Journey 2: Search marketplace
-curl -s "https://prod-green.claudient.io/api/marketplace/search?q=python" | jq '.results | length'
+curl -s "https://prod-green.uitkit.io/api/marketplace/search?q=python" | jq '.results | length'
 
 # Journey 3: List available commands
-curl -s https://prod-green.claudient.io/api/cli/list | jq '.commands | length'
+curl -s https://prod-green.uitkit.io/api/cli/list | jq '.commands | length'
 
 # 1.3.3 Verify backward compatibility
 npm run test:regression -- --environment=green
@@ -236,7 +236,7 @@ npm run test:regression -- --environment=green
 
 # 1.3.4 Check plugin load performance
 echo "Testing plugin loading..."
-time curl -s https://prod-green.claudient.io/api/plugins/load-all | jq '.loaded_count'
+time curl -s https://prod-green.uitkit.io/api/plugins/load-all | jq '.loaded_count'
 # Expected: completes in < 5 seconds
 ```
 
@@ -252,12 +252,12 @@ time curl -s https://prod-green.claudient.io/api/plugins/load-all | jq '.loaded_
 
 ```bash
 # 2.1.1 Capture current routing configuration
-CURRENT_CONFIG=$(curl -s https://api.loadbalancer.claudient.io/routing)
+CURRENT_CONFIG=$(curl -s https://api.loadbalancer.uitkit.io/routing)
 echo "Current routing: $CURRENT_CONFIG" > /tmp/blue_green_routing_backup_$(date +%s).json
 
 # 2.1.2 Update load balancer to 10% green / 90% blue
 echo "Shifting 10% traffic to green environment..."
-curl -X PUT https://api.loadbalancer.claudient.io/routing \
+curl -X PUT https://api.loadbalancer.uitkit.io/routing \
   -H "Content-Type: application/json" \
   -d '{
     "blue": 90,
@@ -269,13 +269,13 @@ curl -X PUT https://api.loadbalancer.claudient.io/routing \
 
 # 2.1.3 Verify routing was applied
 sleep 5
-ROUTING=$(curl -s https://api.loadbalancer.claudient.io/routing | jq '.current_split')
+ROUTING=$(curl -s https://api.loadbalancer.uitkit.io/routing | jq '.current_split')
 echo "New routing: $ROUTING"
 # Expected: { "blue": 90, "green": 10 }
 
 # 2.1.4 Announce phase 1 canary release
 echo "✓ Phase 2 (Canary): 10% traffic shifted to green"
-echo "Monitor: https://monitoring.claudient.io/dashboards/rolling-deployment"
+echo "Monitor: https://monitoring.uitkit.io/dashboards/rolling-deployment"
 ```
 
 **Duration:** 5 minutes  
@@ -293,8 +293,8 @@ CANARY_START=$(date +%s)
 CANARY_END=$((CANARY_START + 900))  # 15 minutes
 
 while [ $(date +%s) -lt $CANARY_END ]; do
-  ERROR_RATE=$(curl -s https://monitoring.claudient.io/api/metrics/green/current | jq '.error_rate')
-  LATENCY_P99=$(curl -s https://monitoring.claudient.io/api/metrics/green/current | jq '.latency.p99')
+  ERROR_RATE=$(curl -s https://monitoring.uitkit.io/api/metrics/green/current | jq '.error_rate')
+  LATENCY_P99=$(curl -s https://monitoring.uitkit.io/api/metrics/green/current | jq '.latency.p99')
   TIMESTAMP=$(date "+%H:%M:%S")
   
   echo "[$TIMESTAMP] Error Rate: ${ERROR_RATE}% | P99 Latency: ${LATENCY_P99}ms"
@@ -309,7 +309,7 @@ while [ $(date +%s) -lt $CANARY_END ]; do
 done
 
 # 2.2.2 Generate canary health report
-curl -s https://monitoring.claudient.io/api/metrics/green/canary-phase-1 | jq '{
+curl -s https://monitoring.uitkit.io/api/metrics/green/canary-phase-1 | jq '{
   error_rate: .error_rate,
   error_rate_max: .error_rate_max,
   error_rate_avg: .error_rate_avg,
@@ -335,14 +335,14 @@ echo "✓ Canary monitoring complete (phase 1)"
 
 ```bash
 # 2.3.1 Check if rollback condition was met
-ERROR_RATE=$(curl -s https://monitoring.claudient.io/api/metrics/green/current | jq '.error_rate')
+ERROR_RATE=$(curl -s https://monitoring.uitkit.io/api/metrics/green/current | jq '.error_rate')
 
 if (( $(echo "$ERROR_RATE > 1.0" | bc -l) )); then
   echo "⚠ ROLLBACK TRIGGERED: Error rate ${ERROR_RATE}% exceeds threshold (1%)"
   
   # 2.3.2 Revert traffic back to 100% blue
   echo "Rolling back traffic to 100% blue..."
-  curl -X PUT https://api.loadbalancer.claudient.io/routing \
+  curl -X PUT https://api.loadbalancer.uitkit.io/routing \
     -H "Content-Type: application/json" \
     -d '{
       "blue": 100,
@@ -354,15 +354,15 @@ if (( $(echo "$ERROR_RATE > 1.0" | bc -l) )); then
   sleep 5
   
   # 2.3.3 Verify rollback completed
-  ROUTING=$(curl -s https://api.loadbalancer.claudient.io/routing | jq '.current_split')
+  ROUTING=$(curl -s https://api.loadbalancer.uitkit.io/routing | jq '.current_split')
   echo "Rolled back routing: $ROUTING"
   
   # 2.3.4 Verify production is stable again
-  BLUE_ERROR_RATE=$(curl -s https://monitoring.claudient.io/api/metrics/blue/current | jq '.error_rate')
+  BLUE_ERROR_RATE=$(curl -s https://monitoring.uitkit.io/api/metrics/blue/current | jq '.error_rate')
   echo "Blue error rate after rollback: ${BLUE_ERROR_RATE}%"
   
   # 2.3.5 Send incident alert
-  curl -X POST https://monitoring.claudient.io/api/incidents \
+  curl -X POST https://monitoring.uitkit.io/api/incidents \
     -H "Content-Type: application/json" \
     -d "{
       \"title\": \"Rolling Deployment Rollback: Canary Phase Error Rate Exceeded\",
@@ -397,7 +397,7 @@ echo "✓ Canary phase passed all health checks"
 
 ```bash
 # 3.1.1 Ensure canary phase completed successfully
-LAST_ERROR_RATE=$(curl -s https://monitoring.claudient.io/api/metrics/green/canary-phase-1 | jq '.error_rate')
+LAST_ERROR_RATE=$(curl -s https://monitoring.uitkit.io/api/metrics/green/canary-phase-1 | jq '.error_rate')
 echo "Last canary error rate: ${LAST_ERROR_RATE}%"
 if (( $(echo "$LAST_ERROR_RATE > 1.0" | bc -l) )); then
   echo "✗ Canary phase failed. Aborting progression to phase 3."
@@ -406,7 +406,7 @@ fi
 
 # 3.1.2 Update load balancer to 50% green / 50% blue
 echo "Shifting 50% traffic to green environment..."
-curl -X PUT https://api.loadbalancer.claudient.io/routing \
+curl -X PUT https://api.loadbalancer.uitkit.io/routing \
   -H "Content-Type: application/json" \
   -d '{
     "blue": 50,
@@ -418,13 +418,13 @@ curl -X PUT https://api.loadbalancer.claudient.io/routing \
 
 # 3.1.3 Verify routing was applied
 sleep 5
-ROUTING=$(curl -s https://api.loadbalancer.claudient.io/routing | jq '.current_split')
+ROUTING=$(curl -s https://api.loadbalancer.uitkit.io/routing | jq '.current_split')
 echo "New routing: $ROUTING"
 # Expected: { "blue": 50, "green": 50 }
 
 # 3.1.4 Log phase transition
 echo "Phase 3: 50% traffic → green (graduated release)"
-curl -X POST https://monitoring.claudient.io/api/deployments/log \
+curl -X POST https://monitoring.uitkit.io/api/deployments/log \
   -H "Content-Type: application/json" \
   -d "{
     \"event\": \"traffic_shift_50_percent\",
@@ -450,9 +450,9 @@ GRADUATED_END=$((GRADUATED_START + 1200))  # 20 minutes
 
 CRITICAL_ERRORS=0
 while [ $(date +%s) -lt $GRADUATED_END ]; do
-  ERROR_RATE=$(curl -s https://monitoring.claudient.io/api/metrics/green/current | jq '.error_rate')
-  LATENCY_P99=$(curl -s https://monitoring.claudient.io/api/metrics/green/current | jq '.latency.p99')
-  CPU_USAGE=$(curl -s https://monitoring.claudient.io/api/metrics/green/current | jq '.cpu_usage')
+  ERROR_RATE=$(curl -s https://monitoring.uitkit.io/api/metrics/green/current | jq '.error_rate')
+  LATENCY_P99=$(curl -s https://monitoring.uitkit.io/api/metrics/green/current | jq '.latency.p99')
+  CPU_USAGE=$(curl -s https://monitoring.uitkit.io/api/metrics/green/current | jq '.cpu_usage')
   TIMESTAMP=$(date "+%H:%M:%S")
   
   echo "[$TIMESTAMP] Error: ${ERROR_RATE}% | P99 Latency: ${LATENCY_P99}ms | CPU: ${CPU_USAGE}%"
@@ -475,7 +475,7 @@ while [ $(date +%s) -lt $GRADUATED_END ]; do
 done
 
 # 3.2.2 Generate graduated phase report
-curl -s https://monitoring.claudient.io/api/metrics/green/graduated-phase | jq '{
+curl -s https://monitoring.uitkit.io/api/metrics/green/graduated-phase | jq '{
   error_rate: .error_rate,
   error_rate_max: .error_rate_max,
   error_rate_avg: .error_rate_avg,
@@ -502,15 +502,15 @@ echo "✓ Graduated release monitoring complete"
 
 ```bash
 # 3.3.1 Evaluate graduated phase metrics
-ERROR_RATE=$(curl -s https://monitoring.claudient.io/api/metrics/green/current | jq '.error_rate')
-ERROR_RATE_MAX=$(curl -s https://monitoring.claudient.io/api/metrics/green/graduated-phase | jq '.error_rate_max')
+ERROR_RATE=$(curl -s https://monitoring.uitkit.io/api/metrics/green/current | jq '.error_rate')
+ERROR_RATE_MAX=$(curl -s https://monitoring.uitkit.io/api/metrics/green/graduated-phase | jq '.error_rate_max')
 
 if (( $(echo "$ERROR_RATE > 1.0" | bc -l) )) || (( $(echo "$ERROR_RATE_MAX > 1.5" | bc -l) )); then
   echo "⚠ ROLLBACK TRIGGERED: Error rate ${ERROR_RATE}% or peak ${ERROR_RATE_MAX}% exceeds tolerance"
   
   # 3.3.2 Immediately revert traffic to 100% blue
   echo "Rolling back traffic to 100% blue..."
-  curl -X PUT https://api.loadbalancer.claudient.io/routing \
+  curl -X PUT https://api.loadbalancer.uitkit.io/routing \
     -H "Content-Type: application/json" \
     -d '{
       "blue": 100,
@@ -520,11 +520,11 @@ if (( $(echo "$ERROR_RATE > 1.0" | bc -l) )) || (( $(echo "$ERROR_RATE_MAX > 1.5
   sleep 10
   
   # 3.3.3 Verify production is stable
-  BLUE_ERROR_RATE=$(curl -s https://monitoring.claudient.io/api/metrics/blue/current | jq '.error_rate')
+  BLUE_ERROR_RATE=$(curl -s https://monitoring.uitkit.io/api/metrics/blue/current | jq '.error_rate')
   echo "Blue error rate after rollback: ${BLUE_ERROR_RATE}%"
   
   # 3.3.4 Create incident report
-  curl -X POST https://monitoring.claudient.io/api/incidents \
+  curl -X POST https://monitoring.uitkit.io/api/incidents \
     -H "Content-Type: application/json" \
     -d "{
       \"title\": \"Rolling Deployment Rollback: Graduated Phase Error Threshold Exceeded\",
@@ -561,12 +561,12 @@ fi
 
 # 4.1.2 Final pre-release check
 echo "Running final health checks on green..."
-curl -s https://prod-green.claudient.io/health | jq '.status'
+curl -s https://prod-green.uitkit.io/health | jq '.status'
 npm run test:smoke -- --environment=green --critical-only
 
 # 4.1.3 Update load balancer to 100% green / 0% blue
 echo "Shifting 100% traffic to green environment..."
-curl -X PUT https://api.loadbalancer.claudient.io/routing \
+curl -X PUT https://api.loadbalancer.uitkit.io/routing \
   -H "Content-Type: application/json" \
   -d '{
     "blue": 0,
@@ -577,12 +577,12 @@ curl -X PUT https://api.loadbalancer.claudient.io/routing \
 
 # 4.1.4 Verify traffic shift completed
 sleep 10
-ROUTING=$(curl -s https://api.loadbalancer.claudient.io/routing | jq '.current_split')
+ROUTING=$(curl -s https://api.loadbalancer.uitkit.io/routing | jq '.current_split')
 echo "Traffic routing (100% complete): $ROUTING"
 # Expected: { "blue": 0, "green": 100 }
 
 # 4.1.5 Log full release event
-curl -X POST https://monitoring.claudient.io/api/deployments/log \
+curl -X POST https://monitoring.uitkit.io/api/deployments/log \
   -H "Content-Type: application/json" \
   -d "{
     \"event\": \"traffic_shift_100_percent\",
@@ -610,9 +610,9 @@ RELEASE_START=$(date +%s)
 RELEASE_WINDOW=$((RELEASE_START + 600))  # 10 minutes
 
 while [ $(date +%s) -lt $RELEASE_WINDOW ]; do
-  ERROR_RATE=$(curl -s https://monitoring.claudient.io/api/metrics/green/current | jq '.error_rate')
-  LATENCY_P99=$(curl -s https://monitoring.claudient.io/api/metrics/green/current | jq '.latency.p99')
-  THROUGHPUT=$(curl -s https://monitoring.claudient.io/api/metrics/green/current | jq '.requests_per_second')
+  ERROR_RATE=$(curl -s https://monitoring.uitkit.io/api/metrics/green/current | jq '.error_rate')
+  LATENCY_P99=$(curl -s https://monitoring.uitkit.io/api/metrics/green/current | jq '.latency.p99')
+  THROUGHPUT=$(curl -s https://monitoring.uitkit.io/api/metrics/green/current | jq '.requests_per_second')
   TIMESTAMP=$(date "+%H:%M:%S")
   
   echo "[$TIMESTAMP] Error: ${ERROR_RATE}% | Latency: ${LATENCY_P99}ms | Throughput: ${THROUGHPUT} req/s"
@@ -622,11 +622,11 @@ while [ $(date +%s) -lt $RELEASE_WINDOW ]; do
     echo "🔴 CRITICAL: Error rate exceeded during full release - EMERGENCY ROLLBACK"
     
     # Immediate rollback
-    curl -X PUT https://api.loadbalancer.claudient.io/routing \
+    curl -X PUT https://api.loadbalancer.uitkit.io/routing \
       -H "Content-Type: application/json" \
       -d '{"blue": 100, "green": 0}'
     
-    curl -X POST https://monitoring.claudient.io/api/incidents \
+    curl -X POST https://monitoring.uitkit.io/api/incidents \
       -H "Content-Type: application/json" \
       -d "{
         \"title\": \"Emergency Rollback: Full Release Error Rate Exceeded\",
@@ -643,7 +643,7 @@ while [ $(date +%s) -lt $RELEASE_WINDOW ]; do
 done
 
 # 4.2.2 Generate full release report
-curl -s https://monitoring.claudient.io/api/metrics/green/full-release | jq '{
+curl -s https://monitoring.uitkit.io/api/metrics/green/full-release | jq '{
   error_rate_avg: .error_rate_avg,
   error_rate_max: .error_rate_max,
   latency_p99_avg: .latency.p99_avg,
@@ -671,19 +671,19 @@ echo "✓ Full release monitoring complete - Production stable"
 echo "Swapping blue/green environment roles..."
 
 # Mark current blue as previous
-curl -X POST https://api.environment-manager.claudient.io/environments/blue/mark-as-previous
+curl -X POST https://api.environment-manager.uitkit.io/environments/blue/mark-as-previous
 
 # Mark current green as new blue (primary)
-curl -X POST https://api.environment-manager.claudient.io/environments/green/promote-to-blue
+curl -X POST https://api.environment-manager.uitkit.io/environments/green/promote-to-blue
 
 # Deploy new green for next release
-curl -X POST https://api.environment-manager.claudient.io/environments/create \
+curl -X POST https://api.environment-manager.uitkit.io/environments/create \
   -H "Content-Type: application/json" \
   -d '{"name": "green", "from": "blue", "isolated": true}'
 
 # 4.3.2 Verify role swap
 echo "Environment roles after promotion:"
-curl -s https://api.environment-manager.claudient.io/environments/status | jq '.[] | {name: .name, role: .role, status: .status}'
+curl -s https://api.environment-manager.uitkit.io/environments/status | jq '.[] | {name: .name, role: .role, status: .status}'
 
 echo "✓ Blue/Green roles swapped: Green is now primary (Blue)"
 ```
@@ -705,8 +705,8 @@ MONITOR_END=$((MONITOR_START + 3600))  # 1 hour
 
 ALERT_COUNT=0
 while [ $(date +%s) -lt $MONITOR_END ]; do
-  ERROR_RATE=$(curl -s https://monitoring.claudient.io/api/metrics/green/current | jq '.error_rate')
-  LATENCY_P99=$(curl -s https://monitoring.claudient.io/api/metrics/green/current | jq '.latency.p99')
+  ERROR_RATE=$(curl -s https://monitoring.uitkit.io/api/metrics/green/current | jq '.error_rate')
+  LATENCY_P99=$(curl -s https://monitoring.uitkit.io/api/metrics/green/current | jq '.latency.p99')
   TIMESTAMP=$(date "+%H:%M:%S")
   
   echo "[$TIMESTAMP] Error: ${ERROR_RATE}% | P99: ${LATENCY_P99}ms"
@@ -738,11 +738,11 @@ echo "✓ Extended monitoring complete (1 hour post-deployment)"
 echo "=== DEPLOYMENT SUCCESS VERIFICATION ==="
 
 # Check 1: Production serving 100% from green (now blue)
-ROUTING=$(curl -s https://api.loadbalancer.claudient.io/routing | jq '.current_split')
+ROUTING=$(curl -s https://api.loadbalancer.uitkit.io/routing | jq '.current_split')
 echo "✓ Traffic routing: $ROUTING"
 
 # Check 2: Error rate stable and low
-ERROR_RATE=$(curl -s https://monitoring.claudient.io/api/metrics/green/current | jq '.error_rate')
+ERROR_RATE=$(curl -s https://monitoring.uitkit.io/api/metrics/green/current | jq '.error_rate')
 if (( $(echo "$ERROR_RATE < 0.1" | bc -l) )); then
   echo "✓ Error rate: ${ERROR_RATE}% (acceptable)"
 else
@@ -750,14 +750,14 @@ else
 fi
 
 # Check 3: NPM package updated
-npm info claudient@latest | jq '.version'
+npm info uitkit@latest | jq '.version'
 # Expected: 1.10.1
 
 # Check 4: GitHub release visible
 gh release view v1.10.1 | jq '.name'
 
 # Check 5: Marketplace updated
-curl -s https://api.marketplace.claudient.io/version | jq '.current_version'
+curl -s https://api.marketplace.uitkit.io/version | jq '.current_version'
 
 # 5.2.2 Generate final deployment report
 cat > /tmp/deployment_success_report.json << EOF
@@ -772,9 +772,9 @@ cat > /tmp/deployment_success_report.json << EOF
     "phase_3_full_release": "100% (25 min)"
   },
   "health_metrics": {
-    "error_rate_avg": $(curl -s https://monitoring.claudient.io/api/metrics/green/summary | jq '.error_rate_avg'),
-    "error_rate_max": $(curl -s https://monitoring.claudient.io/api/metrics/green/summary | jq '.error_rate_max'),
-    "latency_p99_avg": $(curl -s https://monitoring.claudient.io/api/metrics/green/summary | jq '.latency.p99_avg'),
+    "error_rate_avg": $(curl -s https://monitoring.uitkit.io/api/metrics/green/summary | jq '.error_rate_avg'),
+    "error_rate_max": $(curl -s https://monitoring.uitkit.io/api/metrics/green/summary | jq '.error_rate_max'),
+    "latency_p99_avg": $(curl -s https://monitoring.uitkit.io/api/metrics/green/summary | jq '.latency.p99_avg'),
     "uptime_percent": 100.0
   },
   "rollback_events": 0,
@@ -795,27 +795,27 @@ echo "✓ Deployment report saved"
 
 ```bash
 # Immediate 100% traffic revert
-curl -X PUT https://api.loadbalancer.claudient.io/routing \
+curl -X PUT https://api.loadbalancer.uitkit.io/routing \
   -H "Content-Type: application/json" \
   -d '{"blue": 100, "green": 0}'
 
 # Verify rollback
-curl -s https://api.loadbalancer.claudient.io/routing | jq '.current_split'
+curl -s https://api.loadbalancer.uitkit.io/routing | jq '.current_split'
 
 # Monitor blue stability
-curl -s https://monitoring.claudient.io/api/metrics/blue/current | jq '{error_rate, latency}'
+curl -s https://monitoring.uitkit.io/api/metrics/blue/current | jq '{error_rate, latency}'
 ```
 
 ### Partial Rollback (To Previous Stable Version)
 
 ```bash
 # If current blue is unstable, pull from backup
-curl -X POST https://api.environment-manager.claudient.io/environments/blue/restore \
+curl -X POST https://api.environment-manager.uitkit.io/environments/blue/restore \
   -H "Content-Type: application/json" \
   -d '{"from_backup": "latest_stable"}'
 
 # Update traffic
-curl -X PUT https://api.loadbalancer.claudient.io/routing \
+curl -X PUT https://api.loadbalancer.uitkit.io/routing \
   -d '{"blue": 100, "green": 0}'
 ```
 
@@ -846,9 +846,9 @@ curl -X PUT https://api.loadbalancer.claudient.io/routing \
 
 ### Deployment Start
 ```
-🚀 Rolling Deployment Started: Claudient v1.10.1
+🚀 Rolling Deployment Started: UitKit v1.10.1
 Timeline: 60 minutes (3 phases: 10% → 50% → 100%)
-Dashboard: https://monitoring.claudient.io/dashboards/rolling-deployment
+Dashboard: https://monitoring.uitkit.io/dashboards/rolling-deployment
 Owner: @devops-lead
 ```
 
@@ -861,7 +861,7 @@ Next: Phase [N+1] in 5 minutes
 
 ### Deployment Success
 ```
-✨ Rolling Deployment Complete: Claudient v1.10.1
+✨ Rolling Deployment Complete: UitKit v1.10.1
 Timeline: 60 minutes
 Final status: 100% traffic on green (now primary)
 Rollback events: 0
@@ -871,7 +871,7 @@ All systems: Green ✓
 
 ### Rollback (If Triggered)
 ```
-🔴 ROLLBACK INITIATED: Claudient v1.10.1
+🔴 ROLLBACK INITIATED: UitKit v1.10.1
 Reason: Error rate exceeded threshold
 Action: Traffic reverted to 100% blue (v1.10.0)
 Status: Production stable
@@ -892,7 +892,7 @@ Deployment monitoring dashboard displays:
 - **Incident timeline:** Events, alerts, rollbacks
 - **Health status indicators:** Service-level health
 
-Access: `https://monitoring.claudient.io/dashboards/rolling-deployment`
+Access: `https://monitoring.uitkit.io/dashboards/rolling-deployment`
 
 ---
 
@@ -904,7 +904,7 @@ Access: `https://monitoring.claudient.io/dashboards/rolling-deployment`
 
 **Diagnosis:**
 ```bash
-curl -s https://prod-green.claudient.io/api/deployment-logs | jq '.[]'
+curl -s https://prod-green.uitkit.io/api/deployment-logs | jq '.[]'
 ```
 
 **Recovery:**
@@ -920,7 +920,7 @@ curl -s https://prod-green.claudient.io/api/deployment-logs | jq '.[]'
 
 **Diagnosis:**
 ```bash
-curl -s https://monitoring.claudient.io/api/metrics/green/errors | jq '.top_errors'
+curl -s https://monitoring.uitkit.io/api/metrics/green/errors | jq '.top_errors'
 ```
 
 **Recovery:**
@@ -937,8 +937,8 @@ curl -s https://monitoring.claudient.io/api/metrics/green/errors | jq '.top_erro
 
 **Diagnosis:**
 ```bash
-curl -s https://monitoring.claudient.io/api/metrics/green/current | jq '.latency'
-curl -s https://prod-green.claudient.io/api/resource-usage | jq '.'
+curl -s https://monitoring.uitkit.io/api/metrics/green/current | jq '.latency'
+curl -s https://prod-green.uitkit.io/api/resource-usage | jq '.'
 ```
 
 **Recovery:**
@@ -951,13 +951,13 @@ curl -s https://prod-green.claudient.io/api/resource-usage | jq '.'
 ## Appendix: Environment Configuration
 
 ### Blue Environment (Production)
-- Endpoint: `https://prod-blue.claudient.io`
+- Endpoint: `https://prod-blue.uitkit.io`
 - Role: Primary / Standby (after swap)
 - Traffic: 100% → 0% (during deployment)
 - Monitoring: Continuous
 
 ### Green Environment (Staging/New Release)
-- Endpoint: `https://prod-green.claudient.io`
+- Endpoint: `https://prod-green.uitkit.io`
 - Role: Staging / Primary (after swap)
 - Traffic: 0% → 100% (during deployment)
 - Monitoring: Intensive during deployment
@@ -981,7 +981,7 @@ curl -s https://prod-green.claudient.io/api/resource-usage | jq '.'
 ## References
 
 - [DEPLOYMENT_PLAN.md](../DEPLOYMENT_PLAN.md) — Full deployment workflow
-- [Monitoring Dashboard](https://monitoring.claudient.io/dashboards/rolling-deployment) — Real-time metrics
+- [Monitoring Dashboard](https://monitoring.uitkit.io/dashboards/rolling-deployment) — Real-time metrics
 - [Incident Response](../ops/INCIDENT_RESPONSE.md) — Escalation procedures (if exists)
 - [Runbook: Environment Setup](../ops/ENV_SETUP.md) — Blue/Green infrastructure setup (if exists)
 

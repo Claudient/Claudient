@@ -200,12 +200,12 @@ touch educator-workspace/feedback/templates/growth-mindset-feedback-template.md
 touch educator-workspace/curriculum/sy2025-2026/scope-and-sequence.md
 
 # Lehrkraft-Skills installieren
-npx claudient add skill productivity/lesson-planner
-npx claudient add skill productivity/student-feedback-analyzer
-npx claudient add skill productivity/rubric-creator
-npx claudient add skill productivity/assignment-builder
-npx claudient add skill productivity/differentiation
-npx claudient add skill productivity/parent-email
+npx uitkit add skill productivity/lesson-planner
+npx uitkit add skill productivity/student-feedback-analyzer
+npx uitkit add skill productivity/rubric-creator
+npx uitkit add skill productivity/assignment-builder
+npx uitkit add skill productivity/differentiation
+npx uitkit add skill productivity/parent-email
 ```
 
 ## CLAUDE.md-Vorlage
@@ -377,13 +377,13 @@ differenzierter Materialien lesen — die dort aufgeführten Ausgleichsmaßnahme
 ## Zu installierende Skills
 
 ```bash
-npx claudient add skill productivity/lesson-planner
-npx claudient add skill productivity/student-feedback-analyzer
-npx claudient add skill productivity/rubric-creator
-npx claudient add skill productivity/assignment-builder
-npx claudient add skill productivity/differentiation
-npx claudient add skill productivity/parent-email
-npx claudient add skill productivity/quiz-builder
+npx uitkit add skill productivity/lesson-planner
+npx uitkit add skill productivity/student-feedback-analyzer
+npx uitkit add skill productivity/rubric-creator
+npx uitkit add skill productivity/assignment-builder
+npx uitkit add skill productivity/differentiation
+npx uitkit add skill productivity/parent-email
+npx uitkit add skill productivity/quiz-builder
 ```
 
 ## Verwandte Ressourcen

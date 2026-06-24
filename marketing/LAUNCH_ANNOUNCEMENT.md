@@ -1,4 +1,4 @@
-# Claudient Launch Announcement — "Don't-Stop Mode"
+# UitKit Launch Announcement — "Don't-Stop Mode"
 
 ---
 
@@ -14,7 +14,7 @@
 
 ### Full Post
 
-Introducing **Don't-Stop Mode** in Claudient — the first autonomous feature development system for Claude Code.
+Introducing **Don't-Stop Mode** in UitKit — the first autonomous feature development system for Claude Code.
 
 **The problem:** Writing features in Claude Code requires human prompting at every checkpoint. Code → review → test → iterate → deploy. Each step waits for you. If your agent hits an error or needs a decision, it stops.
 
@@ -29,11 +29,11 @@ Introducing **Don't-Stop Mode** in Claudient — the first autonomous feature de
 - **Guaranteed quality gates**: No PR merges unless all hooks pass; no deploy unless tests pass
 - **Built-in rollback**: Auto-rollback on deploy failure; agent logs everything
 
-**Ships with Claudient 1.1+:** 400+ skills, 182 agents, 100+ commands — your complete Claude Code toolkit.
+**Ships with UitKit 1.1+:** 400+ skills, 182 agents, 100+ commands — your complete Claude Code toolkit.
 
 Available now on npm and as a Claude Code plugin marketplace.
 
-**[GitHub](https://github.com/UitbreidenOS/Claudient) · [Plugin Marketplace](#) · [Docs](#)**
+**[GitHub](https://github.com/UitbreidenOS/UitKit) · [Plugin Marketplace](#) · [Docs](#)**
 
 ---
 
@@ -47,9 +47,9 @@ Configure a feature once. Kick off one command. Watch Claude ship it autonomousl
 
 Multi-agent orchestration. Error recovery. Test generation. Documentation. Deployment. No human loops.
 
-Claudient 1.1 is live.
+UitKit 1.1 is live.
 
-github.com/UitbreidenOS/Claudient
+github.com/UitbreidenOS/UitKit
 ```
 
 ### Post 2 (Value proposition)
@@ -61,7 +61,7 @@ Deploy fails → automatic rollback + detailed logs
 
 This isn't just autonomous coding. This is autonomous shipping.
 
-Don't-Stop Mode in Claudient.
+Don't-Stop Mode in UitKit.
 ```
 
 ### Post 3 (Developer angle)
@@ -76,7 +76,7 @@ Stop babysitting your AI. Don't-Stop Mode means:
 
 One command. Complete feature. Next morning.
 
-Claudient + Claude Code.
+UitKit + Claude Code.
 ```
 
 ### Post 4 (Team/startup angle)
@@ -87,7 +87,7 @@ Don't-Stop Mode + multi-agent orchestration means your team's throughput is now 
 
 Humans do strategy. Claude does shipping.
 
-github.com/UitbreidenOS/Claudient
+github.com/UitbreidenOS/UitKit
 ```
 
 ### Thread Version
@@ -117,16 +117,16 @@ It's autonomous feature development for Claude Code. One config. One command. Wa
 - They retry intelligently, learn from failure, adjust course
 - No human in the loop = shipping speed
 
-5/ Built on Claudient:
+5/ Built on UitKit:
 - 400+ skills (already knows your stack)
 - 182 specialist agents (plugged in and ready)
 - 100+ slash commands (automation at every step)
 - Quality gates + rollback guarantees
 - Full audit logs
 
-Available now: github.com/UitbreidenOS/Claudient
-npm install claudient
-/plugin marketplace add UitbreidenOS/Claudient
+Available now: github.com/UitbreidenOS/UitKit
+npm install uitkit
+/plugin marketplace add UitbreidenOS/UitKit
 
 6/ Early benchmarks from dogfooding:
 - Feature shipping time: 5-8x faster
@@ -136,7 +136,7 @@ npm install claudient
 
 Ready to stop shipping features manually?
 
-github.com/UitbreidenOS/Claudient
+github.com/UitbreidenOS/UitKit
 ```
 
 ---
@@ -145,12 +145,12 @@ github.com/UitbreidenOS/Claudient
 
 ### Title:
 ```
-Claudient: Autonomous Feature Development for Claude Code
+UitKit: Autonomous Feature Development for Claude Code
 ```
 
 ### Post Text:
 ```
-We just released Don't-Stop Mode in Claudient — the first autonomous feature development system for Claude Code.
+We just released Don't-Stop Mode in UitKit — the first autonomous feature development system for Claude Code.
 
 The idea: Instead of prompting Claude for each step (code → test → review → deploy), you write a feature spec once and let multi-agent orchestration handle everything autonomously.
 
@@ -160,10 +160,10 @@ Key features:
 - Quality gates + rollback guarantees — no bad code ships
 - Full audit logs for every decision
 
-Claudient is a 400+ skill, 182+ agent ecosystem already built into Claude Code. Don't-Stop Mode is the orchestration layer that connects them.
+UitKit is a 400+ skill, 182+ agent ecosystem already built into Claude Code. Don't-Stop Mode is the orchestration layer that connects them.
 
-GitHub: https://github.com/UitbreidenOS/Claudient
-NPM: https://www.npmjs.com/package/claudient
+GitHub: https://github.com/UitbreidenOS/UitKit
+NPM: https://www.npmjs.com/package/uitkit
 
 Feedback welcome. We're dogfooding this internally and seeing 5-8x faster feature shipping.
 ```
@@ -174,7 +174,7 @@ Feedback welcome. We're dogfooding this internally and seeing 5-8x faster featur
 
 ### r/Python, r/javascript, r/devops, r/SideProject, r/startup
 
-**Title:** Claudient: Autonomous Feature Development — One Config, Zero Human Loops
+**Title:** UitKit: Autonomous Feature Development — One Config, Zero Human Loops
 
 **Post:**
 
@@ -213,18 +213,18 @@ Agents work in parallel. Errors trigger retry logic. No human loops.
 
 ## How it works
 1. Write feature spec (YAML or Markdown)
-2. Run: `claudient run --dont-stop features/new-feature.yaml`
+2. Run: `uitkit run --dont-stop features/new-feature.yaml`
 3. Agents orchestrate. Logs stream to your terminal.
 4. Wake up to merged PR.
 
 ## Tech stack
-- Built on Claudient (400+ skills, 182 agents)
+- Built on UitKit (400+ skills, 182 agents)
 - Runs on Claude 3.7 Sonnet + Model Context Protocol
 - Integrates with any CI/CD (GitHub Actions, GitLab, etc.)
 - Works with any codebase (monorepo, microservices, etc.)
 
-**GitHub:** https://github.com/UitbreidenOS/Claudient
-**NPM:** `npm install claudient`
+**GitHub:** https://github.com/UitbreidenOS/UitKit
+**NPM:** `npm install uitkit`
 **Docs:** [Full guide](#)
 
 Dogfooding this internally. Happy to answer questions or take feedback.
@@ -235,7 +235,7 @@ Dogfooding this internally. Happy to answer questions or take feedback.
 "This is exactly what I've been waiting for. Tired of the back-and-forth with Claude."
 
 "Question: Does it work with private/internal APIs?"
-→ "Yes, just add your MCP servers to the config. Claudient supports 41+ pre-wired integrations."
+→ "Yes, just add your MCP servers to the config. UitKit supports 41+ pre-wired integrations."
 
 "How much does this cost in API calls?"
 → "Depends on feature complexity. Average feature: ~$2-5 in API costs. Saves 3-4 hours of human time."
@@ -262,7 +262,7 @@ Subject: Don't-Stop Mode — Autonomous Feature Development is Live
 
 Hi there,
 
-We're excited to announce **Don't-Stop Mode** in Claudient — the first autonomous feature development system for Claude Code.
+We're excited to announce **Don't-Stop Mode** in UitKit — the first autonomous feature development system for Claude Code.
 
 ## What changed?
 
@@ -288,12 +288,12 @@ From our internal dogfooding:
 ## How to use it
 
 ```bash
-# Install Claudient
-npm install claudient
+# Install UitKit
+npm install uitkit
 
 # Or add as a Claude Code plugin
-/plugin marketplace add UitbreidenOS/Claudient
-/plugin install claudient-everything@claudient
+/plugin marketplace add UitbreidenOS/UitKit
+/plugin install uitkit-everything@uitkit
 
 # Write your feature spec
 cat > features/new-feature.yaml << EOF
@@ -306,14 +306,14 @@ acceptance_criteria:
 EOF
 
 # Run Don't-Stop Mode
-claudient run --dont-stop features/new-feature.yaml
+uitkit run --dont-stop features/new-feature.yaml
 ```
 
 You now have time for strategy. Claude handles execution.
 
 ## What's included
 
-Claudient 1.1 ships with:
+UitKit 1.1 ships with:
 - **400+ skills** across every domain (backend, frontend, DevOps, data, legal, etc.)
 - **182 specialist agents** (now orchestrated via Don't-Stop Mode)
 - **100+ slash commands** for automation at every step
@@ -322,14 +322,14 @@ Claudient 1.1 ships with:
 
 ## Next steps
 
-- **GitHub:** https://github.com/UitbreidenOS/Claudient
+- **GitHub:** https://github.com/UitbreidenOS/UitKit
 - **Docs:** [Full guide & examples](#)
 - **Community:** Join our Discord [link]
 - **Questions?** Reply to this email.
 
 Ship smarter.
 
-Claudient Team
+UitKit Team
 ```
 
 ---
@@ -337,7 +337,7 @@ Claudient Team
 ## Slack announcement (for communities)
 
 ```
-🚀 **Claudient 1.1: Don't-Stop Mode is live**
+🚀 **UitKit 1.1: Don't-Stop Mode is live**
 
 Your agents can now code *completely autonomously* — no human loops, no waiting, no babysitting.
 
@@ -351,11 +351,11 @@ Configure once. Run once. Wake up to a merged PR.
 
 **Quick start:**
 ```
-npm install claudient
-claudient run --dont-stop features/my-feature.yaml
+npm install uitkit
+uitkit run --dont-stop features/my-feature.yaml
 ```
 
-**GitHub:** https://github.com/UitbreidenOS/Claudient
+**GitHub:** https://github.com/UitbreidenOS/UitKit
 **Docs:** [link]
 **Plugin Marketplace:** Available now
 
@@ -369,7 +369,7 @@ Questions? Drop them in thread 👇
 ### Post:
 
 ```
-We just launched Don't-Stop Mode in Claudient — and the implications for engineering productivity are significant.
+We just launched Don't-Stop Mode in UitKit — and the implications for engineering productivity are significant.
 
 The traditional feature development cycle:
 1. Engineer writes code (in Claude)
@@ -397,9 +397,9 @@ From our data:
 
 For teams of any size, this changes the equation: **How do you stay competitive when your competitors are shipping 10x faster?**
 
-Claudient is the foundation. Don't-Stop Mode is the multiplier.
+UitKit is the foundation. Don't-Stop Mode is the multiplier.
 
-Available now: github.com/UitbreidenOS/Claudient
+Available now: github.com/UitbreidenOS/UitKit
 
 #SoftwareDevelopment #AI #Engineering #ProductivityTools #ClaudeCode #DevOps
 ```
@@ -428,7 +428,7 @@ How we built a system where AI agents code, test, review, and deploy features co
 7. **Performance** — Benchmarks: 5-8x faster, same quality
 8. **Code example** — Step-by-step walkthrough
 9. **Getting started** — Installation, configuration, first run
-10. **What's next** — Roadmap for Claudient 1.2+
+10. **What's next** — Roadmap for UitKit 1.2+
 
 ---
 
@@ -440,7 +440,7 @@ How we built a system where AI agents code, test, review, and deploy features co
 1. **Speed** — 5-8x faster feature shipping
 2. **Quality** — Same test rigor, fewer errors
 3. **Reliability** — Intelligent error recovery + auto-rollback
-4. **Simplicity** — One command (`claudient run --dont-stop`)
+4. **Simplicity** — One command (`uitkit run --dont-stop`)
 5. **Integration** — Built on 400+ skills, 182 agents, 41 MCP servers
 
 **Call to action:** Install, configure, ship autonomously.

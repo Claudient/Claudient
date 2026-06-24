@@ -170,7 +170,7 @@ function determineOverallStatus(checks) {
 
 function generateAuditReport(results) {
   const report = {
-    title: 'Claudient Certified Stack Audit Report',
+    title: 'UitKit Certified Stack Audit Report',
     timestamp: new Date().toISOString(),
     totalCertified: results.length,
     summary: {

@@ -106,37 +106,37 @@ Routed dynamisch basierend auf verbleibendem Token-Budget als Prozentsatz des Ge
 
 **Task klassifizieren:**
 ```bash
-claudient moe classify "Format the JSON output"
+uitkit moe classify "Format the JSON output"
 # → Tier: HAIKU, Confidence: 85%, Reasoning: 2 haiku keywords detected
 ```
 
 **Eskalationspfad anzeigen:**
 ```bash
-claudient moe cascade "Design a distributed system" --confidence-threshold=0.7
+uitkit moe cascade "Design a distributed system" --confidence-threshold=0.7
 # → Original Tier: SONNET, Escalations: 1, Final Tier: OPUS
 ```
 
 **Expert Panel Abstimmung abrufen:**
 ```bash
-claudient moe panel "Review this code" --strategy=majority
+uitkit moe panel "Review this code" --strategy=majority
 # Zeigt Haiku, Sonnet, Opus Meinungen + Voting-Konsens
 ```
 
 **Per File-Domain routen:**
 ```bash
-claudient moe domain "src/security/auth.ts,src/security/jwt.ts" "security audit"
+uitkit moe domain "src/security/auth.ts,src/security/jwt.ts" "security audit"
 # → Domain: security, Routed Tier: OPUS
 ```
 
 **Budget-bewusstes Routing:**
 ```bash
-claudient moe budget "write unit tests" --remaining 25000 --total 100000
+uitkit moe budget "write unit tests" --remaining 25000 --total 100000
 # → Budget Ratio: 25%, Routed Tier: SONNET
 ```
 
 **Systemstatus:**
 ```bash
-claudient moe status
+uitkit moe status
 # Druckt aktive Routing-Modi, Schwellen, Tier-Kosten
 ```
 
@@ -175,7 +175,7 @@ console.log(budgetRoute.tier);  // claude-haiku-4-5 (forced)
 
 **CLI-Befehl:**
 ```bash
-claudient moe domain "src/security/auth.ts" "Refactor the authentication module"
+uitkit moe domain "src/security/auth.ts" "Refactor the authentication module"
 # → Detected Domain: security
 # → Routed Tier: OPUS
 # → Reasoning: security-sensitive file detected

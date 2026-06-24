@@ -3,7 +3,7 @@ import { Eyebrow } from "./ui";
 
 interface CompareRow {
   feature: string;
-  claudient: string;
+  uitkit: string;
   ecc: string;
   volt: string;
   alireza: string;
@@ -19,27 +19,27 @@ interface CompareRow {
 }
 
 const ROWS: CompareRow[] = [
-  { feature: "Skills", claudient: "1000+", ecc: "~150", volt: "~30", alireza: "~20", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
-  { feature: "Agents", claudient: "700+", ecc: "~50", volt: "~15", alireza: "~10", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✓ (Multiple)", melty: "✗", gptpilot: "✓ (Role-based)", mentat: "✗" },
-  { feature: "Coworker Agents", claudient: "510+", ecc: "✗", volt: "✗", alireza: "✗", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗", moat: true },
-  { feature: "Slash Commands", claudient: "100+", ecc: "~40", volt: "~10", alireza: "~5", aider: "Basic (CLI)", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "Basic" },
-  { feature: "Hooks", claudient: "48", ecc: "~20", volt: "~5", alireza: "~3", aider: "✗", cursor: "✗", copilot: "✗", sweep: "Basic (Actions)", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
-  { feature: "Personas", claudient: "10", ecc: "3", volt: "0", alireza: "0", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
-  { feature: "Rules", claudient: "32", ecc: "~15", volt: "~5", alireza: "~2", aider: "✗", cursor: "1 (Single file)", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
-  { feature: "MCP Configs", claudient: "41", ecc: "~10", volt: "~8", alireza: "~3", aider: "✓ (via config)", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
-  { feature: "Workspace Stacks", claudient: "50", ecc: "~12", volt: "0", alireza: "0", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
-  { feature: "Plugins", claudient: "22", ecc: "~8", volt: "0", alireza: "0", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
-  { feature: "Localization", claudient: "5 languages", ecc: "English only", volt: "English only", alireza: "English only", aider: "English only", cursor: "English only", copilot: "English only", sweep: "English only", opendevin: "English only", melty: "English only", gptpilot: "English only", mentat: "English only", moat: true },
-  { feature: "Business-domain Stacks", claudient: "42 domains", ecc: "~5", volt: "0", alireza: "0", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗", moat: true },
-  { feature: "Artifact-type Span", claudient: "Widest (15+)", ecc: "~8", volt: "~4", alireza: "~3", aider: "✗", cursor: "✗", copilot: "Basic", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗", moat: true },
-  { feature: "Dual Distribution", claudient: "Marketplace + npm", ecc: "GitHub only", volt: "GitHub only", alireza: "GitHub only", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗", moat: true },
-  { feature: "Cross-harness Export", claudient: "✓ .cursorrules, .windsurfrules", ecc: "✗", volt: "✗", alireza: "✗", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗", moat: true },
-  { feature: "Statuslines & Themes", claudient: "6 presets + themes", ecc: "✗", volt: "✗", alireza: "✗", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
-  { feature: "B2B Pricing Tiers", claudient: "4 tiers", ecc: "✗", volt: "✗", alireza: "✗", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
-  { feature: "AI-Readiness Scorecard", claudient: "✓ (claudient score)", ecc: "✗", volt: "✗", alireza: "✗", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
-  { feature: "Compliance Stacks", claudient: "✓ SOC2, GDPR, HIPAA", ecc: "✗", volt: "✗", alireza: "✗", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
-  { feature: "Multi-agent Swarms", claudient: "✓ 5 swarm patterns", ecc: "✗", volt: "✗", alireza: "✗", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
-  { feature: "CLI Tooling", claudient: "9 commands", ecc: "~3", volt: "✗", alireza: "✗", aider: "Basic", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "Basic" },
+  { feature: "Skills", uitkit: "1000+", ecc: "~150", volt: "~30", alireza: "~20", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
+  { feature: "Agents", uitkit: "700+", ecc: "~50", volt: "~15", alireza: "~10", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✓ (Multiple)", melty: "✗", gptpilot: "✓ (Role-based)", mentat: "✗" },
+  { feature: "Coworker Agents", uitkit: "510+", ecc: "✗", volt: "✗", alireza: "✗", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗", moat: true },
+  { feature: "Slash Commands", uitkit: "100+", ecc: "~40", volt: "~10", alireza: "~5", aider: "Basic (CLI)", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "Basic" },
+  { feature: "Hooks", uitkit: "48", ecc: "~20", volt: "~5", alireza: "~3", aider: "✗", cursor: "✗", copilot: "✗", sweep: "Basic (Actions)", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
+  { feature: "Personas", uitkit: "10", ecc: "3", volt: "0", alireza: "0", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
+  { feature: "Rules", uitkit: "32", ecc: "~15", volt: "~5", alireza: "~2", aider: "✗", cursor: "1 (Single file)", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
+  { feature: "MCP Configs", uitkit: "41", ecc: "~10", volt: "~8", alireza: "~3", aider: "✓ (via config)", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
+  { feature: "Workspace Stacks", uitkit: "50", ecc: "~12", volt: "0", alireza: "0", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
+  { feature: "Plugins", uitkit: "22", ecc: "~8", volt: "0", alireza: "0", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
+  { feature: "Localization", uitkit: "5 languages", ecc: "English only", volt: "English only", alireza: "English only", aider: "English only", cursor: "English only", copilot: "English only", sweep: "English only", opendevin: "English only", melty: "English only", gptpilot: "English only", mentat: "English only", moat: true },
+  { feature: "Business-domain Stacks", uitkit: "42 domains", ecc: "~5", volt: "0", alireza: "0", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗", moat: true },
+  { feature: "Artifact-type Span", uitkit: "Widest (15+)", ecc: "~8", volt: "~4", alireza: "~3", aider: "✗", cursor: "✗", copilot: "Basic", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗", moat: true },
+  { feature: "Dual Distribution", uitkit: "Marketplace + npm", ecc: "GitHub only", volt: "GitHub only", alireza: "GitHub only", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗", moat: true },
+  { feature: "Cross-harness Export", uitkit: "✓ .cursorrules, .windsurfrules", ecc: "✗", volt: "✗", alireza: "✗", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗", moat: true },
+  { feature: "Statuslines & Themes", uitkit: "6 presets + themes", ecc: "✗", volt: "✗", alireza: "✗", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
+  { feature: "B2B Pricing Tiers", uitkit: "4 tiers", ecc: "✗", volt: "✗", alireza: "✗", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
+  { feature: "AI-Readiness Scorecard", uitkit: "✓ (uitkit score)", ecc: "✗", volt: "✗", alireza: "✗", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
+  { feature: "Compliance Stacks", uitkit: "✓ SOC2, GDPR, HIPAA", ecc: "✗", volt: "✗", alireza: "✗", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
+  { feature: "Multi-agent Swarms", uitkit: "✓ 5 swarm patterns", ecc: "✗", volt: "✗", alireza: "✗", aider: "✗", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "✗" },
+  { feature: "CLI Tooling", uitkit: "9 commands", ecc: "~3", volt: "✗", alireza: "✗", aider: "Basic", cursor: "✗", copilot: "✗", sweep: "✗", opendevin: "✗", melty: "✗", gptpilot: "✗", mentat: "Basic" },
 ];
 
 const FEATURE_DETAILS: Record<string, { value: string; alt: string; impact: string }> = {
@@ -109,12 +109,12 @@ const FEATURE_DETAILS: Record<string, { value: string; alt: string; impact: stri
     impact: "Improves readability of complex audit findings and system planning logs."
   },
   "Dual Distribution": {
-    value: "Installable via npm (`npx claudient add`) or downloadable directly from the Claude Code marketplace.",
+    value: "Installable via npm (`npx uitkit add`) or downloadable directly from the Claude Code marketplace.",
     alt: "Competitors are restricted to raw GitHub file downloads.",
     impact: "Simplifies workspace updates and plugin management through standardized terminal package managers."
   },
   "Cross-harness Export": {
-    value: "Native compilers to export Claudient workspace configs into `.cursorrules` or `.windsurfrules` files on demand.",
+    value: "Native compilers to export UitKit workspace configs into `.cursorrules` or `.windsurfrules` files on demand.",
     alt: "Competitors lock rules to a single target IDE environment.",
     impact: "Provides layout flexibility, allowing developers to switch between Claude Code, Cursor, and Windsurf harnesses seamlessly."
   },
@@ -129,7 +129,7 @@ const FEATURE_DETAILS: Record<string, { value: string; alt: string; impact: stri
     impact: "Provides startups and enterprises path to standardizing AI tooling safely with SAML/SSO."
   },
   "AI-Readiness Scorecard": {
-    value: "Automated analysis tool (`claudient score`) mapping codebase configuration quality and agent ease-of-use.",
+    value: "Automated analysis tool (`uitkit score`) mapping codebase configuration quality and agent ease-of-use.",
     alt: "No evaluation, scoring, or benchmarking frameworks are available in competing prompt directories.",
     impact: "Identifies and repairs missing context files or oversized lockfiles that degrade agent performance."
   },
@@ -144,14 +144,14 @@ const FEATURE_DETAILS: Record<string, { value: string; alt: string; impact: stri
     impact: "Solves complex architecture audits and debugging scenarios by simulating developer team collaborations."
   },
   "CLI Tooling": {
-    value: "9 terminal commands (`claudient doctor`, `claudient repair`, `claudient score`, etc.) for active workspace audit.",
+    value: "9 terminal commands (`uitkit doctor`, `uitkit repair`, `uitkit score`, etc.) for active workspace audit.",
     alt: "Competitors contain no CLI tooling or executable shell modules.",
     impact: "Automates linting, context pruning, and dependency sweeps directly from the terminal."
   }
 };
 
 const COMPETITORS = [
-  { id: "claudient", label: "Claudient", color: "#f54e00" },
+  { id: "uitkit", label: "UitKit", color: "#f54e00" },
   { id: "ecc", label: "ECC", color: "#6b7280" },
   { id: "volt", label: "VoltAgent", color: "#6b7280" },
   { id: "alireza", label: "alirezarezvani", color: "#6b7280" },
@@ -213,7 +213,7 @@ export function CompareApp() {
             <thead>
               <tr className="bg-cream border-b border-hairline">
                 <th className="text-left px-3 py-2.5 font-bold text-ink w-[180px]">Feature</th>
-                <th className="text-left px-3 py-2.5 font-bold text-brand-orange">Claudient</th>
+                <th className="text-left px-3 py-2.5 font-bold text-brand-orange">UitKit</th>
                 <th className="text-left px-3 py-2.5 font-semibold text-mute">ECC</th>
                 <th className="text-left px-3 py-2.5 font-semibold text-mute">VoltAgent</th>
                 <th className="text-left px-3 py-2.5 font-semibold text-mute">alirezarezvani</th>
@@ -248,7 +248,7 @@ export function CompareApp() {
                       {row.moat && <span className="text-[10px]">🏆</span>}
                       {row.feature}
                     </td>
-                    <td className="px-3 py-2 font-semibold text-ink">{row.claudient}</td>
+                    <td className="px-3 py-2 font-semibold text-ink">{row.uitkit}</td>
                     <td className="px-3 py-2 text-mute">{row.ecc}</td>
                     <td className="px-3 py-2 text-mute">{row.volt}</td>
                     <td className="px-3 py-2 text-mute">{row.alireza}</td>
@@ -275,7 +275,7 @@ export function CompareApp() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <span className="text-[11px] font-bold text-ink block mb-1">How Claudient Does It:</span>
+                <span className="text-[11px] font-bold text-ink block mb-1">How UitKit Does It:</span>
                 <p className="text-[12px] text-body leading-relaxed">{activeDetail.value}</p>
               </div>
               <div>

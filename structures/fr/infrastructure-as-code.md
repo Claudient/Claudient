@@ -203,13 +203,13 @@ touch .claude/commands/checkov-fix.md
 touch .claude/commands/tag-audit.md
 touch .claude/commands/rotate-secret.md
 
-# Installer les skills Claudient
-npx claudient add skill devops-infra/terraform-module
-npx claudient add skill devops-infra/terragrunt-config
-npx claudient add skill devops-infra/aws-iam-policy
-npx claudient add skill devops-infra/checkov-remediation
-npx claudient add skill devops-infra/github-actions-cicd
-npx claudient add skill devops-infra/aws-secrets-manager
+# Installer les skills UitKit
+npx uitkit add skill devops-infra/terraform-module
+npx uitkit add skill devops-infra/terragrunt-config
+npx uitkit add skill devops-infra/aws-iam-policy
+npx uitkit add skill devops-infra/checkov-remediation
+npx uitkit add skill devops-infra/github-actions-cicd
+npx uitkit add skill devops-infra/aws-secrets-manager
 
 # Amorcer l'état distant (à exécuter une fois par environnement/région)
 bash scripts/init.sh dev us-east-1
@@ -410,15 +410,15 @@ Exécuter `/tag-audit` pour vérifier les ressources avec des tags obligatoires 
 ## Skills à installer
 
 ```bash
-npx claudient add skill devops-infra/terraform-module
-npx claudient add skill devops-infra/terragrunt-config
-npx claudient add skill devops-infra/aws-iam-policy
-npx claudient add skill devops-infra/checkov-remediation
-npx claudient add skill devops-infra/tfsec-remediation
-npx claudient add skill devops-infra/github-actions-cicd
-npx claudient add skill devops-infra/aws-secrets-manager
-npx claudient add skill devops-infra/aws-vpc-design
-npx claudient add skill devops-infra/ecs-service-deploy
+npx uitkit add skill devops-infra/terraform-module
+npx uitkit add skill devops-infra/terragrunt-config
+npx uitkit add skill devops-infra/aws-iam-policy
+npx uitkit add skill devops-infra/checkov-remediation
+npx uitkit add skill devops-infra/tfsec-remediation
+npx uitkit add skill devops-infra/github-actions-cicd
+npx uitkit add skill devops-infra/aws-secrets-manager
+npx uitkit add skill devops-infra/aws-vpc-design
+npx uitkit add skill devops-infra/ecs-service-deploy
 ```
 
 ## Ressources associées

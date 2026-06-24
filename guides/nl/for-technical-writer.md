@@ -18,16 +18,16 @@ Je bent een technisch schrijver, documentatie-engineer of developer advocate wie
 
 ```bash
 # Installeer alle vaardigheden voor Technisch Schrijvers
-npx claudient add skills productivity
+npx uitkit add skills productivity
 
 # Of selecteer er zelf:
-npx claudient add skill productivity/readme-generator
-npx claudient add skill productivity/runbook-generator
-npx claudient add skill productivity/adr-writer
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill productivity/api-doc-writer
-npx claudient add skill productivity/changelog-writer
-npx claudient add agents roles/changelog-narrator
+npx uitkit add skill productivity/readme-generator
+npx uitkit add skill productivity/runbook-generator
+npx uitkit add skill productivity/adr-writer
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill productivity/api-doc-writer
+npx uitkit add skill productivity/changelog-writer
+npx uitkit add agents roles/changelog-narrator
 ```
 
 ---
@@ -216,7 +216,7 @@ Produceer:
 ## 30-daags ingroeiplan (nieuwe technisch schrijvers)
 
 ### Week 1 — Installatie en documentatieaudit
-- Installeer alle productiviteitsvaardigheden: `npx claudient add skills productivity`
+- Installeer alle productiviteitsvaardigheden: `npx uitkit add skills productivity`
 - Voer `/doc-site-builder` Diátaxis-classificatie uit op alle bestaande documentatie — identificeer hiaten en gemengde pagina's
 - Lees elke bestaande documentatie in jouw primaire gebied — noteer alles wat verouderd is (vergelijk met recente PR's)
 - Volg 2-3 engineering standups — hoor wat er in de volgende sprint wordt opgeleverd
@@ -270,7 +270,7 @@ Als jouw team OpenAPI gebruikt:
 
 ```bash
 # Genereer documentatie vanuit specificatie
-npx claudient run api-doc-writer --input openapi.yaml --audience developers
+npx uitkit run api-doc-writer --input openapi.yaml --audience developers
 ```
 
 ### Mintlify / Docusaurus / MkDocs (documentatieplatforms)

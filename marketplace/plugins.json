@@ -5,15 +5,15 @@
   "total": 21,
   "entries": [
     {
-      "id": "claudient-ai-engineering",
-      "name": "Claudient AI Engineering Stack",
+      "id": "uitkit-ai-engineering",
+      "name": "UitKit AI Engineering Stack",
       "version": "1.10.1",
       "description": "Claude API, agent construction, RAG, LangGraph, CrewAI, MCP server building, prompt caching, LLM eval, and AI-native development patterns.",
       "author": {
         "name": "tushar2704",
         "verified": true
       },
-      "repo": "https://github.com/tushar2704/claudient",
+      "repo": "https://github.com/tushar2704/uitkit",
       "downloads": {
         "total": 28450,
         "thisMonth": 1203,
@@ -39,7 +39,7 @@
       },
       "metadata": {
         "icon": "🤖",
-        "source": "claudient-ai-engineering",
+        "source": "uitkit-ai-engineering",
         "languages": ["en"],
         "assets": {
           "skills": 28,
@@ -66,22 +66,22 @@
         "prsMerged": 34
       },
       "support": {
-        "documentationUrl": "https://github.com/tushar2704/claudient/tree/main/plugins/claudient-ai-engineering",
-        "issuesUrl": "https://github.com/tushar2704/claudient/issues",
+        "documentationUrl": "https://github.com/tushar2704/uitkit/tree/main/plugins/uitkit-ai-engineering",
+        "issuesUrl": "https://github.com/tushar2704/uitkit/issues",
         "licenseType": "MIT",
-        "licenseUrl": "https://github.com/tushar2704/claudient/blob/main/LICENSE"
+        "licenseUrl": "https://github.com/tushar2704/uitkit/blob/main/LICENSE"
       }
     },
     {
-      "id": "claudient-automation",
-      "name": "Claudient Automation Stack",
+      "id": "uitkit-automation",
+      "name": "UitKit Automation Stack",
       "version": "1.10.1",
       "description": "Browser automation, Playwright, SaaS scaffolding, spec-to-repo generation, IoT, embedded systems, game dev, and office document automation.",
       "author": {
         "name": "tushar2704",
         "verified": true
       },
-      "repo": "https://github.com/tushar2704/claudient",
+      "repo": "https://github.com/tushar2704/uitkit",
       "downloads": {
         "total": 19340,
         "thisMonth": 876,
@@ -107,7 +107,7 @@
       },
       "metadata": {
         "icon": "🤖",
-        "source": "claudient-automation",
+        "source": "uitkit-automation",
         "languages": ["en"],
         "assets": {
           "skills": 22,
@@ -134,22 +134,22 @@
         "prsMerged": 28
       },
       "support": {
-        "documentationUrl": "https://github.com/tushar2704/claudient/tree/main/plugins/claudient-automation",
-        "issuesUrl": "https://github.com/tushar2704/claudient/issues",
+        "documentationUrl": "https://github.com/tushar2704/uitkit/tree/main/plugins/uitkit-automation",
+        "issuesUrl": "https://github.com/tushar2704/uitkit/issues",
         "licenseType": "MIT",
-        "licenseUrl": "https://github.com/tushar2704/claudient/blob/main/LICENSE"
+        "licenseUrl": "https://github.com/tushar2704/uitkit/blob/main/LICENSE"
       }
     },
     {
-      "id": "claudient-backend",
-      "name": "Claudient Backend Stack",
+      "id": "uitkit-backend",
+      "name": "UitKit Backend Stack",
       "version": "1.10.1",
       "description": "41 framework-specific skills covering Python (FastAPI, Django), Node.js (Next.js, NestJS), Go, Rust, Ruby, Java, Elixir, Flutter, Swift, Kotlin, .NET, and PHP.",
       "author": {
         "name": "tushar2704",
         "verified": true
       },
-      "repo": "https://github.com/tushar2704/claudient",
+      "repo": "https://github.com/tushar2704/uitkit",
       "downloads": {
         "total": 45230,
         "thisMonth": 2156,
@@ -175,7 +175,7 @@
       },
       "metadata": {
         "icon": "🔙",
-        "source": "claudient-backend",
+        "source": "uitkit-backend",
         "languages": ["en"],
         "assets": {
           "skills": 41,
@@ -202,22 +202,22 @@
         "prsMerged": 47
       },
       "support": {
-        "documentationUrl": "https://github.com/tushar2704/claudient/tree/main/plugins/claudient-backend",
-        "issuesUrl": "https://github.com/tushar2704/claudient/issues",
+        "documentationUrl": "https://github.com/tushar2704/uitkit/tree/main/plugins/uitkit-backend",
+        "issuesUrl": "https://github.com/tushar2704/uitkit/issues",
         "licenseType": "MIT",
-        "licenseUrl": "https://github.com/tushar2704/claudient/blob/main/LICENSE"
+        "licenseUrl": "https://github.com/tushar2704/uitkit/blob/main/LICENSE"
       }
     },
     {
-      "id": "claudient-database",
-      "name": "Claudient Database Stack",
+      "id": "uitkit-database",
+      "name": "UitKit Database Stack",
       "version": "1.10.1",
       "description": "PostgreSQL, MongoDB, Redis, Supabase, Neon, Turso, Prisma, Drizzle ORM, GraphQL, Elasticsearch, and blockchain/smart contracts.",
       "author": {
         "name": "tushar2704",
         "verified": true
       },
-      "repo": "https://github.com/tushar2704/claudient",
+      "repo": "https://github.com/tushar2704/uitkit",
       "downloads": {
         "total": 38120,
         "thisMonth": 1834,
@@ -243,7 +243,7 @@
       },
       "metadata": {
         "icon": "💾",
-        "source": "claudient-database",
+        "source": "uitkit-database",
         "languages": ["en"],
         "assets": {
           "skills": 24,
@@ -270,22 +270,22 @@
         "prsMerged": 41
       },
       "support": {
-        "documentationUrl": "https://github.com/tushar2704/claudient/tree/main/plugins/claudient-database",
-        "issuesUrl": "https://github.com/tushar2704/claudient/issues",
+        "documentationUrl": "https://github.com/tushar2704/uitkit/tree/main/plugins/uitkit-database",
+        "issuesUrl": "https://github.com/tushar2704/uitkit/issues",
         "licenseType": "MIT",
-        "licenseUrl": "https://github.com/tushar2704/claudient/blob/main/LICENSE"
+        "licenseUrl": "https://github.com/tushar2704/uitkit/blob/main/LICENSE"
       }
     },
     {
-      "id": "claudient-devops-infra",
-      "name": "Claudient DevOps & Infrastructure Stack",
+      "id": "uitkit-devops-infra",
+      "name": "UitKit DevOps & Infrastructure Stack",
       "version": "1.10.1",
       "description": "36 skills covering AWS, Azure, GCP, Kubernetes, Helm, Terraform, Pulumi, ArgoCD, Docker, CI/CD, GitHub Actions, and platform engineering.",
       "author": {
         "name": "tushar2704",
         "verified": true
       },
-      "repo": "https://github.com/tushar2704/claudient",
+      "repo": "https://github.com/tushar2704/uitkit",
       "downloads": {
         "total": 32480,
         "thisMonth": 1567,
@@ -311,7 +311,7 @@
       },
       "metadata": {
         "icon": "⚙️",
-        "source": "claudient-devops-infra",
+        "source": "uitkit-devops-infra",
         "languages": ["en"],
         "assets": {
           "skills": 36,
@@ -338,22 +338,22 @@
         "prsMerged": 52
       },
       "support": {
-        "documentationUrl": "https://github.com/tushar2704/claudient/tree/main/plugins/claudient-devops-infra",
-        "issuesUrl": "https://github.com/tushar2704/claudient/issues",
+        "documentationUrl": "https://github.com/tushar2704/uitkit/tree/main/plugins/uitkit-devops-infra",
+        "issuesUrl": "https://github.com/tushar2704/uitkit/issues",
         "licenseType": "MIT",
-        "licenseUrl": "https://github.com/tushar2704/claudient/blob/main/LICENSE"
+        "licenseUrl": "https://github.com/tushar2704/uitkit/blob/main/LICENSE"
       }
     },
     {
-      "id": "claudient-data-ml",
-      "name": "Claudient Data & ML Stack",
+      "id": "uitkit-data-ml",
+      "name": "UitKit Data & ML Stack",
       "version": "1.10.1",
       "description": "Data pipelines, dbt, Apache Spark, Kafka, MLOps, MLflow, PyTorch, TensorFlow, NLP, reinforcement learning, and synthetic data.",
       "author": {
         "name": "tushar2704",
         "verified": true
       },
-      "repo": "https://github.com/tushar2704/claudient",
+      "repo": "https://github.com/tushar2704/uitkit",
       "downloads": {
         "total": 22890,
         "thisMonth": 1045,
@@ -379,7 +379,7 @@
       },
       "metadata": {
         "icon": "📊",
-        "source": "claudient-data-ml",
+        "source": "uitkit-data-ml",
         "languages": ["en"],
         "assets": {
           "skills": 27,
@@ -406,22 +406,22 @@
         "prsMerged": 36
       },
       "support": {
-        "documentationUrl": "https://github.com/tushar2704/claudient/tree/main/plugins/claudient-data-ml",
-        "issuesUrl": "https://github.com/tushar2704/claudient/issues",
+        "documentationUrl": "https://github.com/tushar2704/uitkit/tree/main/plugins/uitkit-data-ml",
+        "issuesUrl": "https://github.com/tushar2704/uitkit/issues",
         "licenseType": "MIT",
-        "licenseUrl": "https://github.com/tushar2704/claudient/blob/main/LICENSE"
+        "licenseUrl": "https://github.com/tushar2704/uitkit/blob/main/LICENSE"
       }
     },
     {
-      "id": "claudient-gtm",
-      "name": "Claudient Go-To-Market Stack",
+      "id": "uitkit-gtm",
+      "name": "UitKit Go-To-Market Stack",
       "version": "1.10.1",
       "description": "32 GTM skills: cold email, LinkedIn outreach, deal desk, RevOps, HubSpot, channel economics, forecasting, customer success, RFP response.",
       "author": {
         "name": "tushar2704",
         "verified": true
       },
-      "repo": "https://github.com/tushar2704/claudient",
+      "repo": "https://github.com/tushar2704/uitkit",
       "downloads": {
         "total": 18670,
         "thisMonth": 923,
@@ -447,7 +447,7 @@
       },
       "metadata": {
         "icon": "📈",
-        "source": "claudient-gtm",
+        "source": "uitkit-gtm",
         "languages": ["en"],
         "assets": {
           "skills": 32,
@@ -474,22 +474,22 @@
         "prsMerged": 32
       },
       "support": {
-        "documentationUrl": "https://github.com/tushar2704/claudient/tree/main/plugins/claudient-gtm",
-        "issuesUrl": "https://github.com/tushar2704/claudient/issues",
+        "documentationUrl": "https://github.com/tushar2704/uitkit/tree/main/plugins/uitkit-gtm",
+        "issuesUrl": "https://github.com/tushar2704/uitkit/issues",
         "licenseType": "MIT",
-        "licenseUrl": "https://github.com/tushar2704/claudient/blob/main/LICENSE"
+        "licenseUrl": "https://github.com/tushar2704/uitkit/blob/main/LICENSE"
       }
     },
     {
-      "id": "claudient-finance",
-      "name": "Claudient Finance Stack",
+      "id": "uitkit-finance",
+      "name": "UitKit Finance Stack",
       "version": "1.10.1",
       "description": "DCF models, 3-statement financial models, comps analysis, deal screening, IC memos, KYC/AML, pitch decks, earnings analysis.",
       "author": {
         "name": "tushar2704",
         "verified": true
       },
-      "repo": "https://github.com/tushar2704/claudient",
+      "repo": "https://github.com/tushar2704/uitkit",
       "downloads": {
         "total": 16450,
         "thisMonth": 789,
@@ -515,7 +515,7 @@
       },
       "metadata": {
         "icon": "💰",
-        "source": "claudient-finance",
+        "source": "uitkit-finance",
         "languages": ["en"],
         "assets": {
           "skills": 18,
@@ -542,22 +542,22 @@
         "prsMerged": 22
       },
       "support": {
-        "documentationUrl": "https://github.com/tushar2704/claudient/tree/main/plugins/claudient-finance",
-        "issuesUrl": "https://github.com/tushar2704/claudient/issues",
+        "documentationUrl": "https://github.com/tushar2704/uitkit/tree/main/plugins/uitkit-finance",
+        "issuesUrl": "https://github.com/tushar2704/uitkit/issues",
         "licenseType": "MIT",
-        "licenseUrl": "https://github.com/tushar2704/claudient/blob/main/LICENSE"
+        "licenseUrl": "https://github.com/tushar2704/uitkit/blob/main/LICENSE"
       }
     },
     {
-      "id": "claudient-marketing",
-      "name": "Claudient Marketing Stack",
+      "id": "uitkit-marketing",
+      "name": "UitKit Marketing Stack",
       "version": "1.10.1",
       "description": "SEO, content strategy, copywriting, email sequences, paid ads, brand guidelines, CRO, social media, churn prevention, schema markup.",
       "author": {
         "name": "tushar2704",
         "verified": true
       },
-      "repo": "https://github.com/tushar2704/claudient",
+      "repo": "https://github.com/tushar2704/uitkit",
       "downloads": {
         "total": 21340,
         "thisMonth": 1012,
@@ -583,7 +583,7 @@
       },
       "metadata": {
         "icon": "📢",
-        "source": "claudient-marketing",
+        "source": "uitkit-marketing",
         "languages": ["en"],
         "assets": {
           "skills": 26,
@@ -610,22 +610,22 @@
         "prsMerged": 29
       },
       "support": {
-        "documentationUrl": "https://github.com/tushar2704/claudient/tree/main/plugins/claudient-marketing",
-        "issuesUrl": "https://github.com/tushar2704/claudient/issues",
+        "documentationUrl": "https://github.com/tushar2704/uitkit/tree/main/plugins/uitkit-marketing",
+        "issuesUrl": "https://github.com/tushar2704/uitkit/issues",
         "licenseType": "MIT",
-        "licenseUrl": "https://github.com/tushar2704/claudient/blob/main/LICENSE"
+        "licenseUrl": "https://github.com/tushar2704/uitkit/blob/main/LICENSE"
       }
     },
     {
-      "id": "claudient-legal",
-      "name": "Claudient Legal Stack",
+      "id": "uitkit-legal",
+      "name": "UitKit Legal Stack",
       "version": "1.10.1",
       "description": "Contract review, NDA analysis, GDPR compliance, SOC 2, ISO 27001, IP clearance, EU AI Act, legal research, DSAR, and diligence.",
       "author": {
         "name": "tushar2704",
         "verified": true
       },
-      "repo": "https://github.com/tushar2704/claudient",
+      "repo": "https://github.com/tushar2704/uitkit",
       "downloads": {
         "total": 12560,
         "thisMonth": 612,
@@ -651,7 +651,7 @@
       },
       "metadata": {
         "icon": "⚖️",
-        "source": "claudient-legal",
+        "source": "uitkit-legal",
         "languages": ["en"],
         "assets": {
           "skills": 20,
@@ -678,22 +678,22 @@
         "prsMerged": 18
       },
       "support": {
-        "documentationUrl": "https://github.com/tushar2704/claudient/tree/main/plugins/claudient-legal",
-        "issuesUrl": "https://github.com/tushar2704/claudient/issues",
+        "documentationUrl": "https://github.com/tushar2704/uitkit/tree/main/plugins/uitkit-legal",
+        "issuesUrl": "https://github.com/tushar2704/uitkit/issues",
         "licenseType": "MIT",
-        "licenseUrl": "https://github.com/tushar2704/claudient/blob/main/LICENSE"
+        "licenseUrl": "https://github.com/tushar2704/uitkit/blob/main/LICENSE"
       }
     },
     {
-      "id": "claudient-product",
-      "name": "Claudient Product Stack",
+      "id": "uitkit-product",
+      "name": "UitKit Product Stack",
       "version": "1.10.1",
       "description": "Product discovery, roadmapping, PRD writing, competitive teardowns, UX research, product analytics, experiment design, landing pages.",
       "author": {
         "name": "tushar2704",
         "verified": true
       },
-      "repo": "https://github.com/tushar2704/claudient",
+      "repo": "https://github.com/tushar2704/uitkit",
       "downloads": {
         "total": 24680,
         "thisMonth": 1156,
@@ -719,7 +719,7 @@
       },
       "metadata": {
         "icon": "📦",
-        "source": "claudient-product",
+        "source": "uitkit-product",
         "languages": ["en"],
         "assets": {
           "skills": 23,
@@ -746,22 +746,22 @@
         "prsMerged": 34
       },
       "support": {
-        "documentationUrl": "https://github.com/tushar2704/claudient/tree/main/plugins/claudient-product",
-        "issuesUrl": "https://github.com/tushar2704/claudient/issues",
+        "documentationUrl": "https://github.com/tushar2704/uitkit/tree/main/plugins/uitkit-product",
+        "issuesUrl": "https://github.com/tushar2704/uitkit/issues",
         "licenseType": "MIT",
-        "licenseUrl": "https://github.com/tushar2704/claudient/blob/main/LICENSE"
+        "licenseUrl": "https://github.com/tushar2704/uitkit/blob/main/LICENSE"
       }
     },
     {
-      "id": "claudient-productivity",
-      "name": "Claudient Productivity Stack",
+      "id": "uitkit-productivity",
+      "name": "UitKit Productivity Stack",
       "version": "1.10.1",
       "description": "66 skills for engineering work: debugging, refactoring, code review, PR automation, test generation, ADR writing, security auditing, context engineering.",
       "author": {
         "name": "tushar2704",
         "verified": true
       },
-      "repo": "https://github.com/tushar2704/claudient",
+      "repo": "https://github.com/tushar2704/uitkit",
       "downloads": {
         "total": 52340,
         "thisMonth": 2456,
@@ -787,7 +787,7 @@
       },
       "metadata": {
         "icon": "⚡",
-        "source": "claudient-productivity",
+        "source": "uitkit-productivity",
         "languages": ["en"],
         "assets": {
           "skills": 66,
@@ -814,22 +814,22 @@
         "prsMerged": 68
       },
       "support": {
-        "documentationUrl": "https://github.com/tushar2704/claudient/tree/main/plugins/claudient-productivity",
-        "issuesUrl": "https://github.com/tushar2704/claudient/issues",
+        "documentationUrl": "https://github.com/tushar2704/uitkit/tree/main/plugins/uitkit-productivity",
+        "issuesUrl": "https://github.com/tushar2704/uitkit/issues",
         "licenseType": "MIT",
-        "licenseUrl": "https://github.com/tushar2704/claudient/blob/main/LICENSE"
+        "licenseUrl": "https://github.com/tushar2704/uitkit/blob/main/LICENSE"
       }
     },
     {
-      "id": "claudient-commands",
-      "name": "Claudient Commands Stack",
+      "id": "uitkit-commands",
+      "name": "UitKit Commands Stack",
       "version": "1.10.1",
       "description": "Slash command builders and workflow automation for common development tasks.",
       "author": {
         "name": "tushar2704",
         "verified": true
       },
-      "repo": "https://github.com/tushar2704/claudient",
+      "repo": "https://github.com/tushar2704/uitkit",
       "downloads": {
         "total": 8920,
         "thisMonth": 423,
@@ -855,7 +855,7 @@
       },
       "metadata": {
         "icon": "⌘",
-        "source": "claudient-commands",
+        "source": "uitkit-commands",
         "languages": ["en"],
         "assets": {
           "skills": 14,
@@ -882,10 +882,10 @@
         "prsMerged": 9
       },
       "support": {
-        "documentationUrl": "https://github.com/tushar2704/claudient/tree/main/plugins/claudient-commands",
-        "issuesUrl": "https://github.com/tushar2704/claudient/issues",
+        "documentationUrl": "https://github.com/tushar2704/uitkit/tree/main/plugins/uitkit-commands",
+        "issuesUrl": "https://github.com/tushar2704/uitkit/issues",
         "licenseType": "MIT",
-        "licenseUrl": "https://github.com/tushar2704/claudient/blob/main/LICENSE"
+        "licenseUrl": "https://github.com/tushar2704/uitkit/blob/main/LICENSE"
       }
     },
     {
@@ -897,7 +897,7 @@
         "name": "tushar2704",
         "verified": true
       },
-      "repo": "https://github.com/tushar2704/claudient",
+      "repo": "https://github.com/tushar2704/uitkit",
       "downloads": {
         "total": 5420,
         "thisMonth": 234,
@@ -950,10 +950,10 @@
         "prsMerged": 5
       },
       "support": {
-        "documentationUrl": "https://github.com/tushar2704/claudient/tree/main/plugins/matrix-theme",
-        "issuesUrl": "https://github.com/tushar2704/claudient/issues",
+        "documentationUrl": "https://github.com/tushar2704/uitkit/tree/main/plugins/matrix-theme",
+        "issuesUrl": "https://github.com/tushar2704/uitkit/issues",
         "licenseType": "MIT",
-        "licenseUrl": "https://github.com/tushar2704/claudient/blob/main/LICENSE"
+        "licenseUrl": "https://github.com/tushar2704/uitkit/blob/main/LICENSE"
       }
     }
   ]

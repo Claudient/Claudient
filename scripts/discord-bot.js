@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Claudient Discord Bot
+ * UitKit Discord Bot
  *
  * Features:
  * - Skill search & quick help
@@ -91,7 +91,7 @@ function createSkillEmbed(skill) {
       { name: 'Tier', value: skill.tier || 'Standard', inline: true },
       { name: 'ID', value: `\`${skill.id}\``, inline: false }
     ])
-    .setFooter({ text: 'Claudient Skills Library' })
+    .setFooter({ text: 'UitKit Skills Library' })
     .setTimestamp();
 }
 
@@ -197,7 +197,7 @@ async function getOrCreateShowcaseChannel(guild) {
     return await guild.channels.create({
       name: 'project-showcase',
       type: ChannelType.GuildText,
-      topic: 'Community projects built with Claudient'
+      topic: 'Community projects built with UitKit'
     });
   } catch (err) {
     console.error('Failed to get/create showcase channel:', err);
@@ -218,7 +218,7 @@ async function getOrCreateAnnouncementsChannel(guild) {
     return await guild.channels.create({
       name: 'announcements',
       type: ChannelType.GuildText,
-      topic: 'Claudient updates and feature releases'
+      topic: 'UitKit updates and feature releases'
     });
   } catch (err) {
     console.error('Failed to get/create announcements channel:', err);
@@ -262,7 +262,7 @@ async function getOrCreateRoles(guild) {
       } else {
         roles[name] = await guild.roles.create({
           name: name,
-          reason: `Claudient bot auto-created role: ${name}`
+          reason: `UitKit bot auto-created role: ${name}`
         });
       }
     }
@@ -307,7 +307,7 @@ function createFeatureAnnouncementEmbed(feature) {
       { name: 'Category', value: feature.category || 'Enhancement', inline: false },
       ...(feature.highlights ? [{ name: 'Highlights', value: feature.highlights, inline: false }] : [])
     ])
-    .setFooter({ text: 'Claudient Updates' })
+    .setFooter({ text: 'UitKit Updates' })
     .setTimestamp();
 }
 
@@ -319,7 +319,7 @@ const commands = [
   {
     data: new SlashCommandBuilder()
       .setName('skill')
-      .setDescription('Search Claudient skills')
+      .setDescription('Search UitKit skills')
       .addStringOption(opt => opt
         .setName('query')
         .setDescription('Skill name or category to search')
@@ -348,10 +348,10 @@ const commands = [
   {
     data: new SlashCommandBuilder()
       .setName('help')
-      .setDescription('Get quick help about Claudient features'),
+      .setDescription('Get quick help about UitKit features'),
     async execute(interaction) {
       const embed = new EmbedBuilder()
-        .setTitle('Claudient Help')
+        .setTitle('UitKit Help')
         .setDescription('The Claude Code knowledge system with 400+ skills, 182+ agents, and comprehensive ecosystem support.')
         .setColor(0x0099FF)
         .addFields([
@@ -382,7 +382,7 @@ const commands = [
           },
           {
             name: 'Resources',
-            value: '[GitHub](https://github.com/UitbreidenOS/Claudient) • [Docs](https://claudient.dev) • [Discord](https://discord.gg/claudient)',
+            value: '[GitHub](https://github.com/UitbreidenOS/UitKit) • [Docs](https://uitkit.dev) • [Discord](https://discord.gg/uitkit)',
             inline: false
           }
         ])
@@ -446,7 +446,7 @@ const commands = [
       .setDescription('Submit or browse community projects')
       .addSubcommand(sub => sub
         .setName('submit')
-        .setDescription('Submit your Claudient-powered project')
+        .setDescription('Submit your UitKit-powered project')
         .addStringOption(opt => opt.setName('title').setDescription('Project title').setRequired(true))
         .addStringOption(opt => opt.setName('description').setDescription('Brief description').setRequired(true))
         .addStringOption(opt => opt.setName('url').setDescription('GitHub/demo URL').setRequired(false))
@@ -681,8 +681,8 @@ client.on('interactionCreate', async (interaction) => {
 // ===== READY EVENT =====
 
 client.once('ready', () => {
-  console.log(`✓ Claudient bot ready as ${client.user.tag}`);
-  client.user.setActivity('Claudient skills | /help', { type: 'WATCHING' });
+  console.log(`✓ UitKit bot ready as ${client.user.tag}`);
+  client.user.setActivity('UitKit skills | /help', { type: 'WATCHING' });
 });
 
 // ===== ERROR HANDLING =====

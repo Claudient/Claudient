@@ -191,4 +191,4 @@ This stack is actively maintained. Last updated: 2026-06-15
 
 ---
 
-Built with [Claudient](https://github.com/Claudients/Claudient) · Production-grade agentic AI patterns
+Built with [UitKit](https://github.com/UitKits/UitKit) · Production-grade agentic AI patterns

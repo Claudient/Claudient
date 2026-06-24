@@ -17,12 +17,12 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 // Configuration
-const CLAUDIENT_ROOT = path.join(__dirname, '..');
-const SKILLS_DIR = path.join(CLAUDIENT_ROOT, 'skills');
-const GUIDES_DIR = path.join(CLAUDIENT_ROOT, 'guides');
-const AGENTS_DIR = path.join(CLAUDIENT_ROOT, 'agents');
-const PROFILERS_DIR = path.join(CLAUDIENT_ROOT, 'profilers');
-const MIDDLEWARE_DIR = path.join(CLAUDIENT_ROOT, 'middleware');
+const UITKIT_ROOT = path.join(__dirname, '..');
+const SKILLS_DIR = path.join(UITKIT_ROOT, 'skills');
+const GUIDES_DIR = path.join(UITKIT_ROOT, 'guides');
+const AGENTS_DIR = path.join(UITKIT_ROOT, 'agents');
+const PROFILERS_DIR = path.join(UITKIT_ROOT, 'profilers');
+const MIDDLEWARE_DIR = path.join(UITKIT_ROOT, 'middleware');
 const RESULTS_DIR = path.join(__dirname, 'discovery-results');
 
 const COLORS = {
@@ -202,7 +202,7 @@ class CodebaseScanner {
 
   analyzeFile(filePath, content) {
     const fileName = path.basename(filePath);
-    const relPath = path.relative(CLAUDIENT_ROOT, filePath);
+    const relPath = path.relative(UITKIT_ROOT, filePath);
 
     const patterns = this.detector.detectPattern(filePath, content);
     if (patterns.length === 0) return null;
@@ -484,7 +484,7 @@ class SkillValidator {
 
   validateAgainstClaudeMD() {
     // Verify against CLAUDE.md rules
-    const claudeMdPath = path.join(CLAUDIENT_ROOT, 'CLAUDE.md');
+    const claudeMdPath = path.join(UITKIT_ROOT, 'CLAUDE.md');
     if (!fs.existsSync(claudeMdPath)) {
       return { compliant: true, notes: ['CLAUDE.md not found for validation'] };
     }
@@ -694,7 +694,7 @@ class SkillDiscoverer {
 
   async run(options = {}) {
     const {
-      scanDir = CLAUDIENT_ROOT,
+      scanDir = UITKIT_ROOT,
       output = 'console',
       test = false,
       validate = false,
@@ -808,7 +808,7 @@ async function main() {
     const output = options.output || 'console';
     const test = options.test === 'true' || options.test === true;
     const validate = options.validate === 'true' || options.validate === true;
-    const scanDir = options['scan-dir'] || CLAUDIENT_ROOT;
+    const scanDir = options['scan-dir'] || UITKIT_ROOT;
     const minConfidence = parseInt(options['min-confidence'] || '60', 10);
 
     const result = await discoverer.run({

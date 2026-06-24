@@ -20,15 +20,15 @@ Claude Code becomes your preparation engine: briefings drafted in minutes, sensi
 
 ```bash
 # Install EA and CoS skills
-npx claudient add skill small-business/meeting-to-action
-npx claudient add skill small-business/monday-brief
-npx claudient add skill productivity/board-deck-builder
-npx claudient add skill productivity/confluence-expert
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/stakeholder-comms
+npx uitkit add skill small-business/meeting-to-action
+npx uitkit add skill small-business/monday-brief
+npx uitkit add skill productivity/board-deck-builder
+npx uitkit add skill productivity/confluence-expert
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/stakeholder-comms
 
 # Install the chief of staff agent
-npx claudient add agent advisors/chief-of-staff
+npx uitkit add agent advisors/chief-of-staff
 ```
 
 ---
@@ -218,7 +218,7 @@ NEXT WEEK PREVIEW:
 ## 30-day ramp plan (new EA or CoS)
 
 ### Week 1 — Map the landscape
-- Install all EA/CoS skills: `npx claudient add skill productivity/[name]`
+- Install all EA/CoS skills: `npx uitkit add skill productivity/[name]`
 - Learn the executive's calendar: what meetings recur, which are high-stakes, which they dread
 - Run the Monday brief format past the exec — do they want more or less detail? different focus?
 - Identify the 5 most important stakeholders in the exec's world and build profiles using `/exec-briefing`

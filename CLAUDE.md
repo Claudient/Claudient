@@ -1,4 +1,4 @@
-# CLAUDE.md — Claudient Repository Instructions
+# CLAUDE.md — UitKit Repository Instructions
 
 This file governs how Claude Code should behave when working inside this repository.
 
@@ -6,7 +6,7 @@ This file governs how Claude Code should behave when working inside this reposit
 
 ## What This Repo Is
 
-Claudient is a knowledge system — a collection of skills, agents, hooks, rules, workflows, and prompts for Claude Code. The content here is *documentation and configuration*, not application code. When contributing or editing, treat correctness and clarity as the primary quality metrics.
+UitKit is a knowledge system — a collection of skills, agents, hooks, rules, workflows, and prompts for Claude Code. The content here is *documentation and configuration*, not application code. When contributing or editing, treat correctness and clarity as the primary quality metrics.
 
 ---
 

@@ -1,6 +1,6 @@
 # Claude para Small Business — Estrategia SEO
 
-Este documento es la única fuente de verdad para cómo Claudient se clasifica para la intención de búsqueda de pequeños negocios. Está escrito para colaboradores que agregan nuevo contenido para pequeños negocios y para el mantenedor que necesita mantener la estrategia coherente a lo largo del tiempo.
+Este documento es la única fuente de verdad para cómo UitKit se clasifica para la intención de búsqueda de pequeños negocios. Está escrito para colaboradores que agregan nuevo contenido para pequeños negocios y para el mantenedor que necesita mantener la estrategia coherente a lo largo del tiempo.
 
 La estrategia es intencionalmente estrecha: capturar el espacio de palabras clave de grado de operador alrededor de "Claude for small business" y la larga cola de consultas verticales y de nivel de tarea que fluye de ella.
 
@@ -10,7 +10,7 @@ La estrategia es intencionalmente estrecha: capturar el espacio de palabras clav
 
 Anthropic lanzó Claude for Small Business el 13 de mayo de 2026. El producto cubre 15 flujos de trabajo oficiales. La demanda de búsqueda ha superado ampliamente la oferta — los propietarios escriben "Claude for [industria]", "herramientas de IA para [tipo de negocio]" y "cómo usar Claude para [tarea]" en Google, Reddit y YouTube más rápido de lo que Anthropic puede entregar contenido vertical.
 
-La oportunidad de Claudient es ser la extensión más vinculada y más citada del lanzamiento oficial — una base de conocimiento comunitaria que complete la larga cola que Anthropic dejó abierta.
+La oportunidad de UitKit es ser la extensión más vinculada y más citada del lanzamiento oficial — una base de conocimiento comunitaria que complete la larga cola que Anthropic dejó abierta.
 
 Tres hechos estructurales hacen que esta oportunidad sea real:
 
@@ -265,10 +265,10 @@ El plan, calibrado para aproximadamente un lote de envío por semana.
 Las métricas que cuentan, en orden:
 
 1. **Estrellas de GitHub** — proxy para descubrimiento orgánico. Objetivo: +200 en los 30 días después del lanzamiento de pequeños negocios.
-2. **Recuento de instalaciones de npm para `claudient add skills small-business`** — proxy para adopción real.
+2. **Recuento de instalaciones de npm para `uitkit add skills small-business`** — proxy para adopción real.
 3. **Tráfico de GitHub para `/skills/small-business/`** — proxy para rendimiento SEO.
 
-5. **Búsqueda de marca** — "claudient small business" apareciendo en autocompletado de Google o búsquedas relacionadas.
+5. **Búsqueda de marca** — "uitkit small business" apareciendo en autocompletado de Google o búsquedas relacionadas.
 
 Evite optimizar: conteo de archivos total, conteo de líneas o cualquier cosa que incentive contenido de relleno.
 

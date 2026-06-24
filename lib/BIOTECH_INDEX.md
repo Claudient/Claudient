@@ -510,7 +510,7 @@ n = 2 × ((z_α + z_β) / effectSize)²
 
 ### Contact
 - GitHub Issues
-- Email: support@claudient.ai
+- Email: support@uitkit.ai
 - Documentation: /docs
 
 ---

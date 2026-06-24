@@ -197,19 +197,19 @@ touch ops-workspace/automation/_automation-index.md
 touch ops-workspace/processes/_improvement-log.md
 
 # Install relevant skills
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/sop-writer
-npx claudient add skill productivity/vendor-evaluator
-npx claudient add skill productivity/scrum-master
-npx claudient add skill small-business/weekly-pulse
-npx claudient add skill small-business/meeting-to-action
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/sop-writer
+npx uitkit add skill productivity/vendor-evaluator
+npx uitkit add skill productivity/scrum-master
+npx uitkit add skill small-business/weekly-pulse
+npx uitkit add skill small-business/meeting-to-action
 
 # Copy command stubs into .claude/commands/
-npx claudient add skill productivity/sop-writer --output ops-workspace/.claude/commands/sop-draft.md
-npx claudient add skill productivity/process-mapper --output ops-workspace/.claude/commands/process-map.md
-npx claudient add skill productivity/vendor-evaluator --output ops-workspace/.claude/commands/vendor-review.md
-npx claudient add skill small-business/weekly-pulse --output ops-workspace/.claude/commands/weekly-ops.md
-npx claudient add skill small-business/meeting-to-action --output ops-workspace/.claude/commands/meeting-actions.md
+npx uitkit add skill productivity/sop-writer --output ops-workspace/.claude/commands/sop-draft.md
+npx uitkit add skill productivity/process-mapper --output ops-workspace/.claude/commands/process-map.md
+npx uitkit add skill productivity/vendor-evaluator --output ops-workspace/.claude/commands/vendor-review.md
+npx uitkit add skill small-business/weekly-pulse --output ops-workspace/.claude/commands/weekly-ops.md
+npx uitkit add skill small-business/meeting-to-action --output ops-workspace/.claude/commands/meeting-actions.md
 ```
 
 ## CLAUDE.md template
@@ -406,19 +406,19 @@ Postmortem: [what documentation is required after]
 
 ```bash
 # Core operations skills
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/sop-writer
-npx claudient add skill productivity/vendor-evaluator
-npx claudient add skill productivity/scrum-master
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/sop-writer
+npx uitkit add skill productivity/vendor-evaluator
+npx uitkit add skill productivity/scrum-master
 
 # Reporting and meeting skills
-npx claudient add skill small-business/weekly-pulse
-npx claudient add skill small-business/meeting-to-action
+npx uitkit add skill small-business/weekly-pulse
+npx uitkit add skill small-business/meeting-to-action
 
 # Supporting productivity skills
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/engineering-strategy
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/engineering-strategy
 ```
 
 ## Related

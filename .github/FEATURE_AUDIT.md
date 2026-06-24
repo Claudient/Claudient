@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **Feature Audit** GitHub Actions workflow (`feature-audit.yml`) automatically validates the integrity of the Claudient feature catalog on every commit and pull request. It ensures that features are properly documented, all file references are valid, and the system maintains internal consistency.
+The **Feature Audit** GitHub Actions workflow (`feature-audit.yml`) automatically validates the integrity of the UitKit feature catalog on every commit and pull request. It ensures that features are properly documented, all file references are valid, and the system maintains internal consistency.
 
 ## Workflow Jobs
 
@@ -197,7 +197,7 @@ The workflow generates:
 
 This workflow complements existing validation:
 - `validate.yml` - Markdown lint, link checks, freshness
-- `claudient-ci.yml` - Core codebase validation, CLI tests
+- `uitkit-ci.yml` - Core codebase validation, CLI tests
 
 Together they provide comprehensive quality assurance for:
 - Feature metadata accuracy

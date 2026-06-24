@@ -5,7 +5,7 @@ Decentralized application development workspace — smart contracts, DeFi, NFTs,
 ## Quick Start
 
 ```bash
-npx claudient add blockchain_web3_stack
+npx uitkit add blockchain_web3_stack
 ```
 
 ## Skills

@@ -224,12 +224,12 @@ exclude_path = ["changelogs/archive"]
 EOF
 
 # Installer les skills
-npx claudient add skill productivity/api-doc-writer
-npx claudient add skill productivity/readme-generator
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill productivity/runbook-generator
-npx claudient add skill git/changelog-generator
-npx claudient add skill productivity/lit-review
+npx uitkit add skill productivity/api-doc-writer
+npx uitkit add skill productivity/readme-generator
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill productivity/runbook-generator
+npx uitkit add skill git/changelog-generator
+npx uitkit add skill productivity/lit-review
 
 # Copier les skills installés comme commandes de l'espace de travail
 cp ~/.claude/skills/productivity/api-doc-writer.md .claude/commands/api-doc.md
@@ -411,12 +411,12 @@ Avant d'ouvrir une PR, vérifier tous les éléments dans reviews/doc-review-che
 ## Skills à installer
 
 ```bash
-npx claudient add skill productivity/api-doc-writer
-npx claudient add skill productivity/readme-generator
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill productivity/runbook-generator
-npx claudient add skill git/changelog-generator
-npx claudient add skill productivity/lit-review
+npx uitkit add skill productivity/api-doc-writer
+npx uitkit add skill productivity/readme-generator
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill productivity/runbook-generator
+npx uitkit add skill git/changelog-generator
+npx uitkit add skill productivity/lit-review
 ```
 
 ## Voir aussi

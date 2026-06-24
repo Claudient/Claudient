@@ -266,6 +266,6 @@ Integrates OpenAI API for:
 
 ## Support & Contribution
 
-This stack is maintained as part of the Claudient knowledge system. Contributions welcome—update CLAUDE.md identity or add new skills following the SKILL.md format in `skills/`.
+This stack is maintained as part of the UitKit knowledge system. Contributions welcome—update CLAUDE.md identity or add new skills following the SKILL.md format in `skills/`.
 
 **Last updated:** June 15, 2026 | **Status:** Production | **Model:** Haiku/Sonnet

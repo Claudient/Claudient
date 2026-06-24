@@ -18,16 +18,16 @@ Je bent een freelancer of zelfstandig consultant — ontwerper, ontwikkelaar, sc
 
 ```bash
 # Installeer alle freelancer-vaardigheden
-npx claudient add skill small-business/freelancer-proposal
-npx claudient add skill small-business/scope-of-work
-npx claudient add skill small-business/client-status-report
-npx claudient add skill small-business/invoice-chaser
-npx claudient add skill small-business/cold-outreach
-npx claudient add skill small-business/cash-flow-forecast
-npx claudient add skill small-business/agency-operations
+npx uitkit add skill small-business/freelancer-proposal
+npx uitkit add skill small-business/scope-of-work
+npx uitkit add skill small-business/client-status-report
+npx uitkit add skill small-business/invoice-chaser
+npx uitkit add skill small-business/cold-outreach
+npx uitkit add skill small-business/cash-flow-forecast
+npx uitkit add skill small-business/agency-operations
 
 # Installeer de CEO-advisor-agent
-npx claudient add agent advisors/ceo-advisor
+npx uitkit add agent advisors/ceo-advisor
 ```
 
 ---
@@ -205,7 +205,7 @@ Laat me zien: maand-voor-maand kasstroom, wanneer ik mogelijk een tekort heb, wa
 ## 30-dagenplan (nieuwe freelancers of nieuwe markt)
 
 ### Week 1 — Bedrijfsinfrastructuur
-- Installeer alle freelancer­vaardigheden: `npx claudient add skill small-business/[naam]`
+- Installeer alle freelancer­vaardigheden: `npx uitkit add skill small-business/[naam]`
 - Schrijf je standaard voorstelsjabloon met `/freelancer-proposal` — personaliseer voor jouw diensten
 - Schrijf je hoofd-scope-of-work-sjabloon met `/scope-of-work` — gebruik het voor elk toekomstig project
 - Definieer je prijsstelling: uurtarief, projecttarieven, retainer­tarieven — documenteer ze

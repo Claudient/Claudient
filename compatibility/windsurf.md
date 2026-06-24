@@ -1,10 +1,10 @@
-# Claudient × Windsurf
+# UitKit × Windsurf
 
-> How to use Claudient content in Windsurf's Cascade AI.
+> How to use UitKit content in Windsurf's Cascade AI.
 
-Windsurf (by Codeium) is an AI coding editor that brings agentic workflows to the IDE. While Windsurf doesn't natively support Claude Code's skill system or plugin marketplace, its core features—Cascade workflows, custom rules, and system prompts—allow you to adapt Claudient's entire knowledge base into Windsurf's environment.
+Windsurf (by Codeium) is an AI coding editor that brings agentic workflows to the IDE. While Windsurf doesn't natively support Claude Code's skill system or plugin marketplace, its core features—Cascade workflows, custom rules, and system prompts—allow you to adapt UitKit's entire knowledge base into Windsurf's environment.
 
-This guide shows you exactly how to port Claudient skills, agents, rules, and project context into Windsurf.
+This guide shows you exactly how to port UitKit skills, agents, rules, and project context into Windsurf.
 
 ---
 
@@ -24,9 +24,9 @@ Windsurf's memory system (`~/.codeium/windsurf/memories/`) stores persistent ins
 
 ## What needs adaptation
 
-Claudient features that require translation to Windsurf equivalents:
+UitKit features that require translation to Windsurf equivalents:
 
-| Claudient | Windsurf equivalent | Adaptation effort |
+| UitKit | Windsurf equivalent | Adaptation effort |
 |---|---|---|
 | Skills (as `.md` with frontmatter) | Cascade workflows or chat prompts | Low — extract Instructions section |
 | Agents (subagent YAML/MD) | Cascade system prompt or custom workflow | Medium — convert to Cascade syntax |
@@ -44,7 +44,7 @@ Claudient features that require translation to Windsurf equivalents:
 
 - **Windsurf 1.8.0+** with Cascade AI enabled
 - `~/.codeium/windsurf/` directory (auto-created on first Windsurf launch)
-- A Claudient project with skills, agents, and rules directories
+- A UitKit project with skills, agents, and rules directories
 
 ### Step 1: Copy rules into `.windsurfrules`
 
@@ -121,7 +121,7 @@ EOF
 
 ### Skills → Windsurf Rules / `.windsurfrules`
 
-Claudient skills are markdown files with a standardized structure. Windsurf doesn't have a "skill" equivalent, but you can:
+UitKit skills are markdown files with a standardized structure. Windsurf doesn't have a "skill" equivalent, but you can:
 
 1. **As `.windsurfrules` entries** — For short, always-apply guidelines (e.g., coding style, naming conventions)
 2. **As Cascade workflows** — For multi-step processes that need branching logic
@@ -129,7 +129,7 @@ Claudient skills are markdown files with a standardized structure. Windsurf does
 
 #### Example: Adapting the "adr-writer" skill
 
-**Original Claudient skill** (`skills/productivity/adr-writer.md`):
+**Original UitKit skill** (`skills/productivity/adr-writer.md`):
 
 ```markdown
 # ADR Writer
@@ -202,7 +202,7 @@ For skills with multiple steps, create a Cascade workflow. Create a file `.winds
 ```yaml
 name: code-review
 description: Review code for bugs, reuse, simplification, and efficiency
-author: Claudient
+author: UitKit
 version: 1.0
 
 steps:
@@ -260,11 +260,11 @@ Invoke with: `/cascade --workflow code-review`
 
 ### Agents → Cascade system prompt
 
-Claudient agents are subagents that own a specific domain. In Windsurf, map agents to Cascade system prompts.
+UitKit agents are subagents that own a specific domain. In Windsurf, map agents to Cascade system prompts.
 
 #### Example: Architect Agent
 
-**Original Claudient agent** (`agents/core/architect.md`):
+**Original UitKit agent** (`agents/core/architect.md`):
 
 ```markdown
 # Architect Agent
@@ -338,7 +338,7 @@ What should be recorded in an ADR about this decision?
 
 ### Rules → `.windsurfrules`
 
-Claudient rules are always-follow guidelines. Copy them directly into `.windsurfrules`:
+UitKit rules are always-follow guidelines. Copy them directly into `.windsurfrules`:
 
 **Example from `rules/common/coding-style.md`:**
 
@@ -428,9 +428,9 @@ EOF
 
 ## Compatibility matrix
 
-This matrix shows which Claudient content types work in Windsurf and how much adaptation is required:
+This matrix shows which UitKit content types work in Windsurf and how much adaptation is required:
 
-| Claudient content | Windsurf equivalent | Adaptation effort | Notes |
+| UitKit content | Windsurf equivalent | Adaptation effort | Notes |
 |---|---|---|---|
 | Skills (productivity, backend, etc.) | Cascade workflows or `.windsurfrules` | Low | Extract core prompt; may need workflow YAML |
 | Agents (core, advisors, roles) | Cascade persona or system prompt | Medium | Convert to Cascade YAML or persona markdown |
@@ -448,27 +448,27 @@ This matrix shows which Claudient content types work in Windsurf and how much ad
 
 ## Quick install
 
-This bash script copies Claudient rules and context into a Windsurf project:
+This bash script copies UitKit rules and context into a Windsurf project:
 
 ```bash
 #!/bin/bash
 # install-windsurf-rules.sh
-# Copies Claudient rules into .windsurfrules for the current project
+# Copies UitKit rules into .windsurfrules for the current project
 
 set -e
 
-CLAUDIENT_PATH="${1:-.}"
-RULES_DIR="$CLAUDIENT_PATH/rules/common"
+UITKIT_PATH="${1:-.}"
+RULES_DIR="$UITKIT_PATH/rules/common"
 
 if [ ! -d "$RULES_DIR" ]; then
-  echo "Error: Claudient rules directory not found at $RULES_DIR"
+  echo "Error: UitKit rules directory not found at $RULES_DIR"
   exit 1
 fi
 
 # Create .windsurfrules from scratch
 cat > .windsurfrules << 'EOF'
 # Windsurf Rules for Cascade AI
-# Auto-generated from Claudient project
+# Auto-generated from UitKit project
 
 ## Core Guidelines
 
@@ -500,7 +500,7 @@ Usage:
 
 ```bash
 chmod +x install-windsurf-rules.sh
-./install-windsurf-rules.sh /path/to/claudient
+./install-windsurf-rules.sh /path/to/uitkit
 ```
 
 ### Alternative: Manual setup
@@ -509,13 +509,13 @@ If you prefer to set up Windsurf rules manually:
 
 1. **Copy rules into `.windsurfrules`:**
    ```bash
-   cp /path/to/claudient/rules/common/*.md .windsurfrules
+   cp /path/to/uitkit/rules/common/*.md .windsurfrules
    ```
 
 2. **Create Cascade personas directory:**
    ```bash
    mkdir -p .windsurf/personas/
-   cp /path/to/claudient/agents/core/*.md .windsurf/personas/
+   cp /path/to/uitkit/agents/core/*.md .windsurf/personas/
    ```
 
 3. **Verify Windsurf loads the rules:**
@@ -524,7 +524,7 @@ If you prefer to set up Windsurf rules manually:
 
 ---
 
-## Invoking Claudient content in Windsurf
+## Invoking UitKit content in Windsurf
 
 ### Chat-based skill invocation
 
@@ -595,7 +595,7 @@ No explicit invocation needed—Cascade reads and applies rules automatically.
 
 ### Example 1: Adapting a backend skill
 
-**Claudient skill:** `skills/backend/python/fastapi-crud.md`
+**UitKit skill:** `skills/backend/python/fastapi-crud.md`
 
 **Steps:**
 1. Extract the Instructions section
@@ -605,7 +605,7 @@ No explicit invocation needed—Cascade reads and applies rules automatically.
 
 ### Example 2: Using an agent for architectural decisions
 
-**Claudient agent:** `agents/core/architect.md`
+**UitKit agent:** `agents/core/architect.md`
 
 **Steps:**
 1. Copy the agent's prompt template to `.windsurf/personas/architect.md`
@@ -615,7 +615,7 @@ No explicit invocation needed—Cascade reads and applies rules automatically.
 
 ### Example 3: Enforcing project rules
 
-**Claudient rules:** `rules/common/coding-style.md`, `rules/common/error-handling.md`
+**UitKit rules:** `rules/common/coding-style.md`, `rules/common/error-handling.md`
 
 **Steps:**
 1. Append all rule files to `.windsurfrules`
@@ -630,5 +630,5 @@ No explicit invocation needed—Cascade reads and applies rules automatically.
 - [Windsurf documentation](https://windsurf.dev/docs)
 - [Cascade AI workflows](https://windsurf.dev/docs/cascade)
 - [Codeium memory system](https://codeium.com/docs/windsurf/memories)
-- [Claudient skills library](https://github.com/claudient/claudient)
-- [Claudient agents](https://github.com/claudient/claudient/tree/main/agents)
+- [UitKit skills library](https://github.com/uitkit/uitkit)
+- [UitKit agents](https://github.com/uitkit/uitkit/tree/main/agents)

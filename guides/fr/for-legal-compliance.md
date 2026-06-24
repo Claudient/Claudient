@@ -20,21 +20,21 @@ Vous êtes juriste interne, responsable conformité, DPO ou Directeur Juridique 
 
 ```bash
 # Install the full legal and compliance stack
-npx claudient add skills legal
+npx uitkit add skills legal
 
 # Or cherry-pick:
-npx claudient add skill legal/contract-review
-npx claudient add skill legal/nda-review
-npx claudient add skill legal/gdpr-expert
-npx claudient add skill legal/soc2-compliance
-npx claudient add skill legal/privacy-pia
-npx claudient add skill legal/eu-ai-act
-npx claudient add skill legal/iso27001
-npx claudient add skill legal/dsar-response
-npx claudient add skill legal/compliance-tracker
-npx claudient add skill legal/legal-research
-npx claudient add agents advisors/general-counsel
-npx claudient add agents advisors/ciso-advisor
+npx uitkit add skill legal/contract-review
+npx uitkit add skill legal/nda-review
+npx uitkit add skill legal/gdpr-expert
+npx uitkit add skill legal/soc2-compliance
+npx uitkit add skill legal/privacy-pia
+npx uitkit add skill legal/eu-ai-act
+npx uitkit add skill legal/iso27001
+npx uitkit add skill legal/dsar-response
+npx uitkit add skill legal/compliance-tracker
+npx uitkit add skill legal/legal-research
+npx uitkit add agents advisors/general-counsel
+npx uitkit add agents advisors/ciso-advisor
 ```
 
 ---
@@ -220,7 +220,7 @@ Déléguer au conseil externe :
 ## Plan de montée en compétence sur 30 jours (nouvel embauche juridique / conformité)
 
 ### Semaine 1 — Connaître le paysage de vos obligations
-- Installer toutes les compétences juridiques : `npx claudient add skills legal`
+- Installer toutes les compétences juridiques : `npx uitkit add skills legal`
 - Exécuter `/compliance-tracker` — construire votre registre des obligations pour chaque cadre applicable
 - Passer en revue tous les contrats existants dans vos modèles standard — identifier ce qui est conforme au marché et ce qui est personnalisé
 - Identifier les DSARs ouverts, les notifications de violation ou les demandes d'audit — prendre en main les délais immédiatement

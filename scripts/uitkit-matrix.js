@@ -5,8 +5,8 @@ const path = require('path');
 const os = require('os');
 
 const CWD = process.cwd();
-const CLAUDIENT_ROOT = path.resolve(__dirname, '..');
-const THEMES_DIR = path.join(CLAUDIENT_ROOT, 'themes');
+const UITKIT_ROOT = path.resolve(__dirname, '..');
+const THEMES_DIR = path.join(UITKIT_ROOT, 'themes');
 const CLAUDE_HOME = path.join(os.homedir(), '.claude');
 const CLAUDE_THEMES_DIR = path.join(CLAUDE_HOME, 'themes');
 const CONFIG_FILE = path.join(CLAUDE_HOME, 'matrix-config.json');
@@ -397,16 +397,16 @@ function validateTheme(themeName) {
  */
 function showHelp() {
   log(`
-${colors.bright}claudient matrix — Theme Management CLI${colors.reset}
+${colors.bright}uitkit matrix — Theme Management CLI${colors.reset}
 
 Usage:
-  claudient matrix list [--preview]
-  claudient matrix apply <theme-name> [--save-config]
-  claudient matrix preview <theme-name>
-  claudient matrix customize <theme-name> --set key=value[,key=value...]
-  claudient matrix export <theme-name> [--output path/file.json]
-  claudient matrix validate <theme-name>
-  claudient matrix config [--show]
+  uitkit matrix list [--preview]
+  uitkit matrix apply <theme-name> [--save-config]
+  uitkit matrix preview <theme-name>
+  uitkit matrix customize <theme-name> --set key=value[,key=value...]
+  uitkit matrix export <theme-name> [--output path/file.json]
+  uitkit matrix validate <theme-name>
+  uitkit matrix config [--show]
 
 Options:
   --preview              Show color preview for each theme
@@ -416,13 +416,13 @@ Options:
   --show                 Display current configuration
 
 Examples:
-  claudient matrix list
-  claudient matrix apply matrix
-  claudient matrix preview dracula
-  claudient matrix customize matrix --set glow=strong,scanline=off
-  claudient matrix export matrix --output ~/Downloads/my-matrix.json
-  claudient matrix validate matrix
-  claudient matrix config --show
+  uitkit matrix list
+  uitkit matrix apply matrix
+  uitkit matrix preview dracula
+  uitkit matrix customize matrix --set glow=strong,scanline=off
+  uitkit matrix export matrix --output ~/Downloads/my-matrix.json
+  uitkit matrix validate matrix
+  uitkit matrix config --show
 
 ${colors.dim}Theme files: ${THEMES_DIR}${colors.reset}
 ${colors.dim}Config file: ${CONFIG_FILE}${colors.reset}

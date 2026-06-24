@@ -5,7 +5,7 @@ Get started with edge-computing.js in 5 minutes.
 ## 1. Run Demo (Instant)
 
 ```bash
-cd /Users/tushar/Desktop/Claudient
+cd /Users/tushar/Desktop/UitKit
 node scripts/edge-computing.js demo
 ```
 
@@ -117,7 +117,7 @@ const node = new EdgeNode('edge-1', 'worker', {
 
 node.submitTask({ goal: 'Process data' });
 const task = await node.processNextTask();
-await node.syncWithCloud('https://api.claudient.local/sync');
+await node.syncWithCloud('https://api.uitkit.local/sync');
 ```
 
 ### EdgeCoordinator - Orchestrate multiple nodes
@@ -125,7 +125,7 @@ await node.syncWithCloud('https://api.claudient.local/sync');
 const { EdgeCoordinator } = require('./scripts/edge-computing.js');
 
 const coordinator = new EdgeCoordinator({
-  cloudUrl: 'https://api.claudient.local/sync'
+  cloudUrl: 'https://api.uitkit.local/sync'
 });
 
 coordinator.registerNode(node1);
@@ -230,7 +230,7 @@ Health check
 ### EdgeCoordinator Options
 ```javascript
 new EdgeCoordinator({
-  cloudUrl: 'https://api.claudient.local/sync',  // Cloud endpoint
+  cloudUrl: 'https://api.uitkit.local/sync',  // Cloud endpoint
   syncInterval: 5000,                            // Sync frequency (ms)
   healthCheckInterval: 10000                     // Health check (ms)
 })

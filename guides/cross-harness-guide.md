@@ -1,6 +1,6 @@
-# Using Claudient Across AI Coding Tools
+# Using UitKit Across AI Coding Tools
 
-Claudient ships 262+ skills, 93+ agents, rules, hooks, and prompts. Most of this content was authored against Claude Code — but the majority of it is plain Markdown structured to be injected into any AI coding tool's context pipeline. This guide draws the line precisely between what is genuinely portable and what is hardwired to Claude Code's harness, then gives you concrete adaptation steps for Cursor, Windsurf, GitHub Copilot, OpenAI Codex CLI, and Gemini Code Assist.
+UitKit ships 262+ skills, 93+ agents, rules, hooks, and prompts. Most of this content was authored against Claude Code — but the majority of it is plain Markdown structured to be injected into any AI coding tool's context pipeline. This guide draws the line precisely between what is genuinely portable and what is hardwired to Claude Code's harness, then gives you concrete adaptation steps for Cursor, Windsurf, GitHub Copilot, OpenAI Codex CLI, and Gemini Code Assist.
 
 Audience: senior developers who already know how to configure their tools and don't need hand-holding on basic concepts.
 
@@ -8,7 +8,7 @@ Audience: senior developers who already know how to configure their tools and do
 
 ## The Portability Model
 
-Before the per-tool breakdowns, you need the mental model. Claudient content falls into three portability classes:
+Before the per-tool breakdowns, you need the mental model. UitKit content falls into three portability classes:
 
 **Class 1 — Fully portable.** Structured Markdown that shapes model behavior through in-context instruction. Works in any tool that accepts a system prompt or custom instructions file. No adaptation required beyond placement.
 
@@ -16,7 +16,7 @@ Before the per-tool breakdowns, you need the mental model. Claudient content fal
 
 **Class 3 — Claude Code-only.** Features that depend on Claude Code's process model, event system, or plugin registry. Cannot be transplanted — these are harness features, not prompt features.
 
-The table below maps Claudient's directory structure to these classes:
+The table below maps UitKit's directory structure to these classes:
 
 | Directory | Portability class | Portable as |
 |---|---|---|
@@ -46,7 +46,7 @@ The `Instructions` section is written in directive language — "always define a
 
 ### Agents as system prompts
 
-Claudient agent files are structured persona definitions: `Purpose`, `Model guidance`, `Tools`, `When to delegate here`, `Example use case`. In Claude Code, these are passed to a `Task` tool invocation as the agent's operating brief. Outside Claude Code, the same content works as a dedicated system prompt for a focused AI session.
+UitKit agent files are structured persona definitions: `Purpose`, `Model guidance`, `Tools`, `When to delegate here`, `Example use case`. In Claude Code, these are passed to a `Task` tool invocation as the agent's operating brief. Outside Claude Code, the same content works as a dedicated system prompt for a focused AI session.
 
 The key insight: the `Tools` section is the only part that references harness-specific mechanics. An agent like `agents/core/security-reviewer.md` specifies `Read`, `Bash`, `WebFetch` — Claude Code native tools. In Cursor or Copilot, those tool references mean nothing mechanically, but the constraints they express ("no Edit, Write, or destructive operations") remain valid instructions the model will follow.
 
@@ -76,7 +76,7 @@ The CLAUDE.md pattern — a Markdown file at the project root or directory level
 | Gemini Code Assist | `.gemini/context.md` (or project-level system prompt) |
 | Zed | `.zed/settings.json` → `"system_prompt"` |
 
-The Claudient `CLAUDE.md` in this repo (`/CLAUDE.md`) is a real example of this pattern. Strip the Claude Code-specific sections (plugin registry references, hook configuration notes) and what remains is a project context file valid for any tool.
+The UitKit `CLAUDE.md` in this repo (`/CLAUDE.md`) is a real example of this pattern. Strip the Claude Code-specific sections (plugin registry references, hook configuration notes) and what remains is a project context file valid for any tool.
 
 ---
 
@@ -84,9 +84,9 @@ The Claudient `CLAUDE.md` in this repo (`/CLAUDE.md`) is a real example of this 
 
 ### The plugin marketplace and `.claude-plugin/`
 
-The `.claude-plugin/marketplace.json` + `plugin.json` registry is Claude Code-only. It is the mechanism by which `claude install claudient` resolves packages, copies files to `.claude/skills/`, and registers slash commands. No other tool has a comparable install protocol.
+The `.claude-plugin/marketplace.json` + `plugin.json` registry is Claude Code-only. It is the mechanism by which `claude install uitkit` resolves packages, copies files to `.claude/skills/`, and registers slash commands. No other tool has a comparable install protocol.
 
-**There is no equivalent in Cursor, Windsurf, Copilot, or Codex.** You cannot `cursor install claudient` or `copilot install claudient`. File placement in those tools is manual — copy the Markdown files you want into the appropriate location.
+**There is no equivalent in Cursor, Windsurf, Copilot, or Codex.** You cannot `cursor install uitkit` or `copilot install uitkit`. File placement in those tools is manual — copy the Markdown files you want into the appropriate location.
 
 ### Hooks (`.claude/settings.json` events)
 
@@ -137,7 +137,7 @@ Cursor is structurally the closest to Claude Code for skill portability. Its `.c
 **Step 1 — Convert the skill file**
 
 ```bash
-# From the Claudient skills directory
+# From the UitKit skills directory
 cp skills/backend/python/fastapi.md your-project/.cursor/rules/fastapi.mdc
 ```
 
@@ -187,9 +187,9 @@ For each `agents/` file you want to use in Cursor:
 
 **Gotcha:** Cursor's rule scoping uses OR logic for `globs`. A rule with `globs: ["**/*.py"]` fires for any Python file regardless of directory. If you install both a `fastapi.mdc` and a `django.mdc`, both fire for `.py` files. Use the `When NOT to use` section to let the model self-select — or add more specific glob patterns like `"**/fastapi_app/**/*.py"` if your project has a clear directory boundary.
 
-**Gotcha:** `.cursorrules` (legacy single file) is loaded for every request with no scoping. It is suitable only for universal project standards. Do not paste multiple Claudient skills into `.cursorrules` — use `.cursor/rules/` with separate `.mdc` files.
+**Gotcha:** `.cursorrules` (legacy single file) is loaded for every request with no scoping. It is suitable only for universal project standards. Do not paste multiple UitKit skills into `.cursorrules` — use `.cursor/rules/` with separate `.mdc` files.
 
-**High-value Claudient content for Cursor:**
+**High-value UitKit content for Cursor:**
 
 - All `skills/backend/` files — framework-specific patterns apply at file-open time
 - All `rules/common/` files — coding standards enforce consistently
@@ -256,7 +256,7 @@ Now review the following file for security issues:
 
 **Gotcha:** `.windsurfrules` has a practical size limit — very large files (8,000+ characters) may be truncated depending on the Codeium backend's context handling. Keep the file under 6,000 characters for reliable inclusion.
 
-**High-value Claudient content for Windsurf:**
+**High-value UitKit content for Windsurf:**
 
 - `rules/common/` — all rules files are compact and universally applicable
 - `skills/backend/` — the framework you're actively developing against
@@ -333,9 +333,9 @@ Now review: [paste code]
 
 **Gotcha:** Copilot's inline autocomplete is not governed by `copilot-instructions.md` in all contexts — the file primarily affects Copilot Chat behavior and some inline suggestion behavior. Do not expect strict adherence to coding style rules in autocomplete suggestions the way you would in a chat completion.
 
-**Gotcha:** Copilot operates on GPT-4-class models under the hood. Some Claude-specific patterns in Claudient skills (extended thinking syntax, subagent delegation instructions) will be silently ignored rather than executed. Strip them — they add noise.
+**Gotcha:** Copilot operates on GPT-4-class models under the hood. Some Claude-specific patterns in UitKit skills (extended thinking syntax, subagent delegation instructions) will be silently ignored rather than executed. Strip them — they add noise.
 
-**High-value Claudient content for Copilot:**
+**High-value UitKit content for Copilot:**
 
 - `rules/common/security.md` — Copilot's Chat mode respects security constraints well
 - `rules/common/testing.md` — guides test file generation toward project conventions
@@ -350,7 +350,7 @@ Codex CLI is the terminal AI agent that operates via `codex` commands. Its conte
 
 **Step 1 — Create AGENTS.md from CLAUDE.md**
 
-Copy the Claudient `CLAUDE.md` pattern to `AGENTS.md` in your project:
+Copy the UitKit `CLAUDE.md` pattern to `AGENTS.md` in your project:
 
 ```bash
 cp CLAUDE.md AGENTS.md

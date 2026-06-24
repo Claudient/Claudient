@@ -973,7 +973,7 @@ console.log(instance);
 
 ## ProgressBar Usage
 
-**File:** scripts/claudient-dont-stop.js
+**File:** scripts/uitkit-dont-stop.js
 **Confidence:** 85%
 **Patterns:** class-based, function-export, async-handler, data-serialization, testing-utility
 
@@ -1015,7 +1015,7 @@ This skill is not a replacement for proper testing — it augments existing test
 
 ## Example
 ```javascript
-const { ProgressBar } = require('./path/to/claudient-dont-stop.js');
+const { ProgressBar } = require('./path/to/uitkit-dont-stop.js');
 
 const instance = new ProgressBar();
 // Use instance methods and properties
@@ -2443,13 +2443,13 @@ console.log(result);
 
 ---
 
-## CLAUDIENT MATRIX Pattern
+## UITKIT MATRIX Pattern
 
-**File:** scripts/claudient-matrix.js
+**File:** scripts/uitkit-matrix.js
 **Confidence:** 80%
 **Patterns:** utility-function, function-export, data-serialization
 
-# CLAUDIENT MATRIX Pattern
+# UITKIT MATRIX Pattern
 
 ## When to activate
 When utility-function functionality is needed
@@ -2479,7 +2479,7 @@ This skill is not a replacement for proper testing — it augments existing test
 
 ## Example
 ```javascript
-const { log } = require('./path/to/claudient-matrix.js');
+const { log } = require('./path/to/uitkit-matrix.js');
 
 const result = log('msg', 'color = 'reset'');
 console.log(result);
@@ -2791,7 +2791,7 @@ This skill is not a replacement for proper testing — it augments existing test
 - Avoid using this skill in performance-critical paths without profiling first
 
 ## Instructions
-**Overview:** recommend.js Scans a project directory and recommends Claudient skills, hooks, and MCP servers.
+**Overview:** recommend.js Scans a project directory and recommends UitKit skills, hooks, and MCP servers.
 
 **Key Functions:**
 - `fileExists(dir, file)`
@@ -3244,7 +3244,7 @@ This skill is not a replacement for proper testing — it augments existing test
 - Avoid using this skill in performance-critical paths without profiling first
 
 ## Instructions
-**Overview:** Claudient Discord Bot — Usage Examples
+**Overview:** UitKit Discord Bot — Usage Examples
 
 **Key Functions:**
 - `scheduleFeatureHighlight()`
@@ -3332,10 +3332,10 @@ This skill is not a replacement for proper testing — it augments existing test
 - Avoid using this skill in performance-critical paths without profiling first
 
 ## Instructions
-**Overview:** AWS Deployment Integration Example Demonstrates complete AWS deployment workflow for Claudient
+**Overview:** AWS Deployment Integration Example Demonstrates complete AWS deployment workflow for UitKit
 
 **Key Functions:**
-- `deployClaudientToAWS()`
+- `deployUitKitToAWS()`
 - `redeployFromState()`
 - `estimateCosts()`
 - `runExamples()`
@@ -3348,9 +3348,9 @@ This skill is not a replacement for proper testing — it augments existing test
 
 ## Example
 ```javascript
-const { deployClaudientToAWS } = require('./path/to/aws-deployment-integration-example.js');
+const { deployUitKitToAWS } = require('./path/to/aws-deployment-integration-example.js');
 
-const result = deployClaudientToAWS();
+const result = deployUitKitToAWS();
 console.log(result);
 ```
 
@@ -3715,13 +3715,13 @@ console.log(result);
 
 ---
 
-## CLAUDIENT SVG INSPECTOR Pattern
+## UITKIT SVG INSPECTOR Pattern
 
-**File:** scripts/claudient-svg-inspector.js
+**File:** scripts/uitkit-svg-inspector.js
 **Confidence:** 70%
 **Patterns:** function-export, data-serialization
 
-# CLAUDIENT SVG INSPECTOR Pattern
+# UITKIT SVG INSPECTOR Pattern
 
 ## When to activate
 When function-export functionality is needed
@@ -3733,7 +3733,7 @@ This skill is not a replacement for proper testing — it augments existing test
 - Avoid using this skill in performance-critical paths without profiling first
 
 ## Instructions
-**Overview:** claudient-svg-inspector.js
+**Overview:** uitkit-svg-inspector.js
 
 **Key Functions:**
 - `inspectMap(filePath, opts)`
@@ -3750,7 +3750,7 @@ This skill is not a replacement for proper testing — it augments existing test
 
 ## Example
 ```javascript
-const { inspectMap } = require('./path/to/claudient-svg-inspector.js');
+const { inspectMap } = require('./path/to/uitkit-svg-inspector.js');
 
 const result = inspectMap('filePath', 'opts');
 console.log(result);
@@ -3759,13 +3759,13 @@ console.log(result);
 
 ---
 
-## CLAUDIENT SWARM SANDBOX Pattern
+## UITKIT SWARM SANDBOX Pattern
 
-**File:** scripts/claudient-swarm-sandbox.js
+**File:** scripts/uitkit-swarm-sandbox.js
 **Confidence:** 70%
 **Patterns:** function-export, data-serialization
 
-# CLAUDIENT SWARM SANDBOX Pattern
+# UITKIT SWARM SANDBOX Pattern
 
 ## When to activate
 When function-export functionality is needed
@@ -3777,7 +3777,7 @@ This skill is not a replacement for proper testing — it augments existing test
 - Avoid using this skill in performance-critical paths without profiling first
 
 ## Instructions
-**Overview:** claudient-swarm-sandbox.js
+**Overview:** uitkit-swarm-sandbox.js
 
 **Key Functions:**
 - `generateId()`
@@ -3794,7 +3794,7 @@ This skill is not a replacement for proper testing — it augments existing test
 
 ## Example
 ```javascript
-const { generateId } = require('./path/to/claudient-swarm-sandbox.js');
+const { generateId } = require('./path/to/uitkit-swarm-sandbox.js');
 
 const result = generateId();
 console.log(result);
@@ -3909,7 +3909,7 @@ This skill is not a replacement for proper testing — it augments existing test
 - Avoid using this skill in performance-critical paths without profiling first
 
 ## Instructions
-**Overview:** Claudient Discord Bot
+**Overview:** UitKit Discord Bot
 
 **Key Functions:**
 - `searchSkills(query)`
@@ -4023,13 +4023,13 @@ console.log(result);
 
 ---
 
-## CLAUDIENTOS.DQQ7M7I5 Pattern
+## UITKITOS.DQQ7M7I5 Pattern
 
-**File:** site/dist/_astro/ClaudientOS.Dqq7M7i5.js
+**File:** site/dist/_astro/UitKitOS.Dqq7M7i5.js
 **Confidence:** 70%
 **Patterns:** function-export, async-handler, testing-utility
 
-# CLAUDIENTOS.DQQ7M7I5 Pattern
+# UITKITOS.DQQ7M7I5 Pattern
 
 ## When to activate
 When function-export functionality is needed
@@ -4058,7 +4058,7 @@ This skill is not a replacement for proper testing — it augments existing test
 
 ## Example
 ```javascript
-const { St } = require('./path/to/ClaudientOS.Dqq7M7i5.js');
+const { St } = require('./path/to/UitKitOS.Dqq7M7i5.js');
 
 const result = St();
 console.log(result);
@@ -5174,7 +5174,7 @@ This skill is not a replacement for proper testing — it augments existing test
 - Avoid using this skill in performance-critical paths without profiling first
 
 ## Instructions
-**Overview:** validate-frontmatter.js Validates that skill, agent, and hook markdown files follow Claudient's format.
+**Overview:** validate-frontmatter.js Validates that skill, agent, and hook markdown files follow UitKit's format.
 
 **Key Functions:**
 - `walkMarkdown(dir, callback)`
@@ -5242,13 +5242,13 @@ console.log(result);
 
 ---
 
-## CLAUDIENTOS.C04JYDAY Pattern
+## UITKITOS.C04JYDAY Pattern
 
-**File:** site/.vercel/output/static/_astro/ClaudientOS.C04jYDAy.js
+**File:** site/.vercel/output/static/_astro/UitKitOS.C04jYDAy.js
 **Confidence:** 60%
 **Patterns:** function-export, async-handler
 
-# CLAUDIENTOS.C04JYDAY Pattern
+# UITKITOS.C04JYDAY Pattern
 
 ## When to activate
 When function-export functionality is needed
@@ -5276,7 +5276,7 @@ This skill is not a replacement for proper testing — it augments existing test
 
 ## Example
 ```javascript
-const { ot } = require('./path/to/ClaudientOS.C04jYDAy.js');
+const { ot } = require('./path/to/UitKitOS.C04jYDAy.js');
 
 const result = ot();
 console.log(result);

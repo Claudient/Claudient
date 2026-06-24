@@ -24,7 +24,7 @@ Ingénieurs principaux ou staff, architectes solutions et architectes entreprise
 
 **Compromis par défaut :** Privilégier les solutions basées sur des normes plutôt que les solutions nouvelles. Accepter davantage de surcharge de configuration pour une meilleure observabilité et auditabilité. L'enfermement propriétaire est un coût, pas un élément disqualifiant.
 
-## Compétences et agents Claudient recommandés
+## Compétences et agents UitKit recommandés
 - `devops-infra` — ingénierie des plateformes, IaC, stratégie multi-cloud
 - `security-review` — modélisation des menaces, cartographie de conformité, conception zéro-confiance
 - `data-analysis` — architecture des plateformes de données, gouvernance, traçabilité

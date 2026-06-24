@@ -1,12 +1,12 @@
 # Guide du Graphe de Dépendances des Skills
 
-Ce guide explique comment analyser et visualiser les relations entre les skills et les agents dans Claudient à l'aide des outils de graphe de dépendances.
+Ce guide explique comment analyser et visualiser les relations entre les skills et les agents dans UitKit à l'aide des outils de graphe de dépendances.
 
 ---
 
 ## Présentation générale
 
-Le dépôt Claudient est un réseau de skills et d'agents. Au fil du temps, les skills se référencent les uns les autres — soit par nom, par fonctionnalité, soit par contexte. Comprendre ces dépendances vous aide à :
+Le dépôt UitKit est un réseau de skills et d'agents. Au fil du temps, les skills se référencent les uns les autres — soit par nom, par fonctionnalité, soit par contexte. Comprendre ces dépendances vous aide à :
 
 - **Identifier les grappes** : quels skills fonctionnent ensemble
 - **Repérer les orphelins** : skills auxquels personne ne fait référence (candidats à l'archivage)
@@ -226,7 +226,7 @@ Le guide `skill-composition` référence quatre skills essentiels. Vous connaiss
 
 ## Dépannage
 
-**Le graphe est vide ou a très peu d'arcs** : Assurez-vous que vous exécutez depuis la racine du dépôt (`/Users/tushar/Desktop/Claudient`). Le script cherche `skills/` et `agents/` relatif à la racine du dépôt.
+**Le graphe est vide ou a très peu d'arcs** : Assurez-vous que vous exécutez depuis la racine du dépôt (`/Users/tushar/Desktop/UitKit`). Le script cherche `skills/` et `agents/` relatif à la racine du dépôt.
 
 **Faux positifs (références incorrectement détectées)** : L'appariement est insensible à la casse et utilise les limites de mot. Les chaînes comme "agent" correspondent à "agent-handoff" (correct) mais pourraient aussi correspondre à "agent_supervisor" si vous n'êtes pas prudent. Examinez le contenu réel du fichier skill pour confirmer que la référence est intentionnelle.
 

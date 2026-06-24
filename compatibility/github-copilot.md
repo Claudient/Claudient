@@ -1,8 +1,8 @@
-# Claudient × GitHub Copilot
+# UitKit × GitHub Copilot
 
-> How to use Claudient content with GitHub Copilot custom instructions and VS Code settings.
+> How to use UitKit content with GitHub Copilot custom instructions and VS Code settings.
 
-GitHub Copilot integrates with VS Code and GitHub, offering two primary configuration points for custom instructions: repository-level `.github/copilot-instructions.md` and user-level settings in `github.copilot.chat.codeGeneration.instructions`. Claudient content adapts seamlessly to both.
+GitHub Copilot integrates with VS Code and GitHub, offering two primary configuration points for custom instructions: repository-level `.github/copilot-instructions.md` and user-level settings in `github.copilot.chat.codeGeneration.instructions`. UitKit content adapts seamlessly to both.
 
 ---
 
@@ -11,7 +11,7 @@ GitHub Copilot integrates with VS Code and GitHub, offering two primary configur
 GitHub Copilot supports:
 
 - **Markdown-based instructions** — Skills and rules map directly to `.github/copilot-instructions.md`
-- **Structured prompts** — Claudient's "When to activate" / "When NOT to use" / "Instructions" / "Example" pattern translates cleanly
+- **Structured prompts** — UitKit's "When to activate" / "When NOT to use" / "Instructions" / "Example" pattern translates cleanly
 - **Project context** — CLAUDE.md examples can be embedded in repository instructions
 - **Code generation guidance** — Copilot's code generation mode respects custom instructions
 
@@ -44,7 +44,7 @@ mkdir -p .github
 touch .github/copilot-instructions.md
 ```
 
-**Step 2: Adapt Claudient skills**
+**Step 2: Adapt UitKit skills**
 
 For each skill you want to enable in Copilot, create a section with this structure:
 
@@ -64,7 +64,7 @@ For each skill you want to enable in Copilot, create a section with this structu
 
 **Step 3: Example — Adapting the Docker skill**
 
-Original Claudient skill (from `skills/devops-infra/docker.md`):
+Original UitKit skill (from `skills/devops-infra/docker.md`):
 
 ```markdown
 # Docker Skill
@@ -177,7 +177,7 @@ __pycache__/
 
 ### Rules → copilot-instructions.md sections
 
-Claudient's rules are design principles and always-follow guidelines. These adapt directly to Copilot instructions with minimal change.
+UitKit's rules are design principles and always-follow guidelines. These adapt directly to Copilot instructions with minimal change.
 
 **Example — Adapting Git Rules**
 
@@ -299,7 +299,7 @@ These settings apply to Copilot's inline completions and chat code generation.
 
 ---
 
-### Workflow: Enabling a Claudient skill in your project
+### Workflow: Enabling a UitKit skill in your project
 
 1. **Pick a skill** — Browse `skills/` and select one relevant to your project (e.g., `skills/backend/fastapi.md` for API work)
 2. **Copy the Instructions section** — Extract the core guidance (recipes, patterns, best practices)
@@ -311,7 +311,7 @@ These settings apply to Copilot's inline completions and chat code generation.
 
 ## Compatibility matrix
 
-| Claudient content | GitHub Copilot equivalent | Effort |
+| UitKit content | GitHub Copilot equivalent | Effort |
 |---|---|---|
 | Skills (Markdown prompts) | `.github/copilot-instructions.md` sections | Low — direct copy + minimal formatting |
 | Commands (slash syntax) | Natural language in chat | Low — convert `/command` to "When you see X, apply Y" |
@@ -352,7 +352,7 @@ Copilot doesn't automate tasks on git events. Workaround: Use GitHub Actions.
 
 ## Quick-start template: .github/copilot-instructions.md
 
-Start with this template and add skills from Claudient:
+Start with this template and add skills from UitKit:
 
 ```markdown
 # GitHub Copilot Instructions
@@ -380,18 +380,18 @@ This file guides Copilot's code generation and chat behavior in this repository.
 
 ## Docker Best Practices
 
-[Copy from Claudient skills/devops-infra/docker.md]
+[Copy from UitKit skills/devops-infra/docker.md]
 
 ## [Additional skills as needed]
 
-[Copy from Claudient skills/]
+[Copy from UitKit skills/]
 ```
 
 ---
 
 ## Advanced: Creating a shared copilot-instructions repository
 
-For teams using Claudient, create a central repository of adapted instructions:
+For teams using UitKit, create a central repository of adapted instructions:
 
 ```
 copilot-instructions-shared/
@@ -423,7 +423,7 @@ See `docs/copilot-instructions/` for additional patterns:
 
 ## See also
 
-- [Claudient compatibility matrix](README.md) — Full support across all tools
+- [UitKit compatibility matrix](README.md) — Full support across all tools
 - [Cursor adapter](cursor.md) — Similar approach for Cursor's `.cursorrules`
 - [Windsurf adapter](windsurf.md) — Cascade workflows for agent-like behavior
-- [Claudient skills library](../skills/) — 380+ skills to adapt
+- [UitKit skills library](../skills/) — 380+ skills to adapt

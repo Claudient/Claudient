@@ -227,9 +227,9 @@
       <circle class="node-circle" cx="10" cy="10" r="12" fill="#1976D2" stroke="#333" stroke-width="1.5" />
       <text class="node-label" x="10" y="30" text-anchor="middle">AppContent.tsx</text>
     </g>
-    <g class="node" data-id="site/src/components/os/ClaudientOS.tsx" data-label="ClaudientOS.tsx" data-type="file" data-ext=".tsx">
+    <g class="node" data-id="site/src/components/os/UitKitOS.tsx" data-label="UitKitOS.tsx" data-type="file" data-ext=".tsx">
       <circle class="node-circle" cx="990" cy="10" r="12" fill="#1976D2" stroke="#333" stroke-width="1.5" />
-      <text class="node-label" x="990" y="30" text-anchor="middle">ClaudientOS.tsx</text>
+      <text class="node-label" x="990" y="30" text-anchor="middle">UitKitOS.tsx</text>
     </g>
     <g class="node" data-id="site/src/components/os/Desktop.tsx" data-label="Desktop.tsx" data-type="file" data-ext=".tsx">
       <circle class="node-circle" cx="990" cy="10" r="12" fill="#1976D2" stroke="#333" stroke-width="1.5" />

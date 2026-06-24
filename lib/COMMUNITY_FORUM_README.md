@@ -1,6 +1,6 @@
 # Community Forum System
 
-Complete internal forum/discussion platform for Claudient users with categories, gamification, reputation tracking, and leaderboards.
+Complete internal forum/discussion platform for UitKit users with categories, gamification, reputation tracking, and leaderboards.
 
 ## Features
 

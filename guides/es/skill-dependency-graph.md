@@ -1,12 +1,12 @@
 # Guía del gráfico de dependencias de habilidades
 
-Esta guía explica cómo analizar y visualizar las relaciones entre habilidades y agentes en Claudient usando las herramientas de gráfico de dependencias.
+Esta guía explica cómo analizar y visualizar las relaciones entre habilidades y agentes en UitKit usando las herramientas de gráfico de dependencias.
 
 ---
 
 ## Descripción general
 
-El repositorio Claudient es una red de habilidades y agentes. Con el tiempo, las habilidades se referencian mutuamente — ya sea por nombre, funcionalidad o contexto. Comprender estas dependencias le ayuda a:
+El repositorio UitKit es una red de habilidades y agentes. Con el tiempo, las habilidades se referencian mutuamente — ya sea por nombre, funcionalidad o contexto. Comprender estas dependencias le ayuda a:
 
 - **Identificar clústeres**: qué habilidades trabajan juntas
 - **Detectar huérfanos**: habilidades a las que nadie hace referencia (candidatos para archivo)
@@ -226,7 +226,7 @@ La guía `skill-composition` hace referencia a cuatro habilidades principales. A
 
 ## Solución de problemas
 
-**El gráfico está vacío o tiene muy pocos arcos**: Asegúrese de ejecutar desde la raíz del repositorio (`/Users/tushar/Desktop/Claudient`). El script busca `skills/` y `agents/` relativos a la raíz del repositorio.
+**El gráfico está vacío o tiene muy pocos arcos**: Asegúrese de ejecutar desde la raíz del repositorio (`/Users/tushar/Desktop/UitKit`). El script busca `skills/` y `agents/` relativos a la raíz del repositorio.
 
 **Falsos positivos (referencias incorrectamente detectadas)**: La coincidencia no distingue mayúsculas de minúsculas y usa límites de palabra. Cadenas como "agent" coinciden con "agent-handoff" (correcto) pero también podrían coincidir con "agent_supervisor" si no es cuidadoso. Revise el contenido actual del archivo de habilidad para confirmar que la referencia es intencional.
 

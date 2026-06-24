@@ -1,14 +1,14 @@
-# Claudient-skills gebruiken in Cursor, Windsurf, Copilot en Codex
+# UitKit-skills gebruiken in Cursor, Windsurf, Copilot en Codex
 
-Claudient-skills zijn eenvoudige Markdown-bestanden. Niets in hun formaat is Claude Code-specifiek — geen binaire bestanden, geen propriëtaire syntaxis, geen API-aanroepen. Dit maakt ze draagbaar naar elk belangrijk AI-codeerprogramma met een regel- of contextinjectiemechanisme.
+UitKit-skills zijn eenvoudige Markdown-bestanden. Niets in hun formaat is Claude Code-specifiek — geen binaire bestanden, geen propriëtaire syntaxis, geen API-aanroepen. Dit maakt ze draagbaar naar elk belangrijk AI-codeerprogramma met een regel- of contextinjectiemechanisme.
 
-Deze gids behandelt de mechanica van het overbrengen van een Claudient-skill naar Cursor, Windsurf, GitHub Copilot en OpenAI Codex CLI — wat werkt, wat niet werkt en waar de grens te trekken.
+Deze gids behandelt de mechanica van het overbrengen van een UitKit-skill naar Cursor, Windsurf, GitHub Copilot en OpenAI Codex CLI — wat werkt, wat niet werkt en waar de grens te trekken.
 
 ---
 
 ## Waarom het werkt
 
-Een Claudient-skill bestaat uit vier Markdown-secties: `When to activate`, `When NOT to use`, `Instructions` en `Example`. Het model leest dit als platte tekst en past zijn gedrag dienovereenkomstig aan.
+Een UitKit-skill bestaat uit vier Markdown-secties: `When to activate`, `When NOT to use`, `Instructions` en `Example`. Het model leest dit als platte tekst en past zijn gedrag dienovereenkomstig aan.
 
 Dit is precies wat elk AI-codeerprogramma doet wanneer u tekst in het regelbestand of instructiebestand plaatst — de tekst wordt onderdeel van de systeemprompt voordat uw verzoek wordt verwerkt. Het skill-formaat is al voor dit doel geoptimaliseerd:
 
@@ -16,7 +16,7 @@ Dit is precies wat elk AI-codeerprogramma doet wanneer u tekst in het regelbesta
 - `Instructions` bevat directieve taal ("altijd X doen", "nooit Y doen") in plaats van documentatietaal
 - `Example` verankert het model in de verwachte uitvoerstructuur
 
-Elk model dat een systeemprompt of aangepast instructiebestand accepteert, kan een Claudient-skill zonder wijzigingen gebruiken. U verliest Claude Code-specifieke functies (slash-opdrachtaanroepen, hooktriggers, subagent-delegatie), maar de kerngedragleidraad wordt volledig overgebracht.
+Elk model dat een systeemprompt of aangepast instructiebestand accepteert, kan een UitKit-skill zonder wijzigingen gebruiken. U verliest Claude Code-specifieke functies (slash-opdrachtaanroepen, hooktriggers, subagent-delegatie), maar de kerngedragleidraad wordt volledig overgebracht.
 
 ---
 
@@ -52,7 +52,7 @@ your-project/
 └── src/
 ```
 
-### Een Claudient-skill omzetten naar een Cursor-regel
+### Een UitKit-skill omzetten naar een Cursor-regel
 
 1. Kopieer het `.md`-bestand van `skills/` naar `.cursor/rules/`
 2. Wijzig de extensie van `.md` in `.mdc`
@@ -106,7 +106,7 @@ your-project/
 └── package.json
 ```
 
-### Een Claudient-skill omzetten
+### Een UitKit-skill omzetten
 
 Plak skill-inhoud rechtstreeks in `.windsurfrules`. Voor meerdere skills voegt u ze samen met een horizontale regel (`---`) als scheidingsteken:
 
@@ -148,7 +148,7 @@ your-project/
 
 De bestandsnaam moet precies `copilot-instructions.md` zijn. Copilot leest dit automatisch voor elke repository waar het aanwezig is.
 
-### Een Claudient-skill omzetten
+### Een UitKit-skill omzetten
 
 Plak skill-inhoud in `copilot-instructions.md`. Het viersectie-formaat wordt begrepen door GPT-4-klasse-modellen die Copilot aandrijven — de `When NOT to use`-sectie is bijzonder effectief in het voorkomen dat Copilot patronen in verkeerde context toepast.
 
@@ -201,7 +201,7 @@ your-project/
 └── src/
 ```
 
-### Een Claudient-skill omzetten
+### Een UitKit-skill omzetten
 
 Plak de skill rechtstreeks in `AGENTS.md`. Codex leest dit bestand bij sessiestart en voegt het in voor elk verzoek in die map.
 
@@ -307,6 +307,6 @@ Voor projectbezorgde regels ondersteunt Continue `@Rules`-blokken in `.continue/
 7. Test met taak die `When to activate` matched — verifieer model past `Instructions`-patronen toe
 8. Test met taak die `When NOT to use` matched — verifieer model past patronen niet toe
 
-De viersectie-structuur was ontworpen om zelfstandig te zijn. Een goed geschreven Claudient-skill zou minder dan 10 minuten moeten vergen om naar elk van deze programma's overgedragen te worden.
+De viersectie-structuur was ontworpen om zelfstandig te zijn. Een goed geschreven UitKit-skill zou minder dan 10 minuten moeten vergen om naar elk van deze programma's overgedragen te worden.
 
 ---

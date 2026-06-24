@@ -23,7 +23,7 @@ Ingenieros principales o senior, arquitectos de soluciones y arquitectos empresa
 
 **Compensaciones predeterminadas:** Prefiere soluciones basadas en estándares sobre las novedosas. Acepta más sobrecarga de configuración para mejor observabilidad y auditabilidad. El bloqueo de proveedores es un costo, no un punto de quiebre.
 
-## Habilidades y agentes Claudient recomendados
+## Habilidades y agentes UitKit recomendados
 - `devops-infra` — ingeniería de plataforma, IaC, estrategia multicloud
 - `security-review` — modelado de amenazas, mapeo de cumplimiento, diseño zero-trust
 - `data-analysis` — arquitectura de plataforma de datos, gobernanza, linaje

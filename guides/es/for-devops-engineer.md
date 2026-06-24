@@ -18,20 +18,20 @@ Eres un ingeniero de DevOps, SRE o ingeniero de plataforma responsable de la fia
 
 ```bash
 # Instalar el stack completo de DevOps/plataforma
-npx claudient add skill devops-infra/kubernetes
-npx claudient add skill devops-infra/terraform
-npx claudient add skill devops-infra/docker
-npx claudient add skill devops-infra/github-actions
-npx claudient add skill devops-infra/observability-designer
-npx claudient add skill devops-infra/incident-response
-npx claudient add skill devops-infra/aws-architect
-npx claudient add skill devops-infra/slo-architect
-npx claudient add skill devops-infra/oncall-runbook
-npx claudient add skill devops-infra/capacity-planner
-npx claudient add agents roles/sre-engineer
-npx claudient add agents roles/incident-commander
-npx claudient add agents roles/platform-engineer
-npx claudient add agents roles/kubernetes-architect
+npx uitkit add skill devops-infra/kubernetes
+npx uitkit add skill devops-infra/terraform
+npx uitkit add skill devops-infra/docker
+npx uitkit add skill devops-infra/github-actions
+npx uitkit add skill devops-infra/observability-designer
+npx uitkit add skill devops-infra/incident-response
+npx uitkit add skill devops-infra/aws-architect
+npx uitkit add skill devops-infra/slo-architect
+npx uitkit add skill devops-infra/oncall-runbook
+npx uitkit add skill devops-infra/capacity-planner
+npx uitkit add agents roles/sre-engineer
+npx uitkit add agents roles/incident-commander
+npx uitkit add agents roles/platform-engineer
+npx uitkit add agents roles/kubernetes-architect
 ```
 
 ---

@@ -18,17 +18,17 @@ Eres un growth marketer, performance marketer o growth hacker responsable de mov
 
 ```bash
 # Instalar la pila completa para growth marketers
-npx claudient add skill marketing/experiment-tracker
-npx claudient add skill marketing/growth-dashboard
-npx claudient add skill marketing/paid-ads
-npx claudient add skill marketing/onboarding-cro
-npx claudient add skill marketing/page-cro
-npx claudient add skill marketing/analytics-tracking
-npx claudient add skill marketing/referral-program
-npx claudient add skill marketing/pricing-strategy
-npx claudient add skill product/experiment-designer
-npx claudient add agent advisors/cmo-advisor
-npx claudient add agent advisors/cro-advisor
+npx uitkit add skill marketing/experiment-tracker
+npx uitkit add skill marketing/growth-dashboard
+npx uitkit add skill marketing/paid-ads
+npx uitkit add skill marketing/onboarding-cro
+npx uitkit add skill marketing/page-cro
+npx uitkit add skill marketing/analytics-tracking
+npx uitkit add skill marketing/referral-program
+npx uitkit add skill marketing/pricing-strategy
+npx uitkit add skill product/experiment-designer
+npx uitkit add agent advisors/cmo-advisor
+npx uitkit add agent advisors/cro-advisor
 ```
 
 ---

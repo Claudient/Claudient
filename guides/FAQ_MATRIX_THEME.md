@@ -1319,4 +1319,4 @@ Share the `.tar.gz` file with others.
 
 ---
 
-**Last updated: June 2026 | Questions? Open an issue in the Claudient repository.**
+**Last updated: June 2026 | Questions? Open an issue in the UitKit repository.**

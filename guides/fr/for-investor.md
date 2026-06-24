@@ -18,19 +18,19 @@ Vous êtes analyste en capital-risque, associé, partenaire ou business angel in
 
 ```bash
 # Install all investor skills
-npx claudient add skill finance/deal-screening
-npx claudient add skill finance/deal-memo
-npx claudient add skill finance/ic-memo
-npx claudient add skill finance/dcf-model
-npx claudient add skill finance/diligence-review
-npx claudient add skill finance/comps-analysis
-npx claudient add skill finance/portfolio-monitor
-npx claudient add skill finance/earnings-analysis
+npx uitkit add skill finance/deal-screening
+npx uitkit add skill finance/deal-memo
+npx uitkit add skill finance/ic-memo
+npx uitkit add skill finance/dcf-model
+npx uitkit add skill finance/diligence-review
+npx uitkit add skill finance/comps-analysis
+npx uitkit add skill finance/portfolio-monitor
+npx uitkit add skill finance/earnings-analysis
 
 # Install relevant agents
-npx claudient add agent advisors/cfo-advisor
-npx claudient add agent roles/quant-analyst
-npx claudient add agent roles/scientific-researcher
+npx uitkit add agent advisors/cfo-advisor
+npx uitkit add agent roles/quant-analyst
+npx uitkit add agent roles/scientific-researcher
 ```
 
 ---
@@ -191,7 +191,7 @@ What should I prioritize next week?
 ## Plan de montée en compétence sur 30 jours (nouvel analyste VC)
 
 ### Semaine 1 — Maîtrise de la présélection des deals
-- Installer toutes les compétences investisseur : `npx claudient add skill finance/[name]`
+- Installer toutes les compétences investisseur : `npx uitkit add skill finance/[name]`
 - Exécuter `/deal-screening` sur 20 deals récents de l'archive de votre fonds — comparer votre output aux décisions des partenaires
 - Comprendre l'ICP de votre fonds : stade, secteur, taille de chèque, stratégie de suivi
 - Lire la compétence `/comps-analysis` — comprendre comment fonctionnent les multiples dans vos secteurs

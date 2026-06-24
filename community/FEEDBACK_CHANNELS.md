@@ -1,6 +1,6 @@
 # Community Feedback Channels
 
-This document outlines where and how to submit feedback, report issues, and suggest improvements for Claudient. We value your input and are committed to timely, thoughtful responses.
+This document outlines where and how to submit feedback, report issues, and suggest improvements for UitKit. We value your input and are committed to timely, thoughtful responses.
 
 ---
 
@@ -9,13 +9,13 @@ This document outlines where and how to submit feedback, report issues, and sugg
 ### GitHub Discussions
 **Best for:** Feature requests, high-level questions, discussions about stack design, feedback on documentation
 
-- **URL:** https://github.com/claudient/claudient/discussions
+- **URL:** https://github.com/uitkit/uitkit/discussions
 - **Categories:**
   - **Stack Showcase** — Share your published stacks, ask for design feedback
   - **Feature Ideas** — Propose new features or improvements to existing ones
   - **Getting Help** — Ask questions about stack development, CLAUDE.md structure, skill design
   - **Show & Tell** — Share cool use cases or interesting workflows
-  - **Announcements** — Official updates from Claudient maintainers
+  - **Announcements** — Official updates from UitKit maintainers
 
 **Response SLA:** 48 hours for acknowledgment; full response within 1 week
 
@@ -30,12 +30,12 @@ This document outlines where and how to submit feedback, report issues, and sugg
 ### GitHub Issues
 **Best for:** Bug reports, technical problems, documentation errors, security concerns
 
-- **URL:** https://github.com/claudient/claudient/issues
+- **URL:** https://github.com/uitkit/uitkit/issues
 - **Types:**
   - **Bug:** Something doesn't work as documented
   - **Documentation:** README, guides, or examples need clarification
   - **Enhancement:** Minor improvements to existing functionality
-  - **Security:** Vulnerabilities (email security@claudient.dev instead for sensitive issues)
+  - **Security:** Vulnerabilities (email security@uitkit.dev instead for sensitive issues)
 
 **Response SLA:** 24 hours for critical bugs; 72 hours for all others
 
@@ -50,7 +50,7 @@ This document outlines where and how to submit feedback, report issues, and sugg
 ### Discord Server
 **Best for:** Real-time chat, community help, live debugging, networking with other contributors
 
-- **Server:** [https://discord.gg/claudient](https://discord.gg/claudient)
+- **Server:** [https://discord.gg/uitkit](https://discord.gg/uitkit)
 - **Key channels:**
   - **#general** — News, announcements, community chat
   - **#matrix-theme** — Feedback and discussion for the matrix-theme stack
@@ -73,7 +73,7 @@ This document outlines where and how to submit feedback, report issues, and sugg
 ### Reddit
 **Best for:** Broader audience reach, community discussions, best practices sharing
 
-- **Subreddit:** [r/claudient](https://reddit.com/r/claudient)
+- **Subreddit:** [r/uitkit](https://reddit.com/r/uitkit)
 - **Categories:**
   - Stack releases and updates
   - Tips, tricks, and workflows
@@ -83,7 +83,7 @@ This document outlines where and how to submit feedback, report issues, and sugg
 **Response SLA:** 72 hours from moderators/maintainers
 
 **Guidelines:**
-- Follow r/claudient community rules
+- Follow r/uitkit community rules
 - Search the subreddit before posting
 - Use flairs: [Help], [Stack Release], [Tutorial], [Discussion]
 - Cross-link with GitHub Issues for technical problems
@@ -93,14 +93,14 @@ This document outlines where and how to submit feedback, report issues, and sugg
 ### Email List
 **Best for:** Newsletters, long-form feedback, formal inquiries, privacy-sensitive topics
 
-- **Mailing List:** [community-list@claudient.dev](mailto:community-list@claudient.dev)
-- **Subscribe:** [https://claudient.dev/subscribe](https://claudient.dev/subscribe)
+- **Mailing List:** [community-list@uitkit.dev](mailto:community-list@uitkit.dev)
+- **Subscribe:** [https://uitkit.dev/subscribe](https://uitkit.dev/subscribe)
 
 **Use cases:**
 - Subscribe for monthly newsletters (stack releases, community highlights, roadmap updates)
 - Submit lengthy feature proposals or design feedback
-- Report sensitive security issues (email security@claudient.dev)
-- Private correspondence with Claudient maintainers
+- Report sensitive security issues (email security@uitkit.dev)
+- Private correspondence with UitKit maintainers
 
 **Response SLA:** 5 business days
 
@@ -116,17 +116,17 @@ This document outlines where and how to submit feedback, report issues, and sugg
 Each featured stack has its own feedback channel:
 
 ### Matrix Theme Stack
-- **GitHub Issues:** https://github.com/claudient/matrix-theme/issues
+- **GitHub Issues:** https://github.com/uitkit/matrix-theme/issues
 - **Discord:** #matrix-theme
 - **Use cases:** Theme customization issues, color/layout improvements, documentation
 
 ### SVG Inspector Stack
-- **GitHub Issues:** https://github.com/claudient/svg-inspector/issues
+- **GitHub Issues:** https://github.com/uitkit/svg-inspector/issues
 - **Discord:** #svg-inspector
 - **Use cases:** SVG parsing bugs, visualization improvements, feature requests
 
 ### Swarm Sandbox Stack
-- **GitHub Issues:** https://github.com/claudient/swarm-sandbox/issues
+- **GitHub Issues:** https://github.com/uitkit/swarm-sandbox/issues
 - **Discord:** #swarm-sandbox
 - **Use cases:** Multi-agent coordination, example workflows, performance tuning
 
@@ -172,20 +172,20 @@ Each featured stack has its own feedback channel:
 
 **If your issue isn't resolved within the SLA:**
 
-1. **GitHub Issues:** Add a comment pinging a maintainer (`@claudient-maintainers`)
+1. **GitHub Issues:** Add a comment pinging a maintainer (`@uitkit-maintainers`)
 2. **Discord:** Move to #help or tag a moderator
 3. **Email:** Reply to your thread or open a new issue with `[URGENT]` prefix
-4. **Reddit:** Report the post to r/claudient moderators
+4. **Reddit:** Report the post to r/uitkit moderators
 
 **For critical bugs:**
-- If affecting production use, email security@claudient.dev with `[CRITICAL]` in subject
+- If affecting production use, email security@uitkit.dev with `[CRITICAL]` in subject
 - Include workarounds if available
 
 ---
 
 ## Feedback Review & Prioritization
 
-Claudient maintainers review feedback using this priority model:
+UitKit maintainers review feedback using this priority model:
 
 1. **Critical bugs** (functionality broken, data loss, security) → 24h review
 2. **High-impact feature requests** (solve common problems, align with roadmap) → 1-2 weeks
@@ -198,7 +198,7 @@ Claudient maintainers review feedback using this priority model:
 ## Community Moderation
 
 Our Discord and Reddit communities are moderated by:
-- Claudient core team
+- UitKit core team
 - Volunteer community moderators
 - Stack maintainers
 
@@ -208,19 +208,19 @@ Our Discord and Reddit communities are moderated by:
 - Discussions that violate community standards may result in warnings or bans
 - Maintainers reserve the right to close discussions or lock threads if they become unproductive
 
-**Report abuse:** Use Discord's report feature or email community@claudient.dev
+**Report abuse:** Use Discord's report feature or email community@uitkit.dev
 
 ---
 
 ## Feedback Loop & Transparency
 
-**How feedback shapes Claudient:**
+**How feedback shapes UitKit:**
 1. All feedback is logged and reviewed in quarterly retrospectives
 2. The top 5-10 items are discussed by the core team
 3. Approved features/changes are added to the public roadmap
 4. Community is notified when their feedback is acted upon (via announcements, Discord, email)
 
-**Roadmap:** https://github.com/claudient/claudient/blob/main/ROADMAP.md
+**Roadmap:** https://github.com/uitkit/uitkit/blob/main/ROADMAP.md
 
 ---
 
@@ -228,10 +228,10 @@ Our Discord and Reddit communities are moderated by:
 
 | Topic | Email | Channel |
 |-------|-------|---------|
-| **General Feedback** | community@claudient.dev | GitHub Discussions / Discord |
-| **Security Issues** | security@claudient.dev | Email (private) |
+| **General Feedback** | community@uitkit.dev | GitHub Discussions / Discord |
+| **Security Issues** | security@uitkit.dev | Email (private) |
 | **Stack Support** | [stack-author@email.com] | Stack-specific repo or Discord |
-| **Business Inquiries** | hello@claudient.dev | Email |
+| **Business Inquiries** | hello@uitkit.dev | Email |
 
 ---
 
@@ -248,4 +248,4 @@ Contributors are credited in each stack's README and in the monthly community ne
 
 ---
 
-**Last updated:** June 22, 2026 | **Maintained by:** Claudient Community Team
+**Last updated:** June 22, 2026 | **Maintained by:** UitKit Community Team

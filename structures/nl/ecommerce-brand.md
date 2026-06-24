@@ -184,32 +184,32 @@ touch ecommerce-brand/vendors/supplier-directory.md
 touch ecommerce-brand/vendors/po-template.md
 touch ecommerce-brand/CLAUDE.md
 
-# Claudient-vaardigheden installeren
-npx claudient add skill small-business/shopify-operations
-npx claudient add skill small-business/product-listing-optimizer
-npx claudient add skill marketing/email-sequence
-npx claudient add skill marketing/klaviyo-campaign
-npx claudient add skill marketing/paid-ads
-npx claudient add skill marketing/page-cro
-npx claudient add skill operations/inventory-management
-npx claudient add skill operations/customer-service-escalation
-npx claudient add skill data-ml/weekly-performance-report
+# UitKit-vaardigheden installeren
+npx uitkit add skill small-business/shopify-operations
+npx uitkit add skill small-business/product-listing-optimizer
+npx uitkit add skill marketing/email-sequence
+npx uitkit add skill marketing/klaviyo-campaign
+npx uitkit add skill marketing/paid-ads
+npx uitkit add skill marketing/page-cro
+npx uitkit add skill operations/inventory-management
+npx uitkit add skill operations/customer-service-escalation
+npx uitkit add skill data-ml/weekly-performance-report
 
 # Schuine opdrachten installeren
-npx claudient add command product-launch
-npx claudient add command listing-optimizer
-npx claudient add command campaign-brief
-npx claudient add command email-copy
-npx claudient add command sms-copy
-npx claudient add command ad-copy-meta
-npx claudient add command ad-copy-pmax
-npx claudient add command inventory-check
-npx claudient add command reorder-draft
-npx claudient add command cs-macro
-npx claudient add command escalation-handler
-npx claudient add command subscription-retention
-npx claudient add command review-response
-npx claudient add command weekly-report
+npx uitkit add command product-launch
+npx uitkit add command listing-optimizer
+npx uitkit add command campaign-brief
+npx uitkit add command email-copy
+npx uitkit add command sms-copy
+npx uitkit add command ad-copy-meta
+npx uitkit add command ad-copy-pmax
+npx uitkit add command inventory-check
+npx uitkit add command reorder-draft
+npx uitkit add command cs-macro
+npx uitkit add command escalation-handler
+npx uitkit add command subscription-retention
+npx uitkit add command review-response
+npx uitkit add command weekly-report
 ```
 
 ---
@@ -454,16 +454,16 @@ Output: gestructureerde vertelsel over MER, blended ROAS, nCAC, AOV, top 5 SKU's
 ## Vaardigheden om te installeren
 
 ```bash
-npx claudient add skill small-business/shopify-operations
-npx claudient add skill small-business/product-listing-optimizer
-npx claudient add skill marketing/email-sequence
-npx claudient add skill marketing/klaviyo-campaign
-npx claudient add skill marketing/paid-ads
-npx claudient add skill marketing/page-cro
-npx claudient add skill operations/inventory-management
-npx claudient add skill operations/customer-service-escalation
-npx claudient add skill data-ml/weekly-performance-report
-npx claudient add skill productivity/vendor-evaluator
+npx uitkit add skill small-business/shopify-operations
+npx uitkit add skill small-business/product-listing-optimizer
+npx uitkit add skill marketing/email-sequence
+npx uitkit add skill marketing/klaviyo-campaign
+npx uitkit add skill marketing/paid-ads
+npx uitkit add skill marketing/page-cro
+npx uitkit add skill operations/inventory-management
+npx uitkit add skill operations/customer-service-escalation
+npx uitkit add skill data-ml/weekly-performance-report
+npx uitkit add skill productivity/vendor-evaluator
 ```
 
 ---

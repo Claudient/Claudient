@@ -1,4 +1,4 @@
-# Multi-stage build for Claudient
+# Multi-stage build for UitKit
 # Stage 1: Builder
 FROM node:20-alpine AS builder
 
@@ -167,7 +167,7 @@ RUN mkdir -p /app/bin && \
 node /app/bin/health-server.js &
 HEALTH_PID=$!
 
-# Start Claudient CLI/dashboard
+# Start UitKit CLI/dashboard
 exec "$@"
 
 # Cleanup on exit
@@ -198,7 +198,7 @@ EXPOSE 9000 4321 3000
 VOLUME ["/root/.claude"]
 
 # Metadata
-LABEL org.opencontainers.image.title="Claudient" \
+LABEL org.opencontainers.image.title="UitKit" \
       org.opencontainers.image.description="Claude Code Knowledge System - Skills, Agents, Hooks, Workflows" \
       org.opencontainers.image.authors="tushar2704" \
-      org.opencontainers.image.url="https://github.com/UitbreidenOS/Claudient"
+      org.opencontainers.image.url="https://github.com/UitbreidenOS/UitKit"

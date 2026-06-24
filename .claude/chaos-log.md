@@ -1,6 +1,6 @@
 # Chaos Monkey Resilience Audit Log
 
-Generated: 2026-06-22T10:45:38.040Z | Reference Workspace: `/Users/tushar/Desktop/Claudient`
+Generated: 2026-06-22T10:45:38.040Z | Reference Workspace: `/Users/tushar/Desktop/UitKit`
 Chaos Mode: **Network Latency & Boundary Failures**
 Test Suite Stability: DEGRADED 🔴
 
@@ -27,7 +27,7 @@ CLI Smoke Tests
   ✓ validate-stacks passes
   ✓ rejects unknown category
   ✓ tribunal PR adversarial review
-  ✗ bisect regression finder: [31mError during git bisect:[0m fatal: Unable to create '/Users/tushar/Desktop/Claudient/.git/inde
+  ✗ bisect regression finder: [31mError during git bisect:[0m fatal: Unable to create '/Users/tushar/Desktop/UitKit/.git/inde
   ✓ oracle impact analysis
   ✓ nightshift daemon
   ✓ caveman token optimizer

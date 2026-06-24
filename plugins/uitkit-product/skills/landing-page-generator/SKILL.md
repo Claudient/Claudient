@@ -253,21 +253,21 @@ OG image: [path or description]
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Claudient — Skills, Agents & Plugins for Claude Code',
+  title: 'UitKit — Skills, Agents & Plugins for Claude Code',
   description: 'The community-powered knowledge system for Claude Code. 150+ skills, 22 agents, and hooks for developers, GTM teams, and business owners.',
   keywords: ['claude code', 'ai productivity', 'developer tools', 'claude skills'],
 
   openGraph: {
-    title: 'Claudient — Skills & Agents for Claude Code',
-    description: '150+ skills across 15 categories. Install with: npx claudient add all',
-    url: 'https://claudient.dev',
-    siteName: 'Claudient',
+    title: 'UitKit — Skills & Agents for Claude Code',
+    description: '150+ skills across 15 categories. Install with: npx uitkit add all',
+    url: 'https://uitkit.dev',
+    siteName: 'UitKit',
     images: [{ url: '/social-preview.png', width: 1280, height: 640 }],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Claudient — Skills & Agents for Claude Code',
+    title: 'UitKit — Skills & Agents for Claude Code',
     description: '150+ skills across 15 categories.',
     images: ['/social-preview.png'],
   },
@@ -276,7 +276,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://claudient.dev',
+    canonical: 'https://uitkit.dev',
   },
 }
 

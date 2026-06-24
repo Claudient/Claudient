@@ -662,4 +662,4 @@ For large deployments (10k+ requirements), consider:
 
 ## License
 
-Part of Claudient ecosystem. See main repository for details.
+Part of UitKit ecosystem. See main repository for details.

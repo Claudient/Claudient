@@ -178,10 +178,10 @@ function main() {
 
   console.error(`${RED}Unknown action: "${action}"${RESET}`);
   console.error(`Available commands:`);
-  console.error(`  npx claudient permissions list`);
-  console.error(`  npx claudient permissions allow <rule>`);
-  console.error(`  npx claudient permissions deny <rule>`);
-  console.error(`  npx claudient permissions remove <rule>`);
+  console.error(`  npx uitkit permissions list`);
+  console.error(`  npx uitkit permissions allow <rule>`);
+  console.error(`  npx uitkit permissions deny <rule>`);
+  console.error(`  npx uitkit permissions remove <rule>`);
   process.exit(1);
 }
 

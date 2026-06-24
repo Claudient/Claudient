@@ -267,11 +267,11 @@ Prospect research data (DonorSearch ratings, iWave scores, wealth estimates) is 
 EOF
 
 # Nonprofit-Skills installieren
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/investor-update
-npx claudient add skill productivity/process-mapper
-npx claudient add skill data-ml/stakeholder-report
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/investor-update
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill data-ml/stakeholder-report
 ```
 
 ## CLAUDE.md-Vorlage
@@ -513,23 +513,23 @@ Specific ask: [gift amount suggestion, upgrade amount, or event RSVP]
 
 ```bash
 # Grant writing and reporting
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/investor-update
-npx claudient add skill productivity/process-mapper
-npx claudient add skill data-ml/stakeholder-report
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/investor-update
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill data-ml/stakeholder-report
 
 # Donor communications and fundraising
-npx claudient add skill productivity/vendor-evaluator
-npx claudient add skill productivity/lesson-planner
+npx uitkit add skill productivity/vendor-evaluator
+npx uitkit add skill productivity/lesson-planner
 
 # Board and governance
-npx claudient add skill productivity/engineering-strategy
-npx claudient add skill productivity/doc-site-builder
+npx uitkit add skill productivity/engineering-strategy
+npx uitkit add skill productivity/doc-site-builder
 
 # Program management and outcomes
-npx claudient add skill productivity/student-feedback-analyzer
-npx claudient add skill productivity/interview-scorecard
+npx uitkit add skill productivity/student-feedback-analyzer
+npx uitkit add skill productivity/interview-scorecard
 ```
 
 ## Verwandt

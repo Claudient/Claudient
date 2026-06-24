@@ -546,7 +546,7 @@ Contributions welcome! Please submit pull requests with:
 
 For issues, questions, or suggestions:
 - GitHub Issues
-- Email: support@claudient.ai
+- Email: support@uitkit.ai
 - Documentation: /docs
 
 ---

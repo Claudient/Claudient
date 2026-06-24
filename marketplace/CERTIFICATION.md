@@ -1,6 +1,6 @@
-# Claudient Stack Certification Tiers
+# UitKit Stack Certification Tiers
 
-This document defines the certification levels for stacks in the Claudient Marketplace. Certified stacks have met quantified quality standards and maintenance commitments.
+This document defines the certification levels for stacks in the UitKit Marketplace. Certified stacks have met quantified quality standards and maintenance commitments.
 
 ## Certification Tiers
 
@@ -58,7 +58,7 @@ This document defines the certification levels for stacks in the Claudient Marke
 - Meets all Silver tier requirements
 - Minimum 200 installs over 180 days
 - Average user rating 4.5 or higher
-- Official maintainer endorsement (official Claudient team member or verified community maintainer with track record)
+- Official maintainer endorsement (official UitKit team member or verified community maintainer with track record)
 - Comprehensive documentation and examples
 - Multi-language support (minimum: English + 1 additional language)
 

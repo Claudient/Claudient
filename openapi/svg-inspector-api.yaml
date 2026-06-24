@@ -7,8 +7,8 @@ info:
     and multi-format export (GeoJSON, TopoJSON, CSV, PNG, SVG).
   version: 1.0.0
   contact:
-    name: Claudient
-    url: https://github.com/tushar2704/Claudient
+    name: UitKit
+    url: https://github.com/tushar2704/UitKit
   license:
     name: MIT
 

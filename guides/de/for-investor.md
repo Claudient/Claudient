@@ -18,19 +18,19 @@ Du bist Venture-Capital-Analyst, Associate, Partner oder unabhängiger Angel-Inv
 
 ```bash
 # Installiere alle Investor-Skills
-npx claudient add skill finance/deal-screening
-npx claudient add skill finance/deal-memo
-npx claudient add skill finance/ic-memo
-npx claudient add skill finance/dcf-model
-npx claudient add skill finance/diligence-review
-npx claudient add skill finance/comps-analysis
-npx claudient add skill finance/portfolio-monitor
-npx claudient add skill finance/earnings-analysis
+npx uitkit add skill finance/deal-screening
+npx uitkit add skill finance/deal-memo
+npx uitkit add skill finance/ic-memo
+npx uitkit add skill finance/dcf-model
+npx uitkit add skill finance/diligence-review
+npx uitkit add skill finance/comps-analysis
+npx uitkit add skill finance/portfolio-monitor
+npx uitkit add skill finance/earnings-analysis
 
 # Installiere relevante Agents
-npx claudient add agent advisors/cfo-advisor
-npx claudient add agent roles/quant-analyst
-npx claudient add agent roles/scientific-researcher
+npx uitkit add agent advisors/cfo-advisor
+npx uitkit add agent roles/quant-analyst
+npx uitkit add agent roles/scientific-researcher
 ```
 
 ---
@@ -191,7 +191,7 @@ Was sollte ich nächste Woche priorisieren?
 ## 30-Tage-Einarbeitungsplan (neuer VC-Analyst)
 
 ### Woche 1 — Deal-Screening-Beherrschung
-- Installiere alle Investor-Skills: `npx claudient add skill finance/[name]`
+- Installiere alle Investor-Skills: `npx uitkit add skill finance/[name]`
 - Führe `/deal-screening` bei 20 aktuellen Deals aus dem Archiv deines Fonds durch — vergleiche deine Ausgabe mit den Entscheidungen der Partner
 - Verstehe das ICP deines Fonds: Stage, Sektor, Checkgröße, Follow-on-Strategie
 - Lies den `/comps-analysis`-Skill — verstehe, wie Multiples in deinen Sektoren funktionieren

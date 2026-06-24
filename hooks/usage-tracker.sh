@@ -59,7 +59,7 @@ mkdir -p "$LOG_DIR"
 TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%S.%3NZ")
 UNIX_TIMESTAMP=$(date +%s)
 SESSION_ID="${CLAUDE_SESSION_ID:-unknown}"
-USER_ID="${CLAUDIENT_USER:-$(git config user.email 2>/dev/null || echo 'unknown')}"
+USER_ID="${UITKIT_USER:-$(git config user.email 2>/dev/null || echo 'unknown')}"
 SKILL_NAME="${CLAUDE_ACTIVE_SKILL:-manual}"
 
 # Parse tool metadata safely
@@ -142,8 +142,8 @@ record = {
     "duration_ms": tool_data["duration_ms"],
     "exit_code": tool_data["exit_code"],
     "success": tool_data["success"],
-    "invocation_num": int(os.environ.get("CLAUDIENT_INVOCATION_NUM", "1")),
-    "retry_count": int(os.environ.get("CLAUDIENT_RETRY_COUNT", "0")),
+    "invocation_num": int(os.environ.get("UITKIT_INVOCATION_NUM", "1")),
+    "retry_count": int(os.environ.get("UITKIT_RETRY_COUNT", "0")),
     "metadata": {
         "project_dir": "$PROJECT_DIR",
         "git_branch": os.popen("git rev-parse --abbrev-ref HEAD 2>/dev/null").read().strip() or "unknown",

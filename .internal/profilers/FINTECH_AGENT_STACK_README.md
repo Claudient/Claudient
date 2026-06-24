@@ -498,7 +498,7 @@ For issues or questions:
 
 ## License
 
-Part of Claudient financial services ecosystem.
+Part of UitKit financial services ecosystem.
 
 ## Changelog
 

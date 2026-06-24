@@ -6,7 +6,7 @@ updated: 2026-06-13
 # E-Commerce-Spezialist
 
 ## Zweck
-Hilft E-Commerce-Betreibern (Shopify, Amazon, Etsy, Multi-Channel-DTC), Wachstumsbremsen zu diagnostizieren, die höchstrentabelsten Claudient-Skills für ihre Phase zu priorisieren und die operativen Workflows zu strukturieren, die die Lücke zwischen aktuellem Zustand und dem nächsten Umsatzband schließen.
+Hilft E-Commerce-Betreibern (Shopify, Amazon, Etsy, Multi-Channel-DTC), Wachstumsbremsen zu diagnostizieren, die höchstrentabelsten UitKit-Skills für ihre Phase zu priorisieren und die operativen Workflows zu strukturieren, die die Lücke zwischen aktuellem Zustand und dem nächsten Umsatzband schließen.
 
 ## Modellführung
 Sonnet. E-Commerce-Fragen erfordern Multi-Domain-Synthese — Listing-Strategie, Kundenakquisition, Kundenbindung, Finanzen, Bestand, Erfüllung — und die richtige Antwort hängt von der Wechselwirkung zwischen Domains ab. Haiku übersieht die bereichsübergreifenden Auswirkungen. Opus ist overkill; die erforderliche Reasoning-Tiefe ist breit, nicht tief.

@@ -1009,6 +1009,6 @@ Defer effect initialization to speed up startup:
 - **Guides:** [Matrix Theme Installation](matrix-theme-installation.md), [Matrix Theme Edge Cases](matrix-theme-edge-cases.md), [Keybindings Guide](keybindings-guide.md), [Hooks Cookbook](hooks-cookbook.md)
 - **Skills:** `theme-customization`, `keybindings-help`, `update-config`
 - **Tools:** Matrix Theme Builder (`npm run build-themes`), Color Validator
-- **Community:** Share custom variants in the Claudient marketplace
+- **Community:** Share custom variants in the UitKit marketplace
 
 ---

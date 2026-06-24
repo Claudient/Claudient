@@ -1,12 +1,12 @@
 # Uw Stack Certificeren
 
-Deze gids leidt u stap voor stap door het proces van certificering van uw stack in de Claudient Marketplace.
+Deze gids leidt u stap voor stap door het proces van certificering van uw stack in de UitKit Marketplace.
 
 ## Vereisten
 
 Voordat u certificering aanvraagt, zorg ervoor dat uw stack:
 
-1. **Al is gepubliceerd** in de Claudient Marketplace met positieve feedback
+1. **Al is gepubliceerd** in de UitKit Marketplace met positieve feedback
 2. **Aan basiscriteria voldoet** (zie VETTING.md)
 3. **Een GitHub-repository heeft** (openbaar, actief, onderhouden)
 4. **Aan minimumvereisten voldoet** voor uw doelniveau:
@@ -121,7 +121,7 @@ Maak een document met:
 
 ## Stap 4: Certificeringsreview Aanvragen
 
-Stuur een e-mail naar **marketplace@claudient.dev** met onderwerpregel:
+Stuur een e-mail naar **marketplace@uitkit.dev** met onderwerpregel:
 
 ```
 Certification Request: [Stack Name] - [Tier] Tier
@@ -212,7 +212,7 @@ Na goedkeuring:
 **30 dagen vóór vervaldatum:**
 - U ontvangt kennisgeving van hercertificering
 - Controleer of huidige metriek nog steeds aan niveau-vereisten voldoet
-- Dien hercertificeringsbevestiging in bij marketplace@claudient.dev
+- Dien hercertificeringsbevestiging in bij marketplace@uitkit.dev
 
 **Als metriek is afgenomen:**
 - Stack kan met één niveau worden gedowngraad
@@ -237,7 +237,7 @@ Het verlengingsproces is identiek aan eerste certificering.
 Voor upgrade van Brons naar Zilver of Zilver naar Goud:
 
 1. Zorg ervoor dat nieuwe metriek doelniveau bereikt
-2. Stuur upgrade-aanvraag naar marketplace@claudient.dev met bijgewerkte kwaliteitsscore
+2. Stuur upgrade-aanvraag naar marketplace@uitkit.dev met bijgewerkte kwaliteitsscore
 3. Kernteam verifiëert metriek (2-3 werkdagen)
 4. Na goedkeuring worden vermelding en badge bijgewerkt
 
@@ -258,8 +258,8 @@ Als uw certificering wordt ingetrokken:
 
 - **Certificeringscriteria:** Zie [certification-criteria.md](./certification-criteria.md)
 - **Niveaudetails:** Zie [../CERTIFICATION.md](../CERTIFICATION.md)
-- **Algemene vragen:** marketplace@claudient.dev
-- **Community-discussie:** [GitHub Discussions](https://github.com/claudients/claudient/discussions)
+- **Algemene vragen:** marketplace@uitkit.dev
+- **Community-discussie:** [GitHub Discussions](https://github.com/uitkits/uitkit/discussions)
 
 ---
 

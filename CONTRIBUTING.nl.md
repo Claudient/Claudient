@@ -1,8 +1,8 @@
 > 🇳🇱 Nederlandse versie. [Engelse versie](CONTRIBUTING.md).
 
-# Bijdragen aan Claudient
+# Bijdragen aan UitKit
 
-Claudient groeit door bijdragen van de community. Als u een skill, agent, hook, workflow of prompt heeft die Claude Code voor u aanzienlijk beter heeft gemaakt — dan hoort het hier.
+UitKit groeit door bijdragen van de community. Als u een skill, agent, hook, workflow of prompt heeft die Claude Code voor u aanzienlijk beter heeft gemaakt — dan hoort het hier.
 
 ---
 
@@ -119,6 +119,6 @@ Open een GitHub Discussion als u niet zeker weet waar iets thuishoort of als u f
 
 ## Met ons samenwerken
 
-Claudient wordt ondersteund door [Uitbreiden](https://uitbreiden.com/) — wij bouwen AI-producten samen met ontwikkelaarsgemeenschappen en leveren B2B-AI-oplossingen. Als u verder wilt gaan dan bijdragen aan deze repository en daadwerkelijk AI-producten of B2B-oplossingen met ons wilt bouwen, neem dan contact op.
+UitKit wordt ondersteund door [Uitbreiden](https://uitbreiden.com/) — wij bouwen AI-producten samen met ontwikkelaarsgemeenschappen en leveren B2B-AI-oplossingen. Als u verder wilt gaan dan bijdragen aan deze repository en daadwerkelijk AI-producten of B2B-oplossingen met ons wilt bouwen, neem dan contact op.
 
 **[uitbreiden.com](https://uitbreiden.com/) · [Reddit](https://www.reddit.com/r/uitbreiden/) · [YouTube](https://www.youtube.com/@UITBREIDEN)**

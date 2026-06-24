@@ -294,7 +294,7 @@ Executing with inherited engine retry logic:
 
 ### User Invocation
 ```bash
-$ claudient dont-stop "Build dashboard, run tests, deploy to staging"
+$ uitkit dont-stop "Build dashboard, run tests, deploy to staging"
 ```
 
 ### Internal Flow
@@ -439,7 +439,7 @@ Legend:
   Pending: [task_2]
 
 Execution paused. To resume:
-  $ claudient dont-stop --resume
+  $ uitkit dont-stop --resume
 ```
 
 ### Checkpoint File
@@ -479,7 +479,7 @@ Execution paused. To resume:
 
 ### Resume Execution
 ```bash
-$ claudient dont-stop --resume
+$ uitkit dont-stop --resume
 
 ⟲ Resuming from checkpoint: 2026-06-22T10:30:45Z
 
@@ -601,4 +601,4 @@ engine.on('taskCompleted', (event) => {
 
 ---
 
-**All integrations are real, working code running in the Claudient system.**
+**All integrations are real, working code running in the UitKit system.**

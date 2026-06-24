@@ -35,7 +35,7 @@ async function main() {
 
   if (!commitMessage) {
     console.error(`${RED}Error: Commit message is required.${RESET}`);
-    console.error(`Usage: npx claudient commit -m "your message"`);
+    console.error(`Usage: npx uitkit commit -m "your message"`);
     process.exit(1);
   }
 
@@ -47,7 +47,7 @@ async function main() {
     { name: 'Workspace stacks verification', cmd: 'npm run validate:stacks' }
   ];
 
-  if (process.env.CLAUDIENT_TEST_SUITE !== 'true') {
+  if (process.env.UITKIT_TEST_SUITE !== 'true') {
     steps.push({ name: 'CLI smoke tests', cmd: 'npm run test' });
   }
 
@@ -67,10 +67,10 @@ async function main() {
 
   if (failedStep) {
     console.error(`\n${RED}🛑 Pre-commit verification FAILED at step: ${failedStep.name}.${RESET}`);
-    console.error(`${YELLOW}Aborting commit operation. Running diagnostics via "npx claudient repair"...${RESET}\n`);
+    console.error(`${YELLOW}Aborting commit operation. Running diagnostics via "npx uitkit repair"...${RESET}\n`);
     
     try {
-      execSync('npx claudient repair', { stdio: 'inherit' });
+      execSync('npx uitkit repair', { stdio: 'inherit' });
     } catch (e) {
       // ignore
     }

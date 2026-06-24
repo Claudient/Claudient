@@ -10,8 +10,8 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 # Default values
-CONTAINER_NAME="claudient"
-IMAGE="claudient:latest"
+CONTAINER_NAME="uitkit"
+IMAGE="uitkit:latest"
 MODE="daemon"
 VERBOSE=false
 
@@ -20,8 +20,8 @@ usage() {
   echo "Usage: ./docker/run.sh [OPTIONS]"
   echo ""
   echo "Options:"
-  echo "  -i, --image IMAGE      Docker image (default: claudient:latest)"
-  echo "  -n, --name NAME        Container name (default: claudient)"
+  echo "  -i, --image IMAGE      Docker image (default: uitkit:latest)"
+  echo "  -n, --name NAME        Container name (default: uitkit)"
   echo "  -f, --foreground       Run in foreground (default: daemon)"
   echo "  -v, --verbose          Verbose output"
   echo "  -h, --help             Show this help message"
@@ -29,7 +29,7 @@ usage() {
   echo "Examples:"
   echo "  ./docker/run.sh                         # Run daemon container"
   echo "  ./docker/run.sh -f                      # Run in foreground"
-  echo "  ./docker/run.sh -i claudient:v1.0 -f    # Run specific image foreground"
+  echo "  ./docker/run.sh -i uitkit:v1.0 -f    # Run specific image foreground"
   exit 1
 }
 
@@ -63,7 +63,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 echo -e "${BLUE}═══════════════════════════════════════════════════════${NC}"
-echo -e "${BLUE}Claudient Docker Runner${NC}"
+echo -e "${BLUE}UitKit Docker Runner${NC}"
 echo -e "${BLUE}═══════════════════════════════════════════════════════${NC}"
 echo ""
 echo -e "Image:     ${GREEN}${IMAGE}${NC}"

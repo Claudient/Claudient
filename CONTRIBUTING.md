@@ -1,6 +1,6 @@
-# Contributing to Claudient
+# Contributing to UitKit
 
-Claudient grows through community contributions. If you have a skill, agent, hook, workflow, or prompt that has made Claude Code meaningfully better for you — it belongs here.
+UitKit grows through community contributions. If you have a skill, agent, hook, workflow, or prompt that has made Claude Code meaningfully better for you — it belongs here.
 
 ---
 
@@ -117,6 +117,6 @@ Open a GitHub Discussion if you're unsure where something belongs or want feedba
 
 ## Work With Us
 
-Claudient is backed by [Uitbreiden](https://uitbreiden.com/) — we build AI products with developer communities and deliver B2B AI solutions. If you want to go beyond contributing to this repo and actually build AI products or B2B solutions with us, reach out.
+UitKit is backed by [Uitbreiden](https://uitbreiden.com/) — we build AI products with developer communities and deliver B2B AI solutions. If you want to go beyond contributing to this repo and actually build AI products or B2B solutions with us, reach out.
 
 **[uitbreiden.com](https://uitbreiden.com/) · [Reddit](https://www.reddit.com/r/uitbreiden/) · [YouTube](https://www.youtube.com/@UITBREIDEN)**

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# list-skills.sh — enumerate all skill .md files in the Claudient repo
+# list-skills.sh — enumerate all skill .md files in the UitKit repo
 
 set -euo pipefail
 

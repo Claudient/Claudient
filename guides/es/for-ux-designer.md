@@ -18,16 +18,16 @@ Eres un diseñador de UX, investigador de UX o diseñador de producto cuyo traba
 
 ```bash
 # Instalar todas las habilidades de Diseñador de UX
-npx claudient add skills product
+npx uitkit add skills product
 
 # O seleccionar lo que necesitas:
-npx claudient add skill product/ux-researcher
-npx claudient add skill product/usability-report
-npx claudient add skill product/persona-builder
-npx claudient add skill product/ux-audit
-npx claudient add skill product/product-discovery
-npx claudient add skill product/experiment-designer
-npx claudient add agents roles/hypothesis-tester
+npx uitkit add skill product/ux-researcher
+npx uitkit add skill product/usability-report
+npx uitkit add skill product/persona-builder
+npx uitkit add skill product/ux-audit
+npx uitkit add skill product/product-discovery
+npx uitkit add skill product/experiment-designer
+npx uitkit add agents roles/hypothesis-tester
 ```
 
 ---
@@ -202,7 +202,7 @@ Base de evidencia: [datos de investigación disponibles — entrevistas / analí
 ## Plan de incorporación de 30 días (nuevas contrataciones de UX o reconvertidos profesionales)
 
 ### Semana 1 — Configuración y herramientas de investigación
-- Instalar todas las habilidades de producto: `npx claudient add skills product`
+- Instalar todas las habilidades de producto: `npx uitkit add skills product`
 - Ejecutar `/persona-builder` con datos de investigación de usuarios existentes — familiarizarse con la comprensión actual de los usuarios
 - Ejecutar `/ux-audit` en el flujo más utilizado del producto — evaluación heurística de referencia
 - Revisar los informes de pruebas de usabilidad existentes con `/usability-report` como referencia de formato

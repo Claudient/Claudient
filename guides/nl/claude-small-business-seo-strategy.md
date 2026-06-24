@@ -1,6 +1,6 @@
 # Claude voor Small Business — SEO-strategie
 
-Dit document is de enige bron van waarheid voor hoe Claudient voor Small Business zoekintentie rangschikt. Het is geschreven voor bijdragers die nieuwe small-business-inhoud toevoegen en voor de beheerder die de strategie coherent moet houden.
+Dit document is de enige bron van waarheid voor hoe UitKit voor Small Business zoekintentie rangschikt. Het is geschreven voor bijdragers die nieuwe small-business-inhoud toevoegen en voor de beheerder die de strategie coherent moet houden.
 
 De strategie is opzettelijk smal: leg de operator-grade trefwoordruimte rond "Claude for small business" vast en de lange staart van verticale en taak-niveau query's die eruit volgt.
 
@@ -10,7 +10,7 @@ De strategie is opzettelijk smal: leg de operator-grade trefwoordruimte rond "Cl
 
 Anthropic lanceerde Claude for Small Business op 13 mei 2026. Het product dekt 15 officiële workflows. De vraag naar zoekopdrachten is ver boven het aanbod uitgestegen — eigenaren typen "Claude for [industrie]", "AI tools voor [bedrijfstype]" en "hoe Claude gebruiken voor [taak]" in Google, Reddit en YouTube sneller dan Anthropic verticale inhoud kan leveren.
 
-Claudients kans is om de meest gelinkte, meest geciteerde uitbreiding van de officiële lancering te zijn — een gemeenschapswiskundebasis die de lange staart vult die Anthropic open heeft gelaten.
+UitKits kans is om de meest gelinkte, meest geciteerde uitbreiding van de officiële lancering te zijn — een gemeenschapswiskundebasis die de lange staart vult die Anthropic open heeft gelaten.
 
 Drie structurele feiten maken deze kans echt:
 
@@ -265,10 +265,10 @@ Het plan, gekalibreerd op ruwweg één verzendpartij per week.
 De metrieke die tellen, in volgorde:
 
 1. **GitHub sterren** — proxy voor organische ontdekking. Doel: +200 in de 30 dagen na het small-business lancering.
-2. **npm install count voor `claudient add skills small-business`** — proxy voor werkelijke adoptie.
+2. **npm install count voor `uitkit add skills small-business`** — proxy voor werkelijke adoptie.
 3. **GitHub traffic voor `/skills/small-business/`** — proxy voor SEO-prestatie.
 
-5. **Merkmerk zoekopdracht** — "claudient small business" verschijnt in Google autocomplete of gerelateerde zoekopdrachten.
+5. **Merkmerk zoekopdracht** — "uitkit small business" verschijnt in Google autocomplete of gerelateerde zoekopdrachten.
 
 Vermijd optimalisatie voor: totale bestandsaantal, regelaantal of alles dat opvullerinhoud aanmoedigt.
 

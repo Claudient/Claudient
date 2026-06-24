@@ -94,27 +94,27 @@ console.log(route.tier);      // claude-haiku-4-5 (budget critical)
 
 ```bash
 # Classify a task
-claudient moe classify "format the JSON output"
+uitkit moe classify "format the JSON output"
 # → Tier: HAIKU
 
 # Show escalation path
-claudient moe cascade "design a secure authentication flow"
+uitkit moe cascade "design a secure authentication flow"
 # → Original Tier: SONNET, Final Tier: OPUS (escalated)
 
 # Expert panel voting
-claudient moe panel "code review this PR" --strategy=majority
+uitkit moe panel "code review this PR" --strategy=majority
 # → Consensus: SONNET (2/3 experts)
 
 # Domain-based routing
-claudient moe domain "src/security/auth.ts,src/security/jwt.ts" "security audit"
+uitkit moe domain "src/security/auth.ts,src/security/jwt.ts" "security audit"
 # → Domain: security, Routed Tier: OPUS
 
 # Budget-governed routing
-claudient moe budget "write tests" --remaining 20000 --total 100000
+uitkit moe budget "write tests" --remaining 20000 --total 100000
 # → Budget Ratio: 0.20 (20%), Routed Tier: HAIKU
 
 # System status
-claudient moe status
+uitkit moe status
 # → Prints 5-mode status table
 ```
 
@@ -278,7 +278,7 @@ A: Adjust thresholds in `budgetGovernedRouter({ opusThreshold: 0.4, haikuThresho
 A: Try `confidence-weighted` voting instead of `majority`, or use `synthesis` strategy to let Sonnet model arbitrate disagreements.
 
 **Q: How do I verify the selected tier is correct?**
-A: Run `claudient moe classify <task>` to see tier + confidence + reasoning. Use `panel` mode to compare all 3 tiers' opinions side-by-side.
+A: Run `uitkit moe classify <task>` to see tier + confidence + reasoning. Use `panel` mode to compare all 3 tiers' opinions side-by-side.
 
 ---
 
@@ -286,7 +286,7 @@ A: Run `claudient moe classify <task>` to see tier + confidence + reasoning. Use
 
 - **`lib/moe-router.js`** — Core logic (ESM module)
 - **`lib/moe-router.test.js`** — 10 test assertions
-- **`scripts/claudient-moe.js`** — CLI tool
+- **`scripts/uitkit-moe.js`** — CLI tool
 - **`skills/ai-engineering/model-router.md`** — User-facing skill
 - **`agents/core/moe-router.md`** — Routing agent for orchestrators
 

@@ -1,8 +1,8 @@
 > 🇪🇸 Versión en español. [Versión en inglés](CONTRIBUTING.md).
 
-# Contribuir a Claudient
+# Contribuir a UitKit
 
-Claudient crece gracias a las contribuciones de la comunidad. Si tiene un skill, un agente, un hook, un workflow o un prompt que ha mejorado significativamente Claude Code para usted — tiene su lugar aquí.
+UitKit crece gracias a las contribuciones de la comunidad. Si tiene un skill, un agente, un hook, un workflow o un prompt que ha mejorado significativamente Claude Code para usted — tiene su lugar aquí.
 
 ---
 
@@ -119,6 +119,6 @@ Abra una GitHub Discussion si no está seguro de dónde encaja algo o si desea r
 
 ## Trabajar con nosotros
 
-Claudient está respaldado por [Uitbreiden](https://uitbreiden.com/) — construimos productos de IA con comunidades de desarrolladores y ofrecemos soluciones de IA B2B. Si desea ir más allá de contribuir a este repositorio y realmente construir productos de IA o soluciones B2B con nosotros, contáctenos.
+UitKit está respaldado por [Uitbreiden](https://uitbreiden.com/) — construimos productos de IA con comunidades de desarrolladores y ofrecemos soluciones de IA B2B. Si desea ir más allá de contribuir a este repositorio y realmente construir productos de IA o soluciones B2B con nosotros, contáctenos.
 
 **[uitbreiden.com](https://uitbreiden.com/) · [Reddit](https://www.reddit.com/r/uitbreiden/) · [YouTube](https://www.youtube.com/@UITBREIDEN)**

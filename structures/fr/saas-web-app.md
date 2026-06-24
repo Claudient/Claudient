@@ -216,15 +216,15 @@ touch .claude/commands/env-audit.md
 # Créer le .env.example
 touch .env.example .env.local
 
-# Installer les skills Claudient
-npx claudient add skill backend/nextjs-app-router
-npx claudient add skill backend/drizzle-orm
-npx claudient add skill backend/supabase-rls
-npx claudient add skill backend/stripe-webhooks
-npx claudient add skill frontend/shadcn-ui
-npx claudient add skill testing/vitest
-npx claudient add skill testing/playwright
-npx claudient add skill devops-infra/cicd
+# Installer les skills UitKit
+npx uitkit add skill backend/nextjs-app-router
+npx uitkit add skill backend/drizzle-orm
+npx uitkit add skill backend/supabase-rls
+npx uitkit add skill backend/stripe-webhooks
+npx uitkit add skill frontend/shadcn-ui
+npx uitkit add skill testing/vitest
+npx uitkit add skill testing/playwright
+npx uitkit add skill devops-infra/cicd
 
 echo "Monorepo SaaS scaffoldé. Lancez : pnpm dev"
 ```
@@ -415,16 +415,16 @@ Toutes les variables d'env doivent figurer dans `.env.example` avec un commentai
 ## Skills à installer
 
 ```bash
-npx claudient add skill backend/nextjs-app-router
-npx claudient add skill backend/drizzle-orm
-npx claudient add skill backend/supabase-rls
-npx claudient add skill backend/stripe-webhooks
-npx claudient add skill frontend/shadcn-ui
-npx claudient add skill frontend/react-email
-npx claudient add skill testing/vitest
-npx claudient add skill testing/playwright
-npx claudient add skill devops-infra/cicd
-npx claudient add skill devops-infra/vercel
+npx uitkit add skill backend/nextjs-app-router
+npx uitkit add skill backend/drizzle-orm
+npx uitkit add skill backend/supabase-rls
+npx uitkit add skill backend/stripe-webhooks
+npx uitkit add skill frontend/shadcn-ui
+npx uitkit add skill frontend/react-email
+npx uitkit add skill testing/vitest
+npx uitkit add skill testing/playwright
+npx uitkit add skill devops-infra/cicd
+npx uitkit add skill devops-infra/vercel
 ```
 
 ## Ressources associées

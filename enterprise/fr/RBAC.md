@@ -129,7 +129,7 @@ Quand un user login pour la première fois:
 | SSO user avec group "Security" | Security Officer | — |
 | SSO user avec group "Finance" | Cost Controller | — |
 | SSO user (aucun group) | Viewer | Request depuis admin |
-| Git user (local, non SSO) | Engineer | Set CLAUDIENT_ROLE env var |
+| Git user (local, non SSO) | Engineer | Set UITKIT_ROLE env var |
 
 ## Team Stack Management
 
@@ -242,22 +242,22 @@ Pour on-prem sans SSO:
 
 ```bash
 # Assignez un user à un rôle
-git config --global claudient.role engineer
-git config --global claudient.team platform-team
+git config --global uitkit.role engineer
+git config --global uitkit.team platform-team
 ```
 
 Ou set environment variable:
 
 ```bash
-export CLAUDIENT_ROLE=engineer
-export CLAUDIENT_TEAM=platform-team
+export UITKIT_ROLE=engineer
+export UITKIT_TEAM=platform-team
 ```
 
-### Via API (Claudient Cloud)
+### Via API (UitKit Cloud)
 
 ```bash
-curl -X POST https://api.claudient.com/enterprise/users/alice%40company.com/role \
-  -H "Authorization: Bearer $CLAUDIENT_API_KEY" \
+curl -X POST https://api.uitkit.com/enterprise/users/alice%40company.com/role \
+  -H "Authorization: Bearer $UITKIT_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "role": "security-officer",
@@ -322,7 +322,7 @@ Un admin peut créer un custom role:
 Puis assignez à un team member:
 
 ```bash
-git config --global claudient.role pii-reviewer
+git config --global uitkit.role pii-reviewer
 ```
 
 ### Cost Controller Delegation

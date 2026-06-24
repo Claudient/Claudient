@@ -121,7 +121,7 @@ Gather documentation of:
 
 ### Step 2: Create a GitHub Issue
 
-Navigate to the main Claudient repository and create an issue:
+Navigate to the main UitKit repository and create an issue:
 
 **Title:** `Certification request: Your Stack Name`
 
@@ -262,7 +262,7 @@ A: Only if a critical unresolved issue exists for 2+ weeks. Annual recertificati
 A: Update the author/maintainer field in submission.json. The new maintainer must agree to certification terms.
 
 **Q: Can I request an exception to the 2-week rule?**
-A: Yes, for official Claudient stacks or high-profile community contributions. Request in writing to the Claude Code team.
+A: Yes, for official UitKit stacks or high-profile community contributions. Request in writing to the Claude Code team.
 
 **Q: How do I know if my stack has been selected for annual review?**
 A: You'll receive a GitHub issue notification 30 days before recertification deadline. No action needed if all is well — it's automatic renewal.
@@ -273,7 +273,7 @@ A: You'll receive a GitHub issue notification 30 days before recertification dea
 
 - **Certification questions**: Create a GitHub issue with the label `certification`
 - **Community support**: Claude Code community Slack/Discord (linked in main README)
-- **Escalations**: Email team@claudient.ai
+- **Escalations**: Email team@uitkit.ai
 
 ---
 

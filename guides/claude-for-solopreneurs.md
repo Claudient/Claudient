@@ -17,7 +17,7 @@ A solopreneur typically spends their week on six recurring activities:
 5. Customer service — answering questions, handling complaints, scheduling
 6. Strategy — pricing, positioning, deciding what to focus on next
 
-Of those six, only delivery cannot be assisted by Claude in a meaningful way (and even there, Claude helps with drafts, research, and review). Every other activity has at least one Claudient skill purpose-built for the solopreneur use case.
+Of those six, only delivery cannot be assisted by Claude in a meaningful way (and even there, Claude helps with drafts, research, and review). Every other activity has at least one UitKit skill purpose-built for the solopreneur use case.
 
 ---
 
@@ -133,7 +133,7 @@ You spend Friday afternoon doing the work you actually wanted the business for �
 
 ### Is Claude good for solopreneurs?
 
-Yes. Claude is purpose-built for the solopreneur use case — owner-initiated, approval-based, no developer required. The 15 official Claude for Small Business workflows plus the long tail of Claudient skills cover roughly 60-80% of the recurring weekly work a solo operator does.
+Yes. Claude is purpose-built for the solopreneur use case — owner-initiated, approval-based, no developer required. The 15 official Claude for Small Business workflows plus the long tail of UitKit skills cover roughly 60-80% of the recurring weekly work a solo operator does.
 
 ### How is Claude different from ChatGPT for solopreneurs?
 
@@ -145,7 +145,7 @@ $20/month for Claude Pro covers the use case for most one-person businesses. $10
 
 ### Do I need to know how to code?
 
-No. Claude for Small Business is point-and-click inside Claude Cowork. The skills in this Claudient repo are activated by typing plain English instructions to Claude. The only setup is OAuth-connecting your existing tools, which takes a few clicks per tool.
+No. Claude for Small Business is point-and-click inside Claude Cowork. The skills in this UitKit repo are activated by typing plain English instructions to Claude. The only setup is OAuth-connecting your existing tools, which takes a few clicks per tool.
 
 ### Can Claude read my QuickBooks data?
 

@@ -24,7 +24,7 @@ Responsables marketing de performance et de croissance dans les startups ou les 
 
 **Compromis par défaut :** Préférer la rapidité d'expérimentation à la perfection statistique. Effectuer plus de tests avec des échantillons plus petits plutôt que d'attendre la significativité sur un seul grand test.
 
-## Compétences et agents Claudient recommandés
+## Compétences et agents UitKit recommandés
 - `gtm` — stratégie de campagne, sélection des canaux, hiérarchie des messages
 - `sdr` — séquences d'e-mails, flux de nurture, copywriting sortant
 - `finance` — modélisation de l'économie unitaire, calculs CAC/LTV

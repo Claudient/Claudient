@@ -18,7 +18,7 @@ const path = require('path');
 
 // Theme definitions (matching ToolkitApp.tsx)
 const THEMES = [
-  { name: "Claudient Brand", id: "claudient-brand", colors: ["#f5b800", "#f54e00", "#1d4aff"] },
+  { name: "UitKit Brand", id: "uitkit-brand", colors: ["#f5b800", "#f54e00", "#1d4aff"] },
   { name: "Catppuccin", id: "catppuccin", colors: ["#cba6f7", "#89b4fa", "#a6e3a1"] },
   { name: "Dracula", id: "dracula", colors: ["#bd93f9", "#ff79c6", "#50fa7b"] },
   { name: "Gruvbox", id: "gruvbox", colors: ["#fabd2f", "#fb4934", "#b8bb26"] },
@@ -29,7 +29,7 @@ const THEMES = [
   { name: "Solarized Light", id: "solarized-light", colors: ["#268bd2", "#b58900", "#2aa198"] },
   { name: "Tokyo Night", id: "tokyo-night", colors: ["#7aa2f7", "#bb9af7", "#9ece6a"] },
   { name: "Ghost Shell", id: "ghost-shell", colors: ["#c0c0c0", "#4a4a4a", "#00ff41"] },
-  { name: "Claudient Neon", id: "claudient-neon", colors: ["#00ff41", "#ff00ff", "#00ffff"] },
+  { name: "UitKit Neon", id: "uitkit-neon", colors: ["#00ff41", "#ff00ff", "#00ffff"] },
 ];
 
 // Simulated theme state store

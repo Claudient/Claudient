@@ -30,7 +30,7 @@ export function AboutApp({ wm }: { wm: WindowManager }) {
       </div>
 
       <p className="mt-4 text-[14px] text-body leading-relaxed">
-        Claudient delivers domain-specific knowledge, specialist agents, workspace stacks, 
+        UitKit delivers domain-specific knowledge, specialist agents, workspace stacks, 
         and MCP configurations to Claude Code. Everything is installable in 30 seconds and 
         works across 5 languages. Built by the community, for the community.
       </p>
@@ -57,7 +57,7 @@ export function AboutApp({ wm }: { wm: WindowManager }) {
       <div className="mt-6 flex gap-3">
         <YellowButton onClick={() => wm.open("install")}>Get Started →</YellowButton>
         <button
-          onClick={() => window.open("https://github.com/UitbreidenOS/Claudient", "_blank")}
+          onClick={() => window.open("https://github.com/UitbreidenOS/UitKit", "_blank")}
           className="inline-flex items-center gap-1.5 rounded-md border border-olive/60 bg-white px-4 py-2 text-[13px] font-semibold text-ink hover:bg-cream transition"
         >
           GitHub

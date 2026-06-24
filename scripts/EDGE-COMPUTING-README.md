@@ -39,7 +39,7 @@ while (node.taskQueue.length > 0) {
 }
 
 // Sync results to cloud
-await node.syncWithCloud('https://api.claudient.local/sync');
+await node.syncWithCloud('https://api.uitkit.local/sync');
 
 // Get node metrics
 const metrics = node.getMetrics();
@@ -57,7 +57,7 @@ Central orchestrator that manages multiple edge nodes.
 
 ```javascript
 const coordinator = new EdgeCoordinator({
-  cloudUrl: 'https://api.claudient.local/sync',
+  cloudUrl: 'https://api.uitkit.local/sync',
   syncInterval: 5000,
   healthCheckInterval: 10000
 });
@@ -303,7 +303,7 @@ const latencyStats = node.latencyTracker.getStats();
 
 ```javascript
 new EdgeCoordinator({
-  cloudUrl: 'https://api.claudient.local/sync',  // Cloud sync endpoint
+  cloudUrl: 'https://api.uitkit.local/sync',  // Cloud sync endpoint
   syncInterval: 5000,                            // Sync frequency (ms)
   healthCheckInterval: 10000                     // Health check frequency (ms)
 })
@@ -431,9 +431,9 @@ wrangler publish
 ### Multi-Region Deployment
 
 Deploy instances in each region:
-- `edge-us-west.claudient.local`
-- `edge-eu-west.claudient.local`
-- `edge-ap-southeast.claudient.local`
+- `edge-us-west.uitkit.local`
+- `edge-eu-west.uitkit.local`
+- `edge-ap-southeast.uitkit.local`
 
 Update Cloudflare Worker routing table for geo-affinity.
 

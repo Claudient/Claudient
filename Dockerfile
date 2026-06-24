@@ -1,4 +1,4 @@
-# Multi-stage build for Claudient knowledge system
+# Multi-stage build for UitKit knowledge system
 
 # Stage 1: Build stage
 FROM node:20-alpine AS builder
@@ -31,10 +31,10 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-LABEL org.opencontainers.image.title="Claudient"
+LABEL org.opencontainers.image.title="UitKit"
 LABEL org.opencontainers.image.description="The Claude Code knowledge system - skills, agents, hooks, workflows, and more"
-LABEL org.opencontainers.image.source="https://github.com/UitbreidenOS/Claudient"
-LABEL org.opencontainers.image.documentation="https://github.com/UitbreidenOS/Claudient#readme"
+LABEL org.opencontainers.image.source="https://github.com/UitbreidenOS/UitKit"
+LABEL org.opencontainers.image.documentation="https://github.com/UitbreidenOS/UitKit#readme"
 
 # Install runtime dependencies
 RUN apk add --no-cache git curl

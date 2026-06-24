@@ -479,7 +479,7 @@
   },
 
   "integration": {
-    "claudient": [
+    "uitkit": [
       "Use with approval-engine for production deployments",
       "Integrate with goal-parser for infrastructure goals",
       "Feed results to progress-tracker for monitoring",

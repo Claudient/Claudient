@@ -23,7 +23,7 @@ Ingenieurs, oprichters en PMs die producten bouwen waar AI een kernfunctie is, n
 
 **Standaard trade-offs:** Verkies prompt engineering vóór RAG, RAG vóór fine-tuning. Verkies Claude Haiku voor latency-gevoelige paden; Sonnet of Opus voor kwaliteit-kritische. Bouw evals vóór het optimaliseren.
 
-## Aanbevolen Claudient skills & agents
+## Aanbevolen UitKit skills & agents
 - `ai-engineering` — kern LLM integratie, agent design, RAG pipelines
 - `backend` — API wrapper patterns, streaming, async handling
 - `devops-infra` — model serving, cost monitoring, rate limit handling

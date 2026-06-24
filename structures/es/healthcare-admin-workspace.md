@@ -213,16 +213,16 @@ La violación de esta política es un riesgo de incumplimiento de HIPAA. Escale 
 EOF
 
 # Instalar habilidades de administrador de salud
-npx claudient add skill legal/compliance-tracker
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/sop-writer
-npx claudient add skill productivity/team-onboarding
+npx uitkit add skill legal/compliance-tracker
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/sop-writer
+npx uitkit add skill productivity/team-onboarding
 
 # Copiar comandos de existencia en .claude/commands/
-npx claudient add skill legal/compliance-tracker --output healthcare-admin-workspace/.claude/commands/compliance-check.md
-npx claudient add skill productivity/sop-writer --output healthcare-admin-workspace/.claude/commands/prior-auth.md
-npx claudient add skill productivity/process-mapper --output healthcare-admin-workspace/.claude/commands/patient-intake.md
-npx claudient add skill productivity/team-onboarding --output healthcare-admin-workspace/.claude/commands/staff-schedule.md
+npx uitkit add skill legal/compliance-tracker --output healthcare-admin-workspace/.claude/commands/compliance-check.md
+npx uitkit add skill productivity/sop-writer --output healthcare-admin-workspace/.claude/commands/prior-auth.md
+npx uitkit add skill productivity/process-mapper --output healthcare-admin-workspace/.claude/commands/patient-intake.md
+npx uitkit add skill productivity/team-onboarding --output healthcare-admin-workspace/.claude/commands/staff-schedule.md
 ```
 
 ## Plantilla CLAUDE.md
@@ -422,15 +422,15 @@ Requisitos especiales: [p. ej., paciente menor, intérprete necesario, acomodaci
 
 ```bash
 # Habilidades principales de administrador de salud
-npx claudient add skill legal/compliance-tracker
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/sop-writer
-npx claudient add skill productivity/team-onboarding
+npx uitkit add skill legal/compliance-tracker
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/sop-writer
+npx uitkit add skill productivity/team-onboarding
 
 # Habilidades de productividad de apoyo
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/vendor-evaluator
-npx claudient add skill productivity/exec-briefing
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/vendor-evaluator
+npx uitkit add skill productivity/exec-briefing
 ```
 
 ## Relacionado

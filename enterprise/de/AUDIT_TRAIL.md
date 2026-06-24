@@ -28,7 +28,7 @@ Jede Zeile ist ein gültiges JSON-Objekt mit diesen Feldern:
   "duration_ms": 145,
   "context": {
     "branch": "main",
-    "working_dir": "/Users/tushar/Desktop/Claudient",
+    "working_dir": "/Users/tushar/Desktop/UitKit",
     "model": "claude-haiku-4-5-20251001",
     "temperature": 1.0,
     "max_tokens": 1024
@@ -153,7 +153,7 @@ jq 'select(.event_type == "session_end") | {user_id, cost: .session_cost_usd}' \
 
 ## Verschlüsselung (Enterprise Cloud)
 
-Auf Claudient Cloud:
+Auf UitKit Cloud:
 - Audit-Logs sind **verschlüsselt im Ruhezustand** mit AES-256-GCM
 - **Während der Übertragung**: TLS 1.3, gegenseitige Authentifizierung
 - **Aufbewahrung**: 7 Jahre (konfigurierbar je nach Compliance-Anforderung)

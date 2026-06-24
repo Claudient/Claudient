@@ -360,14 +360,14 @@ dvc init 2>/dev/null || true
 dvc run -n ingest -d data/raw/ -o data/processed/chunks/ \
   "python scripts/ingest_docs.py --source data/raw/" 2>/dev/null || true
 
-# Installeer Claudient-vaardigheden
-npx claudient add skill data-ml/rag-pipeline
-npx claudient add skill data-ml/vector-db-ops
-npx claudient add skill data-ml/embedding-strategy
-npx claudient add skill data-ml/ragas-eval
-npx claudient add skill backend/python/fastapi-crud
-npx claudient add skill backend/python/async-patterns
-npx claudient add skill productivity/test-generator
+# Installeer UitKit-vaardigheden
+npx uitkit add skill data-ml/rag-pipeline
+npx uitkit add skill data-ml/vector-db-ops
+npx uitkit add skill data-ml/embedding-strategy
+npx uitkit add skill data-ml/ragas-eval
+npx uitkit add skill backend/python/fastapi-crud
+npx uitkit add skill backend/python/async-patterns
+npx uitkit add skill productivity/test-generator
 
 echo "RAG knowledge base steiger compleet. Volgende: cp .env.example .env && make dev"
 ```
@@ -607,16 +607,16 @@ uv run pytest --record-mode=none          # gebruik VCR cassettes, geen live API
 ## Vaardigheden om te installeren
 
 ```bash
-npx claudient add skill data-ml/rag-pipeline
-npx claudient add skill data-ml/vector-db-ops
-npx claudient add skill data-ml/embedding-strategy
-npx claudient add skill data-ml/ragas-eval
-npx claudient add skill data-ml/chunking-strategy
-npx claudient add skill backend/python/fastapi-crud
-npx claudient add skill backend/python/async-patterns
-npx claudient add skill productivity/test-generator
-npx claudient add skill productivity/security-audit
-npx claudient add skill git/pr-description
+npx uitkit add skill data-ml/rag-pipeline
+npx uitkit add skill data-ml/vector-db-ops
+npx uitkit add skill data-ml/embedding-strategy
+npx uitkit add skill data-ml/ragas-eval
+npx uitkit add skill data-ml/chunking-strategy
+npx uitkit add skill backend/python/fastapi-crud
+npx uitkit add skill backend/python/async-patterns
+npx uitkit add skill productivity/test-generator
+npx uitkit add skill productivity/security-audit
+npx uitkit add skill git/pr-description
 ```
 
 ## Gerelateerd

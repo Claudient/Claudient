@@ -202,7 +202,7 @@ Standard event format for consistency:
 channel: "release-pipeline"
 publish:
   - {type: "build.started", data: {version: "1.11.0"}}
-  - {type: "build.complete", data: {artifacts: ["dist/claudient-1.11.0.tgz"]}}
+  - {type: "build.complete", data: {artifacts: ["dist/uitkit-1.11.0.tgz"]}}
 
 # Session 2: Tester (subscribes to build events)
 channel: "release-pipeline"

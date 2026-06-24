@@ -6,15 +6,15 @@ Enterprise Edition se integra con proveedores de identidad SAML 2.0 y OpenID Con
 
 - **SAML 2.0**: Para empresas con infraestructura AD/IdP local
 - **OpenID Connect**: Para identidad en la nube (Okta, Auth0, Google Workspace, Azure)
-- **LDAP (on-prem)**: Sincronización de directorios locales a través del conector LDAP (solo Claudient Cloud empresarial)
+- **LDAP (on-prem)**: Sincronización de directorios locales a través del conector LDAP (solo UitKit Cloud empresarial)
 
 ## Arquitectura
 
 Claude Code no se autentica directamente contra un IdP. En su lugar:
 
-1. **Integración en la nube** (Claudient Cloud): Enterprise Cloud actúa como Proveedor de Servicios SAML/OIDC (SP)
+1. **Integración en la nube** (UitKit Cloud): Enterprise Cloud actúa como Proveedor de Servicios SAML/OIDC (SP)
 2. **On-prem** (hooks locales `.claude`): Identidad de configuración de git + validación de token JWT opcional
-3. **Híbrido**: Claude Code local + backend de sesión Claudient Cloud para auditoría/aplicación de costos
+3. **Híbrido**: Claude Code local + backend de sesión UitKit Cloud para auditoría/aplicación de costos
 
 ## Setup: Okta (SAML 2.0)
 
@@ -24,24 +24,24 @@ Claude Code no se autentica directamente contra un IdP. En su lugar:
 2. **Applications** → **Create App Integration**
 3. Elegir **SAML 2.0**
 4. Configurar:
-   - **Single sign on URL**: `https://cloud.claudient.com/auth/saml/acs`
-   - **Audience URI (Entity ID)**: `https://cloud.claudient.com`
+   - **Single sign on URL**: `https://cloud.uitkit.com/auth/saml/acs`
+   - **Audience URI (Entity ID)**: `https://cloud.uitkit.com`
    - **Name ID Format**: Email address
    - **Application username**: `${user.email}`
 
 ### Paso 2: Asignar usuarios y grupos
 
-- Agregar usuarios/grupos a la aplicación Claudient en Okta
+- Agregar usuarios/grupos a la aplicación UitKit en Okta
 - Configurar las afirmaciones de pertenencia a grupo (por ejemplo, "Ingeniería", "Finanzas")
 
-### Paso 3: Configurar Claudient Cloud
+### Paso 3: Configurar UitKit Cloud
 
-Proporcione metadatos XML de Okta a Claudient:
+Proporcione metadatos XML de Okta a UitKit:
 
 ```bash
 curl https://company.okta.com/app/exk123abc/sso/saml/metadata > okta-metadata.xml
-curl -X POST https://api.claudient.com/enterprise/sso/okta \
-  -H "Authorization: Bearer $CLAUDIENT_API_KEY" \
+curl -X POST https://api.uitkit.com/enterprise/sso/okta \
+  -H "Authorization: Bearer $UITKIT_API_KEY" \
   -F "metadata=@okta-metadata.xml"
 ```
 
@@ -49,7 +49,7 @@ curl -X POST https://api.claudient.com/enterprise/sso/okta \
 
 ```bash
 # Claude Code detectará el requisito de SAML e indicará autenticarse
-# CLAUDIENT_SESSION_TOKEN=eyJ...
+# UITKIT_SESSION_TOKEN=eyJ...
 ```
 
 ## Setup: Azure AD (OIDC)
@@ -58,8 +58,8 @@ curl -X POST https://api.claudient.com/enterprise/sso/okta \
 
 1. **Azure Portal** → **Azure Active Directory** → **App registrations** → **New registration**
 2. Configurar:
-   - **Name**: Claudient
-   - **Redirect URI**: `https://cloud.claudient.com/auth/oidc/callback`
+   - **Name**: UitKit
+   - **Redirect URI**: `https://cloud.uitkit.com/auth/oidc/callback`
 
 ### Paso 2: Crear Client Secret
 
@@ -95,7 +95,7 @@ Agregue a `settings.json`:
     "mode": "jwt",
     "public_key_path": "${CLAUDE_PROJECT_DIR}/.claude/auth/public-key.pem",
     "expected_issuer": "https://your-idp.company.com",
-    "expected_audience": "claudient"
+    "expected_audience": "uitkit"
   }
 }
 ```

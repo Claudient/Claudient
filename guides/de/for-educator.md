@@ -18,14 +18,14 @@ Sie sind Lehrkraft, Dozent, Instructional Designer, L&D-Fachkraft oder unabhäng
 
 ```bash
 # Lehrkraft-Skills installieren
-npx claudient add skill productivity/lesson-planner
-npx claudient add skill productivity/student-feedback-analyzer
-npx claudient add skill small-business/online-course-creator
-npx claudient add skill small-business/newsletter-publisher
-npx claudient add skill productivity/lit-review
+npx uitkit add skill productivity/lesson-planner
+npx uitkit add skill productivity/student-feedback-analyzer
+npx uitkit add skill small-business/online-course-creator
+npx uitkit add skill small-business/newsletter-publisher
+npx uitkit add skill productivity/lit-review
 
 # Den wissenschaftlichen Forscher-Agenten installieren
-npx claudient add agent roles/scientific-researcher
+npx uitkit add agent roles/scientific-researcher
 ```
 
 ---
@@ -164,7 +164,7 @@ Länge: [kurz — 150 Wörter / vollständig — 300 Wörter]
 ## 30-Tage-Einstiegsplan (neue Lehrkräfte oder neuer Kurs)
 
 ### Woche 1 — Grundlagen der Unterrichtsplanung
-- Alle Lehrkraft-Skills installieren: `npx claudient add skill productivity/[name]`
+- Alle Lehrkraft-Skills installieren: `npx uitkit add skill productivity/[name]`
 - `/lesson-planner` nutzen, um die nächsten 3 Unterrichtsstunden zu planen — mit dem vergleichen, was Sie normalerweise tun würden
 - Den Lernzielschreiber für jede Stunde ausführen — vage Ziele in messbare Ergebnisse schärfen
 - Erstes Abschluss-Ticket erstellen und im Unterricht einsetzen

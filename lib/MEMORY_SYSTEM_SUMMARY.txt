@@ -2,7 +2,7 @@
                     MEMORY SYSTEM — BUILD SUMMARY
 ================================================================================
 
-PROJECT: Claudient — Long-term Memory for Agents
+PROJECT: UitKit — Long-term Memory for Agents
 DATE: 2026-06-22
 STATUS: ✓ COMPLETE
 

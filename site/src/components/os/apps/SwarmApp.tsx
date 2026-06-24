@@ -328,7 +328,7 @@ export function SwarmApp() {
             </button>
           </div>
           <div className="text-[11px] text-mute font-mono">
-            {stack.icon} claudient-council --domain {stack.id}
+            {stack.icon} uitkit-council --domain {stack.id}
           </div>
         </div>
 
@@ -414,7 +414,7 @@ export function SwarmApp() {
               {getCompiledInstructions()}
             </pre>
             <div className="mt-4 rounded-lg bg-cream/50 p-4 border border-hairline text-[12px] text-mute leading-relaxed">
-              💡 <strong>Running locally:</strong> When you run the <code>npx claudient council &lt;domain&gt;</code> command in your CLI, this instruction document is generated in your project root as <code>COUNCIL_INSTRUCTIONS.md</code> to direct Claude Code.
+              💡 <strong>Running locally:</strong> When you run the <code>npx uitkit council &lt;domain&gt;</code> command in your CLI, this instruction document is generated in your project root as <code>COUNCIL_INSTRUCTIONS.md</code> to direct Claude Code.
             </div>
           </div>
         )}

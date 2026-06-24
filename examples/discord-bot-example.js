@@ -1,5 +1,5 @@
 /**
- * Claudient Discord Bot — Usage Examples
+ * UitKit Discord Bot — Usage Examples
  *
  * This file demonstrates how to extend and customize the Discord bot
  * with additional features and integrations.
@@ -135,7 +135,7 @@ const scheduleFeatureHighlight = () => {
           { name: 'Category', value: randomSkill.category, inline: true },
           { name: 'Learn More', value: `/skill ${randomSkill.title}`, inline: false }
         ])
-        .setFooter({ text: 'Discover Claudient features daily' })
+        .setFooter({ text: 'Discover UitKit features daily' })
         .setTimestamp();
 
       await channel.send({ embeds: [embed] });
@@ -250,18 +250,18 @@ const checkVolunteerMilestones = (volunteerId) => {
 // ============================================================================
 // EXAMPLE 7: Integration with External APIs
 // ============================================================================
-// Post Claudient updates from GitHub releases
+// Post UitKit updates from GitHub releases
 
 const fetchLatestReleaseCommand = {
   data: new (require('discord.js')).SlashCommandBuilder()
     .setName('latest-release')
-    .setDescription('Fetch latest Claudient release'),
+    .setDescription('Fetch latest UitKit release'),
   async execute(interaction) {
     await interaction.deferReply();
 
     try {
       const response = await fetch(
-        'https://api.github.com/repos/UitbreidenOS/Claudient/releases/latest'
+        'https://api.github.com/repos/UitbreidenOS/UitKit/releases/latest'
       );
       const release = await response.json();
 

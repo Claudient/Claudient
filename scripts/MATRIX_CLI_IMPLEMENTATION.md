@@ -1,8 +1,8 @@
-# Claudient Matrix CLI — Implementation Details
+# UitKit Matrix CLI — Implementation Details
 
 ## Architecture
 
-The `claudient-matrix.js` CLI is a Node.js utility that manages theme configuration for Claude Code. It provides a complete workflow for discovering, previewing, applying, customizing, validating, and exporting themes.
+The `uitkit-matrix.js` CLI is a Node.js utility that manages theme configuration for Claude Code. It provides a complete workflow for discovering, previewing, applying, customizing, validating, and exporting themes.
 
 ## Code Structure
 
@@ -306,12 +306,12 @@ No async I/O or streaming — designed for terminal responsiveness.
 
 **Verification:**
 ```bash
-node scripts/claudient-matrix.js list
-node scripts/claudient-matrix.js apply matrix
-node scripts/claudient-matrix.js customize matrix --set glow=strong
-node scripts/claudient-matrix.js config
-node scripts/claudient-matrix.js export matrix
-node scripts/claudient-matrix.js validate matrix
+node scripts/uitkit-matrix.js list
+node scripts/uitkit-matrix.js apply matrix
+node scripts/uitkit-matrix.js customize matrix --set glow=strong
+node scripts/uitkit-matrix.js config
+node scripts/uitkit-matrix.js export matrix
+node scripts/uitkit-matrix.js validate matrix
 ```
 
 ## Integration Points
@@ -333,7 +333,7 @@ node scripts/claudient-matrix.js validate matrix
 
 ### With NPM
 - Could be added to `package.json` scripts
-- Example: `"theme": "node scripts/claudient-matrix.js"`
+- Example: `"theme": "node scripts/uitkit-matrix.js"`
 - Usage: `npm run theme list`
 
 ## API Exports
@@ -355,7 +355,7 @@ module.exports = {
 
 Usage:
 ```javascript
-const matrix = require('./scripts/claudient-matrix.js');
+const matrix = require('./scripts/uitkit-matrix.js');
 matrix.applyTheme('dracula', true);
 ```
 
@@ -404,8 +404,8 @@ Potential features:
 ## File Manifest
 
 ```
-scripts/claudient-matrix.js         15KB  (CLI implementation)
-CLAUDIENT_MATRIX_CLI.md             14KB  (Full documentation)
+scripts/uitkit-matrix.js         15KB  (CLI implementation)
+UITKIT_MATRIX_CLI.md             14KB  (Full documentation)
 MATRIX_CLI_QUICK_REFERENCE.md       6KB   (Quick reference)
 scripts/MATRIX_CLI_IMPLEMENTATION.md This file
 ```
@@ -419,10 +419,10 @@ scripts/MATRIX_CLI_IMPLEMENTATION.md This file
 
 ## License
 
-Same as Claudient — AGPL-3.0-or-later AND CC-BY-SA-4.0
+Same as UitKit — AGPL-3.0-or-later AND CC-BY-SA-4.0
 
 ---
 
 **Version:** 1.0.0  
 **Last Updated:** 2026-06-22  
-**Maintainer:** Claudient Team
+**Maintainer:** UitKit Team

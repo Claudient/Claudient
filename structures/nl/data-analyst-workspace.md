@@ -203,13 +203,13 @@ transforms/logs/
 EOF
 
 # Claude Code-skills installeren
-npx claudient add skill data-ml/sql
-npx claudient add skill data-ml/pandas-polars
-npx claudient add skill data-ml/dashboard-narrator
-npx claudient add skill data-ml/data-quality-checker
-npx claudient add skill data-ml/stakeholder-report
-npx claudient add skill data-ml/dbt-data-pipelines
-npx claudient add skill data-ml/synthetic-data
+npx uitkit add skill data-ml/sql
+npx uitkit add skill data-ml/pandas-polars
+npx uitkit add skill data-ml/dashboard-narrator
+npx uitkit add skill data-ml/data-quality-checker
+npx uitkit add skill data-ml/stakeholder-report
+npx uitkit add skill data-ml/dbt-data-pipelines
+npx uitkit add skill data-ml/synthetic-data
 
 git add .
 git commit -m "chore: initial data analyst workspace scaffold"
@@ -388,13 +388,13 @@ Als een stakeholder een getal vraagt dat in strijd is met deze definities, dit s
 ## Te installeren skills
 
 ```bash
-npx claudient add skill data-ml/sql
-npx claudient add skill data-ml/pandas-polars
-npx claudient add skill data-ml/dashboard-narrator
-npx claudient add skill data-ml/data-quality-checker
-npx claudient add skill data-ml/stakeholder-report
-npx claudient add skill data-ml/dbt-data-pipelines
-npx claudient add skill data-ml/synthetic-data
+npx uitkit add skill data-ml/sql
+npx uitkit add skill data-ml/pandas-polars
+npx uitkit add skill data-ml/dashboard-narrator
+npx uitkit add skill data-ml/data-quality-checker
+npx uitkit add skill data-ml/stakeholder-report
+npx uitkit add skill data-ml/dbt-data-pipelines
+npx uitkit add skill data-ml/synthetic-data
 ```
 
 ## Gerelateerde bronnen

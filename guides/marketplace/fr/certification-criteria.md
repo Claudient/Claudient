@@ -1,6 +1,6 @@
 # Critères de Certification de Stack Marketplace
 
-Ce guide détaille les critères quantifiés, les rubriques de qualité et les méthodologies de mesure pour la Certification de Stack Claudient.
+Ce guide détaille les critères quantifiés, les rubriques de qualité et les méthodologies de mesure pour la Certification de Stack UitKit.
 
 ## Vue d'ensemble
 
@@ -232,7 +232,7 @@ Si une stack se voit refuser la certification ou être rétrogradée :
 1. L'auteur peut demander une clarification (dans la semaine)
 2. L'équipe centrale fournit une ventilation détaillée du score
 3. L'auteur peut répostuler après avoir abordé les problèmes identifiés (après 2 semaines)
-4. S'il est insatisfait de la rétroaction, escalader vers marketplace@claudient.dev pour un examen indépendant
+4. S'il est insatisfait de la rétroaction, escalader vers marketplace@uitkit.dev pour un examen indépendant
 
 ---
 

@@ -202,14 +202,14 @@ touch .claude/CLAUDE.md
 touch .claude/settings.json
 
 # Install Claude Code skills
-npx claudient add skill product/product-roadmap
-npx claudient add skill product/user-story-writer
-npx claudient add skill product/product-discovery
-npx claudient add skill product/experiment-designer
-npx claudient add skill product/competitive-teardown
-npx claudient add skill product/persona-builder
-npx claudient add skill product/product-analytics
-npx claudient add skill product/product-strategist
+npx uitkit add skill product/product-roadmap
+npx uitkit add skill product/user-story-writer
+npx uitkit add skill product/product-discovery
+npx uitkit add skill product/experiment-designer
+npx uitkit add skill product/competitive-teardown
+npx uitkit add skill product/persona-builder
+npx uitkit add skill product/product-analytics
+npx uitkit add skill product/product-strategist
 ```
 
 ## CLAUDE.md template
@@ -405,14 +405,14 @@ analyses, and structured outputs back into the same structure.
 ## Skills to install
 
 ```bash
-npx claudient add skill product/product-roadmap
-npx claudient add skill product/user-story-writer
-npx claudient add skill product/product-discovery
-npx claudient add skill product/experiment-designer
-npx claudient add skill product/competitive-teardown
-npx claudient add skill product/persona-builder
-npx claudient add skill product/product-analytics
-npx claudient add skill product/product-strategist
+npx uitkit add skill product/product-roadmap
+npx uitkit add skill product/user-story-writer
+npx uitkit add skill product/product-discovery
+npx uitkit add skill product/experiment-designer
+npx uitkit add skill product/competitive-teardown
+npx uitkit add skill product/persona-builder
+npx uitkit add skill product/product-analytics
+npx uitkit add skill product/product-strategist
 ```
 
 ## Related

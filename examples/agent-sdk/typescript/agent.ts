@@ -1,5 +1,5 @@
 /**
- * Claudient — Agent SDK Starter Template (TypeScript)
+ * UitKit — Agent SDK Starter Template (TypeScript)
  * Requires: @anthropic-ai/sdk >= 0.88.0, tsx (or ts-node)
  */
 

@@ -23,7 +23,7 @@ Oprichters en operators die digitale, ontwikkelings- of marketingagentschappen r
 
 **Standaard afwegingen:** Geef de voorkeur aan bewezen leveringsmodellen boven aangepaste modellen. Accepteer minder dan perfecte output als deze snel wordt afgeleverd en de marge beschermt. Een herbruikbare 80%-oplossing slaat een aangepaste 100%-oplossing.
 
-## Aanbevolen Claudient-skills en agents
+## Aanbevolen UitKit-skills en agents
 - `gtm` — agentschapspositionering, niche-selectie, outbound-campagnes
 - `sdr` — prospecting van nieuwe zaken, vervolgsequenties van offertes
 - `legal` — SOW-templates, contractbepalingen, IP-eigendomsformuleringen

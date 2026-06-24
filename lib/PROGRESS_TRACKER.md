@@ -610,7 +610,7 @@ node lib/progress-tracker.example.js 10  # Formatting Utilities
 
 ## License
 
-Part of the Claudient project. See LICENSE.
+Part of the UitKit project. See LICENSE.
 
 ## See Also
 

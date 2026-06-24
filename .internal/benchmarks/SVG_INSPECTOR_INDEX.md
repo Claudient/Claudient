@@ -490,7 +490,7 @@ async benchmarkCustomMetric() {
 
 ## License
 
-Same as Claudient: AGPL-3.0-or-later AND CC-BY-SA-4.0
+Same as UitKit: AGPL-3.0-or-later AND CC-BY-SA-4.0
 
 ---
 
@@ -500,7 +500,7 @@ Same as Claudient: AGPL-3.0-or-later AND CC-BY-SA-4.0
 - **Results Data:** `/benchmarks/svg-inspector-results.json`
 - **Full Report:** `/benchmarks/SVG_INSPECTOR_PERFORMANCE_REPORT.md`
 - **Quick Guide:** `/benchmarks/README-SVG-BENCHMARK.md`
-- **SVG Inspector:** `/scripts/claudient-svg-inspector.js`
+- **SVG Inspector:** `/scripts/uitkit-svg-inspector.js`
 
 ---
 

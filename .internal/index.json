@@ -5083,7 +5083,7 @@
       "category": "devops-infra",
       "lang": "en",
       "title": "Air Gap Deployment",
-      "description": "Deploy Claudient stacks and infrastructure in air-gapped environments: audit MCP dependencies, replace with local equivalents, configure DISABLE_EXTERNAL_MCP",
+      "description": "Deploy UitKit stacks and infrastructure in air-gapped environments: audit MCP dependencies, replace with local equivalents, configure DISABLE_EXTERNAL_MCP",
       "tier": "Gold",
       "file": "skills/devops-infra/air-gap-deployment.md"
     },
@@ -26313,13 +26313,13 @@
     {
       "id": "cross-harness-guide",
       "lang": "en",
-      "title": "Using Claudient Across AI Coding Tools",
+      "title": "Using UitKit Across AI Coding Tools",
       "file": "guides/cross-harness-guide.md"
     },
     {
       "id": "cursor-codex-compatibility",
       "lang": "en",
-      "title": "Using Claudient Skills in Cursor, Windsurf, Copilot, and Codex",
+      "title": "Using UitKit Skills in Cursor, Windsurf, Copilot, and Codex",
       "file": "guides/cursor-codex-compatibility.md"
     },
     {
@@ -26517,7 +26517,7 @@
     {
       "id": "cursor-codex-compatibility",
       "lang": "de",
-      "title": "Claudient-Skills in Cursor, Windsurf, Copilot und Codex verwenden",
+      "title": "UitKit-Skills in Cursor, Windsurf, Copilot und Codex verwenden",
       "file": "guides/de/cursor-codex-compatibility.md"
     },
     {
@@ -26703,7 +26703,7 @@
     {
       "id": "getting-started",
       "lang": "de",
-      "title": "Erste Schritte mit Claudient",
+      "title": "Erste Schritte mit UitKit",
       "file": "guides/de/getting-started.md"
     },
     {
@@ -26919,7 +26919,7 @@
     {
       "id": "discord-bot-setup",
       "lang": "en",
-      "title": "Claudient Discord Bot Setup Guide",
+      "title": "UitKit Discord Bot Setup Guide",
       "file": "guides/discord-bot-setup.md"
     },
     {
@@ -27231,7 +27231,7 @@
     {
       "id": "cursor-codex-compatibility",
       "lang": "es",
-      "title": "Usar skills de Claudient en Cursor, Windsurf, Copilot y Codex",
+      "title": "Usar skills de UitKit en Cursor, Windsurf, Copilot y Codex",
       "file": "guides/es/cursor-codex-compatibility.md"
     },
     {
@@ -27417,7 +27417,7 @@
     {
       "id": "getting-started",
       "lang": "es",
-      "title": "Primeros pasos con Claudient",
+      "title": "Primeros pasos con UitKit",
       "file": "guides/es/getting-started.md"
     },
     {
@@ -27963,7 +27963,7 @@
     {
       "id": "cursor-codex-compatibility",
       "lang": "fr",
-      "title": "Utiliser les skills Claudient dans Cursor, Windsurf, Copilot et Codex",
+      "title": "Utiliser les skills UitKit dans Cursor, Windsurf, Copilot et Codex",
       "file": "guides/fr/cursor-codex-compatibility.md"
     },
     {
@@ -28149,7 +28149,7 @@
     {
       "id": "getting-started",
       "lang": "fr",
-      "title": "Premiers pas avec Claudient",
+      "title": "Premiers pas avec UitKit",
       "file": "guides/fr/getting-started.md"
     },
     {
@@ -28347,7 +28347,7 @@
     {
       "id": "getting-started",
       "lang": "en",
-      "title": "Getting Started with Claudient",
+      "title": "Getting Started with UitKit",
       "file": "guides/getting-started.md"
     },
     {
@@ -28773,7 +28773,7 @@
     {
       "id": "cursor-codex-compatibility",
       "lang": "nl",
-      "title": "Claudient-skills gebruiken in Cursor, Windsurf, Copilot en Codex",
+      "title": "UitKit-skills gebruiken in Cursor, Windsurf, Copilot en Codex",
       "file": "guides/nl/cursor-codex-compatibility.md"
     },
     {
@@ -28959,7 +28959,7 @@
     {
       "id": "getting-started",
       "lang": "nl",
-      "title": "Aan de slag met Claudient",
+      "title": "Aan de slag met UitKit",
       "file": "guides/nl/getting-started.md"
     },
     {
@@ -30040,14 +30040,14 @@
       "file": "themes/catppuccin.json"
     },
     {
-      "id": "claudient-brand",
-      "title": "Claudient Brand",
-      "file": "themes/claudient-brand.json"
+      "id": "uitkit-brand",
+      "title": "UitKit Brand",
+      "file": "themes/uitkit-brand.json"
     },
     {
-      "id": "claudient-neon",
-      "title": "Claudient Neon",
-      "file": "themes/claudient-neon.json"
+      "id": "uitkit-neon",
+      "title": "UitKit Neon",
+      "file": "themes/uitkit-neon.json"
     },
     {
       "id": "dracula",
@@ -30214,156 +30214,156 @@
   ],
   "plugins": [
     {
-      "id": "claudient-ai-engineering",
-      "displayName": "Claudient — AI Engineering",
+      "id": "uitkit-ai-engineering",
+      "displayName": "UitKit — AI Engineering",
       "description": "Claude API, agent construction, RAG, LangGraph, CrewAI, MCP server building, prompt caching, LLM eval, and AI-native development patterns.",
       "version": "1.10.1",
       "skills": 41,
-      "file": "plugins/claudient-ai-engineering/.claude-plugin/plugin.json"
+      "file": "plugins/uitkit-ai-engineering/.claude-plugin/plugin.json"
     },
     {
-      "id": "claudient-automation",
-      "displayName": "Claudient — Automation",
+      "id": "uitkit-automation",
+      "displayName": "UitKit — Automation",
       "description": "Browser automation, Playwright, SaaS scaffolding, spec-to-repo generation, IoT, embedded systems, game dev, and office document automation.",
       "version": "1.10.1",
       "skills": 14,
-      "file": "plugins/claudient-automation/.claude-plugin/plugin.json"
+      "file": "plugins/uitkit-automation/.claude-plugin/plugin.json"
     },
     {
-      "id": "claudient-backend",
-      "displayName": "Claudient — Backend & Fullstack",
+      "id": "uitkit-backend",
+      "displayName": "UitKit — Backend & Fullstack",
       "description": "41 framework-specific skills covering Python (FastAPI, Django), Node.js (Next.js, NestJS, Hono, tRPC), Go, Rust, Ruby on Rails, Java Spring Boot, Elixir, Flutter, Swift, Kotlin, .NET, and PHP Laravel.",
       "version": "1.10.1",
       "skills": 41,
-      "file": "plugins/claudient-backend/.claude-plugin/plugin.json"
+      "file": "plugins/uitkit-backend/.claude-plugin/plugin.json"
     },
     {
-      "id": "claudient-commands",
-      "displayName": "Claudient — Slash Commands",
+      "id": "uitkit-commands",
+      "displayName": "UitKit — Slash Commands",
       "description": "100+ slash commands across git, testing, refactor, docs, debug, devops, database, security, frontend, api, ai-engineering, and productivity.",
       "version": "1.10.1",
       "skills": 0,
-      "file": "plugins/claudient-commands/.claude-plugin/plugin.json"
+      "file": "plugins/uitkit-commands/.claude-plugin/plugin.json"
     },
     {
-      "id": "claudient-data-ml",
-      "displayName": "Claudient — Data & ML",
+      "id": "uitkit-data-ml",
+      "displayName": "UitKit — Data & ML",
       "description": "Data pipelines, dbt, Apache Spark, Kafka, MLOps, MLflow, PyTorch, TensorFlow, NLP pipelines, pandas/polars, reinforcement learning, and synthetic data generation.",
       "version": "1.10.1",
       "skills": 15,
-      "file": "plugins/claudient-data-ml/.claude-plugin/plugin.json"
+      "file": "plugins/uitkit-data-ml/.claude-plugin/plugin.json"
     },
     {
-      "id": "claudient-database",
-      "displayName": "Claudient — Databases",
+      "id": "uitkit-database",
+      "displayName": "UitKit — Databases",
       "description": "PostgreSQL, MongoDB, Redis, Supabase, Neon, Turso, Prisma, Drizzle ORM, GraphQL, Elasticsearch, and blockchain/smart contracts.",
       "version": "1.10.1",
       "skills": 12,
-      "file": "plugins/claudient-database/.claude-plugin/plugin.json"
+      "file": "plugins/uitkit-database/.claude-plugin/plugin.json"
     },
     {
-      "id": "claudient-devops-infra",
-      "displayName": "Claudient — DevOps & Infrastructure",
+      "id": "uitkit-devops-infra",
+      "displayName": "UitKit — DevOps & Infrastructure",
       "description": "36 skills covering AWS, Azure, GCP, Kubernetes, Helm, Terraform, Pulumi, ArgoCD, Docker, CI/CD, GitHub Actions, secrets management, observability, SLOs, and platform engineering.",
       "version": "1.10.1",
       "skills": 42,
-      "file": "plugins/claudient-devops-infra/.claude-plugin/plugin.json"
+      "file": "plugins/uitkit-devops-infra/.claude-plugin/plugin.json"
     },
     {
-      "id": "claudient-everything",
-      "displayName": "Claudient — Everything",
-      "description": "Meta-bundle listing all Claudient domain plugins (377+ skills, 104 agents). Install individual plugins: claudient-ai-engineering, claudient-automation, claudient-backend, claudient-data-ml, claudient-database, claudient-devops-infra, claudient-finance, claudient-finance-payments, claudient-git, claudient-gtm, claudient-legal, claudient-marketing, claudient-product, claudient-productivity, claudient-sdr, claudient-small-business. See README.md for install commands.",
+      "id": "uitkit-everything",
+      "displayName": "UitKit — Everything",
+      "description": "Meta-bundle listing all UitKit domain plugins (377+ skills, 104 agents). Install individual plugins: uitkit-ai-engineering, uitkit-automation, uitkit-backend, uitkit-data-ml, uitkit-database, uitkit-devops-infra, uitkit-finance, uitkit-finance-payments, uitkit-git, uitkit-gtm, uitkit-legal, uitkit-marketing, uitkit-product, uitkit-productivity, uitkit-sdr, uitkit-small-business. See README.md for install commands.",
       "version": "1.10.1",
       "skills": 0,
-      "file": "plugins/claudient-everything/.claude-plugin/plugin.json"
+      "file": "plugins/uitkit-everything/.claude-plugin/plugin.json"
     },
     {
-      "id": "claudient-finance",
-      "displayName": "Claudient — Finance",
+      "id": "uitkit-finance",
+      "displayName": "UitKit — Finance",
       "description": "DCF models, 3-statement financial models, comps analysis, deal screening, IC memos, KYC/AML, pitch decks, earnings analysis, GL reconciliation, and financial planning.",
       "version": "1.10.1",
       "skills": 16,
-      "file": "plugins/claudient-finance/.claude-plugin/plugin.json"
+      "file": "plugins/uitkit-finance/.claude-plugin/plugin.json"
     },
     {
-      "id": "claudient-finance-payments",
-      "displayName": "Claudient — Finance & Payments",
+      "id": "uitkit-finance-payments",
+      "displayName": "UitKit — Finance & Payments",
       "description": "Stripe integration and webhook security patterns for payment processing.",
       "version": "1.10.1",
       "skills": 2,
-      "file": "plugins/claudient-finance-payments/.claude-plugin/plugin.json"
+      "file": "plugins/uitkit-finance-payments/.claude-plugin/plugin.json"
     },
     {
-      "id": "claudient-git",
-      "displayName": "Claudient — Git",
+      "id": "uitkit-git",
+      "displayName": "UitKit — Git",
       "description": "Commit message writing, PR description generation, and changelog automation.",
       "version": "1.10.1",
       "skills": 4,
-      "file": "plugins/claudient-git/.claude-plugin/plugin.json"
+      "file": "plugins/uitkit-git/.claude-plugin/plugin.json"
     },
     {
-      "id": "claudient-gtm",
-      "displayName": "Claudient — Go-to-Market",
+      "id": "uitkit-gtm",
+      "displayName": "UitKit — Go-to-Market",
       "description": "32 GTM skills: cold email, LinkedIn outreach, deal desk, revenue operations, HubSpot, channel economics, commercial forecasting, customer success, RFP response, and SDR workflows.",
       "version": "1.10.1",
       "skills": 32,
-      "file": "plugins/claudient-gtm/.claude-plugin/plugin.json"
+      "file": "plugins/uitkit-gtm/.claude-plugin/plugin.json"
     },
     {
-      "id": "claudient-legal",
-      "displayName": "Claudient — Legal",
+      "id": "uitkit-legal",
+      "displayName": "UitKit — Legal",
       "description": "Contract review, NDA analysis, GDPR compliance, SOC 2, ISO 27001, IP clearance, EU AI Act, legal research (CourtListener, Thomson Reuters), DSAR response, and diligence review.",
       "version": "1.10.1",
       "skills": 21,
-      "file": "plugins/claudient-legal/.claude-plugin/plugin.json"
+      "file": "plugins/uitkit-legal/.claude-plugin/plugin.json"
     },
     {
-      "id": "claudient-marketing",
-      "displayName": "Claudient — Marketing",
+      "id": "uitkit-marketing",
+      "displayName": "UitKit — Marketing",
       "description": "SEO (technical, AI, programmatic), content strategy, copywriting, email sequences, paid ads, brand guidelines, CRO, social media, churn prevention, schema markup, and referral programs.",
       "version": "1.10.1",
       "skills": 22,
-      "file": "plugins/claudient-marketing/.claude-plugin/plugin.json"
+      "file": "plugins/uitkit-marketing/.claude-plugin/plugin.json"
     },
     {
-      "id": "claudient-personas",
-      "displayName": "Claudient — Personas",
+      "id": "uitkit-personas",
+      "displayName": "UitKit — Personas",
       "description": "10 operating personas for Claude: startup-cto, solo-founder, growth-marketer, indie-hacker, enterprise-architect, data-driven-pm, devrel-advocate, agency-operator, ai-product-builder, fractional-exec.",
       "version": "1.10.1",
       "skills": 0,
-      "file": "plugins/claudient-personas/.claude-plugin/plugin.json"
+      "file": "plugins/uitkit-personas/.claude-plugin/plugin.json"
     },
     {
-      "id": "claudient-product",
-      "displayName": "Claudient — Product",
+      "id": "uitkit-product",
+      "displayName": "UitKit — Product",
       "description": "Product discovery, roadmapping, PRD writing, competitive teardowns, UX research, product analytics, experiment design, and landing page generation.",
       "version": "1.10.1",
       "skills": 15,
-      "file": "plugins/claudient-product/.claude-plugin/plugin.json"
+      "file": "plugins/uitkit-product/.claude-plugin/plugin.json"
     },
     {
-      "id": "claudient-productivity",
-      "displayName": "Claudient — Productivity & Engineering",
+      "id": "uitkit-productivity",
+      "displayName": "UitKit — Productivity & Engineering",
       "description": "66 skills for daily engineering work: debugging, refactoring, code review, PR automation, test generation, ADR writing, security auditing, context engineering, MCP clients, and dozens more.",
       "version": "1.10.1",
       "skills": 92,
-      "file": "plugins/claudient-productivity/.claude-plugin/plugin.json"
+      "file": "plugins/uitkit-productivity/.claude-plugin/plugin.json"
     },
     {
-      "id": "claudient-sdr",
-      "displayName": "Claudient — SDR",
+      "id": "uitkit-sdr",
+      "displayName": "UitKit — SDR",
       "description": "SDR-specific skills: cold call scripts, email sequences, ICP scoring, objection handling, LinkedIn SDR, MEDDPICC qualification, personalization, CRM hygiene, and prospect research.",
       "version": "1.10.1",
       "skills": 18,
-      "file": "plugins/claudient-sdr/.claude-plugin/plugin.json"
+      "file": "plugins/uitkit-sdr/.claude-plugin/plugin.json"
     },
     {
-      "id": "claudient-small-business",
-      "displayName": "Claudient — Small Business",
+      "id": "uitkit-small-business",
+      "displayName": "UitKit — Small Business",
       "description": "47 skills for small business operations: cash flow forecasting, invoicing, campaign briefs, QuickBooks workflows, Shopify operations, SOP writing, job descriptions, and weekly business pulse.",
       "version": "1.10.1",
       "skills": 47,
-      "file": "plugins/claudient-small-business/.claude-plugin/plugin.json"
+      "file": "plugins/uitkit-small-business/.claude-plugin/plugin.json"
     },
     {
       "id": "matrix-theme",

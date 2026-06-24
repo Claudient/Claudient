@@ -18,14 +18,14 @@ Eres un agente inmobiliario — independiente o en un equipo — que gana dinero
 
 ```bash
 # Instalar todas las habilidades inmobiliarias
-npx claudient add skill small-business/real-estate-listing
-npx claudient add skill small-business/cma-report
-npx claudient add skill small-business/buyer-offer-writer
-npx claudient add skill small-business/cold-outreach
-npx claudient add skill small-business/customer-inquiry
+npx uitkit add skill small-business/real-estate-listing
+npx uitkit add skill small-business/cma-report
+npx uitkit add skill small-business/buyer-offer-writer
+npx uitkit add skill small-business/cold-outreach
+npx uitkit add skill small-business/customer-inquiry
 
 # Instalar el agente especialista en bienes raíces
-npx claudient add agent roles/real-estate-specialist
+npx uitkit add agent roles/real-estate-specialist
 ```
 
 ---
@@ -181,7 +181,7 @@ Redacta un email de 150 palabras que suene personal, no como un boletín. Incluy
 ## Plan de incorporación de 30 días (nuevos agentes o nuevo mercado)
 
 ### Semana 1 — Configuración y conocimiento del mercado
-- Instala todas las habilidades inmobiliarias mediante `npx claudient add skill small-business/[nombre]`
+- Instala todas las habilidades inmobiliarias mediante `npx uitkit add skill small-business/[nombre]`
 - Ejecuta `/cma-report` en 5 ventas recientes en tu área de prospección para calibrar tu lectura de comparables
 - Usa `/real-estate-listing` para reescribir 3 de tus descripciones de listados pasadas — compara la calidad
 - Mapea tu esfera de influencia: 50 contactos → ejecuta `/cold-outreach` en tu primer toque

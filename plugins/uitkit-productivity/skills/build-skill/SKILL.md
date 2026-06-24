@@ -18,7 +18,7 @@ Do not use if the user just wants to run an existing skill, or if they are askin
     *   **Step 2: The Name.** Suggest a `kebab-case.md` file name based on their goal (e.g., `redux-slice-generator.md`) and ask if they approve.
     *   **Step 3: The Rules.** Ask: "What specific rules, conventions, or 'gotchas' should I know about when performing this task in the future? (e.g., 'Always use TypeScript interfaces, never types')." Wait for their response.
     *   **Step 4: The Example.** Ask: "Can you provide a small example of what the final output should look like, or should I try to generate one based on our conversation?"
-3. Once you have gathered all the information, synthesize it into the strict Claudient markdown skill format.
+3. Once you have gathered all the information, synthesize it into the strict UitKit markdown skill format.
 4. **Required Format:**
     ```markdown
     # [Skill Name]

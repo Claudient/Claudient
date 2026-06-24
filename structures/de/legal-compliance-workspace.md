@@ -194,22 +194,22 @@ touch legal-compliance-workspace/ip/trademark/filings/.gitkeep
 touch legal-compliance-workspace/ip/patents/.gitkeep
 
 # Install legal skills
-npx claudient add skill legal/contract-review
-npx claudient add skill legal/nda-review
-npx claudient add skill legal/gdpr-expert
-npx claudient add skill legal/compliance-tracker
-npx claudient add skill legal/vendor-contract-review
-npx claudient add skill legal/brief-section-drafter
-npx claudient add skill legal/soc2-compliance
-npx claudient add skill legal/legal-research
+npx uitkit add skill legal/contract-review
+npx uitkit add skill legal/nda-review
+npx uitkit add skill legal/gdpr-expert
+npx uitkit add skill legal/compliance-tracker
+npx uitkit add skill legal/vendor-contract-review
+npx uitkit add skill legal/brief-section-drafter
+npx uitkit add skill legal/soc2-compliance
+npx uitkit add skill legal/legal-research
 
 # Copy command stubs into .claude/commands/
-npx claudient add skill legal/contract-review --output legal-compliance-workspace/.claude/commands/contract-review.md
-npx claudient add skill legal/nda-review --output legal-compliance-workspace/.claude/commands/nda-review.md
-npx claudient add skill legal/gdpr-expert --output legal-compliance-workspace/.claude/commands/gdpr-check.md
-npx claudient add skill legal/vendor-contract-review --output legal-compliance-workspace/.claude/commands/vendor-diligence.md
-npx claudient add skill legal/soc2-compliance --output legal-compliance-workspace/.claude/commands/compliance-audit.md
-npx claudient add skill legal/legal-research --output legal-compliance-workspace/.claude/commands/legal-research.md
+npx uitkit add skill legal/contract-review --output legal-compliance-workspace/.claude/commands/contract-review.md
+npx uitkit add skill legal/nda-review --output legal-compliance-workspace/.claude/commands/nda-review.md
+npx uitkit add skill legal/gdpr-expert --output legal-compliance-workspace/.claude/commands/gdpr-check.md
+npx uitkit add skill legal/vendor-contract-review --output legal-compliance-workspace/.claude/commands/vendor-diligence.md
+npx uitkit add skill legal/soc2-compliance --output legal-compliance-workspace/.claude/commands/compliance-audit.md
+npx uitkit add skill legal/legal-research --output legal-compliance-workspace/.claude/commands/legal-research.md
 ```
 
 ## CLAUDE.md Vorlage
@@ -417,17 +417,17 @@ Audit date or period: [date or date range]
 
 ```bash
 # Core legal skills
-npx claudient add skill legal/contract-review
-npx claudient add skill legal/nda-review
-npx claudient add skill legal/gdpr-expert
-npx claudient add skill legal/compliance-tracker
-npx claudient add skill legal/vendor-contract-review
-npx claudient add skill legal/brief-section-drafter
-npx claudient add skill legal/soc2-compliance
-npx claudient add skill legal/legal-research
+npx uitkit add skill legal/contract-review
+npx uitkit add skill legal/nda-review
+npx uitkit add skill legal/gdpr-expert
+npx uitkit add skill legal/compliance-tracker
+npx uitkit add skill legal/vendor-contract-review
+npx uitkit add skill legal/brief-section-drafter
+npx uitkit add skill legal/soc2-compliance
+npx uitkit add skill legal/legal-research
 
 # Install all legal skills at once
-npx claudient add skills legal
+npx uitkit add skills legal
 ```
 
 ## Verwandt

@@ -1,6 +1,6 @@
-# Structured Logging for Claudient
+# Structured Logging for UitKit
 
-JSON logging schema for observability across Claudient services. All logs must follow this format for consistent ingestion into log aggregators (ELK, Datadog, CloudWatch).
+JSON logging schema for observability across UitKit services. All logs must follow this format for consistent ingestion into log aggregators (ELK, Datadog, CloudWatch).
 
 ---
 
@@ -24,7 +24,7 @@ Every log entry must include:
 {
   "timestamp": "2026-06-22T14:30:45.123Z",
   "level": "INFO",
-  "service": "claudient-api",
+  "service": "uitkit-api",
   "feature": "skill_execution",
   "user_id": "user_12345",
   "request_id": "req_abcd1234efgh5678",
@@ -40,7 +40,7 @@ Every log entry must include:
 |-------|------|----------|-------------|---------|
 | `timestamp` | ISO 8601 | yes | UTC timestamp of log event | `"2026-06-22T14:30:45.123Z"` |
 | `level` | string | yes | Log level: DEBUG, INFO, WARN, ERROR, FATAL | `"INFO"` |
-| `service` | string | yes | Service generating log (api, workflow-engine, skill-engine, gateway) | `"claudient-api"` |
+| `service` | string | yes | Service generating log (api, workflow-engine, skill-engine, gateway) | `"uitkit-api"` |
 | `feature` | string | yes | Feature area: skill_execution, dont_stop, svg_inspector, workflow, api, mcp | `"skill_execution"` |
 | `user_id` | string | conditional | User ID if applicable; use "anonymous" for CLI | `"user_12345"` |
 | `request_id` | string | yes | Unique request ID for tracing this specific request | `"req_abcd1234efgh5678"` |

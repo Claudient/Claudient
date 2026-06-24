@@ -1,6 +1,6 @@
 # Synthetic Uptime Monitoring
 
-End-to-end synthetic monitoring for Claudient feature health. Automated probes execute every 5 minutes across distributed locations to detect degradation before user-facing impact.
+End-to-end synthetic monitoring for UitKit feature health. Automated probes execute every 5 minutes across distributed locations to detect degradation before user-facing impact.
 
 ---
 
@@ -25,40 +25,40 @@ Synthetic monitoring supplements metrics and logs by executing real feature work
 Deploy probes across these regions for geographic redundancy:
 
 ### US - East Coast (us-east-1)
-- **Endpoint**: `probe-us-east.claudient.io:8443`
+- **Endpoint**: `probe-us-east.uitkit.io:8443`
 - **Region**: N. Virginia
 - **Latency target**: < 100ms to primary API
 - **DNS**: Amazon Route 53 (primary)
 - **Network**: AWS us-east-1 public subnet
 - **Health check**: TCP 8443 + HTTPS handshake
-- **Fallback probe**: `backup-probe-us-east.claudient.io`
+- **Fallback probe**: `backup-probe-us-east.uitkit.io`
 
 ### US - West Coast (us-west-2)
-- **Endpoint**: `probe-us-west.claudient.io:8443`
+- **Endpoint**: `probe-us-west.uitkit.io:8443`
 - **Region**: Oregon
 - **Latency target**: < 80ms to primary API
 - **DNS**: CloudFlare (secondary)
 - **Network**: AWS us-west-2 public subnet
 - **Health check**: TCP 8443 + certificate validation
-- **Fallback probe**: `backup-probe-us-west.claudient.io`
+- **Fallback probe**: `backup-probe-us-west.uitkit.io`
 
 ### Europe - Frankfurt (eu-central-1)
-- **Endpoint**: `probe-eu-central.claudient.io:8443`
+- **Endpoint**: `probe-eu-central.uitkit.io:8443`
 - **Region**: Frankfurt, Germany
 - **Latency target**: < 150ms to primary API
 - **DNS**: Route 53 (secondary)
 - **Network**: AWS eu-central-1 public subnet
 - **Health check**: TCP 8443 + TLS validation
-- **Fallback probe**: `backup-probe-eu-central.claudient.io`
+- **Fallback probe**: `backup-probe-eu-central.uitkit.io`
 
 ### APAC - Singapore (ap-southeast-1)
-- **Endpoint**: `probe-ap-sg.claudient.io:8443`
+- **Endpoint**: `probe-ap-sg.uitkit.io:8443`
 - **Region**: Singapore
 - **Latency target**: < 180ms to primary API
 - **DNS**: CloudFlare Asia (primary)
 - **Network**: AWS ap-southeast-1 public subnet
 - **Health check**: TCP 8443 + response time measurement
-- **Fallback probe**: `backup-probe-ap-sg.claudient.io`
+- **Fallback probe**: `backup-probe-ap-sg.uitkit.io`
 
 ---
 
@@ -257,12 +257,12 @@ metadata:
 spec:
   containers:
   - name: probe
-    image: claudient/synthetic-probe:latest
+    image: uitkit/synthetic-probe:latest
     env:
     - name: PROBE_LOCATION
       value: "us-east-1"
     - name: TARGET_ENDPOINT
-      value: "https://api.claudient.io"
+      value: "https://api.uitkit.io"
     - name: PROBE_INTERVAL_SECONDS
       value: "300"
     - name: ALERT_WEBHOOK
@@ -292,7 +292,7 @@ spec:
 ```python
 #!/usr/bin/env python3
 """
-Synthetic uptime probe for Claudient.
+Synthetic uptime probe for UitKit.
 Runs every 5 minutes to detect feature degradation.
 """
 
@@ -587,7 +587,7 @@ class SyntheticProbe:
             logger.critical(f"CRITICAL OUTAGE: {success_rate:.1f}% success")
 
 if __name__ == "__main__":
-    target = os.getenv("TARGET_ENDPOINT", "https://api.claudient.io")
+    target = os.getenv("TARGET_ENDPOINT", "https://api.uitkit.io")
     location = os.getenv("PROBE_LOCATION", "unknown")
     
     probe = SyntheticProbe(target, location)
@@ -671,7 +671,7 @@ curl -s http://prometheus:9090/api/v1/query \
   --data-urlencode 'query=syntheric_probe_duration_seconds' | jq
 
 # Check connectivity to API
-curl -v https://api.claudient.io/health
+curl -v https://api.uitkit.io/health
 
 # Check for recent deployments
 kubectl get events -n default --sort-by='.lastTimestamp'
@@ -713,8 +713,8 @@ if elapsed > 1.0:
 
 Redeploy probes:
 ```bash
-docker build -t claudient/synthetic-probe:latest .
-docker push claudient/synthetic-probe:latest
+docker build -t uitkit/synthetic-probe:latest .
+docker push uitkit/synthetic-probe:latest
 kubectl rollout restart deployment/syntheric-probe -n observability
 ```
 

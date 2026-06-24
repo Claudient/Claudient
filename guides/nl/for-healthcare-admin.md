@@ -32,17 +32,17 @@ Claude Code is geen HIPAA-gedekte entiteit en mag niet worden behandeld als onde
 
 ```bash
 # Installeer alle vaardigheden en agents voor zorgbeheer
-npx claudient add skill ops/dental-practice
-npx claudient add skill ops/sop-writer
-npx claudient add skill hr/hiring-pipeline
-npx claudient add skill hr/job-description
-npx claudient add skill compliance/gdpr-expert
-npx claudient add skill compliance/privacy-pia
+npx uitkit add skill ops/dental-practice
+npx uitkit add skill ops/sop-writer
+npx uitkit add skill hr/hiring-pipeline
+npx uitkit add skill hr/job-description
+npx uitkit add skill compliance/gdpr-expert
+npx uitkit add skill compliance/privacy-pia
 
 # Of installeer de volledige ops-, compliance- en HR-bundels:
-npx claudient add skills ops
-npx claudient add skills compliance
-npx claudient add skills hr
+npx uitkit add skills ops
+npx uitkit add skills compliance
+npx uitkit add skills hr
 ```
 
 ---
@@ -233,7 +233,7 @@ Stel een wekelijkse administratieve samenvatting op voor de praktijkhouder:
 ## 30-daags ingroeiplan (beheerders die nieuw zijn bij Claude Code)
 
 ### Week 1 — Installatie en oriëntatie
-- Installeer alle vaardigheden via `npx claudient add skills ops compliance hr`
+- Installeer alle vaardigheden via `npx uitkit add skills ops compliance hr`
 - Lees de disclaimersectie volledig — informeer je team over wat niet in prompts geplakt mag worden
 - Voer `/sop-writer` uit op je drie meest gebruikte procedures — maak kennis met de uitvoerkwaliteit voordat je erop vertrouwt
 - Gebruik `/gdpr-expert` om één bestaand dataproces dat jij beheert, te auditen

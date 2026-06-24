@@ -45,7 +45,7 @@ const TIER_MILESTONES = {
 const SWAG_REWARDS = {
   [ACHIEVEMENT_TIERS.BRONZE]: {
     name: 'Bronze Badge',
-    items: ['Claudient Sticker Pack (5x)', 'Digital Certificate'],
+    items: ['UitKit Sticker Pack (5x)', 'Digital Certificate'],
     milestone: 1,
   },
   [ACHIEVEMENT_TIERS.SILVER]: {

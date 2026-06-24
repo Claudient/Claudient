@@ -31,7 +31,7 @@ Screenshot 3: Dashboard loaded
 
 ### 1. Install
 
-The module is part of Claudient. Import it in your project:
+The module is part of UitKit. Import it in your project:
 
 ```javascript
 const builder = require('./lib/vision-workflow-builder');
@@ -405,4 +405,4 @@ for (const test of testScreenshots) {
 
 ## License
 
-Part of Claudient knowledge system.
+Part of UitKit knowledge system.

@@ -25,7 +25,7 @@ async function main() {
   console.log(`${BOLD}${CYAN}══════════════════════════════════════════════════════════════════════════════════${RESET}\n`);
 
   console.log(`[Step 1] ${CYAN}Injecting network timeout boundary simulation...${RESET}`);
-  const chaosEnv = { ...process.env, CLAUDIENT_CHAOS_TIMEOUT: '1', CLAUDIENT_CHAOS_ACTIVE: 'true', CLAUDIENT_TEST_SUITE: 'true' };
+  const chaosEnv = { ...process.env, UITKIT_CHAOS_TIMEOUT: '1', UITKIT_CHAOS_ACTIVE: 'true', UITKIT_TEST_SUITE: 'true' };
   
   console.log(`[Step 2] ${CYAN}Executing smoke test harness under chaos constraints...${RESET}`);
   let suitePassed = false;

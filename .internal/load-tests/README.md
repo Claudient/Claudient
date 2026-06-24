@@ -199,7 +199,7 @@ Compare P95/P99 latencies before/after.
 
 ## Related Files
 
-- `scripts/claudient-swarm-sandbox.js` — Sandbox orchestration CLI
+- `scripts/uitkit-swarm-sandbox.js` — Sandbox orchestration CLI
 - `scripts/swarm-sandbox-init.js` — Sandbox initialization
 - `FAQ_SWARM_SANDBOX.md` — Sandbox FAQ
 - `COMPLIANCE_CHECKLIST.md` — System compliance requirements

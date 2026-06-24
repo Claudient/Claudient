@@ -125,21 +125,21 @@ touch ae-workspace/deals/_template/gong-transcripts/.gitkeep
 touch ae-workspace/deals/_template/rfp-responses/.gitkeep
 
 # Installeer GTM-skills
-npx claudient add skill gtm/deal-desk
-npx claudient add skill gtm/deal-review
-npx claudient add skill gtm/rfp-responder
-npx claudient add skill gtm/commercial-forecaster
-npx claudient add skill gtm/qbr-builder
-npx claudient add skill gtm/channel-economics
-npx claudient add skill gtm/champion-builder
-npx claudient add skill gtm/mutual-success-plan
+npx uitkit add skill gtm/deal-desk
+npx uitkit add skill gtm/deal-review
+npx uitkit add skill gtm/rfp-responder
+npx uitkit add skill gtm/commercial-forecaster
+npx uitkit add skill gtm/qbr-builder
+npx uitkit add skill gtm/channel-economics
+npx uitkit add skill gtm/champion-builder
+npx uitkit add skill gtm/mutual-success-plan
 
 # Kopieer commando-stubs naar .claude/commands/
-npx claudient add skill gtm/deal-review --output ae-workspace/.claude/commands/deal-review.md
-npx claudient add skill gtm/rfp-responder --output ae-workspace/.claude/commands/proposal-draft.md
-npx claudient add skill gtm/qbr-builder --output ae-workspace/.claude/commands/qbr-prep.md
-npx claudient add skill gtm/commercial-forecaster --output ae-workspace/.claude/commands/forecast-update.md
-npx claudient add skill gtm/mutual-success-plan --output ae-workspace/.claude/commands/close-plan.md
+npx uitkit add skill gtm/deal-review --output ae-workspace/.claude/commands/deal-review.md
+npx uitkit add skill gtm/rfp-responder --output ae-workspace/.claude/commands/proposal-draft.md
+npx uitkit add skill gtm/qbr-builder --output ae-workspace/.claude/commands/qbr-prep.md
+npx uitkit add skill gtm/commercial-forecaster --output ae-workspace/.claude/commands/forecast-update.md
+npx uitkit add skill gtm/mutual-success-plan --output ae-workspace/.claude/commands/close-plan.md
 ```
 
 ## CLAUDE.md-template
@@ -326,23 +326,23 @@ Walk-away condition: [de grens die ik niet zal overschrijden]
 
 ```bash
 # Kernvaardigheden voor AE-dealbeheer
-npx claudient add skill gtm/deal-desk
-npx claudient add skill gtm/deal-review
-npx claudient add skill gtm/rfp-responder
-npx claudient add skill gtm/commercial-forecaster
-npx claudient add skill gtm/qbr-builder
-npx claudient add skill gtm/channel-economics
-npx claudient add skill gtm/champion-builder
-npx claudient add skill gtm/mutual-success-plan
+npx uitkit add skill gtm/deal-desk
+npx uitkit add skill gtm/deal-review
+npx uitkit add skill gtm/rfp-responder
+npx uitkit add skill gtm/commercial-forecaster
+npx uitkit add skill gtm/qbr-builder
+npx uitkit add skill gtm/channel-economics
+npx uitkit add skill gtm/champion-builder
+npx uitkit add skill gtm/mutual-success-plan
 
 # Ondersteunende GTM-skills
-npx claudient add skill gtm/crm-hygiene
-npx claudient add skill gtm/revenue-operations
-npx claudient add skill gtm/expansion-playbook
-npx claudient add skill gtm/email-automation
+npx uitkit add skill gtm/crm-hygiene
+npx uitkit add skill gtm/revenue-operations
+npx uitkit add skill gtm/expansion-playbook
+npx uitkit add skill gtm/email-automation
 
 # Installeer alle GTM-skills tegelijk
-npx claudient add skills gtm
+npx uitkit add skills gtm
 ```
 
 ## Gerelateerd

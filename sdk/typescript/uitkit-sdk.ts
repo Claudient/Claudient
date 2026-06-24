@@ -1,5 +1,5 @@
 /**
- * Claudient SDK — TypeScript Client Library
+ * UitKit SDK — TypeScript Client Library
  * Type-safe, async/await support with retry logic, error handling, and timeouts
  * Version: 1.0.0
  */
@@ -146,20 +146,20 @@ export interface ApiError {
 // ERROR CLASSES
 // ============================================================================
 
-export class ClaudientError extends Error {
+export class UitKitError extends Error {
   constructor(
     message: string,
-    public code: string = "CLAUDIENT_ERROR",
+    public code: string = "UITKIT_ERROR",
     public statusCode?: number,
     public details?: Record<string, unknown>
   ) {
     super(message);
-    this.name = "ClaudientError";
-    Object.setPrototypeOf(this, ClaudientError.prototype);
+    this.name = "UitKitError";
+    Object.setPrototypeOf(this, UitKitError.prototype);
   }
 }
 
-export class TimeoutError extends ClaudientError {
+export class TimeoutError extends UitKitError {
   constructor(message: string, public timeout: number) {
     super(message, "TIMEOUT_ERROR");
     this.name = "TimeoutError";
@@ -167,7 +167,7 @@ export class TimeoutError extends ClaudientError {
   }
 }
 
-export class RetryExhaustedError extends ClaudientError {
+export class RetryExhaustedError extends UitKitError {
   constructor(
     message: string,
     public attempts: number,
@@ -179,7 +179,7 @@ export class RetryExhaustedError extends ClaudientError {
   }
 }
 
-export class NotFoundError extends ClaudientError {
+export class NotFoundError extends UitKitError {
   constructor(message: string, public resource: string) {
     super(message, "NOT_FOUND", 404);
     this.name = "NotFoundError";
@@ -187,7 +187,7 @@ export class NotFoundError extends ClaudientError {
   }
 }
 
-export class ValidationError extends ClaudientError {
+export class ValidationError extends UitKitError {
   constructor(message: string, public field: string) {
     super(message, "VALIDATION_ERROR", 400);
     this.name = "ValidationError";
@@ -363,7 +363,7 @@ class HttpClient {
 
         if (!response.ok) {
           const errorData = await response.json().catch(() => ({}));
-          throw new ClaudientError(
+          throw new UitKitError(
             errorData.message || `HTTP ${response.status}`,
             `HTTP_${response.status}`,
             response.status,
@@ -407,7 +407,7 @@ export class SkillsClient {
     const response = await this.http.get<SkillSearchResult>(url);
 
     if (!response.success || !response.data) {
-      throw new ClaudientError(
+      throw new UitKitError(
         response.error?.message || "Failed to search skills",
         response.error?.code
       );
@@ -431,14 +431,14 @@ export class SkillsClient {
       if (response.error?.code === "NOT_FOUND") {
         throw new NotFoundError(`Skill not found: ${skillId}`, "skill");
       }
-      throw new ClaudientError(
+      throw new UitKitError(
         response.error?.message || "Failed to fetch skill",
         response.error?.code
       );
     }
 
     if (!response.data) {
-      throw new ClaudientError("No skill data in response", "INVALID_RESPONSE");
+      throw new UitKitError("No skill data in response", "INVALID_RESPONSE");
     }
 
     return response.data;
@@ -524,7 +524,7 @@ export class AgentsClient {
     const response = await this.http.get<AgentDefinition[]>(url);
 
     if (!response.success || !response.data) {
-      throw new ClaudientError(
+      throw new UitKitError(
         response.error?.message || "Failed to list agents",
         response.error?.code
       );
@@ -548,14 +548,14 @@ export class AgentsClient {
       if (response.error?.code === "NOT_FOUND") {
         throw new NotFoundError(`Agent not found: ${agentId}`, "agent");
       }
-      throw new ClaudientError(
+      throw new UitKitError(
         response.error?.message || "Failed to fetch agent",
         response.error?.code
       );
     }
 
     if (!response.data) {
-      throw new ClaudientError("No agent data in response", "INVALID_RESPONSE");
+      throw new UitKitError("No agent data in response", "INVALID_RESPONSE");
     }
 
     return response.data;
@@ -589,7 +589,7 @@ export class AgentsClient {
     );
 
     if (!response.success || !response.data) {
-      throw new ClaudientError(
+      throw new UitKitError(
         response.error?.message || "Failed to spawn agent",
         response.error?.code
       );
@@ -620,14 +620,14 @@ export class AgentsClient {
       const response = await this.http.get<AgentSpawnResponse>(url);
 
       if (!response.success) {
-        throw new ClaudientError(
+        throw new UitKitError(
           response.error?.message || "Failed to poll spawn result",
           response.error?.code
         );
       }
 
       if (!response.data) {
-        throw new ClaudientError(
+        throw new UitKitError(
           "No spawn data in response",
           "INVALID_RESPONSE"
         );
@@ -711,7 +711,7 @@ export class PluginsClient {
     const response = await this.http.get<PluginManifest[]>(url);
 
     if (!response.success || !response.data) {
-      throw new ClaudientError(
+      throw new UitKitError(
         response.error?.message || "Failed to list plugins",
         response.error?.code
       );
@@ -735,14 +735,14 @@ export class PluginsClient {
       if (response.error?.code === "NOT_FOUND") {
         throw new NotFoundError(`Plugin not found: ${pluginId}`, "plugin");
       }
-      throw new ClaudientError(
+      throw new UitKitError(
         response.error?.message || "Failed to fetch plugin",
         response.error?.code
       );
     }
 
     if (!response.data) {
-      throw new ClaudientError("No plugin data in response", "INVALID_RESPONSE");
+      throw new UitKitError("No plugin data in response", "INVALID_RESPONSE");
     }
 
     return response.data;
@@ -760,7 +760,7 @@ export class PluginsClient {
     const response = await this.http.post<PluginLoadResponse>(url, request);
 
     if (!response.success || !response.data) {
-      throw new ClaudientError(
+      throw new UitKitError(
         response.error?.message || "Failed to load plugin",
         response.error?.code
       );
@@ -774,7 +774,7 @@ export class PluginsClient {
         // Partial load — log warnings but continue
         console.warn(errorMessage);
       } else {
-        throw new ClaudientError(errorMessage, "PLUGIN_LOAD_ERROR");
+        throw new UitKitError(errorMessage, "PLUGIN_LOAD_ERROR");
       }
     }
 
@@ -794,7 +794,7 @@ export class PluginsClient {
     const response = await this.http.post<{ unloaded: boolean }>(url, {});
 
     if (!response.success) {
-      throw new ClaudientError(
+      throw new UitKitError(
         response.error?.message || "Failed to unload plugin",
         response.error?.code
       );
@@ -853,7 +853,7 @@ export class PluginsClient {
 // MAIN CLIENT
 // ============================================================================
 
-export class ClaudientClient {
+export class UitKitClient {
   private config: Required<ClientConfig>;
   private http: HttpClient;
   public skills: SkillsClient;
@@ -862,11 +862,11 @@ export class ClaudientClient {
 
   constructor(config: ClientConfig = {}) {
     this.config = {
-      baseUrl: config.baseUrl ?? "https://api.claudient.dev",
+      baseUrl: config.baseUrl ?? "https://api.uitkit.dev",
       timeout: config.timeout ?? 30000,
       maxRetries: config.maxRetries ?? 3,
       retryDelayMs: config.retryDelayMs ?? 1000,
-      apiKey: config.apiKey ?? process.env.CLAUDIENT_API_KEY ?? "",
+      apiKey: config.apiKey ?? process.env.UITKIT_API_KEY ?? "",
     };
 
     this.http = new HttpClient({
@@ -915,22 +915,22 @@ export class ClaudientClient {
 // EXPORTS
 // ============================================================================
 
-export default ClaudientClient;
+export default UitKitClient;
 
 // Export factories for convenience
-export function createClient(config?: ClientConfig): ClaudientClient {
-  return new ClaudientClient(config);
+export function createClient(config?: ClientConfig): UitKitClient {
+  return new UitKitClient(config);
 }
 
 export async function initializeClient(
   config?: ClientConfig
-): Promise<ClaudientClient> {
-  const client = new ClaudientClient(config);
+): Promise<UitKitClient> {
+  const client = new UitKitClient(config);
   const healthy = await client.healthCheck();
 
   if (!healthy) {
-    throw new ClaudientError(
-      "Failed to connect to Claudient API",
+    throw new UitKitError(
+      "Failed to connect to UitKit API",
       "CONNECTION_FAILED"
     );
   }

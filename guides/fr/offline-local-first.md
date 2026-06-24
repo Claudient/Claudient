@@ -1,31 +1,31 @@
 ---
 name: offline-local-first
-description: "Mode hors ligne et local-first : exécutez Claudient dans les environnements air-gapped, les stacks hors ligne, les modèles de repli, et ce qui nécessite une connectivité réseau"
+description: "Mode hors ligne et local-first : exécutez UitKit dans les environnements air-gapped, les stacks hors ligne, les modèles de repli, et ce qui nécessite une connectivité réseau"
 updated: 2026-06-15
 ---
 
 # Guide du mode hors ligne et local-first
 
-Ce guide couvre l'exécution de Claudient, ses stacks, et les flux de travail Claude Code dans les environnements air-gapped, hors ligne, et faible connectivité. Il distingue les capacités qui fonctionnent hors ligne et celles qui nécessitent l'accès réseau, et documente les modèles de repli pour les scénarios déconnectés.
+Ce guide couvre l'exécution de UitKit, ses stacks, et les flux de travail Claude Code dans les environnements air-gapped, hors ligne, et faible connectivité. Il distingue les capacités qui fonctionnent hors ligne et celles qui nécessitent l'accès réseau, et documente les modèles de repli pour les scénarios déconnectés.
 
 ---
 
 ## Présentation générale
 
-Claudient est conçu pour s'intégrer avec Claude Code et les outils externes (Claude API, serveurs MCP, plateformes cloud). Cependant, de nombreux flux de travail peuvent fonctionner hors ligne avec :
+UitKit est conçu pour s'intégrer avec Claude Code et les outils externes (Claude API, serveurs MCP, plateformes cloud). Cependant, de nombreux flux de travail peuvent fonctionner hors ligne avec :
 
 1. **Modèle local servant** (Claude via proxy API local)
 2. **Stacks hors ligne** (skills qui ne nécessitent pas de serveurs MCP externes ou APIs)
 3. **Connaissances en cache** (CLAUDE.md, documentation, modèles de prompts)
 4. **Outils déconnectés** (CLI local, git, shell, opérations de fichiers)
 
-Ce guide identifie quels composants Claudient fonctionnent hors ligne et comment les configurer.
+Ce guide identifie quels composants UitKit fonctionnent hors ligne et comment les configurer.
 
 ---
 
 ## Ce qui fonctionne hors ligne
 
-### Capacités Claudient principales (Entièrement hors ligne)
+### Capacités UitKit principales (Entièrement hors ligne)
 
 - **Guides, skills, agents, flux de travail, prompts** — toute la documentation et les patterns Markdown
 - **Opérations git** — clonage, commit, branchement (dépôt local uniquement)
@@ -62,7 +62,7 @@ Si vous exécutez MCP localement, ces serveurs n'ont pas de dépendances externe
 
 ## Ce qui nécessite le réseau
 
-### Fonctionnalités Claudient qui nécessitent Internet
+### Fonctionnalités UitKit qui nécessitent Internet
 
 - **Appels Claude API** — tout skill/agent qui invoque Claude (nécessite la clé API Anthropic et l'accès réseau)
 - **Serveurs MCP externes** — serveurs distants (GitHub, Linear, Slack, etc.)
@@ -103,7 +103,7 @@ pip install anthropic
 python -m anthropic.proxy --host 127.0.0.1 --port 8000
 ```
 
-Configurez ensuite Claudient pour utiliser le point d'accès local :
+Configurez ensuite UitKit pour utiliser le point d'accès local :
 
 ```json
 {
@@ -164,22 +164,22 @@ export DISABLE_EXTERNAL_MCP=true
 export MCP_SERVERS=filesystem,git  # liste séparée par des virgules
 ```
 
-### 3. Clone Claudient localement
+### 3. Clone UitKit localement
 
-Téléchargez l'intégralité du dépôt Claudient pour un accès hors ligne :
+Téléchargez l'intégralité du dépôt UitKit pour un accès hors ligne :
 
 ```bash
-git clone https://github.com/tushar2704/Claudient.git /opt/claudient
-export CLAUDIENT_PATH=/opt/claudient
+git clone https://github.com/tushar2704/UitKit.git /opt/uitkit
+export UITKIT_PATH=/opt/uitkit
 
 # Vérifiez l'accès hors ligne
-ls /opt/claudient/guides/offline-local-first.md
+ls /opt/uitkit/guides/offline-local-first.md
 ```
 
-Pointez Claude Code vers Claudient local :
+Pointez Claude Code vers UitKit local :
 
 ```bash
---project /opt/claudient
+--project /opt/uitkit
 ```
 
 ### 4. Cache les réponses API
@@ -210,7 +210,7 @@ export MCP_SERVERS=filesystem,git
 
 # Chargez la stack
 claude --stack backend \
-       --project /opt/claudient \
+       --project /opt/uitkit \
        "Build a Go API server with tests and Docker image"
 ```
 
@@ -286,7 +286,7 @@ Si l'API AWS est indisponible, utilisez les modèles CloudFormation pré-génér
 \`\`\`bash
 if ! aws ec2 describe-instances &>/dev/null; then
   echo "AWS API unavailable. Using cached templates."
-  cat /opt/claudient/cache/cf-templates/*.json
+  cat /opt/uitkit/cache/cf-templates/*.json
 fi
 \`\`\`
 ```
@@ -378,10 +378,10 @@ claude --stack "$STACK" "$@"
 
 ## Structure de documentation hors ligne
 
-Quand vous travaillez hors ligne, naviguez la structure de documentation de Claudient :
+Quand vous travaillez hors ligne, naviguez la structure de documentation de UitKit :
 
 ```
-/opt/claudient
+/opt/uitkit
 ├── guides/offline-local-first.md       ← Vous êtes ici
 ├── enterprise/AIR_GAP.md               ← Guide de déploiement
 ├── skills/devops-infra/air-gap-deployment.md
@@ -393,7 +393,7 @@ Quand vous travaillez hors ligne, naviguez la structure de documentation de Clau
 └── workflows/                          ← Tous les patterns de flux de travail
 ```
 
-Lisez depuis `/opt/claudient` (pas depuis le git remote) quand hors ligne.
+Lisez depuis `/opt/uitkit` (pas depuis le git remote) quand hors ligne.
 
 ---
 
@@ -408,7 +408,7 @@ lsof -i :8000  # si vous utilisez le proxy local
 # Forcez le mode hors ligne
 export DISABLE_EXTERNAL_MCP=true
 export OFFLINE_MODE=true
-claude --project /opt/claudient "test query"
+claude --project /opt/uitkit "test query"
 ```
 
 ### Symptôme : « API key not found »
@@ -436,7 +436,7 @@ pip install --no-index --find-links ./cache -r requirements.txt
 
 ## Résumé
 
-**Principes local-first hors ligne pour Claudient :**
+**Principes local-first hors ligne pour UitKit :**
 
 1. **Dépendances local-first** — mettez tout en cache ; le réseau est optionnel
 2. **Dégradation gracieuse** — détecter le MCP indisponible ; fournir les replis

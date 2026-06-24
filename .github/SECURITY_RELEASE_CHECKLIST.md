@@ -80,7 +80,7 @@ Use this checklist when releasing a security patch or addressing a vulnerability
 ## Post-Release Disclosure
 
 - [ ] **Advisory publication** (after embargo if applicable)
-  - [ ] Publish to [GitHub Security Advisories](https://github.com/UitbreidenOS/Claudient/security/advisories)
+  - [ ] Publish to [GitHub Security Advisories](https://github.com/UitbreidenOS/UitKit/security/advisories)
   - [ ] Include:
     - [ ] CVE ID (if assigned)
     - [ ] CVSS score
@@ -174,4 +174,4 @@ Use this template for GitHub advisories:
 
 **Maintainer responsibility:** Complete this checklist for every security release.
 
-**Questions?** Contact `security@claudient.dev`
+**Questions?** Contact `security@uitkit.dev`

@@ -1,14 +1,14 @@
 # Plugin Distribution Guide
 
-This guide covers how to distribute Claudient plugins through multiple channels: npm registry, GitHub releases, marketplace submission, and versioning strategy.
+This guide covers how to distribute UitKit plugins through multiple channels: npm registry, GitHub releases, marketplace submission, and versioning strategy.
 
 ## Overview
 
-Claudient plugins can be distributed through three primary channels:
+UitKit plugins can be distributed through three primary channels:
 
 1. **npm Registry** — For programmatic installation and dependency management
 2. **GitHub Releases** — For direct downloads and version control
-3. **Claudient Marketplace** — For discoverability and ecosystem integration
+3. **UitKit Marketplace** — For discoverability and ecosystem integration
 
 Each channel serves different use cases; most publishers use all three.
 
@@ -29,7 +29,7 @@ Ensure your plugin's root `package.json` is properly configured:
 
 ```json
 {
-  "name": "@claudient/plugin-your-plugin-name",
+  "name": "@uitkit/plugin-your-plugin-name",
   "version": "1.0.0",
   "description": "One-line plugin description (80 chars max)",
   "main": "index.js",
@@ -44,7 +44,7 @@ Ensure your plugin's root `package.json` is properly configured:
     "CLAUDE.md",
     "LICENSE"
   ],
-  "keywords": ["claude-code", "claudient", "plugin", "domain"],
+  "keywords": ["claude-code", "uitkit", "plugin", "domain"],
   "author": {
     "name": "Your Name",
     "email": "you@example.com",
@@ -132,7 +132,7 @@ npm pack
 npm install ./your-plugin-1.0.0.tgz
 
 # Verify installation
-ls node_modules/@claudient/plugin-your-plugin-name/
+ls node_modules/@uitkit/plugin-your-plugin-name/
 ```
 
 Publish to npm:
@@ -145,13 +145,13 @@ npm publish
 
 ```bash
 # Check package on npm
-npm view @claudient/plugin-your-plugin-name
+npm view @uitkit/plugin-your-plugin-name
 
 # Test installation
-npm install @claudient/plugin-your-plugin-name
+npm install @uitkit/plugin-your-plugin-name
 
 # Verify version
-npm list @claudient/plugin-your-plugin-name
+npm list @uitkit/plugin-your-plugin-name
 ```
 
 ### Troubleshooting npm Publishing
@@ -199,7 +199,7 @@ Create `RELEASE_NOTES.md`:
 
 ### Via npm
 \`\`\`bash
-npm install @claudient/plugin-your-plugin-name
+npm install @uitkit/plugin-your-plugin-name
 \`\`\`
 
 ### Via Direct Download
@@ -292,7 +292,7 @@ changelog:
 
 ---
 
-## Part 3: Claudient Marketplace Submission
+## Part 3: UitKit Marketplace Submission
 
 ### Step 1: Prepare Marketplace Metadata
 
@@ -431,7 +431,7 @@ Create or update `README.md` in your plugin root with marketplace-specific secti
 ### Via npm
 
 ```bash
-npm install @claudient/plugin-your-plugin-name
+npm install @uitkit/plugin-your-plugin-name
 ```
 
 ### Via Claude Code Marketplace
@@ -484,7 +484,7 @@ MIT License — See [LICENSE](LICENSE)
 
 ### Step 3: Submit to Marketplace
 
-1. **Fork** the Claudient repository: `github.com/claudients/claudient`
+1. **Fork** the UitKit repository: `github.com/uitkits/uitkit`
 2. **Create a feature branch:**
    ```bash
    git checkout -b submit/your-plugin-name
@@ -504,7 +504,7 @@ MIT License — See [LICENSE](LICENSE)
    ```
    ## Plugin Submission: Your Plugin Name
 
-   - [ ] Follows Claudient structure
+   - [ ] Follows UitKit structure
    - [ ] README and CLAUDE.md complete
    - [ ] All examples tested
    - [ ] Code of conduct compliance confirmed
@@ -634,8 +634,8 @@ npm publish --tag beta
 npm publish --tag rc
 
 # Users install with:
-npm install @claudient/plugin-name@beta
-npm install @claudient/plugin-name@rc
+npm install @uitkit/plugin-name@beta
+npm install @uitkit/plugin-name@rc
 ```
 
 ---
@@ -680,7 +680,7 @@ npm install @claudient/plugin-name@rc
 - [ ] `.claude-plugin/plugin.json` complete
 - [ ] README.md marketplace-friendly
 - [ ] CLAUDE.md and CONTRIBUTING.md created
-- [ ] Fork of `github.com/claudients/claudient` created
+- [ ] Fork of `github.com/uitkits/uitkit` created
 - [ ] Plugin added to `plugins/` directory
 - [ ] PR opened with complete description
 - [ ] PR addressed all review feedback
@@ -713,7 +713,7 @@ npm install @claudient/plugin-name@rc
 
 **Solutions:**
 1. npm has 5-10 minute index lag; check again later
-2. Verify package name: `npm view @claudient/plugin-name`
+2. Verify package name: `npm view @uitkit/plugin-name`
 3. Check npm account dashboard for recent publishes
 4. Verify you're logged into correct account: `npm whoami`
 
@@ -750,7 +750,7 @@ npm install @claudient/plugin-name@rc
 1. Wait 24-48 hours for marketplace rebuild
 2. Verify plugin ID matches folder name
 3. Check marketplace indexing logs
-4. Contact marketplace@claudient.dev for manual sync
+4. Contact marketplace@uitkit.dev for manual sync
 
 ---
 
@@ -779,10 +779,10 @@ npm install @claudient/plugin-name@rc
 
 ```bash
 # View download statistics (requires npm account)
-npm stats @claudient/plugin-name
+npm stats @uitkit/plugin-name
 
 # Weekly downloads
-curl https://api.npmjs.org/downloads/point/last-week/@claudient/plugin-name
+curl https://api.npmjs.org/downloads/point/last-week/@uitkit/plugin-name
 ```
 
 ### GitHub Analytics
@@ -837,7 +837,7 @@ If you publish a community plugin that reaches 1,000+ installs, you're eligible 
 
 ### Enrollment
 
-Email marketplace@claudient.dev:
+Email marketplace@uitkit.dev:
 
 ```
 Subject: Revenue Share Enrollment — [Your Plugin Name]
@@ -856,7 +856,7 @@ I understand the revenue sharing terms and agree to:
 ### Payment Terms
 
 - **Frequency:** Monthly
-- **Split:** 70% author / 30% Claudient platform
+- **Split:** 70% author / 30% UitKit platform
 - **Minimum:** $10/month threshold
 - **Method:** Stripe or bank transfer
 
@@ -882,10 +882,10 @@ I understand the revenue sharing terms and agree to:
 - GitHub release: Immediate
 - Marketplace listing: 24-48 hours
 
-For questions, contact marketplace@claudient.dev or join [Discord](https://join.claudient.dev).
+For questions, contact marketplace@uitkit.dev or join [Discord](https://join.uitkit.dev).
 
 ---
 
 **Last Updated:** June 22, 2026  
-**Maintainer:** Claudient Core Team  
+**Maintainer:** UitKit Core Team  
 **License:** CC-BY-SA-4.0

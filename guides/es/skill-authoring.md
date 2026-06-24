@@ -143,7 +143,7 @@ Si tu skill supera las 500 líneas, divídela en dos skills enfocadas. Las skill
 
 ## Probar tu skill
 
-Antes de enviar a Claudient:
+Antes de enviar a UitKit:
 
 1. Copia la skill en el `.claude/skills/` de un proyecto real
 2. Abre Claude Code y actívala con el comando slash

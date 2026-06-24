@@ -40,7 +40,7 @@ Deploy Claude Code Enterprise in air-gapped, network-isolated environments for m
 
 External (Optional):
 ┌──────────────────────────────────────────────────────────────┐
-│ Claudient Cloud (Managed, for audit logging backend)        │
+│ UitKit Cloud (Managed, for audit logging backend)        │
 │ Receives encrypted logs via controlled API gateway          │
 │ (Separate physical network zone, TLS mutual auth)           │
 └──────────────────────────────────────────────────────────────┘
@@ -181,7 +181,7 @@ openssl rsa -in .claude/auth/public-key.pem -pubin -text -noout
 chmod 400 .claude/auth/public-key.pem
 
 # 4. Users obtain JWT token at session start:
-# export CLAUDIENT_TOKEN=$(curl -X POST https://idp.company.com/token \
+# export UITKIT_TOKEN=$(curl -X POST https://idp.company.com/token \
 #   -d "grant_type=client_credentials&client_id=..&client_secret=..")
 ```
 
@@ -207,7 +207,7 @@ Then implement backup procedure:
 #!/bin/bash
 # Daily audit log backup (cron: 0 22 * * *)
 
-BACKUP_DIR="/mnt/secure-nas/claudient-backups/$(date +%Y/%m)"
+BACKUP_DIR="/mnt/secure-nas/uitkit-backups/$(date +%Y/%m)"
 mkdir -p "$BACKUP_DIR"
 cp .claude/logs/audit.log "$BACKUP_DIR/audit-$(date +%Y%m%d).log"
 chmod 400 "$BACKUP_DIR/audit-$(date +%Y%m%d).log"

@@ -1,6 +1,6 @@
 # Claude Code Routines (2026) — Cloud Agents on Schedule, GitHub Events, and API
 
-Routines are persistent, scheduled Claude Code sessions that run unattended in the cloud. Unlike background sessions that execute within your interactive terminal, routines are true asynchronous agents — they start, execute, and complete independently, then surface results via log files, Slack notifications, or GitHub comments. This guide covers the architecture, trigger patterns, the four production-ready Claudient templates, cost models, and how to build and deploy your own morning routine.
+Routines are persistent, scheduled Claude Code sessions that run unattended in the cloud. Unlike background sessions that execute within your interactive terminal, routines are true asynchronous agents — they start, execute, and complete independently, then surface results via log files, Slack notifications, or GitHub comments. This guide covers the architecture, trigger patterns, the four production-ready UitKit templates, cost models, and how to build and deploy your own morning routine.
 
 ---
 
@@ -244,9 +244,9 @@ The routine writes output to a file in the working directory.
 
 ---
 
-## The Four Claudient Templates
+## The Four UitKit Templates
 
-Claudient ships four production-ready routine templates covering 80% of use cases. Each is battle-tested by teams running large codebases.
+UitKit ships four production-ready routine templates covering 80% of use cases. Each is battle-tested by teams running large codebases.
 
 ### Template 1: Daily Standup
 

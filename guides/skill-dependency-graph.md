@@ -1,12 +1,12 @@
 # Skill Dependency Graph Guide
 
-This guide explains how to analyze and visualize the relationships between skills and agents in Claudient using the dependency graph tools.
+This guide explains how to analyze and visualize the relationships between skills and agents in UitKit using the dependency graph tools.
 
 ---
 
 ## Overview
 
-The Claudient repository is a network of skills and agents. Over time, skills reference each other — either by name, functionality, or context. Understanding these dependencies helps you:
+The UitKit repository is a network of skills and agents. Over time, skills reference each other — either by name, functionality, or context. Understanding these dependencies helps you:
 
 - **Identify clusters**: which skills work together
 - **Spot orphans**: skills no one references (candidates for archival)
@@ -226,7 +226,7 @@ The `skill-composition` guide references four core skills. You now know the lear
 
 ## Troubleshooting
 
-**Graph is empty or has very few edges**: Ensure you're running from the repo root (`/Users/tushar/Desktop/Claudient`). The script looks for `skills/` and `agents/` relative to the repo root.
+**Graph is empty or has very few edges**: Ensure you're running from the repo root (`/Users/tushar/Desktop/UitKit`). The script looks for `skills/` and `agents/` relative to the repo root.
 
 **False positives (incorrectly detected references)**: The matching is case-insensitive and uses word boundaries. Strings like "agent" match "agent-handoff" (correct) but might also match "agent_supervisor" if not careful. Review the actual skill file content to confirm the reference is intentional.
 

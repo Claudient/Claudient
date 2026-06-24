@@ -952,7 +952,7 @@ cat .claude/goal-state/goal_abc123/token-report.json
 
 # Output:
 # Workspace check for: goal_abc123
-# ├─ Working directory: /Users/tushar/Desktop/Claudient ✓
+# ├─ Working directory: /Users/tushar/Desktop/UitKit ✓
 # ├─ Git branch: feature/api-refactor ✓
 # ├─ Git commit: a1b2c3d4e5f6g7h8 ✓
 # ├─ Staged changes: none ✓

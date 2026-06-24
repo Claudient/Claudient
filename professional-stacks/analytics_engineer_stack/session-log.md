@@ -66,4 +66,4 @@ _Template — copy below for each new session_
 
 ---
 
-Built with [Claudient](https://github.com/UitbreidenOS/Claudient)
+Built with [UitKit](https://github.com/UitbreidenOS/UitKit)

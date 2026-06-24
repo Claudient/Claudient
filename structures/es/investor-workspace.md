@@ -206,18 +206,18 @@ touch investor-workspace/portfolio/_template/updates/.gitkeep
 touch investor-workspace/portfolio/_template/board-notes/.gitkeep
 
 # Instalar habilidades de finanzas
-npx claudient add skill finance/deal-screening
-npx claudient add skill finance/deal-memo
-npx claudient add skill finance/ic-memo
-npx claudient add skill finance/portfolio-monitor
-npx claudient add skill finance/dcf-model
-npx claudient add skill finance/comps-analysis
+npx uitkit add skill finance/deal-screening
+npx uitkit add skill finance/deal-memo
+npx uitkit add skill finance/ic-memo
+npx uitkit add skill finance/portfolio-monitor
+npx uitkit add skill finance/dcf-model
+npx uitkit add skill finance/comps-analysis
 
 # Copiar stubs de comandos en .claude/commands/
-npx claudient add skill finance/deal-screening --output investor-workspace/.claude/commands/deal-screen.md
-npx claudient add skill finance/ic-memo --output investor-workspace/.claude/commands/ic-memo.md
-npx claudient add skill finance/portfolio-monitor --output investor-workspace/.claude/commands/portfolio-update.md
-npx claudient add skill finance/deal-memo --output investor-workspace/.claude/commands/lp-report.md
+npx uitkit add skill finance/deal-screening --output investor-workspace/.claude/commands/deal-screen.md
+npx uitkit add skill finance/ic-memo --output investor-workspace/.claude/commands/ic-memo.md
+npx uitkit add skill finance/portfolio-monitor --output investor-workspace/.claude/commands/portfolio-update.md
+npx uitkit add skill finance/deal-memo --output investor-workspace/.claude/commands/lp-report.md
 ```
 
 ## Plantilla CLAUDE.md
@@ -428,23 +428,23 @@ Key concerns to address: [preocupaciones a nivel de junta directiva, si las hay]
 
 ```bash
 # Habilidades clave de inversor
-npx claudient add skill finance/deal-screening
-npx claudient add skill finance/deal-memo
-npx claudient add skill finance/ic-memo
-npx claudient add skill finance/portfolio-monitor
-npx claudient add skill finance/dcf-model
-npx claudient add skill finance/comps-analysis
+npx uitkit add skill finance/deal-screening
+npx uitkit add skill finance/deal-memo
+npx uitkit add skill finance/ic-memo
+npx uitkit add skill finance/portfolio-monitor
+npx uitkit add skill finance/dcf-model
+npx uitkit add skill finance/comps-analysis
 
 # Habilidades de finanzas y investigación de apoyo
-npx claudient add skill finance/lp-reporting
-npx claudient add skill finance/cap-table-analysis
-npx claudient add skill finance/reference-check-synthesizer
-npx claudient add skill finance/market-sizing
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/stakeholder-comms
+npx uitkit add skill finance/lp-reporting
+npx uitkit add skill finance/cap-table-analysis
+npx uitkit add skill finance/reference-check-synthesizer
+npx uitkit add skill finance/market-sizing
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/stakeholder-comms
 
 # Instalar todas las habilidades de finanzas a la vez
-npx claudient add skills finance
+npx uitkit add skills finance
 ```
 
 ## Relacionado

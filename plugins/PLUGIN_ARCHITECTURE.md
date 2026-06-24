@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Claudient plugin system is a modular framework for organizing and distributing skills, agents, rules, and other Claude Code knowledge components. Plugins serve as self-contained, versionable units that can be installed, enabled, disabled, and uninstalled independently while managing dependencies and lifecycle events.
+The UitKit plugin system is a modular framework for organizing and distributing skills, agents, rules, and other Claude Code knowledge components. Plugins serve as self-contained, versionable units that can be installed, enabled, disabled, and uninstalled independently while managing dependencies and lifecycle events.
 
 ---
 
@@ -180,8 +180,8 @@ Dependencies use npm-style semantic versioning:
 ```json
 {
   "dependencies": {
-    "claudient-backend": "^1.0.0",
-    "claudient-database": "~1.5.0",
+    "uitkit-backend": "^1.0.0",
+    "uitkit-database": "~1.5.0",
     "other-plugin": "1.2.3"
   }
 }
@@ -245,7 +245,7 @@ Plugins move through states: `uninstalled` → `installed` → `enabled` → `di
 ### Installation
 
 ```bash
-claude install @claudient/backend
+claude install @uitkit/backend
 # or
 claude install ./plugins/my-plugin
 ```
@@ -261,7 +261,7 @@ claude install ./plugins/my-plugin
 ### Enablement
 
 ```bash
-claude enable @claudient/backend
+claude enable @uitkit/backend
 ```
 
 **On Enable:**
@@ -276,7 +276,7 @@ claude enable @claudient/backend
 ### Disablement
 
 ```bash
-claude disable @claudient/backend
+claude disable @uitkit/backend
 ```
 
 **On Disable:**
@@ -290,7 +290,7 @@ claude disable @claudient/backend
 ### Uninstallation
 
 ```bash
-claude uninstall @claudient/backend
+claude uninstall @uitkit/backend
 ```
 
 **On Uninstall:**
@@ -371,9 +371,9 @@ Hooks receive these variables:
 
 | Variable | Value | Example |
 |----------|-------|---------|
-| `PLUGIN_NAME` | Plugin identifier | `claudient-backend` |
+| `PLUGIN_NAME` | Plugin identifier | `uitkit-backend` |
 | `PLUGIN_VERSION` | Plugin version | `1.10.1` |
-| `PLUGIN_ROOT` | Plugin directory path | `/path/to/plugins/claudient-backend` |
+| `PLUGIN_ROOT` | Plugin directory path | `/path/to/plugins/uitkit-backend` |
 | `CLAUDE_CODE_VERSION` | Claude Code version | `1.5.0` |
 | `CLAUDE_CONFIG_DIR` | Config directory | `~/.claude` |
 
@@ -440,7 +440,7 @@ Users set plugin config in `.claude/settings.json`:
 ```json
 {
   "plugins": {
-    "claudient-backend": {
+    "uitkit-backend": {
       "enabled": true,
       "apiKey": "sk-1234567890abcdef",
       "endpoint": "https://custom.example.com",
@@ -460,7 +460,7 @@ When enabled, plugins register their contents in the local plugin registry.
 
 ```json
 {
-  "pluginId": "claudient-backend",
+  "pluginId": "uitkit-backend",
   "pluginVersion": "1.10.1",
   "status": "enabled",
   "loadedAt": "2024-06-22T10:30:00Z",
@@ -526,7 +526,7 @@ The root `.claude-plugin/marketplace.json` catalogs all plugins for distribution
 ```json
 {
   "$schema": "https://code.claude.com/schema/marketplace.json",
-  "name": "claudient",
+  "name": "uitkit",
   "description": "...",
   "owner": {
     "name": "tushar2704",
@@ -534,13 +534,13 @@ The root `.claude-plugin/marketplace.json` catalogs all plugins for distribution
   },
   "metadata": {
     "pluginRoot": "./plugins",
-    "registryUrl": "https://plugins.claudient.io",
-    "cdnUrl": "https://cdn.claudient.io/plugins"
+    "registryUrl": "https://plugins.uitkit.io",
+    "cdnUrl": "https://cdn.uitkit.io/plugins"
   },
   "plugins": [
     {
-      "name": "claudient-backend",
-      "source": "./plugins/claudient-backend",
+      "name": "uitkit-backend",
+      "source": "./plugins/uitkit-backend",
       "description": "41 framework-specific skills covering Python, Node.js, Go, Rust, ...",
       "category": "backend",
       "version": "1.10.1",
@@ -612,7 +612,7 @@ Action: Review hook logs and fix underlying issue
 
 1. **Single Responsibility** — Each plugin should have a cohesive purpose (e.g., backend frameworks, not "everything").
 2. **Minimal Dependencies** — Depend only on plugins truly required; avoid circular dependencies.
-3. **Clear Naming** — Use descriptive plugin names (`claudient-backend`, not `cbnd` or `plugin-1`).
+3. **Clear Naming** — Use descriptive plugin names (`uitkit-backend`, not `cbnd` or `plugin-1`).
 4. **Semantic Versioning** — Strictly follow MAJOR.MINOR.PATCH versioning.
 5. **Namespace Skills** — Group related skills under namespaces to avoid CLI collisions.
 
@@ -678,7 +678,7 @@ my-ai-plugin/
     "claude-code": ">=1.0.0"
   },
   "dependencies": {
-    "claudient-ai-engineering": "^1.0.0"
+    "uitkit-ai-engineering": "^1.0.0"
   },
   "activationEvents": [
     "onCommand:openai",

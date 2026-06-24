@@ -18,16 +18,16 @@ Vous êtes freelance ou consultant indépendant — designer, développeur, réd
 
 ```bash
 # Installer toutes les compétences freelance
-npx claudient add skill small-business/freelancer-proposal
-npx claudient add skill small-business/scope-of-work
-npx claudient add skill small-business/client-status-report
-npx claudient add skill small-business/invoice-chaser
-npx claudient add skill small-business/cold-outreach
-npx claudient add skill small-business/cash-flow-forecast
-npx claudient add skill small-business/agency-operations
+npx uitkit add skill small-business/freelancer-proposal
+npx uitkit add skill small-business/scope-of-work
+npx uitkit add skill small-business/client-status-report
+npx uitkit add skill small-business/invoice-chaser
+npx uitkit add skill small-business/cold-outreach
+npx uitkit add skill small-business/cash-flow-forecast
+npx uitkit add skill small-business/agency-operations
 
 # Installer l'agent conseiller PDG
-npx claudient add agent advisors/ceo-advisor
+npx uitkit add agent advisors/ceo-advisor
 ```
 
 ---
@@ -205,7 +205,7 @@ Montrez-moi : trésorerie mois par mois, quand je pourrais avoir un découvert, 
 ## Plan de montée en compétence sur 30 jours (nouveaux freelances ou nouveau marché)
 
 ### Semaine 1 — Infrastructure business
-- Installer toutes les compétences freelance : `npx claudient add skill small-business/[nom]`
+- Installer toutes les compétences freelance : `npx uitkit add skill small-business/[nom]`
 - Rédiger votre modèle de proposition standard avec `/freelancer-proposal` — personnaliser pour vos services
 - Rédiger votre modèle principal de cahier des charges avec `/scope-of-work` — l'utiliser pour chaque futur projet
 - Définir vos prix : taux horaire, tarifs par projet, tarifs de rétainer — les documenter

@@ -22,5 +22,5 @@ Aiguille dynamiquement les tâches des développeurs et les contextes de code ve
 - Routage automatique basé sur le contexte du dossier (ex. aiguiller les modifications d'infrastructure vers les niveaux de raisonnement supérieur et les modifications de documentation vers les niveaux rapides).
 
 ## Quand NE PAS déléguer ici
-- Commandes simples sur une seule ligne ou drapeaux explicites forçant les modèles (ex. `claudient run --model haiku`).
+- Commandes simples sur une seule ligne ou drapeaux explicites forçant les modèles (ex. `uitkit run --model haiku`).
 - Exécutions de scripts simples ne contenant pas de considérations architecturales.

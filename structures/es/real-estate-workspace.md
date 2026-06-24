@@ -214,17 +214,17 @@ touch real-estate-workspace/buyers/_template/.gitkeep
 touch real-estate-workspace/sellers/_template/.gitkeep
 
 # Instalar habilidades inmobiliarias
-npx claudient add skill small-business/real-estate-listing
-npx claudient add skill small-business/cma-report
-npx claudient add skill small-business/buyer-offer-writer
-npx claudient add skill marketing/email-sequence
-npx claudient add skill gtm/crm-hygiene
+npx uitkit add skill small-business/real-estate-listing
+npx uitkit add skill small-business/cma-report
+npx uitkit add skill small-business/buyer-offer-writer
+npx uitkit add skill marketing/email-sequence
+npx uitkit add skill gtm/crm-hygiene
 
 # Copiar talones de comando en .claude/commands/
-npx claudient add skill small-business/real-estate-listing --output real-estate-workspace/.claude/commands/listing-create.md
-npx claudient add skill small-business/cma-report --output real-estate-workspace/.claude/commands/cma-report.md
-npx claudient add skill small-business/buyer-offer-writer --output real-estate-workspace/.claude/commands/offer-draft.md
-npx claudient add skill marketing/email-sequence --output real-estate-workspace/.claude/commands/client-followup.md
+npx uitkit add skill small-business/real-estate-listing --output real-estate-workspace/.claude/commands/listing-create.md
+npx uitkit add skill small-business/cma-report --output real-estate-workspace/.claude/commands/cma-report.md
+npx uitkit add skill small-business/buyer-offer-writer --output real-estate-workspace/.claude/commands/offer-draft.md
+npx uitkit add skill marketing/email-sequence --output real-estate-workspace/.claude/commands/client-followup.md
 ```
 
 ## Plantilla CLAUDE.md
@@ -435,19 +435,19 @@ First-time buyer: [sí/no]
 
 ```bash
 # Habilidades inmobiliarias centrales
-npx claudient add skill small-business/real-estate-listing
-npx claudient add skill small-business/cma-report
-npx claudient add skill small-business/buyer-offer-writer
+npx uitkit add skill small-business/real-estate-listing
+npx uitkit add skill small-business/cma-report
+npx uitkit add skill small-business/buyer-offer-writer
 
 # Habilidades de marketing y nutrición
-npx claudient add skill marketing/email-sequence
-npx claudient add skill marketing/social-content-writer
-npx claudient add skill marketing/video-script-writer
+npx uitkit add skill marketing/email-sequence
+npx uitkit add skill marketing/social-content-writer
+npx uitkit add skill marketing/video-script-writer
 
 # Habilidades de CRM y operaciones
-npx claudient add skill gtm/crm-hygiene
-npx claudient add skill productivity/client-followup
-npx claudient add skill productivity/weekly-review
+npx uitkit add skill gtm/crm-hygiene
+npx uitkit add skill productivity/client-followup
+npx uitkit add skill productivity/weekly-review
 ```
 
 ## Relacionado

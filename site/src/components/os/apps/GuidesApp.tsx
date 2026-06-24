@@ -9,7 +9,7 @@ interface Guide {
   excerpt?: string;
 }
 
-const REPO_GUIDES_URL = "https://github.com/UitbreidenOS/Claudient/blob/main/guides";
+const REPO_GUIDES_URL = "https://github.com/UitbreidenOS/UitKit/blob/main/guides";
 
 const guides: Guide[] = [
   // Getting Started
@@ -46,7 +46,7 @@ const guides: Guide[] = [
     body: "Patterns for coordinating multiple agents — supervisor/worker, sequential pipelines, and parallel execution.",
     excerpt: "Deep dive into orchestration patterns: fan-out/fan-in for parallel work, sequential chains for dependent tasks, supervisor delegation for complex routing, and blackboard coordination for shared state. Includes implementation examples for each pattern." },
   { id: "agent-sdk-pack", title: "Agent SDK Pack", category: "Agent Development",
-    body: "The Claudient Agent SDK — reusable building blocks for creating custom agents with tools, memory, and hooks.",
+    body: "The UitKit Agent SDK — reusable building blocks for creating custom agents with tools, memory, and hooks.",
     excerpt: "The Agent SDK provides composable primitives for building agents: tool definitions with input/output schemas, memory interfaces for session persistence, hook registration for lifecycle events, and agent composition utilities." },
   { id: "agent-sdk-deep-dive", title: "Agent SDK Deep Dive", category: "Agent Development",
     body: "In-depth exploration of the Agent SDK API — tool definitions, memory interfaces, and event-driven architectures.",
@@ -81,10 +81,10 @@ const guides: Guide[] = [
   // Integrations
   { id: "hooks", title: "Hooks", category: "Integrations",
     body: "Hooks let you run custom logic at key points in Claude's workflow — before/after tool calls, on file changes, on errors, and on session events.",
-    excerpt: "Hooks execute custom scripts at lifecycle events: PreToolUse (before tool execution), PostToolUse (after tool results), Notification (on alerts), and Stop (on session end). Configure via settings.json with matcher patterns and command strings. Claudient provides 48 pre-built hooks." },
+    excerpt: "Hooks execute custom scripts at lifecycle events: PreToolUse (before tool execution), PostToolUse (after tool results), Notification (on alerts), and Stop (on session end). Configure via settings.json with matcher patterns and command strings. UitKit provides 48 pre-built hooks." },
   { id: "mcp-setup", title: "MCP Server Setup", category: "Integrations",
-    body: "Model Context Protocol servers extend Claude's capabilities with external tools. Claudient provides 41 ready-to-use MCP configurations.",
-    excerpt: "MCP servers give Claude access to external tools: databases, APIs, browsers, file systems, and more. Install via settings.json with server command and environment variables. Claudient ships 41 ready-to-use configs covering GitHub, Slack, PostgreSQL, Puppeteer, and more." },
+    body: "Model Context Protocol servers extend Claude's capabilities with external tools. UitKit provides 41 ready-to-use MCP configurations.",
+    excerpt: "MCP servers give Claude access to external tools: databases, APIs, browsers, file systems, and more. Install via settings.json with server command and environment variables. UitKit ships 41 ready-to-use configs covering GitHub, Slack, PostgreSQL, Puppeteer, and more." },
   { id: "computer-use", title: "Computer Use", category: "Integrations",
     body: "Claude's computer use capability — controlling browsers, reading screens, and interacting with desktop applications.",
     excerpt: "Computer use lets Claude take screenshots, click buttons, type text, and navigate GUIs. Use it for browser automation, legacy app interaction, and visual testing. Requires explicit permission and careful sandboxing." },

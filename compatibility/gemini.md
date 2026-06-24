@@ -1,10 +1,10 @@
-# Claudient × Gemini Code Assist
+# UitKit × Gemini Code Assist
 
-> How to use Claudient content with Gemini Code Assist and the Gemini CLI.
+> How to use UitKit content with Gemini Code Assist and the Gemini CLI.
 
 ## What works natively
 
-Gemini Code Assist integrates with Gemini's API and supports context files and chat-based interactions. While Gemini does not have direct equivalents to Claude Code's `/slash-commands` or hooks system, Claudient's content is highly portable:
+Gemini Code Assist integrates with Gemini's API and supports context files and chat-based interactions. While Gemini does not have direct equivalents to Claude Code's `/slash-commands` or hooks system, UitKit's content is highly portable:
 
 - **Markdown skill prompts** — Use as chat input or embed in project context
 - **Rules and guidelines** — Convert to system instructions or GEMINI.md sections
@@ -16,7 +16,7 @@ Gemini Code Assist integrates with Gemini's API and supports context files and c
 
 ## What needs adaptation
 
-| Claudient element | Gemini approach | Complexity |
+| UitKit element | Gemini approach | Complexity |
 |---|---|---|
 | **Skills (slash-command `.md` files)** | Convert to GEMINI.md prompts or chat templates | Low |
 | **Commands (CLI definitions)** | Use with `gemini` CLI via `--context` or direct chat | Low |
@@ -34,11 +34,11 @@ Gemini Code Assist integrates with Gemini's API and supports context files and c
 
 Gemini uses **GEMINI.md** (or `gemini.md`) as a project context file, similar to CLAUDE.md. The structure mirrors Claude Code's project instructions but targets Gemini-specific features.
 
-#### How to convert a Claudient skill to GEMINI.md
+#### How to convert a UitKit skill to GEMINI.md
 
 **Step 1: Extract the skill's core instructions**
 
-Take a Claudient skill file like `skills/backend/fastapi-crud.md`:
+Take a UitKit skill file like `skills/backend/fastapi-crud.md`:
 
 ```markdown
 # FastAPI CRUD
@@ -101,7 +101,7 @@ Group related routes in routers (see skill for full code example).
 3. Execute database query
 4. Return response model
 
-For full details, refer to the Claudient skill: `skills/backend/fastapi-crud.md`.
+For full details, refer to the UitKit skill: `skills/backend/fastapi-crud.md`.
 ```
 
 #### Example: Full GEMINI.md structure
@@ -153,24 +153,24 @@ All code must follow these rules:
 
 ## Import Gemini Skills
 
-To use Claudient skills in this project:
-1. Identify the skill in `Claudient/skills/backend/fastapi-crud.md`
+To use UitKit skills in this project:
+1. Identify the skill in `UitKit/skills/backend/fastapi-crud.md`
 2. Extract the Instructions section
 3. Paste as a comment block above your code
 4. Reference the pattern while implementing
 
-See Claudient repository: https://github.com/user/claudient
+See UitKit repository: https://github.com/user/uitkit
 ```
 
 ---
 
 ### Commands → Gemini CLI prompts
 
-Claudient's **commands** directory contains `.md` files that define reusable prompts for specific tasks. These are easily adapted for Gemini CLI.
+UitKit's **commands** directory contains `.md` files that define reusable prompts for specific tasks. These are easily adapted for Gemini CLI.
 
 #### Convert a command to Gemini CLI usage
 
-**Original Claudient command**: `commands/refactor-unsafe-patterns.md`
+**Original UitKit command**: `commands/refactor-unsafe-patterns.md`
 
 ```markdown
 # Refactor Unsafe Patterns
@@ -194,14 +194,14 @@ Suggest specific refactorings with before/after code examples. Prioritize by imp
 
 ```bash
 # Copy the command prompt
-cat Claudient/commands/refactor-unsafe-patterns.md
+cat UitKit/commands/refactor-unsafe-patterns.md
 
 # Pass to Gemini as context
-gemini --context "Claudient/commands/refactor-unsafe-patterns.md" \
+gemini --context "UitKit/commands/refactor-unsafe-patterns.md" \
        --message "Refactor this file: src/legacy_parser.py"
 
 # Or pipe directly
-cat src/legacy_parser.py | gemini --context "Claudient/commands/refactor-unsafe-patterns.md" \
+cat src/legacy_parser.py | gemini --context "UitKit/commands/refactor-unsafe-patterns.md" \
                                     --message "What anti-patterns do you see?"
 ```
 
@@ -218,7 +218,7 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
-REFACTOR_PROMPT=$(cat Claudient/commands/refactor-unsafe-patterns.md | sed -n '/^## Prompt/,$p' | tail -n +2)
+REFACTOR_PROMPT=$(cat UitKit/commands/refactor-unsafe-patterns.md | sed -n '/^## Prompt/,$p' | tail -n +2)
 
 gemini --context "$1" \
        --system-prompt "$REFACTOR_PROMPT" \
@@ -229,11 +229,11 @@ gemini --context "$1" \
 
 ### Rules → GEMINI.md guidelines section
 
-Claudient's **rules** are always-follow guidelines that should be converted to a GEMINI.md `Guidelines` section.
+UitKit's **rules** are always-follow guidelines that should be converted to a GEMINI.md `Guidelines` section.
 
 #### Convert rules for Gemini
 
-**Original Claudient rule**: `rules/language-specific/python.md`
+**Original UitKit rule**: `rules/language-specific/python.md`
 
 ```markdown
 # Python Rules
@@ -283,7 +283,7 @@ Apply these rules to all Python code:
 
 ---
 
-For full rules, refer to Claudient: `rules/language-specific/python.md`
+For full rules, refer to UitKit: `rules/language-specific/python.md`
 ```
 
 ---
@@ -353,7 +353,7 @@ A GraphQL server with subscription support using Apollo Server 4.
 
 ## Compatibility matrix
 
-| Claudient content | Gemini equivalent | Adaptation effort | Notes |
+| UitKit content | Gemini equivalent | Adaptation effort | Notes |
 |---|---|---|---|
 | **Skills** (.md files) | GEMINI.md patterns section or chat prompts | Low | Copy instructions verbatim; remove Claude Code tool references |
 | **Commands** (CLI prompts) | `gemini` CLI with `--context` or direct chat | Low | Use skill's "Prompt" section; pipe input via stdin |
@@ -368,12 +368,12 @@ A GraphQL server with subscription support using Apollo Server 4.
 
 ---
 
-## Quick start: Using Claudient skills in Gemini
+## Quick start: Using UitKit skills in Gemini
 
 ### 1. Create GEMINI.md in your project
 
 ```bash
-cp /path/to/Claudient/compatibility/gemini.md /your/project/GEMINI.md
+cp /path/to/UitKit/compatibility/gemini.md /your/project/GEMINI.md
 # Edit to add your project-specific guidelines
 ```
 
@@ -381,7 +381,7 @@ cp /path/to/Claudient/compatibility/gemini.md /your/project/GEMINI.md
 
 ```bash
 # Extract the FastAPI CRUD skill
-cat /path/to/Claudient/skills/backend/fastapi-crud.md | grep -A 100 "## Instructions" > /tmp/fastapi-pattern.txt
+cat /path/to/UitKit/skills/backend/fastapi-crud.md | grep -A 100 "## Instructions" > /tmp/fastapi-pattern.txt
 
 # Use in Gemini chat or CLI
 gemini --context /tmp/fastapi-pattern.txt \
@@ -391,11 +391,11 @@ gemini --context /tmp/fastapi-pattern.txt \
 ### 3. Use commands with Gemini CLI
 
 ```bash
-# List available Claudient commands
-ls /path/to/Claudient/commands/
+# List available UitKit commands
+ls /path/to/UitKit/commands/
 
 # Run a command
-gemini --context "Claudient/commands/refactor-unsafe-patterns.md" \
+gemini --context "UitKit/commands/refactor-unsafe-patterns.md" \
        --file "src/old_parser.py"
 ```
 
@@ -492,5 +492,5 @@ result = run_agent(prompt, "Review my user endpoint implementation")
 
 - **Gemini Code Assist**: https://ai.google.dev/gemini-code-assist
 - **Gemini CLI Documentation**: https://ai.google.dev/cli
-- **Claudient Repository**: https://github.com/user/claudient
+- **UitKit Repository**: https://github.com/user/uitkit
 - **Adaptation Patterns**: See `compatibility/README.md` for cross-harness guidance

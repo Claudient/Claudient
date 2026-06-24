@@ -601,4 +601,4 @@ const actionPlan = await learner.applyWorkflow(screenshot, patternId);
 
 ## License
 
-Part of Claudient knowledge system. See main LICENSE file.
+Part of UitKit knowledge system. See main LICENSE file.

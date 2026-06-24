@@ -123,17 +123,17 @@ touch sdr-workspace/intel/value-props/customer-stories.md
 echo "# Wekelijks overzicht — $(date +%Y-W%V)" > sdr-workspace/logs/weekly/$(date +%Y-W%V).md
 
 # Installeer alle SDR-vaardigheden
-npx claudient add skill gtm/sdr-research-brief
-npx claudient add skill gtm/sdr-reply-classifier
-npx claudient add skill gtm/sdr-call-prep
-npx claudient add skill gtm/sdr-call-analysis
-npx claudient add skill gtm/sdr-objection-handler
-npx claudient add skill gtm/sdr-territory-mapper
-npx claudient add skill gtm/sdr-lead-scorer
-npx claudient add skill gtm/email-automation
-npx claudient add skill gtm/lead-enrichment
-npx claudient add skill gtm/crm-hygiene
-npx claudient add skill gtm/hubspot
+npx uitkit add skill gtm/sdr-research-brief
+npx uitkit add skill gtm/sdr-reply-classifier
+npx uitkit add skill gtm/sdr-call-prep
+npx uitkit add skill gtm/sdr-call-analysis
+npx uitkit add skill gtm/sdr-objection-handler
+npx uitkit add skill gtm/sdr-territory-mapper
+npx uitkit add skill gtm/sdr-lead-scorer
+npx uitkit add skill gtm/email-automation
+npx uitkit add skill gtm/lead-enrichment
+npx uitkit add skill gtm/crm-hygiene
+npx uitkit add skill gtm/hubspot
 
 echo "SDR werkruimte raamwerk compleet."
 ```
@@ -291,17 +291,17 @@ Voeg hier geen toepassingscode toe. Dit is een inhoud- en workflowwerkruimte.
 ## Vaardigheden om te installeren
 
 ```bash
-npx claudient add skill gtm/sdr-research-brief
-npx claudient add skill gtm/sdr-reply-classifier
-npx claudient add skill gtm/sdr-call-prep
-npx claudient add skill gtm/sdr-call-analysis
-npx claudient add skill gtm/sdr-objection-handler
-npx claudient add skill gtm/sdr-territory-mapper
-npx claudient add skill gtm/sdr-lead-scorer
-npx claudient add skill gtm/email-automation
-npx claudient add skill gtm/lead-enrichment
-npx claudient add skill gtm/crm-hygiene
-npx claudient add skill gtm/hubspot
+npx uitkit add skill gtm/sdr-research-brief
+npx uitkit add skill gtm/sdr-reply-classifier
+npx uitkit add skill gtm/sdr-call-prep
+npx uitkit add skill gtm/sdr-call-analysis
+npx uitkit add skill gtm/sdr-objection-handler
+npx uitkit add skill gtm/sdr-territory-mapper
+npx uitkit add skill gtm/sdr-lead-scorer
+npx uitkit add skill gtm/email-automation
+npx uitkit add skill gtm/lead-enrichment
+npx uitkit add skill gtm/crm-hygiene
+npx uitkit add skill gtm/hubspot
 ```
 
 ## Gerelateerd

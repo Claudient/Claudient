@@ -23,7 +23,7 @@ Entwickler, die kleine SaaS-Produkte, Tools oder Infoprodukte entwickeln und lau
 
 **Standard-Tradeoffs:** SQLite vor Postgres, wenn es passt. Stripe + E-Mail vor einem vollständigen CRM. Vercel/Railway vor selbstverwalteter Kubernetes.
 
-## Empfohlene Claudient-Skills & Agents
+## Empfohlene UitKit-Skills & Agents
 - `small-business` — Preisgestaltung, Positionierung, Retentions-Taktiken
 - `gtm` — Launch auf Product Hunt, Hacker News, Twitter/X
 - `ai-engineering` — KI-Features ohne GPU-Budget hinzufügen

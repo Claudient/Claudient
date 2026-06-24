@@ -1,4 +1,4 @@
-German translation completed and saved to `/Users/tushar/Desktop/Claudient/sales_operations_stack/skills/de/deal-velocity-analyzer.md`.
+German translation completed and saved to `/Users/tushar/Desktop/UitKit/sales_operations_stack/skills/de/deal-velocity-analyzer.md`.
 
 **Translation summary:**
 - "When to activate" → "Wann aktivieren"

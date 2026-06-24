@@ -1,6 +1,6 @@
 # HIPAA-Compliant System Deliverables
 
-Complete HIPAA compliance framework for Claudient healthcare deployments.
+Complete HIPAA compliance framework for UitKit healthcare deployments.
 
 ## Deliverables Summary
 
@@ -377,7 +377,7 @@ const system = new HipaaCompliantSystem(config);
 
 ### Docker
 ```bash
-docker run -e HIPAA_KEY_PATH=/secrets/key.json claudient
+docker run -e HIPAA_KEY_PATH=/secrets/key.json uitkit
 ```
 
 ### Kubernetes

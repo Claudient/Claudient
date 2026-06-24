@@ -1,6 +1,6 @@
-# Claudient Publisher Guidelines
+# UitKit Publisher Guidelines
 
-Rules and expectations for all stack authors publishing to the Claudient Marketplace — official and community.
+Rules and expectations for all stack authors publishing to the UitKit Marketplace — official and community.
 
 ## Licensing Requirements
 
@@ -109,7 +109,7 @@ I affirm that this stack:
 - Contains no hate speech, harassment, or discriminatory content
 - Respects intellectual property and is properly licensed
 - Promotes ethical use of AI and Claude Code
-- Aligns with Claudient's Code of Conduct
+- Aligns with UitKit's Code of Conduct
 ```
 
 ### Standards
@@ -150,24 +150,24 @@ When referencing tools, frameworks, or products:
 - **Avoid false endorsement:** Don't claim official endorsements without permission
 - **Use trademarks correctly:** Proper capitalization and attribution (e.g., "Kubernetes®")
 
-### Claudient Branding
+### UitKit Branding
 
-If you reference Claudient in your stack:
+If you reference UitKit in your stack:
 
-- **Accurate:** Use "Claudient Marketplace" or "Claude Code" correctly
+- **Accurate:** Use "UitKit Marketplace" or "Claude Code" correctly
 - **Attribution:** Mention where the stack is published and link to marketplace
-- **No impersonation:** Don't present your stack as "official Claudient" unless certified
+- **No impersonation:** Don't present your stack as "official UitKit" unless certified
 - **Community badge:** Use the community badge logo (provided by marketplace team)
 
 ## Royalty & Profit Sharing
 
 ### No Royalties or Revenue Sharing
 
-The Claudient Marketplace is **non-commercial**. Stack authors receive:
+The UitKit Marketplace is **non-commercial**. Stack authors receive:
 
 - **No monetary payment** from marketplace installs
-- **No royalties** from Claudient
-- **No revenue share** with Claudient
+- **No royalties** from UitKit
+- **No revenue share** with UitKit
 
 Stacks are contributed freely to the open source ecosystem.
 
@@ -198,7 +198,7 @@ Example:
 ```markdown
 ## Built On
 
-This stack builds on the original [Senior Backend Engineer Stack](https://github.com/claudients/senior-backend-engineer) 
+This stack builds on the original [Senior Backend Engineer Stack](https://github.com/uitkits/senior-backend-engineer) 
 with added support for event-driven architecture and CQRS patterns.
 ```
 
@@ -319,11 +319,11 @@ A: Yes, as long as no false endorsement is implied. Ensure the sponsor/power-by 
 **Q: Can I link to my commercial product from my stack?**  
 A: Yes, as long as the stack itself is open and freely usable. Label commercial links clearly (e.g., "Sponsored: [product name]").
 
-**Q: What if Claudient changes these guidelines?**  
+**Q: What if UitKit changes these guidelines?**  
 A: Changes are announced 30 days in advance. Existing stacks grandfathered in; new submissions follow updated guidelines.
 
 ---
 
-**Questions? Email marketplace@claudient.dev or post to [GitHub Discussions](https://github.com/claudients/claudient/discussions).**
+**Questions? Email marketplace@uitkit.dev or post to [GitHub Discussions](https://github.com/uitkits/uitkit/discussions).**
 
 **Last updated:** June 15, 2026

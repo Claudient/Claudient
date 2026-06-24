@@ -1,12 +1,12 @@
 # Webhooks Reference
 
-Comprehensive guide to webhook payload schemas, retry strategies, and signature verification for Claudient integrations.
+Comprehensive guide to webhook payload schemas, retry strategies, and signature verification for UitKit integrations.
 
 ---
 
 ## Overview
 
-Claudient webhooks enable event-driven integrations across Claude Code environments. This document defines:
+UitKit webhooks enable event-driven integrations across Claude Code environments. This document defines:
 
 1. **Payload schemas** for each event type
 2. **Retry strategies** and failure handling
@@ -301,7 +301,7 @@ Fired when a sandboxed execution (test run, script execution, or isolated enviro
 
 ### Retry Policy
 
-The Claudient webhook dispatcher implements exponential backoff with jitter:
+The UitKit webhook dispatcher implements exponential backoff with jitter:
 
 | Attempt | Delay | Max Wait |
 |---------|-------|----------|
@@ -380,12 +380,12 @@ async def background_processing(event: dict):
 
 ### Overview
 
-All Claudient webhooks are signed with **HMAC-SHA256**. Verify every webhook before processing to prevent spoofing attacks.
+All UitKit webhooks are signed with **HMAC-SHA256**. Verify every webhook before processing to prevent spoofing attacks.
 
 ### Verification Process
 
-1. Extract the `X-Claudient-Signature` header
-2. Extract the `X-Claudient-Timestamp` header
+1. Extract the `X-UitKit-Signature` header
+2. Extract the `X-UitKit-Timestamp` header
 3. Reconstruct the signed payload: `${timestamp}.${raw_body}`
 4. Compute HMAC-SHA256 using your webhook secret
 5. Compare using timing-safe comparison
@@ -399,13 +399,13 @@ All Claudient webhooks are signed with **HMAC-SHA256**. Verify every webhook bef
 import crypto from 'crypto'
 import { NextRequest, NextResponse } from 'next/server'
 
-const WEBHOOK_SECRET = process.env.CLAUDIENT_WEBHOOK_SECRET!
+const WEBHOOK_SECRET = process.env.UITKIT_WEBHOOK_SECRET!
 const TIMESTAMP_TOLERANCE = 300 // 5 minutes in seconds
 
 export async function POST(req: NextRequest) {
   const body = await req.text()  // CRITICAL: raw body before parsing
-  const signature = req.headers.get('x-claudient-signature') ?? ''
-  const timestamp = req.headers.get('x-claudient-timestamp') ?? ''
+  const signature = req.headers.get('x-uitkit-signature') ?? ''
+  const timestamp = req.headers.get('x-uitkit-timestamp') ?? ''
 
   // Verify signature
   if (!verifySignature(body, signature, timestamp, WEBHOOK_SECRET)) {
@@ -480,14 +480,14 @@ from fastapi.responses import JSONResponse
 
 router = APIRouter()
 
-WEBHOOK_SECRET = os.environ["CLAUDIENT_WEBHOOK_SECRET"].encode()
+WEBHOOK_SECRET = os.environ["UITKIT_WEBHOOK_SECRET"].encode()
 TIMESTAMP_TOLERANCE = 300  # 5 minutes
 
-@router.post("/webhooks/claudient")
+@router.post("/webhooks/uitkit")
 async def handle_webhook(request: Request):
     body = await request.body()  # raw bytes — essential
-    signature = request.headers.get("x-claudient-signature", "")
-    timestamp = request.headers.get("x-claudient-timestamp", "")
+    signature = request.headers.get("x-uitkit-signature", "")
+    timestamp = request.headers.get("x-uitkit-timestamp", "")
 
     if not verify_signature(body, signature, timestamp, WEBHOOK_SECRET):
         raise HTTPException(status_code=401, detail="Unauthorized")
@@ -585,10 +585,10 @@ func verifySignature(
 
 func handleWebhook(w http.ResponseWriter, r *http.Request) {
 	body, _ := io.ReadAll(r.Body)
-	signature := r.Header.Get("X-Claudient-Signature")
-	timestamp := r.Header.Get("X-Claudient-Timestamp")
+	signature := r.Header.Get("X-UitKit-Signature")
+	timestamp := r.Header.Get("X-UitKit-Timestamp")
 
-	if !verifySignature(body, signature, timestamp, os.Getenv("CLAUDIENT_WEBHOOK_SECRET")) {
+	if !verifySignature(body, signature, timestamp, os.Getenv("UITKIT_WEBHOOK_SECRET")) {
 		http.Error(w, "Unauthorized", http.StatusUnauthorized)
 		return
 	}
@@ -604,10 +604,10 @@ func handleWebhook(w http.ResponseWriter, r *http.Request) {
 
 | Header | Value | Description |
 |--------|-------|-------------|
-| `X-Claudient-Signature` | hex string | HMAC-SHA256 of `timestamp.body` |
-| `X-Claudient-Timestamp` | unix seconds | Event timestamp for replay prevention |
-| `X-Claudient-Event-ID` | UUID | Unique event identifier for idempotency |
-| `X-Claudient-Event-Type` | string | `"theme.changed"`, `"map.rendered"`, `"sandbox.completed"` |
+| `X-UitKit-Signature` | hex string | HMAC-SHA256 of `timestamp.body` |
+| `X-UitKit-Timestamp` | unix seconds | Event timestamp for replay prevention |
+| `X-UitKit-Event-ID` | UUID | Unique event identifier for idempotency |
+| `X-UitKit-Event-Type` | string | `"theme.changed"`, `"map.rendered"`, `"sandbox.completed"` |
 | `Content-Type` | `application/json` | Always JSON |
 
 ---
@@ -620,12 +620,12 @@ Store webhook secrets in environment variables, never in source code:
 
 ```bash
 # .env
-CLAUDIENT_WEBHOOK_SECRET=whsec_abc123def456xyz...
-CLAUDIENT_WEBHOOK_URL=https://your-api.example.com/webhooks/claudient
+UITKIT_WEBHOOK_SECRET=whsec_abc123def456xyz...
+UITKIT_WEBHOOK_URL=https://your-api.example.com/webhooks/uitkit
 
 # Optional: for observability
-CLAUDIENT_WEBHOOK_TIMEOUT=30
-CLAUDIENT_WEBHOOK_RETRY_MAX=5
+UITKIT_WEBHOOK_TIMEOUT=30
+UITKIT_WEBHOOK_RETRY_MAX=5
 ```
 
 ### settings.json Entry
@@ -641,7 +641,7 @@ Register webhook endpoints in Claude Code settings:
         "url": "https://your-dashboard.example.com/webhooks/theme",
         "enabled": true,
         "headers": {
-          "Authorization": "Bearer ${CLAUDIENT_WEBHOOK_SECRET}"
+          "Authorization": "Bearer ${UITKIT_WEBHOOK_SECRET}"
         }
       },
       {
@@ -818,10 +818,10 @@ SIGNATURE=$(echo -n "$SIGNED_STRING" | \
   sed 's/^.* //')
 
 # Send test webhook
-curl -X POST http://localhost:3000/webhooks/claudient \
+curl -X POST http://localhost:3000/webhooks/uitkit \
   -H "Content-Type: application/json" \
-  -H "X-Claudient-Signature: $SIGNATURE" \
-  -H "X-Claudient-Timestamp: $TIMESTAMP" \
+  -H "X-UitKit-Signature: $SIGNATURE" \
+  -H "X-UitKit-Timestamp: $TIMESTAMP" \
   -d "$PAYLOAD"
 ```
 
@@ -870,12 +870,12 @@ describe('webhook signature verification', () => {
 
 | Issue | Cause | Solution |
 |-------|-------|----------|
-| "Signature verification failed" | Wrong secret, body not raw, incorrect format | Verify `X-Claudient-Secret` is correct; ensure `req.text()` or `request.body()` is used before parsing |
+| "Signature verification failed" | Wrong secret, body not raw, incorrect format | Verify `X-UitKit-Secret` is correct; ensure `req.text()` or `request.body()` is used before parsing |
 | "Event processed twice" | No idempotency check | Add cache lookup on `event.id` before processing |
 | "Webhooks stop arriving" | Endpoint returning 4xx | Check logs; 4xx responses are not retried |
 | "Webhooks delayed" | Network congestion, slow handler | Return 200 immediately; process async |
-| "Wrong event type" | Event routing misconfigured | Verify `X-Claudient-Event-Type` header matches filter |
-| "Missing fields in payload" | Payload schema version mismatch | Check Claudient version; schemas are stable within major versions |
+| "Wrong event type" | Event routing misconfigured | Verify `X-UitKit-Event-Type` header matches filter |
+| "Missing fields in payload" | Payload schema version mismatch | Check UitKit version; schemas are stable within major versions |
 
 ---
 
@@ -907,7 +907,7 @@ describe('webhook signature verification', () => {
 
 ## Additional Resources
 
-- [Webhook Security Skill](../plugins/claudient-finance-payments/skills/webhooks/SKILL.md) — Detailed patterns for Stripe, GitHub, Svix
+- [Webhook Security Skill](../plugins/uitkit-finance-payments/skills/webhooks/SKILL.md) — Detailed patterns for Stripe, GitHub, Svix
 - [HTTP Hook Documentation](../hooks/advanced/http-hook-webhook.md) — Claude Code outbound webhook configuration
 - [Event Reference](./EVENTS.md) — Full list of available events and schemas (if exists)
 

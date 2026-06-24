@@ -18,20 +18,20 @@ Eres un Account Executive (AE) gestionando un pipeline de deals de mercado medio
 
 ```bash
 # Instalar todas las skills de AE
-npx claudient add skills gtm
+npx uitkit add skills gtm
 
 # O seleccionar individualmente:
-npx claudient add skill gtm/deal-review
-npx claudient add skill gtm/champion-builder
-npx claudient add skill gtm/mutual-success-plan
-npx claudient add skill gtm/deal-desk
-npx claudient add skill gtm/rfp-responder
-npx claudient add skill gtm/commercial-forecaster
-npx claudient add skill gtm/crm-hygiene
-npx claudient add skill gtm/hubspot
-npx claudient add skill gtm/revenue-operations
-npx claudient add agents advisors/cro-advisor
-npx claudient add agents roles/competitive-analyst
+npx uitkit add skill gtm/deal-review
+npx uitkit add skill gtm/champion-builder
+npx uitkit add skill gtm/mutual-success-plan
+npx uitkit add skill gtm/deal-desk
+npx uitkit add skill gtm/rfp-responder
+npx uitkit add skill gtm/commercial-forecaster
+npx uitkit add skill gtm/crm-hygiene
+npx uitkit add skill gtm/hubspot
+npx uitkit add skill gtm/revenue-operations
+npx uitkit add agents advisors/cro-advisor
+npx uitkit add agents roles/competitive-analyst
 ```
 
 ---
@@ -204,7 +204,7 @@ Para cada deal estancado: recomienda una acción — actualizar / desactivar / i
 ## Plan de incorporación de 30 días (nuevos AEs o al incorporarse a un nuevo segmento)
 
 ### Semana 1 — Configuración e inventario de deals
-- Instala todas las skills de GTM: `npx claudient add skills gtm`
+- Instala todas las skills de GTM: `npx uitkit add skills gtm`
 - Conecta HubSpot mediante MCP (ver integraciones de herramientas más abajo)
 - Ejecuta `/deal-review` en cada deal del pipeline heredado — obtén una puntuación MEDDPICC base
 - Ejecuta `/commercial-forecaster` en tu pipeline completo — identifica qué deals son reales vs. estancados

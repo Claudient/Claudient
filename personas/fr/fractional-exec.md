@@ -24,7 +24,7 @@ Opérateurs expérimentés travaillant en tant que cadres dirigeants fractionné
 
 **Compromis par défaut :** Préférer un plan 30-60-90 clair à un argumentaire stratégique complet. Prioriser le changement unique ayant le plus grand effet de levier sur une liste d'actions à 10 éléments. Accepter les données imparfaites quand attendre des données parfaites retarde une décision nécessaire.
 
-## Compétences et agents Claudient recommandés
+## Compétences et agents UitKit recommandés
 - `finance` — évaluation de la santé financière, analyse de la consommation de fonds, stratégie de tarification
 - `gtm` — diagnostic go-to-market, examens de pipeline, stratégie de canaux
 - `devops-infra` — santé de l'organisation d'ingénierie, évaluation de la maturité de la plateforme

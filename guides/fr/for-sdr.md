@@ -18,22 +18,22 @@ Vous êtes SDR, BDR ou commercial dont le travail est de générer un pipeline q
 
 ```bash
 # Installer toutes les compétences, agents et workflows SDR
-npx claudient add skills gtm
-npx claudient add agents roles/sdr-agent
+npx uitkit add skills gtm
+npx uitkit add agents roles/sdr-agent
 
 # Ou choisissez ce dont vous avez besoin :
-npx claudient add skill gtm/sdr-research-brief
-npx claudient add skill gtm/sdr-reply-classifier
-npx claudient add skill gtm/sdr-call-prep
-npx claudient add skill gtm/sdr-call-analysis
-npx claudient add skill gtm/sdr-objection-handler
-npx claudient add skill gtm/sdr-territory-mapper
-npx claudient add skill gtm/sdr-lead-scorer
-npx claudient add skill gtm/sdr-agent
-npx claudient add skill gtm/email-automation
-npx claudient add skill gtm/lead-enrichment
-npx claudient add skill gtm/crm-hygiene
-npx claudient add skill gtm/hubspot
+npx uitkit add skill gtm/sdr-research-brief
+npx uitkit add skill gtm/sdr-reply-classifier
+npx uitkit add skill gtm/sdr-call-prep
+npx uitkit add skill gtm/sdr-call-analysis
+npx uitkit add skill gtm/sdr-objection-handler
+npx uitkit add skill gtm/sdr-territory-mapper
+npx uitkit add skill gtm/sdr-lead-scorer
+npx uitkit add skill gtm/sdr-agent
+npx uitkit add skill gtm/email-automation
+npx uitkit add skill gtm/lead-enrichment
+npx uitkit add skill gtm/crm-hygiene
+npx uitkit add skill gtm/hubspot
 ```
 
 ---
@@ -184,7 +184,7 @@ et si je suis sur la bonne trajectoire pour mon quota mensuel de rendez-vous.
 ## Plan de montée en compétences sur 30 jours (nouveaux SDR)
 
 ### Semaine 1 — Configuration et maîtrise de la recherche
-- Installer toutes les compétences SDR via `npx claudient add skills gtm`
+- Installer toutes les compétences SDR via `npx uitkit add skills gtm`
 - Configurer l'MCP HubSpot (voir la compétence `/hubspot` pour la configuration)
 - Exécuter `/sdr-territory-mapper` sur votre liste de comptes initiale
 - Scorer 50+ comptes avec `/sdr-lead-scorer` — se familiariser avec votre ICP

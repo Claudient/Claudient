@@ -1,5 +1,5 @@
 {
-  "comment": "Claudient markdownlint config — tuned for skill/agent/hook markdown files",
+  "comment": "UitKit markdownlint config — tuned for skill/agent/hook markdown files",
 
   "MD013": { "line_length": 500, "tables": false, "code_blocks": false },
   "MD033": false,

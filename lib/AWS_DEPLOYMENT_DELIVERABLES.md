@@ -2,7 +2,7 @@
 
 ## Overview
 
-Complete production-ready AWS deployment module for Claudient with full infrastructure as code, cost optimization, and serverless dont-stop task capabilities.
+Complete production-ready AWS deployment module for UitKit with full infrastructure as code, cost optimization, and serverless dont-stop task capabilities.
 
 ## Files Delivered
 
@@ -293,33 +293,33 @@ node lib/aws-deployment-integration-example.js deploy
 # Or deploy via CloudFormation CLI
 aws cloudformation deploy \
   --template-file lib/aws-deployment-cloudformation-template.yaml \
-  --stack-name claudient-main \
+  --stack-name uitkit-main \
   --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
 ```
 
 ### 3. Verify Deployment
 ```bash
 # Check resources
-aws ec2 describe-vpcs --filters "Name=tag:Name,Values=claudient-vpc"
-aws s3 ls | grep claudient
-aws dynamodb list-tables | grep claudient
-aws lambda list-functions | grep claudient
-aws ecs list-clusters | grep claudient
+aws ec2 describe-vpcs --filters "Name=tag:Name,Values=uitkit-vpc"
+aws s3 ls | grep uitkit
+aws dynamodb list-tables | grep uitkit
+aws lambda list-functions | grep uitkit
+aws ecs list-clusters | grep uitkit
 ```
 
 ### 4. Monitor
 ```bash
 # View CloudWatch logs
-aws logs tail /aws/lambda/claudient-dont-stop-task --follow
+aws logs tail /aws/lambda/uitkit-dont-stop-task --follow
 
 # Check Lambda invocations
-aws lambda get-function-concurrency --function-name claudient-dont-stop-task
+aws lambda get-function-concurrency --function-name uitkit-dont-stop-task
 
 # View DynamoDB metrics
 aws cloudwatch get-metric-statistics \
   --namespace AWS/DynamoDB \
   --metric-name ConsumedWriteCapacityUnits \
-  --dimensions Name=TableName,Value=claudient-state \
+  --dimensions Name=TableName,Value=uitkit-state \
   --start-time 2024-01-01T00:00:00Z \
   --end-time 2024-01-02T00:00:00Z \
   --period 3600 \
@@ -389,21 +389,21 @@ which aws && echo "AWS CLI installed" || aws --version
 
 **CloudFormation Stack Failed**
 ```bash
-aws cloudformation describe-stack-events --stack-name claudient-main \
+aws cloudformation describe-stack-events --stack-name uitkit-main \
   --query 'StackEvents[?ResourceStatus==`CREATE_FAILED`]'
 ```
 
 **Lambda Execution Timeout**
 ```bash
 aws lambda update-function-configuration \
-  --function-name claudient-dont-stop-task \
+  --function-name uitkit-dont-stop-task \
   --timeout 600
 ```
 
 **DynamoDB Throttling**
 ```bash
 aws dynamodb update-table \
-  --table-name claudient-state \
+  --table-name uitkit-state \
   --billing-mode PAY_PER_REQUEST
 ```
 
@@ -420,7 +420,7 @@ aws dynamodb update-table \
 
 ## License
 
-MIT - See Claudient repository for details
+MIT - See UitKit repository for details
 
 ## Support
 

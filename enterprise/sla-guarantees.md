@@ -1,6 +1,6 @@
 # Service Level Agreement (SLA) Guarantees
 
-This document defines the uptime SLAs, penalties, and escalation procedures for Claudient enterprise services.
+This document defines the uptime SLAs, penalties, and escalation procedures for UitKit enterprise services.
 
 ---
 
@@ -161,13 +161,13 @@ Credits are applied to the customer's account for the following month. Credits a
 ### Synthetic Monitoring
 - Third-party monitoring probes check service health every 60 seconds from 3 geographic regions
 - Probes validate full transaction paths (auth, request, response)
-- Results published in real-time on status page: `status.claudient.com`
+- Results published in real-time on status page: `status.uitkit.com`
 
 ### Customer Verification
 Customers may verify uptime independently:
 - Public API status endpoint: `GET /api/health`
 - Detailed metrics: `GET /api/status` (authenticated)
-- Historical data: `status.claudient.com/history/[service]`
+- Historical data: `status.uitkit.com/history/[service]`
 
 ### Dispute Resolution
 If customers dispute uptime calculations:
@@ -182,9 +182,9 @@ If customers dispute uptime calculations:
 
 To maintain SLA coverage, customers must:
 
-1. **Use production endpoints**: SLAs apply only to `https://api.claudient.com` and regional endpoints
+1. **Use production endpoints**: SLAs apply only to `https://api.uitkit.com` and regional endpoints
 2. **Implement retry logic**: Exponential backoff (1s, 2s, 4s, 8s, 16s max)
-3. **Monitor your integration**: Integrate with `status.claudient.com` webhook for real-time alerts
+3. **Monitor your integration**: Integrate with `status.uitkit.com` webhook for real-time alerts
 4. **Notify us of abuse**: Report unusual traffic patterns or potential DDoS targeting
 5. **Keep API keys secure**: Compromised keys are not covered by SLA
 
@@ -212,7 +212,7 @@ Scheduled maintenance is excluded from uptime calculations but counts against ma
 ### Service Credit Request Process
 1. Submit credit request within 30 days of incident via support dashboard
 2. Include dates, times, evidence of impact (logs, revenue loss, etc.)
-3. Claudient validates uptime data within 3 business days
+3. UitKit validates uptime data within 3 business days
 4. Credit applied to next billing cycle
 
 ### Non-Transferable

@@ -10,7 +10,7 @@
  * 4. Export visualization
  *
  * This test orchestrates multiple systems to validate the complete
- * user journey through Claudient's core features.
+ * user journey through UitKit's core features.
  *
  * Usage:
  *   node test/e2e/full-feature-workflow.test.js [--verbose] [--debug] [--timeout=300000]
@@ -40,7 +40,7 @@ const CONFIG = {
   testTimeout: 300000, // 5 minutes
   verbose: process.argv.includes('--verbose'),
   debug: process.argv.includes('--debug'),
-  tempDir: path.join(os.tmpdir(), `claudient-e2e-${Date.now()}`)
+  tempDir: path.join(os.tmpdir(), `uitkit-e2e-${Date.now()}`)
 };
 
 // Parse custom timeout from args
@@ -143,7 +143,7 @@ class E2ETestSuite {
   }
 
   async run() {
-    section('CLAUDIENT END-TO-END INTEGRATION TEST SUITE');
+    section('UITKIT END-TO-END INTEGRATION TEST SUITE');
     log(`Test timeout: ${CONFIG.testTimeout}ms`, 'INFO');
     log(`Verbose mode: ${CONFIG.verbose ? 'ON' : 'OFF'}`, 'INFO');
     log(`Debug mode: ${CONFIG.debug ? 'ON' : 'OFF'}`, 'INFO');
@@ -267,7 +267,7 @@ async function testSwarmSandboxLaunch() {
   log('Initializing swarm sandbox environment...', 'DEBUG');
 
   // Check swarm sandbox script exists
-  const swarmScript = path.join(CONFIG.projectRoot, 'scripts', 'claudient-swarm-sandbox.js');
+  const swarmScript = path.join(CONFIG.projectRoot, 'scripts', 'uitkit-swarm-sandbox.js');
   if (!fileExists(swarmScript)) {
     throw new Error(`Swarm sandbox script not found: ${swarmScript}`);
   }
@@ -359,7 +359,7 @@ async function testSVGMapInspection() {
   log('Initializing SVG map inspector...', 'DEBUG');
 
   // Check SVG inspector script exists
-  const inspectorScript = path.join(CONFIG.projectRoot, 'scripts', 'claudient-svg-inspector.js');
+  const inspectorScript = path.join(CONFIG.projectRoot, 'scripts', 'uitkit-svg-inspector.js');
   if (!fileExists(inspectorScript)) {
     throw new Error(`SVG inspector script not found: ${inspectorScript}`);
   }
@@ -483,7 +483,7 @@ async function testVisualizationExport() {
       density: '0.417',
       averageDegree: '2.50'
     },
-    exportedBy: 'claudient-svg-inspector',
+    exportedBy: 'uitkit-svg-inspector',
     exportPath: path.join(CONFIG.tempDir, 'export-topology.json')
   };
 

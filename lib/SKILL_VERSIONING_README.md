@@ -476,4 +476,4 @@ try {
 
 ## License
 
-This file is part of Claudient.
+This file is part of UitKit.

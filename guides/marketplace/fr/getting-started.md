@@ -7,7 +7,7 @@ Ce guide s'adresse aux créateurs de stacks pour la première fois qui souhaiten
 ## À qui s'adresse ce guide
 
 - Vous avez 2+ compétences ou outils Claude Code que vous souhaitez partager
-- Vous comprenez la structure du repository claudient
+- Vous comprenez la structure du repository uitkit
 - Vous êtes à l'aise avec Git et les pull requests GitHub
 - Vous souhaitez atteindre d'autres utilisateurs Claude Code avec une collection de qualité organisée
 
@@ -49,7 +49,7 @@ backend-productivity-stack/
 - Audience cible et domaine clairs
 - Chaque compétence a des exemples testés
 - Chaque guide a des étapes concrètes et exécutables
-- Toutes les ressources respectent les normes claudient
+- Toutes les ressources respectent les normes uitkit
 - 2+ utilisateurs externes l'ont testé
 
 ---
@@ -80,12 +80,12 @@ Avant de construire, confirmez la portée de votre stack :
 
 ### Étape 2 : Créer le répertoire de votre Stack
 
-Forkez le repository Claudient et créez le dossier de votre stack :
+Forkez le repository UitKit et créez le dossier de votre stack :
 
 ```bash
 # Clonez votre fork
-git clone https://github.com/VOTRE_NOM_UTILISATEUR/Claudient.git
-cd Claudient
+git clone https://github.com/VOTRE_NOM_UTILISATEUR/UitKit.git
+cd UitKit
 
 # Créez le répertoire stack (branche principale, pas une branche de feature)
 mkdir -p stacks/votre-nom-stack
@@ -102,13 +102,13 @@ Nommage : `kebab-case-stack` — tout en minuscules, tirets, pas de traits de so
 Remplissez chaque répertoire avec du contenu complet et testé :
 
 **Compétences** (`skills/*.md`) :
-- Écrivez au format de compétence claudient (voir le modèle ci-dessous)
+- Écrivez au format de compétence uitkit (voir le modèle ci-dessous)
 - Incluez au moins un exemple concret et exécutable
 - Testez chaque compétence vous-même dans Claude Code
 - Pas de stubs ou « à venir »
 
 **Agents** (`agents/*.md`) :
-- Utilisez le format d'agent claudient
+- Utilisez le format d'agent uitkit
 - Définissez les conseils de modèle (Haiku/Sonnet/Opus)
 - Spécifiez le sous-ensemble d'outils
 - Incluez les conditions de déclenchement
@@ -178,7 +178,7 @@ Remplissez chaque répertoire avec du contenu complet et testé :
    git push origin main
    ```
 
-2. **Ouvrez une PR** vers le repository principal Claudient :
+2. **Ouvrez une PR** vers le repository principal UitKit :
    - Branche de base : `main`
    - Titre : `feat: add votre-nom-stack`
    - Description :
@@ -195,7 +195,7 @@ Remplissez chaque répertoire avec du contenu complet et testé :
      Une brève description de ce que ce stack fait et pourquoi c'est important.
      
      **Liste de vérification de qualité :**
-     - [x] Tous les fichiers respectent les normes claudient
+     - [x] Tous les fichiers respectent les normes uitkit
      - [x] Chaque compétence et agent a des exemples concrets
      - [x] Testé par 2+ utilisateurs externes
      - [x] Aucun contenu d'espace réservé ou stub

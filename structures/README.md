@@ -83,11 +83,11 @@ Every structure file follows the same eight-section format so you always know wh
 - **Stack** — specific versioned tools with their roles in the system
 - **Directory tree** — deep ASCII tree with real file names, real subdirectory depth, and inline comments on every meaningful file and directory
 - **Key files explained** — a table of 8–10 critical files with precise descriptions of what each one does and why it matters
-- **Quick scaffold** — real shell commands to bootstrap the structure from scratch, including `npx claudient add` skill installs
+- **Quick scaffold** — real shell commands to bootstrap the structure from scratch, including `npx uitkit add` skill installs
 - **CLAUDE.md template** — a 50+ line, ready-to-paste CLAUDE.md specific to the stack, covering common tasks, env var conventions, access control, and anti-patterns
 - **MCP servers** — a ready-to-paste `mcpServers` JSON block with real MCP server configurations for the stack
 - **Recommended hooks** — a ready-to-paste `hooks` JSON block with `PreToolUse` and `PostToolUse` hooks tailored to the project type
-- **Skills to install** — `npx claudient add` commands for every relevant skill
+- **Skills to install** — `npx uitkit add` commands for every relevant skill
 
 ---
 

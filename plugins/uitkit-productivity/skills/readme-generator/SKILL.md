@@ -146,13 +146,13 @@ const user = await createUser('alice@example.com', { role: 'admin' })
 
 **Input:**
 ```
-Project: claudient
+Project: uitkit
 What it does: npm package with Claude Code skills, agents, hooks, and workflows
-Install: npx claudient add all
+Install: npx uitkit add all
 Key commands: add, remove, list, search, init
 Target audience: developers using Claude Code
 ```
 
-**Expected output:** Complete README with hero description, npm/license/language badges, install section (`npx claudient add all`), CLI reference table for all subcommands, category list, contributing section, MIT license footer.
+**Expected output:** Complete README with hero description, npm/license/language badges, install section (`npx uitkit add all`), CLI reference table for all subcommands, category list, contributing section, MIT license footer.
 
 ---

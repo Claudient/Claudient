@@ -201,10 +201,10 @@ pnpm --filter @acme/database add -D drizzle-kit tsx
 pnpm --filter @acme/emails add react-email @react-email/components resend
 pnpm --filter @acme/emails add -D tsup
 
-# 9. Add Claudient project commands
-npx claudient add command add-package
-npx claudient add command add-app
-npx claudient add command changeset-guide
+# 9. Add UitKit project commands
+npx uitkit add command add-package
+npx uitkit add command add-app
+npx uitkit add command changeset-guide
 ```
 
 ## CLAUDE.md template
@@ -395,29 +395,29 @@ pnpm changeset publish
 
 ```bash
 # TypeScript and Node.js development
-npx claudient add skill backend/typescript/tsup-library
-npx claudient add skill backend/typescript/strict-tsconfig
+npx uitkit add skill backend/typescript/tsup-library
+npx uitkit add skill backend/typescript/strict-tsconfig
 
 # Next.js app development
-npx claudient add skill frontend/nextjs/app-router
-npx claudient add skill frontend/nextjs/server-components
+npx uitkit add skill frontend/nextjs/app-router
+npx uitkit add skill frontend/nextjs/server-components
 
 # Database and migrations
-npx claudient add skill backend/database/drizzle-schema
-npx claudient add skill backend/database/migrations-workflow
+npx uitkit add skill backend/database/drizzle-schema
+npx uitkit add skill backend/database/migrations-workflow
 
 # Testing
-npx claudient add skill testing/vitest-unit
-npx claudient add skill testing/playwright-e2e
+npx uitkit add skill testing/vitest-unit
+npx uitkit add skill testing/playwright-e2e
 
 # Monorepo and CI
-npx claudient add skill devops/turborepo-pipeline
-npx claudient add skill devops/changesets-release
-npx claudient add skill devops/github-actions-ci
+npx uitkit add skill devops/turborepo-pipeline
+npx uitkit add skill devops/changesets-release
+npx uitkit add skill devops/github-actions-ci
 
 # Code quality
-npx claudient add skill productivity/code-review
-npx claudient add skill productivity/pr-description
+npx uitkit add skill productivity/code-review
+npx uitkit add skill productivity/pr-description
 ```
 
 ## Related

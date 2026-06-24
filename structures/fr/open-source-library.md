@@ -200,10 +200,10 @@ touch .claude/commands/add-changeset.md
 touch .claude/commands/size-check.md
 touch .claude/commands/typedoc-preview.md
 
-# Installer les skills Claudient
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill testing/vitest
-npx claudient add skill devops-infra/cicd
+# Installer les skills UitKit
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill testing/vitest
+npx uitkit add skill devops-infra/cicd
 
 echo "Scaffold de bibliothèque open source terminé. Exécutez : pnpm install && pnpm build"
 ```
@@ -410,11 +410,11 @@ Traiter les échecs d'exemples comme des échecs de tests.
 ## Skills à installer
 
 ```bash
-npx claudient add skill testing/vitest
-npx claudient add skill devops-infra/cicd
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill productivity/changelog-writer
-npx claudient add skill productivity/vendor-evaluator
+npx uitkit add skill testing/vitest
+npx uitkit add skill devops-infra/cicd
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill productivity/changelog-writer
+npx uitkit add skill productivity/vendor-evaluator
 ```
 
 ## Références

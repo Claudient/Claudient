@@ -1,7 +1,7 @@
 # Spécialiste des Services Locaux
 
 ## Objectif
-Aide les opérateurs de services locaux (métiers, salons, dentiste, fitness, photographie, restaurants, immobilier, réparation auto, et similaires) à diagnostiquer les goulots d'étranglement opérationnels, choisir les compétences Claudient à ROI le plus élevé pour leur vertical spécifique, et structurer le cadence hebdomadaire qui capture la valeur avant qu'elle ne retombe au bruit de diriger une petite opération.
+Aide les opérateurs de services locaux (métiers, salons, dentiste, fitness, photographie, restaurants, immobilier, réparation auto, et similaires) à diagnostiquer les goulots d'étranglement opérationnels, choisir les compétences UitKit à ROI le plus élevé pour leur vertical spécifique, et structurer le cadence hebdomadaire qui capture la valeur avant qu'elle ne retombe au bruit de diriger une petite opération.
 
 ## Guidance du modèle
 Sonnet. Les opérateurs de services locaux gèrent des entreprises où la bonne réponse dépend de l'interaction entre dispatch, examens, AR, embauche, et tarification — domaines qui semblent discrets mais se composent les uns sur les autres. Haiku manque l'effet de composition (par exemple, une recommandation qui remplit un créneau de calendrier au coût de trois examens Google). Opus est inutile ; le raisonnement nécessaire est largeur et jugement, pas preuve profonde.
@@ -11,7 +11,7 @@ Read (pour examiner les horaires, les listes de clients, les exports P&L que l'u
 
 ## Quand déléguer ici
 - L'utilisateur dirige une entreprise de services locaux et demande largement "comment Claude peut aider mon entreprise?"
-- L'utilisateur est dans un vertical spécifique et veut comparer les compétences Claudient générales contre les verticales spécifiques (par exemple, devraient-ils utiliser le Contractor Trades générique ou la version Contractor Trades?)
+- L'utilisateur est dans un vertical spécifique et veut comparer les compétences UitKit générales contre les verticales spécifiques (par exemple, devraient-ils utiliser le Contractor Trades générique ou la version Contractor Trades?)
 - La croissance de l'utilisateur a plafonné et ils ne savent pas si le goulot d'étranglement est flux de leads, conversion, capacité, rétention, ou tarification
 - L'utilisateur envisage d'embaucher leur premier tech, styliste, dispatcher, ou office manager et a besoin d'un plan structuré
 - L'utilisateur se prépare pour une poussée saisonnière (saison de mise au point HVAC, saison de mariage, cosmétologie de fin d'année, paysage d'été) et veut une campagne structurée

@@ -1,16 +1,16 @@
 #!/usr/bin/env node
 
 /**
- * claudient-swarm-sandbox.js
+ * uitkit-swarm-sandbox.js
  *
  * Multi-agent sandbox orchestration CLI
  * Commands: init, run, validate, cleanup
  *
  * Usage:
- *   claudient swarm-sandbox init <name> [--agents=N] [--dry-run] [--verbose]
- *   claudient swarm-sandbox run <name> [--timeout=ms] [--dry-run] [--verbose] [--report=json]
- *   claudient swarm-sandbox validate <name> [--dry-run] [--verbose] [--report=json]
- *   claudient swarm-sandbox cleanup <name> [--dry-run] [--verbose]
+ *   uitkit swarm-sandbox init <name> [--agents=N] [--dry-run] [--verbose]
+ *   uitkit swarm-sandbox run <name> [--timeout=ms] [--dry-run] [--verbose] [--report=json]
+ *   uitkit swarm-sandbox validate <name> [--dry-run] [--verbose] [--report=json]
+ *   uitkit swarm-sandbox cleanup <name> [--dry-run] [--verbose]
  */
 
 const fs = require('fs');
@@ -150,7 +150,7 @@ function cmdInit() {
   const agentCount = parseInt(flags.agents || '3', 10);
 
   if (!name) {
-    throw new Error('Sandbox name required. Usage: claudient swarm-sandbox init <name>');
+    throw new Error('Sandbox name required. Usage: uitkit swarm-sandbox init <name>');
   }
 
   validateSandboxName(name);
@@ -257,7 +257,7 @@ function cmdRun() {
   const reportFormat = flags.report || 'text';
 
   if (!name) {
-    throw new Error('Sandbox name required. Usage: claudient swarm-sandbox run <name>');
+    throw new Error('Sandbox name required. Usage: uitkit swarm-sandbox run <name>');
   }
 
   validateSandboxName(name);
@@ -376,7 +376,7 @@ function cmdValidate() {
   const reportFormat = flags.report || 'text';
 
   if (!name) {
-    throw new Error('Sandbox name required. Usage: claudient swarm-sandbox validate <name>');
+    throw new Error('Sandbox name required. Usage: uitkit swarm-sandbox validate <name>');
   }
 
   validateSandboxName(name);
@@ -508,7 +508,7 @@ function cmdCleanup() {
   const dryRun = flags['dry-run'];
 
   if (!name) {
-    throw new Error('Sandbox name required. Usage: claudient swarm-sandbox cleanup <name>');
+    throw new Error('Sandbox name required. Usage: uitkit swarm-sandbox cleanup <name>');
   }
 
   validateSandboxName(name);
@@ -579,7 +579,7 @@ function main() {
         cmdCleanup();
         break;
       default:
-        console.log(`\n${BOLD}${CYAN}claudient swarm-sandbox${RESET} - Multi-agent execution sandbox\n`);
+        console.log(`\n${BOLD}${CYAN}uitkit swarm-sandbox${RESET} - Multi-agent execution sandbox\n`);
         console.log(`${BOLD}Commands:${RESET}`);
         console.log(`  init <name>        Scaffold new sandbox environment`);
         console.log(`  run <name>         Execute agents in sandbox`);
@@ -592,10 +592,10 @@ function main() {
         console.log(`  --verbose, -v      Enable verbose output`);
         console.log(`  --report=json      Output results as JSON\n`);
         console.log(`${BOLD}Examples:${RESET}`);
-        console.log(`  npx claudient swarm-sandbox init my-sandbox --agents=5`);
-        console.log(`  npx claudient swarm-sandbox run my-sandbox --timeout=60000`);
-        console.log(`  npx claudient swarm-sandbox validate my-sandbox --report=json`);
-        console.log(`  npx claudient swarm-sandbox cleanup my-sandbox --dry-run\n`);
+        console.log(`  npx uitkit swarm-sandbox init my-sandbox --agents=5`);
+        console.log(`  npx uitkit swarm-sandbox run my-sandbox --timeout=60000`);
+        console.log(`  npx uitkit swarm-sandbox validate my-sandbox --report=json`);
+        console.log(`  npx uitkit swarm-sandbox cleanup my-sandbox --dry-run\n`);
         break;
     }
   } catch (error) {

@@ -21,21 +21,21 @@ updated: 2026-06-17
 The Session Memory system serializes the state of the workspace (including git status, file changes, and task objectives) to `.claude/checkpoint.json` and loads it to recreate the exact developer state.
 
 ```
-       [Active Session] ──► npx claudient checkpoint "building DB models"
+       [Active Session] ──► npx uitkit checkpoint "building DB models"
                                     │
                                     ▼
                         Writes .claude/checkpoint.json
                                     │
                                 (Exit/Pause)
                                     │
-       [Fresh Session] ◄──  npx claudient restore
+       [Fresh Session] ◄──  npx uitkit restore
 ```
 
 ### 1. Saving Session State (`checkpoint`)
 To save the active state, run the checkpoint command with a clear description of the tasks in progress:
 
 ```bash
-npx claudient checkpoint "Fixing middleware routing issues and adding auth tests"
+npx uitkit checkpoint "Fixing middleware routing issues and adding auth tests"
 ```
 
 This captures:
@@ -48,7 +48,7 @@ This captures:
 In a new or crashed terminal session, run:
 
 ```bash
-npx claudient restore
+npx uitkit restore
 ```
 
 This reads the checkpoint file and prints a summary layout. Claude Code automatically parses this output and generates a continuation prompt:
@@ -63,7 +63,7 @@ This reads the checkpoint file and prints a summary layout. Claude Code automati
 
 ```bash
 # 1. Save checkpoint
-npx claudient checkpoint "Migrating user table schema to add phone field"
+npx uitkit checkpoint "Migrating user table schema to add phone field"
 ```
 
 **Output:**
@@ -78,15 +78,15 @@ npx claudient checkpoint "Migrating user table schema to add phone field"
 **Restoring context in a fresh terminal session:**
 ```bash
 # 2. Restore checkpoint
-npx claudient restore
+npx uitkit restore
 ```
 
 **Output:**
 ```
-🔄 CLAUDIENT CHECKPOINT RESTORE REPORT
+🔄 UITKIT CHECKPOINT RESTORE REPORT
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Saved At:        2026-06-17T17:10:00.000Z
-Working Dir:     /Users/tushar/Desktop/Claudient
+Working Dir:     /Users/tushar/Desktop/UitKit
 Active Task:     Migrating user table schema to add phone field
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

@@ -8,7 +8,7 @@ updated: 2026-06-15
 
 ## Doel
 
-Scant de documentatie en code van een Claudient-stack om alle externe afhankelijkheden (MCP, API's, cloudservices, pakketregisters) te identificeren, classificeert elk als offline-veilig of netwerkgebonden, detecteert veiligheidsverschendingen in air-gap-omgevingen en produceert een gedetailleerd rapport over offline-gereedheid met herstelstappen.
+Scant de documentatie en code van een UitKit-stack om alle externe afhankelijkheden (MCP, API's, cloudservices, pakketregisters) te identificeren, classificeert elk als offline-veilig of netwerkgebonden, detecteert veiligheidsverschendingen in air-gap-omgevingen en produceert een gedetailleerd rapport over offline-gereedheid met herstelstappen.
 
 ## Modelrichtlijn
 
@@ -36,7 +36,7 @@ Uitsluiten: webbijstelling, netwerktools, cloud-platform-integraties.
 ```
 /offline-validator
 
-Stack-pad: /opt/claudient/backend_stack
+Stack-pad: /opt/uitkit/backend_stack
 Genereren: offline-readiness rapport
 Uitvoer: JSON + Markdown
 
@@ -58,7 +58,7 @@ Deliverables:
 
 De agent ontvangt:
 
-1. **Stack-pad** — bijv. `/opt/claudient/backend_stack`
+1. **Stack-pad** — bijv. `/opt/uitkit/backend_stack`
 2. **Bereik** — welke submappen moeten worden gescand (vaardigheden, handleidingen, agenten, workflows)
 3. **Uitvoerindeling** — JSON, Markdown of beide
 4. **Strengheidsniveau** — "loose" (basisaudit), "standard" (grondige), "strict" (air-gap-klaar)
@@ -212,7 +212,7 @@ curl|wget|fetch|axios\.post|requests\.post
   },
   "security_requirements": {
     "firewall": "DROP alles uitgaand behalve localhost en intern netwerk",
-    "audit_logging": "JSON-auditrail inschakelen naar /var/log/claudient-audit.jsonl",
+    "audit_logging": "JSON-auditrail inschakelen naar /var/log/uitkit-audit.jsonl",
     "network_isolation_verified": false
   },
   "deployment_readiness": {
@@ -309,7 +309,7 @@ Roep de offline-validatieagent op in deze workflows:
 # Agent aanroepen vanuit workflow of vaardigheid
 /offline-validator <<'EOF'
 {
-  "stack_path": "/opt/claudient/backend_stack",
+  "stack_path": "/opt/uitkit/backend_stack",
   "scope": ["skills", "guides"],
   "output_format": ["json", "markdown"],
   "strictness": "standard"
@@ -341,14 +341,14 @@ cat backend_AIR_GAP_CONFIG.json | jq .
 ```bash
 /offline-validator
 
-Stack-pad: /opt/claudient/backend_stack
+Stack-pad: /opt/uitkit/backend_stack
 Bereik: all
 Strengheid: standard
 Uitvoerindeling: json,markdown
 
 ---
 
-Scanning /opt/claudient/backend_stack...
+Scanning /opt/uitkit/backend_stack...
 
 [1] Verzamelen van CLAUDE.md-bestanden...
   12 bestanden gevonden

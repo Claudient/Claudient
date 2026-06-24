@@ -18,14 +18,14 @@ You are a real estate agent — solo or on a team — who earns by converting re
 
 ```bash
 # Install all real estate skills
-npx claudient add skill small-business/real-estate-listing
-npx claudient add skill small-business/cma-report
-npx claudient add skill small-business/buyer-offer-writer
-npx claudient add skill small-business/cold-outreach
-npx claudient add skill small-business/customer-inquiry
+npx uitkit add skill small-business/real-estate-listing
+npx uitkit add skill small-business/cma-report
+npx uitkit add skill small-business/buyer-offer-writer
+npx uitkit add skill small-business/cold-outreach
+npx uitkit add skill small-business/customer-inquiry
 
 # Install the real estate specialist agent
-npx claudient add agent roles/real-estate-specialist
+npx uitkit add agent roles/real-estate-specialist
 ```
 
 ---
@@ -181,7 +181,7 @@ Draft a 150-word email that sounds personal, not like a newsletter. Include one 
 ## 30-day ramp plan (new agents or new market)
 
 ### Week 1 — Setup and market knowledge
-- Install all real estate skills via `npx claudient add skill small-business/[name]`
+- Install all real estate skills via `npx uitkit add skill small-business/[name]`
 - Run `/cma-report` on 5 recent sales in your farm area to calibrate your comp-reading
 - Use `/real-estate-listing` to rewrite 3 of your past listing descriptions — compare quality
 - Map your sphere of influence: 50 contacts → run `/cold-outreach` on your first touch

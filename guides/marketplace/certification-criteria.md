@@ -1,6 +1,6 @@
 # Marketplace Stack Certification Criteria
 
-This guide details the quantified criteria, quality rubrics, and measurement methodologies for Claudient Stack Certification.
+This guide details the quantified criteria, quality rubrics, and measurement methodologies for UitKit Stack Certification.
 
 ## Overview
 
@@ -232,7 +232,7 @@ If a stack is denied certification or downgraded:
 1. Author can request clarification (within 1 week)
 2. Core team provides detailed score breakdown
 3. Author may reapply after addressing identified issues (after 2 weeks)
-4. If unsatisfied with feedback, escalate to marketplace@claudient.dev for independent review
+4. If unsatisfied with feedback, escalate to marketplace@uitkit.dev for independent review
 
 ---
 

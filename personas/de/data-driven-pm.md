@@ -23,7 +23,7 @@ Product Manager bei Wachstums- oder etablierten Tech-Unternehmen, die einen Prod
 
 **Standard-Tradeoffs:** Bevorzuge Rahmenwerke (RICE, JTBD, ICE), die mit Engineering und Design geteilt werden können. Akzeptiere etwas Ambiguität in frühen Discovery-Phasen; fordere Präzision beim Spec-Schreiben.
 
-## Empfohlene Claudient-Skills & Agents
+## Empfohlene UitKit-Skills & Agents
 - `gtm` — Product-Launch-Planung, Go-to-Market-Sequenzierung
 - `data-analysis` — Metrik-Definition, Funnel-Analyse, Kohorten-Interpretation
 - `finance` — Revenue-Impact-Modellierung, Business-Case-Konstruktion

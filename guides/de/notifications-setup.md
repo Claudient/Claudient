@@ -23,7 +23,7 @@ ntfy ist ein kostenloser, Open-Source Push-Benachrichtigungsdienst. Kein Konto e
 
 **Setup (gehostetes ntfy.sh):**
 
-1. Installieren Sie die ntfy App auf iOS oder Android und abonnieren Sie ein Topic (wählen Sie einen eindeutigen Namen, z.B. `claudient-tushar-2026`).
+1. Installieren Sie die ntfy App auf iOS oder Android und abonnieren Sie ein Topic (wählen Sie einen eindeutigen Namen, z.B. `uitkit-tushar-2026`).
 
 2. Addieren Sie einen `stop` Hook zu `settings.json`:
 

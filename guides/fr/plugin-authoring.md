@@ -24,7 +24,7 @@ my-plugin/
     └── my-server.json
 ```
 
-Les fichiers de composants suivent le même format que les compétences, les agents, les hooks et les règles autonomes dans la spécification Claudient.
+Les fichiers de composants suivent le même format que les compétences, les agents, les hooks et les règles autonomes dans la spécification UitKit.
 
 ---
 
@@ -99,13 +99,13 @@ Les fichiers de composants suivent le même format que les compétences, les age
 
 **À partir de npm :**
 ```bash
-npx claudient add plugin my-plugin-package
-npx claudient add plugin @org/my-plugin
+npx uitkit add plugin my-plugin-package
+npx uitkit add plugin @org/my-plugin
 ```
 
 **À partir d'un chemin local :**
 ```bash
-npx claudient add plugin ./path/to/my-plugin
+npx uitkit add plugin ./path/to/my-plugin
 ```
 
 **À partir d'une URL (v2.1.90+) :**
@@ -121,8 +121,8 @@ Les plugins installés par projet écrivent à `.claude/plugins/`. Les plugins i
 
 | Étendue | Commande d'installation | Emplacement | Qui cela affecte |
 |---|---|---|---|
-| Par projet | `npx claudient add plugin <pkg> --project` | `.claude/plugins/` | Uniquement ce projet |
-| Global utilisateur | `npx claudient add plugin <pkg> --global` | `~/.claude/plugins/` | Tous les projets pour cet utilisateur |
+| Par projet | `npx uitkit add plugin <pkg> --project` | `.claude/plugins/` | Uniquement ce projet |
+| Global utilisateur | `npx uitkit add plugin <pkg> --global` | `~/.claude/plugins/` | Tous les projets pour cet utilisateur |
 
 La valeur par défaut est par projet. Utilisez `--global` pour les outils personnels (vos agents préférés, compétences de productivité) et par projet pour les outils partagés en équipe.
 
@@ -138,10 +138,10 @@ npm link
 
 # Dans le projet où vous voulez le tester
 npm link my-plugin-package
-npx claudient add plugin my-plugin-package
+npx uitkit add plugin my-plugin-package
 ```
 
-Ou utiliser le modèle `scripts/link-skills.sh` si vous maintenez un référentiel de style Claudient :
+Ou utiliser le modèle `scripts/link-skills.sh` si vous maintenez un référentiel de style UitKit :
 
 ```bash
 #!/bin/bash
@@ -182,7 +182,7 @@ Maintenir un `CHANGELOG.md` à la racine du plugin. Les utilisateurs mettant à 
 ## Publication sur npm
 
 ```bash
-# Assurez-vous que "claudient-plugin" est dans les mots-clés pour la découverte
+# Assurez-vous que "uitkit-plugin" est dans les mots-clés pour la découverte
 npm publish --access public
 ```
 
@@ -190,10 +190,10 @@ npm publish --access public
 
 ```json
 {
-  "name": "claudient-plugin-my-tool",
+  "name": "uitkit-plugin-my-tool",
   "version": "1.0.0",
   "description": "What this plugin provides",
-  "keywords": ["claudient-plugin", "claude-code"],
+  "keywords": ["uitkit-plugin", "claude-code"],
   "files": [
     "plugin.json",
     "skills/",
@@ -205,7 +205,7 @@ npm publish --access public
 }
 ```
 
-Le mot-clé `claudient-plugin` rend le plugin découvrable via `npx claudient search plugins <query>`.
+Le mot-clé `uitkit-plugin` rend le plugin découvrable via `npx uitkit search plugins <query>`.
 
 ---
 

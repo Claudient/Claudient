@@ -189,7 +189,7 @@ Agent should flag these patterns for optimization:
 - **Slack**: Post monthly cost summaries to #finance
 - **Jira**: Create budget planning tickets at month start
 - **Google Sheets**: Export and append to team budget tracker
-- **Stripe**: For Claudient Cloud, sync with billing records
+- **Stripe**: For UitKit Cloud, sync with billing records
 - **Tableau**: Append reports to FinOps dashboard
 - **Email**: Alert finance team if overage > 10%
 

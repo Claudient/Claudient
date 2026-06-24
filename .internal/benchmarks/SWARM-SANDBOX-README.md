@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Swarm Sandbox Benchmark Suite is a comprehensive performance measurement tool for the Claudient multi-agent orchestration system. It measures critical performance characteristics across multiple agent topologies and identifies performance bottlenecks.
+The Swarm Sandbox Benchmark Suite is a comprehensive performance measurement tool for the UitKit multi-agent orchestration system. It measures critical performance characteristics across multiple agent topologies and identifies performance bottlenecks.
 
 ## What It Measures
 

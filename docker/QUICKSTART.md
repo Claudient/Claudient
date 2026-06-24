@@ -1,6 +1,6 @@
-# Claudient Docker - Quick Start Guide
+# UitKit Docker - Quick Start Guide
 
-Get Claudient running in Docker in 5 minutes.
+Get UitKit running in Docker in 5 minutes.
 
 ## Prerequisites
 
@@ -18,8 +18,8 @@ cd docker
 
 Expected output:
 ```
-Claudient Docker Image Builder
-Image:  claudient:latest
+UitKit Docker Image Builder
+Image:  uitkit:latest
 Building image...
 ✓ Build successful
 Size: ~500MB
@@ -34,8 +34,8 @@ Size: ~500MB
 
 Expected output:
 ```
-Image:     claudient:latest
-Container: claudient
+Image:     uitkit:latest
+Container: uitkit
 Starting container...
 ✓ Container started
 
@@ -72,7 +72,7 @@ Open in browser: **http://localhost:4321**
 
 ### 5. Access CLI
 ```bash
-docker exec claudient npm run list
+docker exec uitkit npm run list
 ```
 
 ## Using Make (Recommended)
@@ -107,24 +107,24 @@ docker-compose down    # Stop services
 
 ### View Logs
 ```bash
-docker logs -f claudient
+docker logs -f uitkit
 ```
 
 ### Open Shell
 ```bash
-docker exec -it claudient /bin/sh
+docker exec -it uitkit /bin/sh
 ```
 
 ### Run CLI Commands
 ```bash
 # List skills
-docker exec claudient npm run list
+docker exec uitkit npm run list
 
 # Add skills
-docker exec claudient node scripts/cli.js add skills backend
+docker exec uitkit node scripts/cli.js add skills backend
 
 # Run CLI directly
-docker exec claudient npx claudient doctor
+docker exec uitkit npx uitkit doctor
 ```
 
 ### Check Health
@@ -138,8 +138,8 @@ curl http://localhost:9000/metrics
 
 ### Stop & Remove
 ```bash
-docker stop claudient
-docker rm claudient
+docker stop uitkit
+docker rm uitkit
 ```
 
 ## Environment Setup
@@ -168,7 +168,7 @@ notepad docker\.env
 ### Container won't start
 ```bash
 # Check logs
-docker logs claudient
+docker logs uitkit
 
 # Verify Docker is running
 docker ps
@@ -177,16 +177,16 @@ docker ps
 ### Health check failing
 ```bash
 # Test directly
-docker exec claudient curl http://localhost:9000/health
+docker exec uitkit curl http://localhost:9000/health
 
 # Check file permissions
-docker exec claudient ls -la /app/scripts/cli.js
+docker exec uitkit ls -la /app/scripts/cli.js
 ```
 
 ### Port already in use
 ```bash
 # Use different ports
-docker run -p 19000:9000 -p 14321:4321 claudient:latest
+docker run -p 19000:9000 -p 14321:4321 uitkit:latest
 
 # Or find what's using the port
 lsof -i :9000
@@ -206,13 +206,13 @@ curl http://localhost:4321
 ### 1. Integrate with Claude Code
 ```bash
 # Mount your .claude directory
-docker run -v ~/.claude:/root/.claude claudient:latest
+docker run -v ~/.claude:/root/.claude uitkit:latest
 ```
 
 ### 2. Install Skills
 ```bash
-docker exec claudient npm run list
-docker exec claudient node scripts/cli.js add skills all
+docker exec uitkit npm run list
+docker exec uitkit node scripts/cli.js add skills all
 ```
 
 ### 3. Deploy to Production
@@ -222,7 +222,7 @@ docker exec claudient node scripts/cli.js add skills all
 ### 4. Monitor & Scale
 ```bash
 # View real-time stats
-docker stats claudient
+docker stats uitkit
 
 # Check metrics endpoint
 curl http://localhost:9000/metrics
@@ -255,51 +255,51 @@ docker/
 
 ```bash
 # View all commands
-docker exec claudient npx claudient help
+docker exec uitkit npx uitkit help
 
 # Add skills
-docker exec claudient npx claudient add skills backend
+docker exec uitkit npx uitkit add skills backend
 
 # View installed
-docker exec claudient npx claudient list
+docker exec uitkit npx uitkit list
 
 # Run doctor
-docker exec claudient npx claudient doctor
+docker exec uitkit npx uitkit doctor
 
 # Check health
-docker exec claudient npx claudient audit
+docker exec uitkit npx uitkit audit
 ```
 
 ## Performance Tips
 
 ### Optimize Memory
 ```bash
-docker run -e NODE_OPTIONS="--max-old-space-size=256" claudient:latest
+docker run -e NODE_OPTIONS="--max-old-space-size=256" uitkit:latest
 ```
 
 ### Optimize CPU
 ```bash
-docker run --cpus 2 claudient:latest
+docker run --cpus 2 uitkit:latest
 ```
 
 ### Production Setup
 ```bash
 docker run \
   -d \
-  --name claudient \
+  --name uitkit \
   --cpus 2 \
   -m 1g \
   -e NODE_ENV=production \
   -p 9000:9000 \
   -p 4321:4321 \
-  claudient:latest
+  uitkit:latest
 ```
 
 ## Support
 
 Need help?
 
-1. **Check logs:** `docker logs claudient`
+1. **Check logs:** `docker logs uitkit`
 2. **Run health check:** `./health.sh`
 3. **Read full docs:** `docker/README.md`
 4. **View architecture:** `docker/ARCHITECTURE.md`
@@ -308,6 +308,6 @@ Need help?
 ---
 
 **Last updated:** 2026-06-22  
-**Claudient Version:** 1.10.1  
+**UitKit Version:** 1.10.1  
 **Node:** 20-alpine  
 **License:** AGPL-3.0-or-later AND CC-BY-SA-4.0

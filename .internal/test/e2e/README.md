@@ -1,10 +1,10 @@
 # End-to-End Integration Tests
 
-Comprehensive integration test suite for Claudient's core features, validating the complete user workflow from theme setup through visualization export.
+Comprehensive integration test suite for UitKit's core features, validating the complete user workflow from theme setup through visualization export.
 
 ## Overview
 
-The `full-feature-workflow.test.js` test orchestrates six distinct stages of the Claudient system:
+The `full-feature-workflow.test.js` test orchestrates six distinct stages of the UitKit system:
 
 1. **Matrix Theme Setup** — Validates theme configuration, color schemes, animations, and component definitions
 2. **Swarm Sandbox Launch** — Initializes multi-agent sandbox environment with topology configuration
@@ -136,7 +136,7 @@ node test/e2e/full-feature-workflow.test.js --timeout=60000
 ### Success Output
 ```
 ────────────────────────────────────────────────────────────────────────────────
-  CLAUDIENT END-TO-END INTEGRATION TEST SUITE
+  UITKIT END-TO-END INTEGRATION TEST SUITE
 ────────────────────────────────────────────────────────────────────────────────
 
 [TIME] ℹ Test timeout: 30000ms
@@ -174,7 +174,7 @@ node test/e2e/full-feature-workflow.test.js --timeout=60000
 
 Tests generate temporary artifacts in a unique directory under `/tmp/`:
 ```
-/tmp/claudient-e2e-{TIMESTAMP}/
+/tmp/uitkit-e2e-{TIMESTAMP}/
 ├── matrix-test.json
 ├── sandbox-config.json
 ├── sandbox-manifest.json
@@ -199,7 +199,7 @@ Tests generate temporary artifacts in a unique directory under `/tmp/`:
 ## Requirements
 
 - Node.js 18+
-- Valid Claudient installation
+- Valid UitKit installation
 - Read/write access to `/tmp` for temporary files
 - Read access to theme, script, and guide files in project
 
@@ -226,8 +226,8 @@ Increase timeout with `--timeout=600000` (10 minutes).
 Ensure all required files exist:
 ```bash
 ls -la themes/matrix.json
-ls -la scripts/claudient-swarm-sandbox.js
-ls -la scripts/claudient-svg-inspector.js
+ls -la scripts/uitkit-swarm-sandbox.js
+ls -la scripts/uitkit-svg-inspector.js
 ```
 
 ### Permission errors
@@ -270,11 +270,11 @@ Matrix theme (themes/matrix.json)
     ↓
 [Test 1] → matrix-test.json (validated copy)
     ↓
-Sandbox scripts (scripts/claudient-swarm-sandbox.js)
+Sandbox scripts (scripts/uitkit-swarm-sandbox.js)
     ↓
 [Test 2] → sandbox-manifest.json, swarm-results.json
     ↓
-SVG inspector (scripts/claudient-svg-inspector.js)
+SVG inspector (scripts/uitkit-svg-inspector.js)
     ↓
 [Test 3] → swarm-topology.svg, svg-inspection.json
     ↓

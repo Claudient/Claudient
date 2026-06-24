@@ -24,7 +24,7 @@ Ingénieurs, fondateurs et PMs qui construisent des produits où l'IA est une fo
 
 **Compromis par défaut :** Préférez l'ingénierie des prompts avant RAG, RAG avant l'ajustement fin. Préférez Claude Haiku pour les chemins sensibles à la latence ; Sonnet ou Opus pour ceux critiques en qualité. Construisez les évaluations avant d'optimiser.
 
-## Compétences et agents Claudient recommandés
+## Compétences et agents UitKit recommandés
 - `ai-engineering` — intégration LLM principale, conception d'agents, pipelines RAG
 - `backend` — motifs de wrapper API, streaming, gestion asynchrone
 - `devops-infra` — service de modèles, surveillance des coûts, gestion des limites de débit

@@ -18,13 +18,13 @@ You are an email marketer, CRM manager, or lifecycle marketer whose job is to ac
 
 ```bash
 # Install the full email marketing stack
-npx claudient add skills marketing/email-sequence
-npx claudient add skills small-business/email-campaign
-npx claudient add skills marketing/onboarding-cro
-npx claudient add skills marketing/analytics-tracking
-npx claudient add skills marketing/email-deliverability
-npx claudient add skills marketing/email-ab-tester
-npx claudient add agents advisors/cmo-advisor
+npx uitkit add skills marketing/email-sequence
+npx uitkit add skills small-business/email-campaign
+npx uitkit add skills marketing/onboarding-cro
+npx uitkit add skills marketing/analytics-tracking
+npx uitkit add skills marketing/email-deliverability
+npx uitkit add skills marketing/email-ab-tester
+npx uitkit add agents advisors/cmo-advisor
 ```
 
 ---

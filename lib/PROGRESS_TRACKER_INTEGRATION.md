@@ -1,10 +1,10 @@
 # Progress Tracker Integration Guide
 
-How to integrate ProgressTracker with existing Claudient modules: TaskExecutor, StateManager, TaskSplitter, and GoalParser.
+How to integrate ProgressTracker with existing UitKit modules: TaskExecutor, StateManager, TaskSplitter, and GoalParser.
 
 ## Overview
 
-The ProgressTracker fits into the Claudient orchestration pipeline like this:
+The ProgressTracker fits into the UitKit orchestration pipeline like this:
 
 ```
 GoalParser
@@ -301,16 +301,16 @@ program
 
 ```bash
 # Real-time terminal UI
-claudient execute "Add OAuth2 to API" --watch
+uitkit execute "Add OAuth2 to API" --watch
 
 # JSON output for scripting
-claudient execute "Add OAuth2 to API" --json
+uitkit execute "Add OAuth2 to API" --json
 
 # Save progress to file
-claudient execute "Add OAuth2 to API" --json --output progress.json
+uitkit execute "Add OAuth2 to API" --json --output progress.json
 
 # Combine with file output and watch
-claudient execute "Add OAuth2 to API" --watch --output progress.json
+uitkit execute "Add OAuth2 to API" --watch --output progress.json
 ```
 
 ## Integration with FailureLearner

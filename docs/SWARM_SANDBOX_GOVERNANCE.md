@@ -1,6 +1,6 @@
 # Swarm Sandbox Enterprise Governance
 
-> Comprehensive governance framework for safe, compliant, and auditable multi-agent orchestration in Claudient Swarm Sandbox.
+> Comprehensive governance framework for safe, compliant, and auditable multi-agent orchestration in UitKit Swarm Sandbox.
 
 **Last Updated:** 2026-06-22  
 **Audience:** Platform architects, security teams, compliance officers, deployment teams

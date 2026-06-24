@@ -1,6 +1,6 @@
 # Enterprise Edition
 
-Claudient Enterprise Edition erweitert Claude Code um produktionsreife Sicherheits-, Compliance- und Governance-Funktionen für regulierte Industrien und hochsichere Bereitstellungen.
+UitKit Enterprise Edition erweitert Claude Code um produktionsreife Sicherheits-, Compliance- und Governance-Funktionen für regulierte Industrien und hochsichere Bereitstellungen.
 
 ## Wichtigste Funktionen im Vergleich zu OSS
 
@@ -29,7 +29,7 @@ Claudient Enterprise Edition erweitert Claude Code um produktionsreife Sicherhei
 
 Enterprise wird bereitgestellt als:
 - **Lokale Bereitstellung**: Air-gapped `.claude` Hooks mit verschlüsselten Audit-Logs
-- **Verwaltete Cloud**: Vollständige Session-Audit, Rollen-Isolierung, Compliance-Berichte (Claudient Cloud)
+- **Verwaltete Cloud**: Vollständige Session-Audit, Rollen-Isolierung, Compliance-Berichte (UitKit Cloud)
 - **Hybrid**: Lokale Compute + Cloud-Audit-Backend (Q3 2026)
 
 ## Dateien in diesem Verzeichnis
@@ -66,19 +66,19 @@ cp hooks/enterprise/cost-cap-enforcer.sh .claude/hooks/
 
 ## Support & Zertifizierung
 
-- **SOC 2 Type II Attestation**: Auf Anfrage für Claudient Cloud Bereitstellungen verfügbar
+- **SOC 2 Type II Attestation**: Auf Anfrage für UitKit Cloud Bereitstellungen verfügbar
 - **ISO 27001 Scope**: Enterprise Bereitstellungsumgebungen
 - **GDPR Data Processing Agreement**: In Enterprise-Lizenz enthalten
-- **Support**: security@claudient.com, 24/7 Incident Response
+- **Support**: security@uitkit.com, 24/7 Incident Response
 
 ## Lizenzierung
 
 Enterprise Edition ist unter einer kommerziellen Lizenz erhältlich. Funktionen können folgende sein:
 - **Pro Arbeitsplatz**: Team-Preise, jährliche Erneuerung
 - **Bereitstellung**: On-Prem, Air-Gapped (FedRAMP-ready)
-- **Cloud**: Verwaltetes Claudient Cloud mit Compliance-Berichten
+- **Cloud**: Verwaltetes UitKit Cloud mit Compliance-Berichten
 
-Kontaktieren Sie sales@claudient.com für Preise.
+Kontaktieren Sie sales@uitkit.com für Preise.
 
 ---
 

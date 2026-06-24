@@ -221,12 +221,12 @@ touch recruiter-workspace/reports/dei-metrics.md
 echo "# Weekly Pipeline — $(date +%Y-W%V)" > recruiter-workspace/reports/weekly/$(date +%Y-W%V).md
 
 # Instale todas las habilidades de reclutador
-npx claudient add skill productivity/candidate-sourcer
-npx claudient add skill productivity/interview-scorecard
-npx claudient add skill productivity/tech-interview-kit
-npx claudient add skill productivity/comp-benchmarker
-npx claudient add skill small-business/hiring-pipeline
-npx claudient add skill small-business/job-description
+npx uitkit add skill productivity/candidate-sourcer
+npx uitkit add skill productivity/interview-scorecard
+npx uitkit add skill productivity/tech-interview-kit
+npx uitkit add skill productivity/comp-benchmarker
+npx uitkit add skill small-business/hiring-pipeline
+npx uitkit add skill small-business/job-description
 
 echo "Andamio de espacio de trabajo de reclutador completado."
 ```
@@ -413,12 +413,12 @@ No agregue código de aplicación aquí. Este es un espacio de trabajo de conten
 ## Habilidades a instalar
 
 ```bash
-npx claudient add skill productivity/candidate-sourcer
-npx claudient add skill productivity/interview-scorecard
-npx claudient add skill productivity/tech-interview-kit
-npx claudient add skill productivity/comp-benchmarker
-npx claudient add skill small-business/hiring-pipeline
-npx claudient add skill small-business/job-description
+npx uitkit add skill productivity/candidate-sourcer
+npx uitkit add skill productivity/interview-scorecard
+npx uitkit add skill productivity/tech-interview-kit
+npx uitkit add skill productivity/comp-benchmarker
+npx uitkit add skill small-business/hiring-pipeline
+npx uitkit add skill small-business/job-description
 ```
 
 ## Relacionado

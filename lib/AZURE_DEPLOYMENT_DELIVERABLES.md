@@ -568,7 +568,7 @@ validation.errors.forEach(err => console.error(err));
 
 ---
 
-## Integration with Claudient
+## Integration with UitKit
 
 ### With Approval Engine
 

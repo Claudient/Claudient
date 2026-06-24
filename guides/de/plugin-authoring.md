@@ -24,7 +24,7 @@ my-plugin/
     └── my-server.json
 ```
 
-Component-Dateien folgen dem gleichen Format wie standalone Skills, Agents, Hooks und Regeln in der Claudient-Spezifikation.
+Component-Dateien folgen dem gleichen Format wie standalone Skills, Agents, Hooks und Regeln in der UitKit-Spezifikation.
 
 ---
 
@@ -99,13 +99,13 @@ Component-Dateien folgen dem gleichen Format wie standalone Skills, Agents, Hook
 
 **Von npm:**
 ```bash
-npx claudient add plugin my-plugin-package
-npx claudient add plugin @org/my-plugin
+npx uitkit add plugin my-plugin-package
+npx uitkit add plugin @org/my-plugin
 ```
 
 **Von einem lokalen Pfad:**
 ```bash
-npx claudient add plugin ./path/to/my-plugin
+npx uitkit add plugin ./path/to/my-plugin
 ```
 
 **Von einer URL (v2.1.90+):**
@@ -121,8 +121,8 @@ Plugins, die pro-Projekt installiert werden, schreiben zu `.claude/plugins/`. Pl
 
 | Scope | Install-Befehl | Location | Wer beeinflusst |
 |---|---|---|---|
-| Per-Projekt | `npx claudient add plugin <pkg> --project` | `.claude/plugins/` | Nur dieses Projekt |
-| User-Global | `npx claudient add plugin <pkg> --global` | `~/.claude/plugins/` | Alle Projekte für diesen Benutzer |
+| Per-Projekt | `npx uitkit add plugin <pkg> --project` | `.claude/plugins/` | Nur dieses Projekt |
+| User-Global | `npx uitkit add plugin <pkg> --global` | `~/.claude/plugins/` | Alle Projekte für diesen Benutzer |
 
 Standard ist per-Projekt. Verwenden Sie `--global` für persönliche Tooling (Ihre bevorzugten Agents, Produktivitäts-Skills) und per-Projekt für Team-gemeinsame Tooling.
 
@@ -138,10 +138,10 @@ npm link
 
 # Im Projekt, wo Sie es testen möchten
 npm link my-plugin-package
-npx claudient add plugin my-plugin-package
+npx uitkit add plugin my-plugin-package
 ```
 
-Oder verwenden Sie das `scripts/link-skills.sh` Pattern, wenn Sie ein Claudient-Style Repo unterhalten:
+Oder verwenden Sie das `scripts/link-skills.sh` Pattern, wenn Sie ein UitKit-Style Repo unterhalten:
 
 ```bash
 #!/bin/bash
@@ -182,7 +182,7 @@ Unterhalten Sie eine `CHANGELOG.md` an der Plugin-Root. Benutzer, die Plugins up
 ## Publishing zu npm
 
 ```bash
-# Stellen Sie sicher, dass "claudient-plugin" in Keywords für Entdeckbarkeit ist
+# Stellen Sie sicher, dass "uitkit-plugin" in Keywords für Entdeckbarkeit ist
 npm publish --access public
 ```
 
@@ -190,10 +190,10 @@ Minimum `package.json` für ein publishbares Plugin:
 
 ```json
 {
-  "name": "claudient-plugin-my-tool",
+  "name": "uitkit-plugin-my-tool",
   "version": "1.0.0",
   "description": "What this plugin provides",
-  "keywords": ["claudient-plugin", "claude-code"],
+  "keywords": ["uitkit-plugin", "claude-code"],
   "files": [
     "plugin.json",
     "skills/",
@@ -205,7 +205,7 @@ Minimum `package.json` für ein publishbares Plugin:
 }
 ```
 
-Das `claudient-plugin` Keyword macht das Plugin auffindbar via `npx claudient search plugins <query>`.
+Das `uitkit-plugin` Keyword macht das Plugin auffindbar via `npx uitkit search plugins <query>`.
 
 ---
 

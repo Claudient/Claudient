@@ -120,7 +120,7 @@ Sie delegieren Shopify Operations an einen VA — sie führen den Workflow aus, 
 
 ### Ist Claude gut für Shopify-Stores?
 
-Ja. Der offizielle Shopify MCP-Server gibt Claude Lese- und Schreibzugriff auf Ihre Produkte, Bestellungen, Kunden und Inventar. Shopify Operations ist aus diesem Grund einer der meistgenutzten Skills in Claudients Small-Business-Kategorie.
+Ja. Der offizielle Shopify MCP-Server gibt Claude Lese- und Schreibzugriff auf Ihre Produkte, Bestellungen, Kunden und Inventar. Shopify Operations ist aus diesem Grund einer der meistgenutzten Skills in UitKits Small-Business-Kategorie.
 
 ### Funktioniert Claude mit Amazon FBA?
 

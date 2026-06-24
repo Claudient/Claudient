@@ -143,7 +143,7 @@ Als uw skill meer dan 500 regels heeft, splits het dan in twee gerichte skills. 
 
 ## Uw skill testen
 
-Voordat u indient bij Claudient:
+Voordat u indient bij UitKit:
 
 1. Kopieer de skill naar het `.claude/skills/` van een echt project
 2. Open Claude Code en activeer het met het slash-commando

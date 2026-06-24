@@ -5,7 +5,7 @@ const path = require('path');
 
 const CWD = process.cwd();
 const GITHUB_WORKFLOW_DIR = path.join(CWD, '.github', 'workflows');
-const CI_WORKFLOW_PATH = path.join(GITHUB_WORKFLOW_DIR, 'claudient-ci.yml');
+const CI_WORKFLOW_PATH = path.join(GITHUB_WORKFLOW_DIR, 'uitkit-ci.yml');
 
 // Colors
 const BOLD = '\x1b[1m';
@@ -15,7 +15,7 @@ const RED = '\x1b[31m';
 const CYAN = '\x1b[36m';
 const RESET = '\x1b[0m';
 
-const WORKFLOW_YAML = `name: Claudient CI validation
+const WORKFLOW_YAML = `name: UitKit CI validation
 
 on:
   push:
@@ -58,11 +58,11 @@ jobs:
       run: |
         echo "================================================================="
         echo "🚨 CI BUILD DETECTED TEST HARNESS REGRESSION!"
-        echo "Running Claudient Self-Healing Diagnostician..."
+        echo "Running UitKit Self-Healing Diagnostician..."
         echo "================================================================="
-        npx claudient repair || true
+        npx uitkit repair || true
         echo "Diagnostic logs compiled inside .claude/repair-context.json."
-        echo "Pull this branch locally and execute 'npx claudient repair' to auto-fix."
+        echo "Pull this branch locally and execute 'npx uitkit repair' to auto-fix."
 `;
 
 function main() {
@@ -79,7 +79,7 @@ function main() {
     fs.writeFileSync(CI_WORKFLOW_PATH, WORKFLOW_YAML, 'utf-8');
     console.log(`  ${GREEN}✔ GitHub Actions workflow created successfully:${RESET}`);
     console.log(`    ${CI_WORKFLOW_PATH}\n`);
-    console.log(`  ${BOLD}The pipeline includes automatic 'npx claudient repair' diagnostic captures${RESET}`);
+    console.log(`  ${BOLD}The pipeline includes automatic 'npx uitkit repair' diagnostic captures${RESET}`);
     console.log(`  ${BOLD}that run on test failures, simplifying PR debugging workflows.${RESET}\n`);
   } catch (error) {
     console.error(`  ${RED}✗ Failed to scaffold GitHub Actions workflow:${RESET}`, error.message);

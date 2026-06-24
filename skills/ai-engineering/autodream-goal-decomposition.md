@@ -181,10 +181,10 @@ migration_objective:
 
 ## Example
 
-**AutoDream decomposing "Get Claudient to trending on GitHub":**
+**AutoDream decomposing "Get UitKit to trending on GitHub":**
 
 ```yaml
-objective: "Get Claudient repository to GitHub Trending"
+objective: "Get UitKit repository to GitHub Trending"
 success_criteria: "Appear in daily or weekly trending for claude-code or developer-tools topic"
 
 decomposition:
@@ -197,13 +197,13 @@ decomposition:
   goal_2_discoverability:
     - Add topic tags: claude-code, ai-coding, developer-tools, skills
     - Optimize README first 100 chars for GitHub preview
-    - Add comparison table (Claudient vs competitors)
+    - Add comparison table (UitKit vs competitors)
     - Create "Quick Start" section with install in 30 seconds
     
   goal_3_distribution:
     - Post on Reddit r/ClaudeAI, r/programming
     - Submit to awesome-claude-code list
-    - Write "Introducing Claudient" blog post
+    - Write "Introducing UitKit" blog post
     - Share in relevant Discord/Slack communities
     
   goal_4_validation:

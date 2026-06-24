@@ -1,27 +1,27 @@
 # Compliance & Certifications
 
-This document outlines Claudient Enterprise Edition's compliance posture, certifications, and alignment with regulatory frameworks.
+This document outlines UitKit Enterprise Edition's compliance posture, certifications, and alignment with regulatory frameworks.
 
 ## SOC 2 Type II
 
-**Status**: Attestation available for Claudient Cloud deployments
+**Status**: Attestation available for UitKit Cloud deployments
 
-Claudient Cloud is audited annually by a third-party CPA firm. The report covers:
+UitKit Cloud is audited annually by a third-party CPA firm. The report covers:
 
 - **CC6 — Logical and Physical Access Controls**: User authentication (SSO), API key management, audit log access
 - **CC7 — System Monitoring**: Continuous logging of all tool calls, cost enforcement, anomaly detection
 - **CC8 — Change Management**: File write audit trail, approval workflows, rollback capabilities
 - **CC9 — Risk Mitigation**: Cost caps prevent runaway spend; PII scanning prevents data exposure
 
-**How to access**: Request `SOC 2 Type II Report` from sales@claudient.com (NDA required)
+**How to access**: Request `SOC 2 Type II Report` from sales@uitkit.com (NDA required)
 
-**Scope**: Claudient Cloud infrastructure and managed deployments only. On-prem `.claude/` hooks are customer-managed.
+**Scope**: UitKit Cloud infrastructure and managed deployments only. On-prem `.claude/` hooks are customer-managed.
 
 ## ISO 27001
 
 **Status**: Certification in progress (Q3 2026)
 
-Claudient is implementing ISO 27001 Information Security Management System (ISMS) covering:
+UitKit is implementing ISO 27001 Information Security Management System (ISMS) covering:
 
 - **A.5**: Organization of information security (roles, responsibilities)
 - **A.6**: Human resource security (staff screening, awareness training)
@@ -40,24 +40,24 @@ Claudient is implementing ISO 27001 Information Security Management System (ISMS
 
 ### Data Processing Agreement (DPA)
 
-When using Claudient Cloud, a Data Processing Addendum (DPA) applies:
+When using UitKit Cloud, a Data Processing Addendum (DPA) applies:
 
-- Claudient acts as a **Data Processor** (you are the Controller)
+- UitKit acts as a **Data Processor** (you are the Controller)
 - EU Standard Contractual Clauses (SCCs) included
 - Sub-processors listed and approved
 - Data transfers to US require additional safeguards (Adequacy Decision, BCRs, or SCCs)
 
-**How to get**: Included with enterprise license. Request from sales@claudient.com.
+**How to get**: Included with enterprise license. Request from sales@uitkit.com.
 
 ### Your Responsibilities
 
-As a controller using Claude Code + Claudient Cloud:
+As a controller using Claude Code + UitKit Cloud:
 
 1. **Data minimization**: Avoid processing personal data unnecessarily. Audit logs are minimized (see AUDIT_TRAIL.md sanitization rules).
 2. **Consent**: Ensure employees/users consent to Claude Code processing their work (via employment agreement or separate notice).
-3. **Right to erasure**: Users can request deletion of their audit logs. Claudient Cloud supports bulk deletion via API.
+3. **Right to erasure**: Users can request deletion of their audit logs. UitKit Cloud supports bulk deletion via API.
 4. **Data retention**: Set audit log retention to match your policy (default: 7 years for compliance, but configurable down to 30 days).
-5. **Breach notification**: If Claude Code processes PII and a breach occurs, notify your DPA within 72 hours. Claudient will assist with forensics.
+5. **Breach notification**: If Claude Code processes PII and a breach occurs, notify your DPA within 72 hours. UitKit will assist with forensics.
 
 ### Key Features for GDPR
 
@@ -70,25 +70,25 @@ As a controller using Claude Code + Claudient Cloud:
 
 ## HIPAA
 
-**Status**: HIPAA compliance available for Claudient Cloud (Business Associate Agreement required)
+**Status**: HIPAA compliance available for UitKit Cloud (Business Associate Agreement required)
 
 If processing Protected Health Information (PHI):
 
-1. **Request BAA**: Claudient will sign Business Associate Agreement per 45 CFR §164.308(b)
+1. **Request BAA**: UitKit will sign Business Associate Agreement per 45 CFR §164.308(b)
 2. **Enable encryption**: 
    - Audit logs encrypted at rest (AES-256-GCM)
    - TLS 1.3 in transit
    - Set `encryption_at_rest: true` in settings.json
 3. **Audit trail**: All access to PHI is logged. Set audit log retention to match your policy (typically 6 years for covered entities).
 4. **Access controls**: Use RBAC to limit who can access Claude Code. Enforce MFA + SAML SSO.
-5. **Incident response**: Claudient supports forensic log export for breach notification analysis.
+5. **Incident response**: UitKit supports forensic log export for breach notification analysis.
 
 **Not covered**: On-prem deployments (you are responsible for HIPAA compliance of your `.claude/` hooks and logs).
 
 ### Checklist for HIPAA Deployments
 
-- [ ] BAA signed with Claudient
-- [ ] Claudient Cloud enabled (not on-prem)
+- [ ] BAA signed with UitKit
+- [ ] UitKit Cloud enabled (not on-prem)
 - [ ] Encryption at rest enabled
 - [ ] TLS 1.3 for all network traffic
 - [ ] SAML SSO configured (MFA required)
@@ -100,11 +100,11 @@ If processing Protected Health Information (PHI):
 
 ## PCI-DSS
 
-**Status**: Not in scope for Claudient (Claude Code should never process cardholder data)
+**Status**: Not in scope for UitKit (Claude Code should never process cardholder data)
 
 If you work with payment data:
 
-1. **Do NOT process cardholder data** in Claude Code sessions. Claude Code + Claudient logs are not PCI-DSS compliant.
+1. **Do NOT process cardholder data** in Claude Code sessions. Claude Code + UitKit logs are not PCI-DSS compliant.
 2. **Use PII scanning**: Enable to detect and block card numbers (regex: `\b\d{4}[- ]?\d{4}[- ]?\d{4}[- ]?\d{4}\b`)
 3. **Tokenization**: Replace card numbers with tokens before sending to Claude Code.
 4. **Audit separately**: If a file containing PII is accidentally processed, audit logs are available for incident response (see AUDIT_TRAIL.md).
@@ -115,7 +115,7 @@ If you work with payment data:
 
 For US government contractors:
 
-- Claudient Cloud is pursuing **FedRAMP Moderate** authorization
+- UitKit Cloud is pursuing **FedRAMP Moderate** authorization
 - Air-gapped on-prem deployment available now (no external network calls)
 - Supports NIST SP 800-53 controls (AC-2, AU-2, AU-12, etc.)
 
@@ -135,7 +135,7 @@ For US government contractors:
 
 **Status**: Alignment with EU AI Regulation (2024/1689)
 
-Claude Code is an **AI system** under the regulation. Claudient implements:
+Claude Code is an **AI system** under the regulation. UitKit implements:
 
 ### High-Risk Categories (Annex III)
 
@@ -168,7 +168,7 @@ If you use Claude Code to develop a high-risk AI system:
 
 If your company is publicly traded:
 
-1. **IT General Controls (ITGCs)**: Claudient satisfies change management (audit trail of file edits), access control (RBAC), and segregation of duties (cost controller agent).
+1. **IT General Controls (ITGCs)**: UitKit satisfies change management (audit trail of file edits), access control (RBAC), and segregation of duties (cost controller agent).
 2. **Financial system changes**: Log all changes to accounting systems. Audit trail includes who ran what command when.
 3. **Documentation**: Export audit logs for audit committee review (see AUDIT_TRAIL.md querying examples).
 
@@ -179,7 +179,7 @@ If your company is publicly traded:
 
 ## PII Detection Rules
 
-Claudient's built-in PII scanner detects:
+UitKit's built-in PII scanner detects:
 
 | Type | Regex | Action |
 |------|-------|--------|
@@ -222,11 +222,11 @@ Use this when preparing for external audit:
 - [ ] Cost caps enforced (prevents resource abuse)
 - [ ] Incident response plan documented (escalation, forensics)
 - [ ] Staff training completed (data handling, compliance requirements)
-- [ ] DPA/BAA signed (if using Claudient Cloud)
+- [ ] DPA/BAA signed (if using UitKit Cloud)
 - [ ] Audit logs retained per policy (export, archive, delete on schedule)
 
 ---
 
 **Last updated**: 2026-06-15  
-**Contact**: compliance@claudient.com  
+**Contact**: compliance@uitkit.com  
 **Related files**: `AUDIT_TRAIL.md`, `RBAC.md`, `SSO_SETUP.md`

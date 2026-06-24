@@ -129,12 +129,12 @@ touch cs-workspace/templates/ebr-deck-outline.md
 touch cs-workspace/templates/renewal-proposal.md
 
 # CS-Skills installieren
-npx claudient add skill gtm/customer-success
-npx claudient add skill gtm/mutual-success-plan
-npx claudient add skill gtm/qbr-builder
-npx claudient add skill gtm/health-score-analyzer
-npx claudient add skill gtm/expansion-playbook
-npx claudient add skill gtm/churn-prevention
+npx uitkit add skill gtm/customer-success
+npx uitkit add skill gtm/mutual-success-plan
+npx uitkit add skill gtm/qbr-builder
+npx uitkit add skill gtm/health-score-analyzer
+npx uitkit add skill gtm/expansion-playbook
+npx uitkit add skill gtm/churn-prevention
 
 # Beispielkonto aus der Vorlage erstellen
 cp -r cs-workspace/customers/_template cs-workspace/customers/acme-corp
@@ -301,12 +301,12 @@ Red (Score 1-3): wöchentliches Engagement, nach 5 Tagen ohne Antwort an CS-Lead
 ## Zu installierende Skills
 
 ```bash
-npx claudient add skill gtm/customer-success
-npx claudient add skill gtm/mutual-success-plan
-npx claudient add skill gtm/qbr-builder
-npx claudient add skill gtm/health-score-analyzer
-npx claudient add skill gtm/expansion-playbook
-npx claudient add skill gtm/churn-prevention
+npx uitkit add skill gtm/customer-success
+npx uitkit add skill gtm/mutual-success-plan
+npx uitkit add skill gtm/qbr-builder
+npx uitkit add skill gtm/health-score-analyzer
+npx uitkit add skill gtm/expansion-playbook
+npx uitkit add skill gtm/churn-prevention
 ```
 
 ## Verwandte Ressourcen

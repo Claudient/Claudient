@@ -17,7 +17,7 @@ Un emprendedor en solitario típicamente pasa su semana en seis actividades recu
 5. Servicio al cliente — responder preguntas, gestionar quejas, programación
 6. Estrategia — fijación de precios, posicionamiento, decidir en qué enfocarse
 
-De estos seis, solo la entrega no puede ser asistida por Claude de manera significativa (y incluso allí, Claude ayuda con borradores, investigación y revisión). Cada otra actividad tiene al menos una habilidad Claudient construida específicamente para el caso de uso del emprendedor en solitario.
+De estos seis, solo la entrega no puede ser asistida por Claude de manera significativa (y incluso allí, Claude ayuda con borradores, investigación y revisión). Cada otra actividad tiene al menos una habilidad UitKit construida específicamente para el caso de uso del emprendedor en solitario.
 
 ---
 
@@ -133,7 +133,7 @@ Pasa la tarde del viernes haciendo el trabajo que realmente quería que hiciera 
 
 ### ¿Claude es bueno para los empresarios en solitario?
 
-Sí. Claude está diseñado específicamente para el caso de uso del empresario en solitario — iniciado por el propietario, basado en aprobación, sin desarrollador requerido. Los 15 flujos de trabajo oficiales de Claude for Small Business más la larga cola de habilidades de Claudient cubren aproximadamente 60-80% del trabajo semanal recurrente que hace un operador en solitario.
+Sí. Claude está diseñado específicamente para el caso de uso del empresario en solitario — iniciado por el propietario, basado en aprobación, sin desarrollador requerido. Los 15 flujos de trabajo oficiales de Claude for Small Business más la larga cola de habilidades de UitKit cubren aproximadamente 60-80% del trabajo semanal recurrente que hace un operador en solitario.
 
 ### ¿En qué se diferencia Claude de ChatGPT para los empresarios en solitario?
 
@@ -145,7 +145,7 @@ $20/mes para Claude Pro cubre el caso de uso para la mayoría de los negocios de
 
 ### ¿Necesito saber cómo codificar?
 
-No. Claude for Small Business es point-and-click dentro de Claude Cowork. Las habilidades en este repositorio de Claudient se activan escribiendo instrucciones simples en inglés a Claude. El único setup es conectar OAuth sus herramientas existentes, que lleva unos pocos clics por herramienta.
+No. Claude for Small Business es point-and-click dentro de Claude Cowork. Las habilidades en este repositorio de UitKit se activan escribiendo instrucciones simples en inglés a Claude. El único setup es conectar OAuth sus herramientas existentes, que lleva unos pocos clics por herramienta.
 
 ### ¿Puede Claude leer mis datos de QuickBooks?
 

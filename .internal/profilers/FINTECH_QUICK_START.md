@@ -353,4 +353,4 @@ For detailed examples, see:
 
 ## License
 
-Part of Claudient financial services ecosystem.
+Part of UitKit financial services ecosystem.

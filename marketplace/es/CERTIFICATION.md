@@ -1,6 +1,6 @@
-# Niveles de Certificación de Stack Claudient
+# Niveles de Certificación de Stack UitKit
 
-Este documento define los niveles de certificación para stacks en el Marketplace Claudient. Los stacks certificados han cumplido estándares de calidad cuantificados y compromisos de mantenimiento.
+Este documento define los niveles de certificación para stacks en el Marketplace UitKit. Los stacks certificados han cumplido estándares de calidad cuantificados y compromisos de mantenimiento.
 
 ## Niveles de Certificación
 
@@ -58,7 +58,7 @@ Este documento define los niveles de certificación para stacks en el Marketplac
 - Cumple todos los requisitos del nivel Plata
 - Mínimo 200 instalaciones durante 180 días
 - Calificación promedio de usuario de 4.5 o superior
-- Aprobación oficial del mantenedor (miembro oficial del equipo Claudient o mantenedor comunitario verificado con antecedentes)
+- Aprobación oficial del mantenedor (miembro oficial del equipo UitKit o mantenedor comunitario verificado con antecedentes)
 - Documentación y ejemplos completos
 - Soporte multiidioma (mínimo: inglés + 1 idioma adicional)
 

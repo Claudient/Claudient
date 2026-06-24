@@ -18,16 +18,16 @@ You are a UX designer, UX researcher, or product designer whose work spans user 
 
 ```bash
 # Install all UX Designer skills
-npx claudient add skills product
+npx uitkit add skills product
 
 # Or cherry-pick what you need:
-npx claudient add skill product/ux-researcher
-npx claudient add skill product/usability-report
-npx claudient add skill product/persona-builder
-npx claudient add skill product/ux-audit
-npx claudient add skill product/product-discovery
-npx claudient add skill product/experiment-designer
-npx claudient add agents roles/hypothesis-tester
+npx uitkit add skill product/ux-researcher
+npx uitkit add skill product/usability-report
+npx uitkit add skill product/persona-builder
+npx uitkit add skill product/ux-audit
+npx uitkit add skill product/product-discovery
+npx uitkit add skill product/experiment-designer
+npx uitkit add agents roles/hypothesis-tester
 ```
 
 ---
@@ -202,7 +202,7 @@ Evidence basis: [research data available — interviews / analytics / support ti
 ## 30-day ramp plan (new UX hires or career switchers)
 
 ### Week 1 — Setup and research tools
-- Install all product skills: `npx claudient add skills product`
+- Install all product skills: `npx uitkit add skills product`
 - Run `/persona-builder` on existing user research data — get familiar with the current user understanding
 - Run `/ux-audit` on the product's most-used flow — baseline heuristic assessment
 - Review existing usability test reports with `/usability-report` as a formatting reference

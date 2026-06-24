@@ -2,7 +2,7 @@
 
 /**
  * validate-frontmatter.js
- * Validates that skill, agent, and hook markdown files follow Claudient's format.
+ * Validates that skill, agent, and hook markdown files follow UitKit's format.
  *
  * Skills:  YAML frontmatter (name + description) + 4 required sections
  * Agents:  5 required sections (Purpose, Model guidance, Tools, When to delegate, Example)

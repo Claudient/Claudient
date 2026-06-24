@@ -17,7 +17,7 @@ Een eenmanszaak besteedt meestal zijn week aan zes terugkerende activiteiten:
 5. Klantenservice — vragen beantwoorden, klachten hanteren, planning
 6. Strategie — prijsstelling, positionering, bepalen waar u op wilt focussen
 
-Van deze zes kan alleen levering niet op zinvolle wijze door Claude worden ondersteund (en daar helpt Claude nog met concepten, onderzoek en review). Elke andere activiteit heeft minstens één Claudient-vaardigheid speciaal voor het eenmanszaak-geval.
+Van deze zes kan alleen levering niet op zinvolle wijze door Claude worden ondersteund (en daar helpt Claude nog met concepten, onderzoek en review). Elke andere activiteit heeft minstens één UitKit-vaardigheid speciaal voor het eenmanszaak-geval.
 
 ---
 
@@ -133,7 +133,7 @@ U besteedt vrijdagmiddag aan het werk dat u het bedrijf echt wilde doen — ontw
 
 ### Is Claude goed voor eenmanszaken?
 
-Ja. Claude is speciaal voor het eenmanszaak geval gebouwd — eigenaar-geïnitieerd, goedkeuringgebaseerd, geen ontwikkelaar vereist. De 15 officiële Claude for Small Business workflows plus de lange staart van Claudient skills dekken ruwweg 60-80% van het terugkerende wekelijks werk dat een solo-operator doet.
+Ja. Claude is speciaal voor het eenmanszaak geval gebouwd — eigenaar-geïnitieerd, goedkeuringgebaseerd, geen ontwikkelaar vereist. De 15 officiële Claude for Small Business workflows plus de lange staart van UitKit skills dekken ruwweg 60-80% van het terugkerende wekelijks werk dat een solo-operator doet.
 
 ### Hoe verschilt Claude van ChatGPT voor eenmanszaken?
 
@@ -145,7 +145,7 @@ $20/maand voor Claude Pro dekt het geval voor de meeste eenpersoonsbedrij. $100/
 
 ### Moet ik weten hoe ik moet coderen?
 
-Nee. Claude for Small Business is point-and-click in Claude Cowork. De skills in deze Claudient repo worden geactiveerd door eenvoudige Engels-instructies aan Claude te typen. De enige setup is OAuth-verbinding uw bestaande tools, wat een paar kliks per tool duurt.
+Nee. Claude for Small Business is point-and-click in Claude Cowork. De skills in deze UitKit repo worden geactiveerd door eenvoudige Engels-instructies aan Claude te typen. De enige setup is OAuth-verbinding uw bestaande tools, wat een paar kliks per tool duurt.
 
 ### Kan Claude mijn QuickBooks-gegevens lezen?
 

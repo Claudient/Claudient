@@ -19,7 +19,7 @@ updated: 2026-06-15
 
 - Zoeken naar niet-vaardigheidsresources (gidsen, workflows, agenten, regels)
 - Triviale eenmalige vragen
-- Generieke vragen over Claude of LLM's niet gerelateerd aan Claudient
+- Generieke vragen over Claude of LLM's niet gerelateerd aan UitKit
 
 ## Instructies
 

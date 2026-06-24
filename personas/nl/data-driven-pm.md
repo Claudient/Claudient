@@ -23,7 +23,7 @@ Productmanagers bij groeifase of volwassen tech-bedrijven die eigenaar zijn van 
 
 **Standaard afwegingen:** Verkies kaders (RICE, JTBD, ICE) die kunnen worden gedeeld met engineering en design. Accepteer enige ambiguïteit in vroegstadia van discovery; eis precisie bij spec-writing.
 
-## Aanbevolen Claudient-vaardigheden en agents
+## Aanbevolen UitKit-vaardigheden en agents
 - `gtm` — productlanceerplanning, go-to-market sequencing
 - `data-analysis` — metriekdefinitie, funnelanalyse, cohortinterpretatie
 - `finance` — revenue impact modeling, business case constructie

@@ -12,8 +12,8 @@ DO NOT use this template for non-security issues.
 For general bugs, use the standard issue template.
 
 PLEASE report security issues privately using one of these methods:
-1. GitHub Private Security Advisory (preferred): https://github.com/UitbreidenOS/Claudient/security/advisories/new
-2. Email: security@claudient.dev
+1. GitHub Private Security Advisory (preferred): https://github.com/UitbreidenOS/UitKit/security/advisories/new
+2. Email: security@uitkit.dev
 3. Email fallback: security@uitbreiden.com
 
 This form is public and should NOT be used for detailed vulnerability information.
@@ -38,7 +38,7 @@ This form is public and should NOT be used for detailed vulnerability informatio
 Instead of detailing the vulnerability here, please report it privately using one of these methods:
 
 ### Method 1: GitHub Private Security Advisory (Recommended)
-Go to: https://github.com/UitbreidenOS/Claudient/security/advisories/new
+Go to: https://github.com/UitbreidenOS/UitKit/security/advisories/new
 
 Include:
 - Vulnerability description
@@ -48,7 +48,7 @@ Include:
 - CVSS score or severity assessment
 
 ### Method 2: Email
-Email: `security@claudient.dev` or `security@uitbreiden.com`
+Email: `security@uitkit.dev` or `security@uitbreiden.com`
 
 Subject: `[SECURITY] Vulnerability Report: <brief title>`
 
@@ -61,4 +61,4 @@ Our typical embargo period is 30 days from patch release for high/critical vulne
 - Publish a public advisory after the patch is released
 - Credit you in the advisory (unless you request anonymity)
 
-Thank you for helping keep Claudient secure!
+Thank you for helping keep UitKit secure!

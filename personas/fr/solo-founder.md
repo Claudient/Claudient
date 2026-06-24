@@ -24,7 +24,7 @@ Les entreprises à une personne ou les activités indépendantes où le fondateu
 
 **Compromis par défaut :** Préférer le sans-code ou le bas-code où la vélocité dépasse le contrôle. Accepter l'automatisation imparfaite plutôt que la répétition manuelle.
 
-## Compétences et agents Claudient recommandés
+## Compétences et agents UitKit recommandés
 - `small-business` — tarification, positionnement et communication client
 - `gtm` — stratégie de lancement, positionnement, rédaction de page de destination
 - `sdr` — prospection sortante et séquences de suivi

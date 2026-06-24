@@ -562,8 +562,8 @@
       ]
     },
     {
-      "id": "site/src/components/os/ClaudientOS.tsx",
-      "label": "ClaudientOS.tsx",
+      "id": "site/src/components/os/UitKitOS.tsx",
+      "label": "UitKitOS.tsx",
       "type": "file",
       "ext": ".tsx",
       "imports": [
@@ -1191,27 +1191,27 @@
       "type": "imports"
     },
     {
-      "source": "site/src/components/os/ClaudientOS.tsx",
+      "source": "site/src/components/os/UitKitOS.tsx",
       "target": "site/src/components/os/useWindows.ts",
       "type": "imports"
     },
     {
-      "source": "site/src/components/os/ClaudientOS.tsx",
+      "source": "site/src/components/os/UitKitOS.tsx",
       "target": "site/src/components/os/Desktop.tsx",
       "type": "imports"
     },
     {
-      "source": "site/src/components/os/ClaudientOS.tsx",
+      "source": "site/src/components/os/UitKitOS.tsx",
       "target": "site/src/components/os/MenuBar.tsx",
       "type": "imports"
     },
     {
-      "source": "site/src/components/os/ClaudientOS.tsx",
+      "source": "site/src/components/os/UitKitOS.tsx",
       "target": "site/src/components/os/Taskbar.tsx",
       "type": "imports"
     },
     {
-      "source": "site/src/components/os/ClaudientOS.tsx",
+      "source": "site/src/components/os/UitKitOS.tsx",
       "target": "site/src/components/os/Window.tsx",
       "type": "imports"
     },

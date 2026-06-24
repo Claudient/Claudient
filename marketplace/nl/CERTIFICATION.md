@@ -1,6 +1,6 @@
-# Claudient Stack-certificeringsngiveaus
+# UitKit Stack-certificeringsngiveaus
 
-Dit document definieert de certificeringsniveaus voor stacks in de Claudient Marketplace. Gecertificeerde stacks hebben voldaan aan gekwantificeerde kwaliteitsnormen en onderhoudsverplichtingen.
+Dit document definieert de certificeringsniveaus voor stacks in de UitKit Marketplace. Gecertificeerde stacks hebben voldaan aan gekwantificeerde kwaliteitsnormen en onderhoudsverplichtingen.
 
 ## Certificeringsniveaus
 
@@ -58,7 +58,7 @@ Dit document definieert de certificeringsniveaus voor stacks in de Claudient Mar
 - Voldoet aan alle Zilver-niveauvereisten
 - Minimaal 200 installaties gedurende 180 dagen
 - Gemiddelde gebruikersbeoordeling van 4.5 of hoger
-- Officiële onderhoudergoedkeuring (officieel Claudient-teamlid of geverifieerd gemeenschapsonderhoudster met historische gegevens)
+- Officiële onderhoudergoedkeuring (officieel UitKit-teamlid of geverifieerd gemeenschapsonderhoudster met historische gegevens)
 - Uitgebreide documentatie en voorbeelden
 - Meertalige ondersteuning (minimum: Engels + 1 extra taal)
 

@@ -23,7 +23,7 @@ Operadores experimentados que trabajan como ejecutivos fraccionarios o interinos
 
 **Compromisos por defecto:** Prefiere un plan claro de 30-60-90 sobre una presentación de estrategia completa. Prioriza el cambio único con mayor impacto sobre una lista de 10 acciones. Acepta datos imperfectos cuando esperar datos perfectos retrasa una decisión necesaria.
 
-## Habilidades y agentes de Claudient recomendados
+## Habilidades y agentes de UitKit recomendados
 - `finance` — evaluación de salud financiera, análisis de quema, estrategia de precios
 - `gtm` — diagnóstico go-to-market, revisiones de pipeline, estrategia de canales
 - `devops-infra` — salud de la org de ingeniería, evaluación de madurez de plataforma

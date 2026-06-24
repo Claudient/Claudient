@@ -1,4 +1,4 @@
-# Claudient Structured Logging Configuration
+# UitKit Structured Logging Configuration
 # Features: matrix-theme, svg-inspector, swarm-sandbox, dont-stop
 # Format: JSON | Log Levels: 10 | Updated: 2026-06-22
 
@@ -22,7 +22,7 @@ logging:
   # Formatters - JSON structured output
   formatters:
     json_structured:
-      (): claudient.logging.JsonFormatter
+      (): uitkit.logging.JsonFormatter
       format: |
         {
           "timestamp": "%(asctime)s",
@@ -48,7 +48,7 @@ logging:
           "metadata": %(metadata)s
         }
       datefmt: "%Y-%m-%dT%H:%M:%S.%fZ"
-      default_service: "claudient"
+      default_service: "uitkit"
       default_feature: "core"
       default_environment: "development"
 
@@ -66,7 +66,7 @@ logging:
       class: logging.handlers.RotatingFileHandler
       level: DEBUG
       formatter: json_structured
-      filename: logs/claudient.log
+      filename: logs/uitkit.log
       maxBytes: 104857600  # 100MB
       backupCount: 10
       encoding: utf-8
@@ -76,7 +76,7 @@ logging:
       class: logging.handlers.RotatingFileHandler
       level: ERROR
       formatter: json_structured
-      filename: logs/claudient-errors.log
+      filename: logs/uitkit-errors.log
       maxBytes: 52428800  # 50MB
       backupCount: 5
       encoding: utf-8
@@ -86,7 +86,7 @@ logging:
       class: logging.handlers.RotatingFileHandler
       level: AUDIT
       formatter: json_structured
-      filename: logs/claudient-audit.log
+      filename: logs/uitkit-audit.log
       maxBytes: 262144000  # 250MB
       backupCount: 20
       encoding: utf-8
@@ -96,7 +96,7 @@ logging:
       class: logging.handlers.RotatingFileHandler
       level: METRIC
       formatter: json_structured
-      filename: logs/claudient-metrics.log
+      filename: logs/uitkit-metrics.log
       maxBytes: 262144000  # 250MB
       backupCount: 15
       encoding: utf-8
@@ -104,7 +104,7 @@ logging:
   # Loggers - per feature
   loggers:
     # Matrix Theme Logger
-    claudient.features.matrix_theme:
+    uitkit.features.matrix_theme:
       level: DEBUG
       handlers:
         - console
@@ -112,34 +112,34 @@ logging:
         - file_audit
       propagate: false
       extra:
-        service: "claudient"
+        service: "uitkit"
         feature: "matrix-theme"
         feature_type: "ui-theme"
         component: "matrix-theme"
 
-    claudient.features.matrix_theme.rendering:
+    uitkit.features.matrix_theme.rendering:
       level: DEBUG
       handlers:
         - console
         - file_rotating
       propagate: false
       extra:
-        service: "claudient"
+        service: "uitkit"
         feature: "matrix-theme"
         component: "rendering"
 
-    claudient.features.matrix_theme.performance:
+    uitkit.features.matrix_theme.performance:
       level: METRIC
       handlers:
         - file_metrics
       propagate: false
       extra:
-        service: "claudient"
+        service: "uitkit"
         feature: "matrix-theme"
         component: "performance"
 
     # SVG Inspector Logger
-    claudient.features.svg_inspector:
+    uitkit.features.svg_inspector:
       level: DEBUG
       handlers:
         - console
@@ -147,45 +147,45 @@ logging:
         - file_audit
       propagate: false
       extra:
-        service: "claudient"
+        service: "uitkit"
         feature: "svg-inspector"
         feature_type: "tool"
         component: "svg-inspector"
 
-    claudient.features.svg_inspector.parsing:
+    uitkit.features.svg_inspector.parsing:
       level: DEBUG
       handlers:
         - console
         - file_rotating
       propagate: false
       extra:
-        service: "claudient"
+        service: "uitkit"
         feature: "svg-inspector"
         component: "parsing"
 
-    claudient.features.svg_inspector.validation:
+    uitkit.features.svg_inspector.validation:
       level: DEBUG
       handlers:
         - file_rotating
         - file_errors
       propagate: false
       extra:
-        service: "claudient"
+        service: "uitkit"
         feature: "svg-inspector"
         component: "validation"
 
-    claudient.features.svg_inspector.optimization:
+    uitkit.features.svg_inspector.optimization:
       level: METRIC
       handlers:
         - file_metrics
       propagate: false
       extra:
-        service: "claudient"
+        service: "uitkit"
         feature: "svg-inspector"
         component: "optimization"
 
     # Swarm Sandbox Logger
-    claudient.features.swarm_sandbox:
+    uitkit.features.swarm_sandbox:
       level: DEBUG
       handlers:
         - console
@@ -193,54 +193,54 @@ logging:
         - file_audit
       propagate: false
       extra:
-        service: "claudient"
+        service: "uitkit"
         feature: "swarm-sandbox"
         feature_type: "agent-runtime"
         component: "swarm-sandbox"
 
-    claudient.features.swarm_sandbox.execution:
+    uitkit.features.swarm_sandbox.execution:
       level: DEBUG
       handlers:
         - console
         - file_rotating
       propagate: false
       extra:
-        service: "claudient"
+        service: "uitkit"
         feature: "swarm-sandbox"
         component: "execution"
 
-    claudient.features.swarm_sandbox.coordination:
+    uitkit.features.swarm_sandbox.coordination:
       level: DEBUG
       handlers:
         - file_rotating
       propagate: false
       extra:
-        service: "claudient"
+        service: "uitkit"
         feature: "swarm-sandbox"
         component: "coordination"
 
-    claudient.features.swarm_sandbox.communication:
+    uitkit.features.swarm_sandbox.communication:
       level: DEBUG
       handlers:
         - file_rotating
       propagate: false
       extra:
-        service: "claudient"
+        service: "uitkit"
         feature: "swarm-sandbox"
         component: "communication"
 
-    claudient.features.swarm_sandbox.performance:
+    uitkit.features.swarm_sandbox.performance:
       level: METRIC
       handlers:
         - file_metrics
       propagate: false
       extra:
-        service: "claudient"
+        service: "uitkit"
         feature: "swarm-sandbox"
         component: "performance"
 
     # Don't Stop Logger
-    claudient.features.dont_stop:
+    uitkit.features.dont_stop:
       level: DEBUG
       handlers:
         - console
@@ -248,50 +248,50 @@ logging:
         - file_audit
       propagate: false
       extra:
-        service: "claudient"
+        service: "uitkit"
         feature: "dont-stop"
         feature_type: "orchestration"
         component: "dont-stop"
 
-    claudient.features.dont_stop.workflow:
+    uitkit.features.dont_stop.workflow:
       level: DEBUG
       handlers:
         - console
         - file_rotating
       propagate: false
       extra:
-        service: "claudient"
+        service: "uitkit"
         feature: "dont-stop"
         component: "workflow"
 
-    claudient.features.dont_stop.scheduling:
+    uitkit.features.dont_stop.scheduling:
       level: DEBUG
       handlers:
         - file_rotating
       propagate: false
       extra:
-        service: "claudient"
+        service: "uitkit"
         feature: "dont-stop"
         component: "scheduling"
 
-    claudient.features.dont_stop.recovery:
+    uitkit.features.dont_stop.recovery:
       level: DEBUG
       handlers:
         - file_rotating
         - file_errors
       propagate: false
       extra:
-        service: "claudient"
+        service: "uitkit"
         feature: "dont-stop"
         component: "recovery"
 
-    claudient.features.dont_stop.performance:
+    uitkit.features.dont_stop.performance:
       level: METRIC
       handlers:
         - file_metrics
       propagate: false
       extra:
-        service: "claudient"
+        service: "uitkit"
         feature: "dont-stop"
         component: "performance"
 
@@ -339,14 +339,14 @@ fields:
 
   logger:
     type: string
-    description: "Logger name (e.g., claudient.features.matrix_theme)"
+    description: "Logger name (e.g., uitkit.features.matrix_theme)"
     required: true
 
   service:
     type: string
-    description: "Service name (always 'claudient')"
+    description: "Service name (always 'uitkit')"
     required: true
-    default: "claudient"
+    default: "uitkit"
 
   feature:
     type: string
@@ -718,7 +718,7 @@ integration:
         config = yaml.safe_load(f)
 
       logging.config.dictConfig(config['logging'])
-      logger = logging.getLogger('claudient.features.matrix_theme')
+      logger = logging.getLogger('uitkit.features.matrix_theme')
 
     usage: |
       logger.info(

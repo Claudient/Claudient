@@ -353,10 +353,10 @@ console.log(analyzer.identifyOptimizations());
 ## Contact & Issues
 
 Report profiler issues:
-- File path: `/Users/tushar/Desktop/Claudient/profilers/matrix-theme-profiler.js`
-- Analyzer path: `/Users/tushar/Desktop/Claudient/profilers/analyze-matrix-profile.js`
-- Output dir: `/Users/tushar/Desktop/Claudient/profilers/output/`
+- File path: `/Users/tushar/Desktop/UitKit/profilers/matrix-theme-profiler.js`
+- Analyzer path: `/Users/tushar/Desktop/UitKit/profilers/analyze-matrix-profile.js`
+- Output dir: `/Users/tushar/Desktop/UitKit/profilers/output/`
 
 ## License
 
-MIT - Part of Claudient project
+MIT - Part of UitKit project

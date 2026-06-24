@@ -102,7 +102,7 @@ Chargez `/lean-claude` au début de toute session pour activer le mode efficace 
 - Réponses directes sans préambule
 
 ```bash
-npx claudient add skills productivity
+npx uitkit add skills productivity
 # Puis dans Claude Code :
 /lean-claude
 ```

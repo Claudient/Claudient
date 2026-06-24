@@ -30,7 +30,7 @@ class FeatureFlagsService {
       'matrix-theme': {
         id: 'matrix-theme',
         name: 'The Matrix Theme Pack',
-        description: 'Premium aesthetic themes: Claudient Neon, Ghost Shell',
+        description: 'Premium aesthetic themes: UitKit Neon, Ghost Shell',
         enabled: true,
         rolloutPercentage: 100,
         status: 'stable',

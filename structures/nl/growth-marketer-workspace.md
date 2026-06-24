@@ -198,22 +198,22 @@ touch notes/ice-scoring-rubric.md
 touch notes/growth-model.md
 
 # Install all growth marketing skills
-npx claudient add skill marketing/experiment-tracker
-npx claudient add skill marketing/growth-dashboard
-npx claudient add skill marketing/paid-ads
-npx claudient add skill marketing/page-cro
-npx claudient add skill marketing/onboarding-cro
-npx claudient add skill marketing/referral-program
-npx claudient add skill marketing/pricing-strategy
+npx uitkit add skill marketing/experiment-tracker
+npx uitkit add skill marketing/growth-dashboard
+npx uitkit add skill marketing/paid-ads
+npx uitkit add skill marketing/page-cro
+npx uitkit add skill marketing/onboarding-cro
+npx uitkit add skill marketing/referral-program
+npx uitkit add skill marketing/pricing-strategy
 
 # Install slash commands
-npx claudient add command experiment-design
-npx claudient add command funnel-analysis
-npx claudient add command ad-copy-test
-npx claudient add command cro-audit
-npx claudient add command cohort-analysis
-npx claudient add command growth-report
-npx claudient add command channel-review
+npx uitkit add command experiment-design
+npx uitkit add command funnel-analysis
+npx uitkit add command ad-copy-test
+npx uitkit add command cro-audit
+npx uitkit add command cohort-analysis
+npx uitkit add command growth-report
+npx uitkit add command channel-review
 
 echo "Growth marketer workspace ready."
 ```
@@ -391,13 +391,13 @@ metriek en alle experimentbeslissingen zijn hier eigendom.
 ## Skills om te installeren
 
 ```bash
-npx claudient add skill marketing/experiment-tracker
-npx claudient add skill marketing/growth-dashboard
-npx claudient add skill marketing/paid-ads
-npx claudient add skill marketing/page-cro
-npx claudient add skill marketing/onboarding-cro
-npx claudient add skill marketing/referral-program
-npx claudient add skill marketing/pricing-strategy
+npx uitkit add skill marketing/experiment-tracker
+npx uitkit add skill marketing/growth-dashboard
+npx uitkit add skill marketing/paid-ads
+npx uitkit add skill marketing/page-cro
+npx uitkit add skill marketing/onboarding-cro
+npx uitkit add skill marketing/referral-program
+npx uitkit add skill marketing/pricing-strategy
 ```
 
 ## Gerelateerd

@@ -117,7 +117,7 @@ const FRAMEWORKS: ComplianceFramework[] = [
     color: "#1d4aff",
     desc: "Service Organization Control 2 — security, availability, processing integrity, confidentiality, and privacy.",
     evidence: "~/.claude/audit-logs/",
-    cli: "claudient audit --framework soc2",
+    cli: "uitkit audit --framework soc2",
     controls: [
       { name: "Access Control (CC6.1)", status: "implemented" },
       { name: "Encryption at Rest (CC6.7)", status: "implemented" },
@@ -136,7 +136,7 @@ const FRAMEWORKS: ComplianceFramework[] = [
     color: "#3fb950",
     desc: "General Data Protection Regulation — data minimization, consent management, right to erasure, and breach notification.",
     evidence: "~/.claude/gdpr-consent.jsonl",
-    cli: "claudient audit --framework gdpr",
+    cli: "uitkit audit --framework gdpr",
     controls: [
       { name: "Data Minimization (Art.5)", status: "implemented" },
       { name: "Consent Management (Art.7)", status: "implemented" },
@@ -155,7 +155,7 @@ const FRAMEWORKS: ComplianceFramework[] = [
     color: "#b62ad9",
     desc: "EU Artificial Intelligence Act — transparency, risk classification, human oversight, and model documentation.",
     evidence: "~/.claude/eu-ai-risk-log.jsonl",
-    cli: "claudient audit --framework eu-ai-act",
+    cli: "uitkit audit --framework eu-ai-act",
     controls: [
       { name: "Risk Classification (Art.6)", status: "implemented" },
       { name: "Transparency Logs (Art.13)", status: "implemented" },
@@ -298,7 +298,7 @@ export function PricingApp() {
                 <div>
                   <div className="text-[14px] font-bold text-ink">Not sure which tier fits?</div>
                   <p className="mt-1 text-[12.5px] text-body leading-relaxed">
-                    Run <code className="rounded bg-white px-1.5 py-0.5 text-[11px] font-mono text-brand-purple">claudient score</code> to
+                    Run <code className="rounded bg-white px-1.5 py-0.5 text-[11px] font-mono text-brand-purple">uitkit score</code> to
                     get your AI-Readiness Score (0–100 across 8 dimensions). We'll recommend the right tier based on your results.
                   </p>
                   <a

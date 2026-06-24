@@ -1,4 +1,4 @@
-# Mixture of Experts (MoE) Architectures in Claudient
+# Mixture of Experts (MoE) Architectures in UitKit
 
 This document outlines architectures for routing requests across multiple models to optimize code generation, reasoning, and costs.
 

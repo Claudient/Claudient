@@ -143,7 +143,7 @@ Si votre compétence dépasse 500 lignes, divisez-la en deux compétences ciblé
 
 ## Tester votre compétence
 
-Avant de soumettre à Claudient :
+Avant de soumettre à UitKit :
 
 1. Copiez la compétence dans le `.claude/skills/` d'un vrai projet
 2. Ouvrez Claude Code et déclenchez-la avec la commande slash

@@ -2,7 +2,7 @@
 SWARM SANDBOX LOAD TEST - DELIVERABLES MANIFEST
 ================================================================================
 
-PROJECT:  Claudient
+PROJECT:  UitKit
 TASK:     Create load-tests/swarm-sandbox-load.js
 DATE:     2026-06-22
 DELIVERED BY: Claude Code (Haiku 4.5)
@@ -286,14 +286,14 @@ FILE LOCATIONS
 ================================================================================
 
 Primary Deliverable:
-  /Users/tushar/Desktop/Claudient/load-tests/swarm-sandbox-load.js
+  /Users/tushar/Desktop/UitKit/load-tests/swarm-sandbox-load.js
 
 Documentation:
-  /Users/tushar/Desktop/Claudient/load-tests/README.md
-  /Users/tushar/Desktop/Claudient/load-tests/QUICK-START.md
-  /Users/tushar/Desktop/Claudient/load-tests/SPECIFICATION.md
-  /Users/tushar/Desktop/Claudient/load-tests/INDEX.md
-  /Users/tushar/Desktop/Claudient/load-tests/MANIFEST.txt
+  /Users/tushar/Desktop/UitKit/load-tests/README.md
+  /Users/tushar/Desktop/UitKit/load-tests/QUICK-START.md
+  /Users/tushar/Desktop/UitKit/load-tests/SPECIFICATION.md
+  /Users/tushar/Desktop/UitKit/load-tests/INDEX.md
+  /Users/tushar/Desktop/UitKit/load-tests/MANIFEST.txt
 
 Runtime Artifacts (created during execution):
   ~/.claude/load-test-sandboxes/load-test-[scenario]-[N]/...
@@ -304,7 +304,7 @@ QUICK START
 ================================================================================
 
 Run All Tests:
-  cd /Users/tushar/Desktop/Claudient
+  cd /Users/tushar/Desktop/UitKit
   node load-tests/swarm-sandbox-load.js --scenarios=all --report=json
 
 Run Initialization Test:
@@ -454,7 +454,7 @@ with 500 total agents, including comprehensive metrics collection, resource
 exhaustion testing, and detailed reporting capabilities.
 
 All deliverables are located in:
-  /Users/tushar/Desktop/Claudient/load-tests/
+  /Users/tushar/Desktop/UitKit/load-tests/
 
 For quick start, see:
   load-tests/QUICK-START.md

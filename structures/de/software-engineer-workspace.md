@@ -170,14 +170,14 @@ volumes:
 EOF
 
 # Installiere Skills
-npx claudient add skill productivity/code-review
-npx claudient add skill productivity/debug
-npx claudient add skill productivity/refactor
-npx claudient add skill productivity/test-generator
-npx claudient add skill git/pr-description
-npx claudient add skill productivity/security-audit
-npx claudient add skill productivity/spec-driven-workflow
-npx claudient add skill productivity/tech-debt-tracker
+npx uitkit add skill productivity/code-review
+npx uitkit add skill productivity/debug
+npx uitkit add skill productivity/refactor
+npx uitkit add skill productivity/test-generator
+npx uitkit add skill git/pr-description
+npx uitkit add skill productivity/security-audit
+npx uitkit add skill productivity/spec-driven-workflow
+npx uitkit add skill productivity/tech-debt-tracker
 
 # Kopiere installierte Skills als Workspace-Commands
 cp ~/.claude/skills/productivity/code-review.md .claude/commands/code-review.md
@@ -369,14 +369,14 @@ Dieser Workspace umfasst den gesamten Software-Entwicklungslebenszyklus — vom 
 ## Skills zum Installieren
 
 ```bash
-npx claudient add skill productivity/code-review
-npx claudient add skill productivity/debug
-npx claudient add skill productivity/refactor
-npx claudient add skill productivity/test-generator
-npx claudient add skill git/pr-description
-npx claudient add skill productivity/security-audit
-npx claudient add skill productivity/spec-driven-workflow
-npx claudient add skill productivity/tech-debt-tracker
+npx uitkit add skill productivity/code-review
+npx uitkit add skill productivity/debug
+npx uitkit add skill productivity/refactor
+npx uitkit add skill productivity/test-generator
+npx uitkit add skill git/pr-description
+npx uitkit add skill productivity/security-audit
+npx uitkit add skill productivity/spec-driven-workflow
+npx uitkit add skill productivity/tech-debt-tracker
 ```
 
 ## Verwandt

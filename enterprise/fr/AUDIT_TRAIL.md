@@ -28,7 +28,7 @@ Chaque ligne est un objet JSON valide avec ces champs:
   "duration_ms": 145,
   "context": {
     "branch": "main",
-    "working_dir": "/Users/tushar/Desktop/Claudient",
+    "working_dir": "/Users/tushar/Desktop/UitKit",
     "model": "claude-haiku-4-5-20251001",
     "temperature": 1.0,
     "max_tokens": 1024
@@ -153,7 +153,7 @@ jq 'select(.event_type == "session_end") | {user_id, cost: .session_cost_usd}' \
 
 ## Encryption (Enterprise Cloud)
 
-Sur Claudient Cloud:
+Sur UitKit Cloud:
 - Audit logs sont **chiffrés au repos** avec AES-256-GCM
 - **En transit**: TLS 1.3, mutual authentication
 - **Retention**: 7 ans (configurable par exigence conformité)

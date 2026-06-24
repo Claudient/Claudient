@@ -1,10 +1,10 @@
-# Claudient Discord Bot — Complete Index
+# UitKit Discord Bot — Complete Index
 
-Master index and navigation guide for the Claudient Discord bot implementation, documentation, and resources.
+Master index and navigation guide for the UitKit Discord bot implementation, documentation, and resources.
 
 ## Overview
 
-The Claudient Discord bot is a production-ready community engagement platform featuring:
+The UitKit Discord bot is a production-ready community engagement platform featuring:
 - Skill search (400+ searchable items)
 - 24/7 volunteer-routed support threads
 - Community project showcase
@@ -82,7 +82,7 @@ The Claudient Discord bot is a production-ready community engagement platform fe
 ### Slash Commands
 
 #### User Commands
-- `/skill [query]` — Search 400+ Claudient skills
+- `/skill [query]` — Search 400+ UitKit skills
 - `/help` — Show all commands
 - `/support [topic]` — Create support thread
 - `/project submit [title] [desc] [url?]` — Submit project
@@ -123,7 +123,7 @@ node scripts/discord-bot.js
 ### Path 2: PM2 Production (30 min)
 ```bash
 npm install -g pm2
-pm2 start scripts/discord-bot.js --name claudient-bot
+pm2 start scripts/discord-bot.js --name uitkit-bot
 pm2 startup && pm2 save
 ```
 **Best for:** Persistent Linux servers  
@@ -131,8 +131,8 @@ pm2 startup && pm2 save
 
 ### Path 3: Docker (30 min)
 ```bash
-docker build -t claudient-bot .
-docker run -e DISCORD_TOKEN=$TOKEN claudient-bot
+docker build -t uitkit-bot .
+docker run -e DISCORD_TOKEN=$TOKEN uitkit-bot
 ```
 **Best for:** Container-based deployments  
 **Read:** [guides/discord-bot-setup.md](../guides/discord-bot-setup.md#option-b-docker)
@@ -353,8 +353,8 @@ npm test -- discord-bot.test.js
 - [Node.js Documentation](https://nodejs.org/)
 
 ### Community Support
-- GitHub Issues: https://github.com/UitbreidenOS/Claudient/issues
-- Discord Server: https://discord.gg/claudient
+- GitHub Issues: https://github.com/UitbreidenOS/UitKit/issues
+- Discord Server: https://discord.gg/uitkit
 
 ---
 
@@ -390,14 +390,14 @@ A: Check [lib/DISCORD_BOT_DEPLOYMENT.md#issue-bot-offline](./DISCORD_BOT_DEPLOYM
 
 ## Contributors
 
-- Claudient Team
+- UitKit Team
 - Discord.js Community
 
 ---
 
 ## License
 
-Same as Claudient: AGPL-3.0-or-later + CC-BY-SA-4.0
+Same as UitKit: AGPL-3.0-or-later + CC-BY-SA-4.0
 
 ---
 
@@ -414,7 +414,7 @@ Same as Claudient: AGPL-3.0-or-later + CC-BY-SA-4.0
 **External:**
 - Discord Developers: https://discord.com/developers
 - Discord.js Docs: https://discord.js.org/
-- GitHub: https://github.com/UitbreidenOS/Claudient
+- GitHub: https://github.com/UitbreidenOS/UitKit
 
 ---
 

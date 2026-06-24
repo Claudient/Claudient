@@ -1,12 +1,12 @@
 # Prometheus Metrics Collection Guide
 
-Comprehensive guide for instrumenting Claudient services with Prometheus metrics. Covers counter, gauge, and histogram patterns, cardinality management, and alerting integration.
+Comprehensive guide for instrumenting UitKit services with Prometheus metrics. Covers counter, gauge, and histogram patterns, cardinality management, and alerting integration.
 
 ---
 
 ## Metrics Overview
 
-Claudient exports three primary metric types aligned with Prometheus best practices:
+UitKit exports three primary metric types aligned with Prometheus best practices:
 
 | Type | Use Case | Example |
 |------|----------|---------|
@@ -726,7 +726,7 @@ Pre-compute expensive queries to reduce load:
 
 ```yaml
 groups:
-  - name: claudient_recording
+  - name: uitkit_recording
     interval: 30s
     rules:
       # Success rate (computed every 30s)

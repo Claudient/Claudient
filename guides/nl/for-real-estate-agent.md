@@ -18,14 +18,14 @@ Je bent makelaar — solo of in een team — die verdient door relaties om te ze
 
 ```bash
 # Installeer alle makelaarsvaardigheden
-npx claudient add skill small-business/real-estate-listing
-npx claudient add skill small-business/cma-report
-npx claudient add skill small-business/buyer-offer-writer
-npx claudient add skill small-business/cold-outreach
-npx claudient add skill small-business/customer-inquiry
+npx uitkit add skill small-business/real-estate-listing
+npx uitkit add skill small-business/cma-report
+npx uitkit add skill small-business/buyer-offer-writer
+npx uitkit add skill small-business/cold-outreach
+npx uitkit add skill small-business/customer-inquiry
 
 # Installeer de makelaarsspecialist-agent
-npx claudient add agent roles/real-estate-specialist
+npx uitkit add agent roles/real-estate-specialist
 ```
 
 ---
@@ -181,7 +181,7 @@ Schrijf een e-mail van 150 woorden die persoonlijk klinkt, niet als een nieuwsbr
 ## 30-daags opstartplan (nieuwe makelaars of nieuwe markt)
 
 ### Week 1 — Installatie en marktkennis
-- Installeer alle makelaarsvaardigheden via `npx claudient add skill small-business/[naam]`
+- Installeer alle makelaarsvaardigheden via `npx uitkit add skill small-business/[naam]`
 - Voer `/cma-report` uit op 5 recente verkopen in je farm-gebied om je vergelijkingslezing te kalibreren
 - Gebruik `/real-estate-listing` om 3 van je vroegere listingbeschrijvingen te herschrijven — vergelijk kwaliteit
 - Breng je invloedssfeer in kaart: 50 contacten → voer `/cold-outreach` uit voor je eerste aanraking

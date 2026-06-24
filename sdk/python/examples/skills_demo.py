@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Skills Client Demo — Discover, recommend, and install Claudient skills.
+Skills Client Demo — Discover, recommend, and install UitKit skills.
 
 Shows:
   - Searching skills by query
@@ -11,7 +11,7 @@ Shows:
 """
 
 import sys
-from claudient_sdk import SkillsClient, SkillNotFoundError
+from uitkit_sdk import SkillsClient, SkillNotFoundError
 
 
 def demo_search():

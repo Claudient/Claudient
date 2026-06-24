@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# link-skills.sh — symlink all Claudient skills to ~/.claude/skills for local development
+# link-skills.sh — symlink all UitKit skills to ~/.claude/skills for local development
 
 set -euo pipefail
 

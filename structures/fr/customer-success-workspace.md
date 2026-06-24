@@ -129,12 +129,12 @@ touch cs-workspace/templates/ebr-deck-outline.md
 touch cs-workspace/templates/renewal-proposal.md
 
 # Installer les compétences CS
-npx claudient add skill gtm/customer-success
-npx claudient add skill gtm/mutual-success-plan
-npx claudient add skill gtm/qbr-builder
-npx claudient add skill gtm/health-score-analyzer
-npx claudient add skill gtm/expansion-playbook
-npx claudient add skill gtm/churn-prevention
+npx uitkit add skill gtm/customer-success
+npx uitkit add skill gtm/mutual-success-plan
+npx uitkit add skill gtm/qbr-builder
+npx uitkit add skill gtm/health-score-analyzer
+npx uitkit add skill gtm/expansion-playbook
+npx uitkit add skill gtm/churn-prevention
 
 # Créer un compte exemple à partir du modèle
 cp -r cs-workspace/customers/_template cs-workspace/customers/acme-corp
@@ -302,12 +302,12 @@ Red (score 1-3) : engagement hebdomadaire, escalader au responsable CS si pas de
 ## Compétences à installer
 
 ```bash
-npx claudient add skill gtm/customer-success
-npx claudient add skill gtm/mutual-success-plan
-npx claudient add skill gtm/qbr-builder
-npx claudient add skill gtm/health-score-analyzer
-npx claudient add skill gtm/expansion-playbook
-npx claudient add skill gtm/churn-prevention
+npx uitkit add skill gtm/customer-success
+npx uitkit add skill gtm/mutual-success-plan
+npx uitkit add skill gtm/qbr-builder
+npx uitkit add skill gtm/health-score-analyzer
+npx uitkit add skill gtm/expansion-playbook
+npx uitkit add skill gtm/churn-prevention
 ```
 
 ## Liens connexes

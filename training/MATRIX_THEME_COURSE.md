@@ -142,7 +142,7 @@
 - [ ] Certificate saved
 
 **Resources:**
-- [Matrix Theme GitHub Repo](https://github.com/claudient/matrix-theme)
+- [Matrix Theme GitHub Repo](https://github.com/uitkit/matrix-theme)
 - [Claude Code Documentation](https://claude.com/docs)
 - [Troubleshooting Guide](./matrix-troubleshooting.md)
 
@@ -708,7 +708,7 @@ Upon passing each module's quiz (80%+):
   ────────────────────────────────────────────────────
   [Name]
   Completed: [Date]
-  Authorized by: Claudient Training Program
+  Authorized by: UitKit Training Program
 ═══════════════════════════════════════════════════════
 ```
 
@@ -728,7 +728,7 @@ Upon completion of all 4 modules + capstone project:
   theming, and team rollout strategies.
   
   Completed: [Date]
-  Authorized by: Claudient Training Program
+  Authorized by: UitKit Training Program
   Reference: [Unique ID]
 ═══════════════════════════════════════════════════════
 ```
@@ -807,7 +807,7 @@ training/
 
 ### Help Channels
 
-- **Email:** training@claudient.dev
+- **Email:** training@uitkit.dev
 - **Slack:** #matrix-theme-training (private community)
 - **GitHub Issues:** Technical questions tagged `[training]`
 - **Office Hours:** Weekly 30-min Q&A (async video provided)
@@ -880,9 +880,9 @@ time bash ~/.claude/hooks/theme-on-time-change.sh
 
 ## License & Attribution
 
-This training course is part of Claudient, a knowledge system for Claude Code.
+This training course is part of UitKit, a knowledge system for Claude Code.
 
-- Author: Claudient Training Team
+- Author: UitKit Training Team
 - Last Updated: 2026-06-22
 - License: CC BY-SA 4.0 (content), MIT (scripts)
 

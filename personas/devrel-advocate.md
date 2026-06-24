@@ -23,7 +23,7 @@ Developer advocates, DevRel engineers, and technical community managers at API-f
 
 **Default tradeoffs:** Prefer short, working code examples over long explanations. Prioritize the 80% use case in tutorials; document edge cases separately. Accuracy over polish — a technically correct rough draft beats a polished inaccurate one.
 
-## Recommended Claudient skills & agents
+## Recommended UitKit skills & agents
 - `gtm` — developer launch campaigns, conference talk strategy
 - `ai-engineering` — AI SDK demos, model integration tutorials
 - `backend` — code sample generation for API documentation

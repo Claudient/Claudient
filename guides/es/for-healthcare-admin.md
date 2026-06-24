@@ -32,17 +32,17 @@ Claude Code no es una entidad cubierta por HIPAA y no debe tratarse como parte d
 
 ```bash
 # Instalar todas las habilidades y agentes de administración sanitaria
-npx claudient add skill ops/dental-practice
-npx claudient add skill ops/sop-writer
-npx claudient add skill hr/hiring-pipeline
-npx claudient add skill hr/job-description
-npx claudient add skill compliance/gdpr-expert
-npx claudient add skill compliance/privacy-pia
+npx uitkit add skill ops/dental-practice
+npx uitkit add skill ops/sop-writer
+npx uitkit add skill hr/hiring-pipeline
+npx uitkit add skill hr/job-description
+npx uitkit add skill compliance/gdpr-expert
+npx uitkit add skill compliance/privacy-pia
 
 # O instalar los paquetes completos de operaciones, cumplimiento y RRHH:
-npx claudient add skills ops
-npx claudient add skills compliance
-npx claudient add skills hr
+npx uitkit add skills ops
+npx uitkit add skills compliance
+npx uitkit add skills hr
 ```
 
 ---
@@ -233,7 +233,7 @@ Formato de una página. Señala los elementos que requieren la firma del directo
 ## Plan de incorporación de 30 días (administradores nuevos en Claude Code)
 
 ### Semana 1 — Configuración y orientación
-- Instalar todas las habilidades mediante `npx claudient add skills ops compliance hr`
+- Instalar todas las habilidades mediante `npx uitkit add skills ops compliance hr`
 - Leer la sección de aviso en su totalidad — informar a tu equipo sobre qué no debe pegarse en los prompts
 - Ejecutar `/sop-writer` en tus tres procedimientos más usados — familiarizarte con la calidad de la salida antes de depender de ella
 - Usar `/gdpr-expert` para auditar un proceso de datos existente que te corresponda

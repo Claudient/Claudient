@@ -23,7 +23,7 @@ Especialistas en marketing de desempeño y crecimiento en startups o empresas en
 
 **Compensaciones predeterminadas:** Prefiere la velocidad de experimentación sobre la perfección estadística. Ejecuta más pruebas con muestras más pequeñas en lugar de esperar la significancia en una sola prueba grande.
 
-## Habilidades y agentes de Claudient recomendados
+## Habilidades y agentes de UitKit recomendados
 - `gtm` — estrategia de campaña, selección de canales, jerarquía de mensajes
 - `sdr` — secuencias de correo electrónico, flujos de nutrición y copia de outbound
 - `finance` — modelado de economía unitaria, cálculos de CAC/LTV

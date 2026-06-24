@@ -20,15 +20,15 @@ Claude Code wordt je voorbereidingsmotor: briefings in minuten opgesteld, gevoel
 
 ```bash
 # Installeer EA- en CoS-vaardigheden
-npx claudient add skill small-business/meeting-to-action
-npx claudient add skill small-business/monday-brief
-npx claudient add skill productivity/board-deck-builder
-npx claudient add skill productivity/confluence-expert
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/stakeholder-comms
+npx uitkit add skill small-business/meeting-to-action
+npx uitkit add skill small-business/monday-brief
+npx uitkit add skill productivity/board-deck-builder
+npx uitkit add skill productivity/confluence-expert
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/stakeholder-comms
 
 # Installeer de chief of staff-agent
-npx claudient add agent advisors/chief-of-staff
+npx uitkit add agent advisors/chief-of-staff
 ```
 
 ---
@@ -218,7 +218,7 @@ VOORUITBLIK VOLGENDE WEEK:
 ## 30-dagenplan (nieuwe EA of CoS)
 
 ### Week 1 — Breng het landschap in kaart
-- Installeer alle EA/CoS-vaardigheden: `npx claudient add skill productivity/[naam]`
+- Installeer alle EA/CoS-vaardigheden: `npx uitkit add skill productivity/[naam]`
 - Leer de agenda van de executive: welke vergaderingen zijn terugkerend, welke zijn met hoge inzet, welke vermijden ze liever
 - Leg het maandagbriefingformat voor aan de exec — willen ze meer of minder detail? andere focus?
 - Identificeer de 5 belangrijkste stakeholders in de wereld van de exec en bouw profielen met `/exec-briefing`

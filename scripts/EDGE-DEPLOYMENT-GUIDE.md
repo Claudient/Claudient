@@ -117,7 +117,7 @@ node scripts/edge-computing.js wrangler > wrangler.toml
 wrangler publish
 
 # Verify
-curl https://claudient-edge.workers.dev/health
+curl https://uitkit-edge.workers.dev/health
 ```
 
 ### Architecture 4: Hybrid (Workers + Regional Servers)
@@ -162,16 +162,16 @@ Create configuration for each region:
     {
       "id": "edge-us-west-1",
       "region": "us-west",
-      "hostname": "edge-us-west.claudient.com",
+      "hostname": "edge-us-west.uitkit.com",
       "port": 3000,
-      "cloudUrl": "https://api.claudient.com/sync"
+      "cloudUrl": "https://api.uitkit.com/sync"
     },
     {
       "id": "edge-eu-west-1",
       "region": "eu-west",
-      "hostname": "edge-eu-west.claudient.com",
+      "hostname": "edge-eu-west.uitkit.com",
       "port": 3000,
-      "cloudUrl": "https://api.claudient.com/sync"
+      "cloudUrl": "https://api.uitkit.com/sync"
     }
   ]
 }
@@ -184,13 +184,13 @@ Create configuration for each region:
 Create `/etc/systemd/system/edge-server.service`:
 ```ini
 [Unit]
-Description=Claudient Edge Server
+Description=UitKit Edge Server
 After=network.target
 
 [Service]
 Type=simple
-User=claudient
-WorkingDirectory=/opt/claudient
+User=uitkit
+WorkingDirectory=/opt/uitkit
 ExecStart=/usr/bin/node scripts/edge-computing.js server --port=3000
 Restart=on-failure
 RestartSec=10
@@ -218,21 +218,21 @@ CMD ["node", "scripts/edge-computing.js", "server", "--port=3000"]
 
 Build and run:
 ```bash
-docker build -t claudient-edge .
+docker build -t uitkit-edge .
 
 docker run -d \
   --name edge-us-west \
   -p 3000:3000 \
   -e REGION=us-west \
-  -e CLOUD_URL=https://api.claudient.com/sync \
-  claudient-edge
+  -e CLOUD_URL=https://api.uitkit.com/sync \
+  uitkit-edge
 
 docker run -d \
   --name edge-eu-west \
   -p 3000:3000 \
   -e REGION=eu-west \
-  -e CLOUD_URL=https://api.claudient.com/sync \
-  claudient-edge
+  -e CLOUD_URL=https://api.uitkit.com/sync \
+  uitkit-edge
 ```
 
 **Option C: Kubernetes**
@@ -242,20 +242,20 @@ Create `k8s/edge-deployment.yaml`:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: claudient-edge
+  name: uitkit-edge
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: claudient-edge
+      app: uitkit-edge
   template:
     metadata:
       labels:
-        app: claudient-edge
+        app: uitkit-edge
     spec:
       containers:
       - name: edge
-        image: claudient-edge:latest
+        image: uitkit-edge:latest
         ports:
         - containerPort: 3000
         env:
@@ -264,7 +264,7 @@ spec:
             fieldRef:
               fieldPath: metadata.labels['region']
         - name: CLOUD_URL
-          value: "https://api.claudient.com/sync"
+          value: "https://api.uitkit.com/sync"
         resources:
           requests:
             memory: "256Mi"
@@ -283,14 +283,14 @@ spec:
 Deploy:
 ```bash
 kubectl apply -f k8s/edge-deployment.yaml
-kubectl get pods -l app=claudient-edge
+kubectl get pods -l app=uitkit-edge
 ```
 
 ### Step 3: Configure Load Balancing
 
 **Option A: DNS Round-Robin**
 ```
-edge.claudient.com
+edge.uitkit.com
   ├─ 1.2.3.4 (US-West)
   ├─ 5.6.7.8 (EU-West)
   └─ 9.10.11.12 (AP-SE)
@@ -304,7 +304,7 @@ aws route53 create-resource-record-set \
   --hosted-zone-id Z123456 \
   --resource-record-set \
   '{
-    "Name": "edge.claudient.com",
+    "Name": "edge.uitkit.com",
     "Type": "A",
     "SetIdentifier": "US-West",
     "GeoLocation": {"CountryCode": "US"},
@@ -315,7 +315,7 @@ aws route53 create-resource-record-set \
 
 Cloudflare:
 ```
-Domain: edge.claudient.com
+Domain: edge.uitkit.com
 Routing: Geo
   - Nearest to US-West → 1.2.3.4
   - Nearest to EU-West → 5.6.7.8
@@ -327,7 +327,7 @@ Routing: Geo
 Update `.env` or config:
 ```bash
 # .env
-CLOUD_API_URL=https://api.claudient.com
+CLOUD_API_URL=https://api.uitkit.com
 CLOUD_SYNC_INTERVAL=5000
 CLOUD_SYNC_BATCH_SIZE=100
 ```
@@ -346,7 +346,7 @@ nano wrangler.toml
 wrangler publish
 
 # Test
-curl https://claudient-edge.workers.dev/health \
+curl https://uitkit-edge.workers.dev/health \
   -H "cf-ipcountry: US"
 ```
 
@@ -356,9 +356,9 @@ curl https://claudient-edge.workers.dev/health \
 
 ```bash
 # All nodes health
-curl http://edge-us-west.claudient.com:3000/health
-curl http://edge-eu-west.claudient.com:3000/health
-curl http://edge-ap-se.claudient.com:3000/health
+curl http://edge-us-west.uitkit.com:3000/health
+curl http://edge-eu-west.uitkit.com:3000/health
+curl http://edge-ap-se.uitkit.com:3000/health
 
 # Response
 {"status":"healthy","latency":5}
@@ -368,8 +368,8 @@ curl http://edge-ap-se.claudient.com:3000/health
 
 ```bash
 # Collect metrics from each node
-curl http://edge-us-west.claudient.com:3000/metrics > metrics-us-west.json
-curl http://edge-eu-west.claudient.com:3000/metrics > metrics-eu-west.json
+curl http://edge-us-west.uitkit.com:3000/metrics > metrics-us-west.json
+curl http://edge-eu-west.uitkit.com:3000/metrics > metrics-eu-west.json
 
 # Aggregate
 jq -s 'map(.globalMetrics) | add' metrics-*.json
@@ -399,7 +399,7 @@ const cw = new CloudWatch();
 const metrics = coordinator.getGlobalMetrics();
 
 cw.putMetricData({
-  Namespace: 'Claudient/Edge',
+  Namespace: 'UitKit/Edge',
   MetricData: [
     {
       MetricName: 'AverageLatency',
@@ -473,7 +473,7 @@ curl http://edge-node:3000/metrics | jq '.nodes[].latency'
 curl http://edge-node:3000/health
 
 # Check logs
-tail -f /var/log/claudient/edge-server.log
+tail -f /var/log/uitkit/edge-server.log
 
 # Verify process running
 ps aux | grep edge-computing
@@ -486,7 +486,7 @@ ps aux | grep edge-computing
 cat .claude/edge-computing/sync-log.json
 
 # Test cloud endpoint
-curl https://api.claudient.com/sync
+curl https://api.uitkit.com/sync
 
 # Manually trigger sync
 # (via API or restart node)

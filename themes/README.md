@@ -16,7 +16,7 @@ A collection of 11 hand-crafted Claude Code themes with authentic color palettes
 | `solarized-light.json` | Solarized Light | light | `#268bd2` blue |
 | `monokai.json` | Monokai | dark | `#ae81ff` purple |
 | `rose-pine.json` | Rose Pine | dark | `#c4a7e7` iris |
-| `claudient-brand.json` | Claudient Brand | dark | `#ff8c00` orange |
+| `uitkit-brand.json` | UitKit Brand | dark | `#ff8c00` orange |
 
 ## Featured: The Matrix Theme
 

@@ -1,14 +1,14 @@
 # Guía de Distribución de Plugins
 
-Esta guía cubre cómo distribuir plugins de Claudient a través de múltiples canales: registro npm, versiones de GitHub, envío a Marketplace y estrategia de versionado.
+Esta guía cubre cómo distribuir plugins de UitKit a través de múltiples canales: registro npm, versiones de GitHub, envío a Marketplace y estrategia de versionado.
 
 ## Descripción general
 
-Los plugins de Claudient se pueden distribuir a través de tres canales principales:
+Los plugins de UitKit se pueden distribuir a través de tres canales principales:
 
 1. **Registro npm** — Para instalación programática y gestión de dependencias
 2. **Versiones de GitHub** — Para descargas directas y control de versiones
-3. **Claudient Marketplace** — Para descubribilidad e integración del ecosistema
+3. **UitKit Marketplace** — Para descubribilidad e integración del ecosistema
 
 Cada canal sirve casos de uso diferentes; la mayoría de los editores utilizan los tres.
 
@@ -29,7 +29,7 @@ Asegúrese de que el `package.json` raíz de su plugin esté correctamente confi
 
 ```json
 {
-  "name": "@claudient/plugin-su-nombre-plugin",
+  "name": "@uitkit/plugin-su-nombre-plugin",
   "version": "1.0.0",
   "description": "Descripción de una línea del plugin (máx 80 caracteres)",
   "main": "index.js",
@@ -44,7 +44,7 @@ Asegúrese de que el `package.json` raíz de su plugin esté correctamente confi
     "CLAUDE.md",
     "LICENSE"
   ],
-  "keywords": ["claude-code", "claudient", "plugin", "dominio"],
+  "keywords": ["claude-code", "uitkit", "plugin", "dominio"],
   "author": {
     "name": "Su Nombre",
     "email": "usted@example.com",
@@ -127,7 +127,7 @@ npm pack
 npm install ./su-plugin-1.0.0.tgz
 
 # Verificar instalación
-ls node_modules/@claudient/plugin-su-nombre-plugin/
+ls node_modules/@uitkit/plugin-su-nombre-plugin/
 ```
 
 Publicar en npm:
@@ -140,10 +140,10 @@ npm publish
 
 ```bash
 # Verificar paquete en npm
-npm view @claudient/plugin-su-nombre-plugin
+npm view @uitkit/plugin-su-nombre-plugin
 
 # Probar instalación
-npm install @claudient/plugin-su-nombre-plugin
+npm install @uitkit/plugin-su-nombre-plugin
 ```
 
 ---
@@ -182,7 +182,7 @@ Crear `RELEASE_NOTES.md`:
 
 ### Vía npm
 \`\`\`bash
-npm install @claudient/plugin-su-nombre-plugin
+npm install @uitkit/plugin-su-nombre-plugin
 \`\`\`
 
 ### Vía descarga directa
@@ -214,7 +214,7 @@ gh release edit v1.0.0 --draft=false
 
 ---
 
-## Parte 3: Envío a Claudient Marketplace
+## Parte 3: Envío a UitKit Marketplace
 
 ### Paso 1: Preparar metadatos del Marketplace
 
@@ -245,7 +245,7 @@ Crear `.claude-plugin/plugin.json` en la raíz del plugin:
 
 ### Paso 2: Enviar a Marketplace
 
-1. **Fork** el repositorio de Claudient: `github.com/claudients/claudient`
+1. **Fork** el repositorio de UitKit: `github.com/uitkits/uitkit`
 2. **Crear una rama de características:**
    ```bash
    git checkout -b submit/su-nombre-plugin
@@ -337,7 +337,7 @@ Todos los cambios notables se documentan en este archivo.
 
 - [ ] `.claude-plugin/plugin.json` completo
 - [ ] README.md amigable con Marketplace
-- [ ] Fork del repositorio Claudient creado
+- [ ] Fork del repositorio UitKit creado
 - [ ] Plugin agregado al directorio `plugins/`
 - [ ] PR abierto con descripción completa
 - [ ] PR fusionado
@@ -345,5 +345,5 @@ Todos los cambios notables se documentan en este archivo.
 ---
 
 **Última actualización:** 22 de junio de 2026  
-**Mantenedor:** Equipo principal de Claudient  
+**Mantenedor:** Equipo principal de UitKit  
 **Licencia:** CC-BY-SA-4.0

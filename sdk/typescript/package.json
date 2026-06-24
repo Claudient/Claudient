@@ -1,15 +1,15 @@
 {
-  "name": "claudient-sdk",
+  "name": "uitkit-sdk",
   "version": "1.0.0",
-  "description": "Type-safe TypeScript SDK for Claudient with async/await, retry logic, error handling, and timeouts",
-  "main": "dist/claudient-sdk.js",
-  "types": "dist/claudient-sdk.d.ts",
-  "module": "dist/claudient-sdk.mjs",
+  "description": "Type-safe TypeScript SDK for UitKit with async/await, retry logic, error handling, and timeouts",
+  "main": "dist/uitkit-sdk.js",
+  "types": "dist/uitkit-sdk.d.ts",
+  "module": "dist/uitkit-sdk.mjs",
   "exports": {
     ".": {
-      "import": "./dist/claudient-sdk.mjs",
-      "require": "./dist/claudient-sdk.js",
-      "types": "./dist/claudient-sdk.d.ts"
+      "import": "./dist/uitkit-sdk.mjs",
+      "require": "./dist/uitkit-sdk.js",
+      "types": "./dist/uitkit-sdk.d.ts"
     }
   },
   "files": [
@@ -31,7 +31,7 @@
     "prepack": "npm run build"
   },
   "keywords": [
-    "claudient",
+    "uitkit",
     "claude",
     "sdk",
     "typescript",
@@ -50,13 +50,13 @@
   "license": "(AGPL-3.0-or-later AND CC-BY-SA-4.0)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/UitbreidenOS/Claudient.git",
+    "url": "https://github.com/UitbreidenOS/UitKit.git",
     "directory": "sdk/typescript"
   },
   "bugs": {
-    "url": "https://github.com/UitbreidenOS/Claudient/issues"
+    "url": "https://github.com/UitbreidenOS/UitKit/issues"
   },
-  "homepage": "https://github.com/UitbreidenOS/Claudient#readme",
+  "homepage": "https://github.com/UitbreidenOS/UitKit#readme",
   "engines": {
     "node": ">=18.0.0"
   },

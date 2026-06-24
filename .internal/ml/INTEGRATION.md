@@ -408,6 +408,6 @@ assert all('predicted_success' in t for t in optimized)
 
 ## Support
 
-- Issues: Report in Claudient repository
+- Issues: Report in UitKit repository
 - Training data: Provide execution logs as CSV with required columns
 - Model updates: Retrain monthly or after 100+ new executions

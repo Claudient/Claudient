@@ -522,9 +522,9 @@ MANIFEST.txt
 CONTACT & SUPPORT
 ================================================================================
 
-Repository: /Users/tushar/Desktop/Claudient/
+Repository: /Users/tushar/Desktop/UitKit/
 Directory: stress-tests/
-Maintained By: Claudient Team
+Maintained By: UitKit Team
 Status: Production Ready
 Last Updated: 2026-06-22
 

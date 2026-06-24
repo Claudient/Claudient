@@ -18,16 +18,16 @@ Je bent een CTO, VP Engineering, Principal Engineer of Tech Lead wiens taak het 
 
 ```bash
 # Installeer de volledige CTO / tech lead-stack
-npx claudient add skills productivity/adr-writer
-npx claudient add skills productivity/tech-debt-tracker
-npx claudient add skills devops-infra/platform-engineering
-npx claudient add skills productivity/vertical-slice-planner
-npx claudient add skills productivity/spec-driven-workflow
-npx claudient add skills productivity/engineering-strategy
-npx claudient add skills productivity/tech-interview-kit
-npx claudient add agents advisors/cto-advisor
-npx claudient add agents advisors/vpe-advisor
-npx claudient add agents core/architect
+npx uitkit add skills productivity/adr-writer
+npx uitkit add skills productivity/tech-debt-tracker
+npx uitkit add skills devops-infra/platform-engineering
+npx uitkit add skills productivity/vertical-slice-planner
+npx uitkit add skills productivity/spec-driven-workflow
+npx uitkit add skills productivity/engineering-strategy
+npx uitkit add skills productivity/tech-interview-kit
+npx uitkit add agents advisors/cto-advisor
+npx uitkit add agents advisors/vpe-advisor
+npx uitkit add agents core/architect
 ```
 
 ---

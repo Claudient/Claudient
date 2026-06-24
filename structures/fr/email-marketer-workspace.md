@@ -198,17 +198,17 @@ touch email-marketer-workspace/reports/monthly/_template.md
 touch email-marketer-workspace/reports/quarterly/_template.md
 
 # Installer les compétences email marketing
-npx claudient add skill marketing/email-sequence
-npx claudient add skill marketing/email-deliverability
-npx claudient add skill marketing/email-ab-tester
-npx claudient add skill small-business/email-campaign
+npx uitkit add skill marketing/email-sequence
+npx uitkit add skill marketing/email-deliverability
+npx uitkit add skill marketing/email-ab-tester
+npx uitkit add skill small-business/email-campaign
 
 # Copier les stubs de commandes dans .claude/commands/
-npx claudient add skill marketing/email-sequence --output email-marketer-workspace/.claude/commands/email-draft.md
-npx claudient add skill marketing/email-ab-tester --output email-marketer-workspace/.claude/commands/ab-test-setup.md
-npx claudient add skill marketing/email-sequence --output email-marketer-workspace/.claude/commands/sequence-builder.md
-npx claudient add skill marketing/email-deliverability --output email-marketer-workspace/.claude/commands/deliverability-check.md
-npx claudient add skill small-business/email-campaign --output email-marketer-workspace/.claude/commands/performance-report.md
+npx uitkit add skill marketing/email-sequence --output email-marketer-workspace/.claude/commands/email-draft.md
+npx uitkit add skill marketing/email-ab-tester --output email-marketer-workspace/.claude/commands/ab-test-setup.md
+npx uitkit add skill marketing/email-sequence --output email-marketer-workspace/.claude/commands/sequence-builder.md
+npx uitkit add skill marketing/email-deliverability --output email-marketer-workspace/.claude/commands/deliverability-check.md
+npx uitkit add skill small-business/email-campaign --output email-marketer-workspace/.claude/commands/performance-report.md
 ```
 
 ## Modèle CLAUDE.md
@@ -413,13 +413,13 @@ Compliance requirement: [RGPD / CAN-SPAM / CASL — indiquer lesquels s'applique
 
 ```bash
 # Compétences principales en email marketing
-npx claudient add skill marketing/email-sequence
-npx claudient add skill marketing/email-deliverability
-npx claudient add skill marketing/email-ab-tester
-npx claudient add skill small-business/email-campaign
+npx uitkit add skill marketing/email-sequence
+npx uitkit add skill marketing/email-deliverability
+npx uitkit add skill marketing/email-ab-tester
+npx uitkit add skill small-business/email-campaign
 
 # Installer toutes les compétences marketing en une fois
-npx claudient add skills marketing
+npx uitkit add skills marketing
 ```
 
 ## Voir aussi

@@ -147,7 +147,7 @@ Specific prompts → focused responses → fewer tokens.
 
 Use the `cost-tracker` hook to see token usage per tool call:
 ```bash
-npx claudient add hooks
+npx uitkit add hooks
 # Then add hooks/lifecycle/cost-tracker.sh to .claude/settings.json
 ```
 

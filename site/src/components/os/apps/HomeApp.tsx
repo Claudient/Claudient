@@ -33,7 +33,7 @@ const highlights = [
     icon: "🔵",
     title: "Resilience & Zero-Hallucination",
     color: "#1d4aff",
-    pitch: "Zero syntax hallucinations. Claudient intercepts AI edits, runs your actual compiler, and forces the AI to fix its own typos before returning control.",
+    pitch: "Zero syntax hallucinations. UitKit intercepts AI edits, runs your actual compiler, and forces the AI to fix its own typos before returning control.",
     features: ["Shadow Compiler", "Safe Commit Hook", "Spec-First Enforcer", "Chaos Monkey"],
     audience: "DevSecOps & QA Leads",
   },
@@ -111,7 +111,7 @@ export function HomeApp({ wm }: { wm: WindowManager }) {
         Stop explaining your stack to Claude <span className="text-brand-red">every session.</span>
       </h1>
       <p className="mt-4 text-[15px] text-body leading-relaxed">
-        Claudient is the largest open-source knowledge base for Claude Code.
+        UitKit is the largest open-source knowledge base for Claude Code.
         1000+ skills, 700+ agents, 50 workspace stacks, 38 CLI scripts — all installable in 30 seconds.
         Open any window below to explore. 🧠
       </p>
@@ -187,15 +187,15 @@ export function HomeApp({ wm }: { wm: WindowManager }) {
       <p className="mt-1 text-[12.5px] text-mute">Run these today — no configuration needed. 3 enterprise commands available with Pro plan.</p>
       <div className="mt-4 grid sm:grid-cols-3 gap-3">
         {[
-          { cmd: "claudient doctor", desc: "Health check: 5 diagnostics in seconds", icon: "🩺" },
-          { cmd: "claudient caveman", desc: "Token optimizer — 73% cost reduction", icon: "🦴" },
-          { cmd: "claudient chaos", desc: "Adversarial chaos monkey for your tests", icon: "🐒" },
-          { cmd: "claudient prophet", desc: "Predict which files will break next", icon: "🔮" },
-          { cmd: "claudient handoff", desc: "Architect/Mason dual-model orchestration", icon: "🏗️" },
-          { cmd: "claudient sweep", desc: "Dead code hunter — cleans unused imports", icon: "🧹" },
-          { cmd: "claudient tdd", desc: "Stunt Double TDD — tests first, always", icon: "🧪" },
-          { cmd: "claudient enforce", desc: "Spec-first architectural enforcer", icon: "📋" },
-          { cmd: "claudient recommend", desc: "Personalized setup recommendations", icon: "💡" },
+          { cmd: "uitkit doctor", desc: "Health check: 5 diagnostics in seconds", icon: "🩺" },
+          { cmd: "uitkit caveman", desc: "Token optimizer — 73% cost reduction", icon: "🦴" },
+          { cmd: "uitkit chaos", desc: "Adversarial chaos monkey for your tests", icon: "🐒" },
+          { cmd: "uitkit prophet", desc: "Predict which files will break next", icon: "🔮" },
+          { cmd: "uitkit handoff", desc: "Architect/Mason dual-model orchestration", icon: "🏗️" },
+          { cmd: "uitkit sweep", desc: "Dead code hunter — cleans unused imports", icon: "🧹" },
+          { cmd: "uitkit tdd", desc: "Stunt Double TDD — tests first, always", icon: "🧪" },
+          { cmd: "uitkit enforce", desc: "Spec-first architectural enforcer", icon: "📋" },
+          { cmd: "uitkit recommend", desc: "Personalized setup recommendations", icon: "💡" },
         ].map((t) => (
           <button
             key={t.cmd}
@@ -216,7 +216,7 @@ export function HomeApp({ wm }: { wm: WindowManager }) {
           <div>
             <div className="text-[15px] font-bold text-ink">Harness Neutral — Works Everywhere</div>
             <p className="text-[12.5px] text-body mt-1 leading-relaxed">
-              Claudient is not tied to any single AI coding tool. Write your rules, skills, and agents once —
+              UitKit is not tied to any single AI coding tool. Write your rules, skills, and agents once —
               export to Claude Code, Cursor, Windsurf, GitHub Copilot, Codex, or Cline.
               No vendor lock-in. Your knowledge system travels with you.
             </p>
@@ -250,8 +250,8 @@ export function HomeApp({ wm }: { wm: WindowManager }) {
         </div>
       </div>
 
-      {/* Why Claudient Wins */}
-      <h2 className="mt-9 text-lg font-bold text-ink">Why Claudient Wins</h2>
+      {/* Why UitKit Wins */}
+      <h2 className="mt-9 text-lg font-bold text-ink">Why UitKit Wins</h2>
       <div className="mt-4 rounded-xl border border-hairline bg-white p-5">
         <div className="grid sm:grid-cols-2 gap-3">
           {[
@@ -316,7 +316,7 @@ export function HomeApp({ wm }: { wm: WindowManager }) {
           </p>
           <div className="mt-3 flex flex-wrap gap-2.5">
             <a
-              href="https://github.com/UitbreidenOS/Claudient"
+              href="https://github.com/UitbreidenOS/UitKit"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-md bg-ink px-3 py-1.5 text-[12px] font-bold text-white hover:bg-body transition"

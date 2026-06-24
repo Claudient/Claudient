@@ -188,22 +188,22 @@ touch reports/README.md reports/weekly/weekly-brief-template.md reports/monthly/
 touch expenses/README.md expenses/2026-06/june-expenses-log.md expenses/2026-06/receipts-checklist.md
 
 # Install Claude Code skills
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/meeting-to-action
-npx claudient add skill small-business/monday-brief
-npx claudient add skill productivity/investor-update
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/vendor-evaluator
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/meeting-to-action
+npx uitkit add skill small-business/monday-brief
+npx uitkit add skill productivity/investor-update
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/vendor-evaluator
 
 # Install slash commands
-npx claudient add command meeting-brief
-npx claudient add command travel-plan
-npx claudient add command follow-up-tracker
-npx claudient add command board-prep
-npx claudient add command weekly-brief
-npx claudient add command stakeholder-email
-npx claudient add command expense-report
+npx uitkit add command meeting-brief
+npx uitkit add command travel-plan
+npx uitkit add command follow-up-tracker
+npx uitkit add command board-prep
+npx uitkit add command weekly-brief
+npx uitkit add command stakeholder-email
+npx uitkit add command expense-report
 ```
 
 ## Modèle CLAUDE.md
@@ -389,15 +389,15 @@ briefings, e-mails et listes de suivi qui reflètent les relations réelles et l
 ## Compétences à installer
 
 ```bash
-npx claudient add skill productivity/exec-briefing
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/meeting-to-action
-npx claudient add skill small-business/monday-brief
-npx claudient add skill productivity/investor-update
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/vendor-evaluator
-npx claudient add skill productivity/lesson-planner
-npx claudient add skill productivity/doc-site-builder
+npx uitkit add skill productivity/exec-briefing
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/meeting-to-action
+npx uitkit add skill small-business/monday-brief
+npx uitkit add skill productivity/investor-update
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/vendor-evaluator
+npx uitkit add skill productivity/lesson-planner
+npx uitkit add skill productivity/doc-site-builder
 ```
 
 ## Ressources associées

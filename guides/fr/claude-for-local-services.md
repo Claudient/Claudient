@@ -14,7 +14,7 @@ Les businesses de services locaux partagent trois faits opérationnels qui chang
 2. **Les avis sont existentiels.** Un propriétaire de salon dont la note Google chute de 4.7 à 4.4 perd 20% des réservations de nouveaux clients. La réponse aux avis n'est pas une sympathie marketing — c'est des opérations essentielles.
 3. **La plupart des propriétaires sont d'abord des opérateurs de terrain.** Le propriétaire est sur un site de travail, dans un fauteuil, derrière un comptoir. Ils ouvrent leur téléphone, pas un laptop. Les workflows doivent être exécutables en 5 minutes depuis un téléphone.
 
-L'ensemble de skills petite-entreprise de Claudient est construit autour de ces trois faits.
+L'ensemble de skills petite-entreprise de UitKit est construit autour de ces trois faits.
 
 ---
 
@@ -162,7 +162,7 @@ Pour l'automatisation des workflows liée à vos données de business réel, oui
 
 ### Et si je ne suis pas technique du tout ?
 
-Les workflows Claude for Small Business sont point-et-clic. Les skills Claudient dans ce repo sont activés en tapant des instructions en anglais simple à Claude. L'étape technique la plus difficile est de connecter QuickBooks via OAuth, ce qui est un processus 3-clic.
+Les workflows Claude for Small Business sont point-et-clic. Les skills UitKit dans ce repo sont activés en tapant des instructions en anglais simple à Claude. L'étape technique la plus difficile est de connecter QuickBooks via OAuth, ce qui est un processus 3-clic.
 
 ---
 

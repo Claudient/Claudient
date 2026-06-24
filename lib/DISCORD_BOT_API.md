@@ -1,6 +1,6 @@
-# Claudient Discord Bot — API Reference
+# UitKit Discord Bot — API Reference
 
-Complete API documentation for the Claudient Discord bot. All endpoints are Discord slash commands.
+Complete API documentation for the UitKit Discord bot. All endpoints are Discord slash commands.
 
 ## Command Reference
 
@@ -8,7 +8,7 @@ Complete API documentation for the Claudient Discord bot. All endpoints are Disc
 
 #### /skill
 
-Search Claudient skills, agents, and features.
+Search UitKit skills, agents, and features.
 
 **Syntax:**
 ```
@@ -50,7 +50,7 @@ Search Claudient skills, agents, and features.
 │ Tier: Gold                       │
 │ ID: `category/skill-name`        │
 │                                  │
-│ Claudient Skills Library         │
+│ UitKit Skills Library         │
 │ 2026-06-22T14:30:00Z            │
 └──────────────────────────────────┘
 ```
@@ -143,7 +143,7 @@ Create a support thread for volunteer routing.
 
 #### /project submit
 
-Submit a Claudient-powered project to showcase channel.
+Submit a UitKit-powered project to showcase channel.
 
 **Syntax:**
 ```
@@ -176,7 +176,7 @@ Submit a Claudient-powered project to showcase channel.
 
 **Examples:**
 ```
-/project submit "AI Code Reviewer" "Automated code reviews using Claudient security-review skill" https://github.com/user/ai-code-reviewer
+/project submit "AI Code Reviewer" "Automated code reviews using UitKit security-review skill" https://github.com/user/ai-code-reviewer
 → Project posted to #project-showcase
 → Community can see and react
 
@@ -251,7 +251,7 @@ Broadcast feature announcement to community (moderators only).
 │ Status: Available Now            │
 │ Category: Enhancement            │
 │                                  │
-│ Claudient Updates                │
+│ UitKit Updates                │
 │ 2026-06-22T14:30:00Z            │
 └──────────────────────────────────┘
 ```
@@ -424,7 +424,7 @@ Manage community roles (volunteer, contributor).
     { name: "Tier", value: "Gold", inline: true },
     { name: "ID", value: "`ai-engineering/agent-construction`", inline: false }
   ],
-  footer: { text: "Claudient Skills Library" },
+  footer: { text: "UitKit Skills Library" },
   timestamp: "2026-06-22T14:30:00Z"
 }
 ```
@@ -452,7 +452,7 @@ All errors return messages like:
 ```
 
 Detailed errors logged to:
-- Bot console: `pm2 logs claudient-bot`
+- Bot console: `pm2 logs uitkit-bot`
 - Sentry (if configured)
 - Application logs
 

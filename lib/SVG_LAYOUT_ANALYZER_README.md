@@ -408,7 +408,7 @@ app.get('/api/layout-analysis', (req, res) => {
 
 ## License
 
-Part of the Claudient project (AGPL-3.0-or-later AND CC-BY-SA-4.0)
+Part of the UitKit project (AGPL-3.0-or-later AND CC-BY-SA-4.0)
 
 ## Related Modules
 

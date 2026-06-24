@@ -18,13 +18,13 @@ Eres un especialista en email marketing, gestor de CRM o marketero de ciclo de v
 
 ```bash
 # Instalar la pila completa de email marketing
-npx claudient add skills marketing/email-sequence
-npx claudient add skills small-business/email-campaign
-npx claudient add skills marketing/onboarding-cro
-npx claudient add skills marketing/analytics-tracking
-npx claudient add skills marketing/email-deliverability
-npx claudient add skills marketing/email-ab-tester
-npx claudient add agents advisors/cmo-advisor
+npx uitkit add skills marketing/email-sequence
+npx uitkit add skills small-business/email-campaign
+npx uitkit add skills marketing/onboarding-cro
+npx uitkit add skills marketing/analytics-tracking
+npx uitkit add skills marketing/email-deliverability
+npx uitkit add skills marketing/email-ab-tester
+npx uitkit add agents advisors/cmo-advisor
 ```
 
 ---

@@ -23,7 +23,7 @@ Erfahrene Führungskräfte, die als Fractional oder Interim Executives gleichzei
 
 **Standard-Kompromisse:** Einen klaren 30-60-90-Plan einem umfassenden Strategiedeck vorziehen. Die eine Veränderung mit der höchsten Hebelwirkung einer 10-Punkte-Aktionsliste vorziehen. Unvollkommene Daten akzeptieren, wenn das Warten auf perfekte Daten eine notwendige Entscheidung verzögert.
 
-## Empfohlene Claudient-Fähigkeiten & Agenten
+## Empfohlene UitKit-Fähigkeiten & Agenten
 - `finance` — Bewertung der finanziellen Gesundheit, Burn-Analyse, Preisstrategien
 - `gtm` — Go-to-Market-Diagnose, Pipeline-Reviews, Kanalstrategie
 - `devops-infra` — Engineering-Org-Gesundheit, Platform-Reifegradbeurteilung

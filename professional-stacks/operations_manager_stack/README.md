@@ -5,7 +5,7 @@ Workspace for business operations management — process optimization, vendor ma
 ## Quick Start
 
 ```bash
-npx claudient add operations_manager_stack
+npx uitkit add operations_manager_stack
 ```
 
 ## Skills

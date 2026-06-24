@@ -213,7 +213,7 @@ function buildCatalog() {
         hooks: hooksCount,
         mcp: mcpCount,
       },
-      install: `claudient-${stackId.replace(/_/g, '-')}`,
+      install: `uitkit-${stackId.replace(/_/g, '-')}`,
     }
 
     catalog.push(entry)

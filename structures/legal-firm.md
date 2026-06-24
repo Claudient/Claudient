@@ -191,11 +191,11 @@ touch .claude/commands/deadline-check.md
 touch .claude/commands/cite-check.md
 touch .claude/commands/client-update.md
 
-# Install relevant Claudient skills
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/vendor-evaluator
+# Install relevant UitKit skills
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/vendor-evaluator
 
 echo "Scaffold complete. Populate CLAUDE.md before first use."
 ```
@@ -394,20 +394,20 @@ Do not store closed matter documents in this workspace.
 
 ```bash
 # Document and process workflows
-npx claudient add skill productivity/process-mapper
-npx claudient add skill productivity/doc-site-builder
-npx claudient add skill productivity/stakeholder-comms
-npx claudient add skill productivity/vendor-evaluator
+npx uitkit add skill productivity/process-mapper
+npx uitkit add skill productivity/doc-site-builder
+npx uitkit add skill productivity/stakeholder-comms
+npx uitkit add skill productivity/vendor-evaluator
 
 # Research and analysis
-npx claudient add skill productivity/exec-briefing
+npx uitkit add skill productivity/exec-briefing
 
 # Client and business development
-npx claudient add skill productivity/comp-benchmarker
-npx claudient add skill productivity/investor-update
+npx uitkit add skill productivity/comp-benchmarker
+npx uitkit add skill productivity/investor-update
 
 # Billing and time management
-npx claudient add skill productivity/engineering-strategy
+npx uitkit add skill productivity/engineering-strategy
 ```
 
 ## Related

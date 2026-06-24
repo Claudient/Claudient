@@ -1,6 +1,6 @@
 # Contributor Onboarding System
 
-A comprehensive guided workflow for new Claudient contributors with mentorship matching and gamified swag rewards.
+A comprehensive guided workflow for new UitKit contributors with mentorship matching and gamified swag rewards.
 
 ## Features
 
@@ -45,7 +45,7 @@ A comprehensive guided workflow for new Claudient contributors with mentorship m
 ### Bronze Tier (1 contribution)
 - **Name**: Bronze Badge
 - **Rewards**:
-  - Claudient Sticker Pack (5x)
+  - UitKit Sticker Pack (5x)
   - Digital Certificate
 
 ### Silver Tier (5+ contributions)
@@ -147,7 +147,7 @@ Contributor state is saved to `.claude/contributor-state.json`:
       "name": "API Documentation Generator",
       "file": "/path/to/skills/api-docs-generator.md",
       "status": "submitted",
-      "prUrl": "https://github.com/UitbreidenOS/Claudient/pull/1234",
+      "prUrl": "https://github.com/UitbreidenOS/UitKit/pull/1234",
       "date": "2026-06-22T11:45:00.000Z"
     }
   ],
@@ -416,12 +416,12 @@ If mentors aren't appearing:
 
 - **Discord**: #contributors channel
 - **GitHub Discussions**: Questions and feedback
-- **Email**: contributors@claudient.com
+- **Email**: contributors@uitkit.com
 - **Office Hours**: Weekly Zoom session (Fridays 2pm EST)
 
 ## License
 
-This onboarding system is part of Claudient and licensed under:
+This onboarding system is part of UitKit and licensed under:
 - AGPL-3.0-or-later (code)
 - CC-BY-SA-4.0 (documentation)
 

@@ -1,12 +1,12 @@
 ---
 name: content-freshness
-description: "Wartungs-SLA, Aktualitätsschwellen und Frische-Verfahren für Claudient-Inhalte"
+description: "Wartungs-SLA, Aktualitätsschwellen und Frische-Verfahren für UitKit-Inhalte"
 updated: 2026-06-15
 ---
 
-# Claudient Content Freshness SLA
+# UitKit Content Freshness SLA
 
-Wartungsstandards und Verfahren zur Aufrechterhaltung aktueller und genauer Claudient-Inhalte. Diese Anleitung definiert Aktualitätsschwellen, was pro Inhaltstyp zu überprüfen ist, und den Frontmatter-Aktualisierungsprozess.
+Wartungsstandards und Verfahren zur Aufrechterhaltung aktueller und genauer UitKit-Inhalte. Diese Anleitung definiert Aktualitätsschwellen, was pro Inhaltstyp zu überprüfen ist, und den Frontmatter-Aktualisierungsprozess.
 
 ---
 
@@ -172,7 +172,7 @@ Beim Hinzufügen oder Ändern einer Datei:
 
 3. **Überprüfen Sie Links:**
    - Externe URLs in der Datei sollten nicht 404 sein
-   - Interne Links (zu anderen Dateien in Claudient) sollten existierende Dateien referenzieren
+   - Interne Links (zu anderen Dateien in UitKit) sollten existierende Dateien referenzieren
 
 4. **Commiten:**
    ```bash

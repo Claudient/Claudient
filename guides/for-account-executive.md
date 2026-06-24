@@ -18,20 +18,20 @@ You are an Account Executive (AE) managing a pipeline of mid-market or enterpris
 
 ```bash
 # Install all AE skills
-npx claudient add skills gtm
+npx uitkit add skills gtm
 
 # Or cherry-pick:
-npx claudient add skill gtm/deal-review
-npx claudient add skill gtm/champion-builder
-npx claudient add skill gtm/mutual-success-plan
-npx claudient add skill gtm/deal-desk
-npx claudient add skill gtm/rfp-responder
-npx claudient add skill gtm/commercial-forecaster
-npx claudient add skill gtm/crm-hygiene
-npx claudient add skill gtm/hubspot
-npx claudient add skill gtm/revenue-operations
-npx claudient add agents advisors/cro-advisor
-npx claudient add agents roles/competitive-analyst
+npx uitkit add skill gtm/deal-review
+npx uitkit add skill gtm/champion-builder
+npx uitkit add skill gtm/mutual-success-plan
+npx uitkit add skill gtm/deal-desk
+npx uitkit add skill gtm/rfp-responder
+npx uitkit add skill gtm/commercial-forecaster
+npx uitkit add skill gtm/crm-hygiene
+npx uitkit add skill gtm/hubspot
+npx uitkit add skill gtm/revenue-operations
+npx uitkit add agents advisors/cro-advisor
+npx uitkit add agents roles/competitive-analyst
 ```
 
 ---
@@ -204,7 +204,7 @@ For each stale deal: recommend action — update / deactivate / investigate.
 ## 30-day ramp plan (new AEs or joining a new segment)
 
 ### Week 1 — Setup and deal inventory
-- Install all GTM skills: `npx claudient add skills gtm`
+- Install all GTM skills: `npx uitkit add skills gtm`
 - Connect HubSpot via MCP (see tool integrations below)
 - Run `/deal-review` on every deal in your inherited pipeline — get a baseline MEDDPICC score
 - Run `/commercial-forecaster` on your full pipeline — identify which deals are real vs. stale

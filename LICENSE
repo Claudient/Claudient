@@ -1,8 +1,8 @@
-# Claudient — Dual License
+# UitKit — Dual License
 
 Copyright © 2026 Tushar Aggarwal · [Uitbreiden](https://uitbreiden.com/)
 
-Claudient is dual-licensed depending on the file type. This split keeps the
+UitKit is dual-licensed depending on the file type. This split keeps the
 knowledge base freely shareable while ensuring the software around it stays
 open over the network.
 
@@ -54,8 +54,8 @@ The full text of the CC-BY-SA-4.0 license is in [LICENSE-CONTENT](LICENSE-CONTEN
 
 - You may copy, redistribute, remix, transform, and build upon the content for
   any purpose, including commercially.
-- You must give appropriate credit to "Tushar Aggarwal / Uitbreiden / Claudient"
-  with a link to https://claudient.tools (or this repository).
+- You must give appropriate credit to "Tushar Aggarwal / Uitbreiden / UitKit"
+  with a link to https://uitkit.tools (or this repository).
 - If you remix or build upon the content, you must distribute your contributions
   under the same license.
 
@@ -65,7 +65,7 @@ The full text of the CC-BY-SA-4.0 license is in [LICENSE-CONTENT](LICENSE-CONTEN
 
 A pure AGPL repo would restrict downstream content reuse in ways that hurt the
 project's mission: an Anthropic employee, a community blogger, or a vendor
-should be able to quote a Claudient skill in their own documentation without
+should be able to quote a UitKit skill in their own documentation without
 having to release everything they ship under AGPL.
 
 A pure permissive license (MIT, Apache, CC-BY) would allow a commercial vendor
@@ -97,4 +97,4 @@ forward, everything is dual-licensed as described above.
 
 For attribution and contact, write to
 [hello@uitbreiden.com](mailto:hello@uitbreiden.com) or open an issue at
-https://github.com/UitbreidenOS/Claudient.
+https://github.com/UitbreidenOS/UitKit.

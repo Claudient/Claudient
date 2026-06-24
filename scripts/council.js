@@ -167,14 +167,14 @@ Available domains:
   sdr, devops, fullstack, founder, compliance, data_engineer, qa_testing, etc.
 
 Example:
-  npx claudient council sdr`);
+  npx uitkit council sdr`);
     process.exit(1);
   }
 
   const stackName = findStack(query);
   if (!stackName) {
     console.error(`Error: Could not find domain stack matching "${query}".
-Run ${BOLD}npx claudient list structures${RESET} to view all available workspaces.`);
+Run ${BOLD}npx uitkit list structures${RESET} to view all available workspaces.`);
     process.exit(1);
   }
 

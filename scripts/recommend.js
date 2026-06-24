@@ -2,7 +2,7 @@
 
 /**
  * recommend.js
- * Scans a project directory and recommends Claudient skills, hooks, and MCP servers.
+ * Scans a project directory and recommends UitKit skills, hooks, and MCP servers.
  *
  * Usage: node scripts/recommend.js [path]
  *   path — defaults to current working directory
@@ -482,8 +482,8 @@ function recommend(projectDir) {
   if (detected.length === 0) {
     console.log('\nNo technology signals detected.')
     console.log('Try running from a project root with package.json, requirements.txt, etc.\n')
-    console.log('Browse all skills: npx claudient list skills')
-    console.log('Browse all structures: npx claudient list structures\n')
+    console.log('Browse all skills: npx uitkit list skills')
+    console.log('Browse all structures: npx uitkit list structures\n')
     return
   }
 
@@ -499,7 +499,7 @@ function recommend(projectDir) {
       const exists = fs.existsSync(skillPath)
       const status = exists ? '' : ' (not found)'
       console.log(`    + ${skill}${status}`)
-      console.log(`      npx claudient add skills ${skill.split('/')[0]}`)
+      console.log(`      npx uitkit add skills ${skill.split('/')[0]}`)
     }
   }
 
@@ -509,7 +509,7 @@ function recommend(projectDir) {
     for (const hook of allHooks) {
       console.log(`    + ${hook}`)
     }
-    console.log(`\n    Install all hooks: npx claudient add hooks`)
+    console.log(`\n    Install all hooks: npx uitkit add hooks`)
   }
 
   // MCP servers
@@ -523,8 +523,8 @@ function recommend(projectDir) {
 
   // Summary
   console.log(`\n${'─'.repeat(60)}`)
-  console.log(`\n  Quick install:  npx claudient add all`)
-  console.log(`  Browse skills:  npx claudient list skills\n`)
+  console.log(`\n  Quick install:  npx uitkit add all`)
+  console.log(`  Browse skills:  npx uitkit list skills\n`)
 }
 
 // Allow both direct execution and import from cli.js

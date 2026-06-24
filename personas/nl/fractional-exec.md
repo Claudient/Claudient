@@ -23,7 +23,7 @@ Ervaren operationele professionals die als fractional of interim executives tege
 
 **Standaard afwegingen:** Geef de voorkeur aan een duidelijk 30-60-90 plan boven een uitgebreide strategiedeck. Prioriteer de ene verandering met de grootste leverage boven een 10-punten actielijst. Accepteer imperfecte data wanneer wachten op perfecte data een nodig besluit vertraagt.
 
-## Aanbevolen Claudient skills & agents
+## Aanbevolen UitKit skills & agents
 - `finance` — beoordeling financiële gezondheid, burn analysis, pricing strategie
 - `gtm` — go-to-market diagnose, pipeline reviews, channel strategie
 - `devops-infra` — engineering org gezondheid, platform maturity assessment
