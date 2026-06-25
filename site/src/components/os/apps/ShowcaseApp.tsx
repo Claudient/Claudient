@@ -883,37 +883,75 @@ export function ShowcaseApp() {
   const [selected, setSelected] = useState(FEATURES[0]);
   const [activeCat, setActiveCat] = useState<string | null>(null);
   const [blastSelectedId, setBlastSelectedId] = useState("src/utils/auth.ts");
+  const [expandedCats, setExpandedCats] = useState<Record<string, boolean>>({});
+
   const filtered = activeCat ? FEATURES.filter((f) => f.category === activeCat) : FEATURES;
   const blastNode = BLAST_GRAPH.nodes.find(n => n.id === blastSelectedId) || BLAST_GRAPH.nodes[0];
 
+  const handleToggleExpand = (catId: string) => {
+    setExpandedCats((prev) => ({
+      ...prev,
+      [catId]: !prev[catId]
+    }));
+  };
+
   return (
     <div className="flex h-full">
-      <div className="w-[220px] border-r border-hairline bg-cream/50 p-3 overflow-y-auto shrink-0">
+      <div className="w-[230px] border-r border-hairline bg-cream/50 p-3 overflow-y-auto shrink-0">
         <Eyebrow color="#f54e00">Showcase · {FEATURES.length} Features</Eyebrow>
         <div className="mt-3 space-y-3">
-          {CATEGORIES.map((cat) => (
-            <div key={cat.id}>
-              <button
-                onClick={() => setActiveCat(activeCat === cat.id ? null : cat.id)}
-                className={`w-full text-left flex items-center gap-1.5 rounded-md px-2 py-1.5 text-[11px] font-bold uppercase tracking-wider transition ${activeCat === cat.id ? "bg-white text-ink shadow-sm" : "text-mute hover:text-body"}`}
-              >
-                <span className="size-2 rounded-full shrink-0" style={{ backgroundColor: cat.color }} />
-                {cat.label}
-              </button>
-              <div className="ml-1 mt-0.5 space-y-0.5">
-                {FEATURES.filter((f) => f.category === cat.id).map((f) => (
-                  <button
-                    key={f.id}
-                    onClick={() => setSelected(f)}
-                    className={`w-full text-left rounded-md px-2 py-1.5 text-[11.5px] transition ${selected.id === f.id ? "bg-white font-bold text-ink shadow-sm" : "text-body hover:bg-white/50"}`}
-                  >
-                    <span className="mr-1">{f.icon}</span>{f.name}
-                  </button>
-                ))}
-                <a href="https://github.com/UitbreidenOS/UitKit" target="_blank" rel="noopener noreferrer" className="block w-full text-left rounded-md px-2 py-1 text-[10px] font-bold text-purple-600 hover:bg-white/50 transition mt-1">✨ Explore more on repo →</a>
+          {CATEGORIES.map((cat) => {
+            const allCatFeatures = FEATURES.filter((f) => f.category === cat.id);
+            const isExpanded = expandedCats[cat.id] || activeCat === cat.id;
+            // Limit to first 5 features if not expanded
+            const displayedFeatures = isExpanded ? allCatFeatures : allCatFeatures.slice(0, 5);
+            const hasMore = allCatFeatures.length > 5;
+
+            return (
+              <div key={cat.id} className="border-b border-hairline/30 pb-2 last:border-b-0">
+                <button
+                  onClick={() => setActiveCat(activeCat === cat.id ? null : cat.id)}
+                  className={`w-full text-left flex items-center justify-between rounded-md px-2 py-1.5 text-[11px] font-bold uppercase tracking-wider transition ${activeCat === cat.id ? "bg-white text-ink shadow-sm" : "text-mute hover:text-body"}`}
+                >
+                  <div className="flex items-center gap-1.5 truncate">
+                    <span className="size-2 rounded-full shrink-0" style={{ backgroundColor: cat.color }} />
+                    <span className="truncate">{cat.label}</span>
+                  </div>
+                  <span className="text-[10px] text-mute shrink-0 ml-1">({allCatFeatures.length})</span>
+                </button>
+                <div className="ml-1 mt-0.5 space-y-0.5">
+                  {displayedFeatures.map((f) => (
+                    <button
+                      key={f.id}
+                      onClick={() => setSelected(f)}
+                      className={`w-full text-left rounded-md px-2 py-1 text-[11.5px] transition ${selected.id === f.id ? "bg-white font-bold text-ink shadow-sm" : "text-body hover:bg-white/50"}`}
+                    >
+                      <span className="mr-1">{f.icon}</span>{f.name}
+                    </button>
+                  ))}
+                  {hasMore && !isExpanded && (
+                    <button
+                      onClick={() => handleToggleExpand(cat.id)}
+                      className="w-full text-left rounded-md px-2 py-0.5 text-[10px] font-bold text-blue-500 hover:text-blue-600 transition"
+                    >
+                      + {allCatFeatures.length - 5} more...
+                    </button>
+                  )}
+                  {hasMore && isExpanded && activeCat !== cat.id && (
+                    <button
+                      onClick={() => handleToggleExpand(cat.id)}
+                      className="w-full text-left rounded-md px-2 py-0.5 text-[10px] font-bold text-blue-500 hover:text-blue-600 transition"
+                    >
+                      Show less
+                    </button>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
+          <div className="pt-2">
+            <a href="https://github.com/UitbreidenOS/UitKit" target="_blank" rel="noopener noreferrer" className="block w-full text-center rounded-md px-2 py-1.5 text-[10.5px] font-bold text-purple-600 bg-purple-50 hover:bg-purple-100 transition">✨ Explore all on GitHub →</a>
+          </div>
         </div>
       </div>
       <div className="flex-1 p-5 overflow-y-auto">
