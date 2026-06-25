@@ -239,6 +239,13 @@ export const APPS: Record<AppId, AppMeta> = {
     accent: "#a855f7",
     defaultSize: { width: 620, height: 480 },
   },
+  "token-saver": {
+    id: "token-saver",
+    title: "Token Saver Dashboard",
+    icon: "💰",
+    accent: "#10b981",
+    defaultSize: { width: 740, height: 540 },
+  },
 };
 
 export const DESKTOP_ICONS: AppId[] = [
@@ -275,5 +282,6 @@ export const DESKTOP_ICONS: AppId[] = [
   "oracle",
   "learn-eng",
   "jarvis",
+  "token-saver",
   "trash",
 ];

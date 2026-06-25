@@ -34,6 +34,7 @@ import { KanbanApp } from "./apps/KanbanApp";
 import { OracleApp } from "./apps/OracleApp";
 import { LearnEngineApp } from "./apps/LearnEngineApp";
 import { JarvisApp } from "./apps/JarvisApp";
+import { TokenSaverApp } from "./apps/TokenSaverApp";
 
 export function AppContent({ appId, wm }: { appId: AppId; wm: WindowManager }) {
   switch (appId) {
@@ -106,6 +107,8 @@ export function AppContent({ appId, wm }: { appId: AppId; wm: WindowManager }) {
       return <LearnEngineApp />;
     case "jarvis":
       return <JarvisApp />;
+    case "token-saver":
+      return <TokenSaverApp />;
     default:
       return null;
   }

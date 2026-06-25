@@ -32,7 +32,8 @@ export type AppId =
   | "kanban"
   | "oracle"
   | "learn-eng"
-  | "jarvis";
+  | "jarvis"
+  | "token-saver";
 
 export interface AppMeta {
   id: AppId;
