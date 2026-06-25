@@ -33,6 +33,7 @@ import { GoalModeApp } from "./apps/GoalModeApp";
 import { KanbanApp } from "./apps/KanbanApp";
 import { OracleApp } from "./apps/OracleApp";
 import { LearnEngineApp } from "./apps/LearnEngineApp";
+import { JarvisApp } from "./apps/JarvisApp";
 
 export function AppContent({ appId, wm }: { appId: AppId; wm: WindowManager }) {
   switch (appId) {
@@ -103,6 +104,8 @@ export function AppContent({ appId, wm }: { appId: AppId; wm: WindowManager }) {
       return <OracleApp />;
     case "learn-eng":
       return <LearnEngineApp />;
+    case "jarvis":
+      return <JarvisApp />;
     default:
       return null;
   }

@@ -31,7 +31,8 @@ export type AppId =
   | "goals"
   | "kanban"
   | "oracle"
-  | "learn-eng";
+  | "learn-eng"
+  | "jarvis";
 
 export interface AppMeta {
   id: AppId;

@@ -232,6 +232,13 @@ export const APPS: Record<AppId, AppMeta> = {
     accent: "#6366f1",
     defaultSize: { width: 840, height: 580 },
   },
+  "jarvis": {
+    id: "jarvis",
+    title: "Jarvis Assistant",
+    icon: "🗣️",
+    accent: "#a855f7",
+    defaultSize: { width: 620, height: 480 },
+  },
 };
 
 export const DESKTOP_ICONS: AppId[] = [
@@ -267,5 +274,6 @@ export const DESKTOP_ICONS: AppId[] = [
   "kanban",
   "oracle",
   "learn-eng",
+  "jarvis",
   "trash",
 ];
