@@ -190,6 +190,13 @@ export const APPS: Record<AppId, AppMeta> = {
     accent: "#a855f7",
     defaultSize: { width: 920, height: 640 },
   },
+  "sidekick-settings": {
+    id: "sidekick-settings",
+    title: "Sidekick Settings",
+    icon: "🐾",
+    accent: "#10b981",
+    defaultSize: { width: 560, height: 520 },
+  },
 };
 
 export const DESKTOP_ICONS: AppId[] = [
@@ -219,5 +226,6 @@ export const DESKTOP_ICONS: AppId[] = [
   "toolkit",
   "install",
   "about",
+  "sidekick-settings",
   "trash",
 ];

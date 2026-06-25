@@ -27,6 +27,7 @@ import { MarketplaceApp } from "./apps/MarketplaceApp";
 import { ExamplesApp } from "./apps/ExamplesApp";
 import { FeatureFlagsApp } from "./apps/FeatureFlagsApp";
 import { GraphApp } from "./apps/GraphApp";
+import { SidekickSettingsApp } from "./apps/SidekickSettingsApp";
 
 export function AppContent({ appId, wm }: { appId: AppId; wm: WindowManager }) {
   switch (appId) {
@@ -85,6 +86,8 @@ export function AppContent({ appId, wm }: { appId: AppId; wm: WindowManager }) {
       return <ExamplesApp />;
     case "feature-flags":
       return <FeatureFlagsApp />;
+    case "sidekick-settings":
+      return <SidekickSettingsApp />;
     default:
       return null;
   }

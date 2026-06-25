@@ -4,6 +4,7 @@ import { Desktop } from "./Desktop";
 import { MenuBar } from "./MenuBar";
 import { Taskbar } from "./Taskbar";
 import { Window } from "./Window";
+import { SidekickPet } from "./SidekickPet";
 
 export default function UitKitOS() {
   const wm = useWindows();
@@ -40,6 +41,8 @@ export default function UitKitOS() {
             </div>
           </div>
         )}
+
+        <SidekickPet wm={wm} />
 
         <Taskbar wm={wm} topKey={topKey} />
 
