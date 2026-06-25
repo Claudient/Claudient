@@ -40,6 +40,7 @@ import { CleanSlateApp } from "./apps/CleanSlateApp";
 import { TakeoverApp } from "./apps/TakeoverApp";
 import { LeadGenApp } from "./apps/LeadGenApp";
 import { SearchConsoleApp } from "./apps/SearchConsoleApp";
+import { StudiosApp } from "./apps/StudiosApp";
 
 export function AppContent({ appId, wm }: { appId: AppId; wm: WindowManager }) {
   switch (appId) {
@@ -124,6 +125,8 @@ export function AppContent({ appId, wm }: { appId: AppId; wm: WindowManager }) {
       return <LeadGenApp />;
     case "search-console":
       return <SearchConsoleApp />;
+    case "studios":
+      return <StudiosApp />;
     default:
       return null;
   }

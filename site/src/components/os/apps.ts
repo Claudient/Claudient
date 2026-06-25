@@ -281,6 +281,13 @@ export const APPS: Record<AppId, AppMeta> = {
     accent: "#f59e0b",
     defaultSize: { width: 860, height: 600 },
   },
+  "studios": {
+    id: "studios",
+    title: "Creative Studios",
+    icon: "🎵",
+    accent: "#ec4899",
+    defaultSize: { width: 840, height: 580 },
+  },
 };
 
 export const DESKTOP_ICONS: AppId[] = [
@@ -323,5 +330,6 @@ export const DESKTOP_ICONS: AppId[] = [
   "takeover",
   "lead-gen",
   "search-console",
+  "studios",
   "trash",
 ];
