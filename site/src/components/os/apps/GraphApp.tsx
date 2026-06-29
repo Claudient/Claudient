@@ -27,7 +27,35 @@ interface Star {
   brightness: number;
 }
 
+const AST_DATA = {
+  nodes: [
+    { id: "App.tsx", label: "App.tsx", type: "core" as const, description: "Root application entry point, mounts layout and window manager states.", group: "Core" },
+    { id: "Desktop.tsx", label: "Desktop.tsx", type: "core" as const, description: "Orchestrates desktop icon grids, wallpapers, and active tasks mapping.", group: "Core" },
+    { id: "AppContent.tsx", label: "AppContent.tsx", type: "core" as const, description: "Resolves workspace app IDs to individual React component files.", group: "Core" },
+    { id: "apps.ts", label: "apps.ts", type: "skill" as const, description: "Registry metadata file defining window sizes, icons, accents.", group: "Data" },
+    { id: "ui.tsx", label: "ui.tsx", type: "skill" as const, description: "Shared CSS styling utilities, tags, buttons, and eyebrow header primitives.", group: "UI" },
+    { id: "ShowcaseApp.tsx", label: "ShowcaseApp.tsx", type: "agent" as const, description: "Loads features catalog dynamically from external showcase_features.json data stores.", group: "Apps" },
+    { id: "GuidesApp.tsx", label: "GuidesApp.tsx", type: "agent" as const, description: "Displays markdown guides dynamically loaded from guides.json data file.", group: "Apps" },
+    { id: "McpApp.tsx", label: "McpApp.tsx", type: "agent" as const, description: "Visual config form mapping parameters and exporting Copyable JSON configurations.", group: "Apps" },
+    { id: "HooksApp.tsx", label: "HooksApp.tsx", type: "agent" as const, description: "Renders lifecycle hooks list and triggers the simulation console logic.", group: "Apps" }
+  ],
+  links: [
+    { source: "App.tsx", target: "Desktop.tsx", type: "import" },
+    { source: "Desktop.tsx", target: "AppContent.tsx", type: "import" },
+    { source: "Desktop.tsx", target: "apps.ts", type: "import" },
+    { source: "AppContent.tsx", target: "ShowcaseApp.tsx", type: "import" },
+    { source: "AppContent.tsx", target: "GuidesApp.tsx", type: "import" },
+    { source: "AppContent.tsx", target: "McpApp.tsx", type: "import" },
+    { source: "AppContent.tsx", target: "HooksApp.tsx", type: "import" },
+    { source: "ShowcaseApp.tsx", target: "ui.tsx", type: "import" },
+    { source: "GuidesApp.tsx", target: "ui.tsx", type: "import" },
+    { source: "McpApp.tsx", target: "ui.tsx", type: "import" },
+    { source: "HooksApp.tsx", target: "ui.tsx", type: "import" }
+  ]
+};
+
 export function GraphApp() {
+  const [graphMode, setGraphMode] = useState<"memory" | "ast">("memory");
   const [search, setSearch] = useState("");
   const [selectedNode, setSelectedNode] = useState<Node | null>(null);
   const [physicsEnabled, setPhysicsEnabled] = useState(true);
@@ -40,10 +68,18 @@ export function GraphApp() {
   const animationFrameRef = useRef<number | null>(null);
   const starsRef = useRef<Star[]>([]);
 
-  // Parse nodes and links
+  // Parse nodes and links based on active graphMode
   const { nodes, links, nodeMap } = useMemo(() => {
-    const rawNodes = (graphData as any).nodes || [];
-    const rawLinks = (graphData as any).links || [];
+    let rawNodes: any[] = [];
+    let rawLinks: any[] = [];
+
+    if (graphMode === "ast") {
+      rawNodes = AST_DATA.nodes;
+      rawLinks = AST_DATA.links;
+    } else {
+      rawNodes = (graphData as any).nodes || [];
+      rawLinks = (graphData as any).links || [];
+    }
 
     const nodesCopy: Node[] = rawNodes.map((n: any) => ({
       ...n,
@@ -53,19 +89,21 @@ export function GraphApp() {
       vy: 0,
     }));
 
-    // Inject central core brain node representing Shared Memory Galaxy
-    const coreNode: Node = {
-      id: "shared-brain",
-      label: "🧠 Collective Shared Brain",
-      type: "core",
-      description: "The primary workspace repository containing all agent memories, cross-project learned rules, and real-time environment status. All agents read from and feed back into this collective memory.",
-      group: "core",
-      x: 0,
-      y: 0,
-      vx: 0,
-      vy: 0
-    };
-    nodesCopy.push(coreNode);
+    if (graphMode === "memory") {
+      // Inject central core brain node representing Shared Memory Galaxy
+      const coreNode: Node = {
+        id: "shared-brain",
+        label: "🧠 Collective Shared Brain",
+        type: "core",
+        description: "The primary workspace repository containing all agent memories, cross-project learned rules, and real-time environment status. All agents read from and feed back into this collective memory.",
+        group: "core",
+        x: 0,
+        y: 0,
+        vx: 0,
+        vy: 0
+      };
+      nodesCopy.push(coreNode);
+    }
 
     const map = new Map<string, Node>();
     nodesCopy.forEach((n) => map.set(n.id, n));
@@ -74,19 +112,26 @@ export function GraphApp() {
       (l: any) => map.has(l.source) && map.has(l.target)
     ).map(l => ({ source: l.source, target: l.target, type: l.type }));
 
-    // Link every agent to the core brain to visually map the "shared brain"
-    nodesCopy.forEach((n) => {
-      if (n.type === "agent" && n.id !== "shared-brain") {
-        validLinks.push({
-          source: n.id,
-          target: "shared-brain",
-          type: "memory-access"
-        });
-      }
-    });
+    if (graphMode === "memory") {
+      // Link every agent to the core brain to visually map the "shared brain"
+      nodesCopy.forEach((n) => {
+        if (n.type === "agent" && n.id !== "shared-brain") {
+          validLinks.push({
+            source: n.id,
+            target: "shared-brain",
+            type: "memory-access"
+          });
+        }
+      });
+    }
 
     return { nodes: nodesCopy, links: validLinks, nodeMap: map };
-  }, []);
+  }, [graphMode]);
+
+  // Reset selected node on mode switch
+  useEffect(() => {
+    setSelectedNode(null);
+  }, [graphMode]);
 
   // Pan and zoom state
   const transformRef = useRef({ x: 0, y: 0, scale: 0.5 });
@@ -473,14 +518,42 @@ export function GraphApp() {
     <div className="h-full flex flex-col md:flex-row bg-[#080a0f] text-gray-200">
       {/* Sidebar Controls and Details */}
       <aside className="md:w-80 shrink-0 border-r border-[#151722] bg-[#0c0d14] flex flex-col overflow-hidden">
+        {/* Graph Mode Selection Tabs */}
+        <div className="flex border-b border-[#151722]">
+          <button
+            onClick={() => setGraphMode("memory")}
+            className={`flex-1 py-3 text-[11px] font-bold uppercase tracking-wider text-center transition ${
+              graphMode === "memory"
+                ? "bg-[#10b981]/10 text-emerald-400 border-b-2 border-emerald-500"
+                : "text-gray-400 hover:text-white"
+            }`}
+          >
+            🧠 Memory Galaxy
+          </button>
+          <button
+            onClick={() => setGraphMode("ast")}
+            className={`flex-1 py-3 text-[11px] font-bold uppercase tracking-wider text-center transition ${
+              graphMode === "ast"
+                ? "bg-[#06b6d4]/10 text-cyan-400 border-b-2 border-cyan-500"
+                : "text-gray-400 hover:text-white"
+            }`}
+          >
+            🕸️ AST Import Map
+          </button>
+        </div>
+
         {/* Title */}
         <div className="p-4 border-b border-[#151722]">
-          <Eyebrow color="#10b981">Shared Knowledge Network</Eyebrow>
-          <h2 className="text-lg font-bold text-white mt-1">🧠 Memory Galaxy</h2>
+          <Eyebrow color={graphMode === "memory" ? "#10b981" : "#06b6d4"}>
+            {graphMode === "memory" ? "Shared Knowledge Network" : "Code Dependency Tracer"}
+          </Eyebrow>
+          <h2 className="text-lg font-bold text-white mt-1">
+            {graphMode === "memory" ? "Memory Galaxy Nodes" : "AST Dependency Map"}
+          </h2>
           <div className="mt-2 text-xs text-gray-400 space-y-1">
-            <div>Galaxy Core: <span className="text-emerald-400 font-semibold">1 Collective Mind</span></div>
-            <div>Connected Nodes: <span className="text-purple-400 font-semibold">{stats.totalNodes}</span> (Agents: {stats.agents}, Skills: {stats.skills})</div>
-            <div>Knowledge Lines: <span className="text-cyan-400 font-semibold">{stats.totalLinks}</span></div>
+            <div>Galaxy Core: <span className={graphMode === "memory" ? "text-emerald-400 font-semibold" : "text-cyan-400 font-semibold"}>{graphMode === "memory" ? "1 Collective Mind" : "UitKit Project Root"}</span></div>
+            <div>Connected Nodes: <span className="text-purple-400 font-semibold">{stats.totalNodes}</span> ({graphMode === "memory" ? `Agents: ${stats.agents}, Skills: ${stats.skills}` : "Components"})</div>
+            <div>{graphMode === "memory" ? "Knowledge Lines" : "Static Import Paths"}: <span className="text-cyan-400 font-semibold">{stats.totalLinks}</span></div>
           </div>
         </div>
 

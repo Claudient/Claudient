@@ -85,23 +85,73 @@ export function HooksApp() {
   const filtered = filter === "All" ? HOOKS : HOOKS.filter((h) => h.event === filter);
   const eventCounts = events.map((e) => ({ name: e, count: e === "All" ? HOOKS.length : HOOKS.filter((h) => h.event === e).length }));
 
+  const [simScenario, setSimScenario] = useState("lint");
+  const [simLogs, setSimLogs] = useState<string[]>([]);
+  const [simulating, setSimulating] = useState(false);
+
+  const runSimulation = () => {
+    if (simulating) return;
+    setSimulating(true);
+    setSimLogs(["[System] Initializing Hook Interceptor..."]);
+
+    const steps = {
+      lint: [
+        "⏳ [PreToolUse] Intercepted file write action on 'src/utils/auth.ts'",
+        "🔍 Running Lint Check hook: eslint src/utils/auth.ts",
+        "❌ Lint error detected: L14 'jwt' is defined but never used.",
+        "🛠️ Injecting auto-fix suggestion to active agent session...",
+        "✏️ Agent auto-corrected imports. Re-running lint...",
+        "✅ Lint verification passed successfully! Write operation approved."
+      ],
+      test: [
+        "⏳ [PreToolUse] Intercepted git commit request...",
+        "🏃 Running TDD Hook: npm run test -- --findRelatedTests src/utils/auth.ts",
+        "❌ Test failure in auth.test.ts: 'AuthService handles tokens' expected 'valid' got 'undefined'",
+        "🚫 Git commit blocked. Diagnostic data loaded in active session context.",
+        "🩹 Agent corrected null token handling. Re-running tests...",
+        "✅ All tests green! Git commit proceeded to checkout."
+      ],
+      format: [
+        "⏳ [PostToolUse] Intercepted file write action on 'src/components/Dashboard.tsx'",
+        "💅 Running Prettier hook: prettier --write src/components/Dashboard.tsx",
+        "✨ Formatted file contents (fixed 4 indentation markers, added 1 semi)",
+        "💾 File system synchronized. Proceeding with execution task."
+      ]
+    }[simScenario] || [];
+
+    let currentStep = 0;
+    const interval = setInterval(() => {
+      if (currentStep < steps.length) {
+        setSimLogs((prev) => [...prev, steps[currentStep]]);
+        currentStep++;
+      } else {
+        setSimLogs((prev) => [...prev, "[System] Simulation completed successfully."]);
+        clearInterval(interval);
+        setSimulating(false);
+      }
+    }, 900);
+  };
+
   return (
-    <div className="flex h-full">
-      <div className="w-[180px] border-r border-hairline bg-cream/50 p-3 overflow-y-auto shrink-0">
-        <Eyebrow>Event Type</Eyebrow>
-        <div className="mt-3 space-y-0.5">
+    <div className="flex h-full flex-col lg:flex-row overflow-hidden">
+      {/* Event Filters sidebar */}
+      <div className="w-full lg:w-[180px] border-r border-hairline bg-cream/50 p-3 overflow-y-auto shrink-0 flex lg:flex-col gap-2 lg:gap-0">
+        <div className="hidden lg:block">
+          <Eyebrow>Event Type</Eyebrow>
+        </div>
+        <div className="mt-3 lg:space-y-0.5 flex flex-wrap lg:flex-col gap-1 lg:gap-0 flex-1">
           {eventCounts.map((e) => (
             <button
               key={e.name}
               onClick={() => setFilter(e.name)}
-              className={`w-full text-left rounded-md px-2.5 py-1.5 text-[12px] flex items-center justify-between transition ${filter === e.name ? "bg-white font-bold text-ink shadow-sm" : "text-body hover:bg-white/50"}`}
+              className={`text-left rounded-md px-2.5 py-1.5 text-[12px] flex items-center justify-between transition ${filter === e.name ? "bg-white font-bold text-ink shadow-sm border border-hairline/50" : "text-body hover:bg-white/50"}`}
             >
               <span>{e.name}</span>
-              <span className="text-[10px] text-mute font-mono">{e.count}</span>
+              <span className="text-[10px] text-mute font-mono ml-2">{e.count}</span>
             </button>
           ))}
         </div>
-        <div className="mt-4 rounded-lg bg-code-bg text-[11px] text-code-text p-3 font-mono leading-relaxed">
+        <div className="hidden lg:block mt-4 rounded-lg bg-code-bg text-[11px] text-code-text p-3 font-mono leading-relaxed">
           <div className="text-brand-yellow">~/.claude/settings.json</div>
           <div className="mt-1 text-mute">{"{"}</div>
           <div className="pl-2">"hooks": {"{"}</div>
@@ -110,7 +160,9 @@ export function HooksApp() {
           <div className="text-mute">{"}"}</div>
         </div>
       </div>
-      <div className="flex-1 p-4 overflow-y-auto">
+
+      {/* Main List Column */}
+      <div className="flex-1 p-4 overflow-y-auto min-w-0 border-r border-hairline">
         <div className="flex items-center justify-between mb-4">
           <div>
             <Eyebrow color="#1078a3">Hooks System</Eyebrow>
@@ -129,6 +181,49 @@ export function HooksApp() {
               <p className="mt-1 text-[12px] text-mute leading-relaxed">{h.desc}</p>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Simulation Console Column */}
+      <div className="w-full lg:w-80 shrink-0 p-4 bg-cream/20 flex flex-col justify-between overflow-y-auto">
+        <div className="space-y-4">
+          <Eyebrow color="#b62ad9">Hook Interceptor Simulator</Eyebrow>
+          <div className="space-y-2">
+            <label className="text-[11px] font-bold text-mute uppercase tracking-wider block">Scenario</label>
+            <select
+              value={simScenario}
+              onChange={(e) => setSimScenario(e.target.value)}
+              disabled={simulating}
+              className="w-full text-[12px] border border-hairline rounded-lg px-2.5 py-1.5 bg-white focus:outline-none focus:ring-1 focus:ring-brand-blue"
+            >
+              <option value="lint">Lint Failure on Write File</option>
+              <option value="test">Vitest Failure on Pre-Commit</option>
+              <option value="format">Prettier Autoformat on Post-Write</option>
+            </select>
+          </div>
+
+          <button
+            onClick={runSimulation}
+            disabled={simulating}
+            className={`w-full py-2 rounded-lg text-white font-bold text-[12.5px] transition ${simulating ? "bg-zinc-400 cursor-not-allowed" : "bg-brand-blue hover:bg-brand-blue/90"}`}
+          >
+            {simulating ? "Simulating..." : "Run Hook Intercept"}
+          </button>
+
+          <div className="space-y-2">
+            <label className="text-[11px] font-bold text-mute uppercase tracking-wider block">Simulator Log Output</label>
+            <div className="rounded-xl bg-code-bg p-3 border border-hairline font-mono text-[11px] text-code-text h-[250px] overflow-y-auto space-y-1.5">
+              {simLogs.length === 0 ? (
+                <span className="text-mute/60 italic">Select a scenario and click run to start the hook simulation logs...</span>
+              ) : (
+                simLogs.map((log, i) => (
+                  <div key={i} className={log.startsWith("❌") ? "text-red-400" : log.startsWith("✅") ? "text-green-400" : ""}>
+                    {log}
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -18,6 +18,8 @@ export function TokenSaverApp() {
   const [inputTokens, setInputTokens] = useState<number>(80000);
   const [outputTokens, setOutputTokens] = useState<number>(12000);
   const [runsPerDay, setRunsPerDay] = useState<number>(30);
+  const [estimatedSavings, setEstimatedSavings] = useState<number>(0);
+  const [generatedIgnore, setGeneratedIgnore] = useState<string>("");
 
   // Calculations
   const rawInputCost = (inputTokens / 1000000) * selectedModel.inputCost;
@@ -102,6 +104,46 @@ export function TokenSaverApp() {
           <p className="text-[11.5px] text-emerald-600 mt-1 leading-normal">
             Based on a 45% context compression rate using standard `Token Saver` rules.
           </p>
+        </Card>
+
+        {/* Interactive Bloat Scanner */}
+        <Card className="bg-zinc-50 border-hairline flex flex-col gap-2">
+          <h3 className="text-[12px] font-bold text-ink flex items-center gap-1.5">
+            <span>🔍</span> Directory Bloat Scanner
+          </h3>
+          <p className="text-[11px] text-mute leading-normal">
+            Paste paths (e.g. `node_modules/` or `dist/`) to analyze token overhead and generate ignore templates.
+          </p>
+          <textarea
+            rows={3}
+            placeholder="node_modules/&#10;dist/&#10;package-lock.json"
+            className="w-full text-[11px] font-mono border border-hairline rounded-lg p-2 focus:outline-none focus:border-emerald-500 bg-white"
+            onChange={(e) => {
+              const lines = e.target.value.split('\n').filter(Boolean);
+              let savings = 0;
+              const ignores: string[] = ["# Auto-Generated Ignore List"];
+              lines.forEach(l => {
+                const clean = l.trim();
+                if (clean.includes("node_modules")) { savings += 1400000; ignores.push("node_modules/"); }
+                else if (clean.includes("dist") || clean.includes("build")) { savings += 800000; ignores.push("dist/"); }
+                else if (clean.includes("lock")) { savings += 180000; ignores.push("*-lock.*"); }
+                else if (clean) { savings += 15000; ignores.push(clean); }
+              });
+              setEstimatedSavings(savings);
+              setGeneratedIgnore(ignores.join('\n'));
+            }}
+          />
+          {estimatedSavings > 0 && (
+            <div className="mt-1 space-y-2">
+              <div className="text-[11px] font-semibold text-emerald-700">
+                ⚡ Est. Overhead Savings: {estimatedSavings.toLocaleString()} tokens
+              </div>
+              <div className="text-[10px] font-bold text-mute uppercase font-mono mt-1">Recommended .claudeignore</div>
+              <pre className="text-[10px] font-mono bg-white border border-hairline rounded p-2 overflow-x-auto max-h-[100px] text-ink leading-relaxed">
+                <code>{generatedIgnore}</code>
+              </pre>
+            </div>
+          )}
         </Card>
       </div>
 

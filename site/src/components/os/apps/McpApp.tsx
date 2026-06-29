@@ -191,10 +191,20 @@ const configs: McpDef[] = [
 
 const categories = [...new Set(configs.map((c) => c.category))];
 
+const SERVER_ENV_FIELDS: Record<string, string[]> = {
+  github: ["GITHUB_PERSONAL_ACCESS_TOKEN"],
+  postgres: ["POSTGRES_CONNECTION_STRING"],
+  supabase: ["SUPABASE_URL", "SUPABASE_SERVICE_ROLE_KEY"],
+  slack: ["SLACK_BOT_TOKEN", "SLACK_APP_TOKEN"],
+  linear: ["LINEAR_API_KEY"],
+  jira: ["JIRA_URL", "JIRA_API_TOKEN", "JIRA_USER_EMAIL"]
+};
+
 export function McpApp() {
   const [active, setActive] = useState(0);
   const [copied, setCopied] = useState(false);
   const [query, setQuery] = useState("");
+  const [envVars, setEnvVars] = useState<Record<string, string>>({});
 
   const filtered = useMemo(() => {
     if (!query.trim()) return configs;
@@ -205,17 +215,42 @@ export function McpApp() {
   }, [query]);
 
   const cfg = filtered[active] ?? filtered[0];
-  if (!cfg) return <div className="p-6 text-mute text-sm">No MCP configs found.</div>;
+
+  const requiredFields = cfg ? (SERVER_ENV_FIELDS[cfg.id] || []) : [];
+
+  const getEnvConfig = () => {
+    if (requiredFields.length === 0) return undefined;
+    const env: Record<string, string> = {};
+    requiredFields.forEach((field) => {
+      env[field] = envVars[field] || `YOUR_${field}_HERE`;
+    });
+    return env;
+  };
+
+  const getFullConfigJson = () => {
+    if (!cfg) return "";
+    const env = getEnvConfig();
+    const serverConfig: any = {
+      command: "npx",
+      args: ["-y", cfg.install.replace("npx -y ", "")]
+    };
+    if (env) {
+      serverConfig.env = env;
+    }
+    return JSON.stringify({ mcpServers: { [cfg.id]: serverConfig } }, null, 2);
+  };
 
   const copyConfig = () => {
-    const json = JSON.stringify(
-      { mcpServers: { [cfg.id]: { command: "npx", args: ["-y", cfg.install.replace("npx -y ", "")] } } },
-      null, 2
-    );
-    navigator.clipboard.writeText(json);
+    navigator.clipboard.writeText(getFullConfigJson());
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
+
+  const handleEnvChange = (field: string, val: string) => {
+    setEnvVars((prev) => ({ ...prev, [field]: val }));
+  };
+
+  if (!cfg) return <div className="p-6 text-mute text-sm">No MCP configs found.</div>;
 
   return (
     <div className="h-full flex flex-col sm:flex-row">
@@ -262,52 +297,70 @@ export function McpApp() {
       </aside>
 
       {/* Detail */}
-      <div className="flex-1 min-w-0 overflow-auto p-6">
-        <div className="flex items-center gap-3">
-          <span className="text-3xl">{cfg.icon}</span>
-          <div>
-            <h1 className="text-xl font-extrabold text-ink">{cfg.name}</h1>
-            <span className="inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-semibold text-brand-teal bg-brand-teal/10">{cfg.category}</span>
-          </div>
-        </div>
-        <p className="mt-2 text-[13px] text-body max-w-lg leading-relaxed">{cfg.desc}</p>
-
-        {/* Tools */}
-        {cfg.tools.length > 0 && (
-          <div className="mt-5">
-            <div className="text-[11px] font-bold text-mute uppercase tracking-wider mb-2">Key Tools ({cfg.tools.length})</div>
-            <div className="grid sm:grid-cols-2 gap-1.5">
-              {cfg.tools.map((t) => (
-                <div key={t} className="flex items-center gap-2 rounded-lg border border-hairline bg-white px-3 py-2 text-[12px] font-mono text-ink">
-                  <span className="text-brand-teal">&#x25B8;</span> {t}
-                </div>
-              ))}
+      <div className="flex-1 min-w-0 overflow-auto p-6 flex flex-col lg:flex-row gap-6">
+        <div className="flex-1 space-y-5">
+          <div className="flex items-center gap-3">
+            <span className="text-3xl">{cfg.icon}</span>
+            <div>
+              <h1 className="text-xl font-extrabold text-ink">{cfg.name}</h1>
+              <span className="inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-semibold text-brand-teal bg-brand-teal/10">{cfg.category}</span>
             </div>
           </div>
-        )}
+          <p className="text-[13px] text-body leading-relaxed">{cfg.desc}</p>
 
-        {/* Install */}
-        <div className="mt-5">
-          <div className="text-[11px] font-bold text-mute uppercase tracking-wider mb-2">Quick Install</div>
-          <pre className="rounded-xl bg-code-bg text-code-text p-4 text-[12px] font-mono leading-relaxed overflow-auto">
-            <code>{`{
-  "mcpServers": {
-    "${cfg.id}": {
-      "command": "npx",
-      "args": ["-y", "${cfg.install.replace("npx -y ", "")}"]
-    }
-  }
-}`}</code>
+          {/* Interactive Environment Config Form */}
+          {requiredFields.length > 0 && (
+            <div className="rounded-xl border border-hairline bg-zinc-50 p-4 space-y-3">
+              <h3 className="text-[12px] font-bold text-ink flex items-center gap-1.5">
+                <span>⚙️</span> Configure Environment Variables
+              </h3>
+              <div className="space-y-2">
+                {requiredFields.map((field) => (
+                  <div key={field} className="flex flex-col gap-1">
+                    <label className="text-[10px] font-bold text-mute uppercase font-mono">{field}</label>
+                    <input
+                      type="text"
+                      value={envVars[field] || ""}
+                      onChange={(e) => handleEnvChange(field, e.target.value)}
+                      placeholder={`Enter your ${field.toLowerCase().replace(/_/g, " ")}`}
+                      className="w-full text-[12px] bg-white border border-hairline rounded-lg px-3 py-1.5 focus:border-brand-teal focus:outline-none"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Tools */}
+          {cfg.tools.length > 0 && (
+            <div>
+              <div className="text-[11px] font-bold text-mute uppercase tracking-wider mb-2">Key Tools ({cfg.tools.length})</div>
+              <div className="grid sm:grid-cols-2 gap-1.5">
+                {cfg.tools.map((t) => (
+                  <div key={t} className="flex items-center gap-2 rounded-lg border border-hairline bg-white px-3 py-1.5 text-[11.5px] font-mono text-ink">
+                    <span className="text-brand-teal">&#x25B8;</span> {t}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Right side config editor/copy block */}
+        <div className="w-full lg:w-80 shrink-0 space-y-4">
+          <div className="text-[11px] font-bold text-mute uppercase tracking-wider">Config Settings JSON</div>
+          <pre className="rounded-xl bg-code-bg text-code-text p-4 text-[11px] font-mono leading-relaxed overflow-x-auto h-[260px] border border-hairline">
+            <code>{getFullConfigJson()}</code>
           </pre>
-          <div className="mt-3 flex gap-2">
-            <YellowButton onClick={copyConfig}>
+          <div className="flex flex-col gap-2">
+            <YellowButton onClick={copyConfig} className="justify-center">
               {copied ? "✓ Copied!" : "Copy Config JSON"}
             </YellowButton>
             <a
               href={`https://github.com/UitbreidenOS/UitKit/blob/main/mcp/${cfg.id}.md`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-md border border-olive/60 bg-white px-4 py-2 text-[13px] font-semibold text-ink hover:bg-cream transition"
+              className="inline-flex items-center justify-center gap-1.5 rounded-md border border-olive/60 bg-white px-4 py-2 text-[13px] font-semibold text-ink hover:bg-cream transition"
             >
               View on GitHub &#x2197;
             </a>
